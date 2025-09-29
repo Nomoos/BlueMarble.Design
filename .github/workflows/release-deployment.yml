@@ -32,6 +32,7 @@ jobs:
         
     - name: Get version
       id: get_version
+      shell: bash
       run: |
         if [[ $GITHUB_REF == refs/tags/* ]]; then
           VERSION=${GITHUB_REF#refs/tags/}
@@ -42,6 +43,7 @@ jobs:
         echo "Version: $VERSION"
         
     - name: Generate changelog
+      shell: bash
       run: |
         echo "# Release Notes for ${{ steps.get_version.outputs.version }}" > RELEASE_NOTES.md
         echo "" >> RELEASE_NOTES.md
@@ -75,6 +77,7 @@ jobs:
       uses: actions/checkout@v4
       
     - name: Create documentation package
+      shell: bash
       run: |
         echo "Creating documentation package..."
         
@@ -92,18 +95,30 @@ jobs:
         cp LICENSE package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}/
         cp CONTRIBUTING.md package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}/
         
-        # Create archive
+        # Create archive using cross-platform approach
         cd package
-        tar -czf BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.tar.gz BlueMarble-Design-${{ needs.prepare-release.outputs.version }}
+        if command -v tar >/dev/null 2>&1; then
+          tar -czf BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.tar.gz BlueMarble-Design-${{ needs.prepare-release.outputs.version }}
+        else
+          # Windows fallback using PowerShell
+          powershell -Command "Compress-Archive -Path 'BlueMarble-Design-${{ needs.prepare-release.outputs.version }}' -DestinationPath 'BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.zip'"
+        fi
         
         echo "Documentation package created"
-        ls -la BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.tar.gz
+        # List created files using available command
+        if command -v ls >/dev/null 2>&1; then
+          ls -la BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.*
+        else
+          # Fallback for systems without ls
+          echo "Created files:"
+          find . -name "BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.*" -exec echo "  {}" \;
+        fi
         
     - name: Upload documentation package
       uses: actions/upload-artifact@v4
       with:
         name: documentation-package
-        path: package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.tar.gz
+        path: package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.*
         
   deploy:
     name: Deploy Documentation
@@ -116,6 +131,7 @@ jobs:
       uses: actions/download-artifact@v4
       
     - name: Deploy to target environment
+      shell: bash
       run: |
         echo "Deploying to ${{ github.event.inputs.deploy_target || 'production' }}..."
         
