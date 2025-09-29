@@ -22,38 +22,63 @@ jobs:
         node-version: '18'
         
     - name: Install dependencies
+      shell: bash
       run: |
         npm install -g markdownlint-cli
         
     - name: Validate markdown files
+      shell: bash
       run: |
-        find . -name "*.md" -not -path "./node_modules/*" -not -path "./.git/*" | xargs markdownlint --config .markdownlint.json || true
+        # Cross-platform markdown file discovery and validation
+        if command -v find >/dev/null 2>&1; then
+          find . -name "*.md" -not -path "./node_modules/*" -not -path "./.git/*" | xargs markdownlint --config .markdownlint.json || true
+        else
+          # Windows fallback using PowerShell-compatible commands
+          markdownlint "**/*.md" --ignore node_modules --ignore .git --config .markdownlint.json || true
+        fi
         
     - name: Check file structure
+      shell: bash
       run: |
         echo "Checking repository structure..."
-        if [ ! -d "docs" ]; then
-          echo "Warning: docs directory not found"
-        fi
-        if [ ! -d "templates" ]; then
-          echo "Warning: templates directory not found"
-        fi
+        # Cross-platform directory and file checking
+        for dir in docs templates; do
+          if [ ! -d "$dir" ]; then
+            echo "Warning: $dir directory not found"
+          else
+            echo "Found directory: $dir"
+          fi
+        done
+        
         if [ ! -f "README.md" ]; then
           echo "Error: README.md not found"
           exit 1
+        else
+          echo "Found README.md"
         fi
         echo "Repository structure validation completed"
         
     - name: Validate issue templates
+      shell: bash
       run: |
         echo "Validating issue templates..."
         if [ -d ".github/ISSUE_TEMPLATE" ]; then
-          for template in .github/ISSUE_TEMPLATE/*.yml; do
-            if [ -f "$template" ]; then
+          # Cross-platform template validation
+          if command -v find >/dev/null 2>&1; then
+            find .github/ISSUE_TEMPLATE -name "*.yml" -type f | while read template; do
               echo "Found template: $template"
-              # Basic YAML syntax validation
               python3 -c "import yaml; yaml.safe_load(open('$template'))" || echo "Warning: YAML syntax issue in $template"
-            fi
-          done
+            done
+          else
+            # Windows PowerShell compatible approach
+            for template in .github/ISSUE_TEMPLATE/*.yml; do
+              if [ -f "$template" ]; then
+                echo "Found template: $template"
+                python3 -c "import yaml; yaml.safe_load(open('$template'))" || echo "Warning: YAML syntax issue in $template"
+              fi
+            done
+          fi
+        else
+          echo "No issue templates directory found"
         fi
         echo "Issue template validation completed"

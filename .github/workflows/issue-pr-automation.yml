@@ -27,6 +27,7 @@ jobs:
         
     - name: Validate issue template compliance
       if: github.event_name == 'issues'
+      shell: bash
       run: |
         echo "Validating issue template compliance..."
         
@@ -51,6 +52,7 @@ jobs:
         
     - name: Check PR compliance
       if: github.event_name == 'pull_request'
+      shell: bash
       run: |
         echo "Checking PR compliance..."
         
@@ -59,19 +61,24 @@ jobs:
         
         echo "PR Title: $pr_title"
         
-        # Check for proper PR title format
-        if [[ ! "$pr_title" =~ ^(feat|fix|docs|style|refactor|test|chore): ]]; then
+        # Check for proper PR title format using portable shell syntax
+        if echo "$pr_title" | grep -E "^(feat|fix|docs|style|refactor|test|chore):" >/dev/null; then
+          echo "✓ PR title follows conventional commit format"
+        else
           echo "Warning: PR title should follow conventional commit format"
         fi
         
         # Check if PR has description
         if [ -z "$pr_body" ]; then
           echo "Warning: PR has no description"
+        else
+          echo "✓ PR has description"
         fi
         
         echo "PR compliance check completed"
         
     - name: Generate automation report
+      shell: bash
       run: |
         echo "## Automation Report" > automation_report.md
         echo "" >> automation_report.md

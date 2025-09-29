@@ -27,6 +27,7 @@ jobs:
       uses: actions/checkout@v4
       
     - name: Validate directory structure
+      shell: bash
       run: |
         echo "Validating design repository structure..."
         
@@ -51,45 +52,100 @@ jobs:
         # Validate template files
         if [ -d "templates" ]; then
           echo "Checking template files..."
-          template_count=$(find templates -name "*.md" | wc -l)
+          if command -v find >/dev/null 2>&1; then
+            template_count=$(find templates -name "*.md" | wc -l)
+          else
+            # Windows compatible count using Python
+            template_count=$(python3 -c "
+import os
+import glob
+count = len(glob.glob('templates/**/*.md', recursive=True))
+print(count)
+")
+          fi
           echo "Found $template_count template files"
         fi
         
         echo "Design structure validation completed"
         
     - name: Check for broken links in documentation
+      shell: bash
       run: |
         echo "Checking for broken internal links..."
         
-        # Simple check for markdown links that might be broken
-        find docs -name "*.md" -exec grep -l "\[.*\](" {} \; | while read file; do
-          echo "Checking links in: $file"
-          # Extract markdown links and check if referenced files exist
-          grep -o '\[.*\]([^)]*\.md)' "$file" | sed 's/.*(\([^)]*\)).*/\1/' | while read link; do
-            # Convert relative paths to absolute paths from the file's directory
-            if [[ "$link" == ./* ]] || [[ "$link" != http* ]]; then
-              link_path=$(dirname "$file")/"$link"
-              if [ ! -f "$link_path" ]; then
-                echo "Warning: Potentially broken link in $file: $link"
-              fi
-            fi
-          done
-        done
+        # Cross-platform link checking using Python for better compatibility
+        python3 -c "
+import os
+import re
+import glob
+
+def check_links_in_docs():
+    link_pattern = re.compile(r'\[.*?\]\(([^)]*\.md)\)')
+    
+    for md_file in glob.glob('docs/**/*.md', recursive=True):
+        if os.path.isfile(md_file):
+            print(f'Checking links in: {md_file}')
+            try:
+                with open(md_file, 'r', encoding='utf-8', errors='ignore') as f:
+                    content = f.read()
+                    
+                for match in link_pattern.finditer(content):
+                    link = match.group(1)
+                    if not link.startswith('http'):
+                        # Convert relative path to absolute path
+                        if link.startswith('./'):
+                            link = link[2:]
+                        
+                        # Calculate the target file path
+                        base_dir = os.path.dirname(md_file)
+                        target_path = os.path.normpath(os.path.join(base_dir, link))
+                        
+                        if not os.path.exists(target_path):
+                            print(f'Warning: Potentially broken link in {md_file}: {link}')
+            except Exception as e:
+                print(f'Error reading {md_file}: {e}')
+
+check_links_in_docs()
+"
         
         echo "Link validation completed"
         
     - name: Validate file naming conventions
+      shell: bash
       run: |
         echo "Checking file naming conventions..."
         
-        # Check for files with spaces in names (should use hyphens)
-        find . -name "* *" -type f -not -path "./.git/*" | while read file; do
-          echo "Warning: File with spaces in name: $file"
-        done
-        
-        # Check for uppercase in markdown files (should be lowercase)
-        find docs templates -name "*.md" | grep -E '[A-Z]' | while read file; do
-          echo "Info: Consider using lowercase for consistency: $file"
-        done
+        # Use Python for cross-platform file name validation
+        python3 -c "
+import os
+import glob
+
+def check_naming_conventions():
+    # Check for files with spaces in names (should use hyphens)
+    files_with_spaces = []
+    for root, dirs, files in os.walk('.'):
+        # Skip .git directory
+        if '.git' in root:
+            continue
+        for file in files:
+            if ' ' in file:
+                files_with_spaces.append(os.path.join(root, file))
+    
+    for file in files_with_spaces:
+        print(f'Warning: File with spaces in name: {file}')
+    
+    # Check for uppercase in markdown files (should be lowercase)
+    md_files_with_uppercase = []
+    for pattern in ['docs/**/*.md', 'templates/**/*.md']:
+        for file in glob.glob(pattern, recursive=True):
+            basename = os.path.basename(file)
+            if any(c.isupper() for c in basename):
+                md_files_with_uppercase.append(file)
+    
+    for file in md_files_with_uppercase:
+        print(f'Info: Consider using lowercase for consistency: {file}')
+
+check_naming_conventions()
+"
         
         echo "File naming validation completed"
