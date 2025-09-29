@@ -105,7 +105,14 @@ jobs:
         fi
         
         echo "Documentation package created"
-        ls -la BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.* 2>/dev/null || dir BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.*
+        # List created files using available command
+        if command -v ls >/dev/null 2>&1; then
+          ls -la BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.*
+        else
+          # Fallback for systems without ls
+          echo "Created files:"
+          find . -name "BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.*" -exec echo "  {}" \;
+        fi
         
     - name: Upload documentation package
       uses: actions/upload-artifact@v4
