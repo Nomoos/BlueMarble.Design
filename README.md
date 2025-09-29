@@ -19,6 +19,9 @@ This repository serves as the central hub for all design-related activities in t
 │   ├── core/               # Core design documents (GDD, TDD)
 │   ├── systems/            # Game systems and mechanics
 │   ├── world/              # World building, lore, and narrative
+│   ├── gameplay/           # Gameplay mechanics and systems
+│   ├── world/              # World building, lore, and narrative
+│   ├── systems/            # Core systems and technical design
 │   ├── ui-ux/              # User interface and experience design
 │   ├── audio/              # Audio design and music concepts
 │   └── research/           # Market research and analysis

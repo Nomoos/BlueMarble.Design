@@ -1,0 +1,121 @@
+name: Research Issue
+description: Template for research work including market analysis, technical research, player behavior studies, and other research activities
+title: "[Research] "
+labels: ["research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to create issues related to research work for BlueMarble MMORPG.
+        
+  - type: input
+    id: research-topic
+    attributes:
+      label: Research Topic
+      description: What is the main topic or subject of this research?
+      placeholder: e.g., Player Retention Strategies, MMO Economy Models, Cross-Platform UI Patterns
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: research-type
+    attributes:
+      label: Research Type
+      description: What type of research is this?
+      options:
+        - Market Research
+        - Technical Research
+        - Player Behavior Analysis
+        - Competitive Analysis
+        - User Research
+        - Academic Research
+        - Industry Trends
+        - Best Practices
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: research-question
+    attributes:
+      label: Research Question(s)
+      description: What specific questions are you trying to answer through this research?
+      placeholder: |
+        List the key questions you want to answer:
+        - Question 1
+        - Question 2
+        - Question 3
+    validations:
+      required: true
+      
+  - type: textarea
+    id: research-rationale
+    attributes:
+      label: Research Rationale
+      description: Why is this research important? How will it help the BlueMarble project?
+      placeholder: Explain the motivation and expected impact of this research...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: research-scope
+    attributes:
+      label: Research Scope
+      description: What are the boundaries and limitations of this research?
+      placeholder: |
+        Include:
+        - What will be included/excluded
+        - Time constraints
+        - Resource limitations
+        - Target sources or data
+    validations:
+      required: true
+      
+  - type: textarea
+    id: research-methodology
+    attributes:
+      label: Research Methodology
+      description: How will you conduct this research?
+      placeholder: |
+        Describe your approach:
+        - Data sources (articles, surveys, interviews, tools)
+        - Analysis methods
+        - Timeline
+        - Success metrics
+    validations:
+      required: false
+      
+  - type: textarea
+    id: expected-deliverables
+    attributes:
+      label: Expected Deliverables
+      description: What will be produced as a result of this research?
+      placeholder: |
+        - [ ] Research report/summary
+        - [ ] Data analysis
+        - [ ] Recommendations
+        - [ ] Documentation updates
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this research?
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any additional information, related research, or context that would be helpful
+      placeholder: Include links to related documents, previous research, or other relevant information...
+    validations:
+      required: false
