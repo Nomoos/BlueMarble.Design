@@ -5,6 +5,8 @@ This directory contains user interface design, user experience specifications, a
 ## Document Categories
 
 ### Interface Design
+- **[UI Guidelines](ui-guidelines.md)** - Core UI design principles and standards
+- **[Spherical Planet Visualization](spec-spherical-planet-visualization.md)** - Interactive map viewer and planet generation interface
 - UI layout and component design
 - Visual design systems and style guides
 - Icon and asset specifications
