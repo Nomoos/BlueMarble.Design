@@ -1,0 +1,93 @@
+name: Design Issue
+description: Template for game design work including mechanics, systems, UI/UX, and other design elements
+title: "[Design] "
+labels: ["design"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to create issues related to game design work for BlueMarble MMORPG.
+        
+  - type: input
+    id: design-area
+    attributes:
+      label: Design Area
+      description: What area of the game does this design work focus on?
+      placeholder: e.g., Combat System, UI/UX, Economy, Character Progression, World Design
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: design-type
+    attributes:
+      label: Design Type
+      description: What type of design work is this?
+      options:
+        - Game Mechanics
+        - User Interface (UI)
+        - User Experience (UX) 
+        - System Design
+        - World/Level Design
+        - Character/Progression Design
+        - Audio Design
+        - Visual Design
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: design-goal
+    attributes:
+      label: Design Goal
+      description: What is the primary goal or objective of this design work?
+      placeholder: Describe what you want to achieve with this design...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: design-description
+    attributes:
+      label: Design Description
+      description: Provide a detailed description of the design work needed
+      placeholder: |
+        Include:
+        - Specific requirements or constraints
+        - Current state (if applicable)
+        - Desired outcome
+        - Any dependencies or related work
+    validations:
+      required: true
+      
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What needs to be completed for this design work to be considered done?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this design work?
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any additional information, mockups, references, or context that would be helpful
+      placeholder: Include links to related documents, reference images, or other relevant information...
+    validations:
+      required: false
