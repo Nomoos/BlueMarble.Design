@@ -31,40 +31,45 @@ jobs:
       run: |
         echo "Validating design repository structure..."
         
-        # Check required directories exist
-        required_dirs=("docs" "templates" "assets" "roadmap")
-        for dir in "${required_dirs[@]}"; do
-          if [ ! -d "$dir" ]; then
-            echo "Warning: Required directory '$dir' not found"
+        # Detect available Python command
+        python_cmd="python3"
+        if ! command -v python3 >/dev/null 2>&1; then
+          if command -v python >/dev/null 2>&1; then
+            python_cmd="python"
           else
-            echo "✓ Found directory: $dir"
+            echo "Error: Python not found"
+            exit 1
           fi
-        done
-        
-        # Check for core documentation files
-        echo "Checking for core documentation files..."
-        if [ -f "docs/README.md" ]; then
-          echo "✓ Found docs/README.md"
-        else
-          echo "Warning: docs/README.md not found"
         fi
         
-        # Validate template files
-        if [ -d "templates" ]; then
-          echo "Checking template files..."
-          if command -v find >/dev/null 2>&1; then
-            template_count=$(find templates -name "*.md" | wc -l)
-          else
-            # Windows compatible count using Python
-            template_count=$(python3 -c "
+        # Use Python for cross-platform directory validation
+        $python_cmd << 'EOF'
 import os
 import glob
-count = len(glob.glob('templates/**/*.md', recursive=True))
-print(count)
-")
-          fi
-          echo "Found $template_count template files"
-        fi
+
+# Check required directories exist
+required_dirs = ['docs', 'templates', 'assets', 'roadmap']
+for dir_name in required_dirs:
+    if not os.path.exists(dir_name):
+        print(f'Warning: Required directory \'{dir_name}\' not found')
+    else:
+        print(f'✓ Found directory: {dir_name}')
+
+# Check for core documentation files
+print('Checking for core documentation files...')
+if os.path.exists('docs/README.md'):
+    print('✓ Found docs/README.md')
+else:
+    print('Warning: docs/README.md not found')
+
+# Validate template files
+if os.path.exists('templates'):
+    print('Checking template files...')
+    template_count = len(glob.glob('templates/**/*.md', recursive=True))
+    print(f'Found {template_count} template files')
+else:
+    print('Warning: templates directory not found')
+EOF
         
         echo "Design structure validation completed"
         
@@ -73,8 +78,19 @@ print(count)
       run: |
         echo "Checking for broken internal links..."
         
+        # Detect available Python command
+        python_cmd="python3"
+        if ! command -v python3 >/dev/null 2>&1; then
+          if command -v python >/dev/null 2>&1; then
+            python_cmd="python"
+          else
+            echo "Error: Python not found"
+            exit 1
+          fi
+        fi
+        
         # Cross-platform link checking using Python for better compatibility
-        python3 -c "
+        $python_cmd << 'EOF'
 import os
 import re
 import glob
@@ -82,7 +98,10 @@ import glob
 def check_links_in_docs():
     link_pattern = re.compile(r'\[.*?\]\(([^)]*\.md)\)')
     
-    for md_file in glob.glob('docs/**/*.md', recursive=True):
+    md_files = glob.glob('docs/**/*.md', recursive=True)
+    md_files.extend(glob.glob('*.md'))  # Include root level md files
+    
+    for md_file in md_files:
         if os.path.isfile(md_file):
             print(f'Checking links in: {md_file}')
             try:
@@ -106,7 +125,7 @@ def check_links_in_docs():
                 print(f'Error reading {md_file}: {e}')
 
 check_links_in_docs()
-"
+EOF
         
         echo "Link validation completed"
         
@@ -115,8 +134,19 @@ check_links_in_docs()
       run: |
         echo "Checking file naming conventions..."
         
+        # Detect available Python command
+        python_cmd="python3"
+        if ! command -v python3 >/dev/null 2>&1; then
+          if command -v python >/dev/null 2>&1; then
+            python_cmd="python"
+          else
+            echo "Error: Python not found"
+            exit 1
+          fi
+        fi
+        
         # Use Python for cross-platform file name validation
-        python3 -c "
+        $python_cmd << 'EOF'
 import os
 import glob
 
@@ -136,7 +166,8 @@ def check_naming_conventions():
     
     # Check for uppercase in markdown files (should be lowercase)
     md_files_with_uppercase = []
-    for pattern in ['docs/**/*.md', 'templates/**/*.md']:
+    patterns = ['docs/**/*.md', 'templates/**/*.md', '*.md']
+    for pattern in patterns:
         for file in glob.glob(pattern, recursive=True):
             basename = os.path.basename(file)
             if any(c.isupper() for c in basename):
@@ -144,8 +175,11 @@ def check_naming_conventions():
     
     for file in md_files_with_uppercase:
         print(f'Info: Consider using lowercase for consistency: {file}')
+    
+    if not files_with_spaces and not md_files_with_uppercase:
+        print('✓ File naming conventions look good')
 
 check_naming_conventions()
-"
+EOF
         
         echo "File naming validation completed"
