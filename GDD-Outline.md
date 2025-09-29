@@ -13,6 +13,14 @@ Reference Titles: (Optional) Mention a few similar games or inspirations in styl
 
 Game World & Story
 
+Setting & Lore: Summarize the game's setting, historical or narrative background, and overall lore.
+
+Story Overview: Provide a high-level narrative arc, including the main conflict or quest driving the player's purpose.
+
+Factions & Characters: List major factions, NPC groups, or alignments. Describe important NPCs and their roles.
+
+Player's Role: Define the player's identity in the world and how the story is presented to them.
+
 Setting & Lore: Summarize the game’s setting, historical or narrative background, and overall lore.
 
 Story Overview: Provide a high-level narrative arc, including the main conflict or quest driving the player’s purpose.
@@ -20,6 +28,7 @@ Story Overview: Provide a high-level narrative arc, including the main conflict 
 Factions & Characters: List major factions, NPC groups, or alignments. Describe important NPCs and their roles.
 
 Player’s Role: Define the player’s identity in the world and how the story is presented to them.
+
 
 World Design: Outline the structure of the world (open-world, zoned, or instanced). Describe key regions, biomes, and travel systems.
 
@@ -124,5 +133,7 @@ Technical Constraints: Known limitations and considerations.
 Security & Stability: All operations will be realized on the server; the user just sends instructions.
 
 Conclusion
+
+This outline provides a clear blueprint for MMORPG development, covering gameplay, world design, systems, UI/UX, art, audio, and technical foundations. It is structured to guide a team step by step while keeping the focus on design, not business strategy.
 
 This outline provides a clear blueprint for MMORPG development, covering gameplay, world design, systems, UI/UX, art, audio, and technical foundations. It is structured to guide a team step by step while keeping the focus on design, not business strategy.

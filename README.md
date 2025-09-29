@@ -16,6 +16,9 @@ This repository serves as the central hub for all design-related activities in t
 
 ```
 ├── docs/                    # Main documentation directory
+│   ├── core/               # Core design documents (GDD, TDD)
+│   ├── systems/            # Game systems and mechanics
+│   ├── world/              # World building, lore, and narrative
 │   ├── gameplay/           # Gameplay mechanics and systems
 │   ├── world/              # World building, lore, and narrative
 │   ├── systems/            # Core systems and technical design
@@ -43,6 +46,25 @@ This repository serves as the central hub for all design-related activities in t
 2. Check the `roadmap/` for current priorities and status
 3. Reference design documents when implementing features
 4. Provide feedback on design feasibility during the review process
+
+## Key Documentation
+
+### Core Design Documents
+- **[Game Design Document](./docs/core/game-design-document.md)** - Complete game vision and design
+- **[Technical Design Document](./docs/core/technical-design-document.md)** - Technical architecture and requirements
+- **[Documentation Index](./docs/README.md)** - Complete documentation structure
+
+### System Specifications
+- **[Gameplay Systems](./docs/systems/gameplay-systems.md)** - Combat, progression, and core mechanics
+- **[Economy Systems](./docs/systems/economy-systems.md)** - Trading, crafting, and economic balance
+- **[UI/UX Guidelines](./docs/ui-ux/ui-guidelines.md)** - Interface design and user experience standards
+
+### World Design
+- **[World Lore](./docs/world/world-lore.md)** - Setting, history, and cultural elements
+- **[Audio Guidelines](./docs/audio/audio-guidelines.md)** - Music and sound design principles
+
+### Research Foundation
+- **[Market Research](./docs/research/market-research.md)** - Competitive analysis and market positioning
 
 ## Document Types
 

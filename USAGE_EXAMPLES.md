@@ -148,7 +148,9 @@ For project leads:
 - [ ] Ensure team members understand the repository structure
 - [ ] Establish review processes for your domain
 - [ ] Set up notifications for changes in your area
+
 - [ ] Plan regular documentation maintenance activities
+
 - [ ] Monitor usage patterns and suggest improvements
 
 This structure provides a solid foundation for organizing and maintaining design documentation throughout the BlueMarble project lifecycle.
