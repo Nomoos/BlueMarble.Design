@@ -4,6 +4,8 @@
 
 This document demonstrates practical integration of the multi-layer query optimization system with BlueMarble's geological processes and interactive applications. These examples showcase the 5x performance improvements in real-world scenarios.
 
+**Important Note**: The implementation uses corrected material selection logic based on @Nomoos's clarification: "Homogeneity threshold don't exist. Just most used material if there is same volume different material then first one." This ensures the octree logic aligns with BlueMarble's actual design requirements.
+
 ## 1. Enhanced Geological Process Integration
 
 ### 1.1 Optimized Erosion Simulation

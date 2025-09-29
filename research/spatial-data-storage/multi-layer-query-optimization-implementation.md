@@ -34,7 +34,118 @@ Update all cache layers for future queries
 
 ## Core Implementation
 
-### 1. Multi-Layer Query Engine
+### 1. Corrected Material Selection Logic
+
+**Important Note**: The multi-layer query optimization uses corrected material selection logic based on @Nomoos's clarification: "Homogeneity threshold don't exist. Just most used material if there is same volume different material then first one."
+
+```csharp
+namespace BlueMarble.SpatialStorage.QueryOptimization
+{
+    /// <summary>
+    /// Corrected octree node logic that uses most used material instead of homogeneity threshold
+    /// Addresses the feedback that homogeneity thresholds don't exist in BlueMarble's design
+    /// </summary>
+    public class CorrectedOctreeNode
+    {
+        public MaterialId? ExplicitMaterial { get; set; }
+        public CorrectedOctreeNode Parent { get; set; }
+        public CorrectedOctreeNode[] Children { get; set; }
+        public BoundingBox3D Bounds { get; set; }
+        public int Level { get; set; }
+        public Dictionary<MaterialId, int> ChildMaterialCounts { get; set; }
+        
+        /// <summary>
+        /// Get effective material using the corrected logic:
+        /// 1. Use most used material (highest count)
+        /// 2. If same volume/count, use first one
+        /// No homogeneity threshold involved
+        /// </summary>
+        public MaterialId GetEffectiveMaterial()
+        {
+            // If explicit material is set, use it
+            if (ExplicitMaterial.HasValue)
+                return ExplicitMaterial.Value;
+            
+            // If this node has children, use most used material
+            if (ChildMaterialCounts != null && ChildMaterialCounts.Count > 0)
+            {
+                return GetMostUsedMaterial();
+            }
+            
+            // Walk up inheritance chain
+            var current = Parent;
+            while (current != null)
+            {
+                if (current.ExplicitMaterial.HasValue)
+                    return current.ExplicitMaterial.Value;
+                
+                if (current.ChildMaterialCounts != null && current.ChildMaterialCounts.Count > 0)
+                    return current.GetMostUsedMaterial();
+                
+                current = current.Parent;
+            }
+            
+            // Fallback to default ocean material
+            return MaterialId.Ocean;
+        }
+        
+        /// <summary>
+        /// Get most used material - if same volume/count, use first one
+        /// This implements the corrected BlueMarble logic without homogeneity thresholds
+        /// </summary>
+        public MaterialId GetMostUsedMaterial()
+        {
+            if (ChildMaterialCounts == null || ChildMaterialCounts.Count == 0)
+                return MaterialId.Ocean; // Default fallback
+            
+            // Find maximum count
+            var maxCount = ChildMaterialCounts.Values.Max();
+            
+            // Get first material with maximum count (stable ordering for ties)
+            return ChildMaterialCounts
+                .Where(kvp => kvp.Value == maxCount)
+                .OrderBy(kvp => kvp.Key) // Stable ordering for ties - "first one"
+                .First()
+                .Key;
+        }
+        
+        /// <summary>
+        /// Get material at specific point using corrected logic
+        /// </summary>
+        public MaterialId GetMaterialAtPoint(Vector3 point)
+        {
+            if (!Bounds.Contains(point))
+                throw new ArgumentException($"Point {point} is outside node bounds {Bounds}");
+            
+            // If leaf node or no children, return effective material
+            if (Children == null || Children.All(c => c == null))
+                return GetEffectiveMaterial();
+            
+            // Find appropriate child and recurse
+            var childIndex = CalculateChildIndex(point);
+            if (Children[childIndex] != null)
+                return Children[childIndex].GetMaterialAtPoint(point);
+            
+            // Child doesn't exist - use this node's effective material
+            return GetEffectiveMaterial();
+        }
+        
+        private int CalculateChildIndex(Vector3 point)
+        {
+            var center = Bounds.Center;
+            int index = 0;
+            
+            if (point.X >= center.X) index |= 1;
+            if (point.Y >= center.Y) index |= 2;
+            if (point.Z >= center.Z) index |= 4;
+            
+            return index;
+        }
+    }
+}
+```
+
+### 2. Multi-Layer Query Engine
 
 ```csharp
 namespace BlueMarble.SpatialStorage.QueryOptimization
@@ -59,14 +170,14 @@ namespace BlueMarble.SpatialStorage.QueryOptimization
         
         private readonly LRUCache<string, CachedRegion> _hotRegionCache;
         private readonly Dictionary<ulong, OctreeNodeReference> _mortonIndex;
-        private readonly MaterialInheritanceNode _rootNode;
+        private readonly CorrectedOctreeNode _rootNode;
         private readonly SpatialHeatMap _queryHeatMap;
         private readonly PerformanceMetrics _metrics;
         private readonly ReaderWriterLockSlim _cacheLock;
         
         #endregion
         
-        public MultiLayerQueryEngine(MaterialInheritanceNode rootNode)
+        public MultiLayerQueryEngine(CorrectedOctreeNode rootNode)
         {
             _rootNode = rootNode ?? throw new ArgumentNullException(nameof(rootNode));
             _hotRegionCache = new LRUCache<string, CachedRegion>(HOT_REGION_CACHE_SIZE);
@@ -608,7 +719,7 @@ namespace BlueMarble.SpatialStorage.QueryOptimization
     /// </summary>
     public class OctreeNodeReference
     {
-        public MaterialInheritanceNode Node { get; set; }
+        public CorrectedOctreeNode Node { get; set; }
         public DateTime LastAccessed { get; set; }
         public float Confidence { get; set; }
         public int AccessCount { get; set; }
@@ -637,7 +748,7 @@ namespace BlueMarble.SpatialStorage.QueryOptimization
         public TimeSpan ResponseTime { get; set; }
         public bool CacheHit { get; set; }
         public float Confidence { get; set; }
-        public MaterialInheritanceNode Node { get; set; }
+        public CorrectedOctreeNode Node { get; set; }
         
         public static OptimizedQueryResult Miss()
         {
