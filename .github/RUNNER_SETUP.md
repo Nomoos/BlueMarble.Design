@@ -83,6 +83,25 @@ All workflows in this repository use `runs-on: self-hosted` to ensure they only 
 
 ### 1. Prepare the Runner Machine
 
+⚠️ **Before setting up your runner, run the compatibility test script for your platform:**
+
+#### Pre-Setup Testing
+
+**For Windows:**
+```powershell
+# Download and run the Windows compatibility test
+.\\.github\\test-windows-compatibility.ps1
+```
+
+**For Linux/macOS:**
+```bash
+# Run the Linux/macOS compatibility test
+chmod +x .github/test-linux-macos-compatibility.sh
+./.github/test-linux-macos-compatibility.sh
+```
+
+These scripts will verify that your system has all required dependencies and identify any issues before you register the runner.
+
 #### Linux/macOS Setup
 ```bash
 # Example for Ubuntu/Debian
