@@ -20,6 +20,9 @@ This directory contains comprehensive research and analysis on spatial data stor
 - **[Compression Benchmarking Framework](compression-benchmarking-framework.md)** - **NEW**: Testing framework and prototype implementations
 - **[Implementation Guide](implementation-guide.md)** - **NEW**: Step-by-step deployment guide for production systems
 
+### Hybrid Architecture Research
+- **[Grid + Vector Combination Research](grid-vector-combination-research.md)** - **NEW**: Dense simulation areas using raster grids with vector boundaries
+
 ## Research Focus
 
 The research addresses the challenge of efficiently storing and querying planetary-scale geological data with the following objectives:
