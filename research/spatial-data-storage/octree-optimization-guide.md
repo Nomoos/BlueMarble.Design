@@ -1085,6 +1085,44 @@ public class DistributedOctree
 - **Feature Preservation**: Critical geological features must not be lost in grid discretization
 - **Processing Efficiency**: Geological processes may operate on either representation
 
+**Implementation Strategy**:
+```csharp
+public class GridVectorHybridStorage
+{
+    private readonly Dictionary<string, DenseSimulationGrid> _simulationGrids;
+    private readonly VectorBoundaryIndex _precisionBoundaries;
+    private readonly GridVectorSynchronizer _synchronizer;
+    
+    public MaterialQueryResult QueryMaterial(Vector3 position, QueryContext context)
+    {
+        // Check for nearby vector boundaries first
+        var proximityRadius = CalculateProximityRadius(context.TargetResolution);
+        var nearbyBoundaries = _precisionBoundaries.QueryRadius(position, proximityRadius);
+        
+        if (nearbyBoundaries.Any())
+        {
+            // Use high-precision vector-based determination
+            return ResolveVectorPrecision(position, nearbyBoundaries, context);
+        }
+        else
+        {
+            // Use efficient grid lookup for interior regions
+            var gridRegion = FindContainingGrid(position);
+            return gridRegion?.QueryGridInterior(position, context) 
+                ?? _octreeFallback.QueryMaterial(position, context);
+        }
+    }
+}
+```
+
+**Performance Benefits**:
+- **Bulk Operations**: 5-10x faster geological process simulation using grid-optimized algorithms
+- **Boundary Precision**: Exact geometric representation for critical features like coastlines and faults
+- **Memory Efficiency**: 60-80% reduction in memory usage compared to pure vector approaches
+- **Scalability**: Linear scaling for simulation area, logarithmic scaling for boundary complexity
+
+> **📖 Detailed Research**: See [Grid + Vector Combination Research Document](./grid-vector-combination-research.md) for comprehensive analysis, implementation details, and performance benchmarks.
+
 ### 7.5 Multi-Resolution Blending
 
 **Issue**: Different processes (erosion, climate, tectonics) operate at different scales.

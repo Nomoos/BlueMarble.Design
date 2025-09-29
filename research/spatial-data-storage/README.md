@@ -23,6 +23,7 @@ This directory contains comprehensive research and analysis on spatial data stor
 - **[Implementation Guide](implementation-guide.md)** - **NEW**: Step-by-step deployment guide for production systems
 
 
+
 ### Integration Research
 - **[3D Octree Storage Architecture Integration](3d-octree-storage-architecture-integration.md)** - **NEW**: Comprehensive 10-14 week integration strategy with existing BlueMarble systems, compatibility analysis, migration pathways, and risk mitigation
 ### Multi-Resolution Blending Research
@@ -32,6 +33,8 @@ This directory contains comprehensive research and analysis on spatial data stor
 - **[Multi-Resolution Executive Summary](multi-resolution-executive-summary.md)** - **NEW**: Executive summary with key findings and recommendations
 
 
+### Hybrid Architecture Research
+- **[Grid + Vector Combination Research](grid-vector-combination-research.md)** - **NEW**: Dense simulation areas using raster grids with vector boundaries
 ## Research Focus
 
 The research addresses multiple challenges in planetary-scale geological simulation:
