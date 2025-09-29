@@ -2,7 +2,25 @@
 
 This document demonstrates how to effectively use the BlueMarble.Design repository structure with practical examples.
 
-## Scenario 1: Adding a New Gameplay Feature
+## Scenario 1: Creating a Research Roadmap
+
+### Step 1: Setup Research Issue Structure
+1. Create main research roadmap issue using `/templates/research-roadmap-main-issue.md`
+2. Title: "Research Roadmap: Technical Questions and Trade-offs for World Material Storage"
+3. Fill in research areas from `research/RESEARCH_ISSUES_SUMMARY.md`
+
+### Step 2: Create Individual Research Issues
+1. For each research area, create sub-issue using `/templates/research-question-sub-issue.md`
+2. Example: "[Research] Homogeneous Region Collapsing for Octree Optimization"
+3. Link each sub-issue to the main roadmap issue as parent
+4. Set priorities and effort estimates from research summary
+
+### Step 3: Track Progress
+1. Update main issue weekly with overall progress
+2. Use sub-issues for detailed technical findings
+3. Update `research/RESEARCH_ISSUES_SUMMARY.md` as work progresses
+
+## Scenario 2: Adding a New Gameplay Feature
 
 ### Step 1: Research Phase
 1. Check existing documentation in `/docs/research/` for relevant studies
@@ -19,7 +37,7 @@ This document demonstrates how to effectively use the BlueMarble.Design reposito
 2. Cross-reference with related systems in other documentation categories
 3. Add to appropriate tracking systems
 
-## Scenario 2: World Building Development
+## Scenario 3: World Building Development
 
 ### Step 1: Foundation
 1. Review existing world documentation in `/docs/world/`

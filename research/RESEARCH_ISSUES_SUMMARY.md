@@ -152,14 +152,30 @@ Each issue addresses specific research questions identified in the spatial data 
 
 ## Getting Started
 
+### Creating the Research Roadmap
+
+1. **Create Main Research Issue**: Use the [Research Roadmap Main Issue Template](../templates/research-roadmap-main-issue.md) to create the primary tracking issue
+2. **Create Sub-Issues**: Use the [Research Question Sub-Issue Template](../templates/research-question-sub-issue.md) for each of the 12 research areas
+3. **Link Issues**: Ensure all sub-issues reference the main research roadmap issue as their parent
+
+### Implementation Process
+
 1. **Review Research Documentation**: Read `research/spatial-data-storage/` for detailed technical analysis
-2. **Create GitHub Issues**: Create issues based on the research areas identified above
-3. **Prioritize Implementation**: Start with high-priority foundation issues
-4. **Set Up Development Environment**: Ensure development environment supports the proposed architectures
-5. **Begin with Database Architecture**: Establish storage foundation before implementing optimizations
+2. **Prioritize Implementation**: Start with high-priority foundation issues
+3. **Set Up Development Environment**: Ensure development environment supports the proposed architectures
+4. **Begin with Database Architecture**: Establish storage foundation before implementing optimizations
+
+### Issue Management
+
+- **Main Issue**: Tracks overall research roadmap progress and cross-cutting decisions
+- **Sub-Issues**: Track individual research areas with detailed technical progress
+- **Weekly Updates**: Progress reported in main issue, detailed findings in sub-issues
+- **Dependencies**: Sub-issues should reference blocking and blocked issues
 
 ## Related Documentation
 
+- **Main Research Roadmap Issue Template**: `templates/research-roadmap-main-issue.md`
+- **Research Question Sub-Issue Template**: `templates/research-question-sub-issue.md`
 - **Detailed Technical Analysis**: `research/spatial-data-storage/octree-optimization-guide.md`
 - **Current Implementation**: `research/spatial-data-storage/current-implementation.md`  
 - **Recommendations**: `research/spatial-data-storage/recommendations.md`

@@ -43,6 +43,13 @@ This repository serves as the central hub for all design-related activities in t
 4. Follow the established naming conventions and structure
 5. When completing issues, use the [Issue Completion Template](templates/issue-completion-template.md) to ensure proper documentation and communication
 
+### For Research Contributors
+
+1. Use the [Research Issue Templates](templates/research-issue-templates-guide.md) to create structured research roadmaps
+2. Create main research issues using the [Research Roadmap Template](templates/research-roadmap-main-issue.md)
+3. Create individual research questions using the [Research Sub-Issue Template](templates/research-question-sub-issue.md)
+4. Follow the research documentation guidelines in `research/RESEARCH_ISSUES_SUMMARY.md`
+
 ### For Developers
 
 1. Browse the `docs/` directory for relevant design specifications
