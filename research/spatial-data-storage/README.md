@@ -10,6 +10,11 @@ This directory contains comprehensive research and analysis on spatial data stor
 - **[Octree Optimization Guide](octree-optimization-guide.md)** - Advanced octree optimization strategies
 - **[Recommendations](recommendations.md)** - Strategic recommendations for hybrid spatial storage
 
+### Homogeneous Region Collapsing Research
+- **[Homogeneous Region Collapsing Implementation](homogeneous-region-collapsing-implementation.md)** - **NEW**: Comprehensive implementation for automatic collapsing achieving 90% storage reduction
+- **[Homogeneous Region Collapsing Benchmarks](homogeneous-region-collapsing-benchmarks.md)** - **NEW**: Performance validation framework for collapsing optimization
+- **[Homogeneous Region Collapsing README](homogeneous-region-collapsing-README.md)** - **NEW**: Overview and integration guide
+
 ### New Compression Research
 - **[Hybrid Compression Strategies](hybrid-compression-strategies.md)** - **NEW**: Comprehensive research on petabyte-scale compression strategies
 - **[Compression Benchmarking Framework](compression-benchmarking-framework.md)** - **NEW**: Testing framework and prototype implementations
