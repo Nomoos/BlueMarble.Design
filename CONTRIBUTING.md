@@ -47,6 +47,68 @@ All documents should include:
 4. **Obtain approval** from designated stakeholders
 5. **Merge** after all requirements are met
 
+## Issue Completion Policy
+
+When completing any issue, team members should follow this process to ensure proper documentation and communication:
+
+### Required Steps for Issue Completion
+
+1. **Write a completion comment** on the issue before closing it
+2. **Tag the issue creator** (using @username) in your completion comment
+3. **Provide a brief summary** that includes both:
+   - **Changes List**: Clear, quick overview of what was modified/added/completed
+   - **Reasoning**: Context explaining why changes were made and any key decisions
+
+### Issue Completion Comment Template
+
+Use this template for consistency when completing issues:
+
+```markdown
+## Issue Completion Summary
+
+@[issue-creator-username] 
+
+### Changes Made
+- [List specific changes, additions, or completions]
+- [Use bullet points for clear overview]
+- [Include file names, sections, or features affected]
+
+### Reasoning & Context
+- [Explain the approach taken and why]
+- [Note any important decisions or considerations]
+- [Reference related issues, discussions, or dependencies]
+
+### Additional Notes
+- [Any follow-up items or related work needed]
+- [Links to related documentation or resources]
+
+Issue completed and ready for review.
+```
+
+### Example Completion Comment
+
+```markdown
+## Issue Completion Summary
+
+@Nomoos 
+
+### Changes Made
+- Updated CONTRIBUTING.md to include new issue completion policy
+- Added template for standardized completion comments
+- Created guidelines for tagging creators and providing summaries
+
+### Reasoning & Context
+- Established this policy to improve team communication and documentation
+- Template ensures consistency across all team members
+- Combines quick overview (changes list) with context (reasoning) as requested
+
+### Additional Notes
+- Policy applies to all issue types (design, research, etc.)
+- Consider adding this to onboarding documentation for new team members
+
+Issue completed and ready for review.
+```
+
 ## Categories and Ownership
 
 ### Gameplay
