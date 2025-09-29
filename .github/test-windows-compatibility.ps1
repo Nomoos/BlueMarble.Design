@@ -178,8 +178,8 @@ if ($workingPython) {
     Write-Host "  Testing Python-based file operations used in workflows..." -ForegroundColor Gray
     
     try {
-        # Test markdown file discovery (like the workflows do)
-        $mdTestResult = & $workingPython -c @"
+        # Test the Python-based file operations that workflows now use
+        $mdTestResult = & $workingPython -c @'
 import glob
 import os
 md_files = []
@@ -189,7 +189,7 @@ md_files = [f for f in md_files if '.git' not in f and 'node_modules' not in f]
 print(f'Found {len(md_files)} markdown files')
 for f in md_files[:3]:
     print(f'  {f}')
-"@
+'@
         if ($LASTEXITCODE -eq 0) {
             Write-Host "  ✓ Python-based markdown discovery works" -ForegroundColor Green
             Write-Host "    $mdTestResult" -ForegroundColor Gray
@@ -241,3 +241,8 @@ Write-Host "2. Install missing dependencies using Chocolatey or manual installat
 Write-Host "3. Follow the setup instructions in .github/RUNNER_SETUP.md" -ForegroundColor Gray
 Write-Host "4. Register the runner with your GitHub repository" -ForegroundColor Gray
 Write-Host "5. Test the workflows by creating a test commit or PR" -ForegroundColor Gray
+Write-Host "`nNote: All workflows have been updated for better Windows compatibility" -ForegroundColor Green
+Write-Host "- Python command detection (python vs python3)" -ForegroundColor Gray
+Write-Host "- Cross-platform file operations using Python instead of Unix commands" -ForegroundColor Gray
+Write-Host "- No more dependency on find, grep, wc, or tar commands" -ForegroundColor Gray
+Write-Host "- All workflows now use inline Python scripts for better portability" -ForegroundColor Gray

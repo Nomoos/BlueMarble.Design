@@ -42,35 +42,8 @@ jobs:
           fi
         fi
         
-        # Use Python for cross-platform directory validation
-        $python_cmd << 'EOF'
-import os
-import glob
-
-# Check required directories exist
-required_dirs = ['docs', 'templates', 'assets', 'roadmap']
-for dir_name in required_dirs:
-    if not os.path.exists(dir_name):
-        print(f'Warning: Required directory \'{dir_name}\' not found')
-    else:
-        print(f'✓ Found directory: {dir_name}')
-
-# Check for core documentation files
-print('Checking for core documentation files...')
-if os.path.exists('docs/README.md'):
-    print('✓ Found docs/README.md')
-else:
-    print('Warning: docs/README.md not found')
-
-# Validate template files
-if os.path.exists('templates'):
-    print('Checking template files...')
-    template_count = len(glob.glob('templates/**/*.md', recursive=True))
-    print(f'Found {template_count} template files')
-else:
-    print('Warning: templates directory not found')
-EOF
-        
+        echo "Checking directory structure..."
+        $python_cmd -c "import os,glob; required=['docs','templates','assets','roadmap']; [print(f'✓ Found directory: {d}') if os.path.exists(d) else print(f'Warning: {d} not found') for d in required]; print(f'✓ Found docs/README.md') if os.path.exists('docs/README.md') else print('Warning: docs/README.md not found'); template_count=len(glob.glob('templates/**/*.md',recursive=True)) if os.path.exists('templates') else 0; print(f'Found {template_count} template files')"
         echo "Design structure validation completed"
         
     - name: Check for broken links in documentation
@@ -89,44 +62,8 @@ EOF
           fi
         fi
         
-        # Cross-platform link checking using Python for better compatibility
-        $python_cmd << 'EOF'
-import os
-import re
-import glob
-
-def check_links_in_docs():
-    link_pattern = re.compile(r'\[.*?\]\(([^)]*\.md)\)')
-    
-    md_files = glob.glob('docs/**/*.md', recursive=True)
-    md_files.extend(glob.glob('*.md'))  # Include root level md files
-    
-    for md_file in md_files:
-        if os.path.isfile(md_file):
-            print(f'Checking links in: {md_file}')
-            try:
-                with open(md_file, 'r', encoding='utf-8', errors='ignore') as f:
-                    content = f.read()
-                    
-                for match in link_pattern.finditer(content):
-                    link = match.group(1)
-                    if not link.startswith('http'):
-                        # Convert relative path to absolute path
-                        if link.startswith('./'):
-                            link = link[2:]
-                        
-                        # Calculate the target file path
-                        base_dir = os.path.dirname(md_file)
-                        target_path = os.path.normpath(os.path.join(base_dir, link))
-                        
-                        if not os.path.exists(target_path):
-                            print(f'Warning: Potentially broken link in {md_file}: {link}')
-            except Exception as e:
-                print(f'Error reading {md_file}: {e}')
-
-check_links_in_docs()
-EOF
-        
+        echo "Checking links with Python..."
+        $python_cmd -c "import os,re,glob; link_pattern=re.compile(r'\[.*?\]\(([^)]*\.md)\)'); md_files=glob.glob('docs/**/*.md',recursive=True)+glob.glob('*.md'); broken_links=[]; [broken_links.extend([(md_file,match.group(1)) for match in link_pattern.finditer(open(md_file,'r',encoding='utf-8',errors='ignore').read()) if not match.group(1).startswith('http') and not os.path.exists(os.path.normpath(os.path.join(os.path.dirname(md_file),match.group(1).lstrip('./'))))]) for md_file in md_files if os.path.isfile(md_file)]; [print(f'Warning: Broken link in {f}: {l}') for f,l in broken_links]; print('No broken links found') if not broken_links else None"
         echo "Link validation completed"
         
     - name: Validate file naming conventions
@@ -145,41 +82,6 @@ EOF
           fi
         fi
         
-        # Use Python for cross-platform file name validation
-        $python_cmd << 'EOF'
-import os
-import glob
-
-def check_naming_conventions():
-    # Check for files with spaces in names (should use hyphens)
-    files_with_spaces = []
-    for root, dirs, files in os.walk('.'):
-        # Skip .git directory
-        if '.git' in root:
-            continue
-        for file in files:
-            if ' ' in file:
-                files_with_spaces.append(os.path.join(root, file))
-    
-    for file in files_with_spaces:
-        print(f'Warning: File with spaces in name: {file}')
-    
-    # Check for uppercase in markdown files (should be lowercase)
-    md_files_with_uppercase = []
-    patterns = ['docs/**/*.md', 'templates/**/*.md', '*.md']
-    for pattern in patterns:
-        for file in glob.glob(pattern, recursive=True):
-            basename = os.path.basename(file)
-            if any(c.isupper() for c in basename):
-                md_files_with_uppercase.append(file)
-    
-    for file in md_files_with_uppercase:
-        print(f'Info: Consider using lowercase for consistency: {file}')
-    
-    if not files_with_spaces and not md_files_with_uppercase:
-        print('✓ File naming conventions look good')
-
-check_naming_conventions()
-EOF
-        
+        echo "Checking naming conventions..."
+        $python_cmd -c "import os,glob; files_with_spaces=[os.path.join(root,file) for root,dirs,files in os.walk('.') if '.git' not in root for file in files if ' ' in file]; [print(f'Warning: File with spaces: {f}') for f in files_with_spaces]; md_uppercase=[f for pattern in ['docs/**/*.md','templates/**/*.md','*.md'] for f in glob.glob(pattern,recursive=True) if any(c.isupper() for c in os.path.basename(f))]; [print(f'Info: Consider lowercase: {f}') for f in md_uppercase]; print('✓ File naming conventions look good') if not files_with_spaces and not md_uppercase else None"
         echo "File naming validation completed"

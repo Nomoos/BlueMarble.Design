@@ -42,53 +42,16 @@ jobs:
           fi
         fi
         
-        # Create a temporary Python script for markdown validation
-        cat > /tmp/validate_md.py << 'EOF'
-import os
-import glob
-import subprocess
-import sys
-
-# Find markdown files cross-platform
-md_files = []
-for pattern in ['**/*.md', './*.md']:
-    md_files.extend(glob.glob(pattern, recursive=True))
-
-# Filter out node_modules and .git
-md_files = [f for f in md_files if '.git' not in f and 'node_modules' not in f]
-
-print(f'Found {len(md_files)} markdown files')
-
-if md_files:
-    # Try to run markdownlint
-    try:
-        cmd = ['markdownlint', '--config', '.markdownlint.json'] + md_files
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        if result.returncode != 0:
-            print('Markdown linting issues found:')
-            print(result.stdout)
-            print(result.stderr)
-        else:
-            print('✓ All markdown files passed linting')
-    except FileNotFoundError:
-        print('Warning: markdownlint not found, skipping linting')
-        # Basic validation - check if files are readable
-        for md_file in md_files[:5]:  # Check first 5 files
-            try:
-                with open(md_file, 'r', encoding='utf-8', errors='ignore') as f:
-                    content = f.read()
-                    if content.strip():
-                        print(f'✓ {md_file} is readable')
-                    else:
-                        print(f'Warning: {md_file} appears to be empty')
-            except Exception as e:
-                print(f'Error reading {md_file}: {e}')
-else:
-    print('No markdown files found')
-EOF
+        echo "Discovering markdown files..."
+        $python_cmd -c "import os,glob; md_files=[f for f in glob.glob('**/*.md',recursive=True) if '.git' not in f and 'node_modules' not in f]; print(f'Found {len(md_files)} markdown files'); [print(f'  {f}') for f in md_files[:5]]"
         
-        # Run the Python script
-        $python_cmd /tmp/validate_md.py
+        echo "Attempting to run markdownlint..."
+        if command -v markdownlint >/dev/null 2>&1; then
+          markdownlint --config .markdownlint.json **/*.md || echo "Markdownlint found issues (expected for first run)"
+        else
+          echo "markdownlint not found, performing basic validation..."
+          $python_cmd -c "import os,glob; md_files=[f for f in glob.glob('**/*.md',recursive=True) if '.git' not in f and 'node_modules' not in f]; [print(f'✓ {f} is readable') if os.path.getsize(f) > 0 else print(f'Warning: {f} is empty') for f in md_files[:5]]"
+        fi
         
     - name: Check file structure
       shell: bash
@@ -127,24 +90,5 @@ EOF
           fi
         fi
         
-        cat > /tmp/validate_templates.py << 'EOF'
-import os
-import yaml
-import glob
-
-if os.path.exists('.github/ISSUE_TEMPLATE'):
-    templates = glob.glob('.github/ISSUE_TEMPLATE/*.yml')
-    for template in templates:
-        print(f'Found template: {template}')
-        try:
-            with open(template, 'r', encoding='utf-8') as f:
-                yaml.safe_load(f)
-            print(f'✓ Valid YAML: {template}')
-        except Exception as e:
-            print(f'Warning: YAML syntax issue in {template}: {e}')
-else:
-    print('No issue templates directory found')
-EOF
-        
-        $python_cmd /tmp/validate_templates.py
+        $python_cmd -c "import os,yaml,glob; templates=glob.glob('.github/ISSUE_TEMPLATE/*.yml') if os.path.exists('.github/ISSUE_TEMPLATE') else []; [print(f'✓ Valid YAML: {t}') if yaml.safe_load(open(t,'r',encoding='utf-8')) or True else print(f'✗ Invalid: {t}') for t in templates] if templates else print('No issue templates found')"
         echo "Issue template validation completed"

@@ -92,68 +92,37 @@ jobs:
           fi
         fi
         
-        # Use Python for cross-platform file operations
-        $python_cmd << 'EOF'
-import os
-import shutil
-import tarfile
-import zipfile
-import platform
-
-version = '${{ needs.prepare-release.outputs.version }}'
-package_name = f'BlueMarble-Design-{version}'
-
-# Create package directory
-package_dir = os.path.join('package', package_name)
-os.makedirs(package_dir, exist_ok=True)
-
-# Copy directories if they exist
-dirs_to_copy = ['docs', 'templates', 'assets', 'roadmap']
-for dir_name in dirs_to_copy:
-    if os.path.exists(dir_name):
-        dest_dir = os.path.join(package_dir, dir_name)
-        shutil.copytree(dir_name, dest_dir)
-        print(f'Copied {dir_name} to package')
-
-# Copy root files if they exist
-files_to_copy = ['README.md', 'LICENSE', 'CONTRIBUTING.md']
-for file_name in files_to_copy:
-    if os.path.exists(file_name):
-        shutil.copy2(file_name, package_dir)
-        print(f'Copied {file_name} to package')
-
-# Create archive - prefer zip on Windows, tar.gz elsewhere
-archive_created = False
-if platform.system() == 'Windows' or not shutil.which('tar'):
-    # Create ZIP archive
-    zip_path = os.path.join('package', f'{package_name}.zip')
-    with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
-        for root, dirs, files in os.walk(package_dir):
-            for file in files:
-                file_path = os.path.join(root, file)
-                arcname = os.path.relpath(file_path, 'package')
-                zipf.write(file_path, arcname)
-    print(f'Created ZIP archive: {zip_path}')
-    archive_created = True
-else:
-    # Create tar.gz archive
-    tar_path = os.path.join('package', f'{package_name}.tar.gz')
-    with tarfile.open(tar_path, 'w:gz') as tar:
-        tar.add(package_dir, arcname=package_name)
-    print(f'Created tar.gz archive: {tar_path}')
-    archive_created = True
-
-if archive_created:
-    print('Documentation package created successfully')
-    # List created files
-    package_files = [f for f in os.listdir('package') if f.startswith(package_name)]
-    for file in package_files:
-        file_path = os.path.join('package', file)
-        size = os.path.getsize(file_path)
-        print(f'  {file} ({size} bytes)')
-else:
-    print('Error: Failed to create archive')
-EOF
+        # Create package directory
+        version="${{ needs.prepare-release.outputs.version }}"
+        package_name="BlueMarble-Design-$version"
+        mkdir -p "package/$package_name"
+        
+        # Copy files using shell commands for simplicity
+        for dir in docs templates assets roadmap; do
+          if [ -d "$dir" ]; then
+            cp -r "$dir" "package/$package_name/"
+            echo "Copied $dir to package"
+          fi
+        done
+        
+        for file in README.md LICENSE CONTRIBUTING.md; do
+          if [ -f "$file" ]; then
+            cp "$file" "package/$package_name/"
+            echo "Copied $file to package"
+          fi
+        done
+        
+        # Create archive using cross-platform approach
+        cd package
+        if command -v tar >/dev/null 2>&1; then
+          tar -czf "$package_name.tar.gz" "$package_name"
+          echo "Created tar.gz archive"
+        else
+          $python_cmd -c "import zipfile,os; z=zipfile.ZipFile('$package_name.zip','w',zipfile.ZIP_DEFLATED); [z.write(os.path.join(root,file),os.path.relpath(os.path.join(root,file),'.')) for root,dirs,files in os.walk('$package_name') for file in files]; z.close(); print('Created ZIP archive')"
+        fi
+        
+        # List created files
+        ls -la "$package_name".* 2>/dev/null || echo "Archive created"
         
     - name: Upload documentation package
       uses: actions/upload-artifact@v4

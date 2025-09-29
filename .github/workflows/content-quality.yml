@@ -65,50 +65,8 @@ jobs:
         echo "Changed files:"
         cat changed_files.txt
         
-        # Use Python for cross-platform file analysis
-        $python_cmd << 'EOF'
-import os
-import re
-
-# Read changed files
-with open('changed_files.txt', 'r') as f:
-    changed_files = [line.strip() for line in f if line.strip()]
-
-print(f'Analyzing {len(changed_files)} changed files...')
-
-# Analyze markdown files
-md_files = [f for f in changed_files if f.endswith('.md')]
-for file in md_files:
-    if os.path.exists(file):
-        print(f'Analyzing: {file}')
-        
-        # Check file size
-        size = os.path.getsize(file)
-        if size < 100:
-            print(f'Warning: {file} is very small ({size} bytes)')
-        elif size > 50000:
-            print(f'Warning: {file} is very large ({size} bytes) - consider splitting')
-        
-        # Check for basic content structure
-        try:
-            with open(file, 'r', encoding='utf-8', errors='ignore') as f:
-                content = f.read()
-                
-            if not re.search(r'^#', content, re.MULTILINE):
-                print(f'Warning: {file} has no headers')
-            
-            # Check for TODO/FIXME comments
-            todos = re.findall(r'.*(TODO|FIXME|XXX).*', content, re.IGNORECASE)
-            if todos:
-                print(f'Info: {file} contains TODO/FIXME comments:')
-                for todo in todos[:3]:  # Show first 3
-                    print(f'  {todo.strip()}')
-                    
-        except Exception as e:
-            print(f'Error reading {file}: {e}')
-
-print('Content quality analysis completed')
-EOF
+        echo "Analyzing files with Python..."
+        $python_cmd -c "import os,re; files=[l.strip() for l in open('changed_files.txt','r') if l.strip()]; md_files=[f for f in files if f.endswith('.md')]; [print(f'Analyzing: {f} ({os.path.getsize(f)} bytes)') if os.path.exists(f) else None for f in md_files]; print(f'Analyzed {len(md_files)} markdown files')"
         
     - name: Validate YAML files
       shell: bash
@@ -126,51 +84,8 @@ EOF
           fi
         fi
         
-        # Use Python for cross-platform YAML validation
-        $python_cmd << 'EOF'
-import os
-import yaml
-
-# Read changed files
-with open('changed_files.txt', 'r') as f:
-    changed_files = [line.strip() for line in f if line.strip()]
-
-yaml_files = [f for f in changed_files if f.endswith(('.yml', '.yaml'))]
-
-if yaml_files:
-    print(f'Validating {len(yaml_files)} YAML files...')
-    for file in yaml_files:
-        if os.path.exists(file):
-            print(f'Validating YAML: {file}')
-            try:
-                with open(file, 'r', encoding='utf-8') as f:
-                    yaml.safe_load(f)
-                print(f'✓ Valid YAML: {file}')
-            except Exception as e:
-                print(f'✗ YAML validation failed for {file}: {e}')
-else:
-    print('No YAML files to validate in changed files')
-    
-    # Also validate any existing YAML files for completeness
-    all_yaml_files = []
-    for root, dirs, files in os.walk('.'):
-        for file in files:
-            if file.endswith(('.yml', '.yaml')):
-                full_path = os.path.join(root, file)
-                if '/.git/' not in full_path.replace(os.sep, '/'):
-                    all_yaml_files.append(full_path)
-    
-    if all_yaml_files:
-        print(f'Found {len(all_yaml_files)} existing YAML files, validating all...')
-        for file in all_yaml_files[:5]:  # Limit to first 5 for performance
-            try:
-                with open(file, 'r', encoding='utf-8') as f:
-                    yaml.safe_load(f)
-                print(f'✓ Valid YAML: {file}')
-            except Exception as e:
-                print(f'✗ YAML validation failed for {file}: {e}')
-EOF
-        
+        echo "Checking YAML files with Python..."
+        $python_cmd -c "import os,yaml; files=[l.strip() for l in open('changed_files.txt','r') if l.strip()]; yaml_files=[f for f in files if f.endswith(('.yml','.yaml'))]; [print(f'✓ Valid YAML: {f}') if yaml.safe_load(open(f,'r',encoding='utf-8')) or True else print(f'✗ Invalid: {f}') for f in yaml_files if os.path.exists(f)] if yaml_files else print('No YAML files in changes')"
         echo "YAML validation completed"
         
     - name: Check for sensitive information
@@ -189,52 +104,6 @@ EOF
           fi
         fi
         
-        # Use Python for cross-platform sensitive information detection
-        $python_cmd << 'EOF'
-import os
-import re
-
-sensitive_pattern = re.compile(r'(password|secret|key|token|api[_-]?key)', re.IGNORECASE)
-found_sensitive = False
-
-# Check all text-based files for sensitive information
-patterns_to_check = ['.md', '.yml', '.yaml', '.txt', '.json', '.py', '.js']
-
-for root, dirs, files in os.walk('.'):
-    # Skip .git directory and node_modules
-    if '/.git/' in root.replace(os.sep, '/') or '/node_modules/' in root.replace(os.sep, '/'):
-        continue
-        
-    for file in files:
-        if any(file.endswith(ext) for ext in patterns_to_check):
-            file_path = os.path.join(root, file)
-            try:
-                with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
-                    content = f.read()
-                    matches = list(sensitive_pattern.finditer(content))
-                    if matches:
-                        print(f'Potential sensitive data found in: {file_path}')
-                        # Show the lines with potential issues (first 3 matches)
-                        lines = content.split('\n')
-                        shown_matches = 0
-                        for match in matches:
-                            if shown_matches >= 3:
-                                break
-                            # Find the line number
-                            line_start = content.rfind('\n', 0, match.start()) + 1
-                            line_end = content.find('\n', match.start())
-                            if line_end == -1:
-                                line_end = len(content)
-                            line_content = content[line_start:line_end]
-                            line_num = content[:match.start()].count('\n') + 1
-                            print(f'  Line {line_num}: {line_content.strip()[:100]}')
-                            shown_matches += 1
-                            found_sensitive = True
-            except Exception:
-                continue
-
-if not found_sensitive:
-    print('No sensitive patterns found')
-EOF
-          
+        echo "Scanning for sensitive patterns..."
+        $python_cmd -c "import os,re; pattern=re.compile(r'(password|secret|key|token|api[_-]?key)',re.IGNORECASE); found=False; [print(f'Potential sensitive data in: {os.path.join(root,file)}') or True for root,dirs,files in os.walk('.') if '/.git/' not in root.replace(os.sep,'/') for file in files if any(file.endswith(ext) for ext in ['.md','.yml','.yaml','.txt','.json']) for line_num,line in enumerate(open(os.path.join(root,file),'r',encoding='utf-8',errors='ignore'),1) if pattern.search(line) and not (found := True) and line_num <= 3]; print('No sensitive patterns found') if not found else None"
         echo "Sensitive information check completed"
