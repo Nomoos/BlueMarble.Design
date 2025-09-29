@@ -7,12 +7,18 @@ This directory contains research documentation for various aspects of the BlueMa
 ```
 research/
 ├── README.md                    # This file - research overview
-└── spatial-data-storage/        # Spatial data storage strategies research
-    ├── README.md               # Overview of spatial storage approaches
-    ├── comparison-analysis.md  # Detailed comparison of storage methods
-    ├── current-implementation.md  # Documentation of BlueMarble's current approach
-    ├── recommendations.md      # Hybrid approach recommendations
-    └── octree-optimization-guide.md  # Advanced octree optimization strategies
+├── spatial-data-storage/        # Spatial data storage strategies research
+│   ├── README.md               # Overview of spatial storage approaches
+│   ├── comparison-analysis.md  # Detailed comparison of storage methods
+│   ├── current-implementation.md  # Documentation of BlueMarble's current approach
+│   ├── recommendations.md      # Hybrid approach recommendations
+│   └── octree-optimization-guide.md  # Advanced octree optimization strategies
+└── game-design/                 # Game design research for interactive geological simulation
+    ├── README.md               # Overview of game design research
+    ├── world-parameters.md     # Technical specifications for 3D spherical world
+    ├── mechanics-research.md   # Game systems inspired by classic economic simulations
+    ├── implementation-plan.md  # Phased development roadmap
+    └── player-freedom-analysis.md  # Maximizing player agency through intelligent constraints
 ```
 
 ## Research Areas
@@ -27,6 +33,16 @@ Comprehensive analysis of spatial data representations and storage strategies fo
 - Raster/Grid systems
 - Vector/Boundary representations
 - Hybrid approaches for BlueMarble's specific use case
+
+### Game Design (`game-design/`)
+
+Research documentation for transforming BlueMarble into an interactive geological simulation game while maintaining scientific accuracy, including:
+
+- Technical world parameters for 3D spherical planet with 20,000 km height
+- Game mechanics inspired by Port Royale 1 and The Guild 1400
+- Phased development roadmap (16-20 months implementation plan)
+- Player freedom analysis emphasizing intelligent constraints
+- Integration strategies maintaining backward compatibility with existing architecture
 
 ## Integration with BlueMarble Architecture
 
