@@ -1,0 +1,92 @@
+name: Content Quality Check
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+jobs:
+  content-quality:
+    name: Content Quality Analysis
+    runs-on: self-hosted
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+        
+    - name: Install content analysis tools
+      run: |
+        pip install PyYAML
+        
+    - name: Analyze changed files
+      run: |
+        echo "Analyzing changed files in this PR..."
+        
+        # Get list of changed files
+        if [ "${{ github.event_name }}" = "pull_request" ]; then
+          git diff --name-only origin/${{ github.base_ref }}...HEAD > changed_files.txt
+        else
+          git diff --name-only HEAD~1 HEAD > changed_files.txt
+        fi
+        
+        echo "Changed files:"
+        cat changed_files.txt
+        
+        # Analyze markdown files for basic quality
+        grep "\.md$" changed_files.txt | while read file; do
+          if [ -f "$file" ]; then
+            echo "Analyzing: $file"
+            
+            # Check file size (warn if very small or very large)
+            size=$(wc -c < "$file")
+            if [ "$size" -lt 100 ]; then
+              echo "Warning: $file is very small ($size bytes)"
+            elif [ "$size" -gt 50000 ]; then
+              echo "Warning: $file is very large ($size bytes) - consider splitting"
+            fi
+            
+            # Check for basic content structure
+            if ! grep -q "^#" "$file"; then
+              echo "Warning: $file has no headers"
+            fi
+            
+            # Check for TODO/FIXME comments
+            if grep -q "TODO\|FIXME\|XXX" "$file"; then
+              echo "Info: $file contains TODO/FIXME comments"
+              grep -n "TODO\|FIXME\|XXX" "$file"
+            fi
+          fi
+        done
+        
+        echo "Content quality analysis completed"
+        
+    - name: Validate YAML files
+      run: |
+        echo "Validating YAML files..."
+        
+        grep "\.ya?ml$" changed_files.txt | while read file; do
+          if [ -f "$file" ]; then
+            echo "Validating YAML: $file"
+            python3 -c "import yaml; yaml.safe_load(open('$file')); print('✓ Valid YAML: $file')" || echo "✗ YAML validation failed for $file"
+          fi
+        done
+        
+        echo "YAML validation completed"
+        
+    - name: Check for sensitive information
+      run: |
+        echo "Checking for potential sensitive information..."
+        
+        # Check for common patterns that might indicate sensitive data
+        grep -r -i --include="*.md" --include="*.yml" --include="*.yaml" \
+          -E "(password|secret|key|token|api[_-]?key)" . || echo "No sensitive patterns found"
+          
+        echo "Sensitive information check completed"

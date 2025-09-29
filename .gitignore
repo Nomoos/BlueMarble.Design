@@ -51,3 +51,14 @@ auto-generated/
 package-lock.json
 yarn.lock
 composer.lock
+
+# Workflow Generated Files
+changed_files.txt
+automation_report.md
+RELEASE_NOTES.md
+package/
+
+# Runner and CI/CD artifacts
+.runner/
+runner-*
+*.tar.gz

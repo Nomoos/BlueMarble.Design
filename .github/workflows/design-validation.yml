@@ -1,0 +1,95 @@
+name: Design Assets Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'docs/**'
+      - 'templates/**'
+      - 'assets/**'
+      - 'roadmap/**'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'docs/**'
+      - 'templates/**'
+      - 'assets/**'
+      - 'roadmap/**'
+  workflow_dispatch:
+
+jobs:
+  validate-design-structure:
+    name: Validate Design Structure
+    runs-on: self-hosted
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Validate directory structure
+      run: |
+        echo "Validating design repository structure..."
+        
+        # Check required directories exist
+        required_dirs=("docs" "templates" "assets" "roadmap")
+        for dir in "${required_dirs[@]}"; do
+          if [ ! -d "$dir" ]; then
+            echo "Warning: Required directory '$dir' not found"
+          else
+            echo "✓ Found directory: $dir"
+          fi
+        done
+        
+        # Check for core documentation files
+        echo "Checking for core documentation files..."
+        if [ -f "docs/README.md" ]; then
+          echo "✓ Found docs/README.md"
+        else
+          echo "Warning: docs/README.md not found"
+        fi
+        
+        # Validate template files
+        if [ -d "templates" ]; then
+          echo "Checking template files..."
+          template_count=$(find templates -name "*.md" | wc -l)
+          echo "Found $template_count template files"
+        fi
+        
+        echo "Design structure validation completed"
+        
+    - name: Check for broken links in documentation
+      run: |
+        echo "Checking for broken internal links..."
+        
+        # Simple check for markdown links that might be broken
+        find docs -name "*.md" -exec grep -l "\[.*\](" {} \; | while read file; do
+          echo "Checking links in: $file"
+          # Extract markdown links and check if referenced files exist
+          grep -o '\[.*\]([^)]*\.md)' "$file" | sed 's/.*(\([^)]*\)).*/\1/' | while read link; do
+            # Convert relative paths to absolute paths from the file's directory
+            if [[ "$link" == ./* ]] || [[ "$link" != http* ]]; then
+              link_path=$(dirname "$file")/"$link"
+              if [ ! -f "$link_path" ]; then
+                echo "Warning: Potentially broken link in $file: $link"
+              fi
+            fi
+          done
+        done
+        
+        echo "Link validation completed"
+        
+    - name: Validate file naming conventions
+      run: |
+        echo "Checking file naming conventions..."
+        
+        # Check for files with spaces in names (should use hyphens)
+        find . -name "* *" -type f -not -path "./.git/*" | while read file; do
+          echo "Warning: File with spaces in name: $file"
+        done
+        
+        # Check for uppercase in markdown files (should be lowercase)
+        find docs templates -name "*.md" | grep -E '[A-Z]' | while read file; do
+          echo "Info: Consider using lowercase for consistency: $file"
+        done
+        
+        echo "File naming validation completed"
