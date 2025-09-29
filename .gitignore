@@ -1,9 +1,11 @@
-# Temporary files
-*.tmp
-*.temp
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
 *~
 
-# System files
+# OS Generated Files
 .DS_Store
 .DS_Store?
 ._*
@@ -12,34 +14,40 @@
 ehthumbs.db
 Thumbs.db
 
-# IDE and editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# Temporary Files
+*.tmp
+*.temp
+.tmp/
+.temp/
 
-# Build artifacts
-build/
+# Build Artifacts (if any build process is added later)
 dist/
-bin/
-obj/
-
-# Dependencies
+build/
 node_modules/
-vendor/
-
-# Logs
 *.log
-logs/
 
-# Cache
-.cache/
-*.cache
+# Large Asset Files (use Git LFS instead)
+*.psd
+*.ai
+*.sketch
+*.fig
+*.xd
 
-# Temporary documentation files
-/tmp/
+# Personal Notes and Drafts
+drafts/
+personal/
+*.draft.md
 
-# Personal notes (not for shared documentation)
-personal-notes.md
-*.personal.md
+# Generated Documentation (if auto-generation is added)
+generated/
+auto-generated/
+
+# Backup Files
+*.bak
+*.backup
+*_backup
+
+# Lock Files (if package managers are used)
+package-lock.json
+yarn.lock
+composer.lock
