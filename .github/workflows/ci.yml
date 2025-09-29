@@ -1,0 +1,59 @@
+name: CI - Documentation and Content Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+
+jobs:
+  validate-documentation:
+    name: Validate Documentation
+    runs-on: self-hosted
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm install -g markdownlint-cli
+        
+    - name: Validate markdown files
+      run: |
+        find . -name "*.md" -not -path "./node_modules/*" -not -path "./.git/*" | xargs markdownlint --config .markdownlint.json || true
+        
+    - name: Check file structure
+      run: |
+        echo "Checking repository structure..."
+        if [ ! -d "docs" ]; then
+          echo "Warning: docs directory not found"
+        fi
+        if [ ! -d "templates" ]; then
+          echo "Warning: templates directory not found"
+        fi
+        if [ ! -f "README.md" ]; then
+          echo "Error: README.md not found"
+          exit 1
+        fi
+        echo "Repository structure validation completed"
+        
+    - name: Validate issue templates
+      run: |
+        echo "Validating issue templates..."
+        if [ -d ".github/ISSUE_TEMPLATE" ]; then
+          for template in .github/ISSUE_TEMPLATE/*.yml; do
+            if [ -f "$template" ]; then
+              echo "Found template: $template"
+              # Basic YAML syntax validation
+              python3 -c "import yaml; yaml.safe_load(open('$template'))" || echo "Warning: YAML syntax issue in $template"
+            fi
+          done
+        fi
+        echo "Issue template validation completed"

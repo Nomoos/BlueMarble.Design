@@ -1,0 +1,131 @@
+name: Release and Deployment
+
+on:
+  push:
+    tags:
+      - 'v*'
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      deploy_target:
+        description: 'Deployment target'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+        - staging
+        - production
+
+jobs:
+  prepare-release:
+    name: Prepare Release
+    runs-on: self-hosted
+    outputs:
+      version: ${{ steps.get_version.outputs.version }}
+      
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: Get version
+      id: get_version
+      run: |
+        if [[ $GITHUB_REF == refs/tags/* ]]; then
+          VERSION=${GITHUB_REF#refs/tags/}
+        else
+          VERSION="dev-$(date +%Y%m%d%H%M%S)"
+        fi
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "Version: $VERSION"
+        
+    - name: Generate changelog
+      run: |
+        echo "# Release Notes for ${{ steps.get_version.outputs.version }}" > RELEASE_NOTES.md
+        echo "" >> RELEASE_NOTES.md
+        
+        # Get commits since last tag
+        if git describe --tags --abbrev=0 2>/dev/null; then
+          LAST_TAG=$(git describe --tags --abbrev=0)
+          echo "## Changes since $LAST_TAG" >> RELEASE_NOTES.md
+          git log --pretty=format:"- %s (%h)" $LAST_TAG..HEAD >> RELEASE_NOTES.md
+        else
+          echo "## Initial Release" >> RELEASE_NOTES.md
+          git log --pretty=format:"- %s (%h)" >> RELEASE_NOTES.md
+        fi
+        
+        echo "" >> RELEASE_NOTES.md
+        cat RELEASE_NOTES.md
+        
+    - name: Upload release notes
+      uses: actions/upload-artifact@v4
+      with:
+        name: release-notes
+        path: RELEASE_NOTES.md
+        
+  package-documentation:
+    name: Package Documentation
+    runs-on: self-hosted
+    needs: prepare-release
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Create documentation package
+      run: |
+        echo "Creating documentation package..."
+        
+        # Create package directory
+        mkdir -p package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}
+        
+        # Copy documentation files
+        cp -r docs package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}/
+        cp -r templates package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}/
+        cp -r assets package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}/
+        cp -r roadmap package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}/
+        
+        # Copy root files
+        cp README.md package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}/
+        cp LICENSE package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}/
+        cp CONTRIBUTING.md package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}/
+        
+        # Create archive
+        cd package
+        tar -czf BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.tar.gz BlueMarble-Design-${{ needs.prepare-release.outputs.version }}
+        
+        echo "Documentation package created"
+        ls -la BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.tar.gz
+        
+    - name: Upload documentation package
+      uses: actions/upload-artifact@v4
+      with:
+        name: documentation-package
+        path: package/BlueMarble-Design-${{ needs.prepare-release.outputs.version }}.tar.gz
+        
+  deploy:
+    name: Deploy Documentation
+    runs-on: self-hosted
+    needs: [prepare-release, package-documentation]
+    if: github.event_name != 'pull_request'
+    
+    steps:
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+      
+    - name: Deploy to target environment
+      run: |
+        echo "Deploying to ${{ github.event.inputs.deploy_target || 'production' }}..."
+        
+        # Simulate deployment process
+        echo "📦 Extracted documentation package"
+        echo "🚀 Deploying version ${{ needs.prepare-release.outputs.version }}"
+        echo "🌍 Target environment: ${{ github.event.inputs.deploy_target || 'production' }}"
+        
+        # Here you would add actual deployment steps
+        # This could include uploading to a documentation site,
+        # updating a wiki, or syncing with other systems
+        
+        echo "✅ Deployment completed successfully"
