@@ -10,7 +10,15 @@ This directory contains technical design documents, system architecture specific
 - API specifications and protocols
 - Security and authentication systems
 
+### Spatial Data Systems
+- **[Spherical Planet Generation System](spec-spherical-planet-generation.md)** - Complete specification for spherical planet generation and projection
+- **[Technical Implementation Guide](tech-spherical-planet-implementation.md)** - Detailed implementation guidance with code examples
+- **[API Specification](api-spherical-planet-generation.md)** - RESTful API for planet generation operations
+- **[Testing Strategy](testing-spherical-planet-generation.md)** - Comprehensive testing approach for planet generation
+
 ### Gameplay Systems
+- **[Economy Systems](economy-systems.md)** - Economic balance and trading mechanics
+- **[Gameplay Systems](gameplay-systems.md)** - Core game mechanics and systems
 - Physics and collision systems
 - AI and NPC behavior systems
 - Networking and multiplayer architecture
