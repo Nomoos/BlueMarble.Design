@@ -4,6 +4,7 @@ on:
   push:
     branches: [ main, develop ]
     paths:
+      - 'design/**'
       - 'docs/**'
       - 'templates/**'
       - 'assets/**'
@@ -11,6 +12,7 @@ on:
   pull_request:
     branches: [ main, develop ]
     paths:
+      - 'design/**'
       - 'docs/**'
       - 'templates/**'
       - 'assets/**'
@@ -43,7 +45,7 @@ jobs:
         fi
         
         echo "Checking directory structure..."
-        $python_cmd -c "import os,glob; required=['docs','templates','assets','roadmap']; [print(f'✓ Found directory: {d}') if os.path.exists(d) else print(f'Warning: {d} not found') for d in required]; print(f'✓ Found docs/README.md') if os.path.exists('docs/README.md') else print('Warning: docs/README.md not found'); template_count=len(glob.glob('templates/**/*.md',recursive=True)) if os.path.exists('templates') else 0; print(f'Found {template_count} template files')"
+        $python_cmd -c "import os,glob; required=['design','docs','templates','assets','roadmap']; [print(f'✓ Found directory: {d}') if os.path.exists(d) else print(f'Warning: {d} not found') for d in required]; print(f'✓ Found docs/README.md') if os.path.exists('docs/README.md') else print('Warning: docs/README.md not found'); print(f'✓ Found design/README.md') if os.path.exists('design/README.md') else print('Warning: design/README.md not found'); template_count=len(glob.glob('templates/**/*.md',recursive=True)) if os.path.exists('templates') else 0; print(f'Found {template_count} template files')"
         echo "Design structure validation completed"
         
     - name: Check for broken links in documentation
@@ -63,7 +65,7 @@ jobs:
         fi
         
         echo "Checking links with Python..."
-        $python_cmd -c "import os,re,glob; link_pattern=re.compile(r'\[.*?\]\(([^)]*\.md)\)'); md_files=glob.glob('docs/**/*.md',recursive=True)+glob.glob('*.md'); broken_links=[]; [broken_links.extend([(md_file,match.group(1)) for match in link_pattern.finditer(open(md_file,'r',encoding='utf-8',errors='ignore').read()) if not match.group(1).startswith('http') and not os.path.exists(os.path.normpath(os.path.join(os.path.dirname(md_file),match.group(1).lstrip('./'))))]) for md_file in md_files if os.path.isfile(md_file)]; [print(f'Warning: Broken link in {f}: {l}') for f,l in broken_links]; print('No broken links found') if not broken_links else None"
+        $python_cmd -c "import os,re,glob; link_pattern=re.compile(r'\[.*?\]\(([^)]*\.md)\)'); md_files=glob.glob('design/**/*.md',recursive=True)+glob.glob('docs/**/*.md',recursive=True)+glob.glob('*.md'); broken_links=[]; [broken_links.extend([(md_file,match.group(1)) for match in link_pattern.finditer(open(md_file,'r',encoding='utf-8',errors='ignore').read()) if not match.group(1).startswith('http') and not os.path.exists(os.path.normpath(os.path.join(os.path.dirname(md_file),match.group(1).lstrip('./'))))]) for md_file in md_files if os.path.isfile(md_file)]; [print(f'Warning: Broken link in {f}: {l}') for f,l in broken_links]; print('No broken links found') if not broken_links else None"
         echo "Link validation completed"
         
     - name: Validate file naming conventions

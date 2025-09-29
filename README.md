@@ -6,6 +6,7 @@ BlueMarble.Design is the research and design hub for BlueMarble, a top-down MMOR
 
 This repository serves as the central hub for all design-related activities in the BlueMarble ecosystem, including:
 
+- **Game Design Vision**: Core design documents and iterative design development in `/design`
 - **Research & Exploration**: Market analysis, player behavior studies, and technical research
 - **Design Documentation**: Comprehensive design documents covering all aspects of the game
 - **System Concepts**: Core mechanics, progression systems, and gameplay loops
@@ -15,6 +16,7 @@ This repository serves as the central hub for all design-related activities in t
 ## Repository Structure
 
 ```
+├── design/                  # Game design documentation and vision
 ├── docs/                    # Main documentation directory
 │   ├── core/               # Core design documents (GDD, TDD)
 │   ├── systems/            # Game systems and mechanics
