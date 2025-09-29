@@ -33,6 +33,9 @@ This directory contains comprehensive design documentation for BlueMarble, a top
 - [Player Research](./research/player-research.md) - Target audience and player behavior
 - [Technology Research](./research/technology-research.md) - Technical feasibility and tools
 
+### Infrastructure & Project Management
+- [Infrastructure Roadmap Usage](./INFRASTRUCTURE_ROADMAP_USAGE.md) - Guide for using the infrastructure research roadmap parent issue
+
 ## Documentation Standards
 
 All documents should follow these standards:
