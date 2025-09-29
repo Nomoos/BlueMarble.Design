@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace BlueMarble.SpatialStorage.Octree
 {
@@ -40,6 +41,16 @@ namespace BlueMarble.SpatialStorage.Octree
         public override int GetHashCode()
         {
             return HashCode.Combine(Id, Name, Density);
+        }
+
+        public static bool operator ==(MaterialData? left, MaterialData? right)
+        {
+            return EqualityComparer<MaterialData>.Default.Equals(left, right);
+        }
+
+        public static bool operator !=(MaterialData? left, MaterialData? right)
+        {
+            return !(left == right);
         }
     }
 

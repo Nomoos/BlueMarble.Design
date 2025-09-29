@@ -51,3 +51,15 @@ auto-generated/
 package-lock.json
 yarn.lock
 composer.lock
+
+# .NET Build Artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.deps.json
+*.runtimeconfig.json
+*.user
+*.suo
+*.sln.docstates
