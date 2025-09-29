@@ -8,6 +8,7 @@ This directory contains comprehensive research and analysis on spatial data stor
 - **[Current Implementation Analysis](current-implementation.md)** - Analysis of BlueMarble's existing spatial data architecture
 - **[Comparison Analysis](comparison-analysis.md)** - Detailed comparison of spatial storage approaches  
 - **[Octree Optimization Guide](octree-optimization-guide.md)** - Advanced octree optimization strategies
+- **[Octree + Vector Boundary Integration](octree-vector-boundary-integration.md)** - **COMPLETED**: Comprehensive research on hybrid octree/vector systems for precise features
 - **[Recommendations](recommendations.md)** - Strategic recommendations for hybrid spatial storage
 
 ### Homogeneous Region Collapsing Research
