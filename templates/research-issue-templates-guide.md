@@ -11,17 +11,30 @@ The research issue system consists of:
 ## Template Files
 
 - `templates/research-roadmap-main-issue.md` - Main roadmap issue template
+- `templates/infrastructure-research-roadmap-issue.md` - Infrastructure & research roadmap parent issue template  
 - `templates/research-question-sub-issue.md` - Individual research question template
 
 ## Creating the Research Roadmap
 
-### Step 1: Create the Main Research Issue
+### Option A: Standard Research Roadmap
+
+#### Step 1: Create the Main Research Issue
 
 1. Copy the content from `templates/research-roadmap-main-issue.md`
 2. Create a new GitHub issue with title: "Research Roadmap: Technical Questions and Trade-offs for World Material Storage"
 3. Replace placeholder values:
    - `#[Issue-X]` - Replace with actual issue numbers as sub-issues are created
    - Update status and progress checkboxes as work progresses
+
+### Option B: Infrastructure & Research Roadmap (Parent Issue)
+
+#### Step 1: Create the Infrastructure Research Roadmap Parent Issue
+
+1. Use the GitHub issue template: "Infrastructure Research Roadmap (Parent Issue)" 
+2. Or copy content from `templates/infrastructure-research-roadmap-issue.md`
+3. Create a new GitHub issue with title: "BlueMarble Infrastructure & Research Roadmap"
+4. Set labels: `infrastructure`, `research`, `epic`, `parent`
+5. Set milestone: `Infrastructure` and project: `Infrastructure`
 
 ### Step 2: Create Sub-Issues for Each Research Area
 

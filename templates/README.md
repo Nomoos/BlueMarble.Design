@@ -33,6 +33,13 @@ Template for creating the main research roadmap issue that tracks overall progre
 **GitHub Usage:** Main research roadmap issue creation  
 **Related:** Works with research-question-sub-issue.md
 
+#### `infrastructure-research-roadmap-issue.md`
+Template for creating the parent infrastructure & research roadmap issue that tracks BlueMarble's core infrastructure research across 12 major research areas.
+
+**Usage:** Parent tracking issue for infrastructure research initiatives  
+**GitHub Usage:** Main infrastructure roadmap parent issue creation  
+**Related:** Works with research-question-sub-issue.md for sub-issues
+
 #### `research-question-sub-issue.md`
 Template for individual research area issues that provide detailed tracking of specific research questions.
 
@@ -92,6 +99,7 @@ For research-related work, use the research issue template system:
 | Feature Spec | `feature-specification.md` | `docs/gameplay/`, `docs/systems/`, `docs/ui-ux/` |
 | Research Report | `research-report.md` | `docs/research/` |
 | Main Research Issue | `research-roadmap-main-issue.md` | GitHub Issues |
+| Infrastructure Roadmap | `infrastructure-research-roadmap-issue.md` | GitHub Issues |
 | Research Sub-Issue | `research-question-sub-issue.md` | GitHub Issues |
 | Issue Completion | `issue-completion-template.md` | GitHub Issue Comments |
 
