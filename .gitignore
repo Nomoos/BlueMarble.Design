@@ -1,0 +1,45 @@
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build artifacts
+build/
+dist/
+bin/
+obj/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+*.cache
+
+# Temporary documentation files
+/tmp/
+
+# Personal notes (not for shared documentation)
+personal-notes.md
+*.personal.md
