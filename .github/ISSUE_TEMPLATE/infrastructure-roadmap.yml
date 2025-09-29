@@ -1,0 +1,80 @@
+name: Infrastructure Research Roadmap (Parent Issue)
+description: Parent issue template for tracking BlueMarble infrastructure and research roadmap progress
+title: "BlueMarble Infrastructure & Research Roadmap"
+labels: ["infrastructure", "research", "epic", "parent"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This creates a parent issue for tracking BlueMarble's core infrastructure research roadmap.
+        **Copy the content from `templates/infrastructure-research-roadmap-issue.md` into the issue description.**
+        
+        This template creates the main tracking issue for:
+        - 12 major research areas for petabyte-scale 3D material storage
+        - Infrastructure milestones and progress tracking
+        - Sub-issue management and linking
+        - Technical dependencies and coordination
+        
+  - type: input
+    id: milestone
+    attributes:
+      label: Milestone
+      description: Target milestone for this infrastructure roadmap
+      value: "Infrastructure"
+    validations:
+      required: true
+      
+  - type: input
+    id: project
+    attributes:
+      label: Project
+      description: Project this roadmap belongs to
+      value: "Infrastructure"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: status
+    attributes:
+      label: Initial Status
+      description: Starting status for this roadmap
+      options:
+        - Planning
+        - In Progress
+        - On Hold
+        - Completed
+      default: 1
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any specific context or modifications for this infrastructure roadmap
+      placeholder: |
+        Add any specific notes about:
+        - Priority adjustments
+        - Resource constraints
+        - Timeline modifications
+        - Stakeholder requirements
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: setup-tasks
+    attributes:
+      label: Setup Tasks
+      description: Initial setup tasks for this parent issue
+      options:
+        - label: Copy content from `templates/infrastructure-research-roadmap-issue.md` into issue description
+          required: true
+        - label: Create sub-issues for each research area using `templates/research-question-sub-issue.md`
+          required: false
+        - label: Update issue number references in the parent issue as sub-issues are created
+          required: false
+        - label: Set up milestone tracking for Infrastructure milestone
+          required: false
+        - label: Assign team members to research areas
+          required: false
