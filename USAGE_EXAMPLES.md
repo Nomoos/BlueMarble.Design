@@ -115,6 +115,7 @@ Each document should clearly identify:
 2. Assign reviewers from relevant teams
 3. Address feedback and iterate
 4. Merge after approval from designated stakeholders
+5. **Complete the issue** using the [Issue Completion Template](templates/issue-completion-template.md) to ensure proper documentation and communication with the issue creator
 
 ### Change Management
 - Update revision history in documents for major changes
@@ -128,6 +129,65 @@ Each document should clearly identify:
 - **Monthly**: Review and update README files for accuracy
 - **Quarterly**: Archive completed or deprecated documents
 - **As needed**: Update templates based on usage feedback
+
+### Issue Completion Workflow
+
+When completing any issue, follow this process to ensure proper communication:
+
+#### Example: Completing a Design Issue
+
+1. **Complete the work** as specified in the issue
+2. **Write completion comment** using the template from `templates/issue-completion-template.md`
+3. **Tag the issue creator** (e.g., @Nomoos) in your comment
+4. **Provide summary** with both changes list and reasoning
+
+#### Sample Completion Comment
+
+```markdown
+## Issue Completion Summary
+
+@Nomoos 
+
+### Changes Made
+- Created new combat mechanics specification in `docs/gameplay/spec-combat-mechanics-v2.md`
+- Updated main gameplay README to reference new combat system
+- Added combat balance considerations to economy systems document
+
+### Reasoning & Context
+- Chose action-point based system for more strategic gameplay
+- Integrated with existing progression system to maintain consistency
+- Balanced for both solo and group play scenarios
+
+### Additional Notes
+- Combat specification ready for technical review by development team
+- May need playtesting to validate balance assumptions
+
+Issue completed and ready for review.
+```
+
+#### Example: Completing a Research Issue
+
+```markdown
+## Issue Completion Summary
+
+@ProjectManager 
+
+### Changes Made
+- Completed comprehensive market analysis in `docs/research/mmorpg-monetization-2024.md`
+- Added competitive pricing analysis section
+- Updated research summary with key recommendations
+
+### Reasoning & Context
+- Focused on subscription-based models due to BlueMarble's target audience
+- Analyzed both Eastern and Western market approaches for global perspective
+- Recommendations align with established game design principles
+
+### Additional Notes
+- Research findings should inform upcoming business model discussions
+- Consider quarterly updates to track market changes
+
+Issue completed and ready for review.
+```
 
 ### Quality Assurance
 - Verify all internal links are functional

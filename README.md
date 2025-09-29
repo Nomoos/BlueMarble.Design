@@ -39,6 +39,7 @@ This repository serves as the central hub for all design-related activities in t
 2. Check existing documentation in the relevant category
 3. Use the appropriate template from the `templates/` directory
 4. Follow the established naming conventions and structure
+5. When completing issues, use the [Issue Completion Template](templates/issue-completion-template.md) to ensure proper documentation and communication
 
 ### For Developers
 
