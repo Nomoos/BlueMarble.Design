@@ -240,7 +240,7 @@ for f in md_files:
                 
                 if len(content_lines) < MIN_CONTENT_LINES:
                     small_files.append((f, file_size, len(content_lines)))
-        except:
+        except (OSError, UnicodeDecodeError):
             continue
 
 if small_files:
