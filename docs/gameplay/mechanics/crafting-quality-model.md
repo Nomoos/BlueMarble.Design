@@ -370,7 +370,7 @@ Example (Base Price = 100 gold):
 - [Crafting Success Model](./crafting-success-model.md) - Success/failure mechanics
 - [Crafting Mechanics Overview](./crafting-mechanics-overview.md) - System overview
 - [Economy Systems](../../systems/economy-systems.md) - Economic balance
-- [Material Gathering](./material-gathering.md) - Resource quality mechanics
+- [Skill Knowledge System](../../../research/game-design/skill-knowledge-system-research.md) - Skill progression
 
 ## Version History
 
