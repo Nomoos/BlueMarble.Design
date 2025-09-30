@@ -120,6 +120,36 @@ Framework for maximizing player agency through intelligent, reality-based constr
 - Knowledge-based progression that directly enhances capabilities
 - Creative problem-solving using realistic geological processes
 
+### [Advanced Crafting System Concepts Research](advanced-crafting-system-research.md)
+Industry trends research analyzing advanced crafting mechanics in MMORPGs to inform BlueMarble's production system design.
+
+**Key Topics**:
+- Flexible material selection systems with property-based requirements
+- Risk/reward mechanics including material loss, tool degradation, and crafting injuries
+- Player control of material bonuses and quality outcomes
+- Comparative analysis of 8 leading MMORPGs (FFXIV, ESO, MO2, LiF, Wurm, Vintage Story, Novus Inceptio, Eco)
+- UI/UX design patterns for complex crafting interfaces
+- Multi-stage interactive crafting processes
+- Quality-stratified market economies
+- Knowledge-based progression systems
+
+**Research Highlights**:
+- Property-based material requirements enable strategic optimization and emergent gameplay
+- Balanced risk systems create meaningful stakes while supporting player retention
+- Player control through material selection, skill application, and environmental optimization
+- Interactive crafting phases reward mastery over simple click-to-craft
+- Comprehensive comparative analysis identifies best practices across 8 reference games
+- 16-month phased implementation roadmap with clear deliverables
+- BlueMarble's geological simulation provides natural foundation for advanced crafting
+- Economic stratification by quality creates sustainable player-driven markets
+
+**Applicability to BlueMarble**:
+- Geological material variation supports flexible material selection naturally
+- Scientific accuracy creates educational value while maintaining engagement
+- Multi-property material system aligns with realistic mineral properties
+- Knowledge progression complements BlueMarble's educational goals
+- Geographic material distribution drives trade and exploration
+
 ### [Resource Gathering and Assembly Skills Research](assembly-skills-system-research.md)
 Comprehensive research on realistic gathering and crafting skills for BlueMarble, including resource gathering 
 (mining, herbalism, logging, hunting, fishing) and assembly professions (blacksmithing, tailoring, alchemy, 
