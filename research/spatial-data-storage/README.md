@@ -36,6 +36,7 @@ This directory contains comprehensive research and analysis on spatial data stor
 
 ### Hybrid Architecture Research
 - **[Grid + Vector Combination Research](grid-vector-combination-research.md)** - **NEW**: Dense simulation areas using raster grids with vector boundaries
+- **[Octree + Grid Hybrid Architecture](octree-grid-hybrid-architecture.md)** - **NEW**: Multi-scale storage combining octree global indexing with raster grid tiles for high-resolution areas
 ## Research Focus
 
 The research addresses multiple challenges in planetary-scale geological simulation:
@@ -97,6 +98,27 @@ The research addresses multiple challenges in planetary-scale geological simulat
 | **Climate** | 10-1000km | Global | Octree Levels 1-5 |
 | **Erosion** | 0.25-10m | Local to Regional | Octree Levels 15-26 |
 | **Sedimentation** | 0.25-100m | Local to Regional | Octree Levels 10-26 |
+
+### Octree + Grid Hybrid Architecture Results
+
+**Research Question**: Should octrees handle global indexing with grid tiles for local patches?
+
+**Answer**: YES - Optimal solution for mixed-resolution data:
+
+| Metric | Pure Octree | Pure Grid | Hybrid | Hybrid Advantage |
+|--------|-------------|-----------|--------|------------------|
+| **Query Time (high-res)** | 2.8ms | 0.35ms | 0.42ms | 6.7x faster than octree |
+| **Memory Usage** | 450MB | 12000MB | 2400MB | 80% less than grid |
+| **Storage Size** | 2.1GB | 45.0GB | 4.8GB | 77% less than grid |
+| **Geological Process Speed** | 15.0s | 2.5s | 3.0s | 5x faster than octree |
+
+**Key Performance Characteristics:**
+
+| Resolution Level | Structure | Query Time | Memory/km² | Best Use Case |
+|-----------------|-----------|------------|------------|---------------|
+| LOD 10-12 (~10-39m) | Octree | 0.8-1.5ms | 160KB-2.5MB | Global/Regional |
+| **LOD 12 (Transition)** | **Both** | **1.5ms** | **2.5MB** | **Building scale** |
+| LOD 13-15 (~1-5m) | Grid | 0.2-0.3ms | 10-160MB | High-res detail |
 
 ### Hybrid Compression Strategy Results
 
@@ -174,7 +196,7 @@ BlueMarble Hybrid Compression Framework
 - **Milestone 1.2**: Homogeneity analysis framework
 - **Expected Impact**: 40-60% storage reduction with minimal risk
 
-### Phase 2: Core Infrastructure (Months 4-8)  
+### Phase 2: Core Infrastructure (Months 4-8)
 - **Milestone 2.1**: Morton code linear octree implementation
 - **Milestone 2.2**: Hybrid decision framework with ML optimization
 - **Expected Impact**: 65-75% total storage reduction
@@ -186,7 +208,7 @@ BlueMarble Hybrid Compression Framework
 
 ### Total Investment and Returns
 - **Development Investment**: $385K over 12 months
-- **Expected 3-Year Savings**: $2.8M 
+- **Expected 3-Year Savings**: $2.8M
 - **ROI**: 627% over 3 years
 - **Payback Period**: 3.9 months
 
@@ -254,7 +276,7 @@ Our hybrid approach outperforms industry standards:
 This research represents a significant advancement in petabyte-scale spatial data compression. Contributors should:
 
 1. **Review the complete research suite** before proposing modifications
-2. **Run benchmarking tests** to validate any new compression strategies  
+2. **Run benchmarking tests** to validate any new compression strategies
 3. **Consider integration impact** with existing BlueMarble architecture
 4. **Follow the phased implementation approach** to minimize deployment risk
 
