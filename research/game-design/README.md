@@ -130,6 +130,36 @@ woodworking).
 - Specialization unlocks at Level 25 for focused expertise
 - Complete crafting interface designs with visual feedback
 
+### [Life is Feudal Material System Research](life-is-feudal-material-system-research.md)
+Comprehensive analysis of Life is Feudal's material quality and crafting systems with lessons for BlueMarble's geological material processing.
+
+**Key Topics**:
+- 0-100 quality scale with direct mechanical impact
+- Material/skill weighted calculation (60/40 split)
+- Tiered skill progression (0/30/60/90 breakpoints)
+- Hard skill cap (600 points) creating forced specialization
+- Tool quality multipliers and workshop bonuses
+- Multi-stage processing chains with quality inheritance
+- Economic system with quality-based price scaling
+- Parent-child skill relationships
+
+**Research Highlights**:
+- Quality directly scales all item statistics (damage, durability, efficiency)
+- Material quality carries through entire processing chain
+- Skill tiers unlock new recipes and improve max achievable quality
+- Processing chains require multiple specialists for optimal outcomes
+- Guild-based crafting cooperation and specialization
+- Alignment system separating crafting and combat progression
+- Economic interdependence through specialized roles
+- 500-1000 hour progression curve to master specializations
+
+**Relevance to BlueMarble**:
+- Proven model for material-driven gameplay depth
+- Integration of geological material properties with crafting mechanics
+- Economic complexity through quality variations
+- Specialization mechanics that encourage player cooperation
+- Long-term engagement through mastery systems
+
 ### [Eco Global Survival Material System Research](eco-global-survival-material-system-research.md)
 Market research analyzing Eco Global Survival's material and quality systems, with focus on environmental impact, 
 collaborative crafting, and sustainability mechanics adaptable for BlueMarble.
@@ -152,6 +182,7 @@ collaborative crafting, and sustainability mechanics adaptable for BlueMarble.
 - Renewable vs. non-renewable resource distinction with ecological rules
 - Sustainability recommendations for BlueMarble integration with geological simulation
 - Implementation roadmap for environmental mechanics (9-14 months estimated)
+
 
 ### [Novus Inceptio Material System Research](novus-inceptio-material-system-research.md)
 Deep analysis of Novus Inceptio's material and quality system, focusing on geological integration with crafting 
@@ -176,7 +207,6 @@ mechanics. This research is particularly relevant to BlueMarble due to Novus Inc
 - Comprehensive system diagrams illustrating material flow
 - Detailed recommendations for BlueMarble adoption
 - Implementation considerations with code examples
-
 
 ## Research Philosophy
 
