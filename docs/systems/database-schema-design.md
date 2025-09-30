@@ -527,7 +527,6 @@ CREATE TABLE game_events (
 CREATE INDEX idx_game_events_type ON game_events(event_type, created_at DESC);
 CREATE INDEX idx_game_events_character ON game_events(character_id, created_at DESC);
 CREATE INDEX idx_game_events_created ON game_events(created_at DESC);
--- Partitioning by month for performance
 CREATE INDEX idx_game_events_severity ON game_events(severity, created_at DESC);
 ```
 
