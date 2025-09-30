@@ -127,6 +127,9 @@ public class EnhancedMaterial : IMaterial
 - Byproduct and waste handling system
 - Updated material database with game properties
 
+**Related Research:**
+- [Life is Feudal Material System Research](./life-is-feudal-material-system-research.md) - Detailed analysis of proven material quality and crafting systems for BlueMarble implementation
+
 ### Month 3: Spatial Indexing Optimization
 
 **Week 1-2: Adaptive Octree Implementation**

@@ -94,6 +94,36 @@ woodworking).
 - Specialization unlocks at Level 25 for focused expertise
 - Complete crafting interface designs with visual feedback
 
+### [Life is Feudal Material System Research](life-is-feudal-material-system-research.md)
+Comprehensive analysis of Life is Feudal's material quality and crafting systems with lessons for BlueMarble's geological material processing.
+
+**Key Topics**:
+- 0-100 quality scale with direct mechanical impact
+- Material/skill weighted calculation (60/40 split)
+- Tiered skill progression (0/30/60/90 breakpoints)
+- Hard skill cap (600 points) creating forced specialization
+- Tool quality multipliers and workshop bonuses
+- Multi-stage processing chains with quality inheritance
+- Economic system with quality-based price scaling
+- Parent-child skill relationships
+
+**Research Highlights**:
+- Quality directly scales all item statistics (damage, durability, efficiency)
+- Material quality carries through entire processing chain
+- Skill tiers unlock new recipes and improve max achievable quality
+- Processing chains require multiple specialists for optimal outcomes
+- Guild-based crafting cooperation and specialization
+- Alignment system separating crafting and combat progression
+- Economic interdependence through specialized roles
+- 500-1000 hour progression curve to master specializations
+
+**Relevance to BlueMarble**:
+- Proven model for material-driven gameplay depth
+- Integration of geological material properties with crafting mechanics
+- Economic complexity through quality variations
+- Specialization mechanics that encourage player cooperation
+- Long-term engagement through mastery systems
+
 ## Research Philosophy
 
 ### Scientific Integrity First
