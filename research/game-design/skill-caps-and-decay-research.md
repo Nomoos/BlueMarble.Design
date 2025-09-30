@@ -26,6 +26,8 @@ caps unnecessary.
 - Alternative hard cap systems with minimum competence thresholds offer different trade-offs
 - Hierarchical skill trees (category → group → specific) enable granular specialization while reducing
   micromanagement through shared group points
+- Tag-based systems (domain + discipline + material tags) offer greater flexibility than hierarchies for
+  simulation-heavy games, allowing natural skill transfer and emergent specialization
 - With 23+ skill categories, decay becomes essential for forcing meaningful specialization choices
 
 **Recommendations:**
@@ -35,8 +37,10 @@ caps unnecessary.
 - Balance decay severity with player enjoyment and accessibility
 - Consider hard cap alternative: 2 master skills, 500 flexible points, minimum competence (15) for all trained
   skills with higher failure rates
-- Use hierarchical skill trees with shared group points for material-based skills (e.g., gathering/metal/iron)
-- Implement material familiarity bonuses on top of group skills for realistic progression
+- For hierarchical systems: use shared group points for material-based skills (e.g., gathering/metal/iron)
+- For tag-based systems: allocate points to domain + discipline tags, let material familiarity emerge through use
+- Tag-based approach recommended for BlueMarble's geological simulation due to flexibility and natural skill
+  transfer across similar contexts
 - With 23+ skills, organize into meta-categories to guide specialization and prevent maintenance overload
 
 ## Table of Contents
@@ -635,6 +639,255 @@ To recover:
 4. **Cap Specialization Bonuses** to avoid exponential growth (e.g., +25 max bonus)
 5. **Show Clear Hierarchies** in UI so players understand point allocation
 6. **Allow Group Practice** to maintain baseline competence across all group members
+
+### Tag-Based Skill System (Alternative to Hierarchical)
+
+An alternative to hierarchical skill trees is a **tag-based system** where skills are defined by multiple
+independent tags rather than a parent-child hierarchy. Each activity combines tags from different dimensions to
+determine skill application.
+
+**Tag-Based System Design:**
+
+Instead of: `Gathering → Metal Ores → Iron` (hierarchical)  
+Use: `[gathering] + [metal] + [iron ore]` (tag-based)
+
+**Tag Category Structure:**
+
+**1. Domain Tags (Area of Use)**
+```
+combat, gathering, crafting, building, survival, trading, magic, social
+```
+Defines the broad gameplay domain the skill belongs to.
+
+**2. Discipline / Activity Tags (Skill Group)**
+```
+one-hand, two-hand, ranged, unarmed
+woodworking, mining, farming, tailoring, fishing, cooking
+blacksmithing, alchemy, engineering, construction
+navigation, speechcraft, thievery, healing
+```
+Defines the specific technique or craft being performed.
+
+**3. Action Tags (Type of Activity)**
+```
+attack, defend, parry, dodge
+harvest, extract, collect, gather
+construct, build, carve, shape
+weave, brew, cook, forge, smelt
+hunt, tame, fish, farm
+```
+Defines the specific action being performed.
+
+**4. Material Group Tags**
+
+**Organic Materials:**
+```
+wood, herb, mushroom, fiber, leather, pelt, food, supplement, flora, fauna
+```
+
+**Anorganic Materials:**
+```
+metal, stone, clay, mineral, gem, salt, liquid, fuel, ore, crystal
+```
+
+**5. Exact Material Tags (Specific Resources)**
+
+**Organic Examples:**
+```
+pine-wood, oak-wood, birch-wood
+chamomile, mint, lavender, rosemary
+chanterelle, porcini, morel
+hemp-fiber, cotton, wool
+deer-pelt, bear-pelt
+```
+
+**Anorganic Examples:**
+```
+iron-ore, copper-ore, silver-ore, gold-ore, tin-ore
+granite, marble, limestone, basalt
+quartz, feldspar, mica
+ruby, sapphire, emerald, diamond
+clear-water, salt-water, oil
+charcoal, coal, peat
+```
+
+**Skill Point Allocation in Tag-Based Systems:**
+
+**Method 1: Skill Points Per Tag**
+```
+Each tag has its own skill level:
+[gathering]: 75 points
+[metal]: 60 points
+[iron-ore]: 40 points
+
+Combined Effective Skill:
+Iron ore gathering = avg([gathering: 75], [metal: 60], [iron-ore: 40]) = 58.3
+Weighted: gathering(50%) + metal(30%) + iron-ore(20%) = 64.5
+
+Benefits:
+- Skills transfer across contexts (gathering skill helps with all gathering)
+- Specialization in specific materials still rewarded
+- Natural breadth with specialization
+```
+
+**Method 2: Tag Combination Points**
+```
+Allocate points to specific tag combinations:
+[gathering + metal + iron-ore]: 80 points
+[gathering + metal + copper-ore]: 50 points
+[gathering + herb + chamomile]: 30 points
+
+Benefits:
+- Direct control over specific activities
+- Clear understanding of capabilities
+- Similar to independent hierarchical tracks
+```
+
+**Method 3: Weighted Tag System**
+```
+Domain weight: 40%
+Discipline weight: 30%
+Material group weight: 20%
+Exact material weight: 10%
+
+Example:
+[gathering]: 80 points
+[mining]: 70 points
+[metal]: 60 points
+[iron-ore]: 90 points
+
+Iron ore mining skill = (80×0.4) + (70×0.3) + (60×0.2) + (90×0.1) = 74 effective
+Gold ore mining skill = (80×0.4) + (70×0.3) + (60×0.2) + (20×0.1) = 67 effective
+
+Benefits:
+- High granularity with manageable skill counts
+- Specialization emerges from material-specific practice
+- Domain expertise provides solid baseline
+```
+
+**BlueMarble Tag-Based Implementation:**
+
+**Example Activities with Tags:**
+
+```
+Activity: Mining iron ore
+Tags: [gathering] + [mining] + [metal] + [iron-ore]
+Skill calculation: Weighted average or combination
+
+Activity: Harvesting chamomile
+Tags: [gathering] + [herb] + [chamomile]
+Skill calculation: Based on relevant tag levels
+
+Activity: Carving oak chair
+Tags: [crafting] + [woodworking] + [carve] + [wood] + [oak-wood]
+Skill calculation: Multi-tag combination
+
+Activity: Attacking with iron sword
+Tags: [combat] + [one-hand] + [attack] + [metal] + [iron]
+Skill calculation: Combat + weapon + material factors
+
+Activity: Cooking deer meat stew
+Tags: [survival] + [cooking] + [cook] + [food] + [deer-meat]
+Skill calculation: Cooking skill + ingredient familiarity
+```
+
+**Skill Budget with Tag System:**
+
+With 23 domain-level skills and tag-based sub-skills:
+
+```
+Domain Skills (23): 345 points minimum (15 each)
+Discipline Tags (~30): Points distributed as needed
+Material Groups (~15): Points distributed as needed
+Exact Materials (~100+): Minimal points, gained through practice
+
+Total System:
+- 2 Master domain skills: 200 points
+- 5 Expert disciplines: 375 points (75 each)
+- 10 Proficient material groups: 500 points (50 each)
+- Exact materials: Familiarity through use (no point cost)
+
+Total: 1,075 points for explicit allocation
+Exact materials gained automatically through practice
+```
+
+**Advantages of Tag-Based System:**
+
+1. **Flexible Organization**: Skills aren't locked into single hierarchies
+2. **Natural Skill Transfer**: Domain skills apply broadly (gathering helps all gathering)
+3. **Emergent Specialization**: Material familiarity emerges from repeated use
+4. **Reduced Micromanagement**: Don't need to track every possible combination
+5. **Realistic Learning**: Using oak teaches you about wood in general
+6. **Cross-Domain Skills**: Tags can combine across domains (combat + magic + fire)
+7. **Easy Expansion**: Add new materials without restructuring skill trees
+
+**Disadvantages:**
+
+1. **Complex Calculation**: Need algorithm to combine multiple tag values
+2. **UI Challenge**: Showing how tags affect different activities
+3. **Balance Difficulty**: Many tag interactions to tune
+4. **Player Understanding**: Less intuitive than simple trees initially
+5. **Database Complexity**: More tags to store and query
+
+**Decay in Tag-Based Systems:**
+
+**Tag-Level Decay:**
+```
+Domain tags decay slowly (broad skills)
+Discipline tags decay moderately (specific techniques)
+Material group tags decay moderately (categorical knowledge)
+Exact material tags decay quickly (specific familiarity)
+
+Example after 2 months without mining:
+[gathering]: 80 → 75 (domain decays slowly)
+[mining]: 70 → 60 (discipline decays moderately)
+[metal]: 60 → 55 (material group decays moderately)
+[iron-ore]: 90 → 40 (exact material decays quickly)
+
+Result: Iron mining skill drops from 74 to 62
+Can still mine iron competently (62) but lost mastery edge
+Other metal ores still at decent level due to [metal] retention
+```
+
+**Design Recommendations for Tag-Based Systems:**
+
+1. **Use Domain + Discipline as Primary**: These provide the skill baseline
+2. **Material Groups as Modifiers**: Boost effectiveness within material categories
+3. **Exact Materials as Familiarity**: Automatic tracking, small bonuses
+4. **Clear Tag Weights**: Document how tags combine for each activity type
+5. **Practice-Based Material Learning**: Don't require point investment in specific materials
+6. **UI Feedback**: Show which tags are improving during activities
+7. **Tag Caps**: Limit how much exact material specialization can exceed domain baseline
+
+**Comparison: Hierarchical vs. Tag-Based**
+
+| Aspect | Hierarchical | Tag-Based |
+|--------|-------------|-----------|
+| Organization | Parent → Child tree | Independent tag dimensions |
+| Skill Transfer | Within branch only | Across all matching tags |
+| Specialization | Clear path down tree | Emergent from tag combinations |
+| UI Complexity | Moderate (tree view) | High (multi-dimensional) |
+| Calculation | Simple (sum/average branch) | Complex (weighted combination) |
+| Flexibility | Fixed relationships | Dynamic combinations |
+| Expansion | Add to existing branches | Add new tags freely |
+| Player Understanding | Intuitive | Requires learning |
+| Best For | Traditional RPGs | Simulation-heavy games |
+
+**Recommendation for BlueMarble:**
+
+Given BlueMarble's simulation focus on realistic geological processes, a **tag-based system** may be more
+appropriate than hierarchical trees. The flexibility allows materials, tools, and techniques to interact in
+realistic ways without artificial hierarchical constraints.
+
+Suggested implementation:
+- **Domain tags (23)**: Explicit point allocation (combat, gathering, mining, etc.)
+- **Discipline tags (~30)**: Explicit point allocation (one-hand, woodworking, etc.)
+- **Material groups (~15)**: Moderate point allocation or practice-based
+- **Exact materials (100+)**: Automatic familiarity through use, no point cost
+- **Action tags**: Derived from domain/discipline, no separate tracking
+
+This provides depth without overwhelming micromanagement, and supports BlueMarble's goal of realistic geological
+interaction where knowledge and skills transfer naturally across similar contexts.
 
 ### Focus on Tuning, Not New Restrictions
 
