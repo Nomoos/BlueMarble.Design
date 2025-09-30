@@ -371,6 +371,7 @@ Example (Base Price = 100 gold):
 - [Crafting Mechanics Overview](./crafting-mechanics-overview.md) - System overview
 - [Economy Systems](../../systems/economy-systems.md) - Economic balance
 - [Skill Knowledge System](../../../research/game-design/skill-knowledge-system-research.md) - Skill progression
+- [Vintage Story Material System Research](../../../research/game-design/vintage-story-material-system-research.md) - Material quality and geological integration analysis
 
 ## Version History
 
