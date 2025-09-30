@@ -26,6 +26,7 @@ caps unnecessary.
 - Alternative hard cap systems with minimum competence thresholds offer different trade-offs
 - Hierarchical skill trees (category → group → specific) enable granular specialization while reducing
   micromanagement through shared group points
+- With 23+ skill categories, decay becomes essential for forcing meaningful specialization choices
 
 **Recommendations:**
 - Focus on tuning existing decay rates rather than adding new cap systems
@@ -36,6 +37,7 @@ caps unnecessary.
   skills with higher failure rates
 - Use hierarchical skill trees with shared group points for material-based skills (e.g., gathering/metal/iron)
 - Implement material familiarity bonuses on top of group skills for realistic progression
+- With 23+ skills, organize into meta-categories to guide specialization and prevent maintenance overload
 
 ## Table of Contents
 
@@ -807,6 +809,194 @@ Geological Knowledge: "Sedimentary Rock Formation"
 - Maintains trading and collaboration at peak
 - Geological knowledge without peak skills
 - Low maintenance (social skills decay slowly)
+
+### BlueMarble Comprehensive Skill List
+
+Based on the planned game design, BlueMarble will feature **23+ skill categories** covering diverse gameplay
+activities. This comprehensive skill list demonstrates the scale and scope of the progression system:
+
+**Complete Skill Categories:**
+1. **Combat** - Fighting and combat techniques
+2. **Gathering** - Resource collection and harvesting
+3. **Woodworking** - Wood processing and carpentry
+4. **Blacksmithing** - Metal working and weapon/tool crafting
+5. **Alchemy** - Potion brewing and chemical processing
+6. **Cooking** - Food preparation and recipes
+7. **Fishing** - Catching fish and aquatic resources
+8. **Hunting** - Tracking and harvesting game
+9. **Farming** - Agriculture and crop cultivation
+10. **Mining** - Ore extraction and tunneling
+11. **Smithing** - General metalworking
+12. **Tailoring** - Fabric working and clothing
+13. **Leatherworking** - Leather processing and goods
+14. **Trading** - Commerce and negotiation
+15. **Navigation** - Wayfinding and travel
+16. **Survival** - Wilderness skills and endurance
+17. **Magic** - Arcane abilities and spells
+18. **Healing** - Medical treatment and restoration
+19. **Thievery** - Stealth and lockpicking
+20. **Speechcraft** - Persuasion and social interaction
+21. **Engineering** - Mechanical design and construction
+22. **Building** - Structure construction and architecture
+23. **Exploration** - Discovery and mapping
+
+**Skill Budget Calculations with 23 Skills:**
+
+With the hard cap system (2 masters + 500 flexible points + minimum 15):
+
+```
+Total Available Points at Max Level:
+- All 23 skills at minimum (15 each): 23 × 15 = 345 points
+- Maximum 2 skills at mastery (100 each): 200 points
+- Flexible distribution pool: 500 points
+- Total skill points available: 1,045 points
+
+Point Distribution Examples:
+
+Specialist Build (Deep Focus):
+- 2 Master skills (100 each): 200 points
+- 5 Expert skills (75 each): 375 points
+- 8 Proficient skills (50 each): 400 points
+- 8 Basic skills (15 each): 120 points
+- Total: 1,095 points (adjust by reducing some proficient to basic)
+
+Balanced Build (Moderate Breadth):
+- 2 Master skills (100 each): 200 points
+- 10 Proficient skills (50 each): 500 points
+- 11 Basic skills (15 each): 165 points
+- Total: 865 points (180 points for fine-tuning)
+
+Generalist Build (Maximum Versatility):
+- 0 Master skills
+- 15 Expert skills (75 each): 1,125 points (too many, need to reduce)
+- Adjusted: 13 Expert skills (75 each): 975 points
+- 10 Basic skills (15 each): 150 points
+- Total: 1,125 points (adjust by reducing 1-2 experts)
+```
+
+**Practical Build Example: Geological Specialist**
+```
+Master Level (100 points each):
+- Mining: 100
+- Engineering: 100
+
+Expert Level (75 points each):
+- Blacksmithing: 75 (tool making)
+- Building: 75 (infrastructure)
+- Exploration: 75 (finding resources)
+
+Proficient Level (50 points each):
+- Gathering: 50 (general resources)
+- Survival: 50 (field operations)
+- Trading: 50 (selling minerals)
+- Navigation: 50 (travel to sites)
+
+Basic Level (15 each):
+- All remaining 15 skills: 225 points
+
+Total: 200 + 225 + 200 + 225 = 850 points
+Remaining: 195 points for adjustments
+```
+
+**Hierarchical Organization of 23 Skills:**
+
+Many of these top-level skills would contain hierarchical sub-skills:
+
+```
+Combat
+├── Melee
+│   ├── One-Hand
+│   │   ├── Axe
+│   │   ├── Sword
+│   │   └── Dagger
+│   └── Two-Hand
+│       ├── Greatsword
+│       └── Polearm
+└── Ranged
+    ├── Bow
+    └── Crossbow
+
+Gathering
+├── Metal Ores
+│   ├── Iron
+│   ├── Copper
+│   └── Gold
+├── Herbs
+│   ├── Chamomile
+│   └── Lavender
+└── Mushrooms
+    ├── Pholiota Squarrosa
+    └── Chanterelle
+
+Woodworking
+├── Building
+│   ├── House
+│   ├── Fence
+│   └── Bridge
+└── Furniture
+    ├── Chair
+    └── Table
+
+Mining
+├── Surface Mining
+│   ├── Open Pit
+│   └── Quarrying
+├── Underground Mining
+│   ├── Shaft Mining
+│   └── Tunnel Mining
+└── Specialized Extraction
+    ├── Gem Mining
+    └── Coal Mining
+
+Engineering
+├── Structural
+│   ├── Foundations
+│   └── Load Bearing
+├── Mechanical
+│   ├── Pulley Systems
+│   └── Gears
+└── Geological
+    ├── Tunnel Support
+    └── Drainage Systems
+```
+
+**Managing 23+ Skills with Decay:**
+
+With this many skills, the decay system becomes crucial for forcing specialization:
+
+**Maintenance Requirements:**
+- **2 Master skills**: Practice 2-3 times per week to maintain peak
+- **5 Expert skills**: Practice once per week minimum
+- **8 Proficient skills**: Practice twice per month
+- **8 Basic skills**: Practice once per month or accept decay to minimum (15)
+
+**Time Investment (example gameplay hours per week):**
+- Masters (2 skills): 6-8 hours/week
+- Experts (5 skills): 5 hours/week
+- Proficient (8 skills): 4 hours/week
+- Basic (8 skills): 2 hours/week
+- Total: ~17-19 hours/week active skill use
+
+This creates natural specialization - players cannot maintain expertise in all 23 skills simultaneously.
+
+**Skill Category Grouping for Hard Cap:**
+
+To simplify tracking, the 23 skills might be organized into meta-categories:
+
+**Production Skills (9):**
+- Woodworking, Blacksmithing, Alchemy, Cooking, Smithing, Tailoring, Leatherworking, Engineering, Building
+
+**Resource Skills (5):**
+- Gathering, Fishing, Hunting, Farming, Mining
+
+**Combat & Survival (4):**
+- Combat, Survival, Thievery, Healing
+
+**Social & Utility (5):**
+- Trading, Speechcraft, Navigation, Exploration, Magic
+
+With meta-categories, players might be limited to mastery in 2 individual skills but required to choose from
+different meta-categories (e.g., can't master both Mining and Gathering, encouraging diverse builds).
 
 ### Applying Hard Cap Approach to BlueMarble
 
