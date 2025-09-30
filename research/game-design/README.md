@@ -39,6 +39,17 @@ Comprehensive analysis of skill and knowledge progression systems in MMORPGs wit
 - Implementation considerations and technical architecture
 - Phase-based development roadmap aligned with Q4 2025 goals
 
+### [Skill Caps and Decay Research](skill-caps-and-decay-research.md)
+Analysis of skill caps, experience-based progression, and skill decay mechanics in RPG systems.
+
+**Key Topics**:
+- Level-based skill category caps and their effectiveness
+- Skill decay mechanics and "use-it-or-lose-it" systems
+- Natural specialization through maintenance costs
+- Decay floors and grace periods for fair gameplay
+- Integration with BlueMarble's geological progression
+- Recommendations against additional global caps
+
 ### [Implementation Plan](implementation-plan.md)
 Phased development roadmap spanning 16-20 months with clear deliverables and risk mitigation.
 
