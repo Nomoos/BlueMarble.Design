@@ -94,6 +94,30 @@ woodworking).
 - Specialization unlocks at Level 25 for focused expertise
 - Complete crafting interface designs with visual feedback
 
+### [Novus Inceptio Material System Research](novus-inceptio-material-system-research.md)
+Deep analysis of Novus Inceptio's material and quality system, focusing on geological integration with crafting 
+mechanics. This research is particularly relevant to BlueMarble due to Novus Inceptio's geological simulation focus.
+
+**Key Topics**:
+- Geological formation directly determines material quality
+- Knowledge-based resource discovery and identification
+- Use-based skill progression with material-specific familiarity
+- Technology-gated access to advanced materials and tools
+- Multi-stage production chains (ore → ingot → item)
+- Material property inheritance through crafting
+- Quality preservation calculations across processing stages
+
+**Research Highlights**:
+- Most directly applicable reference game for BlueMarble's design goals
+- Material categories: Ores/Metals, Stone/Construction, Soil/Sediment
+- Quality grades: Poor (1-35%), Standard (36-65%), Premium (66-85%), Exceptional (86-100%)
+- Extraction mechanics based on geological context (depth, formation quality, weathering)
+- Knowledge progression tree for geological understanding
+- Emergent specialization without forced classes
+- Comprehensive system diagrams illustrating material flow
+- Detailed recommendations for BlueMarble adoption
+- Implementation considerations with code examples
+
 ## Research Philosophy
 
 ### Scientific Integrity First
