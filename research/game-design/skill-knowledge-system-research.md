@@ -227,47 +227,1326 @@ Character: Geologist Archetype
 
 **System Type:** Hybrid skill + knowledge with geological focus
 
-**Skill Acquisition:**
-- Skills automatically unlocked through use
-- Knowledge blueprints discovered through experimentation
-- Geological analysis reveals resource information
-- Tech tree gates advanced capabilities
+#### Skill Structure and Categories
 
-**Progression Mechanics:**
-- Use-based skill improvement (similar to Wurm)
-- Knowledge points earned through discovery
-- Geological surveys unlock strategic information
-- Technology research enables new tools/processes
+Novus Inceptio organizes skills into geological and technological domains:
 
-**Knowledge Integration:**
-- **Core Mechanic:** Understanding geology directly enhances gameplay
-- Resource identification requires geological knowledge
-- Extraction efficiency tied to understanding of material properties
-- Environmental adaptation based on geological comprehension
+**Skill Categories:**
+```
+Geological Skills
+├── Mining
+│   ├── Rock Identification (Knowledge-based)
+│   ├── Ore Extraction (Use-based progression)
+│   ├── Tool Efficiency (Equipment mastery)
+│   └── Geological Surveying (Analysis skills)
+├── Refining
+│   ├── Smelting (Process understanding)
+│   ├── Alloy Creation (Experimentation)
+│   ├── Quality Assessment (Material knowledge)
+│   └── Waste Reduction (Efficiency mastery)
+└── Material Science
+    ├── Composition Analysis (Testing skills)
+    ├── Property Identification (Knowledge application)
+    ├── Formation Recognition (Geological theory)
+    └── Resource Prediction (Strategic analysis)
 
-**Specialization Depth:**
-- No forced classes, emergent roles
-- Geological specializations: Mining, Surveying, Refining
-- Technological specializations: Tool-making, Engineering
-- Social specializations: Trading, Settlement management
+Technological Skills
+├── Tool Crafting
+│   ├── Basic Tools (Stone, Wood)
+│   ├── Metal Tools (Bronze, Iron, Steel)
+│   ├── Specialized Equipment (Drills, Analyzers)
+│   └── Maintenance and Repair
+├── Engineering
+│   ├── Construction (Building placement)
+│   ├── Infrastructure (Roads, Storage)
+│   ├── Machinery (Automation)
+│   └── Power Systems (Energy generation)
+└── Processing
+    ├── Material Preparation (Crushing, Sorting)
+    ├── Chemical Processing (Reactions, Separations)
+    ├── Assembly (Component integration)
+    └── Quality Control (Testing, Verification)
 
-**Player Engagement:**
-- Discovery-driven progression maintains interest
-- Geological mysteries provide long-term goals
-- Territorial control creates endgame content
-- Player-driven economy rewards specialization
+Social Skills
+├── Trading
+│   ├── Market Analysis (Price discovery)
+│   ├── Negotiation (Deal optimization)
+│   ├── Logistics (Transportation)
+│   └── Resource Valuation (Economic understanding)
+├── Teaching
+│   ├── Knowledge Transfer (Blueprint sharing)
+│   ├── Apprenticeship (Mentoring)
+│   ├── Documentation (Guide creation)
+│   └── Community Building (Organization)
+└── Settlement Management
+    ├── Planning (Territory development)
+    ├── Resource Allocation (Distribution)
+    ├── Infrastructure (Public works)
+    └── Governance (Rules, Policies)
+```
+
+#### Skill Acquisition
+
+**Primary Mechanism: Learn-By-Doing**
+
+Skills automatically unlock and improve through use:
+
+```
+Skill Gain Flow:
+1. Player performs action (e.g., mines iron ore)
+2. Game checks if skill exists:
+   - If NO: Skill unlocked at level 0
+   - If YES: Continue to progression
+3. Calculate experience gain:
+   - Base gain = Action complexity
+   - Difficulty modifier = Material/task difficulty vs skill
+   - Knowledge bonus = Related knowledge unlocked
+   - Tool quality = Equipment effectiveness
+4. Apply experience to skill
+5. Skill level increases when threshold reached
+6. New capabilities unlock at milestone levels
+
+Example: Mining Iron Ore
+- First attempt: Mining skill unlocked (0 → 1)
+- Success chance: 30% (low skill, basic tools)
+- Gain: 0.5 exp per attempt
+- At level 10: 60% success, 0.3 exp (diminishing returns)
+- At level 50: 95% success, 0.1 exp, unlock advanced techniques
+- At level 100: 99% success, 0.01 exp, master-level efficiency
+```
+
+**Knowledge Discovery System:**
+
+Knowledge is discovered through experimentation and analysis:
+
+```
+Knowledge Discovery Paths:
+
+1. Geological Analysis
+   Player examines rock formation
+   → Reveals basic composition
+   → Identifies formation type (sedimentary/igneous/metamorphic)
+   → Unlocks knowledge: "Granite Formation Characteristics"
+   → Bonus: +10% efficiency mining granite
+
+2. Experimentation
+   Player combines copper + tin in furnace
+   → Creates bronze (discovery)
+   → Unlocks knowledge: "Bronze Alloying"
+   → Recipe permanently learned
+   → Bonus: +5% bronze quality
+
+3. Tool Usage
+   Player uses pickaxe on various rocks
+   → Learns tool effectiveness patterns
+   → Unlocks knowledge: "Tool-Rock Interaction"
+   → Bonus: Better tool selection guidance
+
+4. Environmental Observation
+   Player explores different biomes
+   → Identifies geological patterns
+   → Unlocks knowledge: "Resource Distribution"
+   → Bonus: Improved surveying predictions
+```
+
+#### Progression Mechanics
+
+**Use-Based Skill Improvement:**
+
+Similar to Wurm Online, skills improve through practice:
+
+```
+Progression Formula:
+skill_gain = base_gain × difficulty_match × knowledge_bonus × tool_factor
+
+Where:
+- base_gain: 0.01 to 1.0 depending on action
+- difficulty_match: Highest when task matches skill level
+  - Too easy: 0.3× multiplier
+  - Just right: 1.0× multiplier
+  - Too hard: 0.5× multiplier
+- knowledge_bonus: 1.0 + (relevant_knowledge × 0.02)
+  - Max 2.0× with extensive knowledge
+- tool_factor: 0.5 (poor tools) to 1.5× (excellent tools)
+
+Skill Curve (hours to reach level):
+Level 0-20:   5-10 hours (rapid early gains)
+Level 20-40:  15-25 hours (moderate progression)
+Level 40-60:  30-50 hours (slowing down)
+Level 60-80:  60-100 hours (specialist territory)
+Level 80-100: 100-200 hours (mastery)
+
+Total to 100: 250-400 hours of focused practice
+```
+
+**Knowledge Points System:**
+
+Players earn knowledge points through discoveries:
+
+```
+Knowledge Point Sources:
+- First-time material discovery: 10-50 points
+- New geological formation: 25-100 points
+- Recipe experimentation success: 15-30 points
+- Technology milestone: 50-200 points
+- Teaching others: 5-10 points per student
+- Exploration discoveries: 20-75 points
+
+Knowledge Point Usage:
+- Unlock research projects: 100-500 points
+- Accelerate skill training: 50 points = 10% boost for 1 hour
+- Purchase knowledge books: 200-1000 points
+- Unlock specializations: 300-800 points
+```
+
+**Technology Tree Progression:**
+
+Technology gates access to advanced capabilities:
+
+```
+Technology Tree Structure:
+
+Stone Age (Starting Era)
+├── Basic Tools: Stone pickaxe, axe, knife
+├── Fire Making: Primitive smelting
+├── Shelter: Basic construction
+└── Knowledge: Surface geology
+
+Bronze Age (Requires: Copper + Tin knowledge)
+├── Metal Tools: Bronze implements
+├── Smelting: Furnace construction
+├── Agriculture: Irrigation systems
+└── Knowledge: Ore identification
+
+Iron Age (Requires: Iron smelting)
+├── Iron Tools: Durable equipment
+├── Advanced Smelting: Bloomery, blast furnace
+├── Infrastructure: Roads, bridges
+└── Knowledge: Metallurgy basics
+
+Steel Age (Requires: Carbon control knowledge)
+├── Steel Tools: High-performance equipment
+├── Precision Crafting: Quality control
+├── Industrial Systems: Automation
+└── Knowledge: Material science
+
+Modern Era (Requires: Advanced chemistry)
+├── Specialized Alloys: Custom materials
+├── Analysis Equipment: Testing instruments
+├── Complex Machinery: Processing plants
+└── Knowledge: Advanced metallurgy
+```
+
+#### Knowledge Integration
+
+**Core Mechanic: Geological Understanding Enhances Gameplay**
+
+Knowledge directly impacts player capabilities:
+
+```
+Knowledge Impact Matrix:
+
+Geological Knowledge → Resource Discovery
+- Basic Geology: Identify rock types
+- Mineralogy: Recognize ore deposits
+- Structural Geology: Predict ore body extent
+- Geochemistry: Determine material quality
+- Economic Geology: Assess deposit viability
+
+Geological Knowledge → Extraction Efficiency
+- Formation Knowledge: Optimal extraction methods
+- Rock Mechanics: Reduced tool wear
+- Hydrology: Manage water infiltration
+- Geotechnical: Stability assessment
+- Environmental: Impact minimization
+
+Geological Knowledge → Material Quality
+- Composition Analysis: Purity assessment
+- Crystal Structure: Processing requirements
+- Weathering State: Material condition
+- Alteration Zones: Quality variations
+- Impurity Recognition: Refining needs
+```
+
+**Knowledge Application Examples:**
+
+```
+Example 1: Iron Ore Mining Without Knowledge
+- Player finds brown rocks
+- No identification possible
+- Random mining attempts
+- Low success rate (30%)
+- Unknown quality
+- Inefficient extraction
+- High tool wear
+
+Example 1: Iron Ore Mining With Knowledge
+- Knowledge: "Iron Ore Identification"
+  → Can identify hematite vs magnetite
+- Knowledge: "Iron Formation Geology"
+  → Understands ore body structure
+- Knowledge: "Extraction Optimization"
+  → Selects best mining technique
+- Result: 90% success rate, higher quality, lower tool wear
+
+Example 2: Bronze Crafting Without Knowledge
+- Trial and error combining metals
+- Many failures, wasted materials
+- Random copper:tin ratios
+- Inconsistent quality (Q20-Q60)
+- No understanding of why failures occur
+
+Example 2: Bronze Crafting With Knowledge
+- Knowledge: "Copper-Tin Alloys"
+  → Knows optimal ratio (90:10)
+- Knowledge: "Smelting Temperature Control"
+  → Understands heat requirements
+- Knowledge: "Quality Factors"
+  → Recognizes impurity impacts
+- Result: Consistent quality (Q80-Q95), minimal waste
+```
+
+#### Specialization Depth
+
+**Emergent Specialization System:**
+
+No forced classes; roles develop naturally through player choices:
+
+```
+Common Specialization Paths:
+
+1. Geologist/Surveyor
+   Focus: Knowledge acquisition and exploration
+   Skills: Geological analysis (90+), Surveying (80+)
+   Role: Locate and assess resource deposits
+   Value: Provides critical information to community
+   Playstyle: Exploration, analysis, documentation
+
+2. Miner/Extractor
+   Focus: Resource gathering efficiency
+   Skills: Mining (95+), Tool mastery (85+)
+   Role: Extract materials from known deposits
+   Value: Supplies raw materials to crafters
+   Playstyle: Repetitive, optimization-focused
+
+3. Refiner/Metallurgist
+   Focus: Material processing and quality
+   Skills: Smelting (90+), Quality control (85+)
+   Role: Convert raw ores to usable materials
+   Value: Produces high-quality processed goods
+   Playstyle: Process optimization, experimentation
+
+4. Crafter/Engineer
+   Focus: Tool and equipment creation
+   Skills: Crafting (95+), Engineering (80+)
+   Role: Create tools, machinery, infrastructure
+   Value: Enables advanced capabilities
+   Playstyle: Design, construction, innovation
+
+5. Trader/Economist
+   Focus: Resource distribution and markets
+   Skills: Trading (90+), Logistics (75+)
+   Role: Connect producers with consumers
+   Value: Facilitates economic activity
+   Playstyle: Social, analytical, strategic
+
+6. Teacher/Knowledge Broker
+   Focus: Information sharing and education
+   Skills: Teaching (85+), Documentation (80+)
+   Role: Train new players, share discoveries
+   Value: Accelerates community learning
+   Playstyle: Social, helpful, patient
+
+Mixed Specializations (Common):
+- Mining Geologist: Survey + Extract (efficient self-sufficiency)
+- Crafting Miner: Extract + Craft (vertical integration)
+- Trading Refiner: Process + Sell (value-added commerce)
+```
+
+**Specialization Depth vs Breadth:**
+
+```
+Specialization Strategy Analysis:
+
+Deep Specialist (80-100 in 2-3 skills):
+Pros:
+- Maximum efficiency in specialty
+- Highly valued by community
+- Access to advanced techniques
+- Can solve complex problems
+Cons:
+- Dependent on others for basic needs
+- Limited flexibility
+- Vulnerable to market changes
+- Requires active community
+
+Broad Generalist (40-60 in 6-8 skills):
+Pros:
+- Self-sufficient for most needs
+- Flexible to adapt
+- Can experiment widely
+- Solo-viable
+Cons:
+- Never achieves mastery
+- Less valued for trade
+- Misses advanced content
+- Lower efficiency
+
+Balanced Hybrid (70-80 in 3-4 skills):
+Pros:
+- Strong specialization + flexibility
+- Valuable trade skills
+- Self-sufficient basics
+- Can pursue advanced content
+Cons:
+- Longer time to competence
+- Jack of trades, master of few
+- May miss deepest specializations
+```
+
+#### UI Design and Interface Analysis
+
+**Skill Interface Patterns:**
+
+```
+Main Skill Screen Layout:
+
+┌─────────────────────────────────────────────────┐
+│  SKILLS & KNOWLEDGE                        [?] │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  ┌─ Geological Skills ─────────────────────┐   │
+│  │                                          │   │
+│  │  Mining           ████████░░ 78/100     │   │
+│  │    • Rock Breaking      ████████ 85     │   │
+│  │    • Ore Extraction     ███████░ 75     │   │
+│  │    • Tool Efficiency    ████████ 82     │   │
+│  │                                          │   │
+│  │  Refining         ██████░░░░ 55/100     │   │
+│  │    • Smelting           ██████░░ 60     │   │
+│  │    • Quality Control    █████░░░ 50     │   │
+│  │                                          │   │
+│  └──────────────────────────────────────────┘   │
+│                                                 │
+│  ┌─ Knowledge Database ─────────────────────┐   │
+│  │                                          │   │
+│  │  Unlocked Knowledge: 47/∞                │   │
+│  │  Knowledge Points: 328                   │   │
+│  │                                          │   │
+│  │  Recent Discoveries:                     │   │
+│  │  ✓ Granite Composition          [View]  │   │
+│  │  ✓ Iron-Carbon Alloys           [View]  │   │
+│  │  ? Unknown Formation [Analyze: 50 KP]   │   │
+│  │                                          │   │
+│  └──────────────────────────────────────────┘   │
+│                                                 │
+│  ┌─ Active Progression ──────────────────────┐  │
+│  │  Currently Improving:                     │  │
+│  │  • Mining (+0.3/hour from recent use)    │  │
+│  │  • Smelting (+0.1/hour from occasional)  │  │
+│  │                                          │  │
+│  │  Skill Decay Warning:                    │  │
+│  │  • Tool Crafting: No use in 7 days      │  │
+│  │    Will decay in 23 days                │  │
+│  └──────────────────────────────────────────┘  │
+│                                                 │
+│  [Technology Tree]  [Specializations]          │
+└─────────────────────────────────────────────────┘
+```
+
+**Knowledge Discovery Interface:**
+
+```
+Geological Analysis Screen:
+
+┌─────────────────────────────────────────────────┐
+│  GEOLOGICAL SAMPLE ANALYSIS               [X]  │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  Sample: Unknown Rock Formation                │
+│  Location: Coordinates (1245, 67, -892)        │
+│                                                 │
+│  ┌─ Visual Inspection ──────────────────────┐  │
+│  │                                          │  │
+│  │  [■■■■ Rock Sample Image ■■■■]          │  │
+│  │                                          │  │
+│  │  Visible Characteristics:                │  │
+│  │  • Color: Dark gray to black            │  │
+│  │  • Texture: Coarse crystalline          │  │
+│  │  • Luster: Metallic flecks              │  │
+│  │  • Hardness: Medium-hard (scratches)    │  │
+│  │                                          │  │
+│  └──────────────────────────────────────────┘  │
+│                                                 │
+│  ┌─ Basic Tests (No tools required) ───────┐  │
+│  │  [Test Hardness]     [Test Density]     │  │
+│  │  [Observe Streak]    [Check Magnetism]  │  │
+│  └──────────────────────────────────────────┘  │
+│                                                 │
+│  ┌─ Advanced Tests (Require equipment) ────┐  │
+│  │  [Chemical Analysis]  (Requires: Lab)   │  │
+│  │  [X-Ray Diffraction]  (Requires: XRD)   │  │
+│  │  [Spectrometry]       (Locked)          │  │
+│  └──────────────────────────────────────────┘  │
+│                                                 │
+│  Knowledge Gained: Basic Geology +5            │
+│  Pending Analysis: 2 tests remaining           │
+│                                                 │
+│  [Complete Analysis: 25 KP] [Save for Later]  │
+└─────────────────────────────────────────────────┘
+```
+
+**Technology Tree Interface:**
+
+```
+Technology Research Screen:
+
+┌─────────────────────────────────────────────────┐
+│  TECHNOLOGY TREE                          [?]  │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  Current Era: Bronze Age                       │
+│  Next Era: Iron Age (3 requirements)          │
+│                                                 │
+│  Stone Age                                     │
+│  ├─[✓] Basic Tools                            │
+│  ├─[✓] Fire Making                            │
+│  ├─[✓] Shelter                                │
+│  └─[✓] Surface Geology                        │
+│                                                 │
+│  Bronze Age                                    │
+│  ├─[✓] Copper Smelting  ──────┐               │
+│  ├─[✓] Tin Discovery    ──────┤               │
+│  ├─[✓] Bronze Alloying  ←─────┴─ UNLOCKED     │
+│  ├─[◐] Advanced Furnace (Research: 200 KP)   │
+│  └─[○] Bronze Casting (Locked: Need Furnace) │
+│                                                 │
+│  Iron Age (Requirements: 2/3 complete)        │
+│  ├─[✓] Iron Ore Discovery                     │
+│  ├─[✓] High-Temp Furnace                      │
+│  ├─[◐] Carbon Control (Researching: 65%)     │
+│  │      Required: 150 KP (spent: 98 KP)      │
+│  │      Estimated: 12 hours                   │
+│  └─[○] Steel Making (Locked)                  │
+│                                                 │
+│  Legend:                                       │
+│  [✓] Unlocked  [◐] In Progress  [○] Locked   │
+│                                                 │
+│  Available Research Points: 328 KP             │
+│                                                 │
+│  [Start Research]  [View Prerequisites]        │
+└─────────────────────────────────────────────────┘
+```
+
+#### Integration with Game Systems
+
+**Skill-Gathering Integration:**
+
+```
+Mining Integration Flow:
+
+1. Player locates deposit
+   → Requires: Surveying skill + Geology knowledge
+   → Higher skill: Better deposit assessment
+   → Knowledge: Identify ore type and quality
+
+2. Player attempts extraction
+   → Requires: Mining skill + Appropriate tool
+   → Higher skill: Better success rate
+   → Knowledge: Optimal extraction method
+
+3. Success/Failure determination
+   Formula:
+   success_chance = base_rate × skill_factor × tool_factor × knowledge_factor
+   
+   Where:
+   - base_rate: 0.3 (30% base for appropriate tool)
+   - skill_factor: 1.0 + (mining_skill / 100)
+     → At skill 0: 1.0× (30% success)
+     → At skill 50: 1.5× (45% success)
+     → At skill 100: 2.0× (60% success)
+   - tool_factor: 0.5 (wrong tool) to 1.5× (optimal tool)
+   - knowledge_factor: 1.0 + (relevant_knowledge × 0.05)
+     → With 10 knowledge items: 1.5× bonus
+
+4. Material quality calculation
+   extracted_quality = deposit_quality × skill_bonus × knowledge_bonus
+   
+   Where:
+   - deposit_quality: Geological base (Q40-Q90)
+   - skill_bonus: 0.7 + (skill / 333) → 0.7× to 1.0× at skill 100
+   - knowledge_bonus: 1.0 + (knowledge / 100) → up to 1.2× bonus
+
+Example: Iron Ore Extraction
+   Deposit: Q70 hematite
+   Player: Mining 60, 5 knowledge items
+   Tool: Steel pickaxe (optimal)
+   
+   Success: 30% × 1.6 × 1.5 × 1.25 = 90% chance
+   Quality: Q70 × 0.88 × 1.05 = Q64.7 extracted
+```
+
+**Skill-Crafting Integration:**
+
+```
+Crafting Integration Flow:
+
+1. Player selects recipe
+   → Requires: Recipe knowledge (discovered or taught)
+   → Technology: Era-appropriate unlocked
+   → Materials: Required inputs available
+
+2. Crafting attempt
+   → Requires: Relevant crafting skill
+   → Facility: Appropriate workstation
+   → Tools: Necessary equipment
+
+3. Success determination
+   success_chance = base_rate × skill_factor × material_factor × facility_factor
+   
+   Where:
+   - base_rate: Recipe difficulty (0.4-0.8)
+   - skill_factor: 0.5 + (skill / 100) → 0.5× to 1.5×
+   - material_factor: avg_material_quality / 100
+   - facility_factor: 0.8 (basic) to 1.2× (advanced)
+
+4. Output quality
+   output_quality = base × materials × skill × knowledge
+   
+   Where:
+   - base: Recipe base quality (Q50-Q70)
+   - materials: (material_quality_avg / 100) → 0.4× to 1.0×
+   - skill: 0.6 + (skill / 250) → 0.6× to 1.0×
+   - knowledge: 1.0 + (recipe_mastery / 50) → 1.0× to 1.2×
+
+Example: Bronze Tool Crafting
+   Recipe: Bronze Pickaxe (base Q60)
+   Player: Crafting 75, Recipe mastery 8
+   Materials: Copper Q80, Tin Q85 (avg Q82.5)
+   Facility: Advanced forge (1.1×)
+   
+   Success: 60% × 1.25 × 0.825 × 1.1 = 68% chance
+   Quality: Q60 × 0.825 × 0.9 × 1.16 = Q51.6 result
+```
+
+**Skill-Combat Integration:**
+
+```
+Combat Integration (Limited):
+
+Novus Inceptio has minimal combat, but skills affect it:
+
+1. Tool Effectiveness as Weapons
+   → Mining skill: Better pickaxe control → weapon damage
+   → Crafting skill: Higher quality tools → durability in combat
+   → Knowledge: Material properties → tactical advantages
+
+2. Armor and Protection
+   → Smelting skill: Better metal quality → armor effectiveness
+   → Engineering: Structure building → defensive positions
+   → Material science: Damage resistance properties
+
+3. Indirect Combat Advantages
+   → Resource control: Better extractors control territories
+   → Economic power: Trading skill enables mercenary hiring
+   → Technology: Advanced tools/weapons unlock earlier
+
+Note: Combat is NOT the primary focus; skills are primarily
+economic and productive, not military.
+```
+
+**Skill-Exploration Integration:**
+
+```
+Exploration Integration Flow:
+
+1. Territory Discovery
+   → No requirements: Anyone can explore
+   → Surveying skill: Better map information
+   → Geology knowledge: Resource hints on map
+
+2. Resource Identification
+   → Visual inspection: Basic (all players)
+   → Geological analysis: Requires knowledge
+   → Advanced testing: Requires equipment + skill
+
+3. Environmental Hazards
+   → Basic awareness: Universal
+   → Hazard assessment: Requires geology knowledge
+   → Risk mitigation: Engineering + planning skills
+
+4. Strategic Mapping
+   → Basic map: Shows terrain
+   → Surveyor map: Shows resource indicators
+   → Master map: Predictive geological modeling
+
+Example: Resource Surveying
+   Low skill (0-30):
+   - "There might be ore here" (vague)
+   - Random prospecting required
+   - High failure rate
+   
+   Medium skill (30-70):
+   - "Iron ore deposit likely" (specific)
+   - Targeted prospecting
+   - Moderate success rate
+   
+   High skill (70-100):
+   - "Hematite deposit, Q70-Q85, 500-800 units" (precise)
+   - Direct extraction
+   - High success rate
+   - Extent mapping
+```
+
+#### Player Engagement Mechanisms
+
+**Discovery-Driven Progression:**
+
+```
+Engagement Through Discovery:
+
+Phase 1: Initial Exploration (Hours 0-20)
+- Everything is new and mysterious
+- Basic skills unlocking rapidly
+- Simple discoveries frequent
+- Knowledge accumulation exciting
+- Fast progression feels rewarding
+
+Phase 2: Specialization Selection (Hours 20-100)
+- Players identify preferred activities
+- Skills begin diverging
+- Knowledge becomes strategic choice
+- Specialization paths emerge
+- Community roles develop
+
+Phase 3: Mastery Pursuit (Hours 100-500)
+- Deep expertise in chosen fields
+- Rare knowledge discoveries
+- Advanced technology unlocking
+- Specialist reputation building
+- Economic power increasing
+
+Phase 4: Endgame Optimization (Hours 500+)
+- Min-maxing efficiency
+- Teaching newcomers
+- Territorial control
+- Economic domination
+- Knowledge brokering
+```
+
+**Long-Term Goals:**
+
+```
+Goal Hierarchy:
+
+Short-Term Goals (Hours to Days):
+- Unlock basic survival skills
+- Discover common materials
+- Craft basic tools
+- Establish shelter
+- Begin specialization
+
+Medium-Term Goals (Days to Weeks):
+- Master 1-2 core skills to 50+
+- Unlock Bronze/Iron Age technology
+- Establish trading relationships
+- Build processing facilities
+- Accumulate valuable knowledge
+
+Long-Term Goals (Weeks to Months):
+- Achieve 80+ in specialization skills
+- Unlock advanced technologies
+- Establish economic dominance
+- Control valuable territories
+- Become recognized expert
+
+Ultra-Long-Term Goals (Months+):
+- Master multiple specializations to 100
+- Unlock all relevant knowledge
+- Build industrial infrastructure
+- Establish trading empire
+- Shape server economy
+```
+
+**Social Engagement:**
+
+```
+Social Mechanics:
+
+Knowledge Sharing:
+- Players can teach others (faster learning)
+- Knowledge books can be created and sold
+- Guilds develop collective knowledge bases
+- Reputation built through teaching
+- Information becomes valuable commodity
+
+Economic Interdependence:
+- Specialists create market niches
+- Trading required for efficiency
+- Vertical integration vs specialization trade-offs
+- Supply chains emerge organically
+- Economic warfare possible
+
+Territorial Control:
+- Resource-rich areas contested
+- Geological knowledge = power
+- Infrastructure investment
+- Defensive positioning
+- Alliance formation
+
+Collaborative Projects:
+- Large projects require multiple specialists
+- Knowledge pooling for research
+- Shared infrastructure
+- Community advancement
+- Collective problem-solving
+```
+
+#### Strengths and Weaknesses for BlueMarble
 
 **Strengths for BlueMarble:**
-- **Directly relevant:** Geological simulation as core mechanic
-- Knowledge progression creates content from world data
-- Emergent specialization from player choice
-- Scales naturally with world complexity
+
+1. **Directly Relevant Geological Focus**
+   - Both games use geological simulation as core mechanic
+   - Knowledge-driven progression proven effective
+   - Educational + entertainment balance demonstrated
+   - Scales naturally with geological complexity
+
+2. **Emergent Specialization**
+   - No forced classes allows player freedom
+   - Roles develop organically from interests
+   - Economic niches emerge naturally
+   - Supports solo and multiplayer styles
+
+3. **Knowledge as Content**
+   - Geological data becomes gameplay content
+   - Discovery maintains long-term interest
+   - Scientific accuracy enhances rather than limits
+   - Extensible: New knowledge = new content
+
+4. **Use-Based Progression**
+   - Natural skill improvement through practice
+   - No artificial point allocation grinding
+   - Difficulty scaling emerges organically
+   - Realistic progression feel
+
+5. **Technology Tree Integration**
+   - Clear progression milestones
+   - Historical authenticity
+   - Gating prevents overwhelming complexity
+   - Provides structure without rigidity
 
 **Limitations for BlueMarble:**
-- Smaller player base = less proven
-- UI complexity for geological data
-- Learning curve may deter casual players
-- Requires significant geological content creation
+
+1. **Smaller Player Base**
+   - Less validated than major MMORPGs
+   - Market size unclear
+   - Community sustainability questions
+   - Network effects weaker
+
+2. **UI Complexity**
+   - Geological information dense
+   - Analysis interfaces complex
+   - Learning curve steep
+   - May deter casual players
+
+3. **Content Creation Requirements**
+   - Extensive geological knowledge database needed
+   - Technology tree design intensive
+   - Recipe system maintenance
+   - Balance ongoing challenge
+
+4. **Learning Curve**
+   - Initial player confusion common
+   - Requires patience and experimentation
+   - Tutorial complexity high
+   - Retention risk in early hours
+
+5. **Solo Viability Questions**
+   - Specialization may force grouping
+   - Solo players potentially disadvantaged
+   - Economic systems require population
+   - Content access limitations
+
+#### Recommendations for BlueMarble
+
+**Adopt:**
+
+1. **Use-Based Skill Progression**
+   ```
+   Recommendation: Implement learn-by-doing for all skills
+   
+   Rationale:
+   - Natural and intuitive progression
+   - No artificial grinding mechanics
+   - Skill use directly reinforces learning
+   - Difficulty scales automatically
+   
+   BlueMarble Implementation:
+   - Geological analysis improves through practice
+   - Extraction efficiency increases with use
+   - Crafting quality improves over time
+   - Teaching skill develops through mentoring
+   ```
+
+2. **Knowledge Discovery as Core Mechanic**
+   ```
+   Recommendation: Make geological knowledge discoverable and valuable
+   
+   Rationale:
+   - Transforms scientific data into content
+   - Rewards exploration and curiosity
+   - Creates information economy
+   - Provides endless content potential
+   
+   BlueMarble Implementation:
+   - Geological formations as discovery nodes
+   - Analysis reveals material properties
+   - Knowledge unlocks advanced techniques
+   - Sharing mechanisms for teaching
+   ```
+
+3. **Technology Tree Gating**
+   ```
+   Recommendation: Gate advanced capabilities behind technology research
+   
+   Rationale:
+   - Provides clear progression structure
+   - Historical authenticity
+   - Prevents overwhelming new players
+   - Creates meaningful milestones
+   
+   BlueMarble Implementation:
+   - Stone → Bronze → Iron → Steel → Modern eras
+   - Each era unlocks new tools and processes
+   - Research requires knowledge + resources + time
+   - Community-wide progression possible
+   ```
+
+4. **Emergent Specialization System**
+   ```
+   Recommendation: No fixed classes, let roles develop naturally
+   
+   Rationale:
+   - Maximizes player agency
+   - Allows experimentation
+   - Supports diverse playstyles
+   - Economic niches emerge organically
+   
+   BlueMarble Implementation:
+   - All skills available to all players
+   - Specialization through time investment
+   - Economic incentives for specialization
+   - Hybrid builds remain viable
+   ```
+
+**Adapt:**
+
+1. **UI Complexity Mitigation**
+   ```
+   Challenge: Geological information inherently complex
+   
+   Adaptation Strategy:
+   - Progressive disclosure: Show complexity gradually
+   - Visual representations: Use diagrams over text
+   - Color coding: Quick understanding aids
+   - Tooltips: Detailed info on demand
+   - Tutorial sequence: Structured learning path
+   - Simplified mode: Optional for casual players
+   
+   Example: Rock Analysis Interface
+   Beginner View:
+   - Simple: "This is iron ore" (basic info)
+   
+   Intermediate View:
+   - "Hematite (Fe₂O₃), Quality: High" (more detail)
+   
+   Advanced View:
+   - Full geological analysis with composition percentages
+   ```
+
+2. **Solo Viability Enhancement**
+   ```
+   Challenge: Specialization may disadvantage solo players
+   
+   Adaptation Strategy:
+   - Broad competence viable: Can reach 60-70 in many skills
+   - NPC traders: Basic goods always available
+   - Automation options: Late-game self-sufficiency tools
+   - Skill flexibility: Easy to train new skills if needed
+   - Time investment: Solo viable but slower
+   
+   Result: Specialization optimal but not required
+   ```
+
+3. **Learning Curve Smoothing**
+   ```
+   Challenge: Initial complexity overwhelming
+   
+   Adaptation Strategy:
+   - Comprehensive tutorial: Interactive learning
+   - Guided progression: Suggested paths
+   - In-game help: Context-sensitive assistance
+   - Community mentoring: Veteran incentives
+   - Documentation: Accessible wiki and guides
+   - Tooltips everywhere: No hidden mechanics
+   
+   Goal: Depth accessible, not hidden
+   ```
+
+**Avoid:**
+
+1. **Avoid Over-Complexity Without Purpose**
+   - Don't add geological detail that doesn't affect gameplay
+   - Every mechanic should have clear player benefit
+   - Complexity should scale with player advancement
+
+2. **Avoid Forced Grouping Mechanics**
+   - Social play should be incentivized, not required
+   - Solo path should remain viable (if slower)
+   - Economic systems should enhance, not force interaction
+
+3. **Avoid Skill Decay Too Aggressive**
+   - Novus Inceptio's decay is minimal (if any)
+   - BlueMarble should consider gentle decay only
+   - Focus specialization through opportunity cost, not loss
+
+4. **Avoid Knowledge Gating Core Content**
+   - Basic gameplay should be accessible immediately
+   - Advanced optimization can require knowledge
+   - Don't lock essential activities behind research walls
+
+#### Implementation Considerations for BlueMarble
+
+**Skill System Architecture:**
+
+```csharp
+// Geological Skill System for BlueMarble
+
+public enum GeologicalSkillType
+{
+    // Gathering Skills
+    Mining,
+    Quarrying,
+    Surveying,
+    Prospecting,
+    
+    // Processing Skills
+    Smelting,
+    Refining,
+    QualityAssessment,
+    MaterialTesting,
+    
+    // Crafting Skills
+    ToolCrafting,
+    StructureBuilding,
+    MachineAssembly,
+    
+    // Analysis Skills
+    GeologicalAnalysis,
+    ChemicalAnalysis,
+    StructuralAnalysis,
+    
+    // Social Skills
+    Trading,
+    Teaching,
+    Documentation
+}
+
+public class GeologicalSkill
+{
+    public GeologicalSkillType Type { get; set; }
+    public float Level { get; set; } // 0.0 to 100.0
+    public float Experience { get; set; }
+    public DateTime LastUsed { get; set; }
+    public List<string> UnlockedTechniques { get; set; }
+    public Dictionary<string, float> Specializations { get; set; }
+    
+    // Calculate skill gain from action
+    public float CalculateGain(float actionDifficulty, 
+                               List<Knowledge> relevantKnowledge, 
+                               float toolQuality)
+    {
+        float baseGain = CalculateBaseGain(actionDifficulty);
+        float difficultyMatch = CalculateDifficultyMatch(actionDifficulty);
+        float knowledgeBonus = CalculateKnowledgeBonus(relevantKnowledge);
+        float toolFactor = 0.5f + (toolQuality / 200f); // 0.5x to 1.0x
+        
+        return baseGain * difficultyMatch * knowledgeBonus * toolFactor;
+    }
+    
+    private float CalculateBaseGain(float actionDifficulty)
+    {
+        // Diminishing returns as skill increases
+        float progressionCurve = 1.0f / (1.0f + Level / 20.0f);
+        return actionDifficulty * progressionCurve * 0.01f;
+    }
+    
+    private float CalculateDifficultyMatch(float actionDifficulty)
+    {
+        float difference = Math.Abs(actionDifficulty - Level);
+        
+        if (difference < 10) return 1.0f; // Just right
+        if (difference < 20) return 0.8f; // Close enough
+        if (difference < 40) return 0.5f; // Too easy or hard
+        return 0.3f; // Way off
+    }
+    
+    private float CalculateKnowledgeBonus(List<Knowledge> knowledge)
+    {
+        float bonus = knowledge.Count * 0.02f; // 2% per relevant knowledge
+        return Math.Min(1.0f + bonus, 2.0f); // Cap at 2x
+    }
+}
+
+public class Knowledge
+{
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public KnowledgeCategory Category { get; set; }
+    public string Description { get; set; }
+    public List<string> RelatedSkills { get; set; }
+    public Dictionary<string, float> Bonuses { get; set; }
+    public DateTime DiscoveredDate { get; set; }
+    public bool CanTeach { get; set; }
+    public string DiscoveryMethod { get; set; }
+}
+
+public enum KnowledgeCategory
+{
+    BasicGeology,
+    Mineralogy,
+    Petrology,
+    Geochemistry,
+    StructuralGeology,
+    EconomicGeology,
+    Metallurgy,
+    MaterialScience,
+    Engineering,
+    Economics
+}
+
+public class TechnologyNode
+{
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public TechnologyEra Era { get; set; }
+    public List<string> Prerequisites { get; set; }
+    public int ResearchPointsRequired { get; set; }
+    public int ResearchPointsSpent { get; set; }
+    public bool Unlocked { get; set; }
+    public List<string> Unlocks { get; set; } // Recipes, tools, techniques
+    
+    public float ResearchProgress => 
+        (float)ResearchPointsSpent / ResearchPointsRequired;
+    
+    public bool CanResearch(List<TechnologyNode> unlockedNodes)
+    {
+        return Prerequisites.All(prereq => 
+            unlockedNodes.Any(node => node.Id == prereq && node.Unlocked));
+    }
+}
+
+public enum TechnologyEra
+{
+    StoneAge,
+    BronzeAge,
+    IronAge,
+    SteelAge,
+    IndustrialAge,
+    ModernAge
+}
+```
+
+**Knowledge Discovery System:**
+
+```csharp
+public class KnowledgeDiscoverySystem
+{
+    public KnowledgeDiscoveryResult AnalyzeSample(
+        GeologicalSample sample,
+        Player player,
+        AnalysisEquipment equipment)
+    {
+        var result = new KnowledgeDiscoveryResult();
+        
+        // Check if player has analysis skill
+        var analysisSkill = player.GetSkill(GeologicalSkillType.GeologicalAnalysis);
+        
+        // Determine what can be discovered
+        var possibleDiscoveries = GetPossibleDiscoveries(sample, equipment);
+        
+        foreach (var discovery in possibleDiscoveries)
+        {
+            // Skill check for discovery
+            float requiredSkill = discovery.RequiredSkill;
+            float playerSkill = analysisSkill.Level;
+            
+            if (playerSkill >= requiredSkill)
+            {
+                // Guaranteed discovery
+                result.Discoveries.Add(discovery);
+                player.AddKnowledge(discovery);
+                result.KnowledgePointsGained += discovery.KnowledgePointValue;
+            }
+            else
+            {
+                // Chance-based discovery
+                float chance = playerSkill / requiredSkill;
+                if (Random.NextFloat() < chance)
+                {
+                    result.Discoveries.Add(discovery);
+                    player.AddKnowledge(discovery);
+                    result.KnowledgePointsGained += discovery.KnowledgePointValue;
+                    result.LuckyDiscoveries.Add(discovery);
+                }
+            }
+        }
+        
+        // Grant analysis experience
+        float expGain = analysisSkill.CalculateGain(
+            sample.AnalysisDifficulty,
+            player.GetRelevantKnowledge(sample),
+            equipment.Quality);
+        
+        analysisSkill.AddExperience(expGain);
+        result.SkillGain = expGain;
+        
+        return result;
+    }
+    
+    private List<Knowledge> GetPossibleDiscoveries(
+        GeologicalSample sample,
+        AnalysisEquipment equipment)
+    {
+        var discoveries = new List<Knowledge>();
+        
+        // Basic visual inspection (always available)
+        discoveries.AddRange(sample.VisualDiscoveries);
+        
+        // Equipment-gated discoveries
+        if (equipment.HasCapability(AnalysisType.ChemicalComposition))
+        {
+            discoveries.AddRange(sample.ChemicalDiscoveries);
+        }
+        
+        if (equipment.HasCapability(AnalysisType.CrystalStructure))
+        {
+            discoveries.AddRange(sample.StructuralDiscoveries);
+        }
+        
+        if (equipment.HasCapability(AnalysisType.GeologicalContext))
+        {
+            discoveries.AddRange(sample.ContextDiscoveries);
+        }
+        
+        return discoveries;
+    }
+}
+
+public class GeologicalSample
+{
+    public Vector3 Location { get; set; }
+    public MaterialType MaterialType { get; set; }
+    public float Quality { get; set; }
+    public float AnalysisDifficulty { get; set; }
+    public List<Knowledge> VisualDiscoveries { get; set; }
+    public List<Knowledge> ChemicalDiscoveries { get; set; }
+    public List<Knowledge> StructuralDiscoveries { get; set; }
+    public List<Knowledge> ContextDiscoveries { get; set; }
+}
+```
+
+**Player Engagement Tracking:**
+
+```csharp
+public class ProgressionAnalytics
+{
+    public void TrackSkillProgression(Player player)
+    {
+        var profile = new SkillProfile
+        {
+            PlayerId = player.Id,
+            TotalPlayTime = player.GetTotalPlayTime(),
+            SkillDistribution = CalculateSkillDistribution(player),
+            SpecializationPath = DetermineSpecializationPath(player),
+            ProgressionPhase = DetermineProgressionPhase(player),
+            KnowledgeAcquisitionRate = CalculateKnowledgeRate(player),
+            EngagementMetrics = CalculateEngagement(player)
+        };
+        
+        // Use for balancing and design decisions
+        LogProgressionData(profile);
+    }
+    
+    private SkillDistribution CalculateSkillDistribution(Player player)
+    {
+        var skills = player.GetAllSkills();
+        
+        return new SkillDistribution
+        {
+            HighSkills = skills.Count(s => s.Level >= 70),
+            MediumSkills = skills.Count(s => s.Level >= 40 && s.Level < 70),
+            LowSkills = skills.Count(s => s.Level < 40),
+            AverageSkillLevel = skills.Average(s => s.Level),
+            SpecializationScore = CalculateSpecializationScore(skills)
+        };
+    }
+    
+    private ProgressionPhase DetermineProgressionPhase(Player player)
+    {
+        var totalHours = player.GetTotalPlayTime().TotalHours;
+        var maxSkill = player.GetAllSkills().Max(s => s.Level);
+        
+        if (totalHours < 20) return ProgressionPhase.InitialExploration;
+        if (totalHours < 100) return ProgressionPhase.SpecializationSelection;
+        if (maxSkill < 80) return ProgressionPhase.MasteryPursuit;
+        return ProgressionPhase.EndgameOptimization;
+    }
+}
+```
+
+#### Screenshot Analysis
+
+**Note:** The original research issue referenced screenshots (images 5-8) from Novus Inceptio showing:
+- Skill progression interface
+- Knowledge discovery screen
+- Technology tree visualization
+- Geological analysis tools
+
+These screenshots were not provided in the issue submission. When available, they should be:
+1. Added to `/research/game-design/assets/novus-inceptio-screenshots/`
+2. Annotated to highlight key UI elements and patterns
+3. Referenced in the relevant sections above
+4. Used to validate the interface descriptions provided
+
+**Recommended Screenshot Coverage:**
+
+If screenshots become available, prioritize:
+1. **Main Skill Screen** - Overall skill progression view
+2. **Geological Analysis Interface** - Sample examination workflow
+3. **Technology Tree** - Era progression and research status
+4. **Knowledge Discovery Notification** - Discovery celebration UI
+5. **Crafting Interface** - Material quality and skill impact
+6. **Surveying/Mapping Tools** - Resource identification aids
+
+For reference:
+- Novus Inceptio Wiki: <https://novus-inceptio.fandom.com/wiki/Skills>
+- Steam Community Screenshots: Search for UI examples
+- Player guides often include annotated interface examples
+
+---
+
+This comprehensive expansion provides:
+- Detailed skill tree structures
+- Progression mechanics with formulas
+- UI mockups and interface design
+- Integration with game systems (gathering, crafting, combat, exploration)
+- Engagement mechanisms and social systems
+- Specific recommendations for BlueMarble
+- Implementation considerations with code examples
+
+The analysis is now at a similar depth to the material system research documents in the repository.
 
 ### Eco
 
