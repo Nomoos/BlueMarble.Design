@@ -149,7 +149,7 @@ for f in md_files:
                 if content_hash not in file_hashes:
                     file_hashes[content_hash] = []
                 file_hashes[content_hash].append(f)
-    except:
+    except (OSError, UnicodeDecodeError):
         continue
 
 # Report duplicate files
