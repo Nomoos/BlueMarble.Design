@@ -2,6 +2,9 @@
 
 Use this template for focused design documents (target 200-400 lines).
 
+**Front matter example:**
+
+```yaml
 ---
 title: [Design Document Title]
 date: YYYY-MM-DD
@@ -9,6 +12,7 @@ owner: @username
 status: draft | in-review | approved
 tags: [tag1, tag2, tag3]
 ---
+```
 
 ## Summary
 

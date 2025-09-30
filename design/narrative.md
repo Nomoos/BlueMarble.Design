@@ -2,6 +2,8 @@
 
 Story, world, and character concepts for BlueMarble.
 
+<!--
+Front matter example:
 ---
 title: Narrative
 date: 2025-09-30
@@ -9,6 +11,7 @@ owner: @Nomoos
 status: draft
 tags: [narrative, story, world-building]
 ---
+-->
 
 ## Overview
 

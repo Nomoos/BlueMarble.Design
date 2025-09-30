@@ -4,7 +4,8 @@ Master index of all research notes, experiments, and sources for the BlueMarble 
 
 ## Topics
 
-Research topics are small, focused notes on specific areas of interest. Each topic is self-contained and typically 200-400 lines.
+Research topics are small, focused notes on specific areas of interest. Each topic is self-contained
+and typically 200-400 lines.
 
 - [Topic files](topics/) - Individual research topics
 

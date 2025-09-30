@@ -2,6 +2,9 @@
 
 Use this template for documenting playtest sessions.
 
+**Front matter example:**
+
+```yaml
 ---
 title: [Playtest Session Name]
 date: YYYY-MM-DD
@@ -9,6 +12,7 @@ owner: @username
 status: draft | complete
 tags: [playtest, tag2, tag3]
 ---
+```
 
 ## Setup
 

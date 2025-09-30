@@ -2,6 +2,8 @@
 
 Progression systems, currencies, resource management, and economic balance for BlueMarble.
 
+<!--
+Front matter example:
 ---
 title: Economy
 date: 2025-09-30
@@ -9,6 +11,7 @@ owner: @Nomoos
 status: draft
 tags: [economy, progression, balance]
 ---
+-->
 
 ## Overview
 

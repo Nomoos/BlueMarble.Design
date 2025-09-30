@@ -2,9 +2,9 @@ name: Config Lint
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   yamllint:
@@ -43,7 +43,7 @@ jobs:
               echo "✓ Valid JSON: $file"
             fi
           done < <(find . -name "*.json" -not -path "*/node_modules/*" -not -path "*/.git/*" -print0)
-          
+
           if [ $EXIT_CODE -eq 0 ]; then
             echo "✓ All JSON files are valid"
           else

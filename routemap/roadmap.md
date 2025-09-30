@@ -2,14 +2,6 @@
 
 Big picture roadmap organized by quarters/phases for BlueMarble development.
 
----
-title: Development Roadmap
-date: 2025-09-30
-owner: @Nomoos
-status: draft
-tags: [roadmap, planning, strategy]
----
-
 ## Overview
 
 This document provides a high-level view of BlueMarble's development roadmap organized by phases or quarters.

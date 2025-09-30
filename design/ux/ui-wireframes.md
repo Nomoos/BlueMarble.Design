@@ -2,6 +2,8 @@
 
 Interface mockups and user flows for BlueMarble.
 
+<!--
+Front matter example:
 ---
 title: UI Wireframes
 date: 2025-09-30
@@ -9,6 +11,7 @@ owner: @Nomoos
 status: draft
 tags: [ui, wireframes, ux]
 ---
+-->
 
 ## Overview
 

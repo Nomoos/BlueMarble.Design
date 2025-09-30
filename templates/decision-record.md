@@ -2,6 +2,9 @@
 
 ADR-style template for documenting important design decisions.
 
+**Front matter example:**
+
+```yaml
 ---
 title: [Decision Title]
 date: YYYY-MM-DD
@@ -9,6 +12,7 @@ owner: @username
 status: proposed | accepted | rejected | superseded
 tags: [decision, adr, tag3]
 ---
+```
 
 ## Context
 

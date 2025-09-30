@@ -2,6 +2,8 @@
 
 Input schemes and control layouts for BlueMarble.
 
+<!--
+Front matter example:
 ---
 title: Controls
 date: 2025-09-30
@@ -9,6 +11,7 @@ owner: @Nomoos
 status: draft
 tags: [controls, input, ux]
 ---
+-->
 
 ## Overview
 

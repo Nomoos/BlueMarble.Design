@@ -2,6 +2,8 @@
 
 Core design pillars and vision for BlueMarble.
 
+<!--
+Front matter example:
 ---
 title: Design Pillars
 date: 2025-09-30
@@ -9,6 +11,7 @@ owner: @Nomoos
 status: draft
 tags: [vision, design-pillars, core-design]
 ---
+-->
 
 ## Overview
 

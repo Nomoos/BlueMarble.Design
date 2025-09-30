@@ -2,6 +2,9 @@
 
 Use this template for documenting experiments and playtests.
 
+**Front matter example:**
+
+```yaml
 ---
 title: [Experiment Title]
 date: YYYY-MM-DD
@@ -9,6 +12,7 @@ owner: @username
 status: draft | in-progress | complete
 tags: [experiment, tag2, tag3]
 ---
+```
 
 ## Hypothesis
 

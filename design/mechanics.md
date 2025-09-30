@@ -2,6 +2,8 @@
 
 Core gameplay loops, systems, and mechanics for BlueMarble.
 
+<!--
+Front matter example:
 ---
 title: Core Mechanics
 date: 2025-09-30
@@ -9,6 +11,7 @@ owner: @Nomoos
 status: draft
 tags: [mechanics, gameplay, core-systems]
 ---
+-->
 
 ## Overview
 

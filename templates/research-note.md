@@ -2,14 +2,6 @@
 
 Use this template for small, focused research notes on specific topics.
 
----
-title: [Topic Title]
-date: YYYY-MM-DD
-owner: @username
-status: draft | in-progress | complete
-tags: [tag1, tag2, tag3]
----
-
 ## Problem / Context
 
 What question are we answering? Why is this research important?
@@ -92,4 +84,3 @@ What questions remain unanswered? What should we research next?
 
 - [Related Research](../research/topics/related-topic.md)
 - [Related Design](../design/related-design.md)
-- [Related Issue](#issue-link)
