@@ -15,10 +15,20 @@ This directory tracks the overall project roadmap, feature priorities, and devel
 **Status:** In Progress
 
 #### Core Systems Design
-- [ ] Game architecture specification
-- [ ] Core gameplay mechanics design
-- [ ] Player progression framework
-- [ ] World design and lore foundation
+- [ ] Game architecture specification (#[Issue-1])
+- [ ] Core gameplay mechanics design (#[Issue-2])
+- [ ] Player progression framework (#[Issue-3])
+- [ ] Database schema design (#[Issue-4])
+- [ ] API specifications (#[Issue-5])
+- [ ] Combat system design (#[Issue-6])
+- [ ] Character progression system (#[Issue-7])
+- [ ] Social and guild systems (#[Issue-8])
+- [ ] Economic system design (#[Issue-9])
+- [ ] Security framework design (#[Issue-10])
+
+**Tracking:** See [Core Systems Design Roadmap Issue](../templates/core-systems-design-roadmap-issue.md)
+for detailed tracking  
+**Documentation:** See [Core Systems Roadmap Usage Guide](../docs/CORE_SYSTEMS_ROADMAP_USAGE.md)
 
 #### Technical Foundation
 - [ ] System architecture design
