@@ -94,6 +94,29 @@ woodworking).
 - Specialization unlocks at Level 25 for focused expertise
 - Complete crafting interface designs with visual feedback
 
+### [Eco Global Survival Material System Research](eco-global-survival-material-system-research.md)
+Market research analyzing Eco Global Survival's material and quality systems, with focus on environmental impact, 
+collaborative crafting, and sustainability mechanics adaptable for BlueMarble.
+
+**Key Topics**:
+- Environmental impact mechanics (pollution, ecosystem simulation, climate effects)
+- Collaborative specialization and forced economic interdependence
+- Technology-based quality progression (Basic/Advanced/Modern/Future tiers)
+- Resource gathering with ecological consequences (extinction, depletion, habitat loss)
+- Government systems and player-created regulations
+- Sustainability incentives and remediation technology
+- Comparative analysis with MMORPG standards
+
+**Research Highlights**:
+- Environmental cost as core constraint: pollution tracking, resource depletion, ecosystem damage
+- Mandatory collaboration through skill point caps and profession complexity
+- Real-time ecosystem simulation where over-harvesting causes permanent species extinction
+- Technology tree requiring collaborative research and resource investment
+- Calorie economy and housing requirements driving meaningful resource consumption
+- Renewable vs. non-renewable resource distinction with ecological rules
+- Sustainability recommendations for BlueMarble integration with geological simulation
+- Implementation roadmap for environmental mechanics (9-14 months estimated)
+
 ## Research Philosophy
 
 ### Scientific Integrity First
