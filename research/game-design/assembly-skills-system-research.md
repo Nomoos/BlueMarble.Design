@@ -1,7 +1,7 @@
 # Resource Gathering and Assembly Skills - Research Report
 
 **Document Type:** Research Report  
-**Version:** 1.1  
+**Version:** 1.2  
 **Author:** Game Design Research Team  
 **Date:** 2025-01-08  
 **Last Updated:** 2025-01-08  
@@ -14,16 +14,20 @@ This research report proposes a comprehensive skill system for BlueMarble coveri
 and assembly/crafting professions. The system emphasizes realism, geological authenticity, and meaningful 
 player progression. It integrates traditional gathering skills (mining, herbalism, logging, hunting, fishing) 
 and crafting professions (blacksmithing, tailoring, alchemy, woodworking) with BlueMarble's unique geological 
-simulation foundation. The proposed skill system uses a practice-based progression model with a dual-experience 
-system for gathering (general skill + material-specific familiarity) and single-track progression for assembly, 
-where material quality, tool quality, environmental conditions, and practitioner skill level all influence 
-outcomes including success rate, item quality, and special bonuses.
+simulation foundation. The proposed skill system uses a practice-based progression model with a three-tiered 
+experience system for gathering (general skill + material group + specific material familiarity) and 
+single-track progression for assembly, where material quality, tool quality, environmental conditions, and 
+practitioner skill level all influence outcomes including success rate, item quality, and special bonuses.
 
 **Key Findings:**
 - Realistic skill systems should reflect real-world learning curves with diminishing returns at higher levels
 - Material quality and availability should be tied to BlueMarble's geological simulation
-- Gathering skills use dual-experience tracking: general proficiency + material-specific familiarity
+- Gathering skills use three-tiered experience tracking: general proficiency + material group + specific material familiarity
 - Material familiarity creates depth (e.g., experienced iron miner is more efficient with iron than copper)
+- Experience affects efficiency (speed), quality preservation, and yield (quantity) of gathered materials
+- Material group experience unlocks special abilities (ore sense, herb detection, grain reading)
+- Rare materials provide higher XP rewards and faster familiarity gains to balance their scarcity
+- Multiple diminishing returns systems prevent exploitation while maintaining long-term engagement
 - Multi-stage crafting processes create engaging gameplay and respect real-world manufacturing complexity
 - Success rates and quality bonuses should scale with skill level, creating meaningful progression
 - Specialization within professions allows for player differentiation and economic niches
@@ -35,13 +39,14 @@ outcomes including success rate, item quality, and special bonuses.
 2. [Methodology](#methodology)
 3. [Core Assembly Skills Overview](#core-assembly-skills-overview)
 4. [Resource Gathering Skills](#resource-gathering-skills)
-5. [Skill Progression Mechanics](#skill-progression-mechanics)
-6. [Crafting Interface Design](#crafting-interface-design)
-7. [Material Quality and Geological Integration](#material-quality-and-geological-integration)
-8. [Real-World Skill Analysis](#real-world-skill-analysis)
-9. [Recommendations](#recommendations)
-10. [Implementation Roadmap](#implementation-roadmap)
-11. [Appendices](#appendices)
+5. [Gathering Experience System Design Considerations](#gathering-experience-system-design-considerations)
+6. [Skill Progression Mechanics](#skill-progression-mechanics)
+7. [Crafting Interface Design](#crafting-interface-design)
+8. [Material Quality and Geological Integration](#material-quality-and-geological-integration)
+9. [Real-World Skill Analysis](#real-world-skill-analysis)
+10. [Recommendations](#recommendations)
+11. [Implementation Roadmap](#implementation-roadmap)
+12. [Appendices](#appendices)
 
 ## Research Objectives
 
@@ -527,6 +532,346 @@ Group_Familiarity_XP = Fishing_XP × 0.25 (for fish group)
 - **Deep Sea Fisher:** Focus on ocean fishing, large catches
 - **Fly Fisher:** Expertise in rivers and streams, technique-focused
 - **Aquaculturist:** Specialization in fish farming, sustainable practices
+
+### Gathering Experience System Design Considerations
+
+**Overview:**
+
+The three-tiered gathering experience system creates depth and rewards both broad exploration and focused 
+specialization. This section addresses key design questions about how the system functions and balances 
+different gameplay styles.
+
+#### Experience Impact on Gathering Performance
+
+**What does higher experience improve?**
+
+The gathering experience system affects three key performance metrics:
+
+1. **Efficiency (Speed):**
+   - General Gathering Skill: Reduces time per harvest action
+   - Material-Specific Experience: Further reduces time for familiar materials
+   - Combined Effect: Expert gatherers working with familiar materials are significantly faster
+   
+   ```
+   Harvest_Time = Base_Time × (1 - General_Skill_Modifier) × (1 - Familiarity_Modifier)
+   
+   Example - Mining Iron Ore:
+   - Novice (Level 5, 0 Iron XP): 10s × 0.9 × 1.0 = 9.0s per ore
+   - Intermediate (Level 30, 100 Iron XP): 10s × 0.7 × 0.9 = 6.3s per ore
+   - Expert (Level 70, 500 Iron XP): 10s × 0.5 × 0.75 = 3.75s per ore
+   ```
+
+2. **Quality Preservation:**
+   - Determines how well the material's base quality is maintained during extraction
+   - Lower skill may damage materials, reducing their quality for assembly use
+   - Higher skill preserves or even slightly enhances base quality
+   
+   ```
+   Final_Material_Quality = Base_Quality × Quality_Preservation_Rate
+   
+   Quality Preservation by Skill Level:
+   - Levels 1-20: 60-75% preservation (significant quality loss)
+   - Levels 21-50: 75-90% preservation (moderate loss)
+   - Levels 51-100: 90-100% preservation (minimal to no loss)
+   - Material Familiarity Bonus: +5% to +15% additional preservation
+   ```
+
+3. **Yield (Quantity):**
+   - Base yield increases slightly with general skill level
+   - Material familiarity provides chance for bonus yields
+   - Rare "critical success" chances increase with experience
+   
+   ```
+   Base_Yield = Standard_Yield × (1 + General_Skill_Bonus)
+   Bonus_Yield_Chance = 5% + (Material_Familiarity / 20)% (capped at 25%)
+   Critical_Success_Chance = 1% + (General_Skill_Level / 20)% (capped at 6%)
+   
+   Example - Herbalism (Collecting Healing Herbs):
+   - Novice (Level 5): 1-2 herbs, 7% bonus chance, 1.25% critical
+   - Intermediate (Level 30): 1-3 herbs, 15% bonus chance, 2.5% critical
+   - Expert (Level 70, 400 Herb XP): 2-4 herbs, 25% bonus chance, 4.5% critical
+   ```
+
+**Impact Summary:**
+- Efficiency improvements are most noticeable (up to 60% faster)
+- Quality preservation is crucial for high-end crafting (prevents waste)
+- Yield improvements are modest but meaningful over time
+
+#### Experience Growth Rates and Balance
+
+**How fast should different experience types grow?**
+
+The current system uses a 2:1:0.5 ratio for General:Group:Specific experience:
+
+```
+General_Gathering_XP = Base_XP × Difficulty_Multiplier × Quality_Multiplier
+Material_Group_XP = General_XP × 0.5
+Specific_Material_XP = General_XP × 0.25
+```
+
+**Rationale:**
+
+1. **General Gathering (100% of base XP):**
+   - Fastest progression for broad applicability
+   - Encourages exploration and trying different materials
+   - Levels 1-30: Rapid advancement (learning fundamentals)
+   - Levels 31-70: Steady progression (mastering techniques)
+   - Levels 71-100: Slow progression (perfecting mastery)
+
+2. **Material Group (50% of base XP):**
+   - Medium-speed progression for category expertise
+   - Example: Mining all metal ores improves metal ore group experience
+   - Takes approximately twice as long to "master" a group vs general skill
+   - Provides meaningful bonuses without requiring extreme specialization
+
+3. **Specific Material (25% of base XP):**
+   - Slowest progression for deep specialization
+   - Rewards players who focus on specific materials
+   - Takes approximately 4x longer to max out than general skill
+   - Creates expert niches (e.g., "the best iron miner on the server")
+
+**Progression Timeline Examples:**
+
+```
+To reach Level 50 in Mining (General):
+- ~200 hours of diverse mining activities
+- Harvesting many different ore types
+- Natural progression through normal gameplay
+
+To max out Iron Ore Familiarity (500 extractions):
+- ~50 hours focused on iron ore only
+- OR ~200 hours if iron is 25% of mining activities
+- Creates specialization without requiring exclusive focus
+
+To max out Metal Ores Group:
+- ~100 hours mining various metal ores
+- Spread across iron, copper, gold, silver, tin
+- Encourages variety within a category
+```
+
+**Diminishing Returns:**
+
+Yes, the system includes diminishing returns to prevent exploitation:
+
+```
+Familiarity_Bonus_Per_Extraction = (Current_Extractions < 100) ? 0.05% : 
+                                   (Current_Extractions < 300) ? 0.03% :
+                                   (Current_Extractions < 500) ? 0.01% : 0%
+
+Example:
+- Extractions 1-100: Gain 5% total bonus (0.05% per extraction)
+- Extractions 101-300: Gain 6% total bonus (0.03% per extraction)
+- Extractions 301-500: Gain 2% total bonus (0.01% per extraction)
+- Extractions 501+: Gain 12% from other sources (group, skill level)
+- Maximum familiarity bonus: 25% at 500 extractions
+```
+
+This prevents "grinding" a single material to quickly max out while still rewarding dedication.
+
+#### Material Group Experience and Special Abilities
+
+**Should material group experience unlock special abilities?**
+
+Yes, material group experience unlocks passive abilities and active techniques at key milestones:
+
+**Milestone System:**
+
+```
+Group_Familiarity_Milestones:
+- Level 1 (0 XP): Basic group recognition
+- Level 2 (500 Group XP): Enhanced detection (locate nearby materials)
+- Level 3 (1500 Group XP): Quality assessment (see material quality before extraction)
+- Level 4 (3000 Group XP): Efficient extraction (reduced tool wear for group)
+- Level 5 (5000 Group XP): Master techniques (group-specific special abilities)
+```
+
+**Examples by Gathering Skill:**
+
+**Mining - Metal Ores Group:**
+- Level 2: "Ore Sense" - Detect metal ore deposits within 20m radius
+- Level 3: "Vein Reading" - See ore quality and vein size before mining
+- Level 4: "Efficient Mining" - 20% less tool durability loss on metal ores
+- Level 5: "Vein Following" - Automatically trace ore veins to richest deposits
+
+**Herbalism - Medicinal Herbs Group:**
+- Level 2: "Herb Scent" - Detect medicinal herbs within 15m, even if hidden
+- Level 3: "Potency Assessment" - See herb medicinal strength before harvesting
+- Level 4: "Gentle Harvest" - Plants regrow 25% faster after harvesting
+- Level 5: "Perfect Timing" - Know optimal harvest time for maximum potency
+
+**Logging - Hardwood Group:**
+- Level 2: "Grain Reading" - See wood grain quality through bark
+- Level 3: "Age Assessment" - Know tree age and wood quality before felling
+- Level 4: "Clean Felling" - 15% less wood waste from precision cuts
+- Level 5: "Master Lumberjack" - Fell trees in chosen direction, no damage to wood
+
+**Design Philosophy:**
+- Abilities enhance gameplay without being mandatory
+- Each ability saves time or improves outcomes
+- Encourages specialization in material groups
+- Creates distinct playstyles (generalist vs. specialist)
+
+#### Rare Material Handling
+
+**How should the system handle rare materials?**
+
+Rare materials use a balanced approach that makes them valuable without making them impossible to master:
+
+**Rare Material Characteristics:**
+
+1. **Higher Base XP Rewards:**
+   ```
+   Rare_Material_XP_Multiplier = 2.0 to 5.0 (vs 1.0 for common materials)
+   
+   Example:
+   - Common Iron Ore: 10 base XP per extraction
+   - Uncommon Mithril Ore: 25 base XP per extraction (2.5× multiplier)
+   - Rare Adamantite Ore: 50 base XP per extraction (5× multiplier)
+   ```
+
+2. **Faster Familiarity Gains:**
+   ```
+   Rare materials count as multiple extractions for familiarity:
+   - Common materials: 1 extraction = 1 familiarity point
+   - Uncommon materials: 1 extraction = 2 familiarity points
+   - Rare materials: 1 extraction = 3 familiarity points
+   - Legendary materials: 1 extraction = 5 familiarity points
+   ```
+
+3. **Lower Familiarity Requirements:**
+   ```
+   Familiarity caps adjusted for rarity:
+   - Common materials: 500 extractions for max bonus
+   - Uncommon materials: 300 extractions for max bonus (600 effective)
+   - Rare materials: 200 extractions for max bonus (600 effective)
+   - Legendary materials: 100 extractions for max bonus (500 effective)
+   ```
+
+4. **Economic Incentives:**
+   - Rare materials always worth gathering, even at low skill
+   - Market value reflects both rarity and quality
+   - Even "failed" rare extractions yield some value
+   - Encourages risk-taking by skilled gatherers
+
+**Example: Legendary Moonstone Crystal (Rare Mining Material)**
+
+```
+First Extraction (Zero Moonstone Experience):
+- Success Rate: 40% (vs 85% for common iron)
+- Quality Preservation: 50% (vs 70% for iron)
+- Time Required: 60 seconds (vs 10s for iron)
+- XP Gained: 250 (vs 10 for iron)
+- Familiarity Gained: 5 points (vs 1 for iron)
+- Market Value: 1000 gold even at 50% quality
+
+100th Extraction (500 Moonstone Familiarity Points = Max):
+- Success Rate: 65% (+25% from familiarity)
+- Quality Preservation: 75% (+25% from familiarity)
+- Time Required: 45 seconds (25% faster)
+- XP Gained: 250 (same base)
+- Familiarity Gained: 0 (capped)
+- Market Value: 2000 gold at 75% quality
+
+Result: Rare material mastery is achievable (100 extractions vs 500 for common)
+        but requires dedication and provides significant rewards
+```
+
+**Design Goals:**
+- Rare materials remain challenging but not impossible to master
+- First-time gatherers can still succeed (just less efficiently)
+- Experts have clear advantages without monopolizing access
+- Economic value justifies the difficulty and time investment
+
+#### Diminishing Returns and Anti-Exploitation
+
+**Should there be diminishing returns?**
+
+Yes, multiple diminishing returns systems prevent exploitation while maintaining engagement:
+
+**1. Material Familiarity Diminishing Returns:**
+
+```
+Extraction_Progress = (Current_Extractions / Target_Extractions)
+
+XP_Per_Extraction = Base_XP × (1.0 - (Progress × 0.5))
+
+Example - Iron Ore Familiarity (Target: 500 extractions):
+- Extraction 1-100 (0-20%): 100% XP (fast gains)
+- Extraction 101-200 (20-40%): 90% XP (slight slowdown)
+- Extraction 201-300 (40-60%): 80% XP (noticeable slowdown)
+- Extraction 301-400 (60-80%): 70% XP (diminishing returns)
+- Extraction 401-500 (80-100%): 60% XP (slow final gains)
+```
+
+**2. Repetitive Action Penalties:**
+
+```
+Same_Material_Spam_Penalty:
+- Gathering same material >50 times in 1 hour: -10% XP
+- Gathering same material >100 times in 1 hour: -25% XP
+- Gathering same material >200 times in 1 hour: -50% XP
+- Penalty resets after 30 minutes of diverse activity
+
+Purpose: Prevents mindless grinding, encourages variety
+Exception: Does not apply to rare materials
+```
+
+**3. Skill Level Diminishing Returns:**
+
+```
+General_Skill_XP_Per_Level:
+- Levels 1-20: 100-200 XP per level (fast early progression)
+- Levels 21-40: 200-400 XP per level (steady progression)
+- Levels 41-60: 400-800 XP per level (slower progression)
+- Levels 61-80: 800-1600 XP per level (slow progression)
+- Levels 81-100: 1600-3200 XP per level (very slow mastery)
+
+Total to Level 100: ~64,000 XP
+Time Investment: ~400-600 hours of focused gathering
+```
+
+**4. Material Depletion Mechanic:**
+
+```
+Deposit_Quality_Degradation:
+- First 10 extractions: 100% quality
+- Extractions 11-30: 95% quality (slight degradation)
+- Extractions 31-60: 85% quality (noticeable degradation)
+- Extractions 61-100: 70% quality (significant degradation)
+- Extractions 101+: 50% quality (depleted deposit)
+
+Result: Players naturally move between deposits
+        Prevents camping one location
+        Encourages exploration
+```
+
+**5. Efficiency Caps:**
+
+```
+Maximum_Combined_Bonuses:
+- General Skill: Up to +50% efficiency (at Level 100)
+- Material Familiarity: Up to +25% efficiency (at 500 extractions)
+- Material Group: Up to +15% efficiency (at max group level)
+- Equipment Bonuses: Up to +20% efficiency (best tools)
+- Total Maximum: +110% efficiency (vs +0% for novice)
+
+Practical Limit: +75-85% for most expert players
+                Prevents exponential scaling
+                Maintains challenge at high levels
+```
+
+**Anti-Exploitation Summary:**
+
+The system includes five layers of diminishing returns:
+1. Material familiarity gains slow as you approach cap
+2. Repetitive actions are penalized within same play session
+3. General skill levels require exponentially more XP
+4. Material deposits degrade with overuse
+5. Efficiency bonuses have hard caps
+
+**Result:** Progression feels rewarding throughout the journey while preventing exploitation and maintaining 
+long-term engagement. Players are naturally encouraged to diversify their activities while still being able 
+to specialize meaningfully.
 
 ### Gathering and Assembly Integration
 
