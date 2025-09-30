@@ -372,6 +372,7 @@ Example (Base Price = 100 gold):
 - [Economy Systems](../../systems/economy-systems.md) - Economic balance
 - [Skill Knowledge System](../../../research/game-design/skill-knowledge-system-research.md) - Skill progression
 - [Life is Feudal Material System Research](../../../research/game-design/life-is-feudal-material-system-research.md) - Material quality and crafting analysis from proven MMORPG systems
+- [Vintage Story Material System Research](../../../research/game-design/vintage-story-material-system-research.md) - Material quality and geological integration analysis
 
 ## Version History
 

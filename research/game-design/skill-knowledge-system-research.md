@@ -407,6 +407,10 @@ Character: Geologist Archetype
 - Limited social features
 - May need more structured progression for MMO
 
+**Deep Dive:**
+For comprehensive analysis of Vintage Story's material grading and quality systems, see:
+- [Vintage Story Material System Research](./vintage-story-material-system-research.md) - Detailed material quality, crafting progression, and implementation recommendations
+
 ### Life is Feudal
 
 **System Type:** Skill-based with hard cap and alignment system
