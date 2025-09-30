@@ -54,24 +54,27 @@ This document demonstrates how to effectively use the BlueMarble.Design reposito
 2. Link visual design needs to UI/UX documentation
 3. Plan audio requirements in `/docs/audio/`
 
-## Scenario 3: Technical System Design
+## Scenario 4: Technical System Design
 
 ### Step 1: Research Requirements
+
 1. Review gameplay and world requirements that drive technical needs
 2. Research technical approaches in `/docs/research/`
 3. Document findings: `docs/research/research-technical-networking-solutions.md`
 
 ### Step 2: System Design
+
 1. Create technical design document: `docs/systems/tdd-multiplayer-networking.md`
 2. Specify API requirements: `docs/systems/api-player-sync.md`
 3. Plan performance testing approach
 
 ### Step 3: Implementation Planning
+
 1. Update project roadmap with technical milestones
 2. Identify dependencies on other system components
 3. Plan integration testing with gameplay systems
 
-## Scenario 4: Cross-Functional Feature Development
+## Scenario 5: Cross-Functional Feature Development
 
 ### Example: Social Guild System
 
