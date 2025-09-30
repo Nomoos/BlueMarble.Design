@@ -28,6 +28,28 @@ Analysis of game systems inspired by Port Royale 1 and The Guild 1400, adapted f
 - Professional guilds providing gameplay bonuses and knowledge sharing
 - Political influence through actual economic and infrastructure control
 
+### [Skill and Knowledge System Research](skill-knowledge-system-research.md)
+Comprehensive analysis of skill and knowledge progression systems in MMORPGs with recommendations for BlueMarble.
+
+**Key Topics**:
+- Comparative analysis of WoW, Novus Inceptio, Eco, Wurm Online, Vintage Story, Life is Feudal, and Mortal Online 2
+- Three core skill models: Class-based, Skill-based, and Hybrid systems
+- Knowledge progression patterns and integration with gameplay
+- Detailed recommendations for geological knowledge-based progression
+- Implementation considerations and technical architecture
+- Phase-based development roadmap aligned with Q4 2025 goals
+
+### [Skill Caps and Decay Research](skill-caps-and-decay-research.md)
+Analysis of skill caps, experience-based progression, and skill decay mechanics in RPG systems.
+
+**Key Topics**:
+- Level-based skill category caps and their effectiveness
+- Skill decay mechanics and "use-it-or-lose-it" systems
+- Natural specialization through maintenance costs
+- Decay floors and grace periods for fair gameplay
+- Integration with BlueMarble's geological progression
+- Recommendations against additional global caps
+
 ### [Implementation Plan](implementation-plan.md)
 Phased development roadmap spanning 16-20 months with clear deliverables and risk mitigation.
 
@@ -46,6 +68,31 @@ Framework for maximizing player agency through intelligent, reality-based constr
 - Emergent opportunities arising from constraint interactions
 - Knowledge-based progression that directly enhances capabilities
 - Creative problem-solving using realistic geological processes
+
+### [Resource Gathering and Assembly Skills Research](assembly-skills-system-research.md)
+Comprehensive research on realistic gathering and crafting skills for BlueMarble, including resource gathering 
+(mining, herbalism, logging, hunting, fishing) and assembly professions (blacksmithing, tailoring, alchemy, 
+woodworking).
+
+**Key Topics**:
+- Dual-experience system for gathering: general skill + material-specific familiarity
+- Practice-based skill progression with realistic learning curves
+- Material quality integration with geological simulation
+- Multi-stage crafting processes with interactive elements
+- Success rate formulas and quality tier calculations
+- Specialization paths within each profession (3 per skill, 27 total)
+- Gathering-Assembly integration chain
+- [Visual Interface Mockups](assets/crafting-interface-mockups.md)
+
+**Research Highlights**:
+- Five gathering skills: Mining, Herbalism, Logging, Hunting, Fishing
+- Four assembly professions: Blacksmithing, Tailoring, Alchemy, Woodworking
+- Material familiarity system (picking rocks vs picking flowers requires different experience)
+- Experience-based progression from novice (Level 1) to master (Level 100)
+- Quality tiers: Crude, Standard, Fine, Superior, Masterwork
+- Material quality flows from geological formation → gathering → assembly → final product
+- Specialization unlocks at Level 25 for focused expertise
+- Complete crafting interface designs with visual feedback
 
 ## Research Philosophy
 
