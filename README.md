@@ -19,8 +19,6 @@ This repository serves as the central hub for all design-related activities in t
 ├── design/                  # Game design documentation and vision
 ├── docs/                    # Main documentation directory
 │   ├── core/               # Core design documents (GDD, TDD)
-│   ├── systems/            # Game systems and mechanics
-│   ├── world/              # World building, lore, and narrative
 │   ├── gameplay/           # Gameplay mechanics and systems
 │   ├── world/              # World building, lore, and narrative
 │   ├── systems/            # Core systems and technical design
