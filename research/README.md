@@ -13,12 +13,16 @@ research/
 │   ├── current-implementation.md  # Documentation of BlueMarble's current approach
 │   ├── recommendations.md      # Hybrid approach recommendations
 │   └── octree-optimization-guide.md  # Advanced octree optimization strategies
-└── game-design/                 # Game design research for interactive geological simulation
-    ├── README.md               # Overview of game design research
-    ├── world-parameters.md     # Technical specifications for 3D spherical world
-    ├── mechanics-research.md   # Game systems inspired by classic economic simulations
-    ├── implementation-plan.md  # Phased development roadmap
-    └── player-freedom-analysis.md  # Maximizing player agency through intelligent constraints
+├── game-design/                 # Game design research for interactive geological simulation
+│   ├── README.md               # Overview of game design research
+│   ├── world-parameters.md     # Technical specifications for 3D spherical world
+│   ├── mechanics-research.md   # Game systems inspired by classic economic simulations
+│   ├── implementation-plan.md  # Phased development roadmap
+│   └── player-freedom-analysis.md  # Maximizing player agency through intelligent constraints
+└── gpt-research/                # Research from ChatGPT conversations
+    ├── README.md               # Guide for importing GPT research
+    ├── conversation-dr_68dbe0cc/  # Pending research import
+    └── conversation-dr_68dbe0e4/  # Pending research import
 ```
 
 ## Research Areas
@@ -44,6 +48,18 @@ Research documentation for transforming BlueMarble into an interactive geologica
 - Phased development roadmap (16-20 months implementation plan)
 - Player freedom analysis emphasizing intelligent constraints
 - Integration strategies maintaining backward compatibility with existing architecture
+
+### GPT Research (`gpt-research/`)
+
+Research and analysis generated from ChatGPT conversations that inform BlueMarble's technical and design decisions, including:
+
+- Advanced algorithm prototyping and analysis
+- Technical trade-off explorations
+- Industry best practices research
+- Design brainstorming and concept development
+- Implementation guidance and code examples
+
+See [`gpt-research/README.md`](gpt-research/README.md) for instructions on importing and documenting GPT research.
 
 ## Integration with BlueMarble Architecture
 
