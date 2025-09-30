@@ -45,5 +45,3 @@ jobs:
         uses: codespell-project/actions-codespell@v2
         with:
           path: .
-          ignore_words_list: ue,unreal,behaviour,gameplay,metagame,routemap
-          skip: .git,**/sources.bib,**/*.bib
