@@ -1,7 +1,7 @@
 # BlueMarble - System Architecture Design
 
 **Version:** 1.0  
-**Date:** 2025-01-02  
+**Date:** YYYY-MM-DD  
 **Status:** Draft  
 **Author:** BlueMarble Architecture Team
 
