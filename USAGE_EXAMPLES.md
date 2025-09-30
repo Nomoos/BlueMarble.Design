@@ -213,6 +213,41 @@ Issue completed and ready for review.
 - Check that all documents follow established naming conventions
 - Validate that templates are being used appropriately
 
+### Working with Pull Requests
+
+#### Automated PR Updates
+
+This repository has automated PR management to keep your work current:
+
+**What Happens Automatically:**
+- Your PR is checked regularly for updates needed from main
+- If outdated, main is automatically merged into your PR branch
+- You receive notifications about updates and any conflicts
+
+**What You Need to Do:**
+- Review automated merge commits in your PR
+- Resolve conflicts if automatic merging fails
+- Use GitHub Copilot for conflict resolution assistance
+- Ensure tests pass after updates
+
+**See the [PR Auto-Merge Guide](.github/PR_AUTO_MERGE_GUIDE.md) for detailed information**
+
+#### Manual PR Management
+
+When you need to manually update your PR:
+
+```bash
+# Fetch latest changes
+git fetch origin
+
+# Merge main into your branch
+git checkout your-branch-name
+git merge origin/main
+
+# Push updates
+git push
+```
+
 ## Getting Started Checklist
 
 For new contributors:
