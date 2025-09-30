@@ -16,20 +16,91 @@ This repository serves as the central hub for all design-related activities in t
 ## Repository Structure
 
 ```
-├── design/                  # Game design documentation and vision
-├── docs/                    # Main documentation directory
+├── research/                # Research hub
+│   ├── README.md           # Research guidelines
+│   ├── index.md            # Master index of research
+│   ├── topics/             # Small focused research notes (200-400 lines)
+│   ├── experiments/        # Structured experiment logs (YYYY-MM-DD-title.md)
+│   ├── sources/            # Bibliography, reading list, quotes
+│   ├── game-design/        # Game design research area
+│   ├── spatial-data-storage/ # Spatial data storage research
+│   └── gpt-research/       # AI-assisted research
+├── design/                  # Design documentation hub
+│   ├── README.md           # Design guidelines
+│   ├── index.md            # Design document index
+│   ├── pillars.md          # High-level vision and pillars
+│   ├── mechanics.md        # Core loops and systems
+│   ├── economy.md          # Progression, currencies, balance
+│   ├── narrative.md        # Story, world, characters
+│   ├── ux/                 # User experience design
+│   │   ├── controls.md     # Input schemes
+│   │   └── ui-wireframes.md # Interface mockups
+│   ├── island_start_game_design.md # Existing design
+│   └── one-page-design.md  # Existing design
+├── routemap/                # Strategic planning (renamed from roadmap)
+│   ├── README.md           # Planning guidelines
+│   ├── roadmap.md          # Big picture by quarter/phase
+│   ├── milestones.md       # Dated deliverables
+│   └── backlog.md          # Groomed research/design tasks
+├── roadmap/                 # Existing roadmap (retained)
+├── docs/                    # Comprehensive documentation
 │   ├── core/               # Core design documents (GDD, TDD)
 │   ├── gameplay/           # Gameplay mechanics and systems
-│   ├── world/              # World building, lore, and narrative
+│   ├── world/              # World building, lore, narrative
 │   ├── systems/            # Core systems and technical design
 │   ├── ui-ux/              # User interface and experience design
 │   ├── audio/              # Audio design and music concepts
 │   └── research/           # Market research and analysis
-├── templates/              # Document templates for consistency
-├── assets/                 # Design assets, mockups, and references
-├── roadmap/                # Project roadmap and feature tracking
-└── archive/                # Archived or deprecated documents
+├── templates/               # Document templates
+│   ├── research-note.md    # Small focused research (200-400 lines)
+│   ├── design-doc.md       # Design document template
+│   ├── experiment-report.md # Experiment logs
+│   ├── playtest-report.md  # Playtest documentation
+│   ├── decision-record.md  # ADR-style decisions
+│   └── [existing templates] # Game design, feature specs, etc.
+├── assets/                  # Design assets, mockups, references
+├── scripts/                 # Utility scripts
+└── .github/                 # GitHub configuration
+    ├── ISSUE_TEMPLATE/     # Issue templates
+    │   ├── bug_report.yml
+    │   ├── chore.yml
+    │   ├── design_task.yml
+    │   └── research_note.yml
+    ├── workflows/          # CI/CD workflows
+    │   ├── quality.yml     # Markdown lint, link check, spellcheck
+    │   ├── config-lint.yml # YAML/JSON validation
+    │   └── autolabel.yml   # Auto-label and size PRs
+    ├── CODEOWNERS          # Review assignments
+    ├── PULL_REQUEST_TEMPLATE.md
+    └── dependabot.yml      # Dependency updates
 ```
+
+## Key Principles
+
+### Small, Focused Files
+
+- **Target size**: 200-400 lines (~500-800 words)
+- **One topic per file**: Each file covers a single concern
+- **Easy to review**: Smaller files = clearer diffs, fewer merge conflicts
+- **Use kebab-case**: `enemy-ai-overview.md`, `2025-09-30-combat-playtest.md`
+
+### Front Matter
+
+Include metadata at the top of research and design documents:
+
+```markdown
+---
+title: Document Title
+date: YYYY-MM-DD
+owner: @username
+status: draft | in-progress | complete
+tags: [tag1, tag2, tag3]
+---
+```
+
+### Cross-Linking
+
+Link liberally between related documents. Each major directory has an `index.md` linking to its contents.
 
 ## Getting Started
 
@@ -43,10 +114,13 @@ This repository serves as the central hub for all design-related activities in t
 
 ### For Research Contributors
 
-1. Use the [Research Issue Templates](templates/research-issue-templates-guide.md) to create structured research roadmaps
-2. Create main research issues using the [Research Roadmap Template](templates/research-roadmap-main-issue.md)
-3. Create individual research questions using the [Research Sub-Issue Template](templates/research-question-sub-issue.md)
-4. Follow the research documentation guidelines in `research/RESEARCH_ISSUES_SUMMARY.md`
+1. Browse [research/](research/) to understand existing research areas
+2. Check the [research index](research/index.md) for context
+3. Use the [research-note template](templates/research-note.md) for focused topics
+4. Use the [experiment-report template](templates/experiment-report.md) for experiments
+5. Keep notes small (200-400 lines) and focused on one question
+6. Name files with kebab-case: `topic-name.md` or `YYYY-MM-DD-experiment.md`
+7. Update relevant index files when adding research
 
 ### For Developers
 

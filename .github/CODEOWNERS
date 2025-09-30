@@ -1,0 +1,30 @@
+# CODEOWNERS file for BlueMarble.Design
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything in the repo
+* @Nomoos
+
+# Research directories - ensure research lead reviews
+/research/ @Nomoos
+/research/topics/ @Nomoos
+/research/experiments/ @Nomoos
+/research/sources/ @Nomoos
+
+# Design directories - ensure design lead reviews
+/design/ @Nomoos
+/design/ux/ @Nomoos
+
+# Routemap/Roadmap - project management
+/routemap/ @Nomoos
+/roadmap/ @Nomoos
+
+# Templates - important for consistency
+/templates/ @Nomoos
+
+# Documentation standards
+/CONTRIBUTING.md @Nomoos
+/DOCUMENTATION_BEST_PRACTICES.md @Nomoos
+/README.md @Nomoos
+
+# GitHub configuration
+/.github/ @Nomoos

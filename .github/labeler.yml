@@ -1,0 +1,38 @@
+research:
+  - research/**
+  - research/**/*
+
+design:
+  - design/**
+  - design/**/*
+
+routemap:
+  - routemap/**
+  - routemap/**/*
+
+roadmap:
+  - roadmap/**
+  - roadmap/**/*
+
+templates:
+  - templates/**
+  - templates/**/*
+
+documentation:
+  - docs/**
+  - docs/**/*
+  - "*.md"
+  - CONTRIBUTING.md
+  - README.md
+  - DOCUMENTATION_BEST_PRACTICES.md
+
+ci:
+  - .github/workflows/**
+  - .github/workflows/**/*
+
+infrastructure:
+  - .github/**
+  - scripts/**
+  - "*.yml"
+  - "*.yaml"
+  - "*.json"

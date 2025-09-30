@@ -1,0 +1,78 @@
+name: Chore
+description: Maintenance tasks, refactoring, or infrastructure improvements
+title: "[Chore]: "
+labels: ["chore"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for maintenance tasks, cleanup, or infrastructure work.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: What needs to be done?
+      placeholder: Describe the chore or maintenance task
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What type of chore is this?
+      options:
+        - Infrastructure
+        - CI/CD
+        - Documentation cleanup
+        - Refactoring
+        - Dependency updates
+        - Tooling
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why is this chore needed?
+      placeholder: Explain the motivation for this task
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: Break down the work into specific tasks
+      placeholder: |
+        - [ ] Task 1
+        - [ ] Task 2
+        - [ ] Task 3
+      value: |
+        - [ ] Task 1
+        - [ ] Task 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this is complete?
+      placeholder: |
+        - Criterion 1
+        - Criterion 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: Links, references, dependencies
+    validations:
+      required: false

@@ -1,0 +1,101 @@
+name: Research Note
+description: Document new research findings, experiments, or investigations
+title: "[Research]: "
+labels: ["research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for documenting research findings, experiments, or investigations.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Research Question
+      description: What question are you trying to answer?
+      placeholder: State the research question clearly
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Research Type
+      description: What type of research is this?
+      options:
+        - Topic Investigation
+        - Experiment
+        - Comparative Analysis
+        - Literature Review
+        - Playtest
+        - Market Research
+        - Technical Research
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this research important? What problem does it address?
+      placeholder: Provide context for this research
+    validations:
+      required: true
+
+  - type: textarea
+    id: methodology
+    attributes:
+      label: Methodology
+      description: How will you conduct this research?
+      placeholder: |
+        Describe the research approach:
+        - Sources to review
+        - Experiments to run
+        - Analysis methods
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Expected Deliverables
+      description: What will be produced from this research?
+      placeholder: |
+        - [ ] Research note: filename.md
+        - [ ] Experiment report
+        - [ ] Data/findings
+      value: |
+        - [ ] Research document
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this research?
+      options:
+        - High - Blocking current work
+        - Medium - Important for next phase
+        - Low - Exploratory/future work
+    validations:
+      required: true
+
+  - type: textarea
+    id: design-impact
+    attributes:
+      label: Design Impact
+      description: How will this research inform design decisions?
+      placeholder: Describe potential implications for design
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: Related research, references, constraints
+    validations:
+      required: false

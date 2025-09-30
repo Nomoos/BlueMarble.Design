@@ -16,23 +16,78 @@ For detailed guidelines on creating quality documentation, see [Documentation Be
 
 ### File Naming Conventions
 
-- Use descriptive, lowercase filenames with hyphens: `player-progression-system.md`
+**Standard Naming**:
+
+- Use **kebab-case**: lowercase with hyphens: `player-progression-system.md`, `enemy-ai-overview.md`
+- Be descriptive and specific: `pathfinding-comparison-a-star-vs-navmesh.md` not `pathfinding.md`
 - Include version numbers for major revisions: `combat-mechanics-v2.md`
-- Use appropriate prefixes for document types:
-  - `gdd-` for Game Design Documents
-  - `tdd-` for Technical Design Documents
-  - `spec-` for Feature Specifications
-  - `research-` for Research Reports
+
+**Prefixes for Document Types**:
+
+- `gdd-` for Game Design Documents
+- `tdd-` for Technical Design Documents
+- `spec-` for Feature Specifications
+- `research-` for Research Reports (optional, prefer descriptive names)
+
+**Date Prefixes for Time-Sensitive Documents**:
+
+- Experiments: `YYYY-MM-DD-short-title.md` (e.g., `2025-09-30-combat-playtest.md`)
+- Playtests: `YYYY-MM-DD-short-title.md` (e.g., `2025-10-15-player-retention-test.md`)
+- Decision records: `decision-record-YYYY-MM-DD-topic.md` or `YYYY-MM-DD-topic-adr.md`
+
+### File Size Guidelines
+
+Keep files **small and focused** to improve readability, collaboration, and reduce merge conflicts:
+
+**Target Size**:
+
+- **200-400 lines** of Markdown (~500-800 words)
+- Long enough to hold one clear idea, short enough to scan quickly
+
+**When to Split Files**:
+
+- File covers more than one research question → split into multiple files
+- Scrolling feels longer than 2-3 screens → consider splitting
+- Multiple unrelated sections (like "Section 2.3.1...") → break into separate files
+
+**Good Examples** (small, focused files):
+
+- ✅ `procedural-tree-generation.md` - One specific technique
+- ✅ `player-motivation-self-determination.md` - One concept
+- ✅ `pathfinding-comparison-a-star-vs-navmesh.md` - One comparison
+
+**Too Large** (should be split):
+
+- ❌ `ai-research.md` with 20 subsections
+- ❌ `combat-systems.md` mixing mechanics, UX, psychology, playtests
+- ❌ `game-design.md` covering everything
+
+**When Files Can Be Larger**:
+
+- Comprehensive technical specifications (API docs, system architecture)
+- Master index files (linking to other focused documents)
+- Templates and guides
 
 ### Document Structure
 
 All documents should include:
 
-1. **Header section** with title, version, author, and date
-2. **Executive summary** or overview
+1. **Front matter** (for research and design documents):
+
+   ```markdown
+   ---
+   title: Document Title
+   date: YYYY-MM-DD
+   owner: @username
+   status: draft | in-progress | complete | approved
+   tags: [tag1, tag2, tag3]
+   ---
+   ```
+
+2. **Executive summary** or overview (2-3 sentences)
 3. **Detailed content** organized with clear headings
 4. **References and dependencies** to other documents
-5. **Revision history** for tracking changes
+5. **Revision history** for major changes (use Git for detailed history)
 
 ### Writing Style
 
@@ -41,6 +96,20 @@ All documents should include:
 - Include diagrams, mockups, or visual aids when helpful
 - Define technical terms and acronyms
 - Maintain consistency with established terminology
+- **Cross-link liberally**: Link to related research, design docs, and issues
+- Keep each document focused on **one topic** or **one concern**
+
+### Templates
+
+Use the appropriate template for your document type:
+
+- [research-note.md](templates/research-note.md) - Small research notes
+- [design-doc.md](templates/design-doc.md) - Design documents
+- [experiment-report.md](templates/experiment-report.md) - Experiment logs
+- [playtest-report.md](templates/playtest-report.md) - Playtest reports
+- [decision-record.md](templates/decision-record.md) - ADR-style decisions
+
+See the [templates directory](templates/) for all available templates.
 
 ## Review Process
 

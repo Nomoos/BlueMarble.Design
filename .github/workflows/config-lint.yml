@@ -1,0 +1,52 @@
+name: Config Lint
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  yamllint:
+    name: YAML Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: yamllint
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          config_file: .yamllint.yml
+          strict: true
+
+  json-lint:
+    name: JSON Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: JSON Lint
+        run: |
+          echo "Checking JSON files..."
+          EXIT_CODE=0
+          while IFS= read -r -d '' file; do
+            echo "Validating: $file"
+            if ! jq empty "$file" 2>/dev/null; then
+              echo "❌ Invalid JSON: $file"
+              EXIT_CODE=1
+            else
+              echo "✓ Valid JSON: $file"
+            fi
+          done < <(find . -name "*.json" -not -path "*/node_modules/*" -not -path "*/.git/*" -print0)
+          
+          if [ $EXIT_CODE -eq 0 ]; then
+            echo "✓ All JSON files are valid"
+          else
+            echo "❌ Some JSON files are invalid"
+          fi
+          exit $EXIT_CODE
