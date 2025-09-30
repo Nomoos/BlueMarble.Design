@@ -45,6 +45,7 @@ Research documentation for transforming BlueMarble into an interactive geologica
 - Technical world parameters for 3D spherical planet with 20,000 km height
 - Game mechanics inspired by Port Royale 1 and The Guild 1400
 - Skill and knowledge system analysis based on major MMORPGs
+- Life is Feudal material system and specialization mechanics analysis
 - Phased development roadmap (16-20 months implementation plan)
 - Player freedom analysis emphasizing intelligent constraints
 - Integration strategies maintaining backward compatibility with existing architecture
