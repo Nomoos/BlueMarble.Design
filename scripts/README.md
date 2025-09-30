@@ -19,8 +19,10 @@ A comprehensive script that validates documentation quality before committing.
 1. **Required files** - Ensures essential files like README.md exist
 2. **Directory structure** - Validates expected directories are present
 3. **Markdown linting** - Runs markdownlint to check formatting
-4. **Duplicate content** - Detects duplicate headings in main files
+4. **Duplicate content** - Detects duplicate headings and duplicate file content across repository
 5. **Broken links** - Identifies broken internal links in documentation
+6. **Small/stub files** - Detects files that are too small or lack sufficient content
+7. **File organization** - Validates that design documents are properly organized and all directories have README files
 
 **Exit codes:**
 
@@ -54,10 +56,16 @@ Documentation Quality Check
 ✓ All markdown files pass linting
 
 4. Checking for duplicate content...
-✓ No duplicate headings found in main files
+✓ No duplicate headings or file content found
 
 5. Checking for broken internal links...
 ✓ No broken internal links found
+
+6. Checking for small or stub files...
+✓ No small or stub files detected
+
+7. Checking file organization...
+✓ File organization looks good
 
 =========================================
 Summary

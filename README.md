@@ -109,8 +109,10 @@ This script validates:
 
 - Required files and directory structure
 - Markdown formatting and linting
-- Duplicate content detection
+- Duplicate content detection (headings and full file comparison)
 - Broken internal links
+- Small or stub files that need more content
+- File organization and proper README placement
 
 See [scripts/README.md](scripts/README.md) for more information.
 
