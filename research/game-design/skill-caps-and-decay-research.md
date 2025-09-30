@@ -24,6 +24,8 @@ caps unnecessary.
 - Decay floors prevent complete skill loss while allowing for rustiness
 - Additional global caps beyond category limits are likely redundant
 - Alternative hard cap systems with minimum competence thresholds offer different trade-offs
+- Hierarchical skill trees (category → group → specific) enable granular specialization while reducing
+  micromanagement through shared group points
 
 **Recommendations:**
 - Focus on tuning existing decay rates rather than adding new cap systems
@@ -32,6 +34,8 @@ caps unnecessary.
 - Balance decay severity with player enjoyment and accessibility
 - Consider hard cap alternative: 2 master skills, 500 flexible points, minimum competence (15) for all trained
   skills with higher failure rates
+- Use hierarchical skill trees with shared group points for material-based skills (e.g., gathering/metal/iron)
+- Implement material familiarity bonuses on top of group skills for realistic progression
 
 ## Table of Contents
 
@@ -388,6 +392,247 @@ Total: 850 points = all allocation used
 - Decay primarily affects skills above maintenance threshold
 - Minimum competence (15) acts as automatic decay floor for trained skills
 - Players maintain basic capability in all attempted skills permanently
+
+### Hierarchical Skill Tree Structures
+
+Modern skill systems often implement **hierarchical skill trees** with multiple levels of granularity, allowing for
+both broad competence and specialized expertise within domains.
+
+**Hierarchical Structure Pattern:**
+```
+Skill Tree (Category) → Skill Group/Material Group → Specific Skill/Material/Item
+
+Examples:
+Combat → One-Hand → Axe
+Combat → One-Hand → Dagger
+Combat → One-Hand → Sword
+Combat → Two-Hand → Greatsword
+Combat → Ranged → Bow
+
+Gathering → Metal → Iron
+Gathering → Metal → Copper
+Gathering → Metal → Gold
+Gathering → Herbs → Chamomile
+Gathering → Herbs → Lavender
+Gathering → Mushrooms → Pholiota Squarrosa
+Gathering → Mushrooms → Chanterelle
+
+Crafting → Woodworking → Building → House
+Crafting → Woodworking → Building → Fence
+Crafting → Woodworking → Furniture → Chair
+Crafting → Blacksmithing → Weapons → Sword
+Crafting → Blacksmithing → Armor → Breastplate
+```
+
+**Skill Point Allocation in Hierarchical Systems:**
+
+**Method 1: Aggregate Points (Total Category)**
+```
+Total points in category = sum of all sub-skills
+Example:
+- Combat Category: 200 points total
+  - One-Hand Group: 120 points
+    - Axe: 40 points
+    - Dagger: 30 points
+    - Sword: 50 points
+  - Two-Hand Group: 50 points
+    - Greatsword: 50 points
+  - Ranged Group: 30 points
+    - Bow: 30 points
+```
+
+**Method 2: Shared Group Points (Efficiency Bonus)**
+```
+Group level provides base competence, specific skills add bonuses
+Example:
+- One-Hand Weapons: 60 points (applies to all one-hand weapons)
+  - Axe Specialization: +25 points (total 85 for axes)
+  - Sword Specialization: +40 points (total 100 for swords)
+  - Dagger: 60 (no specialization, uses group level only)
+
+Benefits:
+- Encourages exploration within groups
+- Specialization still rewarded
+- Reduces point inflation
+- More intuitive progression
+```
+
+**Method 3: Independent Tracks (Maximum Granularity)**
+```
+Each specific skill tracked separately, no aggregation
+Example:
+- Iron Mining: 75 points
+- Copper Mining: 45 points
+- Gold Mining: 30 points
+- Chamomile Gathering: 60 points
+- Lavender Gathering: 40 points
+
+Considerations:
+- Highest detail and control
+- Can lead to many skills to manage
+- Best for material-focused games
+- Works well with minimum competence (15) system
+```
+
+**Application to BlueMarble Geological Skills:**
+
+**Hierarchical Geological Skill Tree:**
+```
+Geological Sciences (Category)
+├── Petrology (Skill Group)
+│   ├── Igneous Rock Analysis (Specific)
+│   ├── Sedimentary Rock Analysis (Specific)
+│   └── Metamorphic Rock Analysis (Specific)
+├── Mineralogy (Skill Group)
+│   ├── Silicate Identification (Specific)
+│   ├── Carbonate Identification (Specific)
+│   └── Ore Mineral Identification (Specific)
+└── Structural Geology (Skill Group)
+    ├── Fault Analysis (Specific)
+    ├── Fold Analysis (Specific)
+    └── Stratigraphic Analysis (Specific)
+
+Extraction Skills (Category)
+├── Mining (Skill Group)
+│   ├── Metal Ore Mining (Specific)
+│   │   ├── Iron Ore: individual material skill
+│   │   ├── Copper Ore: individual material skill
+│   │   └── Gold Ore: individual material skill
+│   ├── Gemstone Mining (Specific)
+│   └── Coal Mining (Specific)
+├── Surveying (Skill Group)
+│   ├── Surface Surveying (Specific)
+│   ├── Subsurface Surveying (Specific)
+│   └── Geophysical Surveying (Specific)
+└── Prospecting (Skill Group)
+    ├── Visual Prospecting (Specific)
+    ├── Sample Analysis (Specific)
+    └── Deposit Estimation (Specific)
+
+Crafting (Category)
+├── Woodworking (Skill Group)
+│   ├── Building (Specific)
+│   │   ├── House: individual item skill
+│   │   ├── Fence: individual item skill
+│   │   └── Bridge: individual item skill
+│   └── Furniture (Specific)
+│       ├── Chair: individual item skill
+│       └── Table: individual item skill
+└── Metalworking (Skill Group)
+    ├── Tool Crafting (Specific)
+    └── Structural Components (Specific)
+```
+
+**Point Distribution in Hierarchical System:**
+
+**Option A: Shared Group Points (Recommended)**
+```
+Player invests 80 points in "Mining" group:
+- Can mine any ore at 80 skill level
+- Additional 20 points in "Iron Ore" specialization
+- Iron Ore effective skill: 100 (Master)
+- Copper Ore effective skill: 80 (Expert from group)
+- Gold Ore effective skill: 80 (Expert from group)
+
+Advantages:
+- Encourages trying different materials within group
+- Specialization still meaningful
+- Reduces micromanagement
+- Natural learning curve (general → specific)
+```
+
+**Option B: Material Familiarity (Hybrid)**
+```
+Mining skill: 80 points (general technique)
+Material Familiarity (separate track):
+- Iron Ore: 100 uses (familiar: +10 bonus) = effective 90
+- Copper Ore: 20 uses (learning: +2 bonus) = effective 82
+- Gold Ore: 5 uses (novice: +0 bonus) = effective 80
+
+Total effective skills:
+- Iron: 90 (specialized through practice)
+- Copper: 82 (some experience)
+- Gold: 80 (baseline from Mining skill)
+
+Advantages:
+- Realistic learning model
+- Practice matters beyond points
+- Encourages diverse experience
+- Compatible with existing systems
+```
+
+**Integration with Hard Cap System:**
+
+With 925 total points and hierarchical skills:
+
+**Scenario 1: Deep Specialization**
+```
+Mining Group: 100 points (master general mining)
+├── Iron Ore Specialization: +20 → Iron at 120 (capped at 100, so 100)
+├── Copper Ore: 100 (from group)
+└── Gold Ore: 100 (from group)
+
+Petrology Group: 100 points (master rock analysis)
+├── Igneous Analysis: 100 (from group)
+├── Sedimentary Analysis: 100 (from group)  
+└── Metamorphic Analysis: 100 (from group)
+
+Other skills: Distributed among remaining ~725 points
+
+Benefits:
+- Master level in all materials within mastered groups
+- High efficiency across entire group
+- Natural expertise spread within domain
+```
+
+**Scenario 2: Selective Specialization**
+```
+Mining Group: 50 points (proficient general mining)
+├── Iron Ore Specialization: +50 → Iron at 100 (Master)
+├── Copper Ore: 50 (Proficient from group)
+└── Gold Ore: 50 (Proficient from group)
+
+Petrology Group: 50 points (proficient analysis)
+├── Igneous Specialization: +50 → Igneous at 100 (Master)
+├── Sedimentary: 50 (Proficient from group)
+└── Metamorphic: 50 (Proficient from group)
+
+Benefits:
+- Two true masteries (Iron, Igneous)
+- Proficient in related materials
+- More points for breadth in other categories
+```
+
+**Decay Considerations for Hierarchical Skills:**
+
+**Group-Level Decay:**
+- Group skill decays like any other skill
+- Specific specializations decay independently
+- Using any material in group slows group decay
+- Specialization bonuses decay faster (specific practice needed)
+
+**Example:**
+```
+Player has Mining: 80, Iron Specialization: +20
+After 3 months without mining:
+- Mining group decays: 80 → 70 (general skill rusty)
+- Iron specialization decays: +20 → +10 (specific practice lost)
+- Iron effective: 80 (still proficient, lost master edge)
+- Other ores: 70 (baseline from group decay)
+
+To recover:
+- Mine any ore: restores Mining group skill
+- Mine specifically iron: restores Iron specialization bonus
+```
+
+**Design Recommendations for Hierarchical Systems:**
+
+1. **Use Shared Group Points** for categories with many similar items (ores, herbs, wood types)
+2. **Use Independent Skills** for distinctly different techniques (different weapon types, different crafts)
+3. **Implement Material Familiarity** as bonus system on top of group skills for realistic progression
+4. **Cap Specialization Bonuses** to avoid exponential growth (e.g., +25 max bonus)
+5. **Show Clear Hierarchies** in UI so players understand point allocation
+6. **Allow Group Practice** to maintain baseline competence across all group members
 
 ### Focus on Tuning, Not New Restrictions
 
