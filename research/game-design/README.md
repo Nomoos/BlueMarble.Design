@@ -145,6 +145,37 @@ woodworking).
 - Specialization unlocks at Level 25 for focused expertise
 - Complete crafting interface designs with visual feedback
 
+### [Mortal Online 2 Material System Analysis](mortal-online-2-material-system-research.md)
+Comprehensive analysis of Mortal Online 2's material grading and crafting systems for BlueMarble's material quality mechanics.
+
+**Key Topics**:
+- Multi-dimensional material system with 6+ properties per material (durability, weight, density, hardness, flexibility)
+- Property-based quality vs simple grade tiers (continuous spectrum rather than Common/Rare/Epic)
+- Player-driven quality through material selection and skill application
+- Geographic material specialization creating natural trade networks
+- Knowledge-based discovery through experimentation and alloy creation
+- Economic integration with player-driven markets and reputation systems
+- Skill progression impact on material efficiency and success rates
+- Full transparency: all material stats visible before crafting
+
+**Research Findings**:
+- MO2 uses continuous property scales instead of discrete quality tiers
+- Materials have meaningful trade-offs (weight vs durability, cost vs performance)
+- Quality emerges from player decisions, not RNG
+- Geographic distribution creates territorial value and trade opportunities
+- Skill affects material waste, success rates, and final item properties
+- Master crafters achieve 95%+ material efficiency and 2-5% masterwork chance
+- Full loot PvP creates conservative material usage behavior
+
+**BlueMarble Applicability**:
+- Perfect alignment with geological realism (mineral properties map to game stats)
+- Multi-property system matches geological material characteristics
+- Geographic specialization fits geological formation distribution
+- Player knowledge progression supports educational goals
+- Economic depth through material-driven trade networks
+- Adaptations needed: avoid full loot, progressive complexity, better UI/UX
+- Recommended: multi-property materials, geographic specialization, experimentation mechanics
+
 ### [Life is Feudal Material System Research](life-is-feudal-material-system-research.md)
 Comprehensive analysis of Life is Feudal's material quality and crafting systems with lessons for BlueMarble's geological material processing.
 
@@ -222,6 +253,7 @@ mechanics. This research is particularly relevant to BlueMarble due to Novus Inc
 - Comprehensive system diagrams illustrating material flow
 - Detailed recommendations for BlueMarble adoption
 - Implementation considerations with code examples
+
 
 ## Research Philosophy
 
