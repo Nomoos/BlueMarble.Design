@@ -137,6 +137,13 @@ Link liberally between related documents. Each major directory has an `index.md`
 
 ## Key Documentation
 
+### Technical Foundation
+- **[Technical Foundation Overview](./docs/TECHNICAL_FOUNDATION.md)** - Comprehensive core system architecture documentation
+- **[System Architecture Design](./docs/systems/system-architecture-design.md)** - Service-oriented architecture
+- **[Database Schema Design](./docs/systems/database-schema-design.md)** - Hybrid database architecture
+- **[API Specifications](./docs/systems/api-specifications.md)** - RESTful API design and protocols
+- **[Security Framework Design](./docs/systems/security-framework-design.md)** - Security model and compliance
+
 ### Core Design Documents
 - **[Game Design Document](./docs/core/game-design-document.md)** - Complete game vision and design
 - **[Technical Design Document](./docs/core/technical-design-document.md)** - Technical architecture and requirements
