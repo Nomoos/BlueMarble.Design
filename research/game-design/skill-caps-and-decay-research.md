@@ -23,12 +23,15 @@ caps unnecessary.
 - Combined systems prevent "master-of-all-trades" without feeling overly restrictive
 - Decay floors prevent complete skill loss while allowing for rustiness
 - Additional global caps beyond category limits are likely redundant
+- Alternative hard cap systems with minimum competence thresholds offer different trade-offs
 
 **Recommendations:**
 - Focus on tuning existing decay rates rather than adding new cap systems
 - Implement grace periods or slower decay for high-level skills
 - Set decay floors to maintain baseline competence
 - Balance decay severity with player enjoyment and accessibility
+- Consider hard cap alternative: 2 master skills, 500 flexible points, minimum competence (15) for all trained
+  skills with higher failure rates
 
 ## Table of Contents
 
@@ -291,6 +294,101 @@ The combination of existing mechanics functions as a **self-balancing ecosystem*
 - Solving a problem already addressed
 - Adding complexity without proportional benefit
 
+### Alternative Approach: Hard Cap with Minimum Competence
+
+While the previous recommendation suggests avoiding additional caps, an alternative design pattern exists that
+uses a **total skill point cap** combined with **minimum competence thresholds**:
+
+**System Design:**
+```
+Total Skill Points Available at Max Level:
+- All skills at minimum (15 each): e.g., 10 skills × 15 = 150 points
+- Maximum 2 skills at maximum (100 each): 200 points
+- Extra points for distribution: 500 points
+- Total Available: 850 points
+
+Point Distribution Example:
+- 2 Master Skills (100 each): 200 points
+- 3 Expert Skills (75 each): 225 points
+- 5 Proficient Skills (50 each): 250 points
+- 5 Basic Skills (15 each): 75 points
+- Remaining skills: unused (0 points)
+Total: 750 points used, 100 points flexible
+```
+
+**Key Mechanics:**
+
+**Minimum Competence Thresholds:**
+- **Skill Level 15:** Minimum to attempt task, high failure rate (60-70%)
+- **Skill Level 25:** Basic competence, moderate failure rate (40-50%)
+- **Skill Level 50:** Proficient, low failure rate (15-25%)
+- **Skill Level 75:** Expert, very low failure rate (5-10%)
+- **Skill Level 100:** Master, minimal failure rate (1-2%)
+
+**Skill Decay to Minimums:**
+- Skills decay toward their maintained minimum level
+- If a skill has been trained to 15+, it decays to 15 (not to 0)
+- Players maintain permanent capability at minimum competence
+- Skills above maintenance threshold decay faster
+
+**Build Archetype Examples:**
+
+**Specialist Build (Deep Expertise):**
+```
+Mining: 100 (Master)
+Geology: 100 (Master)
+Surveying: 75 (Expert)
+Processing: 50 (Proficient)
+Construction: 25 (Basic)
+All other skills: 15 (Minimal) if trained, 0 if never used
+Total: ~530 points + 15 per additional trained skill
+```
+
+**Generalist Build (Broad Capability):**
+```
+8 skills at 75 (Expert): 600 points
+5 skills at 50 (Proficient): 250 points
+All skills accessible at minimum (15) after any training
+Total: 850 points = all allocation used
+```
+
+**Advantages of This System:**
+
+1. **Clear Specialization Pressure:** Hard cap forces meaningful choices
+2. **Minimum Competence Safety Net:** Can attempt any trained task, just with higher failure
+3. **Flexible Build Diversity:** Supports both specialists and generalists
+4. **Predictable Progression:** Players can plan builds knowing total points available
+5. **Failure as Gameplay:** Minimum skill attempts create tension and challenge
+
+**Disadvantages:**
+
+1. **More Restrictive:** Less freedom than pure decay-based systems
+2. **Requires Careful Balancing:** Point costs must be tuned precisely
+3. **May Discourage Experimentation:** Fear of "wasting" points on wrong skills
+4. **Build Lock-in:** Harder to change specialization mid-game
+
+**Design Considerations:**
+
+**Skill Reset Mechanics:**
+- Allow periodic skill reallocation (e.g., once per level bracket)
+- Decay naturally reallocates points by reducing unused skills
+- Consider skill "respec" items or services
+
+**Minimum Failure Rates:**
+- Ensure minimum-skill attempts are viable but risky
+- Create interesting gameplay through skill checks
+- Reward specialization without hard-blocking generalists
+
+**Point Economy Tuning:**
+- Balance total points to allow 2 masters + meaningful breadth
+- Ensure marginal points in many skills vs. deep specialization both viable
+- Consider diminishing returns at high skill levels (80-100 costs more)
+
+**Integration with Decay:**
+- Decay primarily affects skills above maintenance threshold
+- Minimum competence (15) acts as automatic decay floor for trained skills
+- Players maintain basic capability in all attempted skills permanently
+
 ### Focus on Tuning, Not New Restrictions
 
 Instead of adding new cap systems, optimize existing mechanics:
@@ -464,6 +562,111 @@ Geological Knowledge: "Sedimentary Rock Formation"
 - Maintains trading and collaboration at peak
 - Geological knowledge without peak skills
 - Low maintenance (social skills decay slowly)
+
+### Applying Hard Cap Approach to BlueMarble
+
+If BlueMarble adopts the **hard cap with minimum competence** system, the implementation would be:
+
+**Total Skill Budget at Max Level:**
+```
+Geological Skill Categories (assume 15 total skills across 5 categories):
+- Minimum competence (15 each): 15 × 15 = 225 points (all skills accessible)
+- Maximum 2 skills at mastery (100 each): 200 points
+- Flexible distribution pool: 500 points
+- Total skill points available: 925 points
+
+Point Distribution Strategy:
+- 2 Master skills: 200 points
+- 4 Expert skills (75 each): 300 points  
+- 6 Proficient skills (50 each): 300 points
+- 3 Basic skills (25 each): 75 points
+- Total allocation: 875 points
+```
+
+**BlueMarble-Specific Skill Point Costs:**
+```
+Geological Sciences (3 skills):
+- Petrology: 0-100 points
+- Mineralogy: 0-100 points
+- Structural Geology: 0-100 points
+
+Extraction Skills (3 skills):
+- Mining: 0-100 points
+- Surveying: 0-100 points
+- Prospecting: 0-100 points
+
+Processing Skills (3 skills):
+- Ore Refining: 0-100 points
+- Material Analysis: 0-100 points
+- Quality Assessment: 0-100 points
+
+Construction Skills (3 skills):
+- Geological Engineering: 0-100 points
+- Mining Engineering: 0-100 points
+- Infrastructure Development: 0-100 points
+
+Social Skills (3 skills):
+- Trading: 0-100 points
+- Teaching: 0-100 points
+- Collaboration: 0-100 points
+```
+
+**Minimum Competence Thresholds for Geological Tasks:**
+
+**Mining at Different Skill Levels:**
+- **15 (Minimum):** Can mine, 65% chance of breakage, 30% resource loss, slow speed
+- **25 (Basic):** Improved technique, 45% breakage, 20% loss, moderate speed
+- **50 (Proficient):** Competent mining, 20% breakage, 10% loss, good speed
+- **75 (Expert):** Skilled mining, 8% breakage, 3% loss, fast speed
+- **100 (Master):** Perfect technique, 1% breakage, 0% loss, maximum speed
+
+**Geological Identification at Different Skill Levels:**
+- **15 (Minimum):** Identify rock type category (sedimentary/igneous/metamorphic), 50% wrong subcategory
+- **25 (Basic):** Identify common formations, 30% error on specific types
+- **50 (Proficient):** Accurate identification of standard formations, 10% error on rare types
+- **75 (Expert):** Expert identification, 3% error only on exotic formations
+- **100 (Master):** Perfect identification, instant recognition, no errors
+
+**Example Build: Specialized Geologist-Miner**
+```
+Mastery (100 points each):
+- Petrology: 100 (Master geological analysis)
+- Mining: 100 (Master extraction)
+
+Expert (75 points each):
+- Mineralogy: 75 (Expert identification)
+- Surveying: 75 (Expert site analysis)
+- Structural Geology: 75 (Expert formation understanding)
+
+Proficient (50 points each):
+- Mining Engineering: 50 (Proficient construction)
+- Ore Refining: 50 (Proficient processing)
+
+Basic Competence (15-25 points each):
+- All remaining skills at 15-25 (can attempt, higher failure)
+
+Total: ~725 points, 200 points for flexibility
+```
+
+**Gameplay Implications:**
+
+**Risk vs. Reward:**
+- Players can attempt any trained skill at minimum level
+- Higher failure rates create tension and resource costs
+- Specialization reduces waste and increases efficiency
+- Generalists more versatile but less efficient
+
+**Economic Impact:**
+- Master craftsmen produce higher quality with less waste
+- Minimum-skill attempts create demand for specialists
+- Failed attempts create scarcity and value
+- Trade economy benefits from specialization
+
+**Team Dynamics:**
+- Specialists highly valued for critical tasks
+- Generalists useful for support and flexibility
+- Knowledge sharing enables team capability growth
+- Collaborative projects leverage diverse expertise
 
 ### Balancing for Geological Context
 
