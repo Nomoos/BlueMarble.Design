@@ -50,6 +50,42 @@ Analysis of skill caps, experience-based progression, and skill decay mechanics 
 - Integration with BlueMarble's geological progression
 - Recommendations against additional global caps
 
+
+### [Mortal Online 2 Material System Research](mortal-online-2-material-system-research.md)
+Comprehensive analysis of Mortal Online 2's material grading and crafting quality systems with applications for BlueMarble.
+
+**Key Topics**:
+- Material quality mechanics and grading systems (0-100% quality scale)
+- Multi-stage quality pipeline: extraction → processing → crafting
+- Open-ended crafting with flexible material combinations
+- Player agency through material selection and experimentation
+- Knowledge discovery systems and information economy
+- Player-driven economy based on material quality stratification
+- Integration with BlueMarble's geological simulation for scientific authenticity
+- Implementation recommendations with code examples and balancing considerations
+
+### [Vintage Story Material System Research](vintage-story-material-system-research.md)
+Comprehensive analysis of Vintage Story's material grading, quality mechanics, and crafting progression systems.
+
+**Key Topics**:
+- Material quality variance by geological formation and deposit type
+- Tool quality impact on gathering, crafting, and durability
+- Technology-gated progression (Stone → Copper → Bronze → Iron → Steel)
+- Knowledge discovery through handbook system and experimentation
+- Organic specialization without class restrictions
+- Quality calculation model with multiplicative factors
+- Comparison with traditional MMORPG material systems
+- Seven detailed recommendations for BlueMarble integration
+
+**Research Highlights**:
+- Percentage-based quality (1-100%) more realistic than discrete tiers
+- Geological source directly affects material quality and properties
+- Tool quality affects preservation rate, efficiency, and final output
+- Technology tiers provide clear milestones over 100+ hours of gameplay
+- Player engagement driven by mystery, environmental challenge, and mastery
+- Emergent specialization creates organic player roles (Prospector, Smith, Farmer, Trader)
+- Implementation phases spanning 25-30 weeks with clear deliverables
+
 ### [Implementation Plan](implementation-plan.md)
 Phased development roadmap spanning 16-20 months with clear deliverables and risk mitigation.
 
@@ -116,6 +152,31 @@ collaborative crafting, and sustainability mechanics adaptable for BlueMarble.
 - Renewable vs. non-renewable resource distinction with ecological rules
 - Sustainability recommendations for BlueMarble integration with geological simulation
 - Implementation roadmap for environmental mechanics (9-14 months estimated)
+
+### [Novus Inceptio Material System Research](novus-inceptio-material-system-research.md)
+Deep analysis of Novus Inceptio's material and quality system, focusing on geological integration with crafting 
+mechanics. This research is particularly relevant to BlueMarble due to Novus Inceptio's geological simulation focus.
+
+**Key Topics**:
+- Geological formation directly determines material quality
+- Knowledge-based resource discovery and identification
+- Use-based skill progression with material-specific familiarity
+- Technology-gated access to advanced materials and tools
+- Multi-stage production chains (ore → ingot → item)
+- Material property inheritance through crafting
+- Quality preservation calculations across processing stages
+
+**Research Highlights**:
+- Most directly applicable reference game for BlueMarble's design goals
+- Material categories: Ores/Metals, Stone/Construction, Soil/Sediment
+- Quality grades: Poor (1-35%), Standard (36-65%), Premium (66-85%), Exceptional (86-100%)
+- Extraction mechanics based on geological context (depth, formation quality, weathering)
+- Knowledge progression tree for geological understanding
+- Emergent specialization without forced classes
+- Comprehensive system diagrams illustrating material flow
+- Detailed recommendations for BlueMarble adoption
+- Implementation considerations with code examples
+
 
 ## Research Philosophy
 
