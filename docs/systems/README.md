@@ -8,6 +8,10 @@ guidelines for BlueMarble.
 ### Core Systems Architecture
 - **[System Architecture Design](system-architecture-design.md)** - Comprehensive system architecture covering scalability, reliability, and maintainability
 
+- **[Database Schema Design](database-schema-design.md)** - Comprehensive database schema for core gameplay and spatial data
+- Client-server architecture
+- API specifications and protocols
+
 - **[API Specifications and Protocols](api-specifications.md)** - General API standards, authentication,
   and integration patterns
 
