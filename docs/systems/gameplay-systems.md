@@ -216,6 +216,9 @@ This document details the core gameplay systems that drive player engagement and
 
 ### Crafting System
 
+> **Detailed Mechanics:** See [Crafting Mechanics Documentation](../gameplay/mechanics/crafting-mechanics-overview.md)
+> for formal mathematical models, success rates, and quality calculations.
+
 #### Crafting Professions
 - **Blacksmithing:** Create weapons and armor
 - **Alchemy:** Brew potions and magical items
