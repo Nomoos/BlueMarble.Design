@@ -50,6 +50,19 @@ Analysis of skill caps, experience-based progression, and skill decay mechanics 
 - Integration with BlueMarble's geological progression
 - Recommendations against additional global caps
 
+### [Mortal Online 2 Material System Research](mortal-online-2-material-system-research.md)
+Comprehensive analysis of Mortal Online 2's material grading and crafting quality systems with applications for BlueMarble.
+
+**Key Topics**:
+- Material quality mechanics and grading systems (0-100% quality scale)
+- Multi-stage quality pipeline: extraction → processing → crafting
+- Open-ended crafting with flexible material combinations
+- Player agency through material selection and experimentation
+- Knowledge discovery systems and information economy
+- Player-driven economy based on material quality stratification
+- Integration with BlueMarble's geological simulation for scientific authenticity
+- Implementation recommendations with code examples and balancing considerations
+
 ### [Implementation Plan](implementation-plan.md)
 Phased development roadmap spanning 16-20 months with clear deliverables and risk mitigation.
 
