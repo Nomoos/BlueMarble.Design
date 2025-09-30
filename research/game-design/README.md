@@ -50,6 +50,20 @@ Analysis of skill caps, experience-based progression, and skill decay mechanics 
 - Integration with BlueMarble's geological progression
 - Recommendations against additional global caps
 
+
+### [Mortal Online 2 Material System Research](mortal-online-2-material-system-research.md)
+Comprehensive analysis of Mortal Online 2's material grading and crafting quality systems with applications for BlueMarble.
+
+**Key Topics**:
+- Material quality mechanics and grading systems (0-100% quality scale)
+- Multi-stage quality pipeline: extraction → processing → crafting
+- Open-ended crafting with flexible material combinations
+- Player agency through material selection and experimentation
+- Knowledge discovery systems and information economy
+- Player-driven economy based on material quality stratification
+- Integration with BlueMarble's geological simulation for scientific authenticity
+- Implementation recommendations with code examples and balancing considerations
+
 ### [Vintage Story Material System Research](vintage-story-material-system-research.md)
 Comprehensive analysis of Vintage Story's material grading, quality mechanics, and crafting progression systems.
 
@@ -145,6 +159,30 @@ Comprehensive analysis of Life is Feudal's material quality and crafting systems
 - Economic complexity through quality variations
 - Specialization mechanics that encourage player cooperation
 - Long-term engagement through mastery systems
+
+### [Eco Global Survival Material System Research](eco-global-survival-material-system-research.md)
+Market research analyzing Eco Global Survival's material and quality systems, with focus on environmental impact, 
+collaborative crafting, and sustainability mechanics adaptable for BlueMarble.
+
+**Key Topics**:
+- Environmental impact mechanics (pollution, ecosystem simulation, climate effects)
+- Collaborative specialization and forced economic interdependence
+- Technology-based quality progression (Basic/Advanced/Modern/Future tiers)
+- Resource gathering with ecological consequences (extinction, depletion, habitat loss)
+- Government systems and player-created regulations
+- Sustainability incentives and remediation technology
+- Comparative analysis with MMORPG standards
+
+**Research Highlights**:
+- Environmental cost as core constraint: pollution tracking, resource depletion, ecosystem damage
+- Mandatory collaboration through skill point caps and profession complexity
+- Real-time ecosystem simulation where over-harvesting causes permanent species extinction
+- Technology tree requiring collaborative research and resource investment
+- Calorie economy and housing requirements driving meaningful resource consumption
+- Renewable vs. non-renewable resource distinction with ecological rules
+- Sustainability recommendations for BlueMarble integration with geological simulation
+- Implementation roadmap for environmental mechanics (9-14 months estimated)
+
 
 ### [Novus Inceptio Material System Research](novus-inceptio-material-system-research.md)
 Deep analysis of Novus Inceptio's material and quality system, focusing on geological integration with crafting 
