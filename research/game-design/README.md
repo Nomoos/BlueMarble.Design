@@ -130,6 +130,29 @@ woodworking).
 - Specialization unlocks at Level 25 for focused expertise
 - Complete crafting interface designs with visual feedback
 
+### [Eco Global Survival Material System Research](eco-global-survival-material-system-research.md)
+Market research analyzing Eco Global Survival's material and quality systems, with focus on environmental impact, 
+collaborative crafting, and sustainability mechanics adaptable for BlueMarble.
+
+**Key Topics**:
+- Environmental impact mechanics (pollution, ecosystem simulation, climate effects)
+- Collaborative specialization and forced economic interdependence
+- Technology-based quality progression (Basic/Advanced/Modern/Future tiers)
+- Resource gathering with ecological consequences (extinction, depletion, habitat loss)
+- Government systems and player-created regulations
+- Sustainability incentives and remediation technology
+- Comparative analysis with MMORPG standards
+
+**Research Highlights**:
+- Environmental cost as core constraint: pollution tracking, resource depletion, ecosystem damage
+- Mandatory collaboration through skill point caps and profession complexity
+- Real-time ecosystem simulation where over-harvesting causes permanent species extinction
+- Technology tree requiring collaborative research and resource investment
+- Calorie economy and housing requirements driving meaningful resource consumption
+- Renewable vs. non-renewable resource distinction with ecological rules
+- Sustainability recommendations for BlueMarble integration with geological simulation
+- Implementation roadmap for environmental mechanics (9-14 months estimated)
+
 ### [Novus Inceptio Material System Research](novus-inceptio-material-system-research.md)
 Deep analysis of Novus Inceptio's material and quality system, focusing on geological integration with crafting 
 mechanics. This research is particularly relevant to BlueMarble due to Novus Inceptio's geological simulation focus.
@@ -153,6 +176,7 @@ mechanics. This research is particularly relevant to BlueMarble due to Novus Inc
 - Comprehensive system diagrams illustrating material flow
 - Detailed recommendations for BlueMarble adoption
 - Implementation considerations with code examples
+
 
 ## Research Philosophy
 
