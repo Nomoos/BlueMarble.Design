@@ -145,7 +145,7 @@ for f in md_files:
         with open(f, 'rb') as file:
             content = file.read()
             if len(content) > 0:
-                content_hash = hashlib.md5(content).hexdigest()
+                content_hash = hashlib.sha256(content).hexdigest()
                 if content_hash not in file_hashes:
                     file_hashes[content_hash] = []
                 file_hashes[content_hash].append(f)
