@@ -201,4 +201,3 @@ When should we revisit this decision?
 - [Research](../research/topics/related-research.md)
 - [Experiment Report](experiment-report-YYYY-MM-DD.md)
 - [Previous ADR](decision-record-previous.md)
-- [Issue Link](#issue-number)

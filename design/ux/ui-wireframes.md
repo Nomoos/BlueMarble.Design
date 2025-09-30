@@ -36,10 +36,10 @@ This document contains UI wireframes, mockups, and flow diagrams for BlueMarble 
 
 **Layout**:
 
-```
+```text
 [Health]              [Mini-Map]
-[Resources]           
-                      
+[Resources]
+
 [Abilities]           [Objectives]
 ```
 
@@ -55,7 +55,7 @@ This document contains UI wireframes, mockups, and flow diagrams for BlueMarble 
 
 **Layout**:
 
-```
+```text
 +------------------+------------------+
 |  Character       |   Inventory      |
 |  Equipment       |   Grid           |

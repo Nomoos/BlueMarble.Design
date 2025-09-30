@@ -1,6 +1,7 @@
 # Research Topics
 
-This directory contains small, focused research notes on specific topics. Each file should be self-contained and cover one research question or area.
+This directory contains small, focused research notes on specific topics. Each file should be
+self-contained and cover one research question or area.
 
 ## Guidelines
 

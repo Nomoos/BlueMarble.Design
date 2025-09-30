@@ -2,14 +2,6 @@
 
 Groomed backlog of research and design tasks for BlueMarble.
 
----
-title: Research & Design Backlog
-date: 2025-09-30
-owner: @Nomoos
-status: draft
-tags: [backlog, tasks, planning]
----
-
 ## Overview
 
 This document maintains a prioritized backlog of research questions, design tasks, and documentation needs.
@@ -28,7 +20,7 @@ This document maintains a prioritized backlog of research questions, design task
   - **Owner**: @username
   - **Related**: Links to docs/issues
 
-### Design Tasks
+### Design Items
 
 - [ ] **Task 1**: Brief description
   - **Estimate**: Days/weeks
@@ -49,7 +41,7 @@ This document maintains a prioritized backlog of research questions, design task
   - **Owner**: @username
   - **Related**: Links to docs/issues
 
-### Design Tasks
+### Design Items
 
 - [ ] **Task 1**: Brief description
   - **Estimate**: Days/weeks
@@ -65,7 +57,7 @@ This document maintains a prioritized backlog of research questions, design task
   - **Owner**: @username
   - **Related**: Links to docs/issues
 
-### Design Tasks
+### Design Items
 
 - [ ] **Task 1**: Brief description
   - **Estimate**: Days/weeks

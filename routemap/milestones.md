@@ -2,14 +2,6 @@
 
 Dated milestones and deliverables for BlueMarble development.
 
----
-title: Project Milestones
-date: 2025-09-30
-owner: @Nomoos
-status: draft
-tags: [milestones, planning, deliverables]
----
-
 ## Overview
 
 This document tracks specific, dated milestones with clear acceptance criteria.

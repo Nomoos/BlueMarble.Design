@@ -24,7 +24,7 @@ High-level phases and objectives. Each phase can be broken down into multiple fi
 
 **Example Phase Structure**:
 
-```
+```text
 Phase 1: Foundation (Q1 2025)
 ├── Core Systems Design
 ├── Initial Research
