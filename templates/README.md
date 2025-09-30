@@ -40,6 +40,14 @@ Template for creating the parent infrastructure & research roadmap issue that tr
 **GitHub Usage:** Main infrastructure roadmap parent issue creation  
 **Related:** Works with research-question-sub-issue.md for sub-issues
 
+#### `core-systems-design-roadmap-issue.md`
+Template for creating the parent core systems design roadmap issue that tracks BlueMarble's core systems
+design across 13 major design areas covering architecture, gameplay, and foundational research.
+
+**Usage:** Parent tracking issue for core systems design initiatives  
+**GitHub Usage:** Main core systems design roadmap parent issue creation  
+**Related:** Works with research-question-sub-issue.md for sub-issues
+
 #### `research-question-sub-issue.md`
 Template for individual research area issues that provide detailed tracking of specific research questions.
 
@@ -100,6 +108,7 @@ For research-related work, use the research issue template system:
 | Research Report | `research-report.md` | `docs/research/` |
 | Main Research Issue | `research-roadmap-main-issue.md` | GitHub Issues |
 | Infrastructure Roadmap | `infrastructure-research-roadmap-issue.md` | GitHub Issues |
+| Core Systems Roadmap | `core-systems-design-roadmap-issue.md` | GitHub Issues |
 | Research Sub-Issue | `research-question-sub-issue.md` | GitHub Issues |
 | Issue Completion | `issue-completion-template.md` | GitHub Issue Comments |
 
