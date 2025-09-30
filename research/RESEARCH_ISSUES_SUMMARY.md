@@ -243,12 +243,56 @@ Each issue addresses specific research questions identified in the spatial data 
   - ✅ How can BlueMarble design for depth, engagement, and extensibility?
   - ✅ How to integrate with geological simulation mechanics?
 
+#### [Research] ✅ COMPLETED: Mortal Online 2 Material System Analysis
+- **Focus**: Comprehensive analysis of MO2's material grading and crafting systems for BlueMarble
+- **Impact**: Informs BlueMarble's material quality mechanics and crafting systems
+- **Research Type**: Market Research
+- **Status**: ✅ **COMPLETED** - Full research report with analysis and recommendations
+- **Implementation**: `research/game-design/mortal-online-2-material-system-research.md`
+- **Key Features**:
+  - Multi-dimensional material system with 6+ properties per material
+  - Property-based quality (durability, weight, density, hardness) vs simple grade tiers
+  - Player-driven quality through material selection and skill application
+  - Geographic material specialization creating natural trade networks
+  - Knowledge-based discovery through experimentation
+  - Economic integration with player-driven markets
+  - Full loot PvP context and impact on material choices
+- **Key Findings**:
+  - MO2 uses continuous property spectrum rather than discrete quality tiers
+  - Materials have meaningful trade-offs (weight vs durability, cost vs performance)
+  - Quality emerges from player decisions, not RNG
+  - Geographic distribution creates territorial value and trade
+  - Skill progression affects material efficiency and success rates
+  - Transparency: All material stats visible before crafting
+- **BlueMarble Applicability**:
+  - Perfect alignment with geological realism (mineral properties)
+  - Multi-property system matches geological material characteristics
+  - Geographic specialization fits geological formation distribution
+  - Player knowledge progression supports educational goals
+  - Economic depth through material-driven trade
+  - Adaptation needed: Avoid full loot to encourage material engagement
+  - Progressive complexity recommended to avoid overwhelming players
+- **Recommendations**:
+  - Adopt multi-property material system (hardness, density, durability, workability)
+  - Implement geographic material specialization based on geological formations
+  - Design progressive complexity layers for different player experience levels
+  - Create experimentation mechanics for material discovery
+  - Use-based skill progression with extended mastery ceiling
+  - Better UI/UX tools for material comparison and selection
+- **Priority**: Low (Research completed, implementation planning needed)
+- **Research Questions Answered**:
+  - ✅ What are the core mechanics of material grading and crafting in Mortal Online 2?
+  - ✅ How does player choice and interaction influence material quality?
+  - ✅ What ideas are applicable to BlueMarble's geological simulation?
+  - ✅ How to balance complexity with accessibility?
+
 ### Related Game Design Research
 
 - [World Parameters](game-design/world-parameters.md) - 3D spherical world technical specifications
 - [Mechanics Research](game-design/mechanics-research.md) - Economic simulation systems inspired by classic games
 - [Player Freedom Analysis](game-design/player-freedom-analysis.md) - Intelligent constraint frameworks
 - [Implementation Plan](game-design/implementation-plan.md) - Phased development roadmap
+- [Mortal Online 2 Material System](game-design/mortal-online-2-material-system-research.md) - Material and quality system analysis
 
 ### Integration with Existing Documentation
 
