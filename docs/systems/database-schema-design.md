@@ -968,10 +968,11 @@ CREATE INDEX idx_character_quests_covering
 ON character_quests(character_id, status) 
 INCLUDE (quest_id, progress, started_at);
 
--- GiST indexes for spatial queries
+-- GiST indexes for spatial queries (3D: x, y, z)
+-- Ensure the 'cube' extension is enabled: CREATE EXTENSION IF NOT EXISTS cube;
 CREATE INDEX idx_character_positions_spatial 
 ON character_positions 
-USING GIST(point(position_x, position_y));
+USING GIST(cube(position_x, position_y, position_z));
 ```
 
 #### Cassandra Indexes
