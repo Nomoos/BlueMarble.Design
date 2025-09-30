@@ -39,6 +39,21 @@ Comprehensive analysis of skill and knowledge progression systems in MMORPGs wit
 - Implementation considerations and technical architecture
 - Phase-based development roadmap aligned with Q4 2025 goals
 
+### [Life is Feudal Material System Analysis](life-is-feudal-material-system-analysis.md)
+In-depth research on Life is Feudal's material quality and crafting systems with specific recommendations for BlueMarble.
+
+**Key Topics**:
+- Material quality system (0-100 scale) and quality inheritance mechanics
+- Use-based skill progression with exponential difficulty curves
+- Skill tier unlocks at 30/60/90/100 providing clear progression milestones
+- Hard skill cap (600 points) forcing specialization and interdependence
+- Parent-child skill relationships creating strategic progression paths
+- Alignment system (research vs industrial) for character identity
+- Economic integration and quality-based market tiers
+- "Pain tolerance" failure reward system reducing grinding frustration
+- Detailed comparison with BlueMarble's current systems
+- Actionable recommendations for implementation
+
 ### [Skill Caps and Decay Research](skill-caps-and-decay-research.md)
 Analysis of skill caps, experience-based progression, and skill decay mechanics in RPG systems.
 
