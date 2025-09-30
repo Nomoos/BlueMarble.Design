@@ -50,6 +50,7 @@ Analysis of skill caps, experience-based progression, and skill decay mechanics 
 - Integration with BlueMarble's geological progression
 - Recommendations against additional global caps
 
+
 ### [Mortal Online 2 Material System Research](mortal-online-2-material-system-research.md)
 Comprehensive analysis of Mortal Online 2's material grading and crafting quality systems with applications for BlueMarble.
 
