@@ -302,7 +302,7 @@ if misplaced_files:
     issues_found = True
 
 if missing_readmes:
-    print(f"⚠ Found {len(missing_readmes)} director(ies) without README.md:")
+    print(f"⚠ Found {len(missing_readmes)} directories without README.md:")
     for d in missing_readmes:
         print(f"    {d}/")
     issues_found = True
