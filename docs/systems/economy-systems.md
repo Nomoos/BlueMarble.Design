@@ -134,6 +134,9 @@ BlueMarble's economy is designed to be player-driven, sustainable, and engaging.
 
 ## Crafting Economy
 
+> **Detailed Mechanics:** See [Crafting Mechanics Documentation](../gameplay/mechanics/crafting-mechanics-overview.md)
+> for formal mathematical models, success rates, and quality calculations.
+
 ### Production Systems
 
 #### Resource Gathering
