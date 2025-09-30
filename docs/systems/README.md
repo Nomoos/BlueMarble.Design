@@ -6,9 +6,11 @@ guidelines for BlueMarble.
 ## Document Categories
 
 ### Core Systems Architecture
+- **[System Architecture Design](system-architecture-design.md)** - Comprehensive system architecture covering scalability, reliability, and maintainability
 
 - **[API Specifications and Protocols](api-specifications.md)** - General API standards, authentication,
   and integration patterns
+
 - Client-server architecture
 - Database design and schemas
 - Security and authentication systems
