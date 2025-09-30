@@ -52,6 +52,7 @@ jobs:
       shell: bash
       run: |
         echo "Checking for broken internal links..."
+        set -e  # Exit on error
         
         # Detect available Python command
         python_cmd="python3"
@@ -65,13 +66,60 @@ jobs:
         fi
         
         echo "Checking links with Python..."
-        $python_cmd -c "import os,re,glob; link_pattern=re.compile(r'\[.*?\]\(([^)]*\.md)\)'); md_files=glob.glob('design/**/*.md',recursive=True)+glob.glob('docs/**/*.md',recursive=True)+glob.glob('*.md'); broken_links=[]; [broken_links.extend([(md_file,match.group(1)) for match in link_pattern.finditer(open(md_file,'r',encoding='utf-8',errors='ignore').read()) if not match.group(1).startswith('http') and not os.path.exists(os.path.normpath(os.path.join(os.path.dirname(md_file),match.group(1).lstrip('./'))))]) for md_file in md_files if os.path.isfile(md_file)]; [print(f'Warning: Broken link in {f}: {l}') for f,l in broken_links]; print('No broken links found') if not broken_links else None"
-        echo "Link validation completed"
+        $python_cmd << 'EOF'
+import os
+import re
+import glob
+
+link_pattern = re.compile(r'\[.*?\]\(([^)]*\.md)\)')
+md_files = glob.glob('design/**/*.md', recursive=True) + \
+           glob.glob('docs/**/*.md', recursive=True) + \
+           glob.glob('*.md')
+
+broken_links = []
+checked_count = 0
+
+for md_file in md_files:
+    if not os.path.isfile(md_file):
+        continue
+    
+    checked_count += 1
+    try:
+        with open(md_file, 'r', encoding='utf-8', errors='ignore') as f:
+            content = f.read()
+            
+        for match in link_pattern.finditer(content):
+            link = match.group(1)
+            
+            # Skip external links
+            if link.startswith('http'):
+                continue
+            
+            # Resolve relative path
+            link_path = os.path.normpath(os.path.join(os.path.dirname(md_file), link.lstrip('./')))
+            
+            if not os.path.exists(link_path):
+                broken_links.append((md_file, link))
+    except Exception as e:
+        print(f'Warning: Could not read {md_file}: {e}')
+
+if broken_links:
+    print(f'\n⚠ Found {len(broken_links)} broken link(s):')
+    for file, link in broken_links[:10]:  # Show first 10
+        print(f'  {file} -> {link}')
+    if len(broken_links) > 10:
+        print(f'  ... and {len(broken_links) - 10} more')
+else:
+    print(f'✓ No broken links found in {checked_count} markdown files')
+EOF
+        
+        echo "✓ Link validation completed"
         
     - name: Validate file naming conventions
       shell: bash
       run: |
         echo "Checking file naming conventions..."
+        set -e  # Exit on error
         
         # Detect available Python command
         python_cmd="python3"
@@ -85,5 +133,48 @@ jobs:
         fi
         
         echo "Checking naming conventions..."
-        $python_cmd -c "import os,glob; files_with_spaces=[os.path.join(root,file) for root,dirs,files in os.walk('.') if '.git' not in root for file in files if ' ' in file]; [print(f'Warning: File with spaces: {f}') for f in files_with_spaces]; md_uppercase=[f for pattern in ['docs/**/*.md','templates/**/*.md','*.md'] for f in glob.glob(pattern,recursive=True) if any(c.isupper() for c in os.path.basename(f))]; [print(f'Info: Consider lowercase: {f}') for f in md_uppercase]; print('✓ File naming conventions look good') if not files_with_spaces and not md_uppercase else None"
-        echo "File naming validation completed"
+        $python_cmd << 'EOF'
+import os
+import glob
+
+# Check for files with spaces in name
+files_with_spaces = []
+for root, dirs, files in os.walk('.'):
+    if '.git' in root:
+        continue
+    for file in files:
+        if ' ' in file:
+            files_with_spaces.append(os.path.join(root, file))
+
+if files_with_spaces:
+    print('⚠ Files with spaces found:')
+    for f in files_with_spaces[:10]:
+        print(f'  {f}')
+    if len(files_with_spaces) > 10:
+        print(f'  ... and {len(files_with_spaces) - 10} more')
+else:
+    print('✓ No files with spaces in names')
+
+# Check for markdown files with uppercase letters
+md_patterns = ['docs/**/*.md', 'templates/**/*.md', '*.md']
+md_uppercase = []
+for pattern in md_patterns:
+    for f in glob.glob(pattern, recursive=True):
+        basename = os.path.basename(f)
+        if any(c.isupper() for c in basename):
+            md_uppercase.append(f)
+
+if md_uppercase:
+    print('\nℹ Markdown files with uppercase letters (consider lowercase):')
+    for f in md_uppercase[:10]:
+        print(f'  {f}')
+    if len(md_uppercase) > 10:
+        print(f'  ... and {len(md_uppercase) - 10} more')
+else:
+    print('✓ All markdown files use lowercase naming')
+
+if not files_with_spaces and not md_uppercase:
+    print('\n✓ File naming conventions look good')
+EOF
+        
+        echo "✓ File naming validation completed"

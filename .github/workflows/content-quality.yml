@@ -43,6 +43,7 @@ jobs:
       shell: bash
       run: |
         echo "Analyzing changed files in this PR..."
+        set -e  # Exit on error
         
         # Detect available Python command
         python_cmd="python3"
@@ -57,21 +58,47 @@ jobs:
         
         # Get list of changed files in a cross-platform way
         if [ "${{ github.event_name }}" = "pull_request" ]; then
-          git diff --name-only origin/${{ github.base_ref }}...HEAD > changed_files.txt
+          git diff --name-only origin/${{ github.base_ref }}...HEAD > changed_files.txt || echo "Warning: Could not get changed files"
         else
-          git diff --name-only HEAD~1 HEAD > changed_files.txt
+          git diff --name-only HEAD~1 HEAD > changed_files.txt || echo "Warning: Could not get changed files"
         fi
         
-        echo "Changed files:"
-        cat changed_files.txt
-        
-        echo "Analyzing files with Python..."
-        $python_cmd -c "import os,re; files=[l.strip() for l in open('changed_files.txt','r') if l.strip()]; md_files=[f for f in files if f.endswith('.md')]; [print(f'Analyzing: {f} ({os.path.getsize(f)} bytes)') if os.path.exists(f) else None for f in md_files]; print(f'Analyzed {len(md_files)} markdown files')"
+        if [ -s changed_files.txt ]; then
+          echo "Changed files:"
+          cat changed_files.txt
+          
+          echo "Analyzing files with Python..."
+          $python_cmd << 'EOF'
+import os
+
+try:
+    with open('changed_files.txt', 'r') as f:
+        files = [l.strip() for l in f if l.strip()]
+except FileNotFoundError:
+    print("No changed files to analyze")
+    exit(0)
+
+md_files = [f for f in files if f.endswith('.md') and os.path.exists(f)]
+if md_files:
+    for f in md_files:
+        try:
+            size = os.path.getsize(f)
+            print(f'Analyzing: {f} ({size} bytes)')
+        except Exception as e:
+            print(f'Warning: Could not analyze {f}: {e}')
+    print(f'✓ Analyzed {len(md_files)} markdown files')
+else:
+    print('No markdown files in changes')
+EOF
+        else
+          echo "No changed files found"
+        fi
         
     - name: Validate YAML files
       shell: bash
       run: |
         echo "Validating YAML files..."
+        set -e  # Exit on error
         
         # Detect available Python command
         python_cmd="python3"
@@ -85,13 +112,55 @@ jobs:
         fi
         
         echo "Checking YAML files with Python..."
-        $python_cmd -c "import os,yaml; files=[l.strip() for l in open('changed_files.txt','r') if l.strip()]; yaml_files=[f for f in files if f.endswith(('.yml','.yaml'))]; [print(f'✓ Valid YAML: {f}') if yaml.safe_load(open(f,'r',encoding='utf-8')) or True else print(f'✗ Invalid: {f}') for f in yaml_files if os.path.exists(f)] if yaml_files else print('No YAML files in changes')"
-        echo "YAML validation completed"
+        $python_cmd << 'EOF'
+import os
+import sys
+
+try:
+    import yaml
+except ImportError:
+    print("Warning: PyYAML not installed, skipping YAML validation")
+    sys.exit(0)
+
+try:
+    with open('changed_files.txt', 'r') as f:
+        files = [l.strip() for l in f if l.strip()]
+except FileNotFoundError:
+    print("No changed files to validate")
+    sys.exit(0)
+
+yaml_files = [f for f in files if f.endswith(('.yml', '.yaml')) and os.path.exists(f)]
+if not yaml_files:
+    print('No YAML files in changes')
+    sys.exit(0)
+
+errors = []
+for f in yaml_files:
+    try:
+        with open(f, 'r', encoding='utf-8') as file:
+            yaml.safe_load(file)
+        print(f'✓ Valid YAML: {f}')
+    except yaml.YAMLError as e:
+        errors.append(f'✗ Invalid YAML in {f}: {e}')
+        print(f'✗ Invalid YAML in {f}: {e}')
+    except Exception as e:
+        errors.append(f'✗ Error reading {f}: {e}')
+        print(f'✗ Error reading {f}: {e}')
+
+if errors:
+    print(f"\n❌ YAML validation failed with {len(errors)} error(s)")
+    sys.exit(1)
+else:
+    print(f"✓ All {len(yaml_files)} YAML files validated successfully")
+EOF
+        
+        echo "✓ YAML validation completed"
         
     - name: Check for sensitive information
       shell: bash
       run: |
         echo "Checking for potential sensitive information..."
+        set -e  # Exit on error
         
         # Detect available Python command
         python_cmd="python3"
@@ -105,5 +174,45 @@ jobs:
         fi
         
         echo "Scanning for sensitive patterns..."
-        $python_cmd -c "import os,re; pattern=re.compile(r'(password|secret|key|token|api[_-]?key)',re.IGNORECASE); found=False; [print(f'Potential sensitive data in: {os.path.join(root,file)}') or True for root,dirs,files in os.walk('.') if '/.git/' not in root.replace(os.sep,'/') for file in files if any(file.endswith(ext) for ext in ['.md','.yml','.yaml','.txt','.json']) for line_num,line in enumerate(open(os.path.join(root,file),'r',encoding='utf-8',errors='ignore'),1) if pattern.search(line) and not (found := True) and line_num <= 3]; print('No sensitive patterns found') if not found else None"
-        echo "Sensitive information check completed"
+        $python_cmd << 'EOF'
+import os
+import re
+
+# Pattern to detect potential sensitive data
+pattern = re.compile(r'(password|secret|key|token|api[_-]?key)', re.IGNORECASE)
+found_sensitive = False
+
+for root, dirs, files in os.walk('.'):
+    # Skip .git directory
+    if '/.git/' in root.replace(os.sep, '/'):
+        continue
+    
+    # Filter out hidden directories from further traversal
+    dirs[:] = [d for d in dirs if not d.startswith('.')]
+    
+    for file in files:
+        # Check only relevant file types
+        if not any(file.endswith(ext) for ext in ['.md', '.yml', '.yaml', '.txt', '.json']):
+            continue
+        
+        filepath = os.path.join(root, file)
+        try:
+            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                for line_num, line in enumerate(f, 1):
+                    # Skip comment lines and example sections
+                    if line.strip().startswith('#') or line.strip().startswith('//'):
+                        continue
+                    
+                    if pattern.search(line):
+                        # Check if it's in a code block or example
+                        if '```' not in line and 'example' not in line.lower():
+                            print(f'⚠ Potential sensitive data in: {filepath}:{line_num}')
+                            found_sensitive = True
+        except Exception as e:
+            print(f'Warning: Could not read {filepath}: {e}')
+
+if not found_sensitive:
+    print('✓ No sensitive patterns found')
+EOF
+        
+        echo "✓ Sensitive information check completed"

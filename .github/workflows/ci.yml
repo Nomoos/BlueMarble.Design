@@ -30,6 +30,7 @@ jobs:
       shell: bash
       run: |
         # Cross-platform markdown file discovery and validation
+        set -e  # Exit on error
         
         # Detect available Python command
         python_cmd="python3"
@@ -45,9 +46,17 @@ jobs:
         echo "Discovering markdown files..."
         $python_cmd -c "import os,glob; md_files=[f for f in glob.glob('**/*.md',recursive=True) if '.git' not in f and 'node_modules' not in f]; print(f'Found {len(md_files)} markdown files'); [print(f'  {f}') for f in md_files[:5]]"
         
-        echo "Attempting to run markdownlint..."
+        echo "Running markdownlint..."
         if command -v markdownlint >/dev/null 2>&1; then
-          markdownlint --config .markdownlint.json **/*.md || echo "Markdownlint found issues (expected for first run)"
+          # Run markdownlint and capture output
+          if markdownlint --config .markdownlint.json **/*.md 2>&1 | tee /tmp/markdownlint-output.txt; then
+            echo "✓ All markdown files passed linting"
+          else
+            echo "⚠ Markdownlint found issues - please review and fix"
+            echo "Run 'markdownlint --config .markdownlint.json **/*.md' locally to see issues"
+            # Don't fail the build, just warn
+            exit 0
+          fi
         else
           echo "markdownlint not found, performing basic validation..."
           $python_cmd -c "import os,glob; md_files=[f for f in glob.glob('**/*.md',recursive=True) if '.git' not in f and 'node_modules' not in f]; [print(f'✓ {f} is readable') if os.path.getsize(f) > 0 else print(f'Warning: {f} is empty') for f in md_files[:5]]"
@@ -57,12 +66,16 @@ jobs:
       shell: bash
       run: |
         echo "Checking repository structure..."
+        set -e  # Exit on error
+        
         # Cross-platform directory and file checking
-        for dir in docs templates; do
+        missing_dirs=""
+        for dir in docs templates design; do
           if [ ! -d "$dir" ]; then
             echo "Warning: $dir directory not found"
+            missing_dirs="${missing_dirs}${dir} "
           else
-            echo "Found directory: $dir"
+            echo "✓ Found directory: $dir"
           fi
         done
         
@@ -70,14 +83,27 @@ jobs:
           echo "Error: README.md not found"
           exit 1
         else
-          echo "Found README.md"
+          echo "✓ Found README.md"
         fi
-        echo "Repository structure validation completed"
+        
+        if [ ! -f "CONTRIBUTING.md" ]; then
+          echo "Warning: CONTRIBUTING.md not found (recommended)"
+        else
+          echo "✓ Found CONTRIBUTING.md"
+        fi
+        
+        if [ -n "$missing_dirs" ]; then
+          echo "Warning: Missing directories: $missing_dirs"
+          echo "These are recommended directories for the repository structure"
+        fi
+        
+        echo "✓ Repository structure validation completed"
         
     - name: Validate issue templates
       shell: bash
       run: |
         echo "Validating issue templates..."
+        set -e  # Exit on error
         
         # Use Python for cross-platform template validation
         python_cmd="python3"
@@ -90,5 +116,48 @@ jobs:
           fi
         fi
         
-        $python_cmd -c "import os,yaml,glob; templates=glob.glob('.github/ISSUE_TEMPLATE/*.yml') if os.path.exists('.github/ISSUE_TEMPLATE') else []; [print(f'✓ Valid YAML: {t}') if yaml.safe_load(open(t,'r',encoding='utf-8')) or True else print(f'✗ Invalid: {t}') for t in templates] if templates else print('No issue templates found')"
-        echo "Issue template validation completed"
+        # Validate YAML templates with better error handling
+        $python_cmd << 'EOF'
+import os
+import sys
+import glob
+
+try:
+    import yaml
+except ImportError:
+    print("Warning: PyYAML not installed, skipping YAML validation")
+    sys.exit(0)
+
+templates_dir = '.github/ISSUE_TEMPLATE'
+if not os.path.exists(templates_dir):
+    print("No issue templates directory found")
+    sys.exit(0)
+
+templates = glob.glob(os.path.join(templates_dir, '*.yml'))
+if not templates:
+    print("No issue templates found")
+    sys.exit(0)
+
+errors = []
+for template in templates:
+    try:
+        with open(template, 'r', encoding='utf-8') as f:
+            yaml.safe_load(f)
+        print(f"✓ Valid YAML: {template}")
+    except yaml.YAMLError as e:
+        errors.append(f"✗ Invalid YAML in {template}: {e}")
+        print(f"✗ Invalid YAML in {template}: {e}")
+    except Exception as e:
+        errors.append(f"✗ Error reading {template}: {e}")
+        print(f"✗ Error reading {template}: {e}")
+
+if errors:
+    print("\n❌ Issue template validation failed with errors:")
+    for error in errors:
+        print(f"  {error}")
+    sys.exit(1)
+else:
+    print(f"✓ All {len(templates)} issue templates validated successfully")
+EOF
+        
+        echo "✓ Issue template validation completed"
