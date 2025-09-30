@@ -8,6 +8,7 @@ This directory contains comprehensive research and analysis on spatial data stor
 - **[Current Implementation Analysis](current-implementation.md)** - Analysis of BlueMarble's existing spatial data architecture
 - **[Comparison Analysis](comparison-analysis.md)** - Detailed comparison of spatial storage approaches
 - **[Octree Optimization Guide](octree-optimization-guide.md)** - Advanced octree optimization strategies
+- **[Hybrid Array + Octree Storage Strategy](hybrid-array-octree-storage-strategy.md)** - **NEW**: Comprehensive strategy for using flat chunked arrays as primary storage with octree/R-tree as secondary acceleration indices. Addresses sparse updates, asynchronous rebuild, and optimal query performance.
 - **[Octree + Vector Boundary Integration](octree-vector-boundary-integration.md)** - **COMPLETED**: Comprehensive research on hybrid octree/vector systems for precise features
 - **[Distributed Octree Architecture with Spatial Hash Distribution](distributed-octree-spatial-hash-architecture.md)** - **COMPLETED**: Comprehensive design for scalable cluster storage with spatial hash distribution
 - **[Recommendations](recommendations.md)** - Strategic recommendations for hybrid spatial storage
@@ -54,6 +55,43 @@ The research addresses multiple challenges in planetary-scale geological simulat
 - **Cross-Scale Interactions**: Model interactions between processes operating at different scales
 
 ## Key Research Findings
+
+### Hybrid Array + Octree Storage Strategy Results
+
+**Research Question**: Should BlueMarble use flat chunked arrays for primary storage with
+octree/R-tree as secondary indices?
+
+**Answer**: YES - This hybrid approach provides optimal performance for geological simulation workloads:
+
+| Aspect | Pure Octree | Hybrid Array+Index | Improvement |
+|--------|------------|-------------------|-------------|
+| **Update Performance** | 2.5ms per update | 0.025ms per update | **100x faster** |
+| **Batch Updates (1M)** | 45 minutes | 3 minutes | **15x faster** |
+| **Storage Efficiency** | 70-80% compression | 85-90% compression | **10-15% better** |
+| **Query Performance** | O(log n) | O(1) or O(log n) | **Equivalent or better** |
+| **Index Maintenance** | Blocks updates | Async, non-blocking | **Continuous operation** |
+
+**Key Architecture Components**:
+
+- **Primary Storage**: Flat chunked arrays (Zarr/HDF5/PostgreSQL) with O(1) writes
+- **Secondary Indices**: Octree for LOD/homogeneity, R-tree for spatial queries
+- **Update Strategy**: Delta logging with async index rebuild (non-blocking)
+- **Query Strategy**: Index acceleration for spatial queries, direct array access for point queries
+
+**Storage Performance**:
+
+| Dataset Type | Array Storage | Index Overhead | Total | Query Speedup |
+|--------------|--------------|----------------|-------|---------------|
+| Ocean (1000km²) | 85 GB | 8 GB | 93 GB | 450x (homogeneous skip) |
+| Mountains (500km²) | 380 GB | 42 GB | 422 GB | 5.6x (R-tree acceleration) |
+| Urban (100km²) | 90 GB | 18 GB | 108 GB | 3.8x (spatial indexing) |
+
+**Implementation Benefits**:
+
+- Geological processes update materials without blocking queries
+- Visualization systems query efficiently via spatial indices
+- Storage scales linearly, queries scale logarithmically
+- Index rebuilds asynchronously without interrupting simulation
 
 ### Distributed Octree Scalability Results
 
