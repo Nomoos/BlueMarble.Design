@@ -28,6 +28,17 @@ Analysis of game systems inspired by Port Royale 1 and The Guild 1400, adapted f
 - Professional guilds providing gameplay bonuses and knowledge sharing
 - Political influence through actual economic and infrastructure control
 
+### [Skill and Knowledge System Research](skill-knowledge-system-research.md)
+Comprehensive analysis of skill and knowledge progression systems in MMORPGs with recommendations for BlueMarble.
+
+**Key Topics**:
+- Comparative analysis of WoW, Novus Inceptio, Eco, Wurm Online, Vintage Story, Life is Feudal, and Mortal Online 2
+- Three core skill models: Class-based, Skill-based, and Hybrid systems
+- Knowledge progression patterns and integration with gameplay
+- Detailed recommendations for geological knowledge-based progression
+- Implementation considerations and technical architecture
+- Phase-based development roadmap aligned with Q4 2025 goals
+
 ### [Implementation Plan](implementation-plan.md)
 Phased development roadmap spanning 16-20 months with clear deliverables and risk mitigation.
 

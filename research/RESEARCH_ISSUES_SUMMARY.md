@@ -204,3 +204,64 @@ Each issue addresses specific research questions identified in the spatial data 
 - **Recommendations**: `research/spatial-data-storage/recommendations.md`
 - **Architecture Overview**: `docs/ARCHITECTURE.md`
 - **Project Structure**: `docs/FOLDER_STRUCTURE.md`
+## Game Design Research
+
+### Completed Research
+
+#### [Research] ✅ COMPLETED: Skill and Knowledge System Research for MMORPGs
+- **Focus**: Comprehensive analysis of skill and knowledge progression systems in major MMORPGs
+- **Impact**: Informs BlueMarble's skill system design for depth, engagement, and geological integration
+- **Research Type**: Market Research
+- **Status**: ✅ **COMPLETED** - Full research report with comparative analysis and recommendations
+- **Implementation**: `research/game-design/skill-knowledge-system-research.md`
+- **Key Features**:
+  - Analysis of 7 major MMORPGs: WoW, Novus Inceptio, Eco, Wurm Online, Vintage Story, Life is Feudal, Mortal Online 2
+  - Three core skill models identified: Class-based, Skill-based, and Hybrid systems
+  - Comparative tables for skill systems, knowledge integration, progression pace, and engagement
+  - Detailed recommendations for hybrid geological knowledge model
+  - Technical architecture and implementation considerations
+  - Integration with existing BlueMarble gameplay systems
+  - Phase-based implementation roadmap (Q1-Q4 2025)
+- **Games Analyzed**:
+  - World of Warcraft: Class-based system with talent trees
+  - Novus Inceptio: Geological simulation with knowledge-driven progression
+  - Eco: Collaborative skill system with environmental constraints
+  - Wurm Online: Pure skill-based with 130+ skills
+  - Vintage Story: Technology-gated knowledge progression
+  - Life is Feudal: Hard skill cap with alignment system
+  - Mortal Online 2: Action-based with deep character building
+- **Recommendations**:
+  - Adopt hybrid geological knowledge model combining use-based skills, discovery-based knowledge, and technology progression
+  - Three-pillar system: Physical Skills + Knowledge + Technology
+  - Emergent specialization without forced classes
+  - Geological reality as primary constraint system
+  - 200-1000h progression curve for mastery
+- **Priority**: Low (Q4 2025 time constraint)
+- **Research Questions Answered**:
+  - ✅ What are the core models for skill and knowledge systems in MMORPGs?
+  - ✅ How do games structure skill sets and progression?
+  - ✅ How can BlueMarble design for depth, engagement, and extensibility?
+  - ✅ How to integrate with geological simulation mechanics?
+
+### Related Game Design Research
+
+- [World Parameters](game-design/world-parameters.md) - 3D spherical world technical specifications
+- [Mechanics Research](game-design/mechanics-research.md) - Economic simulation systems inspired by classic games
+- [Player Freedom Analysis](game-design/player-freedom-analysis.md) - Intelligent constraint frameworks
+- [Implementation Plan](game-design/implementation-plan.md) - Phased development roadmap
+
+### Integration with Existing Documentation
+
+The skill and knowledge research directly extends and complements:
+- `docs/gameplay/spec-player-progression-system.md` - Player progression specification
+- `docs/systems/gameplay-systems.md` - Core gameplay systems including skill trees
+- `research/game-design/player-freedom-analysis.md` - Knowledge-based progression constraints
+- `research/game-design/mechanics-research.md` - Economic and social systems integration
+
+### Future Game Design Research Directions
+
+1. **Combat System Deep Dive**: Analysis of action combat vs tab-targeting for geological context
+2. **Social System Architecture**: Guild systems, mentorship mechanics, and community formation
+3. **Economic Balance Models**: Market simulation, resource scarcity, and player-driven economy
+4. **Tutorial and Onboarding**: Progressive geological knowledge introduction for new players
+5. **Endgame Content Design**: Long-term engagement beyond skill mastery
