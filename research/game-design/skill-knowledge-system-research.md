@@ -1493,6 +1493,7 @@ Most importantly, this system makes geological knowledge the currency of power, 
 - [ ] Community feedback on proposed systems
 
 **Related Documents:**
+- [Skill Caps and Decay Research](skill-caps-and-decay-research.md) - Skill cap mechanics and decay systems
 - [Player Freedom Analysis](player-freedom-analysis.md) - Constraint systems
 - [Mechanics Research](mechanics-research.md) - Economic systems
 - [Implementation Plan](implementation-plan.md) - Development roadmap

@@ -223,6 +223,8 @@ Based on the comprehensive skill and knowledge system research, this document ou
 
 ### 11. [Research] Progression Pace Balancing Study
 
+**Status:** ✅ Partially Completed - See [Skill Caps and Decay Research](skill-caps-and-decay-research.md)
+
 **Focus:** Determine optimal progression curves for different player types
 
 **Research Questions:**
@@ -231,14 +233,22 @@ Based on the comprehensive skill and knowledge system research, this document ou
 - What does player data reveal about optimal pacing?
 - How to adjust pacing dynamically based on player behavior?
 
-**Expected Deliverables:**
-- Progression curve models for different playstyles
+**Completed Analysis:**
+The [Skill Caps and Decay Research](skill-caps-and-decay-research.md) document addresses several aspects of this research:
+- Analysis of level-based skill caps and their progression curves
+- Skill decay mechanics and their impact on player engagement
+- Grace period recommendations for casual vs. hardcore players
+- Decay rate tuning considerations for different skill tiers
+- Balance between specialization pressure and player freedom
+
+**Remaining Work:**
 - Player segmentation analysis
 - Dynamic difficulty adjustment recommendations
 - Analytics framework for progression monitoring
+- Empirical testing of proposed decay rates and grace periods
 
-**Estimated Effort:** 2-3 weeks  
-**Priority:** Medium-High
+**Estimated Effort (Remaining):** 1-2 weeks  
+**Priority:** Medium
 
 ---
 
