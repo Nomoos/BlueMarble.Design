@@ -10,16 +10,21 @@ tags: [mmo, server-architecture, networking, authentication, protocols, emulatio
 
 ## Problem/Context
 
-Understanding how open-source MMORPG emulators (e.g., TrinityCore, CMaNGOS, AzerothCore) implement server architecture, authentication systems, and networking protocols can inform BlueMarble's own multiplayer architecture design. These emulators replicate Blizzard's server software and provide battle-tested approaches to handling client-server communication, authentication security, and packet management at scale.
+Understanding how open-source MMORPG emulators (e.g., TrinityCore, CMaNGOS, AzerothCore) implement server
+architecture, authentication systems, and networking protocols can inform BlueMarble's own multiplayer
+architecture design. These emulators replicate Blizzard's server software and provide battle-tested approaches
+to handling client-server communication, authentication security, and packet management at scale.
 
 ## Key Findings
 
 ### Architecture Components
 - **Dual-daemon architecture**: Separate authentication and world simulation servers
   - **Auth/Realmd** – Handles login & realm list; communicates with `auth` database
-  - **World Server** (worldserver/mangosd) – Manages gameplay state, maps, NPC AI, scripts; communicates with `world` & `characters` databases
+  - **World Server** (worldserver/mangosd) – Manages gameplay state, maps, NPC AI, scripts;
+    communicates with `world` & `characters` databases
 - **Database structure**: MySQL/MariaDB with three core schemas: `auth`, `characters`, `world`
-- **Client data extraction**: Server builds navmeshes (MMAPs/VMAPs) and reads client DBCs to reproduce retail behavior
+- **Client data extraction**: Server builds navmeshes (MMAPs/VMAPs) and reads client DBCs to reproduce
+  retail behavior
 
 ### Connection Flow
 1. **Client → Auth/Realmd** (default port **3724**)
@@ -172,5 +177,7 @@ To host public/private realms:
 
 ## Related Research
 
-- [BlueMarble Technical Design Document](../../docs/core/technical-design-document.md) - Server architecture overview
-- [Database Architecture Risk Analysis](../spatial-data-storage/database-architecture-risk-analysis.md) - Security considerations
+- [BlueMarble Technical Design Document](../../docs/core/technical-design-document.md) -
+  Server architecture overview
+- [Database Architecture Risk Analysis](../spatial-data-storage/database-architecture-risk-analysis.md) -
+  Security considerations
