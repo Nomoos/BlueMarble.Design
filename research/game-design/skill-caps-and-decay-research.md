@@ -28,6 +28,7 @@ caps unnecessary.
   micromanagement through shared group points
 - Tag-based systems (domain + discipline + material tags) offer greater flexibility than hierarchies for
   simulation-heavy games, allowing natural skill transfer and emergent specialization
+- Weighted tag calculations with quality scores provide concrete, repeatable crafting mechanics
 - With 23+ skill categories, decay becomes essential for forcing meaningful specialization choices
 
 **Recommendations:**
@@ -38,7 +39,8 @@ caps unnecessary.
 - Consider hard cap alternative: 2 master skills, 500 flexible points, minimum competence (15) for all trained
   skills with higher failure rates
 - For hierarchical systems: use shared group points for material-based skills (e.g., gathering/metal/iron)
-- For tag-based systems: allocate points to domain + discipline tags, let material familiarity emerge through use
+- For tag-based systems: use weighted calculations (domain 40%, discipline 30%, material 20%, exact 10%)
+- Implement quality tiers based on Quality Score vs Recipe Complexity ratios (0.5×, 0.8×, 1.2×, 1.5×)
 - Tag-based approach recommended for BlueMarble's geological simulation due to flexibility and natural skill
   transfer across similar contexts
 - With 23+ skills, organize into meta-categories to guide specialization and prevent maintenance overload
@@ -888,6 +890,299 @@ Suggested implementation:
 
 This provides depth without overwhelming micromanagement, and supports BlueMarble's goal of realistic geological
 interaction where knowledge and skills transfer naturally across similar contexts.
+
+### Practical Tag-Based Crafting Calculations
+
+To make the tag-based system concrete and repeatable, here's a detailed calculation model using rope-making as an
+example. This provides a template for implementing crafting systems with tags.
+
+**1. Tag Categories for Crafting**
+
+For crafting an item (e.g., hemp rope), these tag categories apply:
+
+```
+domain: crafting (general craftsmanship)
+discipline: fiberwork / weaving / rope-making (primary skill)
+action: construct / weave (action type)
+material_group: organic/fiber (material category)
+material: hemp-fiber (specific material quality)
+tool: ropewalk / spindle (tool proficiency and bonuses)
+```
+
+**2. Calculation Model**
+
+**Core Formula:**
+```
+Quality Score = Σ(skill_level × weight) + material_quality × material_weight + tool_bonus
+
+Success Chance = clamp((Quality Score / Recipe Complexity) × 100%, 0%, 100%)
+
+Quality Tier = determined by Quality Score vs Recipe Complexity thresholds
+```
+
+**Quality Tiers (relative to Recipe Complexity C):**
+```
+Masterwork:  Quality Score ≥ 1.5 × C
+Excellent:   Quality Score ≥ 1.2 × C
+Good:        Quality Score ≥ 0.8 × C
+Common:      Quality Score ≥ 0.5 × C
+Poor:        Quality Score < 0.5 × C
+```
+
+**3. Recommended Weights for Rope-Making**
+
+These weights can be adjusted based on game balance:
+
+```
+Primary discipline (rope-making/weaving):        0.40
+Fiber processing (fiberwork/material handling):  0.25
+General crafting skill (crafting):               0.10
+Tool proficiency (tool):                         0.15
+Material quality (material):                     0.10
+Total:                                           1.00
+```
+
+**4. Concrete Example: Hemp Rope Crafting**
+
+**Recipe Parameters:**
+```
+Item: Basic Hemp Rope
+Recipe Complexity (C): 60 (medium difficulty)
+```
+
+**Character Skills/States:**
+```
+rope-making: 60
+fiberwork: 40
+crafting: 50
+tool proficiency (ropewalk): 30
+material quality (hemp fiber): 80 (high quality fiber, 0-100 scale)
+```
+
+**Weighted Calculation:**
+```
+rope-making contribution:    60 × 0.40 = 24.0
+fiberwork contribution:      40 × 0.25 = 10.0
+crafting contribution:       50 × 0.10 =  5.0
+tool proficiency:            30 × 0.15 =  4.5
+material quality:            80 × 0.10 =  8.0
+                             _______________
+Quality Score:                           51.5
+```
+
+**Success Determination:**
+```
+Success Chance = (51.5 / 60) × 100% = 85.83%
+```
+High chance of success! Player has 85.83% chance to craft the rope.
+
+**Quality Tier Determination:**
+
+Compare Quality Score (51.5) to thresholds for C=60:
+```
+Masterwork threshold: 1.5 × 60 = 90  → NO (51.5 < 90)
+Excellent threshold:  1.2 × 60 = 72  → NO (51.5 < 72)
+Good threshold:       0.8 × 60 = 48  → YES (51.5 ≥ 48)
+Common threshold:     0.5 × 60 = 30  → YES (51.5 ≥ 30)
+
+Result: Good Quality Hemp Rope (if success roll passes)
+```
+
+**Failure Handling:**
+
+If the 14.17% failure chance occurs:
+- **Partial Success**: Produce Poor quality rope (reduced durability/strength)
+- **Material Loss**: Consume materials with partial return (e.g., 25% recovered)
+- **Critical Failure** (optional 5% of failures): Tool damage, complete material loss
+
+**5. Critical Success/Failure Mechanics**
+
+**Critical Success** (optional, 5% above success threshold or Quality Score ≫ C):
+- Enhanced product: +10% durability, +5% strength
+- Bonus: Extra quantity (e.g., 10% more rope length)
+- Experience: Double skill gain from crafting
+
+**Critical Failure** (when Quality Score < 0.2 × C or critical roll):
+- Broken rope during crafting
+- 100% material loss
+- Possible tool damage (10% durability loss)
+- Negative experience: Small skill loss to relevant tags
+
+**6. Factors Affecting Results**
+
+**Material Quality Impact:**
+```
+Poor hemp fiber (quality 20):  -6.0 points to Quality Score
+Average fiber (quality 50):    -3.0 points to Quality Score
+High quality fiber (quality 80): +8.0 points to Quality Score (as shown)
+Exceptional fiber (quality 95): +9.5 points to Quality Score
+```
+
+**Tool Bonuses:**
+```
+No tool (hands only):          -4.5 points (tool proficiency × weight)
+Basic spindle (quality 30):     +4.5 points (as shown)
+Quality ropewalk (quality 60):  +9.0 points
+Master ropewalk (quality 90):  +13.5 points
+```
+
+**Skill Synergies & Perks:**
+```
+"Experienced Ropemaker" perk:  +10% to primary discipline (rope-making +6 effective)
+"Material Expert" perk:        +15 to material quality effectiveness
+"Tool Master" perk:            +20% to tool proficiency contribution
+```
+
+**Diminishing Returns** (optional balance mechanism):
+```
+Skills above 90: Effective value = 90 + (actual - 90) × 0.5
+Example: rope-making 95 → effective 92.5 for calculation
+Prevents extreme min-maxing while rewarding mastery
+```
+
+**7. Recipe Data Structure**
+
+**JSON Schema Example:**
+```json
+{
+  "name": "Basic Hemp Rope",
+  "complexity": 60,
+  "required_tags": {
+    "domain": ["crafting"],
+    "discipline": ["fiberwork", "weaving", "rope-making"],
+    "material_group": ["organic", "fiber"],
+    "material": ["hemp-fiber", "flax-fiber"]
+  },
+  "material_requirements": [
+    {"tag": "material:hemp-fiber", "amount": 5, "unit": "bundles"}
+  ],
+  "weights": {
+    "primary_discipline": 0.40,
+    "secondary_discipline": 0.25,
+    "domain": 0.10,
+    "tool": 0.15,
+    "material": 0.10
+  },
+  "output": {
+    "item": "hemp_rope",
+    "base_quantity": 10,
+    "unit": "meters"
+  },
+  "time": {
+    "base_seconds": 300,
+    "skill_reduction": "0.5% per point above 50"
+  },
+  "failure_mechanics": {
+    "on_fail": "produce_poor_quality_or_consume_materials",
+    "material_recovery": 0.25,
+    "crit_fail_chance": 0.05,
+    "crit_success_chance": 0.05
+  },
+  "experience_gain": {
+    "rope-making": 15,
+    "fiberwork": 10,
+    "crafting": 5
+  }
+}
+```
+
+**8. Multi-Material Recipes**
+
+For recipes requiring multiple materials:
+
+**Example: Reinforced Rope (hemp + leather strips)**
+```
+Material Quality Calculation:
+hemp_fiber (quality 80): 80 × 0.07 = 5.6
+leather_strips (quality 60): 60 × 0.03 = 1.8
+Combined material contribution: 5.6 + 1.8 = 7.4
+
+Weights adjusted:
+primary discipline: 0.40
+fiberwork: 0.20
+leatherworking: 0.10
+crafting: 0.10
+tool: 0.10
+materials: 0.10 (split between materials)
+```
+
+**9. Scaling Complexity**
+
+**Easy Recipes** (C = 20-40):
+- Simple twine, basic cordage
+- Low material waste on failure
+- Common/Good quality achievable by novices
+
+**Medium Recipes** (C = 50-70):
+- Standard rope, nets, basic textiles
+- Moderate skill requirement
+- Good/Excellent quality requires competence
+
+**Hard Recipes** (C = 80-100):
+- Specialized rigging, heavy-duty cables
+- High skill requirement
+- Excellent/Masterwork only for masters
+
+**Expert Recipes** (C = 120+):
+- Ceremonial textiles, precision instruments
+- Multiple rare materials
+- Masterwork requires near-perfect conditions
+
+**10. Implementation Recommendations**
+
+**Balance Guidelines:**
+1. **Weight Distribution**: Primary discipline 35-45%, avoid any tag > 50%
+2. **Success Rate**: Target 70-90% for medium recipes at appropriate skill levels
+3. **Critical Rates**: Keep crit success/fail at 5% base, modified by extreme Quality Scores
+4. **Material Recovery**: 20-30% on failure prevents excessive frustration
+5. **Complexity Scaling**: Roughly C = (skill_requirement + 10) for balanced challenge
+
+**Performance Optimization:**
+- Cache tag lookups for recipes
+- Pre-calculate common weight combinations
+- Use lookup tables for quality tier thresholds
+- Batch calculate for production queues
+
+**Player Feedback:**
+- Show which tags contribute to success
+- Display quality tier probabilities before crafting
+- Highlight material quality impact
+- Suggest skill improvements for better results
+
+**Extensibility:**
+- Add environmental factors (weather, location bonuses)
+- Include character states (hunger, fatigue reducing effectiveness)
+- Support recipe variations (same output, different materials/methods)
+- Enable mastery bonuses for frequently crafted items
+
+**Example UI Flow:**
+```
+Player selects recipe: "Basic Hemp Rope"
+System displays:
+├─ Success Chance: 85.8%
+├─ Expected Quality: Good (51.5/60)
+├─ Time Required: 4m 15s
+├─ Contributing Skills:
+│  ├─ Rope-making (60): +24.0 [Primary]
+│  ├─ Fiberwork (40): +10.0
+│  ├─ Crafting (50): +5.0
+│  └─ Tool (Ropewalk 30): +4.5
+├─ Material Impact:
+│  └─ Hemp Fiber (Quality 80): +8.0 [High Quality]
+└─ Possible Outcomes:
+   ├─ Good Quality: 85.8% (current result)
+   ├─ Excellent: Impossible (need Quality Score 72+)
+   └─ Masterwork: Impossible (need Quality Score 90+)
+
+Suggestions for improvement:
+- Increase rope-making to 75 for Excellent chance
+- Use Exceptional hemp fiber (95) for +1.5 bonus
+- Upgrade to Quality Ropewalk for +4.5 bonus
+```
+
+This practical implementation provides a complete, repeatable system for calculating crafting outcomes using the
+tag-based skill system. The weighted approach ensures all relevant skills contribute proportionally while
+maintaining clear success/failure mechanics and quality tiers.
 
 ### Focus on Tuning, Not New Restrictions
 
