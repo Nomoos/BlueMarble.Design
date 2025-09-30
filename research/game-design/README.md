@@ -50,6 +50,28 @@ Analysis of skill caps, experience-based progression, and skill decay mechanics 
 - Integration with BlueMarble's geological progression
 - Recommendations against additional global caps
 
+### [Vintage Story Material System Research](vintage-story-material-system-research.md)
+Comprehensive analysis of Vintage Story's material grading, quality mechanics, and crafting progression systems.
+
+**Key Topics**:
+- Material quality variance by geological formation and deposit type
+- Tool quality impact on gathering, crafting, and durability
+- Technology-gated progression (Stone → Copper → Bronze → Iron → Steel)
+- Knowledge discovery through handbook system and experimentation
+- Organic specialization without class restrictions
+- Quality calculation model with multiplicative factors
+- Comparison with traditional MMORPG material systems
+- Seven detailed recommendations for BlueMarble integration
+
+**Research Highlights**:
+- Percentage-based quality (1-100%) more realistic than discrete tiers
+- Geological source directly affects material quality and properties
+- Tool quality affects preservation rate, efficiency, and final output
+- Technology tiers provide clear milestones over 100+ hours of gameplay
+- Player engagement driven by mystery, environmental challenge, and mastery
+- Emergent specialization creates organic player roles (Prospector, Smith, Farmer, Trader)
+- Implementation phases spanning 25-30 weeks with clear deliverables
+
 ### [Implementation Plan](implementation-plan.md)
 Phased development roadmap spanning 16-20 months with clear deliverables and risk mitigation.
 
