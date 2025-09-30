@@ -13,12 +13,24 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: yamllint
+      - name: Get changed YAML files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            **/*.yml
+            **/*.yaml
+
+      - name: yamllint on changed files
+        if: steps.changed-files.outputs.any_changed == 'true'
         uses: ibiqlik/action-yamllint@v3
         with:
           config_file: .yamllint.yml
           strict: true
+          file_or_dir: ${{ steps.changed-files.outputs.all_changed_files }}
 
   json-lint:
     name: JSON Lint
@@ -26,15 +38,26 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed JSON files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            **/*.json
 
       - name: Install jq
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: JSON Lint
+      - name: JSON Lint on changed files
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: |
-          echo "Checking JSON files..."
+          echo "Checking changed JSON files..."
           EXIT_CODE=0
-          while IFS= read -r -d '' file; do
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             echo "Validating: $file"
             if ! jq empty "$file" 2>/dev/null; then
               echo "❌ Invalid JSON: $file"
@@ -42,10 +65,10 @@ jobs:
             else
               echo "✓ Valid JSON: $file"
             fi
-          done < <(find . -name "*.json" -not -path "*/node_modules/*" -not -path "*/.git/*" -print0)
+          done
 
           if [ $EXIT_CODE -eq 0 ]; then
-            echo "✓ All JSON files are valid"
+            echo "✓ All changed JSON files are valid"
           else
             echo "❌ Some JSON files are invalid"
           fi
