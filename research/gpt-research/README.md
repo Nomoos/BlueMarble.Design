@@ -27,11 +27,14 @@ research/gpt-research/
 
 ## How to Import GPT Research
 
+**See [HOW_TO_EXPORT.md](HOW_TO_EXPORT.md) for detailed export instructions.**
+
 ### Step 1: Export the Conversation
 
 1. Open the ChatGPT conversation link
 2. Use ChatGPT's export feature or manually copy the conversation
 3. Save as a markdown file with the conversation ID
+4. Follow the export guide for formatting and privacy considerations
 
 ### Step 2: Create Topic Directory
 
@@ -42,6 +45,8 @@ cd [topic-name]
 ```
 
 ### Step 3: Add Documentation
+
+**See [import-template.md](import-template.md) for detailed templates.**
 
 Create the following files:
 - `README.md` - Overview of the research topic
