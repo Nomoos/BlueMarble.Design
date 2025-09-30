@@ -54,6 +54,8 @@ This document demonstrates how to effectively use the BlueMarble.Design reposito
 2. Link visual design needs to UI/UX documentation
 3. Plan audio requirements in `/docs/audio/`
 
+## Scenario 4: Technical System Design
+
 ### Step 1: Research Requirements
 
 1. Review gameplay and world requirements that drive technical needs
