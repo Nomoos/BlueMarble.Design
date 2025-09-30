@@ -206,6 +206,29 @@ Comprehensive analysis of Life is Feudal's material quality and crafting systems
 - Specialization mechanics that encourage player cooperation
 - Long-term engagement through mastery systems
 
+### [Eco Skill System and Knowledge Progression Research](eco-skill-system-research.md)
+Comprehensive analysis of Eco Global Survival's skill system and knowledge progression mechanics, focusing on 
+collaborative specialization, crafting integration, and ecological impact.
+
+**Key Topics**:
+- Star-based skill point system and activity-based progression
+- Forced specialization through skill point scarcity (1-3 professions masterable)
+- Skill book system for knowledge transfer and teaching economy
+- Collaborative research system for technology unlocks
+- Profession trees and specialization paths with detailed diagrams
+- Environmental consequences integrated with skill application
+- Government systems for skill-related regulations
+- Comparative analysis with traditional MMORPGs and sandbox games
+
+**Research Highlights**:
+- 20+ professions organized in tiers: Gathering, Processing, Crafting, Advanced
+- Skill trees with visual ASCII diagrams showing dependencies and progression
+- Knowledge artifact system enabling teaching and learning gameplay
+- Environmental impact: mining causes pollution, over-harvesting causes extinction
+- Mandatory collaboration: complex items require multiple specialists
+- BlueMarble integration recommendations for geological specialization
+- Implementation considerations with code examples and balancing guidelines
+
 ### [Eco Global Survival Material System Research](eco-global-survival-material-system-research.md)
 Market research analyzing Eco Global Survival's material and quality systems, with focus on environmental impact, 
 collaborative crafting, and sustainability mechanics adaptable for BlueMarble.
