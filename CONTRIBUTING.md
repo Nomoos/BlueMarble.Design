@@ -5,11 +5,14 @@ Welcome to the BlueMarble.Design repository! This guide will help you contribute
 ## Getting Started
 
 1. **Familiarize yourself** with the repository structure and existing documentation
-2. **Choose a category** that aligns with your contribution (gameplay, world, systems, ui-ux, audio, research)
-3. **Use the appropriate template** from the `templates/` directory
-4. **Follow naming conventions** and maintain consistency with existing documents
+2. **Review the [Documentation Best Practices](DOCUMENTATION_BEST_PRACTICES.md)** for quality guidelines
+3. **Choose a category** that aligns with your contribution (gameplay, world, systems, ui-ux, audio, research)
+4. **Use the appropriate template** from the `templates/` directory
+5. **Follow naming conventions** and maintain consistency with existing documents
 
 ## Document Guidelines
+
+For detailed guidelines on creating quality documentation, see [Documentation Best Practices](DOCUMENTATION_BEST_PRACTICES.md).
 
 ### File Naming Conventions
 

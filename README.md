@@ -19,8 +19,6 @@ This repository serves as the central hub for all design-related activities in t
 ├── design/                  # Game design documentation and vision
 ├── docs/                    # Main documentation directory
 │   ├── core/               # Core design documents (GDD, TDD)
-│   ├── systems/            # Game systems and mechanics
-│   ├── world/              # World building, lore, and narrative
 │   ├── gameplay/           # Gameplay mechanics and systems
 │   ├── world/              # World building, lore, and narrative
 │   ├── systems/            # Core systems and technical design
@@ -37,7 +35,7 @@ This repository serves as the central hub for all design-related activities in t
 
 ### For Design Contributors
 
-1. Review the [Contributing Guidelines](CONTRIBUTING.md)
+1. Review the [Contributing Guidelines](CONTRIBUTING.md) and [Documentation Best Practices](DOCUMENTATION_BEST_PRACTICES.md)
 2. Check existing documentation in the relevant category
 3. Use the appropriate template from the `templates/` directory
 4. Follow the established naming conventions and structure
@@ -56,6 +54,12 @@ This repository serves as the central hub for all design-related activities in t
 2. Check the `roadmap/` for current priorities and status
 3. Reference design documents when implementing features
 4. Provide feedback on design feasibility during the review process
+
+## Documentation Standards
+
+- **[Documentation Best Practices](DOCUMENTATION_BEST_PRACTICES.md)** - Guidelines for creating high-quality documentation
+- **[Contributing Guidelines](CONTRIBUTING.md)** - How to contribute to the repository
+- **[Usage Examples](USAGE_EXAMPLES.md)** - Practical examples of using the repository structure
 
 ## Key Documentation
 
@@ -92,6 +96,23 @@ This repository serves as the central hub for all design-related activities in t
 3. **Review Phase**: Collaborate with stakeholders for feedback and iteration
 4. **Approval Phase**: Finalize documents for development implementation
 5. **Maintenance Phase**: Keep documents updated as implementation progresses
+
+### Quality Checks
+
+Before committing documentation changes, run the quality check script:
+
+```bash
+./scripts/check-documentation-quality.sh
+```
+
+This script validates:
+
+- Required files and directory structure
+- Markdown formatting and linting
+- Duplicate content detection
+- Broken internal links
+
+See [scripts/README.md](scripts/README.md) for more information.
 
 ### Automated PR Management
 
