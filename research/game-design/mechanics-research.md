@@ -561,3 +561,19 @@ Master Skills (1000+ hours): Continental terraforming, planetary-scale projects
 This mechanics research demonstrates how classic economic simulation games can be enhanced through BlueMarble's geological foundation. By using geological realism as the primary source of game constraints and opportunities, we create a uniquely authentic and educational gameplay experience while maintaining the engaging economic depth that made Port Royale 1 and The Guild 1400 classics.
 
 The integration strategy emphasizes player freedom through understanding rather than arbitrary unlocks, creating a game where geological knowledge directly translates to gameplay advantage. This approach ensures that BlueMarble's transformation into an interactive simulation maintains its scientific integrity while providing unprecedented gameplay depth and originality.
+
+---
+
+## Related Research
+
+**Material Systems:**
+- [Mortal Online 2 Material System Research](mortal-online-2-material-system-research.md) - Material quality and crafting mechanics analysis
+- [Assembly Skills System Research](assembly-skills-system-research.md) - Crafting and gathering system design
+
+**Progression Systems:**
+- [Skill and Knowledge System Research](skill-knowledge-system-research.md) - MMORPG skill system analysis
+- [Skill Caps and Decay Research](skill-caps-and-decay-research.md) - Skill progression mechanics
+
+**Design Philosophy:**
+- [Player Freedom Analysis](player-freedom-analysis.md) - Framework for player agency and intelligent constraints
+- [Implementation Plan](implementation-plan.md) - Development roadmap and phased approach

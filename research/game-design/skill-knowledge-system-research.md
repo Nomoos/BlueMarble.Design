@@ -407,6 +407,10 @@ Character: Geologist Archetype
 - Limited social features
 - May need more structured progression for MMO
 
+**Deep Dive:**
+For comprehensive analysis of Vintage Story's material grading and quality systems, see:
+- [Vintage Story Material System Research](./vintage-story-material-system-research.md) - Detailed material quality, crafting progression, and implementation recommendations
+
 ### Life is Feudal
 
 **System Type:** Skill-based with hard cap and alignment system
@@ -471,33 +475,47 @@ Character: Geologist Archetype
 
 **Knowledge Integration:**
 - Recipe discovery through experimentation
+- Material property knowledge: Understanding quality and combinations
 - Map knowledge: No fast travel, learning terrain matters
 - Combat knowledge: Understanding enemy AI and player tactics
 - Economic knowledge: Trade routes and market understanding
+- Crafting knowledge: Material quality preservation and enhancement techniques
+
+**Material System (see [dedicated research](mortal-online-2-material-system-research.md)):**
+- 0-100% quality scale affects all item properties linearly
+- Multi-stage quality pipeline: extraction → processing → crafting
+- Material properties inherited by crafted items
+- Open-ended experimentation with material combinations
+- Knowledge of optimal materials becomes valuable player skill
+- Player-driven economy stratified by quality tiers
 
 **Specialization Depth:**
 - Hundreds of viable builds
 - Combat styles: Mounted, Foot, Mage, Hybrid
-- Crafting specialists highly valued
+- Crafting specialists highly valued (material quality expertise)
+- Resource gathering specialists (quality source knowledge)
 - One character per account enforces commitment
 
 **Player Engagement:**
 - Full loot PvP creates high stakes
 - Territorial warfare endgame
 - Economy entirely player-driven
+- Material quality and knowledge drive economic gameplay
 - Social bonds through risk/reward
 
 **Strengths for BlueMarble:**
 - Deep character building
 - Knowledge discovery as content
+- Material quality system applicable to geological context
 - One character enforces specialization
 - Player-driven economy model
+- Open-ended crafting philosophy
 
 **Limitations for BlueMarble:**
-- Heavy PvP focus
-- Full loot may deter players
-- Lacks PvE content depth
-- Requires large active player base
+- Heavy PvP focus (can adapt to PvE)
+- Full loot may deter players (not necessary for BlueMarble)
+- Lacks PvE content depth (BlueMarble has geological content)
+- Requires large active player base (can scale differently)
 
 ## Comparative Analysis Tables
 
@@ -1493,7 +1511,9 @@ Most importantly, this system makes geological knowledge the currency of power, 
 - [ ] Community feedback on proposed systems
 
 **Related Documents:**
+- [Mortal Online 2 Material System Research](mortal-online-2-material-system-research.md) - Detailed material quality system analysis
 - [Skill Caps and Decay Research](skill-caps-and-decay-research.md) - Skill cap mechanics and decay systems
+- [Assembly Skills System Research](assembly-skills-system-research.md) - Crafting and gathering system design
 - [Player Freedom Analysis](player-freedom-analysis.md) - Constraint systems
 - [Mechanics Research](mechanics-research.md) - Economic systems
 - [Implementation Plan](implementation-plan.md) - Development roadmap
