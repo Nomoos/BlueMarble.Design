@@ -1742,6 +1742,24 @@ Levels 81-100 → Master Skills → Superior/Masterwork Equipment
 
 ---
 
+## Related Research
+
+**Material and Quality Systems:**
+- [Mortal Online 2 Material System Research](mortal-online-2-material-system-research.md) - Detailed material quality mechanics and open-ended crafting analysis
+- [Crafting Quality Model](../../docs/gameplay/mechanics/crafting-quality-model.md) - Mathematical specifications for quality calculations
+- [Crafting Interface Mockups](assets/crafting-interface-mockups.md) - Visual design for crafting interfaces
+
+**Skill Progression Systems:**
+- [Skill and Knowledge System Research](skill-knowledge-system-research.md) - Comparative analysis of MMORPG skill systems
+- [Skill Caps and Decay Research](skill-caps-and-decay-research.md) - Skill cap mechanics and decay systems
+
+**Game Design Foundation:**
+- [Mechanics Research](mechanics-research.md) - Economic systems and production chains
+- [Player Freedom Analysis](player-freedom-analysis.md) - Framework for player agency
+- [Implementation Plan](implementation-plan.md) - Development roadmap
+
+---
+
 *This research report provides a complete foundation for implementing realistic assembly skills in BlueMarble. 
 The proposed system balances realism with engaging gameplay, integrates seamlessly with BlueMarble's geological 
 simulation, and provides clear progression paths for players. Implementation should proceed in phases, with 
