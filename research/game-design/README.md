@@ -47,23 +47,28 @@ Framework for maximizing player agency through intelligent, reality-based constr
 - Knowledge-based progression that directly enhances capabilities
 - Creative problem-solving using realistic geological processes
 
-### [Assembly Skills System Research](assembly-skills-system-research.md)
-Comprehensive research on realistic assembly and crafting skills for BlueMarble, including blacksmithing, tailoring, 
-alchemy, and woodworking.
+### [Resource Gathering and Assembly Skills Research](assembly-skills-system-research.md)
+Comprehensive research on realistic gathering and crafting skills for BlueMarble, including resource gathering 
+(mining, herbalism, logging, hunting, fishing) and assembly professions (blacksmithing, tailoring, alchemy, 
+woodworking).
 
 **Key Topics**:
+- Dual-experience system for gathering: general skill + material-specific familiarity
 - Practice-based skill progression with realistic learning curves
 - Material quality integration with geological simulation
 - Multi-stage crafting processes with interactive elements
 - Success rate formulas and quality tier calculations
-- Specialization paths within each profession
+- Specialization paths within each profession (3 per skill, 27 total)
+- Gathering-Assembly integration chain
 - [Visual Interface Mockups](assets/crafting-interface-mockups.md)
 
 **Research Highlights**:
-- Four core professions: Blacksmithing, Tailoring, Alchemy, Woodworking
+- Five gathering skills: Mining, Herbalism, Logging, Hunting, Fishing
+- Four assembly professions: Blacksmithing, Tailoring, Alchemy, Woodworking
+- Material familiarity system (picking rocks vs picking flowers requires different experience)
 - Experience-based progression from novice (Level 1) to master (Level 100)
 - Quality tiers: Crude, Standard, Fine, Superior, Masterwork
-- Material quality directly impacts crafting outcomes
+- Material quality flows from geological formation → gathering → assembly → final product
 - Specialization unlocks at Level 25 for focused expertise
 - Complete crafting interface designs with visual feedback
 

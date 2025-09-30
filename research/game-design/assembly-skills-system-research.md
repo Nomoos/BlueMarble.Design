@@ -1,40 +1,47 @@
-# Assembly Skills for Realistic Basic Skill System - Research Report
+# Resource Gathering and Assembly Skills - Research Report
 
 **Document Type:** Research Report  
-**Version:** 1.0  
+**Version:** 1.1  
 **Author:** Game Design Research Team  
 **Date:** 2025-01-08  
+**Last Updated:** 2025-01-08  
 **Status:** Final  
 **Research Type:** Game Mechanics Research
 
 ## Executive Summary
 
-This research report proposes a comprehensive assembly skills system for BlueMarble that emphasizes realism, 
-geological authenticity, and meaningful player progression. The system integrates traditional crafting professions 
-(tailoring, blacksmithing, alchemy, woodworking) with BlueMarble's unique geological simulation foundation. 
-The proposed skill system uses a practice-based progression model where material quality, tool quality, 
-environmental conditions, and practitioner skill level all influence crafting outcomes including success rate, 
-item quality, and special bonuses.
+This research report proposes a comprehensive skill system for BlueMarble covering both resource gathering 
+and assembly/crafting professions. The system emphasizes realism, geological authenticity, and meaningful 
+player progression. It integrates traditional gathering skills (mining, herbalism, logging, hunting, fishing) 
+and crafting professions (blacksmithing, tailoring, alchemy, woodworking) with BlueMarble's unique geological 
+simulation foundation. The proposed skill system uses a practice-based progression model with a dual-experience 
+system for gathering (general skill + material-specific familiarity) and single-track progression for assembly, 
+where material quality, tool quality, environmental conditions, and practitioner skill level all influence 
+outcomes including success rate, item quality, and special bonuses.
 
 **Key Findings:**
 - Realistic skill systems should reflect real-world learning curves with diminishing returns at higher levels
 - Material quality and availability should be tied to BlueMarble's geological simulation
+- Gathering skills use dual-experience tracking: general proficiency + material-specific familiarity
+- Material familiarity creates depth (e.g., experienced iron miner is more efficient with iron than copper)
 - Multi-stage crafting processes create engaging gameplay and respect real-world manufacturing complexity
 - Success rates and quality bonuses should scale with skill level, creating meaningful progression
 - Specialization within professions allows for player differentiation and economic niches
+- Gathering and assembly skills form an integrated chain from raw materials to finished products
 
 ## Table of Contents
 
 1. [Research Objectives](#research-objectives)
 2. [Methodology](#methodology)
 3. [Core Assembly Skills Overview](#core-assembly-skills-overview)
-4. [Skill Progression Mechanics](#skill-progression-mechanics)
-5. [Crafting Interface Design](#crafting-interface-design)
-6. [Material Quality and Geological Integration](#material-quality-and-geological-integration)
-7. [Real-World Skill Analysis](#real-world-skill-analysis)
-8. [Recommendations](#recommendations)
-9. [Implementation Roadmap](#implementation-roadmap)
-10. [Appendices](#appendices)
+4. [Resource Gathering Skills](#resource-gathering-skills)
+5. [Skill Progression Mechanics](#skill-progression-mechanics)
+6. [Crafting Interface Design](#crafting-interface-design)
+7. [Material Quality and Geological Integration](#material-quality-and-geological-integration)
+8. [Real-World Skill Analysis](#real-world-skill-analysis)
+9. [Recommendations](#recommendations)
+10. [Implementation Roadmap](#implementation-roadmap)
+11. [Appendices](#appendices)
 
 ## Research Objectives
 
@@ -233,6 +240,316 @@ and structural components.
 - **Fletcher:** Focus on bows, arrows, and ranged weapon components
 - **Carpenter:** Expertise in furniture, structures, and architectural components
 - **Instrument Maker:** Specialization in musical instruments, magical focuses, and precision items
+
+### Resource Gathering Skills
+
+**Definition:** Resource gathering skills represent the player's ability to efficiently and effectively extract 
+raw materials from the environment. Unlike assembly skills which transform materials into finished products, 
+gathering skills focus on harvesting, extracting, and collecting resources while maintaining quality and 
+maximizing yield.
+
+**Dual Experience System:**
+
+Gathering skills use a dual-experience model that tracks both:
+1. **General Gathering Skill Experience:** Overall proficiency in the gathering profession
+2. **Material-Specific Experience:** Familiarity with individual materials or material groups
+
+This creates depth where an experienced miner who has primarily worked with iron ore will be more efficient 
+with iron extraction than with copper, even though both are metal ores.
+
+#### Mining
+
+**Definition:** The extraction of ores, gems, and minerals from geological formations using specialized tools 
+and techniques.
+
+**Real-World Basis:**
+- Requires understanding of geology, rock identification, and extraction methods
+- Different materials require different tools (pickaxe for hard rock, shovel for soft deposits)
+- Extraction efficiency depends on technique, tool quality, and geological conditions
+- Safety considerations in real mining (structural integrity, ventilation)
+
+**BlueMarble Integration:**
+- Directly tied to geological simulation - ore locations based on realistic formations
+- Material quality preservation depends on extraction technique
+- Tool durability affected by rock hardness
+- Deposit depletion modeled realistically
+
+**Material Groups:**
+- **Metal Ores:** Iron, copper, gold, silver, tin (similar extraction techniques)
+- **Precious Gems:** Diamonds, rubies, emeralds (require careful extraction)
+- **Stone & Rock:** Granite, marble, limestone (building materials)
+- **Minerals:** Salt, sulfur, coal (varied extraction methods)
+
+**Experience Progression:**
+```
+Mining_XP = Base_XP × Material_Hardness × Extraction_Quality × Tool_Efficiency
+Material_Familiarity_XP = Mining_XP × 0.5 (for specific material)
+Group_Familiarity_XP = Mining_XP × 0.25 (for material group)
+```
+
+**Skill Benefits:**
+- **Levels 1-20:** Basic ore identification, standard extraction
+  - Success Rate: 70-85%
+  - Material Loss: 20-30%
+  - Extraction Speed: Slow
+  
+- **Levels 21-50:** Advanced techniques, vein following, quality preservation
+  - Success Rate: 85-92%
+  - Material Loss: 10-20%
+  - Extraction Speed: Moderate
+  - Bonus: Occasional extra yield (+5-10%)
+  
+- **Levels 51-100:** Master extraction, minimal waste, quality enhancement
+  - Success Rate: 92-98%
+  - Material Loss: 5-10%
+  - Extraction Speed: Fast
+  - Bonus: Regular extra yield (+10-20%), rare quality upgrade
+
+**Material Familiarity Bonuses:**
+```
+Familiarity_Bonus = (Material_Experience / 1000) × 5% (capped at +25%)
+
+Example:
+- 0 Iron Ore extractions: +0% efficiency
+- 200 Iron Ore extractions: +10% efficiency with iron
+- 500+ Iron Ore extractions: +25% efficiency with iron (capped)
+```
+
+**Specialization Paths:**
+- **Prospector:** Focus on finding deposits, geological surveying, vein prediction
+- **Quarryman:** Expertise in building stone extraction, large-scale operations
+- **Gem Cutter:** Specialization in precious gem extraction and initial processing
+
+#### Herbalism
+
+**Definition:** The collection of plants, flowers, roots, and fungi for use in alchemy, cooking, and medicine.
+
+**Real-World Basis:**
+- Requires plant identification knowledge and seasonal awareness
+- Different harvesting methods for different plant parts (leaves vs. roots vs. flowers)
+- Timing affects potency (season, time of day, lunar cycles)
+- Sustainable harvesting practices ensure continued availability
+
+**BlueMarble Integration:**
+- Plants tied to climate zones and biomes in BlueMarble's simulation
+- Seasonal availability affects what can be gathered
+- Harvesting technique affects plant regrowth time
+- Weather and soil quality influence plant potency
+
+**Material Groups:**
+- **Flowers:** Decorative and magical properties
+- **Herbs:** Medicinal and alchemical uses
+- **Roots:** Strong medicinal properties, requires digging
+- **Fungi:** Special properties, requires careful identification
+- **Tree Products:** Bark, resin, sap (requires tree-specific knowledge)
+
+**Experience Progression:**
+```
+Herbalism_XP = Base_XP × Plant_Rarity × Harvest_Quality × Season_Modifier
+Plant_Familiarity_XP = Herbalism_XP × 0.5 (for specific plant)
+Group_Familiarity_XP = Herbalism_XP × 0.25 (for plant group)
+```
+
+**Skill Benefits:**
+- **Levels 1-20:** Basic plant identification, standard gathering
+  - Yield: 1-2 per plant
+  - Quality Preservation: 70%
+  - Damage to Plant: High (longer regrowth)
+  
+- **Levels 21-50:** Seasonal knowledge, sustainable harvesting
+  - Yield: 2-3 per plant
+  - Quality Preservation: 85%
+  - Damage to Plant: Moderate (standard regrowth)
+  - Bonus: Rare material drops (+5% chance)
+  
+- **Levels 51-100:** Master harvesting, potency enhancement
+  - Yield: 3-4 per plant
+  - Quality Preservation: 95%
+  - Damage to Plant: Minimal (faster regrowth)
+  - Bonus: Rare drops (+15%), quality upgrades
+
+**Specialization Paths:**
+- **Botanist:** Focus on rare plants, cross-breeding, cultivation
+- **Forager:** Expertise in wild harvesting, tracking seasonal changes
+- **Mycologist:** Specialization in fungi identification and cultivation
+
+#### Logging
+
+**Definition:** The harvesting of wood and forest products from trees for use in woodworking, construction, 
+and fuel.
+
+**Real-World Basis:**
+- Requires tree species identification and growth assessment
+- Proper felling techniques ensure safety and wood quality
+- Different tools for different tree sizes (axe, saw, specialized equipment)
+- Sustainable forestry practices maintain forest health
+
+**BlueMarble Integration:**
+- Tree types based on climate and terrain simulation
+- Tree age affects wood quality and yield
+- Proper felling preserves wood grain integrity
+- Forest regeneration modeled realistically
+
+**Material Groups:**
+- **Hardwoods:** Oak, maple, mahogany (furniture, tools)
+- **Softwoods:** Pine, spruce, cedar (construction, general use)
+- **Exotic Woods:** Rare species with special properties
+- **Tree Products:** Bark, resin, sap (secondary resources)
+
+**Experience Progression:**
+```
+Logging_XP = Base_XP × Tree_Size × Wood_Quality × Technique_Efficiency
+Wood_Familiarity_XP = Logging_XP × 0.5 (for specific wood type)
+Group_Familiarity_XP = Logging_XP × 0.25 (for wood group)
+```
+
+**Skill Benefits:**
+- **Levels 1-20:** Basic tree felling, identification
+  - Wood Loss: 20-30% (poor cuts, splitting)
+  - Quality Preservation: 60%
+  - Felling Time: Slow
+  
+- **Levels 21-50:** Proper techniques, grain preservation
+  - Wood Loss: 10-20%
+  - Quality Preservation: 80%
+  - Felling Time: Moderate
+  - Bonus: Occasional rare wood finds
+  
+- **Levels 51-100:** Master lumberjack, optimal harvesting
+  - Wood Loss: 5-10%
+  - Quality Preservation: 95%
+  - Felling Time: Fast
+  - Bonus: Maximum yield, quality upgrades
+
+**Specialization Paths:**
+- **Timber Scout:** Focus on finding prime trees, forest surveying
+- **Lumberjack:** Expertise in efficient felling, large-scale operations
+- **Tree Tender:** Specialization in sustainable harvesting, forest management
+
+#### Hunting
+
+**Definition:** The tracking and harvesting of animals for leather, bones, meat, and other animal products.
+
+**Real-World Basis:**
+- Requires animal tracking, behavior knowledge, and ethical harvesting
+- Different animals require different approaches
+- Proper field dressing preserves material quality
+- Sustainable hunting maintains population balance
+
+**BlueMarble Integration:**
+- Animal populations based on ecosystem simulation
+- Tracking difficulty varies by terrain and animal
+- Clean kills preserve hide quality
+- Over-hunting affects local populations
+
+**Material Groups:**
+- **Leathers:** Light (rabbit), medium (deer), heavy (bear)
+- **Bones & Horns:** Crafting materials, tools
+- **Meats:** Cooking ingredients, varying quality
+- **Exotic Materials:** Rare creature components (magical properties)
+
+**Experience Progression:**
+```
+Hunting_XP = Base_XP × Animal_Difficulty × Harvest_Quality × Stealth_Bonus
+Animal_Familiarity_XP = Hunting_XP × 0.5 (for specific animal)
+Group_Familiarity_XP = Hunting_XP × 0.25 (for animal group)
+```
+
+**Skill Benefits:**
+- **Levels 1-20:** Basic tracking, standard harvesting
+  - Tracking Success: 60-70%
+  - Material Quality: 60-70%
+  - Harvest Time: Slow
+  
+- **Levels 21-50:** Advanced tracking, efficient harvesting
+  - Tracking Success: 80-85%
+  - Material Quality: 80-85%
+  - Harvest Time: Moderate
+  - Bonus: Occasional rare materials
+  
+- **Levels 51-100:** Master hunter, premium harvesting
+  - Tracking Success: 90-95%
+  - Material Quality: 90-95%
+  - Harvest Time: Fast
+  - Bonus: Rare materials, quality upgrades
+
+**Specialization Paths:**
+- **Tracker:** Focus on finding rare animals, behavior prediction
+- **Trapper:** Expertise in live capture, sustainable harvesting
+- **Butcher:** Specialization in field dressing, material yield maximization
+
+#### Fishing
+
+**Definition:** The catching of fish and aquatic resources from rivers, lakes, and oceans.
+
+**Real-World Basis:**
+- Requires knowledge of fish species, behavior, and seasonal patterns
+- Different techniques for different environments (river vs. ocean)
+- Proper handling preserves fish quality
+- Weather and time of day affect success
+
+**BlueMarble Integration:**
+- Fish populations based on water quality and ecosystem health
+- Seasonal spawning patterns affect availability
+- Proper technique preserves fish quality for cooking
+- Sustainable fishing maintains aquatic ecosystems
+
+**Material Groups:**
+- **Freshwater Fish:** River and lake species
+- **Saltwater Fish:** Ocean species
+- **Shellfish:** Crustaceans and mollusks
+- **Aquatic Plants:** Kelp, seaweed (secondary resources)
+
+**Experience Progression:**
+```
+Fishing_XP = Base_XP × Fish_Rarity × Catch_Quality × Location_Modifier
+Fish_Familiarity_XP = Fishing_XP × 0.5 (for specific fish)
+Group_Familiarity_XP = Fishing_XP × 0.25 (for fish group)
+```
+
+**Skill Benefits:**
+- **Levels 1-20:** Basic fishing, common catches
+  - Catch Rate: 60-70%
+  - Quality Preservation: 65%
+  - Rare Catches: Very low
+  
+- **Levels 21-50:** Advanced techniques, better yields
+  - Catch Rate: 75-85%
+  - Quality Preservation: 80%
+  - Rare Catches: Moderate
+  
+- **Levels 51-100:** Master angler, premium catches
+  - Catch Rate: 85-95%
+  - Quality Preservation: 95%
+  - Rare Catches: High
+
+**Specialization Paths:**
+- **Deep Sea Fisher:** Focus on ocean fishing, large catches
+- **Fly Fisher:** Expertise in rivers and streams, technique-focused
+- **Aquaculturist:** Specialization in fish farming, sustainable practices
+
+### Gathering and Assembly Integration
+
+**Material Quality Chain:**
+```
+Geological Formation → Gathering Skill → Material Quality → Assembly Skill → Final Product
+```
+
+**Example: Iron Sword Production**
+1. **Geological Formation:** Hematite deposit (85% purity)
+2. **Mining (Level 40, Iron Familiarity 300):** 
+   - Base extraction: 82% quality
+   - Familiarity bonus: +15% efficiency → 94% quality iron ore
+3. **Blacksmithing - Smelting (Level 25):**
+   - Processing: 94% → 88% quality iron ingot
+4. **Blacksmithing - Forging (Level 35):**
+   - Crafting: 88% material + skill + tools → 85% quality Fine Iron Sword
+
+**Gathering-Assembly Synergy:**
+- High-quality materials partially compensate for lower assembly skills
+- Master gatherers can supply premium materials that increase crafting success rates
+- Material familiarity unlocks special processing techniques in assembly
+- Economic specialization: gather-focused vs. craft-focused vs. vertically integrated players
 
 ## Skill Progression Mechanics
 
