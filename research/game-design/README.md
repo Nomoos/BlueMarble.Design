@@ -47,6 +47,26 @@ Framework for maximizing player agency through intelligent, reality-based constr
 - Knowledge-based progression that directly enhances capabilities
 - Creative problem-solving using realistic geological processes
 
+### [Assembly Skills System Research](assembly-skills-system-research.md)
+Comprehensive research on realistic assembly and crafting skills for BlueMarble, including blacksmithing, tailoring, 
+alchemy, and woodworking.
+
+**Key Topics**:
+- Practice-based skill progression with realistic learning curves
+- Material quality integration with geological simulation
+- Multi-stage crafting processes with interactive elements
+- Success rate formulas and quality tier calculations
+- Specialization paths within each profession
+- [Visual Interface Mockups](assets/crafting-interface-mockups.md)
+
+**Research Highlights**:
+- Four core professions: Blacksmithing, Tailoring, Alchemy, Woodworking
+- Experience-based progression from novice (Level 1) to master (Level 100)
+- Quality tiers: Crude, Standard, Fine, Superior, Masterwork
+- Material quality directly impacts crafting outcomes
+- Specialization unlocks at Level 25 for focused expertise
+- Complete crafting interface designs with visual feedback
+
 ## Research Philosophy
 
 ### Scientific Integrity First
