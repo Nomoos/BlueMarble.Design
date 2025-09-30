@@ -5,6 +5,7 @@ This directory contains technical design documents, system architecture specific
 ## Document Categories
 
 ### Core Systems Architecture
+- **[System Architecture Design](system-architecture-design.md)** - Comprehensive system architecture covering scalability, reliability, and maintainability
 - Client-server architecture
 - Database design and schemas
 - API specifications and protocols
