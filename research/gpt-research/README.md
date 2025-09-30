@@ -2,6 +2,11 @@
 
 This directory contains research and analysis generated from ChatGPT conversations related to the BlueMarble project. These conversations often explore advanced concepts, prototypes, and design discussions that inform the project's direction.
 
+## 🚀 Quick Start
+
+**New to importing GPT research?** Start here:
+- [QUICK_START.md](QUICK_START.md) - Fast-track guide (~40 min per conversation)
+
 ## Purpose
 
 ChatGPT conversations can provide:
