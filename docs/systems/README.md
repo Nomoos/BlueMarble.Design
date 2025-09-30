@@ -5,8 +5,8 @@ This directory contains technical design documents, system architecture specific
 ## Document Categories
 
 ### Core Systems Architecture
+- **[Database Schema Design](database-schema-design.md)** - Comprehensive database schema for core gameplay and spatial data
 - Client-server architecture
-- Database design and schemas
 - API specifications and protocols
 - Security and authentication systems
 
