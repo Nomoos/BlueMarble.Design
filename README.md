@@ -114,6 +114,17 @@ This script validates:
 
 See [scripts/README.md](scripts/README.md) for more information.
 
+### Automated PR Management
+
+This repository includes automated PR management to keep pull requests up-to-date:
+
+- **Auto-Merge from Main**: Outdated PRs are automatically updated with the latest changes from main
+- **Conflict Detection**: Automatic detection of merge conflicts with notifications
+- **Copilot Integration**: Guidance for using GitHub Copilot to resolve conflicts
+- **Team Notifications**: Authors and reviewers are notified of updates and conflicts
+
+Learn more in the [PR Auto-Merge Guide](.github/PR_AUTO_MERGE_GUIDE.md).
+
 ## Links to Related Repositories
 
 - [BlueMarble.Core](https://github.com/Nomoos/BlueMarble.Core) - Core game engine and systems
