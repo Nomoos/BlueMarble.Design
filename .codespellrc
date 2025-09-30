@@ -1,0 +1,12 @@
+# Codespell configuration for BlueMarble.Design
+# See: https://github.com/codespell-project/codespell
+
+[codespell]
+# Skip these directories and file patterns
+skip = .git,**/sources.bib,**/*.bib,node_modules,*.min.js,package-lock.json
+
+# Use custom ignore words file (easier to maintain)
+ignore-words = .codespell-ignore
+
+# Enable quiet mode (only show errors)
+quiet-level = 2

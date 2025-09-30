@@ -4,7 +4,51 @@ This directory contains standardized templates for creating consistent documenta
 
 ## Available Templates
 
-### Design Documentation Templates
+### Small, Focused Templates (New)
+
+These templates support the new repository structure with small, focused documents.
+
+#### `research-note.md`
+
+Template for small, focused research notes on specific topics (200-400 lines).
+
+**Usage:** Individual research topics, focused investigations, concept analysis  
+**Output Location:** `research/topics/`  
+**Naming:** Use kebab-case: `topic-name.md`
+
+#### `design-doc.md`
+
+Template for focused design documents covering a single system or feature (200-400 lines).
+
+**Usage:** System design, feature mechanics, design specifications  
+**Output Location:** `design/`  
+**Naming:** Use kebab-case: `system-name.md`
+
+#### `experiment-report.md`
+
+Template for structured experiment logs with hypothesis, method, results, and decisions.
+
+**Usage:** Experiments, A/B tests, technical prototypes  
+**Output Location:** `research/experiments/`  
+**Naming:** Date-prefixed: `YYYY-MM-DD-experiment-name.md`
+
+#### `playtest-report.md`
+
+Template for documenting playtest sessions with setup, observations, and findings.
+
+**Usage:** Playtest sessions, user testing, feedback collection  
+**Output Location:** `research/experiments/` or project-specific folder  
+**Naming:** Date-prefixed: `YYYY-MM-DD-playtest-name.md`
+
+#### `decision-record.md`
+
+ADR-style template for documenting important design decisions with context and rationale.
+
+**Usage:** Architecture decisions, design trade-offs, significant choices  
+**Output Location:** `design/` or `docs/systems/`  
+**Naming:** Date-prefixed: `YYYY-MM-DD-decision-topic.md` or `decision-record-topic.md`
+
+### Comprehensive Templates (Existing)
 
 #### `game-design-document.md`
 Template for high-level game design documents that establish vision, core mechanics, and design principles.
@@ -63,6 +107,35 @@ Template for standardized issue completion comments ensuring consistent communic
 
 ## Template Usage Guide
 
+### Small, Focused Documents (New Structure)
+
+For small, focused research and design work:
+
+1. **Research Notes**: Use `research-note.md` for focused topics (200-400 lines)
+   - Place in `research/topics/`
+   - Keep notes atomic and focused on one question
+   - Use kebab-case naming
+
+2. **Design Documents**: Use `design-doc.md` for system/feature design (200-400 lines)
+   - Place in `design/` or appropriate subdirectory
+   - Focus on one system or feature
+   - Include front matter metadata
+
+3. **Experiments**: Use `experiment-report.md` for experiments
+   - Place in `research/experiments/`
+   - Use date-prefix: `YYYY-MM-DD-name.md`
+   - Document hypothesis, method, results, decision
+
+4. **Playtests**: Use `playtest-report.md` for playtest sessions
+   - Place in `research/experiments/` or project folder
+   - Use date-prefix: `YYYY-MM-DD-name.md`
+   - Capture observations, pain points, delights
+
+5. **Decisions**: Use `decision-record.md` for important decisions
+   - Place in `design/` or `docs/systems/`
+   - Use ADR format: context, options, decision, consequences
+   - Document trade-offs and rationale
+
 ### Research Issue Templates
 
 For research-related work, use the research issue template system:
@@ -103,6 +176,11 @@ For research-related work, use the research issue template system:
 
 | Document Type | Template | Output Location |
 |---------------|----------|-----------------|
+| Research Note | `research-note.md` | `research/topics/` |
+| Design Doc | `design-doc.md` | `design/` |
+| Experiment | `experiment-report.md` | `research/experiments/` |
+| Playtest | `playtest-report.md` | `research/experiments/` |
+| Decision Record | `decision-record.md` | `design/`, `docs/systems/` |
 | Game Design | `game-design-document.md` | `docs/core/`, `docs/gameplay/` |
 | Feature Spec | `feature-specification.md` | `docs/gameplay/`, `docs/systems/`, `docs/ui-ux/` |
 | Research Report | `research-report.md` | `docs/research/` |

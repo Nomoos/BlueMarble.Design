@@ -1,0 +1,98 @@
+name: Design Task
+description: Create or update game design documentation
+title: "[Design]: "
+labels: ["design"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for design tasks including creating or updating design documents.
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Design Objective
+      description: What design work needs to be done?
+      placeholder: Describe the design task
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Design Category
+      description: What area of design does this cover?
+      options:
+        - Core Mechanics
+        - Economy & Progression
+        - Narrative
+        - User Experience
+        - Balance & Tuning
+        - Systems Design
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What's included and what's not included?
+      placeholder: |
+        **In Scope:**
+        - Item 1
+        - Item 2
+
+        **Out of Scope:**
+        - Item 1
+        - Item 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: What documents or artifacts will be created?
+      placeholder: |
+        - [ ] Design document: filename.md
+        - [ ] Wireframes/mockups
+        - [ ] Update related docs
+      value: |
+        - [ ] Design document
+        - [ ] Update related documents
+    validations:
+      required: true
+
+  - type: textarea
+    id: research
+    attributes:
+      label: Related Research
+      description: Link to any related research or reference documents
+      placeholder: |
+        - Research doc 1
+        - Reference game/system
+        - Academic paper
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this design task is complete?
+      placeholder: |
+        - Criterion 1
+        - Criterion 2
+        - Criterion 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: Dependencies, constraints, or special considerations
+    validations:
+      required: false

@@ -5,17 +5,20 @@ This document demonstrates how to effectively use the BlueMarble.Design reposito
 ## Scenario 1: Creating a Research Roadmap
 
 ### Step 1: Setup Research Issue Structure
+
 1. Create main research roadmap issue using `/templates/research-roadmap-main-issue.md`
 2. Title: "Research Roadmap: Technical Questions and Trade-offs for World Material Storage"
 3. Fill in research areas from `research/RESEARCH_ISSUES_SUMMARY.md`
 
 ### Step 2: Create Individual Research Issues
+
 1. For each research area, create sub-issue using `/templates/research-question-sub-issue.md`
 2. Example: "[Research] Homogeneous Region Collapsing for Octree Optimization"
 3. Link each sub-issue to the main roadmap issue as parent
 4. Set priorities and effort estimates from research summary
 
 ### Step 3: Track Progress
+
 1. Update main issue weekly with overall progress
 2. Use sub-issues for detailed technical findings
 3. Update `research/RESEARCH_ISSUES_SUMMARY.md` as work progresses
@@ -23,16 +26,19 @@ This document demonstrates how to effectively use the BlueMarble.Design reposito
 ## Scenario 2: Adding a New Gameplay Feature
 
 ### Step 1: Research Phase
+
 1. Check existing documentation in `/docs/research/` for relevant studies
 2. If needed, create new research document using `/templates/research-report.md`
 3. Example: `docs/research/research-player-crafting-preferences.md`
 
 ### Step 2: Design Phase
+
 1. Create feature specification using `/templates/feature-specification.md`
 2. Place in appropriate category: `docs/gameplay/spec-crafting-system.md`
 3. Link to related research and dependencies
 
 ### Step 3: Review and Integration
+
 1. Update roadmap in `/roadmap/project-roadmap.md`
 2. Cross-reference with related systems in other documentation categories
 3. Add to appropriate tracking systems
@@ -40,16 +46,19 @@ This document demonstrates how to effectively use the BlueMarble.Design reposito
 ## Scenario 3: World Building Development
 
 ### Step 1: Foundation
+
 1. Review existing world documentation in `/docs/world/`
 2. Create new lore document: `docs/world/lore-northern-kingdoms.md`
 3. Use narrative design guidelines from category README
 
 ### Step 2: Integration
+
 1. Update related gameplay documentation to reflect world elements
 2. Consider UI/UX implications for presenting lore to players
 3. Document any technical requirements in `/docs/systems/`
 
 ### Step 3: Asset Planning
+
 1. Create asset requirements in `/assets/` directory
 2. Link visual design needs to UI/UX documentation
 3. Plan audio requirements in `/docs/audio/`
@@ -81,32 +90,39 @@ This document demonstrates how to effectively use the BlueMarble.Design reposito
 This feature touches multiple categories and demonstrates the interconnected nature of the documentation system.
 
 #### Gameplay Design (`docs/gameplay/`)
+
 - `spec-guild-system.md` - Core mechanics and player experience
 - `balance-guild-progression.md` - Progression and reward balancing
 
 #### World Integration (`docs/world/`)
+
 - `lore-guild-organizations.md` - How guilds fit into world lore
 - `narrative-guild-storylines.md` - Guild-specific quest content
 
 #### Technical Implementation (`docs/systems/`)
+
 - `tdd-guild-infrastructure.md` - Server architecture for guild data
 - `api-guild-management.md` - API specifications for guild operations
 
 #### User Interface (`docs/ui-ux/`)
+
 - `ui-guild-management-interface.md` - Guild management UI design
 - `ux-guild-discovery-flow.md` - Player journey for finding/joining guilds
 
 #### Audio Design (`docs/audio/`)
+
 - `audio-guild-feedback.md` - Audio cues for guild activities
 - `music-guild-halls.md` - Music design for guild spaces
 
 #### Supporting Research (`docs/research/`)
+
 - `research-player-guild-behavior.md` - Player research informing design
 - `research-competitive-guild-systems.md` - Analysis of existing solutions
 
 ## Document Linking and Cross-References
 
 ### Internal Linking Patterns
+
 ```markdown
 <!-- Link to related documents -->
 See also: [Player Progression System](../gameplay/spec-player-progression-system.md)
@@ -119,7 +135,9 @@ Technical requirements: [Guild Infrastructure](../systems/tdd-guild-infrastructu
 ```
 
 ### Dependency Tracking
+
 Each document should clearly identify:
+
 - **Design Dependencies**: Other design documents that must be completed first
 - **Technical Dependencies**: Technical systems required for implementation
 - **Content Dependencies**: Art, audio, or written content needed
@@ -127,18 +145,22 @@ Each document should clearly identify:
 ## Version Control Best Practices
 
 ### Branching Strategy
+
 - Create feature branches for major document additions: `feature/guild-system-design`
 - Use descriptive commit messages: "Add initial guild system specification"
 - Tag major milestone completions: `design-phase-1-complete`
 
 ### Review Process
+
 1. Create pull request for new documents
 2. Assign reviewers from relevant teams
 3. Address feedback and iterate
 4. Merge after approval from designated stakeholders
-5. **Complete the issue** using the [Issue Completion Template](templates/issue-completion-template.md) to ensure proper documentation and communication with the issue creator
+5. **Complete the issue** using the [Issue Completion Template](templates/issue-completion-template.md) to ensure
+   proper documentation and communication with the issue creator
 
 ### Change Management
+
 - Update revision history in documents for major changes
 - Notify stakeholders of significant updates
 - Maintain backward compatibility references for deprecated approaches
@@ -146,6 +168,7 @@ Each document should clearly identify:
 ## Repository Maintenance
 
 ### Regular Activities
+
 - **Weekly**: Update project roadmap with current progress
 - **Monthly**: Review and update README files for accuracy
 - **Quarterly**: Archive completed or deprecated documents
@@ -211,6 +234,7 @@ Issue completed and ready for review.
 ```
 
 ### Quality Assurance
+
 - Verify all internal links are functional
 - Ensure consistent formatting across documents
 - Check that all documents follow established naming conventions
@@ -223,11 +247,13 @@ Issue completed and ready for review.
 This repository has automated PR management to keep your work current:
 
 **What Happens Automatically:**
+
 - Your PR is checked regularly for updates needed from main
 - If outdated, main is automatically merged into your PR branch
 - You receive notifications about updates and any conflicts
 
 **What You Need to Do:**
+
 - Review automated merge commits in your PR
 - Resolve conflicts if automatic merging fails
 - Use GitHub Copilot for conflict resolution assistance
@@ -254,6 +280,7 @@ git push
 ## Getting Started Checklist
 
 For new contributors:
+
 - [ ] Read the main [README.md](../README.md) and [CONTRIBUTING.md](../CONTRIBUTING.md)
 - [ ] Review existing documents in your area of focus
 - [ ] Identify appropriate templates for your contribution type
@@ -261,6 +288,7 @@ For new contributors:
 - [ ] Reach out to team leads with any questions
 
 For project leads:
+
 - [ ] Ensure team members understand the repository structure
 - [ ] Establish review processes for your domain
 - [ ] Set up notifications for changes in your area
@@ -269,4 +297,5 @@ For project leads:
 
 - [ ] Monitor usage patterns and suggest improvements
 
-This structure provides a solid foundation for organizing and maintaining design documentation throughout the BlueMarble project lifecycle.
+This structure provides a solid foundation for organizing and maintaining design documentation throughout the
+BlueMarble project lifecycle.
