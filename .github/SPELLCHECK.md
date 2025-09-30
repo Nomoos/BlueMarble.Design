@@ -43,7 +43,7 @@ codespell -v
 
 ## Common Game Development Terms Already Ignored
 
-- `gameplay`, `metagame`, `routemap`
+- `gameplay`, `metagame`
 - `playtest`, `cooldown`, `wireframes`
 - `unreal`, `ue` (Unreal Engine)
 - `shard`, `durability`, `lifecycle`

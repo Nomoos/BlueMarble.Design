@@ -6,13 +6,13 @@ design:
   - design/**
   - design/**/*
 
-routemap:
-  - routemap/**
-  - routemap/**/*
-
 roadmap:
   - roadmap/**
   - roadmap/**/*
+
+roadmap-guides:
+  - roadmap-guides/**
+  - roadmap-guides/**/*
 
 templates:
   - templates/**

@@ -39,7 +39,7 @@ This document demonstrates how to effectively use the BlueMarble.Design reposito
 
 ### Step 3: Review and Integration
 
-1. Update roadmap in `/roadmap/project-roadmap.md`
+1. Update roadmap in `/roadmap-guides/project-roadmap.md`
 2. Cross-reference with related systems in other documentation categories
 3. Add to appropriate tracking systems
 

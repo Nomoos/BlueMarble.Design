@@ -252,7 +252,7 @@ XP_gain = base_activity_xp * material_modifier * tool_efficiency * (1 - skill_le
 - [Main Game Design Document](../docs/core/game-design-document.md) - Complete GDD
 - [Technical Design Document](../docs/core/technical-design-document.md) - Technical architecture
 - [Player Progression System](../docs/gameplay/spec-player-progression-system.md) - Detailed progression mechanics
-- [Project Roadmap](../roadmap/project-roadmap.md) - Development timeline and priorities
+- [Project Roadmap](../roadmap-guides/project-roadmap.md) - Development timeline and priorities
 
 ## Revision History
 

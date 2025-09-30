@@ -37,12 +37,12 @@ This repository serves as the central hub for all design-related activities in t
 │   │   └── ui-wireframes.md # Interface mockups
 │   ├── island_start_game_design.md # Existing design
 │   └── one-page-design.md  # Existing design
-├── routemap/                # Strategic planning (renamed from roadmap)
+├── roadmap/                 # Strategic planning and roadmap
 │   ├── README.md           # Planning guidelines
 │   ├── roadmap.md          # Big picture by quarter/phase
 │   ├── milestones.md       # Dated deliverables
 │   └── backlog.md          # Groomed research/design tasks
-├── roadmap/                 # Existing roadmap (retained)
+├── roadmap-guides/          # Roadmap management guides
 ├── docs/                    # Comprehensive documentation
 │   ├── core/               # Core design documents (GDD, TDD)
 │   ├── gameplay/           # Gameplay mechanics and systems
