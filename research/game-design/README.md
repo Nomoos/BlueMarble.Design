@@ -208,7 +208,7 @@ mechanics, dependencies, and in-game effects.
 **Key Topics**:
 - Thirteen core basic skills with 4-tier progression (Novice → Journeyman → Expert → Master)
 - Real-world skill foundation translated to engaging gameplay mechanics
-- Detailed progression tiers (20 levels each) with unlockable techniques
+- Extended 1024-level system (256 levels per tier) for deep mastery progression
 - Material quality impact from geological/botanical simulation
 - Skill dependencies and synergies creating specialization paths
 - Visual UI references and crafting interface examples
@@ -218,7 +218,7 @@ mechanics, dependencies, and in-game effects.
 
 **Research Highlights**:
 - Fiber crafting (tailoring) provides accessible entry point for new players
-- Each skill requires 270-440 hours for mastery (encourages specialization)
+- Each skill requires 685-785 hours for complete mastery (encourages specialization)
 - Cross-skill synergies (+10% bonus from related skills) reward diverse builds
 - Practice-based XP with diminishing returns prevents exploitation
 - Four-tier progression mirrors real-world apprenticeship systems
@@ -227,6 +227,7 @@ mechanics, dependencies, and in-game effects.
 - Comprehensive appendices with formulas, XP tables, and quality mappings
 - Combat and survival skills expand beyond crafting for complete gameplay
 - Agricultural systems (farming, animal husbandry) support player-driven economy
+- 1024-level system provides fine-grained progression and long-term goals
 - Success rate formulas and quality tier calculations
 - Specialization paths within each profession (3 per skill, 27 total)
 - Gathering-Assembly integration chain

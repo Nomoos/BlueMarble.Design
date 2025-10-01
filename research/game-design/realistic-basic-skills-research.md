@@ -1,7 +1,7 @@
 # Realistic Basic Skills Candidates - Research Report
 
 **Document Type:** Research Report  
-**Version:** 1.1  
+**Version:** 2.0  
 **Author:** Game Design Research Team  
 **Date:** 2025-10-01  
 **Status:** Final  
@@ -28,7 +28,8 @@ experience.
 - Dependencies between skills create natural specialization paths
 - Visual feedback (UI mockups) critical for player understanding and engagement
 - Fiber-based crafting (textiles) provides excellent entry point for new players
-- Each skill domain requires 3-5 distinct progression tiers with unlockable techniques
+- Each skill domain features 1024 levels across 4 distinct progression tiers (256 levels each)
+- Extended progression allows for fine-grained skill development and long-term mastery goals
 
 ## Table of Contents
 
@@ -51,7 +52,7 @@ experience.
 
 ### Success Criteria
 - Comprehensive documentation of 13+ realistic basic skills
-- Clear progression mechanics for each skill (levels 1-100)
+- Clear progression mechanics for each skill (levels 1-1024)
 - Actionable implementation recommendations
 - Visual references for player-facing interfaces
 - Integration pathways with BlueMarble's geological systems
@@ -82,7 +83,7 @@ to master pattern-making over 7-10 years of apprenticeship.
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Novice Textile Worker (Levels 1-20)
+#### Tier 1: Novice Textile Worker (Levels 1-256)
 - **Unlocked Techniques:**
   - Basic thread spinning from plant fibers
   - Simple cloth weaving (linen, cotton)
@@ -98,7 +99,7 @@ to master pattern-making over 7-10 years of apprenticeship.
 - **Quality Range:** Poor to Standard (20-60%)
 - **XP Gains:** Fast (50-100 XP per craft)
 
-#### Tier 2: Journeyman Tailor (Levels 21-40)
+#### Tier 2: Journeyman Tailor (Levels 257-512)
 - **Unlocked Techniques:**
   - Pattern design and modification
   - Multi-piece garment assembly
@@ -115,7 +116,7 @@ to master pattern-making over 7-10 years of apprenticeship.
 - **Quality Range:** Standard to Fine (50-75%)
 - **XP Gains:** Moderate (25-75 XP per craft)
 
-#### Tier 3: Expert Tailor (Levels 41-70)
+#### Tier 3: Expert Tailor (Levels 513-768)
 - **Unlocked Techniques:**
   - Custom fitted garments (armor, formal wear)
   - Advanced leather hardening
@@ -132,7 +133,7 @@ to master pattern-making over 7-10 years of apprenticeship.
 - **Quality Range:** Fine to Superior (65-85%)
 - **XP Gains:** Slow (15-50 XP per craft)
 
-#### Tier 4: Master Clothier (Levels 71-100)
+#### Tier 4: Master Clothier (Levels 769-1024)
 - **Unlocked Techniques:**
   - Masterwork fashion items (prestige clothing)
   - Enchantment-ready garments (magical integration)
@@ -176,7 +177,7 @@ with master status requiring another 5-10 years.
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Apprentice Smith (Levels 1-20)
+#### Tier 1: Apprentice Smith (Levels 1-256)
 - **Unlocked Techniques:**
   - Basic ore smelting (iron, copper)
   - Simple tool forging (nails, hinges, basic tools)
@@ -193,7 +194,7 @@ with master status requiring another 5-10 years.
 - **XP Gains:** Fast (75-125 XP per craft)
 - **Special:** High failure rate teaches importance of temperature control
 
-#### Tier 2: Journeyman Blacksmith (Levels 21-40)
+#### Tier 2: Journeyman Blacksmith (Levels 257-512)
 - **Unlocked Techniques:**
   - Steel production and carburization
   - Weapon forging (swords, axes, spearheads)
@@ -210,7 +211,7 @@ with master status requiring another 5-10 years.
 - **Quality Range:** Standard to Fine (50-70%)
 - **XP Gains:** Moderate (40-90 XP per craft)
 
-#### Tier 3: Expert Weaponsmith (Levels 41-70)
+#### Tier 3: Expert Weaponsmith (Levels 513-768)
 - **Unlocked Techniques:**
   - Advanced alloy creation (steel variants)
   - Precision weapon crafting (balanced blades)
@@ -227,7 +228,7 @@ with master status requiring another 5-10 years.
 - **Quality Range:** Fine to Superior (68-88%)
 - **XP Gains:** Slow (25-65 XP per craft)
 
-#### Tier 4: Master Bladesmith (Levels 71-100)
+#### Tier 4: Master Bladesmith (Levels 769-1024)
 - **Unlocked Techniques:**
   - Pattern welding (Damascus steel)
   - Masterwork weapons with perfect balance
@@ -272,7 +273,7 @@ transform materials through controlled reactions.
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Hedge Alchemist (Levels 1-20)
+#### Tier 1: Hedge Alchemist (Levels 1-256)
 - **Unlocked Techniques:**
   - Basic herb preparation (drying, grinding)
   - Simple infusions and teas
@@ -289,7 +290,7 @@ transform materials through controlled reactions.
 - **Effect Potency:** 20-50% of maximum
 - **XP Gains:** Fast (60-110 XP per craft)
 
-#### Tier 2: Apprentice Alchemist (Levels 21-40)
+#### Tier 2: Apprentice Alchemist (Levels 257-512)
 - **Unlocked Techniques:**
   - Basic distillation
   - Multi-ingredient potions
@@ -307,7 +308,7 @@ transform materials through controlled reactions.
 - **Effect Potency:** 50-70% of maximum
 - **XP Gains:** Moderate (35-80 XP per craft)
 
-#### Tier 3: Journeyman Alchemist (Levels 41-70)
+#### Tier 3: Journeyman Alchemist (Levels 513-768)
 - **Unlocked Techniques:**
   - Advanced distillation (fractional)
   - Antidotes and cures
@@ -325,7 +326,7 @@ transform materials through controlled reactions.
 - **Effect Potency:** 70-90% of maximum
 - **XP Gains:** Slow (20-60 XP per craft)
 
-#### Tier 4: Master Alchemist (Levels 71-100)
+#### Tier 4: Master Alchemist (Levels 769-1024)
 - **Unlocked Techniques:**
   - Philosopher's stone research
   - Transmutation attempts (lead to gold)
@@ -366,7 +367,7 @@ requiring additional years of mastery.
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Novice Carpenter (Levels 1-20)
+#### Tier 1: Novice Carpenter (Levels 1-256)
 - **Unlocked Techniques:**
   - Basic lumber processing (logs to planks)
   - Simple furniture (tables, chairs, chests)
@@ -382,7 +383,7 @@ requiring additional years of mastery.
 - **Quality Range:** Crude to Standard (35-60%)
 - **XP Gains:** Fast (55-105 XP per craft)
 
-#### Tier 2: Journeyman Carpenter (Levels 21-40)
+#### Tier 2: Journeyman Carpenter (Levels 257-512)
 - **Unlocked Techniques:**
   - Advanced joinery (dovetails, mortise-tenon)
   - Weapon components (bow staves, hafts, shields)
@@ -399,7 +400,7 @@ requiring additional years of mastery.
 - **Quality Range:** Standard to Fine (58-76%)
 - **XP Gains:** Moderate (30-75 XP per craft)
 
-#### Tier 3: Expert Woodworker (Levels 41-70)
+#### Tier 3: Expert Woodworker (Levels 513-768)
 - **Unlocked Techniques:**
   - Complex furniture (wardrobes, beds)
   - Bow crafting (longbows, crossbows)
@@ -416,7 +417,7 @@ requiring additional years of mastery.
 - **Quality Range:** Fine to Superior (72-87%)
 - **XP Gains:** Slow (18-55 XP per craft)
 
-#### Tier 4: Master Craftsman (Levels 71-100)
+#### Tier 4: Master Craftsman (Levels 769-1024)
 - **Unlocked Techniques:**
   - Artistic masterpieces (thrones, musical instruments)
   - Ship components (masts, hulls)
@@ -460,7 +461,7 @@ Cooking is essential for survival and enjoyment. Professional cooks historically
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Camp Cook (Levels 1-20)
+#### Tier 1: Camp Cook (Levels 1-256)
 - **Unlocked Techniques:**
   - Basic fire cooking (roasting, boiling)
   - Simple recipes (stews, breads, roasted meat)
@@ -477,7 +478,7 @@ Cooking is essential for survival and enjoyment. Professional cooks historically
 - **Buff Effects:** Small hunger reduction, minor buffs
 - **XP Gains:** Fast (45-95 XP per craft)
 
-#### Tier 2: Skilled Cook (Levels 21-40)
+#### Tier 2: Skilled Cook (Levels 257-512)
 - **Unlocked Techniques:**
   - Multi-ingredient recipes
   - Advanced preservation (smoking, pickling)
@@ -495,7 +496,7 @@ Cooking is essential for survival and enjoyment. Professional cooks historically
 - **Buff Effects:** Moderate hunger reduction, useful buffs (2-4 hours)
 - **XP Gains:** Moderate (25-70 XP per craft)
 
-#### Tier 3: Master Chef (Levels 41-70)
+#### Tier 3: Master Chef (Levels 513-768)
 - **Unlocked Techniques:**
   - Complex recipes (multi-course meals)
   - Exotic cuisine
@@ -513,7 +514,7 @@ Cooking is essential for survival and enjoyment. Professional cooks historically
 - **Buff Effects:** Strong buffs (4-8 hours), stacking effects
 - **XP Gains:** Slow (15-50 XP per craft)
 
-#### Tier 4: Legendary Chef (Levels 71-100)
+#### Tier 4: Legendary Chef (Levels 769-1024)
 - **Unlocked Techniques:**
   - Feast preparation (group buffs)
   - Alchemical cooking (magical effects)
@@ -553,7 +554,7 @@ cooking, and crafting. Traditional herbalists studied plant properties for years
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Plant Gatherer (Levels 1-20)
+#### Tier 1: Plant Gatherer (Levels 1-256)
 - **Unlocked Techniques:**
   - Common plant identification
   - Basic gathering (flowers, leaves, roots)
@@ -570,7 +571,7 @@ cooking, and crafting. Traditional herbalists studied plant properties for years
 - **Yield:** 1-2 units per plant
 - **XP Gains:** Fast (40-90 XP per gather)
 
-#### Tier 2: Skilled Herbalist (Levels 21-40)
+#### Tier 2: Skilled Herbalist (Levels 257-512)
 - **Unlocked Techniques:**
   - Rare plant identification
   - Sustainable harvesting (replanting)
@@ -587,7 +588,7 @@ cooking, and crafting. Traditional herbalists studied plant properties for years
 - **Yield:** 2-3 units per plant
 - **XP Gains:** Moderate (25-65 XP per gather)
 
-#### Tier 3: Master Herbalist (Levels 41-70)
+#### Tier 3: Master Herbalist (Levels 513-768)
 - **Unlocked Techniques:**
   - Exotic plant identification
   - Magical plant detection
@@ -604,7 +605,7 @@ cooking, and crafting. Traditional herbalists studied plant properties for years
 - **Yield:** 3-4 units per plant
 - **XP Gains:** Slow (15-45 XP per gather)
 
-#### Tier 4: Legendary Herbalist (Levels 71-100)
+#### Tier 4: Legendary Herbalist (Levels 769-1024)
 - **Unlocked Techniques:**
   - Mythical plant identification
   - Living plant communion
@@ -644,7 +645,7 @@ of dangerous work.
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Prospector (Levels 1-20)
+#### Tier 1: Prospector (Levels 1-256)
 - **Unlocked Techniques:**
   - Basic ore identification (iron, copper, tin)
   - Surface mining
@@ -661,7 +662,7 @@ of dangerous work.
 - **Extraction Speed:** Slow (30-45 seconds per unit)
 - **XP Gains:** Fast (60-100 XP per extraction)
 
-#### Tier 2: Miner (Levels 21-40)
+#### Tier 2: Miner (Levels 257-512)
 - **Unlocked Techniques:**
   - Rare ore identification (silver, gold)
   - Tunnel mining and shoring
@@ -678,7 +679,7 @@ of dangerous work.
 - **Extraction Speed:** Moderate (20-30 seconds per unit)
 - **XP Gains:** Moderate (35-75 XP per extraction)
 
-#### Tier 3: Expert Miner (Levels 41-70)
+#### Tier 3: Expert Miner (Levels 513-768)
 - **Unlocked Techniques:**
   - Precious gem extraction
   - Geological formation analysis
@@ -695,7 +696,7 @@ of dangerous work.
 - **Extraction Speed:** Fast (15-20 seconds per unit)
 - **XP Gains:** Slow (20-55 XP per extraction)
 
-#### Tier 4: Master Prospector (Levels 71-100)
+#### Tier 4: Master Prospector (Levels 769-1024)
 - **Unlocked Techniques:**
   - Legendary ore detection (meteorite, mythical metals)
   - Perfect extraction (no waste)
@@ -734,7 +735,7 @@ fishing communities passed down knowledge over generations.
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Novice Angler (Levels 1-20)
+#### Tier 1: Novice Angler (Levels 1-256)
 - **Unlocked Techniques:**
   - Basic rod fishing
   - Common fish identification
@@ -751,7 +752,7 @@ fishing communities passed down knowledge over generations.
 - **Catch Speed:** Slow (2-4 minutes per catch)
 - **XP Gains:** Fast (35-85 XP per catch)
 
-#### Tier 2: Skilled Fisher (Levels 21-40)
+#### Tier 2: Skilled Fisher (Levels 257-512)
 - **Unlocked Techniques:**
   - Specialized techniques (fly fishing, net fishing)
   - Rare fish identification
@@ -768,7 +769,7 @@ fishing communities passed down knowledge over generations.
 - **Catch Speed:** Moderate (1-2 minutes per catch)
 - **XP Gains:** Moderate (25-65 XP per catch)
 
-#### Tier 3: Master Angler (Levels 41-70)
+#### Tier 3: Master Angler (Levels 513-768)
 - **Unlocked Techniques:**
   - Deep sea fishing
   - Trophy fish targeting
@@ -785,7 +786,7 @@ fishing communities passed down knowledge over generations.
 - **Catch Speed:** Fast (30-90 seconds per catch)
 - **XP Gains:** Slow (15-45 XP per catch)
 
-#### Tier 4: Legendary Fisher (Levels 71-100)
+#### Tier 4: Legendary Fisher (Levels 769-1024)
 - **Unlocked Techniques:**
   - Mythical creature fishing (sea monsters)
   - Perfect fish preservation
@@ -825,7 +826,7 @@ Combat effectiveness combines physical conditioning, technique mastery, and comb
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Recruit (Levels 1-20)
+#### Tier 1: Recruit (Levels 1-256)
 - **Unlocked Techniques:**
   - Basic weapon handling (swords, axes, maces)
   - Simple blocking and parrying
@@ -841,7 +842,7 @@ Combat effectiveness combines physical conditioning, technique mastery, and comb
 - **Damage Output:** 70-85% of weapon base damage
 - **XP Gains:** Fast (75-125 XP per combat encounter)
 
-#### Tier 2: Soldier (Levels 21-40)
+#### Tier 2: Soldier (Levels 257-512)
 - **Unlocked Techniques:**
   - Weapon specialization options
   - Advanced blocking and counter-attacks
@@ -857,7 +858,7 @@ Combat effectiveness combines physical conditioning, technique mastery, and comb
 - **Damage Output:** 85-100% of weapon base damage
 - **XP Gains:** Moderate (40-90 XP per encounter)
 
-#### Tier 3: Veteran Warrior (Levels 41-70)
+#### Tier 3: Veteran Warrior (Levels 513-768)
 - **Unlocked Techniques:**
   - Master weapon techniques
   - Advanced combat maneuvers (feints, disarms)
@@ -873,7 +874,7 @@ Combat effectiveness combines physical conditioning, technique mastery, and comb
 - **Damage Output:** 100-115% of weapon base damage
 - **XP Gains:** Slow (20-60 XP per encounter)
 
-#### Tier 4: Master Combatant (Levels 71-100)
+#### Tier 4: Master Combatant (Levels 769-1024)
 - **Unlocked Techniques:**
   - Signature fighting styles
   - Perfect timing (critical hit boost)
@@ -917,7 +918,7 @@ harvest timing. Success depends on knowledge, patience, and hard work.
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Farmhand (Levels 1-20)
+#### Tier 1: Farmhand (Levels 1-256)
 - **Unlocked Techniques:**
   - Basic crop planting (wheat, barley, vegetables)
   - Simple irrigation systems
@@ -934,7 +935,7 @@ harvest timing. Success depends on knowledge, patience, and hard work.
 - **Quality Range:** Poor to Standard (30-60%)
 - **XP Gains:** Fast (45-95 XP per harvest)
 
-#### Tier 2: Farmer (Levels 21-40)
+#### Tier 2: Farmer (Levels 257-512)
 - **Unlocked Techniques:**
   - Crop rotation strategies
   - Advanced irrigation (channels, wells)
@@ -951,7 +952,7 @@ harvest timing. Success depends on knowledge, patience, and hard work.
 - **Quality Range:** Standard to Fine (55-75%)
 - **XP Gains:** Moderate (30-70 XP per harvest)
 
-#### Tier 3: Master Farmer (Levels 41-70)
+#### Tier 3: Master Farmer (Levels 513-768)
 - **Unlocked Techniques:**
   - Greenhouse construction
   - Exotic crop cultivation
@@ -968,7 +969,7 @@ harvest timing. Success depends on knowledge, patience, and hard work.
 - **Quality Range:** Fine to Superior (72-88%)
 - **XP Gains:** Slow (18-55 XP per harvest)
 
-#### Tier 4: Agricultural Savant (Levels 71-100)
+#### Tier 4: Agricultural Savant (Levels 769-1024)
 - **Unlocked Techniques:**
   - Magical crop enhancement
   - Year-round cultivation
@@ -1009,7 +1010,7 @@ of wood properties for selecting the right trees.
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Woodcutter (Levels 1-20)
+#### Tier 1: Woodcutter (Levels 1-256)
 - **Unlocked Techniques:**
   - Basic tree felling (small trees)
   - Log processing to lumber
@@ -1026,7 +1027,7 @@ of wood properties for selecting the right trees.
 - **Cutting Speed:** Slow (45-60 seconds per tree)
 - **XP Gains:** Fast (55-105 XP per tree)
 
-#### Tier 2: Lumberjack (Levels 21-40)
+#### Tier 2: Lumberjack (Levels 257-512)
 - **Unlocked Techniques:**
   - Large tree felling
   - Directional felling (controlled fall)
@@ -1043,7 +1044,7 @@ of wood properties for selecting the right trees.
 - **Cutting Speed:** Moderate (30-40 seconds per tree)
 - **XP Gains:** Moderate (30-75 XP per tree)
 
-#### Tier 3: Master Forester (Levels 41-70)
+#### Tier 3: Master Forester (Levels 513-768)
 - **Unlocked Techniques:**
   - Rare tree identification and harvesting
   - Sustainable forestry practices
@@ -1060,7 +1061,7 @@ of wood properties for selecting the right trees.
 - **Cutting Speed:** Fast (20-30 seconds per tree)
 - **XP Gains:** Slow (18-55 XP per tree)
 
-#### Tier 4: Legendary Forester (Levels 71-100)
+#### Tier 4: Legendary Forester (Levels 769-1024)
 - **Unlocked Techniques:**
   - Magical tree detection
   - Perfect lumber extraction (zero waste)
@@ -1100,7 +1101,7 @@ patience, observation skills, and deep understanding of animal needs.
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Stable Hand (Levels 1-20)
+#### Tier 1: Stable Hand (Levels 1-256)
 - **Unlocked Techniques:**
   - Basic animal care (feeding, watering)
   - Simple health checks
@@ -1117,7 +1118,7 @@ patience, observation skills, and deep understanding of animal needs.
 - **Quality Range:** Standard animals (40-60% quality)
 - **XP Gains:** Fast (50-100 XP per animal raised)
 
-#### Tier 2: Herder (Levels 21-40)
+#### Tier 2: Herder (Levels 257-512)
 - **Unlocked Techniques:**
   - Selective breeding basics
   - Disease identification and treatment
@@ -1134,7 +1135,7 @@ patience, observation skills, and deep understanding of animal needs.
 - **Quality Range:** Fine animals (60-78% quality)
 - **XP Gains:** Moderate (30-75 XP per animal)
 
-#### Tier 3: Master Breeder (Levels 41-70)
+#### Tier 3: Master Breeder (Levels 513-768)
 - **Unlocked Techniques:**
   - Advanced breeding programs (traits)
   - Exotic animal handling
@@ -1151,7 +1152,7 @@ patience, observation skills, and deep understanding of animal needs.
 - **Quality Range:** Superior animals (75-90% quality)
 - **XP Gains:** Slow (18-55 XP per animal)
 
-#### Tier 4: Legendary Rancher (Levels 71-100)
+#### Tier 4: Legendary Rancher (Levels 769-1024)
 - **Unlocked Techniques:**
   - Magical animal bonding
   - Mythical creature care (griffins, pegasi)
@@ -1197,7 +1198,7 @@ techniques. Quick thinking and steady hands save lives.
 
 **Skill Progression Tiers:**
 
-#### Tier 1: Field Medic (Levels 1-20)
+#### Tier 1: Field Medic (Levels 1-256)
 - **Unlocked Techniques:**
   - Basic wound cleaning and bandaging
   - Bleeding control
@@ -1215,7 +1216,7 @@ techniques. Quick thinking and steady hands save lives.
 - **Treatment Speed:** 20-30 seconds
 - **XP Gains:** Fast (60-110 XP per treatment)
 
-#### Tier 2: Combat Medic (Levels 21-40)
+#### Tier 2: Combat Medic (Levels 257-512)
 - **Unlocked Techniques:**
   - Advanced wound suturing
   - Poison/antidote basics
@@ -1233,7 +1234,7 @@ techniques. Quick thinking and steady hands save lives.
 - **Treatment Speed:** 15-25 seconds
 - **XP Gains:** Moderate (35-80 XP per treatment)
 
-#### Tier 3: Master Healer (Levels 41-70)
+#### Tier 3: Master Healer (Levels 513-768)
 - **Unlocked Techniques:**
   - Complex surgery
   - Disease curing
@@ -1251,7 +1252,7 @@ techniques. Quick thinking and steady hands save lives.
 - **Treatment Speed:** 10-20 seconds
 - **XP Gains:** Slow (20-60 XP per treatment)
 
-#### Tier 4: Legendary Physician (Levels 71-100)
+#### Tier 4: Legendary Physician (Levels 769-1024)
 - **Unlocked Techniques:**
   - Resurrection techniques (near-death recovery)
   - Curse/hex removal
@@ -1307,14 +1308,16 @@ XP_Gained = Base_XP × Difficulty_Multiplier × Material_Quality × Skill_Gap_Mo
 
 **Level Progression Curve:**
 ```
-XP_Required(level) = 100 × (level^1.8)
+XP_Required(level) = 8 × (level^1.08)
 
 Examples:
-Level 1 → 2:     100 XP
-Level 10 → 11:   1,995 XP
-Level 20 → 21:   7,241 XP
-Level 50 → 51:   69,644 XP
-Level 100:       Total ~2.5 million XP
+Level 1 → 2:     10 XP
+Level 10 → 11:   96 XP
+Level 50 → 51:   546 XP
+Level 100 → 101: 1,156 XP
+Level 256 → 257: 3,191 XP
+Level 512 → 513: 6,746 XP
+Level 1024:      Total ~7.0 million XP
 ```
 
 **Success Rate Formula:**
@@ -1340,12 +1343,12 @@ Success_Modifier:
 To encourage specialization and prevent power leveling:
 
 **Skill Tiers and Time Investment:**
-- **Novice (1-20):** 10-20 hours of focused practice
-- **Journeyman (21-40):** 30-50 hours additional
-- **Expert (41-70):** 80-120 hours additional
-- **Master (71-100):** 150-250 hours additional
+- **Novice (1-256):** 35-45 hours of focused practice
+- **Journeyman (257-512):** 120-140 hours additional
+- **Expert (513-768):** 210-240 hours additional
+- **Master (769-1024):** 320-360 hours additional
 
-**Total to Master:** 270-440 hours per skill (realistic specialization)
+**Total to Master:** 685-785 hours per skill (realistic specialization with deep mastery)
 
 ### Cross-Skill Synergies
 
@@ -1608,19 +1611,22 @@ Gathering_Skill: Player skill level (0.5-1.2)
 
 | Level | XP Required | Cumulative XP | Real-Time Hours* |
 |-------|-------------|---------------|------------------|
-| 1     | 100         | 100           | 0.2              |
-| 10    | 1,995       | 12,508        | 5                |
-| 20    | 7,241       | 80,745        | 20               |
-| 30    | 16,424      | 229,968       | 50               |
-| 40    | 29,686      | 485,619       | 90               |
-| 50    | 47,044      | 867,622       | 150              |
-| 60    | 68,511      | 1,398,054     | 220              |
-| 70    | 94,093      | 2,099,012     | 300              |
-| 80    | 123,791     | 3,093,600     | 390              |
-| 90    | 157,606     | 4,404,931     | 500              |
-| 100   | 195,536     | 6,056,326     | 650              |
+| 1     | 10          | 10            | 0.0              |
+| 10    | 96          | 508           | 0.1              |
+| 50    | 546         | 13,401        | 1.3              |
+| 100   | 1,156       | 56,128        | 5.6              |
+| 256   | 3,191       | 394,271       | 39               |
+| 512   | 6,746       | 1,663,886     | 166              |
+| 768   | 10,453      | 3,864,760     | 386              |
+| 1024  | 14,263      | 7,028,455     | 703              |
 
 *Estimated hours assume average crafting activity, not continuous grinding
+
+**Tier Boundaries:**
+- Tier 1 completion (Level 256): ~39 hours
+- Tier 2 completion (Level 512): ~166 hours cumulative
+- Tier 3 completion (Level 768): ~386 hours cumulative  
+- Tier 4 completion (Level 1024): ~703 hours cumulative
 
 ### Appendix D: Success Rate Calculations
 
@@ -1688,12 +1694,13 @@ meaningful choices, and deep integration with BlueMarble's geological simulation
 
 **Key Takeaways:**
 1. **Thirteen Core Skills** provide diverse gameplay opportunities across crafting, combat, agriculture, and survival
-2. **Four-Tier Progression** (20 levels per tier) creates clear advancement for all skill types
+2. **Four-Tier Progression** (256 levels per tier, 1024 total) creates clear advancement with fine-grained mastery
 3. **Material Quality** from geological/botanical systems drives crafting depth
 4. **Skill Dependencies** encourage specialization and player cooperation
 5. **Visual UI Elements** communicate complex systems clearly to players
 6. **Combat & Survival Skills** expand beyond crafting to complete gameplay experience
 7. **Agricultural Systems** (Farming, Animal Husbandry) support player-driven economy
+8. **Extended Level System** (1024 levels) provides long-term progression goals and meaningful incremental improvements
 
 **Next Steps:**
 1. Implement Phase 1 core skills (Tailoring, Cooking, Herbalism, Mining, Farming)
@@ -1711,3 +1718,4 @@ meaningful choices, and deep integration with BlueMarble's geological simulation
 |---------|------|---------|
 | 1.0 | 2025-10-01 | Initial comprehensive research report |
 | 1.1 | 2025-10-01 | Added Combat, Farming, Forestry, Animal Husbandry, and First Aid skills |
+| 2.0 | 2025-10-01 | Expanded to 1024-level system (256 levels per tier) with adjusted XP progression |
