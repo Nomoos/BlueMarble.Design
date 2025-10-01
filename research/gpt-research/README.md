@@ -1,6 +1,8 @@
 # GPT Research Archive
 
-This directory contains research and analysis generated from ChatGPT conversations related to the BlueMarble project. These conversations often explore advanced concepts, prototypes, and design discussions that inform the project's direction.
+This directory contains research and analysis generated from ChatGPT conversations related to
+the BlueMarble project. These conversations often explore advanced concepts, prototypes, and
+design discussions that inform the project's direction.
 
 ## 🚀 Quick Start
 
@@ -66,6 +68,14 @@ Create the following files:
 - Add to RESEARCH_ISSUES_SUMMARY.md if applicable
 
 ## Current Research Items
+
+### Imported
+
+1. **GitHub Labels Refactoring** - [conversation-t_68dcf896](conversation-t_68dcf896/)
+   - URL: https://chatgpt.com/s/t_68dcf8967b5081919b2e581151288bcd
+   - Status: ✅ Imported (2025-10-01)
+   - Topic: Analysis and recommendations for refactoring GitHub labels configuration
+   - Key Focus: Label organization, auto-labeling coverage, implementation strategy
 
 ### Pending Import
 
