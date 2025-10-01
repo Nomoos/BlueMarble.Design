@@ -1,7 +1,7 @@
 # Realistic Basic Skills Candidates - Research Report
 
 **Document Type:** Research Report  
-**Version:** 2.0  
+**Version:** 2.1  
 **Author:** Game Design Research Team  
 **Date:** 2025-10-01  
 **Status:** Final  
@@ -30,6 +30,7 @@ experience.
 - Fiber-based crafting (textiles) provides excellent entry point for new players
 - Each skill domain features 1024 levels across 4 distinct progression tiers (256 levels each)
 - Extended progression allows for fine-grained skill development and long-term mastery goals
+- Offline progression system enables characters to develop through routines while players are offline
 
 ## Table of Contents
 
@@ -1363,6 +1364,182 @@ Examples:
 - Cooking Level 30 provides +3 effective levels to Alchemy
 ```
 
+### Offline Progression System
+
+**Concept Overview:**
+BlueMarble features an innovative offline progression system where characters continue to develop skills through 
+routine activities even when players are offline. This system respects player time investment while maintaining 
+the authenticity of skill development through practice.
+
+**Core Mechanics:**
+
+**1. Daily Routine Assignment:**
+Before logging off, players can assign their character to a daily routine that represents their character's 
+activities while offline:
+
+```
+Available Routines:
+- Crafting Workshop (Blacksmithing, Tailoring, Woodworking, etc.)
+- Gathering Expedition (Mining, Herbalism, Forestry, Fishing)
+- Farm Maintenance (Farming, Animal Husbandry)
+- Combat Training (Combat, First Aid practice)
+- Alchemy Lab Work (Alchemy, Cooking experiments)
+```
+
+**2. Offline XP Accumulation:**
+
+```
+Offline_XP_Per_Hour = Base_Offline_Rate × Routine_Efficiency × Facility_Quality × Rest_Bonus
+
+Base_Offline_Rate: 20% of active play rate (rewards active play while allowing progress)
+Routine_Efficiency: 0.5-1.0 based on skill level and routine match
+Facility_Quality: 0.8-1.2 based on workshop/facility upgrades
+Rest_Bonus: 1.0-1.5x for first 8 hours (represents well-rested productivity)
+
+Maximum Offline Time: 7 days (168 hours) before diminishing returns
+```
+
+**3. Routine Effectiveness:**
+
+Different routines provide varying XP rates based on character preparation:
+
+```
+High Effectiveness (80-100% of base rate):
+- Routine matches primary skill focus
+- Character has quality tools/facilities
+- Adequate material stockpiles
+- Recent active play in same skill
+
+Medium Effectiveness (50-80% of base rate):
+- Routine matches secondary skills
+- Standard tools/facilities
+- Some material limitations
+- Moderate recent activity
+
+Low Effectiveness (20-50% of base rate):
+- Mismatched routine to skill levels
+- Poor tools/facilities
+- Insufficient materials
+- No recent active play
+```
+
+**4. Material Consumption & Output:**
+
+Offline routines consume and produce materials realistically:
+
+```
+Crafting Routines:
+- Consume raw materials from character storage
+- Produce items based on skill level and success rates
+- Quality follows normal distribution (slightly lower average than active play)
+- Failed attempts consume materials but provide learning XP
+
+Gathering Routines:
+- Generate resources over time
+- Quality and quantity based on skill level
+- Location resource availability matters
+- Tool durability decreases normally
+
+Agricultural Routines:
+- Crops grow according to real-time cycles
+- Animals require feeding from storage
+- Harvests occur automatically at maturity
+- Quality varies with care level
+```
+
+**5. Skill Point Accumulation:**
+
+Characters can earn skill points through offline progression, but at reduced rates:
+
+```
+Offline Skill Point Rate:
+- Active Play: 1 skill point per level
+- Offline Play: 0.5 skill points per level (capped)
+- Bonus: +0.5 skill points if routine perfectly matches leveled skill
+
+Maximum Offline Skill Points: 10 per week (prevents pure offline progression)
+Encourages: Regular login to spend points and adjust routines
+```
+
+**6. Risk and Reward Balance:**
+
+Offline progression includes realistic risks:
+
+```
+Potential Events (Random, Low Probability):
+- Workshop accidents (minor tool damage, small XP loss)
+- Resource spoilage (food, organic materials decay)
+- Weather impacts (farming, gathering affected)
+- Facility wear (requires maintenance investment)
+- Breakthrough moments (rare +10% XP bonus for session)
+
+Mitigation:
+- Higher facilities quality reduces risk
+- Appropriate routine selection minimizes problems
+- Insurance or guild benefits can protect against loss
+- Active play before offline sessions "prepares" character better
+```
+
+**7. Social Integration:**
+
+Offline progression integrates with multiplayer systems:
+
+```
+Guild Benefits:
+- Guild workshops provide higher facility quality
+- Shared material pools support continuous routines
+- Guild members can maintain others' facilities
+- Group routines (e.g., communal farming) provide bonuses
+
+Player Economy:
+- Offline-produced items tradeable in markets
+- Creates steady supply of basic goods
+- Maintains economic activity during low-population times
+- Enables specialization (dedicated crafters, gatherers)
+```
+
+**8. Implementation Considerations:**
+
+**Balance Goals:**
+- Offline XP rate: ~20-30% of active play rate
+- Encourages regular login (daily/every few days optimal)
+- Prevents pure AFK progression (max efficiency requires preparation)
+- Respects player time (busy players can still progress)
+- Maintains skill value (mastery still requires significant time)
+
+**Technical Requirements:**
+- Server-side routine processing (check on login)
+- Material inventory tracking during offline period
+- Event simulation for offline activities
+- Anti-abuse measures (rate limiting, diminishing returns)
+
+**Player Communication:**
+```
+On Login Summary:
+"While you were away for 2 days, 4 hours:
+- Blacksmithing: +2,450 XP (Levels 245 → 247)
+- Crafted: 15 Iron Daggers (3 Fine quality)
+- Consumed: 45 Iron Ingots, 15 Oak Handles
+- Earned: 1.5 Skill Points
+- Workshop status: Good (98% durability)
+- Next routine: [Modify] [Continue]"
+```
+
+**Design Philosophy:**
+
+The offline progression system acknowledges that MMO players have varying schedules while maintaining 
+the value of active engagement. By providing meaningful but limited offline progression:
+
+1. **Respects Player Time:** Casual players can remain competitive
+2. **Rewards Active Play:** Active play remains 3-5x more efficient
+3. **Maintains Authenticity:** Characters "live" in the world continuously
+4. **Enables Specialization:** Dedicated crafters/gatherers viable
+5. **Supports Economy:** Consistent material production and consumption
+6. **Encourages Community:** Guild benefits and social features enhance offline progression
+
+This system transforms downtime into meaningful character development while preserving the core 
+gameplay loop and the satisfaction of active skill mastery.
+
 ---
 
 ## Skill Dependencies and Synergies
@@ -1701,6 +1878,7 @@ meaningful choices, and deep integration with BlueMarble's geological simulation
 6. **Combat & Survival Skills** expand beyond crafting to complete gameplay experience
 7. **Agricultural Systems** (Farming, Animal Husbandry) support player-driven economy
 8. **Extended Level System** (1024 levels) provides long-term progression goals and meaningful incremental improvements
+9. **Offline Progression** allows characters to develop through routines while respecting player time and maintaining active play value
 
 **Next Steps:**
 1. Implement Phase 1 core skills (Tailoring, Cooking, Herbalism, Mining, Farming)
@@ -1708,8 +1886,9 @@ meaningful choices, and deep integration with BlueMarble's geological simulation
 3. Develop material quality algorithms integrated with geological simulation
 4. Create crafting UI based on fiber crafting example
 5. Design combat and healing interfaces
-6. Test progression curves with player feedback
-7. Iterate on balance and timing based on real gameplay data
+6. Implement offline progression system with routine assignment
+7. Test progression curves with player feedback
+8. Iterate on balance and timing based on real gameplay data
 
 ---
 
@@ -1719,3 +1898,4 @@ meaningful choices, and deep integration with BlueMarble's geological simulation
 | 1.0 | 2025-10-01 | Initial comprehensive research report |
 | 1.1 | 2025-10-01 | Added Combat, Farming, Forestry, Animal Husbandry, and First Aid skills |
 | 2.0 | 2025-10-01 | Expanded to 1024-level system (256 levels per tier) with adjusted XP progression |
+| 2.1 | 2025-10-01 | Added offline progression system with routine-based skill development |

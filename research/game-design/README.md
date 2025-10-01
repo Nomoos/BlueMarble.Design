@@ -228,6 +228,7 @@ mechanics, dependencies, and in-game effects.
 - Combat and survival skills expand beyond crafting for complete gameplay
 - Agricultural systems (farming, animal husbandry) support player-driven economy
 - 1024-level system provides fine-grained progression and long-term goals
+- Offline progression system enables skill development through character routines while players are offline
 - Success rate formulas and quality tier calculations
 - Specialization paths within each profession (3 per skill, 27 total)
 - Gathering-Assembly integration chain
