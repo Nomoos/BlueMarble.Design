@@ -1,7 +1,7 @@
 # Realistic Basic Skills Candidates - Research Report
 
 **Document Type:** Research Report  
-**Version:** 1.0  
+**Version:** 1.1  
 **Author:** Game Design Research Team  
 **Date:** 2025-10-01  
 **Status:** Final  
@@ -15,10 +15,11 @@
 
 This research explores and documents realistic basic skills for BlueMarble, focusing on authenticity and 
 practical use in gameplay. The analysis covers traditional skill domains including tailoring, blacksmithing, 
-alchemy, woodworking, cooking, herbalism, and more. Each skill is assessed for realism, progression systems, 
-dependencies, and in-game effects. The document provides actionable recommendations with visual references 
-for implementation, building on BlueMarble's geological simulation foundation to create an immersive and 
-authentic crafting experience.
+alchemy, woodworking, cooking, herbalism, mining, fishing, combat, farming, forestry, animal husbandry, 
+and first aid. Each skill is assessed for realism, progression systems, dependencies, and in-game effects. 
+The document provides actionable recommendations with visual references for implementation, building on 
+BlueMarble's geological simulation foundation to create an immersive and authentic crafting and survival 
+experience.
 
 **Key Findings:**
 - Basic skills should mirror real-world learning curves with apprentice → journeyman → master progression
@@ -49,7 +50,7 @@ authentic crafting experience.
 4. How can UI/UX communicate complex skill interactions clearly?
 
 ### Success Criteria
-- Comprehensive documentation of 8-12 realistic basic skills
+- Comprehensive documentation of 13+ realistic basic skills
 - Clear progression mechanics for each skill (levels 1-100)
 - Actionable implementation recommendations
 - Visual references for player-facing interfaces
@@ -815,6 +816,479 @@ fishing communities passed down knowledge over generations.
 
 ---
 
+### 9. Combat - Armed and Unarmed Fighting
+
+**Real-World Foundation:**
+Combat skills encompass martial training, weapon proficiency, and tactical awareness. Historical warriors 
+trained for years in specific weapon schools, from medieval European swordsmanship to Eastern martial arts. 
+Combat effectiveness combines physical conditioning, technique mastery, and combat experience.
+
+**Skill Progression Tiers:**
+
+#### Tier 1: Recruit (Levels 1-20)
+- **Unlocked Techniques:**
+  - Basic weapon handling (swords, axes, maces)
+  - Simple blocking and parrying
+  - Basic footwork and positioning
+  - Shield use fundamentals
+  
+- **Combat Capabilities:**
+  - Simple attack combos (2-3 moves)
+  - Basic defensive stance
+  - Weapon maintenance knowledge
+  
+- **Success Rates:** 50-65% hit chance vs equal level
+- **Damage Output:** 70-85% of weapon base damage
+- **XP Gains:** Fast (75-125 XP per combat encounter)
+
+#### Tier 2: Soldier (Levels 21-40)
+- **Unlocked Techniques:**
+  - Weapon specialization options
+  - Advanced blocking and counter-attacks
+  - Combat awareness (detecting flanking)
+  - Dual-wielding basics
+  
+- **Combat Capabilities:**
+  - Extended combos (4-6 moves)
+  - Active defense (riposte, deflect)
+  - Tactical positioning bonuses
+  
+- **Success Rates:** 65-80% hit chance vs equal level
+- **Damage Output:** 85-100% of weapon base damage
+- **XP Gains:** Moderate (40-90 XP per encounter)
+
+#### Tier 3: Veteran Warrior (Levels 41-70)
+- **Unlocked Techniques:**
+  - Master weapon techniques
+  - Advanced combat maneuvers (feints, disarms)
+  - Armor weak point targeting
+  - Combat meditation (stamina management)
+  
+- **Combat Capabilities:**
+  - Complex combos (7-10 moves)
+  - Predictive defense
+  - Environmental awareness
+  
+- **Success Rates:** 80-90% hit chance vs equal level
+- **Damage Output:** 100-115% of weapon base damage
+- **XP Gains:** Slow (20-60 XP per encounter)
+
+#### Tier 4: Master Combatant (Levels 71-100)
+- **Unlocked Techniques:**
+  - Signature fighting styles
+  - Perfect timing (critical hit boost)
+  - Battle trance (enhanced reflexes)
+  - Teaching combat techniques
+  
+- **Combat Capabilities:**
+  - Flawless execution
+  - Adaptive fighting style
+  - Leadership bonuses (group combat)
+  
+- **Success Rates:** 90-96% hit chance vs equal level
+- **Damage Output:** 115-135% of weapon base damage
+- **XP Gains:** Very Slow (10-35 XP per encounter)
+
+**In-Game Effects:**
+- **Damage Output:** Higher skill = more consistent and higher damage
+- **Defense:** Better blocking, parrying, and dodge chance
+- **Weapon Versatility:** Unlock multiple weapon types and styles
+- **Stamina Efficiency:** Reduced stamina cost for attacks at higher levels
+- **PvP/PvE Balance:** Skill matters more than gear at high levels
+
+**Skill Dependencies:**
+- **Blacksmithing:** For weapon maintenance and understanding
+- **First Aid:** For self-healing in combat situations
+- **Hunting:** Complementary for tracking and positioning
+
+**Specialization Paths:**
+- **Swordmaster:** Focus on blade weapons, precision strikes
+- **Berserker:** Two-handed weapons, high damage output
+- **Guardian:** Shield and defense, group protection
+
+---
+
+### 10. Farming - Agricultural Cultivation
+
+**Real-World Foundation:**
+Farming is the backbone of civilization, involving crop cultivation, soil management, and seasonal planning. 
+Traditional farmers learned through generations, understanding weather patterns, crop rotation, and optimal 
+harvest timing. Success depends on knowledge, patience, and hard work.
+
+**Skill Progression Tiers:**
+
+#### Tier 1: Farmhand (Levels 1-20)
+- **Unlocked Techniques:**
+  - Basic crop planting (wheat, barley, vegetables)
+  - Simple irrigation systems
+  - Soil preparation and tilling
+  - Weed identification and removal
+  
+- **Material Sources:**
+  - Common seeds (wheat, carrots, potatoes)
+  - Basic farming tools (hoe, rake, watering can)
+  - Compost and manure
+  
+- **Success Rates:** 60-75% crop survival rate
+- **Yield:** 1-2 units per plant
+- **Quality Range:** Poor to Standard (30-60%)
+- **XP Gains:** Fast (45-95 XP per harvest)
+
+#### Tier 2: Farmer (Levels 21-40)
+- **Unlocked Techniques:**
+  - Crop rotation strategies
+  - Advanced irrigation (channels, wells)
+  - Pest management
+  - Multiple crop types (grains, legumes, vegetables)
+  
+- **Material Sources:**
+  - Quality seeds (selective breeding)
+  - Improved tools
+  - Fertilizers and soil amendments
+  
+- **Success Rates:** 75-85% crop survival rate
+- **Yield:** 2-3 units per plant
+- **Quality Range:** Standard to Fine (55-75%)
+- **XP Gains:** Moderate (30-70 XP per harvest)
+
+#### Tier 3: Master Farmer (Levels 41-70)
+- **Unlocked Techniques:**
+  - Greenhouse construction
+  - Exotic crop cultivation
+  - Selective breeding programs
+  - Climate adaptation techniques
+  
+- **Material Sources:**
+  - Rare seeds (imported varieties)
+  - Specialized fertilizers
+  - Advanced irrigation systems
+  
+- **Success Rates:** 85-92% crop survival rate
+- **Yield:** 3-4 units per plant
+- **Quality Range:** Fine to Superior (72-88%)
+- **XP Gains:** Slow (18-55 XP per harvest)
+
+#### Tier 4: Agricultural Savant (Levels 71-100)
+- **Unlocked Techniques:**
+  - Magical crop enhancement
+  - Year-round cultivation
+  - Hybrid crop creation
+  - Large-scale farm management
+  
+- **Material Sources:**
+  - Legendary seeds (magical properties)
+  - Alchemical growth enhancers
+  - Automated farming systems
+  
+- **Success Rates:** 92-98% crop survival rate
+- **Yield:** 4-5 units per plant
+- **Quality Range:** Superior to Legendary (85-99%)
+- **XP Gains:** Very Slow (10-40 XP per harvest)
+
+**In-Game Effects:**
+- **Food Supply:** Primary source of cooking ingredients
+- **Economic Stability:** Reliable income through crop sales
+- **Self-Sufficiency:** Reduced dependence on markets
+- **Community Support:** Feed guilds and settlements
+- **Land Development:** Transform wilderness into productive farms
+
+**Skill Dependencies:**
+- **Herbalism:** For understanding plant properties
+- **Alchemy:** For fertilizers and growth enhancers
+- **Cooking:** Main consumer of farmed crops
+- **Animal Husbandry:** Complementary for mixed farming
+
+---
+
+### 11. Forestry - Tree Harvesting and Woodcutting
+
+**Real-World Foundation:**
+Forestry combines physical labor with ecological knowledge. Traditional lumberjacks learned tree identification, 
+safe felling techniques, and sustainable harvesting. The skill requires strength, precision, and understanding 
+of wood properties for selecting the right trees.
+
+**Skill Progression Tiers:**
+
+#### Tier 1: Woodcutter (Levels 1-20)
+- **Unlocked Techniques:**
+  - Basic tree felling (small trees)
+  - Log processing to lumber
+  - Tree species identification
+  - Safe cutting practices
+  
+- **Material Sources:**
+  - Common trees (pine, birch, oak)
+  - Basic axes and saws
+  - Accessible forests
+  
+- **Success Rates:** 70-80% clean cut
+- **Quality Preservation:** 50-65% of tree quality retained
+- **Cutting Speed:** Slow (45-60 seconds per tree)
+- **XP Gains:** Fast (55-105 XP per tree)
+
+#### Tier 2: Lumberjack (Levels 21-40)
+- **Unlocked Techniques:**
+  - Large tree felling
+  - Directional felling (controlled fall)
+  - Branch processing
+  - Log transport optimization
+  
+- **Material Sources:**
+  - Hardwoods (maple, ash, walnut)
+  - Quality cutting tools
+  - Dense forests
+  
+- **Success Rates:** 80-88% clean cut
+- **Quality Preservation:** 65-80% of tree quality retained
+- **Cutting Speed:** Moderate (30-40 seconds per tree)
+- **XP Gains:** Moderate (30-75 XP per tree)
+
+#### Tier 3: Master Forester (Levels 41-70)
+- **Unlocked Techniques:**
+  - Rare tree identification and harvesting
+  - Sustainable forestry practices
+  - Ancient tree felling (very large/old trees)
+  - Wood quality assessment
+  
+- **Material Sources:**
+  - Exotic hardwoods (ebony, mahogany, teak)
+  - Master-grade axes
+  - Remote old-growth forests
+  
+- **Success Rates:** 88-94% clean cut
+- **Quality Preservation:** 80-90% of tree quality retained
+- **Cutting Speed:** Fast (20-30 seconds per tree)
+- **XP Gains:** Slow (18-55 XP per tree)
+
+#### Tier 4: Legendary Forester (Levels 71-100)
+- **Unlocked Techniques:**
+  - Magical tree detection
+  - Perfect lumber extraction (zero waste)
+  - Living wood harvesting (regrowth)
+  - Forest cultivation and management
+  
+- **Material Sources:**
+  - Legendary trees (ancient/magical)
+  - Enchanted cutting tools
+  - Sacred groves
+  
+- **Success Rates:** 94-99% clean cut
+- **Quality Preservation:** 90-100% of tree quality retained
+- **Cutting Speed:** Very Fast (15-20 seconds per tree)
+- **XP Gains:** Very Slow (10-35 XP per tree)
+
+**In-Game Effects:**
+- **Resource Supply:** Primary wood source for construction and crafting
+- **Economic Value:** High-quality lumber commands premium prices
+- **Environmental Impact:** Sustainable practices vs. clear-cutting choices
+- **Exploration:** Finding rare trees leads to new areas
+- **Building Materials:** Essential for structures and ships
+
+**Skill Dependencies:**
+- **Woodworking:** Main consumer of harvested lumber
+- **Farming:** Understanding of plant growth and ecology
+- **Survival:** Navigation and wilderness knowledge
+
+---
+
+### 12. Animal Husbandry - Livestock Care and Breeding
+
+**Real-World Foundation:**
+Animal husbandry involves raising, breeding, and caring for domestic animals. Traditional herders and 
+farmers learned animal behavior, breeding selection, health care, and optimal feeding. Success requires 
+patience, observation skills, and deep understanding of animal needs.
+
+**Skill Progression Tiers:**
+
+#### Tier 1: Stable Hand (Levels 1-20)
+- **Unlocked Techniques:**
+  - Basic animal care (feeding, watering)
+  - Simple health checks
+  - Common animal behavior recognition
+  - Basic training (horses, cattle)
+  
+- **Animal Types:**
+  - Common livestock (chickens, pigs, cows)
+  - Basic working animals (horses, oxen)
+  - Simple housing and pens
+  
+- **Success Rates:** 65-75% animal survival rate
+- **Breeding Success:** 40-55% successful births
+- **Quality Range:** Standard animals (40-60% quality)
+- **XP Gains:** Fast (50-100 XP per animal raised)
+
+#### Tier 2: Herder (Levels 21-40)
+- **Unlocked Techniques:**
+  - Selective breeding basics
+  - Disease identification and treatment
+  - Advanced training (multiple commands)
+  - Herd management
+  
+- **Animal Types:**
+  - Quality livestock (breeding stock)
+  - Specialized animals (war horses, dairy cattle)
+  - Improved facilities (barns, stables)
+  
+- **Success Rates:** 75-85% animal survival rate
+- **Breeding Success:** 55-70% successful births
+- **Quality Range:** Fine animals (60-78% quality)
+- **XP Gains:** Moderate (30-75 XP per animal)
+
+#### Tier 3: Master Breeder (Levels 41-70)
+- **Unlocked Techniques:**
+  - Advanced breeding programs (traits)
+  - Exotic animal handling
+  - Animal psychology and bonding
+  - Veterinary medicine
+  
+- **Animal Types:**
+  - Rare breeds (special properties)
+  - Exotic creatures (llamas, camels)
+  - Premium facilities (heated stables)
+  
+- **Success Rates:** 85-92% animal survival rate
+- **Breeding Success:** 70-85% successful births
+- **Quality Range:** Superior animals (75-90% quality)
+- **XP Gains:** Slow (18-55 XP per animal)
+
+#### Tier 4: Legendary Rancher (Levels 71-100)
+- **Unlocked Techniques:**
+  - Magical animal bonding
+  - Mythical creature care (griffins, pegasi)
+  - Perfect trait breeding
+  - Large-scale ranch operations
+  
+- **Animal Types:**
+  - Legendary animals (unique properties)
+  - Magical creatures
+  - State-of-the-art facilities
+  
+- **Success Rates:** 92-98% animal survival rate
+- **Breeding Success:** 85-95% successful births
+- **Quality Range:** Legendary animals (88-99% quality)
+- **XP Gains:** Very Slow (10-40 XP per animal)
+
+**In-Game Effects:**
+- **Mount Quality:** Better animals = faster travel, combat bonuses
+- **Food Production:** Meat, milk, eggs for cooking
+- **Material Production:** Leather, wool, feathers for crafting
+- **Economic Income:** Selling breeding stock and products
+- **Companionship:** Bonded animals as permanent companions
+
+**Skill Dependencies:**
+- **Farming:** For animal feed production
+- **Cooking:** For processing animal products
+- **First Aid:** Transferable healing knowledge
+- **Hunting:** Understanding animal behavior
+
+**Specialization Paths:**
+- **Horse Trainer:** War mounts, racing horses, premium transport
+- **Livestock Farmer:** Food production, dairy, meat
+- **Exotic Handler:** Rare and magical creatures
+
+---
+
+### 13. First Aid - Emergency Medical Treatment
+
+**Real-World Foundation:**
+First aid encompasses emergency medical care, wound treatment, and stabilization. Historical field medics 
+and healers learned through practical experience, understanding anatomy, herbal remedies, and surgical 
+techniques. Quick thinking and steady hands save lives.
+
+**Skill Progression Tiers:**
+
+#### Tier 1: Field Medic (Levels 1-20)
+- **Unlocked Techniques:**
+  - Basic wound cleaning and bandaging
+  - Bleeding control
+  - Simple splinting for fractures
+  - Common illness identification
+  
+- **Material Sources:**
+  - Bandages and cloth strips
+  - Clean water
+  - Basic herbal poultices
+  - Simple medical tools
+  
+- **Success Rates:** 60-75% treatment success
+- **Healing Amount:** 15-30% of max health restored
+- **Treatment Speed:** 20-30 seconds
+- **XP Gains:** Fast (60-110 XP per treatment)
+
+#### Tier 2: Combat Medic (Levels 21-40)
+- **Unlocked Techniques:**
+  - Advanced wound suturing
+  - Poison/antidote basics
+  - Battlefield triage
+  - Multiple patient management
+  
+- **Material Sources:**
+  - Quality bandages and thread
+  - Antiseptic solutions
+  - Basic antidotes
+  - Surgical tools
+  
+- **Success Rates:** 75-85% treatment success
+- **Healing Amount:** 30-50% of max health restored
+- **Treatment Speed:** 15-25 seconds
+- **XP Gains:** Moderate (35-80 XP per treatment)
+
+#### Tier 3: Master Healer (Levels 41-70)
+- **Unlocked Techniques:**
+  - Complex surgery
+  - Disease curing
+  - Limb reattachment
+  - Magical healing augmentation
+  
+- **Material Sources:**
+  - Premium medical supplies
+  - Alchemical healing salves
+  - Advanced surgical equipment
+  - Rare medicinal herbs
+  
+- **Success Rates:** 85-92% treatment success
+- **Healing Amount:** 50-75% of max health restored
+- **Treatment Speed:** 10-20 seconds
+- **XP Gains:** Slow (20-60 XP per treatment)
+
+#### Tier 4: Legendary Physician (Levels 71-100)
+- **Unlocked Techniques:**
+  - Resurrection techniques (near-death recovery)
+  - Curse/hex removal
+  - Instant stabilization
+  - Group healing capabilities
+  
+- **Material Sources:**
+  - Legendary medical supplies
+  - Life-saving elixirs
+  - Enchanted medical tools
+  - Divine blessing components
+  
+- **Success Rates:** 92-98% treatment success
+- **Healing Amount:** 75-95% of max health restored
+- **Treatment Speed:** 5-15 seconds
+- **XP Gains:** Very Slow (10-40 XP per treatment)
+
+**In-Game Effects:**
+- **Survival:** Critical for dungeon/raid groups
+- **Self-Sufficiency:** Reduce potion dependence
+- **Economic Service:** Healing services for pay
+- **Support Role:** Essential in group content
+- **Death Prevention:** Revive incapacitated players
+
+**Skill Dependencies:**
+- **Herbalism:** For medicinal plant gathering
+- **Alchemy:** For potion and antidote creation
+- **Combat:** Understanding injuries and trauma
+- **Animal Husbandry:** Transferable medical knowledge
+
+**Specialization Paths:**
+- **Battle Surgeon:** Fast emergency treatment in combat
+- **Plague Doctor:** Disease and poison specialist
+- **Chirurgeon:** Complex surgical procedures
+
+---
+
 ## Skill Progression Framework
 
 ### Universal Progression Mechanics
@@ -1089,11 +1563,20 @@ Masterwork (91%+) ██████████  [Purple]  +15% to success, pre
 10. Cooking - Food preparation
 11. Leatherworking - Hide processing
 
+**Combat & Survival Skills:**
+12. Combat - Armed and unarmed fighting
+13. First Aid - Emergency medical treatment
+14. Survival - Wilderness navigation and shelter
+
+**Agricultural Skills:**
+15. Farming - Crop cultivation and management
+16. Animal Husbandry - Livestock care and breeding
+
 **Advanced Skills (Specialized Crafts):**
-12. Engineering - Mechanisms, devices
-13. Enchanting - Magical augmentation
-14. Jewelry - Precious metal/gem work
-15. Masonry - Stone construction
+17. Engineering - Mechanisms, devices
+18. Enchanting - Magical augmentation
+19. Jewelry - Precious metal/gem work
+20. Masonry - Stone construction
 
 ### Appendix B: Material Quality Mapping
 
@@ -1204,18 +1687,22 @@ The documented skills balance authenticity with engaging gameplay, offering clea
 meaningful choices, and deep integration with BlueMarble's geological simulation foundation.
 
 **Key Takeaways:**
-1. **Eight Core Skills** provide diverse gameplay opportunities
-2. **Four-Tier Progression** (20 levels per tier) creates clear advancement
+1. **Thirteen Core Skills** provide diverse gameplay opportunities across crafting, combat, agriculture, and survival
+2. **Four-Tier Progression** (20 levels per tier) creates clear advancement for all skill types
 3. **Material Quality** from geological/botanical systems drives crafting depth
 4. **Skill Dependencies** encourage specialization and player cooperation
 5. **Visual UI Elements** communicate complex systems clearly to players
+6. **Combat & Survival Skills** expand beyond crafting to complete gameplay experience
+7. **Agricultural Systems** (Farming, Animal Husbandry) support player-driven economy
 
 **Next Steps:**
-1. Implement Phase 1 core skills (Tailoring, Cooking, Herbalism, Mining)
-2. Develop material quality algorithms integrated with geological simulation
-3. Create crafting UI based on fiber crafting example
-4. Test progression curves with player feedback
-5. Iterate on balance and timing based on real gameplay data
+1. Implement Phase 1 core skills (Tailoring, Cooking, Herbalism, Mining, Farming)
+2. Add Phase 1b survival skills (Combat, First Aid, Forestry)
+3. Develop material quality algorithms integrated with geological simulation
+4. Create crafting UI based on fiber crafting example
+5. Design combat and healing interfaces
+6. Test progression curves with player feedback
+7. Iterate on balance and timing based on real gameplay data
 
 ---
 
@@ -1223,3 +1710,4 @@ meaningful choices, and deep integration with BlueMarble's geological simulation
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2025-10-01 | Initial comprehensive research report |
+| 1.1 | 2025-10-01 | Added Combat, Farming, Forestry, Animal Husbandry, and First Aid skills |

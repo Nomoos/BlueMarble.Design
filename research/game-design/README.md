@@ -201,11 +201,12 @@ woodworking).
 
 ### [Realistic Basic Skills Candidates Research](realistic-basic-skills-research.md)
 Comprehensive exploration of realistic basic skills for BlueMarble with focus on authenticity and practical 
-gameplay. Analyzes eight core skill domains (tailoring, blacksmithing, alchemy, woodworking, cooking, 
-herbalism, mining, fishing) with detailed progression mechanics, dependencies, and in-game effects.
+gameplay. Analyzes thirteen core skill domains (tailoring, blacksmithing, alchemy, woodworking, cooking, 
+herbalism, mining, fishing, combat, farming, forestry, animal husbandry, first aid) with detailed progression 
+mechanics, dependencies, and in-game effects.
 
 **Key Topics**:
-- Eight core basic skills with 4-tier progression (Novice → Journeyman → Expert → Master)
+- Thirteen core basic skills with 4-tier progression (Novice → Journeyman → Expert → Master)
 - Real-world skill foundation translated to engaging gameplay mechanics
 - Detailed progression tiers (20 levels each) with unlockable techniques
 - Material quality impact from geological/botanical simulation
@@ -224,6 +225,8 @@ herbalism, mining, fishing) with detailed progression mechanics, dependencies, a
 - Integration with BlueMarble's geological simulation for material authenticity
 - Visual mockups demonstrate player-facing interfaces
 - Comprehensive appendices with formulas, XP tables, and quality mappings
+- Combat and survival skills expand beyond crafting for complete gameplay
+- Agricultural systems (farming, animal husbandry) support player-driven economy
 - Success rate formulas and quality tier calculations
 - Specialization paths within each profession (3 per skill, 27 total)
 - Gathering-Assembly integration chain
