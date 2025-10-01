@@ -45,6 +45,14 @@ This directory contains comprehensive design documentation for BlueMarble, a top
 - [Infrastructure Roadmap Usage](./INFRASTRUCTURE_ROADMAP_USAGE.md) - Guide for using the infrastructure research roadmap parent issue
 - [Core Systems Roadmap Usage](./CORE_SYSTEMS_ROADMAP_USAGE.md) - Guide for using the core systems design roadmap
 
+### Quality Assurance & Testing
+- [QA Documentation Index](./QA_DOCUMENTATION_INDEX.md) - **START HERE** - Complete index of all QA documentation
+- [QA Framework](./QA_FRAMEWORK.md) - Comprehensive testing methodology and procedures
+- [QA Workflow Diagrams](./QA_WORKFLOW_DIAGRAMS.md) - Visual process guides and decision trees
+- [Testing QA Summary](./TESTING_QA_SUMMARY.md) - Executive summary of QA deliverables
+- [QA Test Plan Template](../templates/qa-test-plan.md) - Reusable template for feature testing
+- [Example: Spherical Planet QA Test Plan](./systems/qa-test-plan-spherical-planet.md) - Complete test plan with 242+ test cases
+
 ## Documentation Standards
 
 All documents should follow these standards:
