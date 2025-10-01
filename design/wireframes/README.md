@@ -8,6 +8,11 @@ This directory contains wireframes, mockups, and interface design documentation 
 - Document user interface flow and navigation
 - Maintain mockups for different game screens and features
 
+## Files
+
+- [UI Wireframes](ui-wireframes.md) - General UI wireframes and interface mockups
+- [Example Screen](example-screen.md) - Example wireframe demonstrating format
+
 ## Guidelines
 
 - Use descriptive filenames: `screen-name-wireframe.md` (e.g., `inventory-screen-wireframe.md`)

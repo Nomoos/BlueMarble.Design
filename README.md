@@ -36,10 +36,10 @@ This repository serves as the central hub for all design-related activities in t
 │   ├── narrative.md        # Story, world, characters
 │   ├── styleguide.md       # Visual design system and style guide
 │   ├── wireframes/         # UI/UX wireframes and screen mockups
+│   │   └── ui-wireframes.md # Interface mockups (general)
 │   ├── architecture/       # System architecture diagrams
 │   ├── ux/                 # User experience design
-│   │   ├── controls.md     # Input schemes
-│   │   └── ui-wireframes.md # Interface mockups
+│   │   └── controls.md     # Input schemes
 │   ├── island_start_game_design.md # Existing design
 │   └── one-page-design.md  # Existing design
 ├── roadmap/                 # Strategic planning and roadmap
