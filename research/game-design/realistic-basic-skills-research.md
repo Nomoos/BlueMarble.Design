@@ -1,7 +1,7 @@
 # Realistic Basic Skills Candidates - Research Report
 
 **Document Type:** Research Report  
-**Version:** 2.3  
+**Version:** 2.4  
 **Author:** Game Design Research Team  
 **Date:** 2025-10-01  
 **Status:** Final  
@@ -31,7 +31,7 @@ authentic experience where players shape their own societies.
 - Fiber-based crafting (textiles) provides excellent entry point for new players
 - Each skill domain features 1024 levels across 4 distinct progression tiers (256 levels each)
 - Extended progression allows for fine-grained skill development and long-term mastery goals
-- Offline progression system treats offline and online time equally through routine-based gameplay
+- Routine-based progression system where characters operate via routines online and offline (players as programmers)
 - Historical professions (masonry, milling) provide authentic medieval gameplay depth
 - Player-created religion and governance systems enable emergent social structures
 
@@ -1894,66 +1894,265 @@ Examples:
 - Cooking Level 30 provides +3 effective levels to Alchemy
 ```
 
-### Offline Progression System
+### Routine-Based Progression System
 
 **Concept Overview:**
-BlueMarble features an innovative offline progression system where characters continue to develop skills through 
-routine activities even when players are offline. This system respects player time investment while maintaining 
-the authenticity of skill development through practice.
+BlueMarble features a comprehensive routine-based progression system where characters are always controlled by 
+routines, whether players are online or offline. This system emphasizes strategic planning and automation over 
+direct player control, creating a unique gameplay experience where success comes from designing effective routines 
+rather than moment-to-moment input.
+
+**Core Philosophy:**
+- Characters operate via routines at all times (online and offline)
+- Players design, modify, and optimize routines rather than directly controlling actions
+- Progression comes from routine mastery, not time logged in
+- Strategic depth through routine programming and optimization
 
 **Core Mechanics:**
 
-**1. Daily Routine Assignment:**
-Before logging off, players can assign their character to a daily routine that represents their character's 
-activities while offline:
+**1. Routine System:**
+
+Players interact with their characters primarily through routine management:
 
 ```
-Available Routines:
-- Crafting Workshop (Blacksmithing, Tailoring, Woodworking, etc.)
-- Gathering Expedition (Mining, Herbalism, Forestry, Fishing)
-- Farm Maintenance (Farming, Animal Husbandry)
-- Combat Training (Combat, First Aid practice)
-- Alchemy Lab Work (Alchemy, Cooking experiments)
+Routine Types:
+- Cyclic Routines: Repeat continuously (craft 10 items, rest, repeat)
+- Event-Driven Routines: Trigger on conditions (when fiber < 0.000025 ETH, buy 100)
+- Sequential Routines: Execute steps in order, then stop
+- Conditional Routines: Branch based on inventory, prices, time, etc.
+- Hybrid Routines: Combine multiple types
+
+Routine Management:
+- Create Routine: Design new routine from scratch
+- Save Routine: Store routine for future use
+- Load Routine: Apply saved routine to character
+- Modify Routine: Edit currently running or saved routine
+- Share Routine: Export to other players or guild members
 ```
 
-**2. Offline XP Accumulation:**
+**2. Routine Execution:**
 
 ```
-Offline_XP_Per_Hour = Base_XP_Rate × Routine_Efficiency × Facility_Quality × Rest_Bonus
+Execution Rules:
+- Character must complete current routine block before switching
+- Blocks are atomic: finish or fail, no partial completion
+- Player can queue routine changes (applied after current block)
+- Travel automatically handled if routine requires specific location
+- Resource availability checked before block execution
 
-Base_XP_Rate: Equal to active play rate (routine-based gameplay design)
-Routine_Efficiency: 0.5-1.0 based on skill level and routine match
-Facility_Quality: 0.8-1.2 based on workshop/facility upgrades
-Rest_Bonus: 1.0-1.5x for first 8 hours (represents well-rested productivity)
-
-Maximum Offline Time: 7 days (168 hours) before diminishing returns
+Block Completion States:
+- Success: Block completed as designed
+- Failure: Block failed (insufficient resources, skill check failed)
+- Interrupted: External event (attacked, building destroyed)
+- Queued Change: New routine waiting to activate
 ```
 
-**3. Routine Effectiveness:**
-
-Different routines provide varying XP rates based on character preparation:
+**3. Routine Building Blocks:**
 
 ```
-High Effectiveness (80-100% of base rate):
-- Routine matches primary skill focus
-- Character has quality tools/facilities
-- Adequate material stockpiles
-- Recent active play in same skill
+Basic Actions:
+- Craft [item] × [quantity]
+- Gather [resource] from [location]
+- Travel to [location]
+- Rest for [duration]
+- Trade [item] at [market]
+- Train [skill] for [duration]
+- Process [material] into [product]
 
-Medium Effectiveness (50-80% of base rate):
-- Routine matches secondary skills
-- Standard tools/facilities
-- Some material limitations
-- Moderate recent activity
+Conditional Logic:
+- If [condition] then [action] else [action]
+- While [condition] do [action]
+- Wait until [condition]
+- Repeat [action] [times or until condition]
 
-Low Effectiveness (20-50% of base rate):
-- Mismatched routine to skill levels
-- Poor tools/facilities
-- Insufficient materials
-- No recent active play
+Conditions:
+- Inventory level (if fiber > 100)
+- Market price (if fiber < 0.000025 ETH per unit)
+- Time of day/season
+- Skill level reached
+- Location status (if workshop available)
+- Resource availability
+- Character state (health, energy, hunger)
+
+Event Triggers:
+- Price threshold crossed
+- Resource depleted
+- Skill level up
+- Market opportunity detected
+- Guild notification received
+- Time-based (daily reset, seasonal change)
 ```
 
-**4. Material Consumption & Output:**
+**4. Example Routines:**
+
+```
+Example 1: Simple Crafting Loop (Cyclic)
+1. Check inventory for 50 iron ore
+2. If insufficient, travel to mine and gather 100 ore
+3. Travel to blacksmith workshop
+4. Craft 10 iron daggers
+5. Rest for 1 hour
+6. Repeat from step 1
+
+Example 2: Market Arbitrage (Event-Driven)
+1. Monitor global fiber auction
+2. When price < 0.000025 ETH per unit:
+   - Buy 1000 units
+   - Travel to processing facility
+   - Process fiber into thread
+   - List thread on market at 150% markup
+3. When thread sells, return to step 1
+4. If no trigger for 6 hours, craft items from inventory
+
+Example 3: Farming Operations (Hybrid)
+Morning Block (6 AM - 12 PM):
+- Check crop readiness
+- Harvest ready crops
+- Replant empty fields
+- Water young plants
+- Feed animals
+
+Afternoon Block (12 PM - 6 PM):
+- If market open: sell harvested goods
+- If fiber price < threshold: buy fiber for weaving
+- Repair tools if durability < 50%
+- Craft fertilizer from by-products
+
+Evening Block (6 PM - 12 AM):
+- Process grains at mill
+- Craft textiles from fiber
+- Train tailoring skill
+- Rest
+
+Night Block (12 AM - 6 AM):
+- Sleep/Rest (passive skill gain)
+- Automated security routine
+```
+
+**5. Routine Change Management:**
+
+```
+While Character is Online:
+- View current routine execution status
+- See which block is running (e.g., "Crafting iron daggers: 3/10 complete")
+- Queue routine change (applies after current block finishes)
+- Emergency stop (abandon current block, incur failure penalties)
+- Real-time monitoring of routine performance
+
+Block Completion Requirements:
+- Current block must complete successfully OR fail before switching
+- Cannot interrupt mid-block (prevents exploitation)
+- Partial progress lost if emergency stop used
+- Queued changes execute immediately after block completion
+
+Routine Change Workflow:
+1. Player selects "Change Routine"
+2. System shows: "Current block will complete first (est. 15 minutes)"
+3. Player designs/loads new routine
+4. New routine queued with notification
+5. Current block finishes → New routine activates
+6. Player receives confirmation notification
+```
+
+**6. Location-Based Routines:**
+
+```
+Travel Requirements:
+- If routine requires specific location, character auto-travels
+- Travel time calculated based on distance and terrain
+- Character follows safest/fastest route based on settings
+- Can be interrupted by events (combat, weather, roadblocks)
+
+Location Types:
+- Workshop: Fixed building (blacksmith, tailor shop)
+- Resource Node: Mine, forest, fishing spot
+- Market: Trading hub, auction house
+- Guild Hall: Social and crafting facilities
+- Home: Personal rest and storage location
+- Mobile: Traveling merchant, nomadic activities
+
+Travel Integration:
+"Travel to [Location]" automatically added as first block if needed
+Example: Character at home, routine requires mine
+- Block 1: Travel to mine (auto-inserted)
+- Block 2: Gather 100 ore (routine starts here)
+- Block 3: Travel to workshop (auto-inserted)
+- Block 4: Craft items
+```
+
+**7. XP and Progression Mechanics:**
+
+```
+XP_Per_Hour = Base_XP_Rate × Routine_Efficiency × Facility_Quality × Skill_Match
+
+Base_XP_Rate: Equal for online and offline (routine-based design)
+Routine_Efficiency: 0.5-1.0 based on routine optimization quality
+Facility_Quality: 0.8-1.2 based on workshop/facility upgrades  
+Skill_Match: 0.7-1.3 based on routine vs. character skill levels
+
+Routine Effectiveness Factors:
+High Effectiveness (90-100% efficiency):
+- Routine perfectly matched to character skills
+- Optimal resource flow (no bottlenecks)
+- Quality tools and facilities available
+- Conditional logic handles edge cases well
+- Event triggers properly configured
+
+Medium Effectiveness (70-90% efficiency):
+- Routine generally appropriate for character
+- Some resource inefficiencies
+- Standard tools and facilities
+- Basic conditional logic
+- Limited event handling
+
+Low Effectiveness (50-70% efficiency):
+- Routine mismatched to character skills
+- Frequent resource shortages
+- Poor facilities or missing tools
+- No conditional logic (rigid routine)
+- No event-driven optimization
+```
+
+**8. Market Integration and Event-Driven Trading:**
+
+```
+Market Condition Triggers:
+- Price thresholds (buy when price < X, sell when price > Y)
+- Volume triggers (when daily volume > Z)
+- Spread opportunities (buy location A, sell location B when spread > threshold)
+- Supply/demand signals
+- Seasonal price patterns
+
+Example Trading Routine:
+Monitor:
+- Global fiber auction price every 30 minutes
+- Local thread demand every hour
+
+Conditions:
+- If fiber price < 0.000025 ETH per unit on global auction:
+  → Buy 1000 units
+  → Queue processing routine
+  
+- If thread price > 0.00005 ETH per unit on local market:
+  → Sell processed thread inventory
+  → Calculate profit
+  → Adjust future price thresholds
+
+Actions:
+- Automatic bid placement
+- Transaction execution
+- Inventory management
+- Profit tracking
+- Price history analysis for optimization
+
+Integration with Skills:
+- Trade skill level affects transaction fees
+- Higher skill = better price discovery
+- Market knowledge improves trigger accuracy
+- Reputation affects available markets
+```
+
+**9. Routine Failure Handling:
 
 Offline routines consume and produce materials realistically:
 
@@ -2006,71 +2205,164 @@ Potential Events (Random, Low Probability):
 Mitigation:
 - Higher facilities quality reduces risk
 - Appropriate routine selection minimizes problems
-- Insurance or guild benefits can protect against loss
-- Active play before offline sessions "prepares" character better
+**9. Routine Failure Handling:**
+
+```
+Failure Types:
+- Resource Shortage: Insufficient materials mid-routine
+- Skill Check Failure: Action too difficult for current skill
+- Location Unavailable: Required building destroyed/occupied
+- Market Condition Failed: Price condition never met
+- Travel Interrupted: Cannot reach required location
+- Tool Breakage: Equipment durability reached zero
+
+Failure Responses (Routine Logic):
+- Fallback Actions: "If craft fails, gather more materials"
+- Alternative Paths: "If workshop occupied, travel to backup"
+- Emergency Stops: "If gold < 100, pause trading routine"
+- Notification Triggers: "Alert me if routine fails 3 times"
+- Auto-Recovery: "Repair tools when durability < 20%"
+
+Failure Penalties:
+- Partial material consumption (25-50% lost)
+- Time wasted (travel, setup time)
+- Tool durability loss
+- Reputation impact for failed contracts
+- XP loss minimized (learning experience)
+
+Mitigation Strategies:
+- Buffer resources (e.g., keep 20% extra materials)
+- Condition checks before expensive actions
+- Fallback routines for common failure modes
+- Insurance systems (guild or NPC)
+- Redundant pathways in routine design
 ```
 
-**7. Social Integration:**
+**10. Social Integration:**
 
-Offline progression integrates with multiplayer systems:
+Routine-based gameplay enhances multiplayer systems:
 
 ```
 Guild Benefits:
+- Shared routine libraries (master crafters share optimized routines)
 - Guild workshops provide higher facility quality
 - Shared material pools support continuous routines
 - Guild members can maintain others' facilities
-- Group routines (e.g., communal farming) provide bonuses
+- Coordinated routines for group activities
 
-Player Economy:
-- Offline-produced items tradeable in markets
-- Creates steady supply of basic goods
-- Maintains economic activity during low-population times
-- Enables specialization (dedicated crafters, gatherers)
+Cooperative Routines:
+- Farm collective: Members contribute to shared farm
+- Trade networks: Automated arbitrage between regions
+- Production chains: One player's output feeds another's input
+- Defense coordination: Alert members when routine interrupted by attack
+
+Player Economy Impact:
+- Continuous production maintains market liquidity
+- Event-driven trading stabilizes prices
+- Specialization enabled (full-time merchants, crafters)
+- Creates arbitrage opportunities for traders
+- Routine efficiency becomes tradeable knowledge
 ```
 
-**8. Implementation Considerations:**
+**11. Implementation Considerations:**
 
 **Balance Goals:**
-- Offline XP rate: Equal to active play rate (routine-based gameplay philosophy)
-- Encourages strategic routine selection and preparation
-- Success depends on proper routine setup and resource management
-- Respects player time while maintaining skill value through proper routine use
-- Characters progress authentically whether player is online or offline
+- Online and offline XP rates equal when routines properly configured
+- Encourages strategic routine design and optimization
+- Success depends on routine quality, not playtime
+- Respects all player schedules (casual to hardcore)
+- Deep strategic gameplay through routine programming
 
 **Technical Requirements:**
-- Server-side routine processing (check on login)
-- Material inventory tracking during offline period
-- Event simulation for offline activities
-- Routine validation and effectiveness calculation
+- Server-side routine execution engine
+- Real-time event monitoring (prices, conditions)
+- Material inventory tracking and validation
+- Travel pathfinding and time calculation
+- Market integration for automated trading
+- Routine validation and syntax checking
+- Failure detection and recovery systems
+
+**Player Interface:**
+```
+Routine Builder UI:
+- Drag-and-drop block creation
+- Conditional logic flow visualization
+- Real-time validation and warnings
+- Simulation mode (test without executing)
+- Performance analytics (efficiency metrics)
+- Market data integration
+- Community routine sharing
+
+In-Game Notifications:
+- Routine status updates
+- Block completion alerts
+- Failure notifications with cause
+- Market trigger activations
+- Resource level warnings
+- Performance analytics summaries
+```
 
 **Player Communication:**
 ```
-On Login Summary:
+Session Summary (Login After Offline):
 "While you were away for 2 days, 4 hours:
-- Blacksmithing: +2,450 XP (Levels 245 → 247)
-- Crafted: 15 Iron Daggers (3 Fine quality)
-- Consumed: 45 Iron Ingots, 15 Oak Handles
-- Earned: 1.5 Skill Points
-- Workshop status: Good (98% durability)
-- Next routine: [Modify] [Continue]"
+
+Routine Performance:
+- Blacksmithing Routine: 85% efficiency
+- Executed 47 blocks successfully, 3 failures
+- XP Gained: +2,450 Blacksmithing (Levels 245 → 247)
+
+Production:
+- Crafted: 15 Iron Daggers (3 Fine, 10 Standard, 2 Poor quality)
+- Materials Consumed: 45 Iron Ingots, 15 Oak Handles
+- Materials Remaining: 12 Iron Ingots, 4 Oak Handles
+
+Trading:
+- Fiber price trigger activated 2 times
+- Bought: 2000 fiber units at avg 0.000023 ETH
+- Sold: 150 thread units at avg 0.000048 ETH  
+- Trading Profit: +0.0375 ETH
+
+Travel:
+- Traveled 45 km total (Workshop → Mine → Market → Home)
+- Travel time: 3.2 hours
+
+Failures:
+- 2× Resource shortage (iron ingots depleted)
+- 1× Workshop occupied (waited 20 minutes)
+
+Recommendations:
+- Increase iron ingot buffer from 50 to 75 units
+- Add conditional check for workshop availability
+- Current routine efficiency could improve to 92% with adjustments
+- [View Detailed Log] [Optimize Routine]"
 ```
 
-**Design Philosophy:**
+**12. Design Philosophy:**
 
-The offline progression system reflects BlueMarble's routine-based gameplay philosophy where characters 
-live continuously in the world through their assigned routines. Offline and online time are treated equally:
+The routine-based progression system reflects BlueMarble's core gameplay philosophy where characters operate 
+via routines at all times, whether players are online or offline:
 
-1. **Routine-Based Progression:** Success depends on smart routine selection, not just being online
-2. **Equal Time Value:** Offline and online hours count the same when proper routines are set
-3. **Maintains Authenticity:** Characters "live" in the world continuously through routines
-4. **Enables Specialization:** Dedicated crafters/gatherers progress through well-planned routines
-5. **Supports Economy:** Consistent material production and consumption 24/7
-6. **Rewards Strategy:** Players who master routine optimization progress most efficiently
+1. **Always-On Routines:** Characters controlled by routines 24/7, not direct player input
+2. **Strategic Gameplay:** Success from routine design and optimization, not reflexes
+3. **Equal Time Value:** Online and offline progression identical when routines properly configured
+4. **Programming Depth:** Complex conditional logic and event-driven behaviors
+5. **Maintains Authenticity:** Characters "live" continuously through intelligent routines
+6. **Enables All Playstyles:** Supports casual to hardcore, traders to crafters
+7. **Supports Dynamic Economy:** Continuous market activity via event-driven trading
+8. **Rewards Mastery:** Best players master routine programming, not clickspeed
 
-This system emphasizes mastery of the routine system rather than pure time investment, making the game 
-accessible to players with varying schedules while rewarding those who understand and optimize their 
-character's routines. 
-gameplay loop and the satisfaction of active skill mastery.
+**Key Differentiators:**
+- Players are routine programmers, not direct controllers
+- Online time used for routine design, testing, and optimization
+- Offline time executes routines with equal efficiency
+- Market integration enables automated trading and arbitrage
+- Social systems reward sharing optimized routines
+- Deep strategic gameplay through routine complexity
+
+This system creates unique gameplay where mastering routine programming and understanding game systems 
+matters more than time logged in, making BlueMarble accessible to all schedules while providing 
+extraordinary depth for those who engage with the routine system.
 
 ---
 
@@ -2411,7 +2703,7 @@ meaningful choices, and deep integration with BlueMarble's geological simulation
 7. **Agricultural Systems** (Farming, Animal Husbandry) support player-driven economy
 8. **Historical Professions** (Masonry, Milling) add authentic medieval depth
 9. **Extended Level System** (1024 levels) provides long-term progression goals and meaningful incremental improvements
-10. **Offline Progression** treats offline and online time equally through routine-based gameplay, emphasizing strategic routine optimization
+10. **Routine-Based Progression** where characters operate via routines 24/7 (online and offline), with players as routine programmers
 11. **Player-Created Systems** for religion, economics, and governance enable emergent social structures and diverse community experiences
 
 **Next Steps:**
@@ -2437,3 +2729,4 @@ meaningful choices, and deep integration with BlueMarble's geological simulation
 | 2.1 | 2025-10-01 | Added offline progression system with routine-based skill development |
 | 2.2 | 2025-10-01 | Updated offline progression to treat offline and online time equally (routine-based design) |
 | 2.3 | 2025-10-01 | Added historical professions (Masonry, Milling) and player-created systems (Religion, Economics, Governance) |
+| 2.4 | 2025-10-01 | Expanded routine system: characters always run routines (online/offline), cyclic/event-driven, market integration |

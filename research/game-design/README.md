@@ -272,7 +272,7 @@ and in-game effects.
 - Agricultural systems (farming, animal husbandry) support player-driven economy
 - Historical professions (masonry, milling) add construction and food production depth
 - 1024-level system provides fine-grained progression and long-term goals
-- Offline progression system treats offline and online time equally through routine-based gameplay
+- Routine-based progression where characters always operate via routines (online/offline), with cyclic, event-driven, and market-integrated automation
 - Player-created religion framework supports diverse belief systems
 - Economic and governance frameworks enable emergent social structures
 - Success rate formulas and quality tier calculations
