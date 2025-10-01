@@ -1640,6 +1640,11 @@ The analysis is now at a similar depth to the material system research documents
 - May discourage casual players
 - Complex to explain 130+ skills
 
+**Deep Dive:**
+For comprehensive analysis of Wurm Online's skill progression and mastery systems, see:
+- [Wurm Online Skill Progression Analysis](./wurm-online-skill-progression-analysis.md) - Detailed use-based progression mechanics, specialization patterns, player-driven economy impacts, and implementation recommendations
+- [Wurm Online Material System Research](./wurm-online-material-system-research.md) - Quality systems and crafting mechanics
+
 ### Vintage Story
 
 **System Type:** Class-less with technology gating and knowledge progression
