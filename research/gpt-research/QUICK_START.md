@@ -2,12 +2,13 @@
 
 This is a condensed guide to quickly import ChatGPT conversations into BlueMarble research documentation.
 
-## 🚀 For Issue #101: Two Pending Imports
+## 🚀 For Issue #101: Three Pending Imports
 
-Two conversations need to be imported:
+Three conversations need to be imported:
 
 1. **dr_68dbe0cc315081918182816df1b6d424** → [Directory](conversation-dr_68dbe0cc/)
 2. **dr_68dbe0e4457c8191baab63cdba02dc9b** → [Directory](conversation-dr_68dbe0e4/)
+3. **dr_68dd00b5025c8191aed7b6b0ac662337** → [Directory](conversation-dr_68dd00b5/)
 
 ## 📋 Quick Steps
 
