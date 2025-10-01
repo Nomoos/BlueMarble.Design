@@ -7,7 +7,9 @@ High-level project roadmap, milestones, and backlog for BlueMarble research and 
 ### Active Planning
 - [Roadmap](roadmap.md) - Big picture by quarter/phase
 - [Milestones](milestones.md) - Dated milestones and deliverables
+- [Milestones Directory](milestones/) - Individual milestone definitions and tracking
 - [Backlog](backlog.md) - Groomed backlog for research/design tasks
+- [Tasks Directory](tasks/) - Detailed task breakdowns and feature specifications
 - [Project Roadmap](project-roadmap.md) - Detailed project roadmap with phases and tracking
 
 ### Guides
@@ -41,6 +43,16 @@ Phase 1: Foundation (Q1 2025)
 ### Milestones
 
 Specific deliverables with dates and acceptance criteria.
+
+- See [milestones/](milestones/) for individual milestone definitions
+- See [milestones.md](milestones.md) for milestone overview
+
+### Tasks
+
+Detailed feature breakdowns and task specifications.
+
+- See [tasks/](tasks/) for feature-specific task lists
+- Link tasks to parent milestones and design documents
 
 ### Backlog
 
