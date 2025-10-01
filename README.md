@@ -162,6 +162,7 @@ Link liberally between related documents. Each major directory has an `index.md`
 ### System Specifications
 - **[Gameplay Systems](./docs/systems/gameplay-systems.md)** - Combat, progression, and core mechanics
 - **[Economy Systems](./docs/systems/economy-systems.md)** - Trading, crafting, and economic balance
+- **[Marketplace API](./docs/systems/api-marketplace.md)** - Player trading marketplace API specification
 - **[UI/UX Guidelines](./docs/ui-ux/ui-guidelines.md)** - Interface design and user experience standards
 
 ### World Design
