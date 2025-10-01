@@ -290,6 +290,56 @@ and in-game effects.
 - Specialization unlocks at Level 25 for focused expertise
 - Complete crafting interface designs with visual feedback
 
+### [Historic Jobs from Medieval Times to 1750 Research](historic-jobs-medieval-to-1750-research.md)
+Comprehensive catalog of over 300 historic occupations and professions from the medieval period (500-1500 CE) 
+through the early modern period (1500-1750 CE), providing authentic historical grounding for BlueMarble's 
+profession systems and economic simulation.
+
+**Key Topics**:
+- Complete catalog of 305+ historic jobs organized by category
+- Guild system structure and apprenticeship mechanics
+- Jobs categorized by time period (Early Medieval, High Medieval, Late Medieval, Early Modern)
+- Regional variations across European medieval economies
+- Technology progression and emerging professions (1500-1750)
+- Integration mapping with BlueMarble's 15 core skills
+- Implementation phases and priority recommendations
+
+**Job Categories Covered**:
+- Primary Production (40 jobs): Agriculture, Forestry, Mining, Fishing
+- Craft and Artisan (56 jobs): Metalworking, Woodworking, Leather, Pottery, Glass
+- Textile and Fiber Arts (24 jobs): Spinning, Weaving, Tailoring
+- Food Production (21 jobs): Baking, Butchery, Brewing, Milling
+- Construction (15 jobs): Masonry, Roofing, Plastering
+- Merchant and Trade (13 jobs): General merchants, Specialty traders
+- Service Occupations (14 jobs): Hospitality, Personal services, Household
+- Professional Occupations (12 jobs): Administration, Finance, Technical
+- Military and Defense (13 jobs): Combat roles, Support, Fortification
+- Religious and Scholarly (16 jobs): Clergy, Monastic work, Scholars
+- Entertainment and Arts (15 jobs): Musicians, Performers, Visual arts
+- Transportation (14 jobs): Land transport, Water transport, Infrastructure
+- Legal and Administrative (12 jobs): Legal professions, Law enforcement, Government
+- Medical and Healthcare (14 jobs): Medical practitioners, Specialized care
+- Emerging Jobs 1500-1750 (25 jobs): Printing, Scientific, Navigation, Proto-industrial
+
+**Research Highlights**:
+- Medieval guild hierarchy: Master → Journeyman → Apprentice (7-10 year training)
+- Guild functions: Quality control, training, economic regulation, social welfare
+- Agriculture employed 70-90% of medieval population
+- Urban centers supported diverse specialized crafts
+- Technological milestones drove job creation (printing press, scientific instruments)
+- Gender and social class considerations for authentic implementation
+- Complete alphabetical index of all 305 cataloged jobs
+- Jobs mapped to BlueMarble's 15 core skills for implementation
+- Phased rollout strategy (20 → 50 → 100 → 150+ professions)
+
+**Applicability to BlueMarble**:
+- Provides historical authenticity for medieval-inspired gameplay
+- Supports guild system implementation with realistic structure
+- Enables apprenticeship and journeyman mechanics
+- Creates foundation for player-driven economy with specialized roles
+- Aligns with existing skill research for seamless integration
+- Supports social structure and economic interdependence gameplay
+
 ### [Mortal Online 2 Material System Analysis](mortal-online-2-material-system-research.md)
 Comprehensive analysis of Mortal Online 2's material grading and crafting systems for BlueMarble's material quality mechanics.
 
