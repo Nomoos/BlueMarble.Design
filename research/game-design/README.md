@@ -238,6 +238,43 @@ woodworking).
 - Practice-based skill progression with realistic learning curves
 - Material quality integration with geological simulation
 - Multi-stage crafting processes with interactive elements
+
+### [Realistic Basic Skills Candidates Research](realistic-basic-skills-research.md)
+Comprehensive exploration of realistic basic skills for BlueMarble with focus on authenticity and practical 
+gameplay. Analyzes fifteen core skill domains (tailoring, blacksmithing, alchemy, woodworking, cooking, 
+herbalism, mining, fishing, combat, farming, forestry, animal husbandry, first aid, masonry, milling) plus 
+frameworks for player-created religion and governance systems with detailed progression mechanics, dependencies, 
+and in-game effects.
+
+**Key Topics**:
+- Fifteen core basic skills with 4-tier progression (Novice → Journeyman → Expert → Master)
+- Historical professions (masonry, milling) add authentic medieval depth
+- Player-created systems for religion, economics, and governance
+- Real-world skill foundation translated to engaging gameplay mechanics
+- Extended 1024-level system (256 levels per tier) for deep mastery progression
+- Material quality impact from geological/botanical simulation
+- Skill dependencies and synergies creating specialization paths
+- Visual UI references and crafting interface examples
+- Success rate formulas and quality calculation systems
+- Actionable implementation roadmap (4 phases, 12 months)
+- XP tables and progression curves balancing realism with engagement
+
+**Research Highlights**:
+- Fiber crafting (tailoring) provides accessible entry point for new players
+- Each skill requires 685-785 hours for complete mastery (encourages specialization)
+- Cross-skill synergies (+10% bonus from related skills) reward diverse builds
+- Practice-based XP with diminishing returns prevents exploitation
+- Four-tier progression mirrors real-world apprenticeship systems
+- Integration with BlueMarble's geological simulation for material authenticity
+- Visual mockups demonstrate player-facing interfaces
+- Comprehensive appendices with formulas, XP tables, and quality mappings
+- Combat and survival skills expand beyond crafting for complete gameplay
+- Agricultural systems (farming, animal husbandry) support player-driven economy
+- Historical professions (masonry, milling) add construction and food production depth
+- 1024-level system provides fine-grained progression and long-term goals
+- Routine-based progression where characters always operate via routines (online/offline), with cyclic, event-driven, and market-integrated automation
+- Player-created religion framework supports diverse belief systems
+- Economic and governance frameworks enable emergent social structures
 - Success rate formulas and quality tier calculations
 - Specialization paths within each profession (3 per skill, 27 total)
 - Gathering-Assembly integration chain
