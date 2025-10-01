@@ -79,6 +79,30 @@ Comprehensive analysis of Mortal Online 2's material grading and crafting qualit
 - Integration with BlueMarble's geological simulation for scientific authenticity
 - Implementation recommendations with code examples and balancing considerations
 
+### [Vintage Story Skill and Knowledge System Research](vintage-story-skill-knowledge-system-research.md)
+In-depth analysis of Vintage Story's unique implicit skill progression and knowledge discovery systems.
+
+**Key Topics**:
+- Implicit skill progression through knowledge and tool access (no explicit skill points)
+- Handbook system as dynamic knowledge repository and learning tool
+- Technology tier gating (Stone → Copper → Bronze → Iron → Steel)
+- Organic specialization without mechanical enforcement
+- Mastery through player understanding rather than numerical advancement
+- Discovery mechanics driving exploration and experimentation
+- Crafting and survival integration
+- UI/UX analysis with annotated screenshots
+- Comparison with traditional MMORPG skill systems
+- Detailed BlueMarble implementation recommendations
+
+**Research Highlights**:
+- Knowledge discovery as content rather than gate creates intrinsic motivation
+- Technology tiers provide progression without arbitrary level requirements
+- Emergent specialization through time investment and infrastructure
+- Player capability grows through understanding, not stat bonuses
+- Scales well to MMO with optional explicit tracking for player preference
+- Geological knowledge integration aligns perfectly with BlueMarble goals
+- Hybrid implicit/explicit model recommended for maximum player satisfaction
+
 ### [Vintage Story Material System Research](vintage-story-material-system-research.md)
 Comprehensive analysis of Vintage Story's material grading, quality mechanics, and crafting progression systems.
 
