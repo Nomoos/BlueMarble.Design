@@ -7,6 +7,14 @@ This directory contains detailed task definitions and feature breakdowns for the
 - Break down features and milestones into actionable tasks
 - Document task specifications and requirements
 - Track task progress and ownership
+- Link tasks to GitHub issues and sub-issues
+
+## Current Tasks
+
+### Feature Tasks
+
+- [Player Trading Marketplace](player-trading-marketplace.md) - Comprehensive trading system for player economy
+- [Example Feature](example-feature.md) - Example demonstrating task format
 
 ## Guidelines
 
@@ -25,13 +33,14 @@ This directory contains detailed task definitions and feature breakdowns for the
 
 Each task file should include:
 
-1. **Feature Overview**: Brief description and purpose
-2. **Task List**: Detailed breakdown of work items
-3. **Dependencies**: Prerequisites and blockers
-4. **Acceptance Criteria**: Definition of done
-5. **Estimates**: Time or complexity estimates
-6. **Owner**: Assigned person or team
-7. **Status**: Current progress
+1. **Issue Tracking**: Links to parent issue and sub-issues in GitHub
+2. **Feature Overview**: Brief description and purpose
+3. **Task List**: Detailed breakdown of work items
+4. **Dependencies**: Prerequisites and blockers
+5. **Acceptance Criteria**: Definition of done
+6. **Estimates**: Time or complexity estimates
+7. **Owner**: Assigned person or team
+8. **Status**: Current progress
 
 ## Task Status
 
