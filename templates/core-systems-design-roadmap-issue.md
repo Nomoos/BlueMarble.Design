@@ -120,7 +120,7 @@ have its own dedicated sub-issue for detailed tracking and implementation.
 
 ## Related Documentation
 
-- **Project Roadmap**: `roadmap-guides/project-roadmap.md`
+- **Project Roadmap**: `roadmap/project-roadmap.md`
 - **Game Design Document**: `docs/gameplay/gdd-core-game-design.md`
 - **Technical Design Document**: `docs/core/technical-design-document.md`
 - **Systems Documentation**: `docs/systems/README.md`

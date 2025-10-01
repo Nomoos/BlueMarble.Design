@@ -101,4 +101,4 @@ When adding a new milestone:
 
 - [Roadmap](roadmap.md) - High-level phases
 - [Backlog](backlog.md) - Tasks contributing to milestones
-- [Milestone Guide](../roadmap-guides/milestone-guide.md) - Existing milestone documentation
+- [Milestone Guide](milestone-guide.md) - Milestone documentation and tracking guide

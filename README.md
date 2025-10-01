@@ -41,8 +41,11 @@ This repository serves as the central hub for all design-related activities in t
 │   ├── README.md           # Planning guidelines
 │   ├── roadmap.md          # Big picture by quarter/phase
 │   ├── milestones.md       # Dated deliverables
-│   └── backlog.md          # Groomed research/design tasks
-├── roadmap-guides/          # Roadmap management guides
+│   ├── backlog.md          # Groomed research/design tasks
+│   ├── project-roadmap.md  # Detailed project roadmap with tracking
+│   ├── milestone-guide.md  # Milestone structure and tracking
+│   ├── roadmap-management-guide.md # How to manage roadmap
+│   └── feature-prioritization-guide.md # Feature prioritization
 ├── docs/                    # Comprehensive documentation
 │   ├── core/               # Core design documents (GDD, TDD)
 │   ├── gameplay/           # Gameplay mechanics and systems

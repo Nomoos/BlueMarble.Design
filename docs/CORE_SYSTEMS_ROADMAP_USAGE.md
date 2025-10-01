@@ -166,7 +166,7 @@ Track the following metrics weekly:
 - **Template**: `templates/core-systems-design-roadmap-issue.md`
 - **Sub-Issue Template**: `templates/research-question-sub-issue.md`
 - **Template Guide**: `templates/research-issue-templates-guide.md`
-- **Project Roadmap**: `roadmap-guides/project-roadmap.md`
+- **Project Roadmap**: `roadmap/project-roadmap.md`
 - **Game Design Document**: `docs/gameplay/gdd-core-game-design.md`
 
 ## Example Workflow
