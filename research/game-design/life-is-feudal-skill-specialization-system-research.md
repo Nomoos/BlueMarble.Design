@@ -62,12 +62,12 @@ coherent skill trees rather than random skill combinations.
 - Player-created guides and tutorials
 
 **Analysis Framework:**
-1. **Skill Acquisition:** How players gain and improve skills
-2. **Progression Mechanics:** Experience gain, difficulty curves, and time investment
-3. **Specialization Paths:** Forced choices and character archetypes
-4. **Knowledge Integration:** Recipe discovery and information systems
-5. **Mastery Systems:** Recognition, titles, and endgame progression
-6. **Player Engagement:** Long-term retention and community interdependence
+1. Skill Acquisition: How players gain and improve skills
+2. Progression Mechanics: Experience gain, difficulty curves, and time investment
+3. Specialization Paths: Forced choices and character archetypes
+4. Knowledge Integration: Recipe discovery and information systems
+5. Mastery Systems: Recognition, titles, and endgame progression
+6. Player Engagement: Long-term retention and community interdependence
 
 **Research Scope:**
 - **Include:** Skill progression, specialization, mastery, character development, knowledge systems
