@@ -27,6 +27,8 @@ Bibliography, reading lists, and raw notes from external sources.
 - [sources.bib](sources/sources.bib) - Bibliography
 - [Reading List](sources/reading-list.md) - Curated reading list
 - [Quotes](sources/quotes.md) - Notable quotes and excerpts
+- [Game Design Sources](game-design/game-sources.md) - Curated collection of game design, research, theory,
+  and gamification sources
 
 ## Existing Research Areas
 
