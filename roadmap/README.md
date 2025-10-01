@@ -4,9 +4,16 @@ High-level project roadmap, milestones, and backlog for BlueMarble research and 
 
 ## Documents
 
+### Active Planning
 - [Roadmap](roadmap.md) - Big picture by quarter/phase
 - [Milestones](milestones.md) - Dated milestones and deliverables
 - [Backlog](backlog.md) - Groomed backlog for research/design tasks
+- [Project Roadmap](project-roadmap.md) - Detailed project roadmap with phases and tracking
+
+### Guides
+- [Roadmap Management Guide](roadmap-management-guide.md) - How to update and manage the roadmap
+- [Milestone Guide](milestone-guide.md) - Milestone structure and tracking
+- [Feature Prioritization Guide](feature-prioritization-guide.md) - How features are prioritized
 
 ## Purpose
 
@@ -39,14 +46,11 @@ Specific deliverables with dates and acceptance criteria.
 
 Prioritized list of research questions, design tasks, and documentation needs.
 
-## Related Roadmap Guides
+## Related Documentation
 
-For detailed information, see:
-
-- [Project Roadmap](../roadmap-guides/project-roadmap.md)
-- [Milestone Guide](../roadmap-guides/milestone-guide.md)
-- [Feature Prioritization Guide](../roadmap-guides/feature-prioritization-guide.md)
-- [Roadmap Management Guide](../roadmap-guides/roadmap-management-guide.md)
+- `/docs/` - Detailed design specifications
+- `/templates/` - Templates for roadmap documents
+- Issue tracking in GitHub
 
 ## Contributing
 
