@@ -103,4 +103,4 @@ Key dependencies between phases:
 
 - [Milestones](milestones.md) - Specific dated deliverables
 - [Backlog](backlog.md) - Detailed task list
-- [Project Roadmap](../roadmap/project-roadmap.md) - Existing roadmap details
+- [Project Roadmap](../roadmap-guides/project-roadmap.md) - Existing roadmap details
