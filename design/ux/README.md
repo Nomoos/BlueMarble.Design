@@ -5,7 +5,7 @@ User interface, controls, and UX design for BlueMarble.
 ## Documents
 
 - [Controls](controls.md) - Input schemes and control layouts
-- [UI Wireframes](ui-wireframes.md) - Interface mockups and flows
+- [UI Wireframes](../wireframes/ui-wireframes.md) - Interface mockups and flows (moved to wireframes/)
 
 ## Guidelines
 

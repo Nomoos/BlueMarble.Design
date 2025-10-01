@@ -97,5 +97,5 @@ Buyer                Transaction Service        Database          Seller
 
 ## Related Documentation
 
-- [Feature Specification](../../design/spec-player-trading-marketplace.md)
+- [Feature Specification](../../roadmap/tasks/player-trading-marketplace.md)
 - [Technical Architecture Docs](../../docs/systems/)

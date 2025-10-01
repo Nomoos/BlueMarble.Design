@@ -14,11 +14,23 @@ and typically 200-400 lines.
 - [World of Warcraft Emulators – Architecture & Communication](topics/wow-emulator-architecture-networking.md) -
   MMO server architecture, authentication systems, and networking protocols from open-source WoW emulators
 
+## Notes
+
+Informal research notes and brainstorming for ideas in development.
+
+- [Notes directory](notes/) - Quick observations, ideas, and work-in-progress research
+
 ## Experiments
 
 Structured experiment logs documenting hypotheses, methods, results, and decisions.
 
 - [Experiment logs](experiments/) - Dated experiment reports
+
+## Literature
+
+Formal references, summaries, and literature reviews from external sources.
+
+- [Literature directory](literature/) - Summaries and reviews of academic papers and technical documentation
 
 ## Sources
 
