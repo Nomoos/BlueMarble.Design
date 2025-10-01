@@ -279,6 +279,51 @@ Each issue addresses specific research questions identified in the spatial data 
   - ✅ How can BlueMarble design for depth, engagement, and extensibility?
   - ✅ How to integrate with geological simulation mechanics?
 
+#### [Research] ✅ COMPLETED: World of Warcraft Skill & Talent System Analysis
+- **Focus**: Comprehensive analysis of WoW's class, talent, and profession systems for BlueMarble
+- **Impact**: Informs BlueMarble's skill progression, specialization, and UI/UX design patterns
+- **Research Type**: Market Research
+- **Status**: ✅ **COMPLETED** - Full research report with detailed analysis and recommendations
+- **Implementation**: `research/game-design/world-of-warcraft-skill-talent-system-research.md`
+- **Key Features**:
+  - Complete documentation of 13 classes with 39 specializations
+  - Talent system evolution from Classic (2004) to Dragonflight (2022)
+  - Profession system analysis including 11 primary professions
+  - Knowledge Points specialization system deep dive
+  - ASCII art diagrams for talent trees and skill progressions
+  - UI/UX design patterns and accessibility features
+  - 7 detailed recommendations tailored to BlueMarble's geological focus
+- **Talent System Evolution**:
+  - Classic WoW: Deep talent trees with point allocation (51 points)
+  - Cataclysm: Specialization-locked talents
+  - Mists of Pandaria: Choice nodes replacing trees (7 tiers × 3 choices)
+  - Dragonflight: Dual-tree system (30 class points + 30 spec points)
+- **Profession System**:
+  - 11 primary professions (2 per character limit)
+  - 4 secondary professions (all learnable)
+  - Traditional skill levels (1-75 tiers per expansion)
+  - Dragonflight redesign: Single 1-100 progression
+  - Knowledge Points specialization adds depth
+- **Knowledge Points System**:
+  - Specialization trees for crafting professions
+  - Quality improvement through focused investment
+  - Inspiration, Resourcefulness, Multicraft mechanics
+  - Economic specialization and premium pricing
+  - Choice between broad competence vs deep mastery
+- **Recommendations for BlueMarble**:
+  - Adopt talent choice node concept for geological specializations
+  - Implement Knowledge Point-style specialization for crafting
+  - Use proven UI/UX patterns for skill visualization
+  - Balance accessibility with depth through staged complexity
+  - Enable build experimentation with flexible respecialization
+  - Create clear progression milestones and recognition
+  - Integrate professions with core gameplay (unlike WoW's separation)
+- **Priority**: Low (completed research, implementation planning needed)
+- **Research Questions Answered**:
+  - ✅ How does World of Warcraft structure its skill, talent, and profession systems?
+  - ✅ What are the main models for progression and specialization?
+  - ✅ How do skills interact with gameplay, player choice, and long-term engagement?
+  - ✅ Which best practices can inform BlueMarble's system?
 
 #### [Research] ✅ COMPLETED: Mortal Online 2 Material System Analysis
 - **Focus**: Comprehensive analysis of MO2's material grading and crafting systems for BlueMarble

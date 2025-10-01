@@ -115,6 +115,7 @@ skill-based systems.
 WoW features 13 distinct classes, each with unique themes, abilities, and roles:
 
 **Tank Classes** (Absorb damage, protect allies):
+
 - Death Knight (Plate armor, undead theme)
 - Demon Hunter (Leather armor, demonic powers)
 - Druid (Leather armor, shapeshifting - also Healer/DPS)
@@ -123,6 +124,7 @@ WoW features 13 distinct classes, each with unique themes, abilities, and roles:
 - Warrior (Plate armor, weapon master - also DPS)
 
 **Healer Classes** (Restore health, support):
+
 - Druid (Nature magic, HoTs)
 - Evoker (Mail armor, draconic magic - also DPS)
 - Monk (Chi energy, mobile healing)
@@ -131,6 +133,7 @@ WoW features 13 distinct classes, each with unique themes, abilities, and roles:
 - Shaman (Elemental/spiritual healing - also DPS)
 
 **DPS Classes** (Damage dealers):
+
 - Demon Hunter (Melee, mobility)
 - Death Knight (Melee, disease/frost/unholy)
 - Hunter (Ranged physical, pets)
@@ -143,7 +146,7 @@ WoW features 13 distinct classes, each with unique themes, abilities, and roles:
 
 Each class has **3 specializations** (except Demon Hunter and Evoker with 2), defining core playstyle:
 
-```
+```text
 Example: Warrior Class
 ├── Arms Specialization (Melee DPS - Two-handed weapons)
 │   ├── Core Identity: Tactical mastery, big hits
@@ -159,7 +162,7 @@ Example: Warrior Class
     ├── Core Identity: Shield master, defensive stance
     ├── Key Mechanics: Shield Block, Ignore Pain
     └── Playstyle: Damage mitigation, threat generation
-```
+```text
 
 ### Class Design Principles
 
@@ -197,7 +200,7 @@ Example: Warrior Class
 The original talent system used deep tree structures with point allocation.
 
 **Classic Tree Structure:**
-```
+```text
 Warrior - Arms Talent Tree (31 points maximum)
 ═══════════════════════════════════════════════════════════════
 Tier 1 (Level 10)
@@ -225,7 +228,7 @@ Tier 7 (Level 40 - Capstone)
 │ Requires: 30 points in Arms                     │
 │ Ultimate ability defining specialization         │
 └─────────────────────────────────────────────────┘
-```
+```text
 
 **Classic Characteristics:**
 - **51 talent points** total (levels 10-60)
@@ -258,7 +261,7 @@ Major redesign moving away from trees entirely.
 - **Spec-agnostic:** Same choices across all specs of class
 - **No prerequisites:** Any choice available at each tier
 
-```
+```text
 Mists of Pandaria Talent Structure
 ═══════════════════════════════════════════════════
 Level 15: Movement/Mobility Tier
@@ -271,7 +274,7 @@ Level 45: Utility Tier
 [ Choice 1 ]  [ Choice 2 ]  [ Choice 3 ]
 
 ... (continues to level 100)
-```
+```text
 
 **Benefits:**
 - Clearer choices between meaningful options
@@ -290,7 +293,7 @@ Latest evolution combines tree structure with choice node flexibility.
 
 **Dual Talent Tree System:**
 
-```
+```text
 Modern Dragonflight Talent Interface
 ════════════════════════════════════════════════════════════════════
 
@@ -318,7 +321,7 @@ Modern Dragonflight Talent Interface
 └────────────────────────────────┴────────────────────────────────┘
 
 Total: 60 talent points (30 class, 30 spec)
-```
+```text
 
 **Key Features:**
 
@@ -394,7 +397,7 @@ All characters can learn **all secondary professions:**
 ### Profession Skill Levels
 
 **Traditional Progression (Classic - Shadowlands):**
-```
+```text
 Skill Level System
 ════════════════════════════════════════════════════
 1-75:    Apprentice    (Orange → Yellow → Green → Grey)
@@ -410,7 +413,8 @@ Color Coding:
 - Yellow: High chance of skill-up
 - Green: Low chance of skill-up  
 - Grey: No skill-up possible
-```
+
+```text
 
 **Characteristics:**
 - Skill increases by crafting items or gathering materials
@@ -475,7 +479,7 @@ professions, similar to talent trees for crafting.
 - Treasure hunting in world finds knowledge items
 
 **Investment:**
-```
+```text
 Profession Specialization Tree Example: Blacksmithing
 ══════════════════════════════════════════════════════════════
 
@@ -500,7 +504,7 @@ Specialist Expert                          Specialist  Specialist
                             ↓
                    [Profession Tools]
                          Expert
-```
+```text
 
 **Specialization Effects:**
 
@@ -541,7 +545,7 @@ Players must choose between:
 **Example Specialization Paths:**
 
 **Path 1: Weaponsmith Specialist**
-```
+```text
 Investment: 100 Knowledge Points
 - Weapon Smithing: 40 points (Foundation)
   - Swords: 30 points (Deep specialization)
@@ -550,10 +554,10 @@ Investment: 100 Knowledge Points
 Result: Best two-handed sword crafter on server
         Known for Tier 5 quality swords
         Cannot craft good armor
-```
+```text
 
 **Path 2: Generalist Blacksmith**
-```
+```text
 Investment: 100 Knowledge Points
 - Armor Smithing: 30 points
   - Plate: 10 points
@@ -566,7 +570,7 @@ Investment: 100 Knowledge Points
 Result: Can craft everything at decent quality
         No server-best items
         More flexible for self-sufficiency
-```
+```text
 
 ### Integration with Crafting Orders
 
@@ -823,7 +827,7 @@ Result: Can craft everything at decent quality
 Use Dragonflight-style choice nodes for specialization paths without rigid class trees.
 
 **Implementation:**
-```
+```text
 BlueMarble Specialization Tree Example: Geological Skills
 ═════════════════════════════════════════════════════════════════
 
@@ -842,7 +846,7 @@ BlueMarble Specialization Tree Example: Geological Skills
     ↓         ↓                          ↓              ↓
 [Specialty] [Specialty]            [Advanced]      [Advanced]
 Ore Master  Rock Master            Cartographer    Geologist
-```
+```text
 
 **Benefits:**
 - Clear visual progression like WoW talents
@@ -862,7 +866,7 @@ Apply WoW's Knowledge Point system to BlueMarble's geological skills.
 - Creates natural expert roles in player economy
 
 **Example Specializations:**
-```
+```text
 Mining Knowledge Tree:
 - Surface Mining (Quarrying, Open Pit)
   - Sedimentary Specialist
@@ -873,7 +877,8 @@ Mining Knowledge Tree:
 - Safety and Engineering
   - Structural Integrity
   - Ventilation Systems
-```
+
+```text
 
 **Benefits:**
 - Proven engagement mechanism from WoW
@@ -899,7 +904,7 @@ Adopt WoW's visual communication principles for skill systems.
 - Contextual help for systems
 
 **Reference Implementation:**
-```
+```text
 Skill Panel UI (ASCII Mockup):
 ╔════════════════════════════════════════════════════════════╗
 ║ GEOLOGICAL SKILLS                          [Help] [Options]║
@@ -920,7 +925,7 @@ Skill Panel UI (ASCII Mockup):
 ║ • New Discovery: Hematite Formation [+5 Knowledge]        ║
 ║                                                            ║
 ╚════════════════════════════════════════════════════════════╝
-```
+```text
 
 ### 4. Balance Accessibility with Depth
 
