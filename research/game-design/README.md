@@ -8,8 +8,22 @@ The game design research addresses the challenge of creating an engaging interac
 
 ## Research Documents
 
+### [Game Design Sources](game-sources.md)
+Curated collection of 15 high-quality sources covering game design principles, game research, game theory, 
+gamification, and related fields.
+
+**Key Topics**:
+
+- Foundational texts (Schell, Koster, Salen & Zimmerman, Rogers)
+- Player psychology and research (Flow, player behavior studies)
+- Mathematical and strategic game theory
+- Gamification theory and practice (McGonigal, Werbach, Chou)
+- Related fields (ludology, serious games, persuasive games)
+- Academic journals and conference resources
+
 ### [World Parameters](world-parameters.md)
-Technical specifications for a 3D spherical world with realistic geological dimensions and performance requirements.
+Technical specifications for a 3D spherical world with realistic geological dimensions and performance 
+requirements.
 
 **Key Topics**:
 - Enhanced 3D coordinate system with 20,000,000m Z-dimension (±10,000km from sea level)
