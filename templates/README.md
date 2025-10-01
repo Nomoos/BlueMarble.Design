@@ -48,6 +48,14 @@ ADR-style template for documenting important design decisions with context and r
 **Output Location:** `design/` or `docs/systems/`  
 **Naming:** Date-prefixed: `YYYY-MM-DD-decision-topic.md` or `decision-record-topic.md`
 
+#### `qa-test-plan.md`
+
+Template for comprehensive QA test plans covering test cases, bug tracking, and quality assurance procedures.
+
+**Usage:** Feature testing, QA documentation, test case management, bug tracking  
+**Output Location:** `docs/systems/` or `docs/`  
+**Naming:** Use descriptive names: `qa-test-plan-feature-name.md`
+
 ### Comprehensive Templates (Existing)
 
 #### `game-design-document.md`
@@ -200,6 +208,7 @@ For research-related work, use the research issue template system:
 | Experiment | `experiment-report.md` | `research/experiments/` |
 | Playtest | `playtest-report.md` | `research/experiments/` |
 | Decision Record | `decision-record.md` | `design/`, `docs/systems/` |
+| QA Test Plan | `qa-test-plan.md` | `docs/systems/`, `docs/` |
 | Game Design | `game-design-document.md` | `docs/core/`, `docs/gameplay/` |
 | Feature Spec | `feature-specification.md` | `docs/gameplay/`, `docs/systems/`, `docs/ui-ux/` |
 | API Spec | `api-specification.md` | `docs/systems/` |
