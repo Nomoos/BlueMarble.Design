@@ -14,7 +14,7 @@ This document describes the Octree system used in BlueMarble.Design for spatial 
 
 - **Root node (parent):**
   - Covers global range in X axis: **0 – 40 075 020 m** (Earth's circumference)
-  - Y, Z: **0 – 20 037 510 m** (from equator to pole, typically half of X)
+  - Y, Z: **0 – 20 037 510 m** (from pole to pole, typically half of X)
   - Dimensions can be adjusted according to simulation model needs.
 
 - **Child nodes:**
