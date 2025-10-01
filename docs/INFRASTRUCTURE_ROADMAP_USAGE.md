@@ -132,9 +132,19 @@ Track the following metrics through the parent issue:
 
 ## Related Documentation
 
+### Core Architecture Documentation
+- **Technical Foundation Overview**: `docs/TECHNICAL_FOUNDATION.md`
+- **System Architecture Design**: `docs/systems/system-architecture-design.md`
+- **Database Schema Design**: `docs/systems/database-schema-design.md`
+- **API Specifications**: `docs/systems/api-specifications.md`
+- **Security Framework Design**: `docs/systems/security-framework-design.md`
+
+### Templates and Guides
 - **Main Template**: `templates/infrastructure-research-roadmap-issue.md`
 - **Sub-Issue Template**: `templates/research-question-sub-issue.md`  
 - **Usage Guide**: `templates/research-issue-templates-guide.md`
+
+### Research Documentation
 - **Research Summary**: `research/RESEARCH_ISSUES_SUMMARY.md`
 - **Technical Analysis**: `research/spatial-data-storage/octree-optimization-guide.md`
 

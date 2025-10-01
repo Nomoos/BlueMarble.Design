@@ -79,6 +79,30 @@ Comprehensive analysis of Mortal Online 2's material grading and crafting qualit
 - Integration with BlueMarble's geological simulation for scientific authenticity
 - Implementation recommendations with code examples and balancing considerations
 
+### [Vintage Story Skill and Knowledge System Research](vintage-story-skill-knowledge-system-research.md)
+In-depth analysis of Vintage Story's unique implicit skill progression and knowledge discovery systems.
+
+**Key Topics**:
+- Implicit skill progression through knowledge and tool access (no explicit skill points)
+- Handbook system as dynamic knowledge repository and learning tool
+- Technology tier gating (Stone → Copper → Bronze → Iron → Steel)
+- Organic specialization without mechanical enforcement
+- Mastery through player understanding rather than numerical advancement
+- Discovery mechanics driving exploration and experimentation
+- Crafting and survival integration
+- UI/UX analysis with annotated screenshots
+- Comparison with traditional MMORPG skill systems
+- Detailed BlueMarble implementation recommendations
+
+**Research Highlights**:
+- Knowledge discovery as content rather than gate creates intrinsic motivation
+- Technology tiers provide progression without arbitrary level requirements
+- Emergent specialization through time investment and infrastructure
+- Player capability grows through understanding, not stat bonuses
+- Scales well to MMO with optional explicit tracking for player preference
+- Geological knowledge integration aligns perfectly with BlueMarble goals
+- Hybrid implicit/explicit model recommended for maximum player satisfaction
+
 ### [Vintage Story Material System Research](vintage-story-material-system-research.md)
 Comprehensive analysis of Vintage Story's material grading, quality mechanics, and crafting progression systems.
 
@@ -119,6 +143,36 @@ Framework for maximizing player agency through intelligent, reality-based constr
 - Emergent opportunities arising from constraint interactions
 - Knowledge-based progression that directly enhances capabilities
 - Creative problem-solving using realistic geological processes
+
+### [Advanced Crafting System Concepts Research](advanced-crafting-system-research.md)
+Industry trends research analyzing advanced crafting mechanics in MMORPGs to inform BlueMarble's production system design.
+
+**Key Topics**:
+- Flexible material selection systems with property-based requirements
+- Risk/reward mechanics including material loss, tool degradation, and crafting injuries
+- Player control of material bonuses and quality outcomes
+- Comparative analysis of 8 leading MMORPGs (FFXIV, ESO, MO2, LiF, Wurm, Vintage Story, Novus Inceptio, Eco)
+- UI/UX design patterns for complex crafting interfaces
+- Multi-stage interactive crafting processes
+- Quality-stratified market economies
+- Knowledge-based progression systems
+
+**Research Highlights**:
+- Property-based material requirements enable strategic optimization and emergent gameplay
+- Balanced risk systems create meaningful stakes while supporting player retention
+- Player control through material selection, skill application, and environmental optimization
+- Interactive crafting phases reward mastery over simple click-to-craft
+- Comprehensive comparative analysis identifies best practices across 8 reference games
+- 16-month phased implementation roadmap with clear deliverables
+- BlueMarble's geological simulation provides natural foundation for advanced crafting
+- Economic stratification by quality creates sustainable player-driven markets
+
+**Applicability to BlueMarble**:
+- Geological material variation supports flexible material selection naturally
+- Scientific accuracy creates educational value while maintaining engagement
+- Multi-property material system aligns with realistic mineral properties
+- Knowledge progression complements BlueMarble's educational goals
+- Geographic material distribution drives trade and exploration
 
 ### [Resource Gathering and Assembly Skills Research](assembly-skills-system-research.md)
 Comprehensive research on realistic gathering and crafting skills for BlueMarble, including resource gathering 

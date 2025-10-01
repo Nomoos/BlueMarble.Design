@@ -47,4 +47,4 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for detailed guidelines.
 
 - [Research](../research/) - Research supporting design decisions
 - [Templates](../templates/) - Design document templates
-- [Roadmap](../routemap/) - Feature planning and milestones
+- [Roadmap](../roadmap/) - Feature planning and milestones

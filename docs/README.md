@@ -8,6 +8,13 @@ This directory contains comprehensive design documentation for BlueMarble, a top
 - [Game Design Document](./core/game-design-document.md) - Main GDD with core vision and mechanics
 - [Technical Design Document](./core/technical-design-document.md) - Technical architecture and requirements
 
+### Technical Foundation
+- [Technical Foundation Overview](./TECHNICAL_FOUNDATION.md) - Comprehensive overview of core system architecture
+- [System Architecture Design](./systems/system-architecture-design.md) - Service-oriented architecture and scalability
+- [Database Schema Design](./systems/database-schema-design.md) - Hybrid database architecture and schema
+- [API Specifications](./systems/api-specifications.md) - RESTful API design and protocols
+- [Security Framework Design](./systems/security-framework-design.md) - Security model and compliance
+
 ### Systems Design
 - [Gameplay Systems](./systems/gameplay-systems.md) - Combat, progression, and core mechanics
 - [World Systems](./systems/world-systems.md) - World generation, NPCs, and environment
@@ -34,7 +41,9 @@ This directory contains comprehensive design documentation for BlueMarble, a top
 - [Technology Research](./research/technology-research.md) - Technical feasibility and tools
 
 ### Infrastructure & Project Management
+- [Technical Foundation Overview](./TECHNICAL_FOUNDATION.md) - Core system architecture documentation hub
 - [Infrastructure Roadmap Usage](./INFRASTRUCTURE_ROADMAP_USAGE.md) - Guide for using the infrastructure research roadmap parent issue
+- [Core Systems Roadmap Usage](./CORE_SYSTEMS_ROADMAP_USAGE.md) - Guide for using the core systems design roadmap
 
 ## Documentation Standards
 

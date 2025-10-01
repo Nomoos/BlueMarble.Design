@@ -1692,8 +1692,9 @@ For comprehensive analysis of Wurm Online's skill progression and mastery system
 - May need more structured progression for MMO
 
 **Deep Dive:**
-For comprehensive analysis of Vintage Story's material grading and quality systems, see:
-- [Vintage Story Material System Research](./vintage-story-material-system-research.md) - Detailed material quality, crafting progression, and implementation recommendations
+For comprehensive analysis of Vintage Story's systems, see:
+- [Vintage Story Skill and Knowledge System Research](./vintage-story-skill-knowledge-system-research.md) - Detailed skill progression, knowledge discovery, mastery mechanics, and implementation recommendations
+- [Vintage Story Material System Research](./vintage-story-material-system-research.md) - Detailed material quality, crafting progression, and tool quality systems
 
 ### Life is Feudal
 

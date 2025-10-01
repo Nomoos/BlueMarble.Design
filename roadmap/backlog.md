@@ -98,4 +98,4 @@ Track recently completed items here before archiving:
 
 - [Roadmap](roadmap.md) - High-level phases
 - [Milestones](milestones.md) - Specific deliverables
-- [Feature Prioritization Guide](../roadmap/feature-prioritization-guide.md)
+- [Feature Prioritization Guide](../roadmap-guides/feature-prioritization-guide.md)
