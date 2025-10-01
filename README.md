@@ -20,7 +20,9 @@ This repository serves as the central hub for all design-related activities in t
 │   ├── README.md           # Research guidelines
 │   ├── index.md            # Master index of research
 │   ├── topics/             # Small focused research notes (200-400 lines)
+│   ├── notes/              # Informal research notes and ideas
 │   ├── experiments/        # Structured experiment logs (YYYY-MM-DD-title.md)
+│   ├── literature/         # Formal references and literature reviews
 │   ├── sources/            # Bibliography, reading list, quotes
 │   ├── game-design/        # Game design research area
 │   ├── spatial-data-storage/ # Spatial data storage research
@@ -32,15 +34,20 @@ This repository serves as the central hub for all design-related activities in t
 │   ├── mechanics.md        # Core loops and systems
 │   ├── economy.md          # Progression, currencies, balance
 │   ├── narrative.md        # Story, world, characters
+│   ├── styleguide.md       # Visual design system and style guide
+│   ├── wireframes/         # UI/UX wireframes and screen mockups
+│   │   └── ui-wireframes.md # Interface mockups (general)
+│   ├── architecture/       # System architecture diagrams
 │   ├── ux/                 # User experience design
-│   │   ├── controls.md     # Input schemes
-│   │   └── ui-wireframes.md # Interface mockups
+│   │   └── controls.md     # Input schemes
 │   ├── island_start_game_design.md # Existing design
 │   └── one-page-design.md  # Existing design
 ├── roadmap/                 # Strategic planning and roadmap
 │   ├── README.md           # Planning guidelines
 │   ├── roadmap.md          # Big picture by quarter/phase
 │   ├── milestones.md       # Dated deliverables
+│   ├── milestones/         # Individual milestone definitions
+│   ├── tasks/              # Detailed task breakdowns
 │   ├── backlog.md          # Groomed research/design tasks
 │   ├── project-roadmap.md  # Detailed project roadmap with tracking
 │   ├── milestone-guide.md  # Milestone structure and tracking
@@ -175,11 +182,42 @@ Link liberally between related documents. Each major directory has an `index.md`
 
 ## Workflow
 
+### General Workflow
+
 1. **Research Phase**: Gather requirements and conduct necessary research
 2. **Design Phase**: Create structured design documents using templates
 3. **Review Phase**: Collaborate with stakeholders for feedback and iteration
 4. **Approval Phase**: Finalize documents for development implementation
 5. **Maintenance Phase**: Keep documents updated as implementation progresses
+
+### Detailed Workflow Guidelines
+
+#### Research Workflow
+
+1. Add research notes in `research/notes/` as single-topic files
+2. Place formal references and summaries in `research/literature/`
+3. Record experiment results in `research/experiments/`
+4. Keep files **small and focused on one topic** (200-400 lines)
+5. Use descriptive names (e.g., `database-architecture.md`, `mmo-retention-study.md`)
+6. Add cross-links between related files where useful
+7. Update `research/index.md` when adding significant research
+
+#### Design Workflow
+
+1. Document design artifacts (wireframes, diagrams, styleguides) in `design/`
+2. Store wireframes and mockups in `design/wireframes/`
+3. Place architecture diagrams in `design/architecture/`
+4. Keep the style guide updated in `design/styleguide.md`
+5. Use descriptive names (e.g., `login-wireframe.md`, `api-architecture.md`)
+6. Update `design/index.md` when adding new design documents
+
+#### Roadmap Workflow
+
+1. Break down the roadmap into milestones and tasks in `roadmap/`
+2. Create milestone definitions in `roadmap/milestones/`
+3. Define detailed tasks in `roadmap/tasks/`
+4. Update milestone status as work progresses
+5. Link tasks to relevant design and research documents
 
 ### Quality Checks
 

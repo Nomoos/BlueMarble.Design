@@ -30,5 +30,5 @@ Planned mockups (to be created by design team):
 
 ## Related Documentation
 
-- [Feature Specification](../../design/spec-player-trading-marketplace.md)
+- [Feature Specification](../../roadmap/tasks/player-trading-marketplace.md)
 - [UI Guidelines](../../docs/ui-ux/ui-guidelines.md)

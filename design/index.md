@@ -14,6 +14,12 @@ Entry point for all BlueMarble design documentation.
 ### User Experience
 
 - [UX](ux/) - Controls, UI wireframes, and user flows
+- [Wireframes](wireframes/) - UI/UX wireframes and screen mockups
+- [Style Guide](styleguide.md) - Visual design system and style guide
+
+### System Architecture
+
+- [Architecture](architecture/) - System architecture diagrams and technical design
 
 ### Existing Design Documents
 
@@ -29,6 +35,9 @@ The design folder is organized into focused documents:
 - **economy.md**: Progression systems, currencies, resource management
 - **narrative.md**: Story elements, world-building, character concepts
 - **ux/**: User interface and experience design
+- **wireframes/**: UI/UX wireframes and screen layouts
+- **architecture/**: System architecture diagrams and technical specifications
+- **styleguide.md**: Visual design system and brand guidelines
 
 ## Contributing
 

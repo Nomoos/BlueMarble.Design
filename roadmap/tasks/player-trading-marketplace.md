@@ -8,6 +8,70 @@
 **Epic/Theme:** Player Economy & Social Systems  
 **Priority:** High
 
+## Issue Tracking
+
+**Parent Issue:** TBD - Create parent issue for Player Trading Marketplace feature  
+**Related Issues:** TBD
+
+### Main Issues
+
+This feature will be tracked through the following main issues:
+
+1. **TBD** - Marketplace UI Implementation
+2. **TBD** - Listing System Backend
+3. **TBD** - Transaction Engine
+4. **TBD** - Price Discovery & Analytics
+5. **TBD** - Reputation System
+6. **TBD** - Cross-Island Trade Integration
+7. **TBD** - Market Analytics Tools
+
+### Sub-Issues Breakdown
+
+Each main issue will have sub-issues for specific implementation tasks:
+
+**Marketplace UI Implementation:**
+- TBD - Design and implement browse interface
+- TBD - Implement search and filtering
+- TBD - Create item detail views
+- TBD - Build seller management interface
+
+**Listing System Backend:**
+- TBD - Database schema for listings
+- TBD - API endpoints for listing CRUD operations
+- TBD - Inventory locking mechanism
+- TBD - Listing expiration system
+
+**Transaction Engine:**
+- TBD - Atomic transaction processing
+- TBD - Currency verification and transfer
+- TBD - Inventory space validation
+- TBD - Transaction rollback system
+- TBD - Transaction history logging
+
+**Price Discovery & Analytics:**
+- TBD - Historical price tracking
+- TBD - Market trend analysis
+- TBD - Price chart visualization
+- TBD - Demand indicators
+
+**Reputation System:**
+- TBD - Seller rating mechanism
+- TBD - Transaction feedback system
+- TBD - Trust score calculation
+- TBD - Reputation display in UI
+
+**Cross-Island Trade Integration:**
+- TBD - Transport cost calculation
+- TBD - Shipping time estimation
+- TBD - Cross-island logistics
+- TBD - Delivery tracking
+
+**Market Analytics Tools:**
+- TBD - Inventory value tracking
+- TBD - Profit margin calculator
+- TBD - Market trend dashboard
+- TBD - Export data functionality
+
 ## Executive Summary
 
 The Player Trading Marketplace is a comprehensive trading system that enables players to buy, sell, and exchange goods
