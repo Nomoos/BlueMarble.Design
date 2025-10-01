@@ -29,7 +29,7 @@ considering the addition of status and priority labels for better project manage
 
 - **Conversation ID**: t_68dcf8967b5081919b2e581151288bcd
 - **URL**: https://chatgpt.com/s/t_68dcf8967b5081919b2e581151288bcd
-- **Related Issue**: [Refactor labels by GPT link research](https://github.com/Nomoos/BlueMarble.Design/issues/)
+- **Related Issue**: Refactor labels by GPT link research
 - **Date**: 2025-09-30
 
 ## Files
