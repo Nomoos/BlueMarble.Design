@@ -5,30 +5,35 @@ This directory contains all documentation related to gameplay mechanics, systems
 ## Document Categories
 
 ### Core Mechanics
+
 - Combat systems
 - Movement and navigation
 - Interaction systems
 - Resource management
 
 ### Player Progression
+
 - Experience and leveling systems
 - Skill trees and abilities
 - Character customization
 - Reputation and faction systems
 
 ### Game Modes
+
 - PvE (Player vs Environment) content
 - PvP (Player vs Player) systems
 - Cooperative gameplay
 - Solo gameplay experiences
 
 ### Economy and Trading
+
 - In-game economy design
 - Trading systems
-- Marketplace mechanics
+- Marketplace mechanics ([Player Trading Marketplace Guide](marketplace-usage-guide.md))
 - Currency and pricing
 
 ### Balance and Tuning
+
 - Gameplay balance frameworks
 - Tuning methodologies
 - Metrics and analytics
@@ -51,6 +56,7 @@ This directory contains all documentation related to gameplay mechanics, systems
 ## Review Process
 
 All gameplay documentation should be reviewed by:
+
 - Game Design Lead
 - Systems Design Team
 - Development Team (for feasibility)
