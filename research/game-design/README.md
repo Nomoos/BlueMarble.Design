@@ -54,6 +54,46 @@ In-depth research on Life is Feudal's material quality and crafting systems with
 - Detailed comparison with BlueMarble's current systems
 - Actionable recommendations for implementation
 
+### [Life is Feudal Skill System and Specialization Analysis](life-is-feudal-skill-specialization-system-research.md)
+Comprehensive analysis of Life is Feudal's skill system, specialization mechanics, and character development focusing on 
+progression pathways, mastery systems, and player interdependence.
+
+**Key Topics**:
+- Hard 600-point skill cap forcing meaningful specialization and player interdependence
+- Use-based skill progression with exponential difficulty curve and pain tolerance system
+- Skill tier unlocks at 30/60/90 points creating clear progression milestones
+- Parent-child skill bonuses encouraging logical skill tree development
+- Alignment system (Crafting vs Combat) creating distinct character archetypes
+- Knowledge and recipe systems with discovery mechanics and guild knowledge sharing
+- Mastery recognition through titles, social systems, and community reputation
+- Character development timeline from novice to master (200-300 hours per skill)
+- Specialization archetypes and optimal character builds
+- Player choice impact on economic interdependence and guild composition
+
+**Research Highlights**:
+- Comparative analysis with Wurm Online, Mortal Online 2, and Eco Global Survival
+- UI/UX analysis with annotated screenshots of skill interface design
+- Detailed skill gain formulas and progression calculations
+- Complete skill list and tier unlock examples
+- Six detailed recommendations for BlueMarble integration:
+  1. Implement skill tier milestone system with geological specializations
+  2. Consider hard skill cap options for different server types
+  3. Implement parent-child skill bonuses for geological skill trees
+  4. Add failure reward system (pain tolerance) for gentler learning curves
+  5. Enhance alignment/focus system (Research vs Industrial specialization)
+  6. Implement mastery recognition and achievement systems
+- Phased rollout strategy with technical requirements and risk mitigation
+- Economic interdependence analysis and guild composition recommendations
+- Python implementation examples for skill gain calculations
+
+**Relevance to BlueMarble**:
+- Specialization-driven design creates economic interdependence for thriving MMO communities
+- Skill cap and alignment mechanics adaptable to geological vs industrial specializations
+- Tier system provides clear progression goals and educational content gating
+- Parent-child bonus system encourages coherent skill tree building
+- Educational alignment with foundational scientific knowledge before advanced topics
+- Knowledge systems support BlueMarble's educational mission through discovery mechanics
+
 ### [Skill Caps and Decay Research](skill-caps-and-decay-research.md)
 Analysis of skill caps, experience-based progression, and skill decay mechanics in RPG systems.
 
