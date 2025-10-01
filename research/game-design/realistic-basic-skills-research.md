@@ -1,7 +1,7 @@
 # Realistic Basic Skills Candidates - Research Report
 
 **Document Type:** Research Report  
-**Version:** 2.2  
+**Version:** 2.3  
 **Author:** Game Design Research Team  
 **Date:** 2025-10-01  
 **Status:** Final  
@@ -16,10 +16,11 @@
 This research explores and documents realistic basic skills for BlueMarble, focusing on authenticity and 
 practical use in gameplay. The analysis covers traditional skill domains including tailoring, blacksmithing, 
 alchemy, woodworking, cooking, herbalism, mining, fishing, combat, farming, forestry, animal husbandry, 
-and first aid. Each skill is assessed for realism, progression systems, dependencies, and in-game effects. 
-The document provides actionable recommendations with visual references for implementation, building on 
-BlueMarble's geological simulation foundation to create an immersive and authentic crafting and survival 
-experience.
+first aid, masonry, and milling. Additionally, it provides frameworks for player-created systems including 
+religion/faith and economic/governmental structures. Each skill is assessed for realism, progression systems, 
+dependencies, and in-game effects. The document provides actionable recommendations with visual references 
+for implementation, building on BlueMarble's geological simulation foundation to create an immersive and 
+authentic experience where players shape their own societies.
 
 **Key Findings:**
 - Basic skills should mirror real-world learning curves with apprentice → journeyman → master progression
@@ -31,6 +32,8 @@ experience.
 - Each skill domain features 1024 levels across 4 distinct progression tiers (256 levels each)
 - Extended progression allows for fine-grained skill development and long-term mastery goals
 - Offline progression system treats offline and online time equally through routine-based gameplay
+- Historical professions (masonry, milling) provide authentic medieval gameplay depth
+- Player-created religion and governance systems enable emergent social structures
 
 ## Table of Contents
 
@@ -52,7 +55,8 @@ experience.
 4. How can UI/UX communicate complex skill interactions clearly?
 
 ### Success Criteria
-- Comprehensive documentation of 13+ realistic basic skills
+- Comprehensive documentation of 15+ realistic basic skills
+- Frameworks for player-created religion and governance systems
 - Clear progression mechanics for each skill (levels 1-1024)
 - Actionable implementation recommendations
 - Visual references for player-facing interfaces
@@ -1291,6 +1295,532 @@ techniques. Quick thinking and steady hands save lives.
 
 ---
 
+### 14. Masonry - Stone Construction and Building
+
+**Real-World Foundation:**
+Masonry is the ancient craft of building with stone, brick, and mortar. Historical masons were essential 
+craftsmen responsible for constructing everything from simple homes to grand cathedrals. The craft requires 
+understanding of materials, structural principles, and precise craftsmanship passed down through generations.
+
+**Skill Progression Tiers:**
+
+#### Tier 1: Apprentice Mason (Levels 1-256)
+- **Unlocked Techniques:**
+  - Basic stone cutting and shaping
+  - Simple mortar mixing
+  - Foundation laying
+  - Basic wall construction
+  
+- **Material Sources:**
+  - Common stone (limestone, sandstone)
+  - Basic mortar (sand, lime)
+  - Simple tools (hammer, chisel)
+  
+- **Success Rates:** 60-75%
+- **Quality Range:** Poor to Standard (30-65%)
+- **XP Gains:** Fast (50-100 XP per structure)
+
+#### Tier 2: Journeyman Mason (Levels 257-512)
+- **Unlocked Techniques:**
+  - Advanced stone cutting (precise angles)
+  - Arch construction
+  - Column building
+  - Decorative stonework
+  
+- **Material Sources:**
+  - Quality stone (marble, granite)
+  - Specialized mortars
+  - Improved tools
+  
+- **Success Rates:** 75-85%
+- **Quality Range:** Standard to Fine (60-78%)
+- **XP Gains:** Moderate (30-75 XP per structure)
+
+#### Tier 3: Master Mason (Levels 513-768)
+- **Unlocked Techniques:**
+  - Complex structural design
+  - Vault and dome construction
+  - Stone carving and sculpture
+  - Load-bearing calculations
+  
+- **Material Sources:**
+  - Rare stone types
+  - Premium mortars
+  - Master-grade tools
+  
+- **Success Rates:** 85-92%
+- **Quality Range:** Fine to Superior (75-90%)
+- **XP Gains:** Slow (18-55 XP per structure)
+
+#### Tier 4: Grand Master Mason (Levels 769-1024)
+- **Unlocked Techniques:**
+  - Cathedral-scale construction
+  - Perfect stone fitting (no mortar needed)
+  - Structural innovation
+  - Apprentice training and guild leadership
+  
+- **Material Sources:**
+  - Legendary stone materials
+  - Specialized binding agents
+  - Enchanted construction tools
+  
+- **Success Rates:** 92-98%
+- **Quality Range:** Superior to Legendary (88-99%)
+- **XP Gains:** Very Slow (10-40 XP per structure)
+
+**In-Game Effects:**
+- **Building Construction:** Essential for permanent structures
+- **Defensive Structures:** Walls, towers, fortifications
+- **Infrastructure:** Bridges, roads, aqueducts
+- **Economic Value:** High-quality buildings increase property value
+- **Prestige:** Grand structures bring fame and influence
+
+**Skill Dependencies:**
+- **Mining:** For stone material sourcing
+- **Engineering:** For structural design (advanced)
+- **Blacksmithing:** For tool creation and maintenance
+
+**Specialization Paths:**
+- **Fortification Specialist:** Military structures and defenses
+- **Cathedral Builder:** Grand religious and civic buildings
+- **Stone Carver:** Decorative and artistic stonework
+
+---
+
+### 15. Milling - Grain Processing and Production
+
+**Real-World Foundation:**
+Millers operated water or wind-powered mills to grind grain into flour, an essential service in medieval 
+communities. The miller was a crucial figure in the food production chain, requiring knowledge of mechanics, 
+grain properties, and timing to produce quality flour.
+
+**Skill Progression Tiers:**
+
+#### Tier 1: Mill Hand (Levels 1-256)
+- **Unlocked Techniques:**
+  - Basic grain grinding
+  - Mill stone maintenance
+  - Simple sifting
+  - Grain storage
+  
+- **Material Sources:**
+  - Common grains (wheat, rye, barley)
+  - Basic millstones
+  - Simple sieves
+  
+- **Success Rates:** 65-75%
+- **Quality Range:** Poor to Standard (35-60%)
+- **Processing Speed:** Slow (10-15 units/hour)
+- **XP Gains:** Fast (55-105 XP per batch)
+
+#### Tier 2: Journeyman Miller (Levels 257-512)
+- **Unlocked Techniques:**
+  - Multi-grain processing
+  - Quality grading
+  - Mill optimization
+  - By-product utilization (bran separation)
+  
+- **Material Sources:**
+  - Quality grains
+  - Improved millstones
+  - Fine sieves and bolters
+  
+- **Success Rates:** 75-85%
+- **Quality Range:** Standard to Fine (55-75%)
+- **Processing Speed:** Moderate (15-25 units/hour)
+- **XP Gains:** Moderate (30-70 XP per batch)
+
+#### Tier 3: Master Miller (Levels 513-768)
+- **Unlocked Techniques:**
+  - Specialized flour production
+  - Mill power optimization
+  - Weather-based timing
+  - Multiple stone management
+  
+- **Material Sources:**
+  - Premium grains
+  - Precision-cut millstones
+  - Advanced sifting systems
+  
+- **Success Rates:** 85-92%
+- **Quality Range:** Fine to Superior (72-88%)
+- **Processing Speed:** Fast (25-40 units/hour)
+- **XP Gains:** Slow (18-55 XP per batch)
+
+#### Tier 4: Grand Master Miller (Levels 769-1024)
+- **Unlocked Techniques:**
+  - Perfect flour production
+  - Multi-mill operations
+  - Innovative grinding techniques
+  - Miller's guild leadership
+  
+- **Material Sources:**
+  - Legendary grain varieties
+  - Master-crafted millstones
+  - State-of-the-art equipment
+  
+- **Success Rates:** 92-98%
+- **Quality Range:** Superior to Legendary (85-99%)
+- **Processing Speed:** Very Fast (40-60 units/hour)
+- **XP Gains:** Very Slow (10-35 XP per batch)
+
+**In-Game Effects:**
+- **Food Production:** Essential for bread and baking
+- **Economic Control:** Mills often held monopolies
+- **Community Service:** Central to settlement survival
+- **By-Products:** Bran for animal feed, whole grain products
+- **Social Standing:** Millers held important economic positions
+
+**Skill Dependencies:**
+- **Farming:** For grain sourcing
+- **Engineering:** For mill mechanism understanding
+- **Cooking:** Primary consumer of flour products
+
+**Specialization Paths:**
+- **Grain Master:** Expert in grain selection and grading
+- **Mill Engineer:** Mechanical optimization and innovation
+- **Baker's Supplier:** Specialized flour for specific baking needs
+
+---
+
+## Player-Created Systems
+
+### Religion and Faith Framework
+
+**Design Philosophy:**
+BlueMarble provides a flexible framework for religion and faith systems, allowing players to create, 
+develop, and maintain their own belief systems. The game does not prescribe specific religions but 
+offers mechanical support for faith-based gameplay.
+
+**Core Mechanics:**
+
+**1. Faith System Creation:**
+
+Players can establish faith systems with the following components:
+
+```
+Faith Creation Elements:
+- Founding Principles: Core beliefs and tenets (player-defined)
+- Sacred Symbols: Visual representations and iconography
+- Ritual Practices: Ceremonies, observances, calendar events
+- Moral Code: Ethical guidelines for followers
+- Hierarchical Structure: Leadership and organizational roles
+- Sacred Sites: Locations of religious significance
+```
+
+**2. Faith-Related Skills:**
+
+```
+Clergy/Religious Leadership (New Skill):
+- Ritual Performance: Conducting ceremonies and services
+- Scripture Knowledge: Understanding and teaching doctrines
+- Community Leadership: Guiding followers
+- Sacred Architecture: Temple and shrine design
+- Faith Healing: Spiritual/psychological treatment
+
+Levels 1-256: Local clergy
+Levels 257-512: Regional religious leaders
+Levels 513-768: High priests/priestesses
+Levels 769-1024: Prophets and faith founders
+```
+
+**3. Faith-Based Progression:**
+
+```
+Individual Faith Stat:
+- Devotion Level: Personal commitment to faith (0-1024)
+- Ritual Participation: Regular observance increases devotion
+- Sacred Quests: Faith-specific objectives
+- Moral Alignment: Actions consistent with faith principles
+- Community Standing: Respect within religious community
+
+Faith Benefits:
+- Comfort Bonus: Reduced stress, improved well-being
+- Community Support: Aid from fellow believers
+- Sacred Sites Access: Special locations and resources
+- Divine Inspiration: Creativity and problem-solving boosts
+- Social Capital: Influence within faith community
+```
+
+**4. Player-Defined Doctrines:**
+
+The system supports diverse belief structures:
+
+```
+Possible Faith Types (Player-Created):
+- Nature-Based: Reverence for natural world, seasons, elements
+- Ancestor Worship: Honoring and seeking guidance from ancestors
+- Philosophical: Ethical systems and life principles
+- Polytheistic: Multiple deities with different domains
+- Monotheistic: Single supreme deity
+- Dualistic: Balance between opposing forces
+- Agnostic/Secular: Community values without supernatural elements
+```
+
+**5. Religious Structures and Buildings:**
+
+```
+Sacred Architecture (Masonry + Clergy):
+- Small Shrines: Personal or family worship (Levels 1-100)
+- Community Temples: Local congregation spaces (Levels 100-300)
+- Grand Cathedrals: Regional religious centers (Levels 300-600)
+- Sacred Complexes: Multi-building religious compounds (Levels 600-1024)
+
+Building Benefits:
+- Ritual efficiency bonuses
+- Community gathering spaces
+- Storage for religious artifacts
+- Training facilities for clergy
+- Pilgrimage destinations
+```
+
+**6. Faith-Based Economy:**
+
+```
+Religious Economics:
+- Tithes and Offerings: Voluntary contributions
+- Temple Markets: Religious goods and services
+- Pilgrimage Trade: Travel and tourism
+- Sacred Crafts: Religious artwork and items
+- Charity Systems: Community support networks
+```
+
+**7. Interfaith Relations:**
+
+```
+Faith Interaction Systems:
+- Tolerance Levels: How faiths view each other
+- Shared Values: Common principles between faiths
+- Theological Debate: Peaceful discussion and exchange
+- Cooperation: Joint projects and mutual aid
+- Conflict Resolution: Mediation and compromise
+```
+
+**Implementation Notes:**
+- All faith content is player-created and moderated
+- No prescribed "correct" religion or belief system
+- Mechanical benefits balanced across all faith types
+- Encourages roleplay and community building
+- Respects diverse real-world beliefs by keeping content fictional
+
+---
+
+### Economic and Governance Frameworks
+
+**Design Philosophy:**
+BlueMarble provides foundational systems for economics and governance, allowing players to establish 
+and maintain their own economic models and governmental structures. The game offers tools and mechanics 
+rather than prescribed systems.
+
+**Economic System Framework:**
+
+**1. Economic Models (Player-Determined):**
+
+```
+Possible Economic Systems:
+- Free Market: Supply and demand, minimal regulation
+- Controlled Economy: State-managed production and prices
+- Guild System: Craft-based economic control
+- Cooperative: Shared ownership and resources
+- Mixed Models: Combination of approaches
+- Barter-Based: Non-monetary exchange systems
+- Command Economy: Centralized planning
+```
+
+**2. Economic Skill: Trade and Commerce**
+
+```
+Trade Skill Progression (New Skill):
+Levels 1-256: Local Merchant
+- Basic buying and selling
+- Simple negotiations
+- Market awareness
+- Inventory management
+
+Levels 257-512: Regional Trader
+- Trade route establishment
+- Contract negotiation
+- Market analysis
+- Credit and loans
+
+Levels 513-768: Commerce Master
+- International trade
+- Economic policy influence
+- Trade organization leadership
+- Market manipulation
+
+Levels 769-1024: Economic Architect
+- System-wide economic planning
+- Currency management
+- Trade empire building
+- Economic theory development
+```
+
+**3. Currency and Exchange:**
+
+```
+Monetary Systems (Player-Configurable):
+- Commodity Money: Gold, silver, goods as currency
+- Fiat Currency: Player-issued money tokens
+- Multiple Currencies: Region-specific systems
+- Credit Systems: Promissory notes and banking
+- Cryptocurrency-Style: Digital ledger systems
+- Resource-Backed: Currency tied to specific goods
+```
+
+**4. Market Mechanics:**
+
+```
+Market Systems:
+- Price Discovery: Supply/demand equilibrium
+- Auction Houses: Competitive bidding
+- Guild Markets: Craft-specific exchanges
+- Black Markets: Underground trading
+- Futures Markets: Advance contracts
+- Regulatory Bodies: Player-managed oversight
+```
+
+**Governance System Framework:**
+
+**1. Government Types (Player-Established):**
+
+```
+Governance Models:
+- Democracy: Elected representatives
+- Monarchy: Hereditary or appointed rulers
+- Oligarchy: Rule by elite group
+- Theocracy: Religious leadership
+- Meritocracy: Achievement-based leadership
+- Anarchism: Self-governing collectives
+- Council System: Representative assemblies
+- Tribal: Clan-based leadership
+```
+
+**2. Governance Skill: Leadership and Administration**
+
+```
+Leadership Skill (New Skill):
+Levels 1-256: Community Organizer
+- Basic group coordination
+- Simple rule enforcement
+- Dispute resolution
+- Resource allocation
+
+Levels 257-512: Regional Administrator
+- Policy development
+- Multi-community coordination
+- Diplomatic relations
+- Budget management
+
+Levels 513-768: State Leader
+- Large-scale governance
+- Legal system development
+- International diplomacy
+- Economic policy
+
+Levels 769-1024: Nation Builder
+- Constitutional development
+- Multi-state coordination
+- Historical legacy
+- System innovation
+```
+
+**3. Legal and Justice Systems:**
+
+```
+Law Framework (Player-Defined):
+- Criminal Code: What constitutes crimes
+- Civil Law: Property and contracts
+- Court Systems: Dispute resolution
+- Enforcement: Guards, militia, police
+- Punishment: Fines, imprisonment, banishment
+- Appeals Process: Review and revision
+```
+
+**4. Civic Infrastructure:**
+
+```
+Governance Buildings (Masonry + Leadership):
+- Town Halls: Local governance centers
+- Courts: Legal proceedings
+- Guard Posts: Law enforcement
+- Administrative Offices: Bureaucracy
+- Diplomatic Embassies: Foreign relations
+- Public Works: Infrastructure management
+```
+
+**5. Taxation and Public Finance:**
+
+```
+Fiscal Systems (Player-Determined):
+- Tax Types: Income, property, sales, tariffs
+- Tax Rates: Player-set levels
+- Public Services: What government provides
+- Budget Allocation: Spending priorities
+- Debt Management: Loans and obligations
+- Transparency: Public vs. private finances
+```
+
+**6. Diplomatic Relations:**
+
+```
+Inter-Community Diplomacy:
+- Treaties and Agreements
+- Trade Pacts
+- Military Alliances
+- Cultural Exchanges
+- Conflict Resolution
+- Ambassador Systems
+```
+
+**Integration with Existing Systems:**
+
+```
+Cross-System Interactions:
+- Economic Impact on Skills: Price affects material availability
+- Governance Impact on Trade: Regulations and tariffs
+- Faith Impact on Law: Moral codes influencing legal systems
+- Skill Impact on Economy: Craftsmen drive production
+- Community Impact on Governance: Population needs shape policy
+```
+
+**Implementation Philosophy:**
+
+1. **Framework, Not Prescription:** Game provides tools, players create content
+2. **Emergent Systems:** Complex behaviors arise from simple mechanics
+3. **Player Agency:** Communities decide their own structures
+4. **Dynamic Evolution:** Systems can change over time
+5. **Conflict Resolution:** Built-in mechanics for disputes
+6. **Historical Authenticity:** Inspired by real systems but not bound by them
+7. **Scalability:** Works for small groups and large nations
+
+**Example Player-Created Scenarios:**
+
+```
+Scenario 1: Guild Republic
+- Economy: Guild-controlled craft production
+- Government: Council of guild masters
+- Faith: Craft-deity polytheism
+- Result: Specialized, high-quality production with oligarchic control
+
+Scenario 2: Theocratic Farming Community
+- Economy: Cooperative agriculture
+- Government: Religious council leadership
+- Faith: Nature-based spirituality
+- Result: Sustainable, community-focused settlement
+
+Scenario 3: Free Market Democracy
+- Economy: Laissez-faire capitalism
+- Government: Representative democracy
+- Faith: Secular ethics
+- Result: Dynamic, competitive economic growth
+```
+
+These frameworks allow players to experiment with different social, economic, and governmental structures, 
+creating unique gameplay experiences while maintaining balanced mechanics and avoiding prescriptive designs.
+
+---
+
 ## Skill Progression Framework
 
 ### Universal Progression Mechanics
@@ -1872,25 +2402,29 @@ The documented skills balance authenticity with engaging gameplay, offering clea
 meaningful choices, and deep integration with BlueMarble's geological simulation foundation.
 
 **Key Takeaways:**
-1. **Thirteen Core Skills** provide diverse gameplay opportunities across crafting, combat, agriculture, and survival
+1. **Fifteen Core Skills** provide diverse gameplay opportunities across crafting, combat, agriculture, survival, and historical professions
 2. **Four-Tier Progression** (256 levels per tier, 1024 total) creates clear advancement with fine-grained mastery
 3. **Material Quality** from geological/botanical systems drives crafting depth
 4. **Skill Dependencies** encourage specialization and player cooperation
 5. **Visual UI Elements** communicate complex systems clearly to players
 6. **Combat & Survival Skills** expand beyond crafting to complete gameplay experience
 7. **Agricultural Systems** (Farming, Animal Husbandry) support player-driven economy
-8. **Extended Level System** (1024 levels) provides long-term progression goals and meaningful incremental improvements
-9. **Offline Progression** treats offline and online time equally through routine-based gameplay, emphasizing strategic routine optimization
+8. **Historical Professions** (Masonry, Milling) add authentic medieval depth
+9. **Extended Level System** (1024 levels) provides long-term progression goals and meaningful incremental improvements
+10. **Offline Progression** treats offline and online time equally through routine-based gameplay, emphasizing strategic routine optimization
+11. **Player-Created Systems** for religion, economics, and governance enable emergent social structures and diverse community experiences
 
 **Next Steps:**
 1. Implement Phase 1 core skills (Tailoring, Cooking, Herbalism, Mining, Farming)
-2. Add Phase 1b survival skills (Combat, First Aid, Forestry)
-3. Develop material quality algorithms integrated with geological simulation
-4. Create crafting UI based on fiber crafting example
-5. Design combat and healing interfaces
-6. Implement offline progression system with routine assignment
-7. Test progression curves with player feedback
-8. Iterate on balance and timing based on real gameplay data
+2. Add Phase 1b survival and historical skills (Combat, First Aid, Forestry, Masonry, Milling)
+3. Develop player-created system frameworks (Religion, Trade, Leadership skills)
+4. Develop material quality algorithms integrated with geological simulation
+5. Create crafting UI based on fiber crafting example
+6. Design combat, healing, and governance interfaces
+7. Implement offline progression system with routine assignment
+8. Test progression curves with player feedback
+9. Iterate on balance and timing based on real gameplay data
+10. Create community tools for player-defined religions and governance
 
 ---
 
@@ -1902,3 +2436,4 @@ meaningful choices, and deep integration with BlueMarble's geological simulation
 | 2.0 | 2025-10-01 | Expanded to 1024-level system (256 levels per tier) with adjusted XP progression |
 | 2.1 | 2025-10-01 | Added offline progression system with routine-based skill development |
 | 2.2 | 2025-10-01 | Updated offline progression to treat offline and online time equally (routine-based design) |
+| 2.3 | 2025-10-01 | Added historical professions (Masonry, Milling) and player-created systems (Religion, Economics, Governance) |
