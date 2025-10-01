@@ -1,7 +1,7 @@
 # Realistic Basic Skills Candidates - Research Report
 
 **Document Type:** Research Report  
-**Version:** 2.1  
+**Version:** 2.2  
 **Author:** Game Design Research Team  
 **Date:** 2025-10-01  
 **Status:** Final  
@@ -30,7 +30,7 @@ experience.
 - Fiber-based crafting (textiles) provides excellent entry point for new players
 - Each skill domain features 1024 levels across 4 distinct progression tiers (256 levels each)
 - Extended progression allows for fine-grained skill development and long-term mastery goals
-- Offline progression system enables characters to develop through routines while players are offline
+- Offline progression system treats offline and online time equally through routine-based gameplay
 
 ## Table of Contents
 
@@ -1389,9 +1389,9 @@ Available Routines:
 **2. Offline XP Accumulation:**
 
 ```
-Offline_XP_Per_Hour = Base_Offline_Rate × Routine_Efficiency × Facility_Quality × Rest_Bonus
+Offline_XP_Per_Hour = Base_XP_Rate × Routine_Efficiency × Facility_Quality × Rest_Bonus
 
-Base_Offline_Rate: 20% of active play rate (rewards active play while allowing progress)
+Base_XP_Rate: Equal to active play rate (routine-based gameplay design)
 Routine_Efficiency: 0.5-1.0 based on skill level and routine match
 Facility_Quality: 0.8-1.2 based on workshop/facility upgrades
 Rest_Bonus: 1.0-1.5x for first 8 hours (represents well-rested productivity)
@@ -1501,17 +1501,17 @@ Player Economy:
 **8. Implementation Considerations:**
 
 **Balance Goals:**
-- Offline XP rate: ~20-30% of active play rate
-- Encourages regular login (daily/every few days optimal)
-- Prevents pure AFK progression (max efficiency requires preparation)
-- Respects player time (busy players can still progress)
-- Maintains skill value (mastery still requires significant time)
+- Offline XP rate: Equal to active play rate (routine-based gameplay philosophy)
+- Encourages strategic routine selection and preparation
+- Success depends on proper routine setup and resource management
+- Respects player time while maintaining skill value through proper routine use
+- Characters progress authentically whether player is online or offline
 
 **Technical Requirements:**
 - Server-side routine processing (check on login)
 - Material inventory tracking during offline period
 - Event simulation for offline activities
-- Anti-abuse measures (rate limiting, diminishing returns)
+- Routine validation and effectiveness calculation
 
 **Player Communication:**
 ```
@@ -1527,17 +1527,19 @@ On Login Summary:
 
 **Design Philosophy:**
 
-The offline progression system acknowledges that MMO players have varying schedules while maintaining 
-the value of active engagement. By providing meaningful but limited offline progression:
+The offline progression system reflects BlueMarble's routine-based gameplay philosophy where characters 
+live continuously in the world through their assigned routines. Offline and online time are treated equally:
 
-1. **Respects Player Time:** Casual players can remain competitive
-2. **Rewards Active Play:** Active play remains 3-5x more efficient
-3. **Maintains Authenticity:** Characters "live" in the world continuously
-4. **Enables Specialization:** Dedicated crafters/gatherers viable
-5. **Supports Economy:** Consistent material production and consumption
-6. **Encourages Community:** Guild benefits and social features enhance offline progression
+1. **Routine-Based Progression:** Success depends on smart routine selection, not just being online
+2. **Equal Time Value:** Offline and online hours count the same when proper routines are set
+3. **Maintains Authenticity:** Characters "live" in the world continuously through routines
+4. **Enables Specialization:** Dedicated crafters/gatherers progress through well-planned routines
+5. **Supports Economy:** Consistent material production and consumption 24/7
+6. **Rewards Strategy:** Players who master routine optimization progress most efficiently
 
-This system transforms downtime into meaningful character development while preserving the core 
+This system emphasizes mastery of the routine system rather than pure time investment, making the game 
+accessible to players with varying schedules while rewarding those who understand and optimize their 
+character's routines. 
 gameplay loop and the satisfaction of active skill mastery.
 
 ---
@@ -1878,7 +1880,7 @@ meaningful choices, and deep integration with BlueMarble's geological simulation
 6. **Combat & Survival Skills** expand beyond crafting to complete gameplay experience
 7. **Agricultural Systems** (Farming, Animal Husbandry) support player-driven economy
 8. **Extended Level System** (1024 levels) provides long-term progression goals and meaningful incremental improvements
-9. **Offline Progression** allows characters to develop through routines while respecting player time and maintaining active play value
+9. **Offline Progression** treats offline and online time equally through routine-based gameplay, emphasizing strategic routine optimization
 
 **Next Steps:**
 1. Implement Phase 1 core skills (Tailoring, Cooking, Herbalism, Mining, Farming)
@@ -1899,3 +1901,4 @@ meaningful choices, and deep integration with BlueMarble's geological simulation
 | 1.1 | 2025-10-01 | Added Combat, Farming, Forestry, Animal Husbandry, and First Aid skills |
 | 2.0 | 2025-10-01 | Expanded to 1024-level system (256 levels per tier) with adjusted XP progression |
 | 2.1 | 2025-10-01 | Added offline progression system with routine-based skill development |
+| 2.2 | 2025-10-01 | Updated offline progression to treat offline and online time equally (routine-based design) |
