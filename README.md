@@ -37,12 +37,12 @@ This repository serves as the central hub for all design-related activities in t
 │   │   └── ui-wireframes.md # Interface mockups
 │   ├── island_start_game_design.md # Existing design
 │   └── one-page-design.md  # Existing design
-├── routemap/                # Strategic planning (renamed from roadmap)
+├── roadmap/                 # Strategic planning and roadmap
 │   ├── README.md           # Planning guidelines
 │   ├── roadmap.md          # Big picture by quarter/phase
 │   ├── milestones.md       # Dated deliverables
 │   └── backlog.md          # Groomed research/design tasks
-├── roadmap/                 # Existing roadmap (retained)
+├── roadmap-guides/          # Roadmap management guides
 ├── docs/                    # Comprehensive documentation
 │   ├── core/               # Core design documents (GDD, TDD)
 │   ├── gameplay/           # Gameplay mechanics and systems
@@ -136,6 +136,13 @@ Link liberally between related documents. Each major directory has an `index.md`
 - **[Usage Examples](USAGE_EXAMPLES.md)** - Practical examples of using the repository structure
 
 ## Key Documentation
+
+### Technical Foundation
+- **[Technical Foundation Overview](./docs/TECHNICAL_FOUNDATION.md)** - Comprehensive core system architecture documentation
+- **[System Architecture Design](./docs/systems/system-architecture-design.md)** - Service-oriented architecture
+- **[Database Schema Design](./docs/systems/database-schema-design.md)** - Hybrid database architecture
+- **[API Specifications](./docs/systems/api-specifications.md)** - RESTful API design and protocols
+- **[Security Framework Design](./docs/systems/security-framework-design.md)** - Security model and compliance
 
 ### Core Design Documents
 - **[Game Design Document](./docs/core/game-design-document.md)** - Complete game vision and design

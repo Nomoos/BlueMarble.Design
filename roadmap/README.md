@@ -1,27 +1,61 @@
-# Project Roadmap
+# Roadmap
 
-This directory contains project roadmaps, milestone tracking, and feature prioritization for BlueMarble.
-
-## Overview
-
-The roadmap directory provides:
-- High-level project timeline and phases
-- Feature priorities and dependencies
-- Milestone tracking and progress
-- Release planning and versioning
+High-level project roadmap, milestones, and backlog for BlueMarble research and design work.
 
 ## Documents
 
-### Main Roadmap
-- **[Project Roadmap](project-roadmap.md)** - Main roadmap document with phases, milestones, and feature tracking
+- [Roadmap](roadmap.md) - Big picture by quarter/phase
+- [Milestones](milestones.md) - Dated milestones and deliverables
+- [Backlog](backlog.md) - Groomed backlog for research/design tasks
 
-### Guides
-- **[Roadmap Management Guide](roadmap-management-guide.md)** - How to update and manage the roadmap
-- **[Milestone Guide](milestone-guide.md)** - Milestone structure and tracking
-- **[Feature Prioritization Guide](feature-prioritization-guide.md)** - How features are prioritized
+## Purpose
 
-## Related Documentation
+The roadmap provides:
 
-- `/docs/` - Detailed design specifications
-- `/templates/` - Templates for roadmap documents
-- Issue tracking in GitHub
+- **Strategic Direction**: Quarterly/phase-based planning
+- **Clear Milestones**: Specific, dated deliverables
+- **Task Management**: Prioritized backlog of work
+
+## Structure
+
+### Roadmap
+
+High-level phases and objectives. Each phase can be broken down into multiple files or folders if needed.
+
+**Example Phase Structure**:
+
+```text
+Phase 1: Foundation (Q1 2025)
+├── Core Systems Design
+├── Initial Research
+└── Technical Prototypes
+```
+
+### Milestones
+
+Specific deliverables with dates and acceptance criteria.
+
+### Backlog
+
+Prioritized list of research questions, design tasks, and documentation needs.
+
+## Related Roadmap Guides
+
+For detailed information, see:
+
+- [Project Roadmap](../roadmap-guides/project-roadmap.md)
+- [Milestone Guide](../roadmap-guides/milestone-guide.md)
+- [Feature Prioritization Guide](../roadmap-guides/feature-prioritization-guide.md)
+- [Roadmap Management Guide](../roadmap-guides/roadmap-management-guide.md)
+
+## Contributing
+
+When planning work:
+
+1. Start with high-level phases in the roadmap
+2. Break phases into specific milestones
+3. Add detailed tasks to the backlog
+4. Link related research and design docs
+5. Update as work progresses
+
+See [CONTRIBUTING.md](../CONTRIBUTING.md) for detailed guidelines.

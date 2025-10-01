@@ -110,10 +110,20 @@ This issue tracks the overall progress of our infrastructure research initiative
 
 ## Related Documentation
 
+### Core Architecture Documentation
+- **Technical Foundation Overview**: `docs/TECHNICAL_FOUNDATION.md` - Comprehensive overview of core system architecture
+- **System Architecture Design**: `docs/systems/system-architecture-design.md`
+- **Database Schema Design**: `docs/systems/database-schema-design.md`
+- **API Specifications**: `docs/systems/api-specifications.md`
+- **Security Framework Design**: `docs/systems/security-framework-design.md`
+
+### Research Documentation
+- **Research Issues Summary**: `research/RESEARCH_ISSUES_SUMMARY.md`
 - **Detailed Technical Analysis**: `research/spatial-data-storage/octree-optimization-guide.md`
 - **Current Implementation**: `research/spatial-data-storage/current-implementation.md`  
 - **Recommendations**: `research/spatial-data-storage/recommendations.md`
-- **Research Issues Summary**: `research/RESEARCH_ISSUES_SUMMARY.md`
+
+### Templates
 - **Main Research Roadmap Issue Template**: `templates/research-roadmap-main-issue.md`
 - **Research Question Sub-Issue Template**: `templates/research-question-sub-issue.md`
 
