@@ -1,8 +1,8 @@
-# GPT Research: Conversation dr_68de6a02c26c8191b3b1b1a2b8608a0b
+# GPT Research: Skill and Attribute System Design
 
 ## Status
 
-⏳ **Pending Import** - This research conversation needs to be exported and documented.
+✅ **Imported** - 2025-10-02
 
 ## Source
 
@@ -10,45 +10,58 @@
 - **URL**: https://chatgpt.com/s/dr_68de6a02c26c8191b3b1b1a2b8608a0b
 - **Related Issue**: TBD
 - **Date Added**: 2025-10-02
+- **Date Imported**: 2025-10-02
+- **Language**: Czech
 
 ## Overview
 
-*This section will be populated after the conversation is imported.*
+This Czech-language research proposes a comprehensive "learn by doing" attribute system with four main categories (Might, Dexterity, Mind, Presence) and twelve sub-aspects. The system enables natural character progression through gameplay activities without manual point allocation, supporting flexible character builds and diverse play styles.
 
 ## Key Topics
 
-*To be determined after content import.*
+- **Four Main Attributes**: Might, Dexterity, Mind, Presence
+- **Sub-Aspects**: Three specializations per main attribute
+- **Activity-Based Progression**: Skills improve through use
+- **Pool System**: Attributes as resource pools
+- **Flexible Builds**: No class restrictions
+- **Natural Development**: Character mirrors player actions
 
-## How to Complete This Import
+## Relevance to BlueMarble
 
-1. Open the [conversation link](https://chatgpt.com/s/dr_68de6a02c26c8191b3b1b1a2b8608a0b)
-2. Export or copy the conversation content
-3. Create `conversation.md` with the full transcript
-4. Create `analysis.md` with key insights
-5. Create `implementation-notes.md` if applicable
-6. Update this README with:
-   - Overview of topics discussed
-   - Key findings
-   - Relevance to BlueMarble
-   - Links to related documentation
+### Character Progression
 
-## Expected Deliverables
+1. **Mining** → Improves Might (strength, stamina)
+2. **Building** → Develops Dexterity (coordination, fine motor skills)
+3. **Exploration** → Enhances Mind (perception, foresight)
+4. **Trading/Diplomacy** → Boosts Presence (persuasion, leadership)
 
-- [ ] `conversation.md` - Full conversation transcript
-- [ ] `analysis.md` - Summary of key insights and findings
-- [ ] `implementation-notes.md` - Integration guidance (if applicable)
-- [ ] Updated README with overview and key topics
+### Design Benefits
+
+- Supports sandbox gameplay naturally
+- No artificial leveling grind
+- Encourages trying different activities
+- Rewards diverse playstyles
+- Perfect for MMO with multiple gameplay loops
+
+## Deliverables
+
+- [x] `conversation.md` - Attribute system design
+- [x] `analysis.md` - Implementation recommendations
+- [x] Updated README
 
 ## Integration Points
 
-*To be documented after import - potential areas:*
-- Spatial data storage
-- Game design mechanics
-- System architecture
-- Performance optimization
+### Game Mechanics
+- Activity tracking system
+- Attribute progression database
+- Balance mechanisms (diminishing returns)
+
+### Player Experience
+- Visual progression feedback
+- Transparent improvement system
+- Flexible character development
 
 ## Related Research
 
-- [Spatial Data Storage Research](../../spatial-data-storage/)
-- [Game Design Research](../../game-design/)
-- [GPT Research Archive](../README.md)
+- [MMORPG Automated Mechanics](../conversation-dr_68dd00b5/) - Progression systems
+- [Game Design Research](../../game-design/) - Core mechanics

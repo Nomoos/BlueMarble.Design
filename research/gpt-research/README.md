@@ -77,30 +77,40 @@ Create the following files:
    - Topic: Analysis and recommendations for refactoring GitHub labels configuration
    - Key Focus: Label organization, auto-labeling coverage, implementation strategy
 
+2. **Server-Centric vs Peer-to-Peer in Blizzard Games** - [conversation-dr_68dbe0cc](conversation-dr_68dbe0cc/)
+   - URL: https://chatgpt.com/s/dr_68dbe0cc315081918182816df1b6d424
+   - Status: ✅ Imported (2025-10-02)
+   - Topic: Evolution of networking architecture and cheat prevention
+   - Key Focus: Server authority, information hiding, multiplayer best practices
+
+3. **Technical Stack for Large-Scale Voxel World** - [conversation-dr_68dbe0e4](conversation-dr_68dbe0e4/)
+   - URL: https://chatgpt.com/s/dr_68dbe0e4457c8191baab63cdba02dc9b
+   - Status: ✅ Imported (2025-10-02)
+   - Topic: Architecture for Earth-scale persistent voxel MMO
+   - Key Focus: Chunk-based partitioning, distributed servers, database strategy
+
+4. **MMORPG Automated Mechanics** - [conversation-dr_68dd00b5](conversation-dr_68dd00b5/)
+   - URL: https://chatgpt.com/s/dr_68dd00b5025c8191aed7b6b0ac662337
+   - Status: ✅ Imported (2025-10-02)
+   - Language: Czech
+   - Topic: Offline progression and automated gameplay mechanics
+   - Key Focus: Real-time skill training, companion systems, player-driven narratives
+
+5. **Skill and Attribute System Design** - [conversation-dr_68de6a02](conversation-dr_68de6a02/)
+   - URL: https://chatgpt.com/s/dr_68de6a02c26c8191b3b1b1a2b8608a0b
+   - Status: ✅ Imported (2025-10-02)
+   - Language: Czech
+   - Topic: Activity-based character progression system
+   - Key Focus: Four main attributes, learn-by-doing, flexible builds
+
+6. **Temporal Simulation & Event Propagation** - [conversation-temporal-simulation](conversation-temporal-simulation/)
+   - Status: ✅ Imported (2025-10-02)
+   - Topic: Multi-scale time management for planet-sized worlds
+   - Key Focus: Hierarchical simulation, event-driven processing, lazy updates
+
 ### Pending Import
 
-The following ChatGPT conversations are pending import:
-
-1. **Conversation dr_68dbe0cc315081918182816df1b6d424**
-   - URL: https://chatgpt.com/s/dr_68dbe0cc315081918182816df1b6d424
-   - Status: Pending export
-   - Related Issue: #101
-
-2. **Conversation dr_68dbe0e4457c8191baab63cdba02dc9b**
-   - URL: https://chatgpt.com/s/dr_68dbe0e4457c8191baab63cdba02dc9b
-   - Status: Pending export
-   - Related Issue: #101
-
-3. **Conversation dr_68dd00b5025c8191aed7b6b0ac662337**
-   - URL: https://chatgpt.com/s/dr_68dd00b5025c8191aed7b6b0ac662337
-   - Status: Pending export
-   - Related Issue: #101
-   - Directory: [conversation-dr_68dd00b5/](conversation-dr_68dd00b5/)
-
-4. **Conversation dr_68de6a02c26c8191b3b1b1a2b8608a0b**
-   - URL: https://chatgpt.com/s/dr_68de6a02c26c8191b3b1b1a2b8608a0b
-   - Status: Pending export
-   - Directory: [conversation-dr_68de6a02/](conversation-dr_68de6a02/)
+*All pending conversations have been imported.*
 
 ## Guidelines
 
