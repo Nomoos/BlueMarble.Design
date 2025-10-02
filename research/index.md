@@ -32,6 +32,12 @@ Formal references, summaries, and literature reviews from external sources.
 
 - [Literature directory](literature/) - Summaries and reviews of academic papers and technical documentation
 
+### Available Literature Reviews
+
+- [Survival Guides Knowledge Domains Research](literature/survival-guides-knowledge-domains-research.md) - 
+  Analysis of survival knowledge systems from the awesome-survival repository, identifying skill hierarchies, 
+  material processing chains, and knowledge preservation mechanics applicable to BlueMarble game design
+
 ## Sources
 
 Bibliography, reading lists, and raw notes from external sources.

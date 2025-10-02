@@ -8,6 +8,11 @@ This directory contains formal references, summaries, and literature reviews for
 - Organize external research that informs design decisions
 - Maintain bibliographic references and citations
 
+## Available Literature
+
+- [example-topic.md](example-topic.md) - Example literature review format
+- [survival-guides-knowledge-domains-research.md](survival-guides-knowledge-domains-research.md) - Analysis of survival knowledge systems from awesome-survival repository
+
 ## Guidelines
 
 - Use descriptive filenames: `topic-name.md` (e.g., `mmo-architecture-patterns.md`)
