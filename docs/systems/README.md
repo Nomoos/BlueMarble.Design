@@ -6,9 +6,12 @@ guidelines for BlueMarble.
 ## Document Categories
 
 ### Core Systems Architecture
-- **[System Architecture Design](system-architecture-design.md)** - Comprehensive system architecture covering scalability, reliability, and maintainability
 
-- **[Database Schema Design](database-schema-design.md)** - Comprehensive database schema for core gameplay and spatial data
+- **[System Architecture Design](system-architecture-design.md)** - Comprehensive system architecture covering
+  scalability, reliability, and maintainability
+
+- **[Database Schema Design](database-schema-design.md)** - Comprehensive database schema for core gameplay and
+  spatial data
 - Client-server architecture
 - API specifications and protocols
 
@@ -31,6 +34,8 @@ guidelines for BlueMarble.
 ### Gameplay Systems
 
 - **[Economy Systems](economy-systems.md)** - Economic balance and trading mechanics
+- **[Marketplace API](api-marketplace.md)** - Player trading marketplace API specification
+- **[Marketplace Developer Guide](marketplace-developer-guide.md)** - Integration guide for marketplace systems
 - **[Gameplay Systems](gameplay-systems.md)** - Core game mechanics and systems
 - Physics and collision systems
 - AI and NPC behavior systems

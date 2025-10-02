@@ -11,6 +11,7 @@ This document outlines the technical architecture, tools, and infrastructure req
 ## Architecture Overview
 
 ### Client-Server Architecture
+
 - **Client:** Game client handling rendering, input, and user interface
 - **Game Servers:** World simulation, player interactions, and game logic
 - **Database Servers:** Persistent data storage for characters, world state, and economy
@@ -19,28 +20,37 @@ This document outlines the technical architecture, tools, and infrastructure req
 ### Technology Stack
 
 #### Client Technology
-- **Engine:** Unity 2023.3 LTS or Godot 4.x
-- **Rendering:** 2D sprites with 3D lighting and effects
+
+- **Engine:** Unity 2023.3 LTS *(Selected - see project-roadmap.md for rationale)*
+- **Rendering:** 2D sprites with 3D lighting and effects (Universal Render Pipeline)
 - **Networking:** Custom networking layer built on UDP
-- **UI Framework:** Native engine UI system with custom components
-- **Audio:** FMOD or Wwise for advanced audio features
+- **UI Framework:** Unity UI Toolkit with custom MMORPG components
+- **Audio:** FMOD Studio for advanced audio features
 
 #### Server Technology
-- **Language:** C# (.NET 8) or Go for performance-critical components
-- **Framework:** ASP.NET Core for web services
-- **Database:** PostgreSQL for primary data, Redis for caching
-- **Message Queue:** RabbitMQ or Apache Kafka for inter-service communication
-- **Container Orchestration:** Docker with Kubernetes for deployment
+
+- **Language:** Go *(Selected - see project-roadmap.md for rationale)*
+- **Framework:** Custom game server framework with gRPC for inter-service communication
+- **Database:** PostgreSQL 15+ for primary data, Apache Cassandra 4.0+ for spatial data, Redis 7.0+ for caching
+- **Message Queue:** Apache Kafka for inter-service communication and event streaming
+- **Container Orchestration:** Kubernetes (EKS) with Istio service mesh
 
 #### Infrastructure
-- **Cloud Provider:** AWS or Azure for scalability
-- **CDN:** CloudFront or similar for asset delivery
+
+- **Cloud Provider:** AWS *(Selected - see project-roadmap.md for rationale)*
+- **CDN:** CloudFront for asset delivery
 - **Monitoring:** Prometheus + Grafana for metrics
 - **Logging:** ELK Stack (Elasticsearch, Logstash, Kibana)
+- **Tracing:** Jaeger for distributed tracing
+- **Error Tracking:** Sentry
+
+**Note:** For comprehensive technology rationale and alternatives considered, see
+[Project Roadmap - Technical Solution](../../roadmap/project-roadmap.md#technical-solution-and-technology-stack)
 
 ## Server Architecture
 
 ### World Server Design
+
 ```
 [Load Balancer] 
     ↓
@@ -56,6 +66,7 @@ This document outlines the technical architecture, tools, and infrastructure req
 ### Service Breakdown
 
 #### Gateway Server
+
 - **Purpose:** Entry point for all client connections
 - **Responsibilities:**
   - Authentication and authorization
@@ -64,6 +75,7 @@ This document outlines the technical architecture, tools, and infrastructure req
   - Session management
 
 #### World Servers
+
 - **Purpose:** Manage game world simulation
 - **Responsibilities:**
   - Player movement and positioning
@@ -73,6 +85,7 @@ This document outlines the technical architecture, tools, and infrastructure req
   - World state synchronization
 
 #### Zone Servers
+
 - **Purpose:** Handle specific geographic areas
 - **Responsibilities:**
   - Detailed area simulation
@@ -81,6 +94,7 @@ This document outlines the technical architecture, tools, and infrastructure req
   - Environmental effects
 
 #### Database Architecture
+
 - **Primary Database:** Player data, character information, world state
 - **Economy Database:** Trading, auction house, item databases
 - **Analytics Database:** Player behavior, metrics, and reporting
@@ -91,6 +105,7 @@ This document outlines the technical architecture, tools, and infrastructure req
 ### Core Data Structures
 
 #### Player Character
+
 ```json
 {
   "playerId": "uuid",
@@ -118,6 +133,7 @@ This document outlines the technical architecture, tools, and infrastructure req
 ```
 
 #### World Objects
+
 ```json
 {
   "objectId": "uuid",
@@ -136,12 +152,14 @@ This document outlines the technical architecture, tools, and infrastructure req
 ## Networking Design
 
 ### Protocol Design
+
 - **Transport:** UDP for real-time data, TCP for critical transactions
 - **Message Format:** Binary protocol with compression
 - **Encryption:** TLS 1.3 for security
 - **Anti-cheat:** Server-authoritative with client prediction
 
 ### Message Types
+
 - **Movement:** Player position updates (30-60 Hz)
 - **Combat:** Attack commands and damage calculations
 - **Chat:** Text communication between players
@@ -149,6 +167,7 @@ This document outlines the technical architecture, tools, and infrastructure req
 - **World Events:** Environmental changes and events
 
 ### Bandwidth Optimization
+
 - **Delta Compression:** Send only changes since last update
 - **Interest Management:** Only send relevant data to each client
 - **Message Batching:** Combine multiple small messages
@@ -157,12 +176,14 @@ This document outlines the technical architecture, tools, and infrastructure req
 ## Security Considerations
 
 ### Anti-Cheat Systems
+
 - **Server Authority:** All critical calculations performed server-side
 - **Input Validation:** Comprehensive validation of all client inputs
 - **Behavior Analysis:** Machine learning for anomaly detection
 - **Regular Auditing:** Automated checks for suspicious patterns
 
 ### Data Protection
+
 - **Encryption:** All data encrypted in transit and at rest
 - **Access Control:** Role-based permissions for all systems
 - **Audit Logging:** Complete logs of all data access and modifications
@@ -171,6 +192,7 @@ This document outlines the technical architecture, tools, and infrastructure req
 ## Performance Requirements
 
 ### Target Performance Metrics
+
 - **Server TPS:** 20-30 ticks per second minimum
 - **Latency:** <100ms for regional players, <200ms globally
 - **Concurrent Players:** 10,000+ per world server
@@ -178,6 +200,7 @@ This document outlines the technical architecture, tools, and infrastructure req
 - **Loading Times:** <30 seconds for world loading
 
 ### Optimization Strategies
+
 - **Object Pooling:** Reuse game objects to reduce garbage collection
 - **Spatial Partitioning:** Efficient collision detection and area management
 - **Asynchronous Processing:** Non-blocking operations for database and network
@@ -186,12 +209,14 @@ This document outlines the technical architecture, tools, and infrastructure req
 ## Scalability Design
 
 ### Horizontal Scaling
+
 - **World Sharding:** Multiple world instances to distribute load
 - **Geographic Distribution:** Servers in multiple regions
 - **Auto-scaling:** Automatic server provisioning based on demand
 - **Load Balancing:** Intelligent distribution of players across servers
 
 ### Database Scaling
+
 - **Read Replicas:** Multiple read-only database instances
 - **Sharding:** Partition data across multiple database servers
 - **Connection Pooling:** Efficient database connection management
@@ -200,12 +225,14 @@ This document outlines the technical architecture, tools, and infrastructure req
 ## Development Tools
 
 ### Required Tools
+
 - **Version Control:** Git with GitLab or GitHub
 - **Project Management:** Jira or similar for task tracking
 - **Communication:** Slack or Discord for team coordination
 - **Documentation:** Confluence or Notion for knowledge management
 
 ### Development Pipeline
+
 - **Continuous Integration:** Automated building and testing
 - **Automated Testing:** Unit tests, integration tests, and load tests
 - **Deployment Pipeline:** Staging and production deployment automation
@@ -214,12 +241,14 @@ This document outlines the technical architecture, tools, and infrastructure req
 ## Deployment Strategy
 
 ### Environment Setup
+
 - **Development:** Local development environments
 - **Testing:** Automated testing environment
 - **Staging:** Production-like environment for final testing
 - **Production:** Live environment with full monitoring
 
 ### Release Process
+
 1. **Feature Development:** Development in feature branches
 2. **Code Review:** Peer review of all changes
 3. **Testing:** Comprehensive testing in staging environment
@@ -229,12 +258,14 @@ This document outlines the technical architecture, tools, and infrastructure req
 ## Maintenance and Operations
 
 ### Monitoring Requirements
+
 - **Server Performance:** CPU, memory, disk, and network usage
 - **Application Metrics:** Player counts, transaction rates, error rates
 - **User Experience:** Response times, loading times, crash rates
 - **Business Metrics:** Revenue, retention, engagement metrics
 
 ### Backup and Recovery
+
 - **Database Backups:** Daily full backups, hourly incremental
 - **Configuration Backups:** All server configurations versioned
 - **Disaster Recovery:** Procedures for complete system restoration
@@ -243,12 +274,14 @@ This document outlines the technical architecture, tools, and infrastructure req
 ## Future Considerations
 
 ### Technology Evolution
+
 - **Engine Updates:** Plan for major engine version upgrades
 - **Platform Expansion:** Preparation for mobile and console versions
 - **New Features:** Architecture flexibility for future game features
 - **Performance Improvements:** Ongoing optimization opportunities
 
 ### Scaling Challenges
+
 - **Global Expansion:** Multi-region deployment considerations
 - **Player Growth:** Plans for handling 100,000+ concurrent players
 - **Data Volume:** Long-term data storage and archival strategies

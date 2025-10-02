@@ -20,6 +20,7 @@ Entry point for all BlueMarble design documentation.
 ### System Architecture
 
 - [Architecture](architecture/) - System architecture diagrams and technical design
+- [Octree Details](OCTREE_DETAILS.md) - Technical specification for the Octree spatial data system
 
 ### Existing Design Documents
 

@@ -144,3 +144,25 @@ Key metrics to track:
 - [Pillars](pillars.md) - Economic design principles
 - [Mechanics](mechanics.md) - How systems generate/consume resources
 - [Progression Research](../research/game-design/player-freedom-analysis.md)
+- [Economy Systems](../docs/systems/economy-systems.md) - Detailed economic system specifications
+- [Player Trading Marketplace](../roadmap/tasks/player-trading-marketplace.md) - Marketplace feature specification
+- [Marketplace API](../docs/systems/api-marketplace.md) - Technical API documentation
+- [Marketplace Usage Guide](../docs/gameplay/marketplace-usage-guide.md) - Player guide for trading
+
+## Key Economic Features
+
+### Player Trading Marketplace
+
+The Player Trading Marketplace is a core component of BlueMarble's player-driven economy, enabling players to:
+
+- List items for sale at custom prices
+- Browse and purchase from other players
+- Track market prices and trends
+- Build reputation as trusted traders
+- Engage in cross-island arbitrage trading
+
+**Documentation:**
+
+- Full specification: [Feature Specification](../roadmap/tasks/player-trading-marketplace.md)
+- API details: [Marketplace API](../docs/systems/api-marketplace.md)
+- User guide: [Usage Guide](../docs/gameplay/marketplace-usage-guide.md)
