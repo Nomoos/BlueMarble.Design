@@ -20,6 +20,12 @@ This directory contains comprehensive design documentation for BlueMarble, a top
 - [World Systems](./systems/world-systems.md) - World generation, NPCs, and environment
 - [Economy Systems](./systems/economy-systems.md) - Trading, crafting, and resource management
 
+### Gameplay Specifications
+- [Player Progression System](./gameplay/spec-player-progression-system.md) - Character advancement and skill systems
+- [Player Resource Dashboard](./gameplay/spec-player-resource-dashboard.md) - Resource management interface
+- [Marketplace Usage Guide](./gameplay/marketplace-usage-guide.md) - Player trading and economy
+- See [gameplay/README.md](./gameplay/README.md) for complete gameplay documentation
+
 ### World Design
 - [World Lore](./world/world-lore.md) - Background story and universe
 - [Locations](./world/locations.md) - Maps, regions, and points of interest
