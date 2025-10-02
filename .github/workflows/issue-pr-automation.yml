@@ -11,6 +11,7 @@ jobs:
   issue-pr-automation:
     name: Issue and PR Automation
     runs-on: self-hosted
+    timeout-minutes: 15
     
     steps:
     - name: Checkout code

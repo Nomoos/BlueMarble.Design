@@ -4,6 +4,9 @@
 # Run this before committing to ensure documentation quality
 #
 
+# Enable globstar for recursive glob patterns
+shopt -s globstar
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
