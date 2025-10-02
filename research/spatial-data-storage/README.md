@@ -2,6 +2,18 @@
 
 This directory contains comprehensive research and analysis on spatial data storage approaches for BlueMarble's global geological simulation system, with a focus on hybrid compression strategies for petabyte-scale octree storage.
 
+## Research Steps Overview
+
+This research is organized in a step-by-step structure for clear progression through the investigation:
+
+1. **[Step 1: Analysis](step-1-analysis/)** - Current implementation analysis and comparative evaluation of storage approaches
+2. **[Step 2: Compression Strategies](step-2-compression-strategies/)** - Hybrid compression, multi-resolution systems, and homogeneous region optimization
+3. **[Step 3: Architecture Design](step-3-architecture-design/)** - Hybrid storage architectures, distributed systems, and 3D integration
+4. **[Step 4: Implementation](step-4-implementation/)** - Implementation guides, integration strategies, and deployment procedures
+5. **[Step 5: Validation](step-5-validation/)** - Benchmarking, testing, risk analysis, and validation
+
+Each step contains detailed research documents and can be explored independently or sequentially.
+
 ## Contents
 
 ### Core Research Documents

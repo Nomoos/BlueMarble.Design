@@ -2,6 +2,17 @@
 
 This directory contains research documentation for various aspects of the BlueMarble geomorphological simulation project.
 
+## Organizational Structure
+
+Research is organized using a **recursive, step-by-step structure** for clarity and progressive detail:
+
+- Each research area begins with an **overview document** outlining the main research steps
+- Major steps are organized into **step-N folders** containing detailed documentation
+- Complex steps can be **recursively broken down** into sub-steps (step-N.M folders)
+- Each level contains **README.md** files providing navigation and summaries
+
+See [RESEARCH_ORGANIZATION.md](RESEARCH_ORGANIZATION.md) for complete organizational guidelines.
+
 ## Directory Structure
 
 ```
