@@ -9,7 +9,7 @@ This directory contains all documentation related to gameplay mechanics, systems
 - Combat systems
 - Movement and navigation
 - Interaction systems
-- Resource management
+- Resource management ([Player Resource Dashboard Specification](spec-player-resource-dashboard.md))
 
 ### Player Progression
 

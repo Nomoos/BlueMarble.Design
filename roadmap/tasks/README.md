@@ -14,6 +14,7 @@ This directory contains detailed task definitions and feature breakdowns for the
 ### Feature Tasks
 
 - [Player Trading Marketplace](player-trading-marketplace.md) - Comprehensive trading system for player economy
+- [Player Resource Dashboard](player-resource-dashboard.md) - Unified resource management interface for players
 - [Example Feature](example-feature.md) - Example demonstrating task format
 
 ## Guidelines
