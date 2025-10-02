@@ -79,6 +79,15 @@ Template for comprehensive API design specifications including endpoints, authen
 **Usage:** API design documentation, service interface specifications, integration endpoints  
 **Output Location:** `docs/systems/`
 
+#### `requirements-gathering.md`
+
+Template for systematically collecting and documenting requirements for new features.
+Includes stakeholder identification, data collection planning, and requirement validation.
+
+**Usage:** Initial requirement collection phase, feature discovery,
+stakeholder alignment  
+**Output Location:** `docs/systems/`, `docs/gameplay/`, or project-specific folder
+
 #### `research-report.md`
 
 Template for comprehensive research reports including methodology, findings, and recommendations.
@@ -211,6 +220,7 @@ For research-related work, use the research issue template system:
 | QA Test Plan | `qa-test-plan.md` | `docs/systems/`, `docs/` |
 | Game Design | `game-design-document.md` | `docs/core/`, `docs/gameplay/` |
 | Feature Spec | `feature-specification.md` | `docs/gameplay/`, `docs/systems/`, `docs/ui-ux/` |
+| Requirements Gathering | `requirements-gathering.md` | `docs/systems/`, `docs/gameplay/`, project folder |
 | API Spec | `api-specification.md` | `docs/systems/` |
 | Research Report | `research-report.md` | `docs/research/` |
 | Main Research Issue | `research-roadmap-main-issue.md` | GitHub Issues |
