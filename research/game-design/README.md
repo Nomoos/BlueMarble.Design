@@ -228,6 +228,36 @@ Industry trends research analyzing advanced crafting mechanics in MMORPGs to inf
 - Knowledge progression complements BlueMarble's educational goals
 - Geographic material distribution drives trade and exploration
 
+### [Base Crafting Workflows and Tool Integration Research](base-crafting-workflows-research.md)
+Industry trends research analyzing base crafting workflows and tool integration patterns in MMORPGs to improve player
+accessibility and crafting UX in BlueMarble.
+
+**Key Topics**:
+- Base crafting workflow patterns (Discovery → Preparation → Execution phases)
+- Tool selection mechanics including quality modifiers, efficiency, and durability systems
+- Workstation proximity systems with graduated benefits (4-zone model)
+- UI/UX patterns for material selection, recipe filtering, and crafting queues
+- Comparative analysis of 4 major MMORPGs (WoW, FFXIV, Vintage Story, Eco Global Survival)
+- Complete workflow diagrams for crafting, tool selection, and workstation proximity
+- Progressive disclosure UI design for scaling complexity with player expertise
+
+**Research Highlights**:
+- Streamlined workflows minimize clicks while maintaining meaningful player choice
+- Hybrid crafting approach balances realism (timed execution) with playability (5-60s duration)
+- Repairable tool system creates material sink without punitive breakage
+- Range-based workstation proximity (0-2m, 2-10m, 10-30m, 30m+) balances realism with convenience
+- Smart default material selection with manual override reduces decision fatigue
+- Queue management system enables bulk crafting without repetitive clicking
+- 6 prioritized recommendations targeting Q1 2026 implementation
+- Technical specifications include performance budgets, data structures, and integration points
+
+**Applicability to BlueMarble**:
+- Makes basic item creation straightforward and rewarding for new players
+- Establishes foundation for advanced crafting without overwhelming beginners
+- Tool and workstation mechanics leverage BlueMarble's geological simulation
+- Progressive complexity revelation scales with player expertise
+- Spatial gameplay through workstation proximity creates meaningful world interaction
+
 ### [Resource Gathering and Assembly Skills Research](assembly-skills-system-research.md)
 Comprehensive research on realistic gathering and crafting skills for BlueMarble, including resource gathering 
 (mining, herbalism, logging, hunting, fishing) and assembly professions (blacksmithing, tailoring, alchemy, 
