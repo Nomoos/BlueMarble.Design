@@ -6,6 +6,21 @@ This directory contains comprehensive research documentation for transforming Bl
 
 The game design research addresses the challenge of creating an engaging interactive experience that leverages BlueMarble's scientific foundation to enable unprecedented gameplay mechanics. The research emphasizes player freedom through intelligent constraints based on geological reality rather than arbitrary game rules.
 
+## Research Steps Overview
+
+This research is organized in a step-by-step structure with recursive sub-steps for complex areas:
+
+1. **[Step 1: Foundation](step-1-foundation/)** - World parameters, core mechanics, design philosophy, and research sources
+2. **[Step 2: System Research](step-2-system-research/)** - Comprehensive analysis of game systems from leading MMORPGs
+   - [Step 2.1: Skill Systems](step-2-system-research/step-2.1-skill-systems/) - Skill progression and knowledge systems
+   - [Step 2.2: Material Systems](step-2-system-research/step-2.2-material-systems/) - Material quality and geological integration
+   - [Step 2.3: Crafting Systems](step-2-system-research/step-2.3-crafting-systems/) - Advanced crafting and workflow design
+   - [Step 2.4: Historical Research](step-2-system-research/step-2.4-historical-research/) - Authentic medieval professions
+3. **[Step 3: Integration Design](step-3-integration-design/)** - Designing integration with BlueMarble's geological simulation
+4. **[Step 4: Implementation Planning](step-4-implementation-planning/)** - Phased development roadmap (16-20 months)
+
+Each step contains detailed research documents and can be explored independently or sequentially.
+
 ## Research Documents
 
 ### [Game Design Sources](game-sources.md)
