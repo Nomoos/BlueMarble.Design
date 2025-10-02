@@ -25,19 +25,30 @@ This document demonstrates how to effectively use the BlueMarble.Design reposito
 
 ## Scenario 2: Adding a New Gameplay Feature
 
-### Step 1: Research Phase
+### Step 1: Requirements Gathering Phase
+
+1. Create requirements gathering document using `/templates/requirements-gathering.md`
+2. Identify and document all stakeholders (product, design, engineering, users)
+3. Define requirement sources (user research, market analysis, technical constraints)
+4. Example: `docs/gameplay/requirements-crafting-system.md`
+5. Collect data through interviews, surveys, and competitive analysis
+6. Document all functional and non-functional requirements
+
+### Step 2: Research Phase
 
 1. Check existing documentation in `/docs/research/` for relevant studies
 2. If needed, create new research document using `/templates/research-report.md`
 3. Example: `docs/research/research-player-crafting-preferences.md`
+4. Link research findings back to requirements document
 
-### Step 2: Design Phase
+### Step 3: Design Phase
 
 1. Create feature specification using `/templates/feature-specification.md`
 2. Place in appropriate category: `docs/gameplay/spec-crafting-system.md`
-3. Link to related research and dependencies
+3. Link to related research, requirements gathering document, and dependencies
+4. Ensure all requirements from gathering phase are addressed
 
-### Step 3: Review and Integration
+### Step 4: Review and Integration
 
 1. Update roadmap in `/roadmap/project-roadmap.md`
 2. Cross-reference with related systems in other documentation categories
