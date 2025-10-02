@@ -97,6 +97,11 @@ The following ChatGPT conversations are pending import:
    - Related Issue: #101
    - Directory: [conversation-dr_68dd00b5/](conversation-dr_68dd00b5/)
 
+4. **Conversation dr_68de6a02c26c8191b3b1b1a2b8608a0b**
+   - URL: https://chatgpt.com/s/dr_68de6a02c26c8191b3b1b1a2b8608a0b
+   - Status: Pending export
+   - Directory: [conversation-dr_68de6a02/](conversation-dr_68de6a02/)
+
 ## Guidelines
 
 When importing GPT research:
