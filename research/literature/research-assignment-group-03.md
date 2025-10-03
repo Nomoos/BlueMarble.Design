@@ -126,7 +126,7 @@ Each analysis document should include:
 Track progress using this checklist:
 
 - [ ] Energy Systems Collection (High)
-- [ ] Historical Maps and Navigation Resources (High)
+- [x] Historical Maps and Navigation Resources (High)
 
 ---
 
@@ -178,6 +178,6 @@ Add discovered sources below this line:
 ---
 
 **Created:** 2025-01-15  
-**Last Updated:** 2025-01-15  
-**Status:** Ready for Assignment  
-**Next Action:** Assign to team member
+**Last Updated:** 2025-01-22  
+**Status:** In Progress  
+**Next Action:** Complete Topic 1 (Energy Systems Collection)
