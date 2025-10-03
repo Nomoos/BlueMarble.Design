@@ -82,7 +82,7 @@ This assignment group focuses on analyzing game development resources from the o
 - [x] Document has proper front matter
 - [x] Document meets minimum length requirements (1237 lines > 300-500)
 - [x] Cross-references added
-- [ ] Discovered sources logged below
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
