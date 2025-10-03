@@ -76,7 +76,7 @@ This assignment group focuses on analyzing game development resources from the o
 
 ## Progress Tracking
 
-- [ ] Reddit - r/gamedev
+- [x] Reddit - r/gamedev (✅ Complete - 745 lines)
 - [ ] GameDev Stack Exchange
 - [ ] All documents created and placed in `research/literature/`
 - [ ] All documents have proper front matter
@@ -110,7 +110,26 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** ENet - Reliable UDP Networking Library  
+**Discovered From:** Reddit r/gamedev community recommendations  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Most recommended UDP networking library for MMORPGs on r/gamedev, battle-tested by thousands of developers  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** High Scalability Blog  
+**Discovered From:** Reddit r/gamedev external resource citations  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Architecture case studies including MMORPG scaling patterns, frequently cited in r/gamedev discussions  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Chaos Engineering for Game Servers  
+**Discovered From:** Reddit r/gamedev postmortem discussions  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Emerging practice for improving MMORPG robustness, prevents production failures  
+**Estimated Effort:** 3-5 hours
 
 ---
 
