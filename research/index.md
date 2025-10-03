@@ -56,6 +56,10 @@ Formal references, summaries, and literature reviews from external sources.
   Advanced engineering and science extraction from 88.9 GB collection for 300+ Tier 4-5 recipes covering metallurgy, 
   chemical engineering, mechanical systems, electrical power, and energy systems
 
+- [Content Extraction 05: Military Manuals](literature/survival-content-extraction-05-military-manuals.md) - 
+  Large-scale warfare systems extraction from 22,000+ military field manuals covering logistics, tactics, fortification, 
+  command structures, and intelligence for planet-scale MMORPG combat operations
+
 ### Research Management
 
 - [Master Research Queue](literature/master-research-queue.md) - 

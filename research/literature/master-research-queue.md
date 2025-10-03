@@ -20,9 +20,9 @@ This document tracks all identified sources for research and analysis for the Bl
 ## Queue Status
 
 **Total Sources:** 31  
-**Completed:** 0  
-**In Progress:** 1  
-**Remaining:** 30  
+**Completed:** 6  
+**In Progress:** 0  
+**Remaining:** 25  
 
 ---
 
@@ -54,19 +54,21 @@ This document tracks all identified sources for research and analysis for the Bl
    - Lines: 554
    - Completion Date: 2025-01-15
 
-### 🔄 IN PROGRESS
+5. **Great Science Textbooks Collection (88.9 GB)** - COMPLETED
+   - Status: ✅ Complete
+   - Document: `survival-content-extraction-04-great-science-textbooks.md`
+   - Lines: 769
+   - Completion Date: 2025-01-15
 
-5. **Great Science Textbooks Collection (88.9 GB)** - IN PROGRESS
-   - Status: 🔄 Starting Now
-   - Priority: High (Medium-term Month 4-6)
-   - Focus: Engineering and chemistry for advanced crafting
-   - Target: Engineering principles, chemistry processes, physics applications
-   - Estimated Output: 600-800 lines
-   - Timeline: 2-3 weeks for extraction guide
+6. **Military Manuals Collection (22,000+ documents)** - COMPLETED
+   - Status: ✅ Complete
+   - Document: `survival-content-extraction-05-military-manuals.md`
+   - Lines: 1,042
+   - Completion Date: 2025-01-15
 
 ### ⏳ PENDING SOURCES
 
-6. **Military Manuals Collection (22,000+ documents)**
+7. **Medical Textbooks Collection**
    - Status: ⏳ Pending
    - Priority: High (Medium-term Month 4-6)
    - Focus: Logistics, tactics, large-scale operations
