@@ -8,199 +8,130 @@ status: active
 ---
 
 **Document Type:** Assignment Overview  
-**Version:** 1.0  
-**Total Topics:** 28 (across 4 groups)  
-**Total Assignees Needed:** 4  
-**Estimated Timeline:** 2-3 weeks
+**Version:** 2.0 (Updated for 20 Parallel Groups)  
+**Total Topics:** 28 (across 20 groups)  
+**Total Assignees Needed:** 20  
+**Estimated Timeline:** 1-2 weeks
 
 ## Overview
 
-This document provides an overview of the balanced research assignment groups created for parallel execution. The 28 remaining research topics have been divided into 4 balanced groups, each containing a mix of Critical, High, Medium, and Low priority items.
+This document provides an overview of the 20 balanced research assignment groups created for maximum parallel execution. The 28 remaining research topics have been distributed across 20 groups to enable 20 team members to work simultaneously without merge conflicts.
+
+## Key Changes in Version 2.0
+
+- **Increased Parallelization**: From 4 groups to 20 groups
+- **Reduced Merge Conflicts**: Each assignee works on 1-2 topics maximum
+- **Faster Completion**: 20 people working in parallel (vs 4)
+- **Isolated Work**: Minimal file overlap between groups
+- **Reserve Capacity**: Group 20 reserved for discovered sources
 
 ## Assignment Groups Summary
 
-### Group 1: Technical Focus (Network & Algorithms)
-**File:** `research-assignment-group-1.md`  
-**Topics:** 7  
-**Priority Mix:** 1 Critical, 3 High, 2 Medium, 1 Low  
-**Estimated Effort:** 35-50 hours  
-**Focus Areas:** Network programming, algorithms, rendering, mathematics, UI
+### Critical Priority Groups (Groups 1-2)
 
-**Key Topics:**
-- ⚡ **Critical:** Network Programming for Games
-- 🔥 **High:** Game Programming Algorithms, Real-Time Rendering, 3D Mathematics
-- 📊 **Medium:** 3D User Interfaces, C++ Best Practices
-- 📝 **Low:** Unity Game Development
+**Group 1:**
+- Topics: 1
+- Priority: 1 Critical
+- Focus: Multiplayer Game Programming
+- Effort: 8-12 hours
 
----
+**Group 2:**
+- Topics: 1
+- Priority: 1 Critical
+- Focus: Network Programming for Games
+- Effort: 8-12 hours
 
-### Group 2: Architecture & Design (Multiplayer & Systems)
-**File:** `research-assignment-group-2.md`  
-**Topics:** 7  
-**Priority Mix:** 1 Critical, 3 High, 2 Medium, 1 Low  
-**Estimated Effort:** 35-50 hours  
-**Focus Areas:** Multiplayer architecture, game design theory, navigation systems
+### High Priority Groups (Groups 3-9)
 
-**Key Topics:**
-- ⚡ **Critical:** Multiplayer Game Programming
-- 🔥 **High:** Advanced Game Design, Player Decisions, Engine Architecture
-- 📊 **Medium:** Historical Navigation, Isometric Projection
-- 📝 **Low:** Unreal Engine VR Cookbook
+**Groups 3-9:** Each contains 2 High priority topics
+- Total: 14 High priority topics distributed
+- Effort per group: 10-16 hours
+- Focus: Core game systems, architecture, design theory
 
----
+### Medium Priority Groups (Groups 10-15)
 
-### Group 3: Design Theory & Systems (Process & Economy)
-**File:** `research-assignment-group-3.md`  
-**Topics:** 7  
-**Priority Mix:** 0 Critical, 4 High, 2 Medium, 1 Very Low  
-**Estimated Effort:** 32-45 hours  
-**Focus Areas:** Game systems design, iterative process, energy systems
+**Groups 10-15:** Mix of Medium priority topics
+- Group 10: 2 Medium priority topics
+- Groups 11-15: 1 Medium priority topic each
+- Total: 7 Medium priority topics
+- Effort per group: 4-7 hours
 
-**Key Topics:**
-- 🔥 **High:** Systems Design, Fundamentals, Design Process, Agile Development
-- 📊 **Medium:** Energy Systems Collection, VFX & Compositing
-- 📝 **Very Low:** Roblox Game Development
+### Low Priority Groups (Groups 16-19)
 
----
+**Groups 16-19:** Low and Very Low priority topics
+- Topics: 1 per group
+- Total: 4 Low/Very Low priority topics
+- Effort per group: 2-4 hours
 
-### Group 4: Production & Content (Pipeline & Assets)
-**File:** `research-assignment-group-4.md`  
-**Topics:** 6  
-**Priority Mix:** 0 Critical, 4 High, 1 Medium, 2 Low  
-**Estimated Effort:** 30-43 hours  
-**Focus Areas:** Development pipeline, asset creation, specialized content
+### Reserve Group (Group 20)
 
-**Key Topics:**
-- 🔥 **High:** Prototyping & Development, Blender Pipeline, Design Vocabulary, Specialized Collections
-- 📊 **Medium:** Interactive Music
-- 📝 **Low:** Augmented Reality Concepts
+**Group 20:** Buffer for discovered sources
+- Topics: 0 (initially)
+- Purpose: Accommodate high-priority discoveries during Phase 1
+- Activation: On-demand when critical sources are discovered
 
 ---
 
 ## Priority Distribution Across All Groups
 
-| Priority | Count | Percentage |
-|----------|-------|------------|
-| Critical | 2 | 7% |
-| High | 14 | 50% |
-| Medium | 7 | 25% |
-| Low | 4 | 14% |
-| Very Low | 1 | 4% |
-
-**Total:** 28 topics
+| Priority | Count | Percentage | Groups |
+|----------|-------|------------|--------|
+| Critical | 2 | 7% | 1-2 |
+| High | 14 | 50% | 3-9 |
+| Medium | 7 | 25% | 10-15 |
+| Low | 3 | 11% | 16-18 |
+| Very Low | 1 | 4% | 19 |
+| Reserved | 1 | 4% | 20 |
+| **Total** | **28** | **100%** | **20 groups** |
 
 ## Workload Balance
 
-Each group has been balanced to ensure:
-- **Similar Total Effort:** 30-50 hours per group
-- **Priority Mix:** Each group has at least 1 Critical or 3+ High priority items
-- **Diverse Content:** Mix of technical, design, and content research
-- **Manageable Scope:** 6-7 topics per group
+Groups are balanced for completion time:
+
+- **1 week completion:** Groups 16-20 (light workload)
+- **1-2 weeks completion:** Groups 11-15 (medium workload)
+- **2 weeks completion:** Groups 1-10 (full workload)
+
+All groups can work in parallel without blocking each other.
+
+---
 
 ## Parallel Execution Strategy
 
-### Phase 1: Critical Items (Week 1)
-All groups should prioritize Critical items first:
-- Group 1: Network Programming for Games
-- Group 2: Multiplayer Game Programming
+### Phase 1: Immediate Start (Week 1)
 
-### Phase 2: High Priority Items (Weeks 1-2)
-Focus on High priority items while Critical items are being reviewed:
-- Groups 1 & 2: Technical high-priority items
-- Groups 3 & 4: Design and content high-priority items
+**Critical Groups (1-2):**
+- Start immediately
+- Highest priority for MMORPG architecture
+- Block out dedicated time
 
-### Phase 3: Medium & Low Priority Items (Weeks 2-3)
-Complete remaining items and cross-review:
-- All groups: Complete Medium priority items
-- Time permitting: Low and Very Low priority items
+**High Priority Groups (3-9):**
+- Start Day 1
+- Core systems and design
+- Complete within 2 weeks
 
-### Phase 4: Review & Integration (Week 3)
-- Cross-group review of completed research
-- Integration planning
-- Documentation updates
+**Medium Priority Groups (10-15):**
+- Start Day 1-3
+- Enhancement and optimization
+- Complete within 1-2 weeks
 
-## Assignment Workflow
+**Low Priority Groups (16-19):**
+- Start Day 3-5
+- Specialized/future content
+- Complete within 1 week
 
-### For Assignees
+**Reserve Group (20):**
+- On standby
+- Activate only when discoveries are made
+- Flexible timeline
 
-1. **Review Assignment Group:** Read your assigned group document thoroughly
-2. **Start with Critical/High:** Begin with highest priority items
-3. **Follow Research Process:** Use the 30-40-30 split (Review-Analysis-Documentation)
-4. **Document as You Go:** Create analysis documents following established formats
-5. **Update Progress:** Check off completed items in your group checklist
-6. **Submit Work:** Place documents in `research/literature/` directory
+### Phase 2: Source Discovery Integration
 
-### For Coordinators
-
-1. **Assign Groups:** Assign one group per team member
-2. **Monitor Progress:** Check weekly on completion rates
-3. **Support Research:** Provide clarification and resources as needed
-4. **Review Outputs:** Quality check completed documents
-5. **Update Master Queue:** Mark topics complete in master research queue
-
-## Quality Standards
-
-All research outputs must meet these standards:
-
-### Document Requirements
-- ✅ Proper YAML front matter
-- ✅ Minimum length as specified per topic
-- ✅ Code examples where relevant
-- ✅ Cross-references to related research
-- ✅ Clear recommendations for BlueMarble
-
-### File Naming
-- ✅ Use kebab-case: `game-dev-analysis-[topic].md`
-- ✅ Consistent prefixes: `game-dev-analysis-` or `survival-content-extraction-`
-- ✅ Descriptive names matching topic
-
-### Content Quality
-- ✅ Comprehensive coverage of topic
-- ✅ Analysis relevant to BlueMarble project
-- ✅ Actionable recommendations
-- ✅ Proper citations and references
-
-## Communication Channels
-
-### Questions and Clarifications
-- Review existing completed documents for examples
-- Check `research/literature/README.md` for guidelines
-- Consult `research/literature/example-topic.md` for template
-- Reference master research queue for broader context
-
-### Collaboration
-- Groups can coordinate on overlapping topics
-- Cross-review encouraged for quality assurance
-- Share insights that benefit multiple groups
-
-## Success Metrics
-
-### Completion Targets
-- **Week 1:** All Critical items complete (2 topics)
-- **Week 2:** 50% of High priority items complete (7 topics)
-- **Week 3:** 80% of all items complete (22+ topics)
-
-### Quality Targets
-- 100% documents meet minimum length requirements
-- 100% documents have proper front matter
-- 100% documents include BlueMarble-specific recommendations
-- 90%+ documents include code examples or practical guidance
-
-## File Locations
-
-### Assignment Group Documents
-- `/research/literature/research-assignment-group-1.md`
-- `/research/literature/research-assignment-group-2.md`
-- `/research/literature/research-assignment-group-3.md`
-- `/research/literature/research-assignment-group-4.md`
-
-### Output Location
-- All completed research documents: `/research/literature/`
-- Naming pattern: `game-dev-analysis-[topic].md` or `survival-content-extraction-[topic].md`
-
-### Master Tracking
-- Master queue: `/research/literature/master-research-queue.md`
-- Update after each completion
+After initial groups complete:
+1. Review discovered sources from all 20 groups
+2. Create new assignment groups (Phase 2 groups)
+3. Use `research-assignment-template-phase-2.md` template
+4. Continue parallel execution model
 
 ---
 
@@ -237,56 +168,190 @@ Each assignment group file includes a **"New Sources Discovery"** section where 
 - Analyzing survival collections → discover specialized subcollections
 - Analyzing architecture → discover specific implementation guides
 
-### Source Redistribution
+### Reserve Group 20 for Immediate Discoveries
+
+Unlike Phase 2 planning, **Group 20** provides immediate capacity:
+
+1. **Discovery Made:** Assignee discovers critical source
+2. **Log in Group File:** Document in discovery section
+3. **Escalate if Critical:** Notify coordinator
+4. **Assign to Group 20:** Move high-priority discovery immediately
+5. **Continue Work:** Don't wait for Phase 2 planning
+
+This ensures critical discoveries can begin research immediately without blocking progress.
+
+### Source Redistribution (Phase 2)
 
 After Phase 1 completion:
 
-1. **Collect Discoveries** - Gather all newly discovered sources from all 4 groups
+1. **Collect Discoveries** - Gather all newly discovered sources from all 20 groups
 2. **Prioritize** - Review and validate priority assessments
-3. **Balance** - Create new assignment groups for Phase 2
+3. **Balance** - Create new Phase 2 assignment groups (another 20 if needed)
 4. **Assign** - Distribute to team members for next research cycle
 
 This iterative process ensures comprehensive coverage while maintaining parallel execution efficiency.
 
 ---
 
+## File Locations
+
+### Assignment Group Documents
+- `/research/literature/research-assignment-group-01.md` through `research-assignment-group-20.md`
+- 20 individual group files
+- Group 20 is reserved/buffer group
+
+### Output Location
+- All completed research documents: `/research/literature/`
+- Naming pattern: `game-dev-analysis-[topic].md` or `survival-content-extraction-[topic].md`
+
+### Master Tracking
+- Master queue: `/research/literature/master-research-queue.md`
+- Update after each completion
+
+---
+
+## Quality Standards
+
+All research outputs must meet these standards:
+
+### Document Requirements
+- ✅ Proper YAML front matter
+- ✅ Minimum length as specified per topic
+- ✅ Code examples where relevant
+- ✅ Cross-references to related research
+- ✅ Clear recommendations for BlueMarble
+
+### File Naming
+- ✅ Use kebab-case: `game-dev-analysis-[topic].md`
+- ✅ Consistent prefixes: `game-dev-analysis-` or `survival-content-extraction-`
+- ✅ Descriptive names matching topic
+
+### Content Quality
+- ✅ Comprehensive coverage of topic
+- ✅ Analysis relevant to BlueMarble project
+- ✅ Actionable recommendations
+- ✅ Proper citations and references
+
+---
+
+## Assignment Workflow
+
+### For Assignees
+
+1. **Review Assignment Group:** Read your assigned group document (group-01 through group-20)
+2. **Start with Highest Priority:** Begin with Critical/High priority items
+3. **Follow Research Process:** Use the 30-40-30 split (Review-Analysis-Documentation)
+4. **Document as You Go:** Create analysis documents following established formats
+5. **Log Discoveries:** Add newly found sources to discovery section
+6. **Update Progress:** Check off completed items in your group checklist
+7. **Submit Work:** Place documents in `research/literature/` directory
+
+### For Coordinators
+
+1. **Assign Groups:** Assign one group per team member (20 assignees)
+2. **Monitor Progress:** Daily/weekly check-ins on completion
+3. **Support Research:** Provide clarification and resources as needed
+4. **Review Outputs:** Quality check completed documents
+5. **Manage Group 20:** Assign critical discoveries immediately
+6. **Update Master Queue:** Mark topics complete in master research queue
+7. **Plan Phase 2:** Collect discoveries for next iteration
+
+---
+
+## Communication and Coordination
+
+### Minimizing Merge Conflicts
+
+With 20 parallel groups:
+- Each person works on 1-2 topics maximum
+- Output files are unique per group
+- No shared files except discovery logging
+- Coordinators handle master queue updates centrally
+
+### Collaboration Opportunities
+
+- Cross-reference related topics across groups
+- Share insights in team channels
+- Coordinate on overlapping categories
+- Peer review available documents
+
+### Support Channels
+
+- Review existing completed documents for examples
+- Check `research/literature/README.md` for guidelines
+- Consult `research/literature/example-topic.md` for template
+- Reference master research queue for broader context
+
+---
+
+## Success Metrics
+
+### Completion Targets
+
+With 20 parallel workers:
+
+- **Day 3:** All Critical items complete (2 topics, Groups 1-2)
+- **Week 1:** 50% of High priority items complete (7+ topics, Groups 3-9)
+- **Week 2:** 80% of all items complete (22+ topics, Groups 1-19)
+- **Week 2:** Group 20 activated if discoveries warrant immediate attention
+
+### Quality Targets
+
+- 100% documents meet minimum length requirements
+- 100% documents have proper front matter
+- 100% documents include BlueMarble-specific recommendations
+- 90%+ documents include code examples or practical guidance
+- Each group logs at least 1 discovered source
+
+---
+
 ## Next Steps
 
-1. **Assign groups to team members** (4 assignees needed)
+1. **Assign groups to 20 team members** (1 group per person)
 2. **Kick-off meeting** to review process and answer questions
-3. **Begin Phase 1** with Critical priority items
-4. **Weekly check-ins** to track progress and provide support
-5. **Final review** and master queue update upon completion
-6. **Phase 2 Planning** - After Phase 1, use discovered sources to create Phase 2 assignments
+3. **Begin Phase 1** with all groups starting in parallel
+4. **Daily standups** first week for coordination
+5. **Weekly check-ins** for progress tracking
+6. **Final review** and master queue update upon completion
+7. **Phase 2 Planning** - After Phase 1, use discovered sources to create Phase 2 assignments
 
 ### Phase 2+ Planning
 
 When Phase 1 completes:
-1. Review "New Sources Discovery" sections in all 4 group files
+1. Review "New Sources Discovery" sections in all 20 group files
 2. Use template: `/research/literature/research-assignment-template-phase-2.md`
-3. Create balanced Phase 2 assignment groups from discovered sources
-4. Update master research queue with new sources
-5. Continue iterative research process
+3. Create balanced Phase 2 assignment groups (up to 20 new groups if needed)
+4. Update master research queue with all new sources
+5. Continue iterative research process with same parallel model
 
 ---
 
 ## Quick Reference
 
-| Group | File | Topics | Critical | High | Medium | Low | Effort |
-|-------|------|--------|----------|------|--------|-----|--------|
-| 1 | research-assignment-group-1.md | 7 | 1 | 3 | 2 | 1 | 35-50h |
-| 2 | research-assignment-group-2.md | 7 | 1 | 3 | 2 | 1 | 35-50h |
-| 3 | research-assignment-group-3.md | 7 | 0 | 4 | 2 | 1 | 32-45h |
-| 4 | research-assignment-group-4.md | 6 | 0 | 4 | 1 | 2 | 30-43h |
-| **Total** | | **27** | **2** | **14** | **7** | **5** | **132-188h** |
+| Group | Topics | Priority Mix | Effort | Status |
+|-------|--------|--------------|--------|--------|
+| 01 | 1 | 1 Critical | 8-12h | Ready |
+| 02 | 1 | 1 Critical | 8-12h | Ready |
+| 03-09 | 2 each | High | 10-16h | Ready |
+| 10 | 2 | Medium | 9-14h | Ready |
+| 11-15 | 1 each | Medium | 4-7h | Ready |
+| 16-18 | 1 each | Low | 2-4h | Ready |
+| 19 | 1 | Very Low | 2-3h | Ready |
+| 20 | 0 | Reserved | 0h | Buffer |
+| **Total** | **27** | **Mixed** | **180-250h** | **Ready** |
+
+**Total Work Hours:** 180-250 hours  
+**With 20 People:** 9-12.5 hours per person average  
+**Timeline:** 1-2 weeks for completion
 
 ---
 
 **Created:** 2025-01-15  
-**Last Updated:** 2025-01-15  
+**Last Updated:** 2025-01-15 (v2.0 - 20 Group Structure)  
 **Status:** Ready for Assignment  
-**Next Action:** Assign groups to team members and begin Phase 1
+**Next Action:** Assign groups 1-20 to team members and begin Phase 1
 
 ---
 
-*This overview provides the roadmap for completing the remaining 28 research topics through balanced parallel execution.*
+*This overview provides the roadmap for completing the remaining 28 research topics through maximum parallel execution with 20 independent work streams.*
+
