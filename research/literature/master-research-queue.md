@@ -32,10 +32,10 @@ This document tracks all identified sources for research and analysis for the Bl
 
 ## Queue Status
 
-**Total Sources:** 37 (updated: +1 from auto-discovery)  
+**Total Sources:** 38 (updated: +2 from auto-discovery)  
 **Completed:** 11  
 **In Progress:** 0  
-**Remaining:** 26  
+**Remaining:** 27  
 
 ---
 
@@ -122,12 +122,20 @@ This document tracks all identified sources for research and analysis for the Bl
     - Source: awesome-survival repository - Energy Systems section
     - Relevance: Power infrastructure for Tier 3-5 civilization systems
 
+12. **Historical Maps and Navigation Resources** - PENDING
+    - Status: ⏳ Pending detailed extraction
+    - Priority: High
+    - Focus: Historical map collections, navigation manuals, celestial navigation, land surveying
+    - Source: awesome-survival repository - Maps/Navigation section
+    - Relevance: Player navigation systems, cartography mechanics, historical accuracy for period gameplay
+
 ## Priority Matrix
 
 ### Tier 1: Immediate Game Content (Weeks 1-4)
 - **OpenStreetMap** - World generation foundation
 - **Appropriate Technology Library** - Core crafting recipes
 - **Survivor Library** - Historical technology progression
+- **Historical Maps and Navigation Resources** - Navigation systems and cartography
 
 ### Tier 2: Advanced Systems (Weeks 5-8)
 - **Great Science Textbooks** - Advanced engineering systems
@@ -273,6 +281,7 @@ This document tracks all identified sources for research and analysis for the Bl
 - **2025-01-15:** Master queue document created
 - **2025-01-15:** Phase 2 completed, ready for Phase 3
 - **2025-01-17:** Added Energy Systems Collection from auto-discovery (+1 source)
+- **2025-01-17:** Added Historical Maps and Navigation Resources from auto-discovery (+1 source)
 
 ---
 
@@ -495,8 +504,8 @@ For each source, create:
 - Next Update: After completion
 
 **Remaining Work:**
-- 27 sources pending detailed analysis
-- Estimated total additional documentation: 15,000-21,000 lines
+- 28 sources pending detailed analysis
+- Estimated total additional documentation: 16,000-22,000 lines
 - Estimated time: 3-6 months of focused extraction work
 
 ---
@@ -511,5 +520,5 @@ For each source, create:
 ---
 
 **Last Updated:** 2025-01-17  
-**Next Source:** Energy Systems Collection (newly discovered)  
+**Next Source:** Historical Maps and Navigation Resources (newly discovered)  
 **Status:** Ready to begin processing
