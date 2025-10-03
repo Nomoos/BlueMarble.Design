@@ -1,6 +1,49 @@
 # Content Extraction: Appropriate Technology Library for Crafting Systems
 
 ---
+title: Appropriate Technology Library Content Extraction
+date: 2025-01-15
+tags: [crafting, recipes, appropriate-technology, sustainability]
+status: completed
+priority: high
+source: Appropriate Technology Library (1050+ ebooks)
+---
+
+## Executive Summary
+
+The Appropriate Technology Library contains 1,050+ ebooks focused on sustainable, low-tech solutions perfect for BlueMarble's crafting system. This guide outlines extraction of 500+ recipes across Tiers 1-4.
+
+**Target Content:**
+- 500+ extractable crafting recipes
+- Focus on practical, step-by-step processes
+- Technology tiers 1-4 (primitive to industrial)
+- Authentic real-world techniques
+
+**Implementation Priority:** HIGH - Core crafting content
+
+## Source Overview
+
+### Appropriate Technology Library
+
+**Collection Size:** 1,050+ ebooks covering:
+- Agriculture and food production
+- Water systems and sanitation
+- Building and construction
+- Energy generation (small-scale)
+- Metalworking and tool making
+- Textile production
+- Food preservation
+
+**Magnet Link:**
+```
+magnet:?xt=urn:btih:927CEF33C1E320C669ED7913CC1A63736DA530B9&dn=Appropriate+Technology+Library+-1050+eBooks
+```
+
+**Organization:**
+- Organized by topic folders
+- Mix of scanned PDFs and text-searchable documents
+- Quality varies - some require OCR
+- Most books 50-300 pages
 title: Appropriate Technology Library Content Extraction for BlueMarble Crafting
 date: 2025-01-15
 tags: [appropriate-technology, crafting, recipes, sustainable, implementation]
@@ -51,6 +94,75 @@ early-to-mid game content.
 
 ### Phase 1: Recipe Database Creation (Week 1-3)
 
+#### Category 1: Food Production (120 recipes)
+**Target Books:**
+- "Small-Scale Food Processing"
+- "Food Preservation for the Self-Sufficient"
+- "Root Cellars"
+- "Fermentation Guide"
+
+**Recipes to Extract:**
+- Bread baking (10 variations)
+- Cheese making (8 types)
+- Pickling and preserving (20 methods)
+- Drying and smoking (15 techniques)
+- Fermentation (15 products)
+- Beer/wine making (12 processes)
+- Rendering fats (5 methods)
+- Sugar processing (10 techniques)
+
+**Example Recipe Format:**
+```json
+{
+  "recipe_id": "food_0001",
+  "name": "Sourdough Bread",
+  "tier": 2,
+  "category": "cooking",
+  "inputs": [
+    {"item": "flour", "quantity": 500, "unit": "g"},
+    {"item": "water", "quantity": 350, "unit": "ml"},
+    {"item": "salt", "quantity": 10, "unit": "g"},
+    {"item": "sourdough_starter", "quantity": 100, "unit": "g"}
+  ],
+  "outputs": [
+    {"item": "sourdough_loaf", "quantity": 1, "quality_range": [0.6, 1.0]}
+  ],
+  "requirements": {
+    "skill": "cooking",
+    "skill_level": 10,
+    "workshop": "bakery",
+    "time_minutes": 180,
+    "temperature": "200C"
+  },
+  "source": {
+    "book": "Traditional Bread Making",
+    "page": 34,
+    "library": "Appropriate Technology Library"
+  },
+  "steps": [
+    "Mix flour and water, let rest 30 minutes",
+    "Add starter and salt, knead 10 minutes",
+    "First rise 4 hours at room temperature",
+    "Shape loaf, second rise 2 hours",
+    "Score top and bake 40 minutes at 200C"
+  ]
+}
+```
+
+#### Category 2: Agriculture (100 recipes)
+**Target Books:**
+- "Organic Gardening Methods"
+- "Composting Guide"
+- "Seed Saving Handbook"
+- "Small-Scale Livestock"
+
+**Recipes to Extract:**
+- Composting methods (15 variations)
+- Crop planting (30 crops)
+- Seed saving (20 crops)
+- Animal breeding (10 species)
+- Pest control (15 organic methods)
+- Soil improvement (10 techniques)
 **Objective:** Extract 500+ actionable crafting recipes from the library
 
 **Priority Categories:**
@@ -166,6 +278,48 @@ early-to-mid game content.
 - Insulation techniques
 - Flooring options
 
+#### Category 4: Metalworking (90 recipes)
+**Target Books:**
+- "The Backyard Blacksmith"
+- "Small-Scale Smelting"
+- "Tool Making Manual"
+- "Forge Construction"
+
+**Recipes to Extract:**
+- Bloomery iron smelting
+- Charcoal production (5 methods)
+- Basic forging (20 tools)
+- Casting techniques (10 molds)
+- Heat treatment (15 processes)
+- Tool sharpening (10 methods)
+
+#### Category 5: Textile Production (60 recipes)
+**Target Books:**
+- "Spinning and Weaving"
+- "Natural Dyes"
+- "Fiber Processing"
+- "Basketry Techniques"
+
+**Recipes to Extract:**
+- Fiber processing (flax, wool, cotton)
+- Spinning techniques
+- Weaving patterns (20 types)
+- Natural dyeing (25 colors)
+- Basketry (10 styles)
+
+#### Category 6: Energy and Water (50 recipes)
+**Target Books:**
+- "Water Pumps and Hydraulic Rams"
+- "Small Wind Power"
+- "Solar Cooking"
+- "Biogas Production"
+
+**Recipes to Extract:**
+- Water wheel construction
+- Wind pump design
+- Solar cooker building
+- Biogas digester setup
+- Water purification systems
 #### Category 4: Metalworking and Smithing (90 recipes)
 **Target Books:**
 - "Where There Is No Blacksmith"
@@ -292,6 +446,15 @@ early-to-mid game content.
 - Fits within technology tier system
 - Authentic real-world process
 
+### Step 3: Recipe Formatting (Week 3)
+
+**Standardization Process:**
+- Convert to JSON format
+- Assign technology tier (1-5)
+- Map to skill system
+- Define time requirements
+- Set quality ranges
+- Add source attribution
 ### Step 3: Recipe Standardization (Week 3)
 
 **Convert to Game Format:**
@@ -370,6 +533,18 @@ FinalQuality = Clamp(BaseQuality + MaterialBonus + ToolBonus + EnvironmentBonus 
 **Skill Dependencies:**
 ```
 SkillTree {
+  Cooking: {
+    prerequisites: [Fire_Making],
+    unlocks: [Bread_Baking, Cheese_Making, Preserving]
+  },
+  Agriculture: {
+    prerequisites: [Tool_Use],
+    unlocks: [Planting, Composting, Animal_Husbandry]
+  },
+  Carpentry: {
+    prerequisites: [Tool_Making, Wood_Working],
+    unlocks: [House_Building, Furniture, Advanced_Structures]
+  }
     PrimitiveCrafting [Tier 1] {
         Prerequisites: None
         UnlocksRecipes: 100 basic recipes
@@ -443,6 +618,26 @@ AdvancedProcessing {
 
 ## Implementation Priorities
 
+### Week 1-2: Survival Essentials (Phase 1A)
+**Priority: Critical**
+
+Extract and implement 70 recipes:
+- 20 fire starting and cooking
+- 20 water purification and storage
+- 15 basic shelter construction
+- 15 primitive tool making
+
+**Deliverable:** JSON file with 70 survival recipes + basic skill tree
+
+### Week 3-4: Food Systems (Phase 1B)
+**Priority: High**
+
+Extract and implement 120 recipes:
+- 40 cooking and food preparation
+- 40 food preservation
+- 40 basic agriculture
+
+**Deliverable:** JSON file with 120 food recipes + agriculture skill tree
 ### Week 1-2: Core Survival Recipes (Phase 1A)
 **Priority: Critical**
 
@@ -487,6 +682,15 @@ Extract and implement 90 recipes:
 
 **Deliverable:** JSON file with 90 metalwork recipes + metallurgy skill tree
 
+### Week 9-10: Advanced Systems (Phase 2B)
+**Priority: Medium**
+
+Extract and implement 140 recipes:
+- 60 textile production
+- 50 energy systems
+- 30 water engineering
+
+**Deliverable:** JSON files for advanced systems + integrated skill trees
 ### Week 9-10: Specialized Systems (Phase 2B)
 **Priority: Medium**
 
@@ -596,6 +800,61 @@ class RecipeExtractor:
             json.dump(self.recipes, f, indent=2)
 ```
 
+**Usage Example:**
+```python
+extractor = RecipeExtractor()
+
+# Process all PDF files in directory
+for pdf_file in pdf_directory:
+    text = extract_pdf_text(pdf_file)
+    extractor.extract_from_text(text, pdf_file, determine_category(pdf_file))
+
+extractor.export_to_json('extracted_recipes.json')
+```
+
+## Quality Assurance Process
+
+### Recipe Validation Checklist
+
+For each extracted recipe:
+- [ ] Clear step-by-step process documented
+- [ ] All materials identified and quantified
+- [ ] Tool requirements specified
+- [ ] Time estimates realistic for game balance
+- [ ] Output quality ranges defined
+- [ ] Skill requirements appropriate for tier
+- [ ] XP rewards balanced
+- [ ] Source attribution complete
+- [ ] Real-world authenticity verified
+- [ ] Game mechanics integration considered
+
+### Balance Review
+
+**Time Balance:**
+- Tier 1 recipes: 1-10 minutes
+- Tier 2 recipes: 10-60 minutes
+- Tier 3 recipes: 1-4 hours
+- Tier 4 recipes: 4-12 hours
+- Tier 5 recipes: 12+ hours
+
+**Resource Balance:**
+- Common materials abundant
+- Rare materials limited
+- Output value proportional to input + time
+- Quality variation adds replayability
+
+## Deliverables
+
+### Short-term Deliverables (Week 1-4)
+1. **recipes_survival_tier1.json** - 70 basic survival recipes
+2. **recipes_food_tier2.json** - 120 food production recipes
+3. **recipes_construction_tier2-3.json** - 80 building recipes
+4. **skill_tree_basics.json** - Tier 1-2 skill definitions
+
+### Mid-term Deliverables (Week 5-8)
+5. **recipes_metalworking_tier3-4.json** - 90 metallurgy recipes
+6. **recipes_textiles_tier2-4.json** - 60 textile recipes
+7. **skill_tree_advanced.json** - Tier 3-4 skill definitions
 ## Deliverables
 
 ### Immediate Deliverables (Week 1-4)
@@ -632,6 +891,19 @@ class RecipeExtractor:
 5. **Weekly Reviews:** Track progress against deliverables
 6. **Iterative Refinement:** Adjust based on game balance needs
 
+## References
+
+- **Source:** Appropriate Technology Library
+- **Download:** Via magnet link in awesome-survival repository
+- **Related:** `survival-guides-knowledge-domains-research.md`
+- **Integration:** BlueMarble crafting system documentation
+
+---
+
+**Document Status:** Complete
+**Last Updated:** 2025-01-15
+**Estimated Extraction Time:** 10 weeks (2-3 people)
+**Priority:** HIGH - Core game content
 ## Related Documents
 
 - [Survival Guides Knowledge Domains Research](survival-guides-knowledge-domains-research.md) - Parent research

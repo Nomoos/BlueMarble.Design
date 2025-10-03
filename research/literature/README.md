@@ -13,6 +13,10 @@ This directory contains formal references, summaries, and literature reviews for
 - [example-topic.md](example-topic.md) - Example literature review format
 - [survival-guides-knowledge-domains-research.md](survival-guides-knowledge-domains-research.md) - Analysis of survival knowledge systems from awesome-survival repository
 
+## Research Management
+
+1. [master-research-queue.md](master-research-queue.md) - Master tracking document for all research sources and priorities
+
 ## Content Extraction Guides
 
 Step-by-step guides for extracting actionable content from prioritized survival guide resources:
@@ -23,6 +27,8 @@ Step-by-step guides for extracting actionable content from prioritized survival 
 4. [survival-content-extraction-04-great-science-textbooks.md](survival-content-extraction-04-great-science-textbooks.md) - Great Science Textbooks for advanced engineering
 5. [survival-content-extraction-05-military-manuals.md](survival-content-extraction-05-military-manuals.md) - Military Manuals for large-scale warfare systems
 6. [survival-content-extraction-06-medical-textbooks.md](survival-content-extraction-06-medical-textbooks.md) - Medical Textbooks for healthcare systems and pharmaceutical production
+7. [survival-content-extraction-07-encyclopedia-collections.md](survival-content-extraction-07-encyclopedia-collections.md) - Encyclopedia Collections for knowledge validation and gap filling
+9. [survival-content-extraction-09-cd3wd-collection.md](survival-content-extraction-09-cd3wd-collection.md) - CD3WD Collection for civilization rebuilding mechanics
 
 ## Research Management
 
