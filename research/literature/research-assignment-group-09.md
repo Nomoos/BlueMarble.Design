@@ -125,7 +125,7 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Real-Time Rendering (High)
+- [x] Real-Time Rendering (High) - Completed: `game-dev-analysis-real-time-rendering.md`
 - [ ] Mathematics for 3D Game Programming (High)
 
 ---
