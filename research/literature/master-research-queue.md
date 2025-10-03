@@ -32,10 +32,10 @@ This document tracks all identified sources for research and analysis for the Bl
 
 ## Queue Status
 
-**Total Sources:** 36 (updated: +5 from references)  
+**Total Sources:** 37 (updated: +1 from auto-discovery)  
 **Completed:** 11  
 **In Progress:** 0  
-**Remaining:** 25  
+**Remaining:** 26  
 
 ---
 
@@ -113,6 +113,15 @@ This document tracks all identified sources for research and analysis for the Bl
     - Lines: 1,260
     - Completion Date: 2025-01-15
 
+### ⏳ PENDING SOURCES
+
+11. **Energy Systems Collection** - PENDING
+    - Status: ⏳ Pending detailed extraction
+    - Priority: High
+    - Focus: Solar power, wind generation, hydroelectric, biofuel production
+    - Source: awesome-survival repository - Energy Systems section
+    - Relevance: Power infrastructure for Tier 3-5 civilization systems
+
 ## Priority Matrix
 
 ### Tier 1: Immediate Game Content (Weeks 1-4)
@@ -124,6 +133,7 @@ This document tracks all identified sources for research and analysis for the Bl
 - **Great Science Textbooks** - Advanced engineering systems
 - **Military Manuals** - Large-scale warfare and logistics
 - **Medical Textbooks** - Healthcare and pharmaceutical systems
+- **Energy Systems** - Power generation and distribution infrastructure
 
 ### Tier 3: Knowledge Integration (Weeks 9-12)
 - **Encyclopedia Collections** - Cross-reference and validation
@@ -262,6 +272,7 @@ This document tracks all identified sources for research and analysis for the Bl
 - **2025-01-15:** All 9 extraction guides completed
 - **2025-01-15:** Master queue document created
 - **2025-01-15:** Phase 2 completed, ready for Phase 3
+- **2025-01-17:** Added Energy Systems Collection from auto-discovery (+1 source)
 
 ---
 
@@ -484,8 +495,8 @@ For each source, create:
 - Next Update: After completion
 
 **Remaining Work:**
-- 26 sources pending detailed analysis
-- Estimated total additional documentation: 15,000-20,000 lines
+- 27 sources pending detailed analysis
+- Estimated total additional documentation: 15,000-21,000 lines
 - Estimated time: 3-6 months of focused extraction work
 
 ---
@@ -499,6 +510,6 @@ For each source, create:
 
 ---
 
-**Last Updated:** 2025-01-15  
-**Next Source:** Great Science Textbooks Collection  
+**Last Updated:** 2025-01-17  
+**Next Source:** Energy Systems Collection (newly discovered)  
 **Status:** Ready to begin processing
