@@ -125,7 +125,7 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Advanced Game Design (High)
+- [x] Advanced Game Design (High)
 - [ ] Players Making Decisions (High)
 
 ---
