@@ -100,7 +100,7 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Augmented Reality / Practical Augmented Reality (Low)
+- [x] Augmented Reality / Practical Augmented Reality (Low)
 
 ---
 
