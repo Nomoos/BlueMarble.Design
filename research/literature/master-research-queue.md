@@ -32,10 +32,10 @@ This document tracks all identified sources for research and analysis for the Bl
 
 ## Queue Status
 
-**Total Sources:** 36 (updated: +5 from references)  
+**Total Sources:** 86 (updated: +50 from online resources catalog)  
 **Completed:** 11  
-**In Progress:** 0  
-**Remaining:** 25  
+**In Progress:** 1  
+**Remaining:** 74  
 
 ---
 
@@ -280,6 +280,15 @@ This document tracks all identified sources for research and analysis for the Bl
    - Lines: 1,150
    - Completion Date: 2025-01-17
    - Additional Sources Discovered: 5 (Game Engine Architecture, Real-Time Rendering, Network Programming for Games, Multiplayer Game Programming [expanded], C++ Best Practices)
+
+2. **Online Game Development Resources Catalog** - IN PROGRESS
+   - Status: 🔍 In Progress (Active - Auto-Growing)
+   - Document: `online-game-dev-resources.md`
+   - Lines: 880+
+   - Completion Date: Ongoing (auto-growing list)
+   - Coverage: 50+ sources organized by category
+   - Focus: RPG, MMORPG, Top-Down Game Development
+   - Categories: Books (16), Online Tutorials (10), Video Courses (5), Open Source Projects (9), Communities (5), Case Studies (4), Specialized Topics (1)
 
 ### ⏳ PENDING SOURCES (Original List)
 
