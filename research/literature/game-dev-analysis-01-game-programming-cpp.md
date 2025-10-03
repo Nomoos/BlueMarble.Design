@@ -1,5 +1,14 @@
 # Game Programming in C++ - Analysis for BlueMarble MMORPG
 
+---
+title: Game Programming in C++ - Analysis for BlueMarble MMORPG
+date: 2025-01-15
+tags: [game-development, programming, cpp, architecture, mmorpg]
+status: complete
+priority: high
+parent-research: game-development-resources-analysis.md
+---
+
 **Source:** Game Programming in C++ by Sanjay Madhav  
 **Category:** Game Development - Core Programming  
 **Priority:** High  
