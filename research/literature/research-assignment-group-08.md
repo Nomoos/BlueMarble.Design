@@ -126,7 +126,7 @@ Each analysis document should include:
 Track progress using this checklist:
 
 - [ ] Introduction to Game Design, Prototyping and Development (High)
-- [ ] Game Engine Architecture (High)
+- [x] Game Engine Architecture (High)
 
 ---
 
