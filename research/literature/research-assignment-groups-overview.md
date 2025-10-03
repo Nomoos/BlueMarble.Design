@@ -331,12 +331,12 @@ With 20 parallel groups:
 
 ### Completion Targets
 
-With 20 parallel workers:
+With 40 parallel workers:
 
-- **Day 3:** All Critical items complete (2 topics, Groups 1-2)
-- **Week 1:** 50% of High priority items complete (7+ topics, Groups 3-9)
-- **Week 2:** 80% of all items complete (22+ topics, Groups 1-19)
-- **Week 2:** Group 20 activated if discoveries warrant immediate attention
+- **Day 3:** All Critical items complete (4 topics, Groups 1-4)
+- **Week 1:** 50% of High priority items complete (14+ topics, Groups 5-18)
+- **Week 2:** 80% of all items complete (44+ topics, Groups 1-36)
+- **Week 2:** Groups 37-40 activated if discoveries warrant immediate attention
 
 ### Quality Targets
 
