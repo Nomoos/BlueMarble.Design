@@ -157,7 +157,7 @@ Designing an Earth-sized MMO world (40,075,020 m × 20,037,510 m in EPSG:4087) a
   - Tile servers + STAC catalogs.  
 
 - **Networking**  
-  - MMO frameworks: SpatialOS, Photon, SmartFox.  
+  - MMO frameworks: Photon, SmartFox. (SpatialOS—discontinued 2022)  
   - Study WoW, EVE, GW2 architectures.  
 
 ---
