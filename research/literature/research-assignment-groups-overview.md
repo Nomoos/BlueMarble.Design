@@ -171,7 +171,7 @@ All 40 groups can work in parallel without blocking each other.
 ### Phase 2: Source Discovery Integration
 
 After initial groups complete:
-1. Review discovered sources from all 20 groups
+1. Review discovered sources from all 40 groups
 2. Create new assignment groups (Phase 2 groups)
 3. Use `research-assignment-template-phase-2.md` template
 4. Continue parallel execution model
