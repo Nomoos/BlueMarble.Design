@@ -30,6 +30,17 @@ Step-by-step guides for extracting actionable content from prioritized survival 
 7. [survival-content-extraction-07-encyclopedia-collections.md](survival-content-extraction-07-encyclopedia-collections.md) - Encyclopedia Collections for knowledge validation and gap filling
 9. [survival-content-extraction-09-cd3wd-collection.md](survival-content-extraction-09-cd3wd-collection.md) - CD3WD Collection for civilization rebuilding mechanics
 
+## Research Management
+
+1. [master-research-queue.md](master-research-queue.md) - Master tracking document for all research sources and priorities
+
+## Game Design Analysis
+
+Analysis documents examining game design patterns and development resources:
+
+1. [game-design-mechanics-analysis.md](game-design-mechanics-analysis.md) - Tabletop RPG mechanics analysis (Masks, Mazes, Outgunned, Spire, Warhammer, Wildsea, Cyberpunk RED, Call of Cthulhu, Apocalypse World)
+2. [game-development-resources-analysis.md](game-development-resources-analysis.md) - Game development books and resources guide
+
 ## Guidelines
 
 - Use descriptive filenames: `topic-name.md` (e.g., `mmo-architecture-patterns.md`)
