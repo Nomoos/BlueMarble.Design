@@ -33,13 +33,13 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 **In Progress:** 1  
 **Remaining:** 74  
 **Total Sources:** 39 (updated: +3 from auto-discovery)  
-**Completed:** 11  
+**Completed:** 12  
 **In Progress:** 0  
-**Remaining:** 28  
+**Remaining:** 27  
 
 **Original Count:** 36 sources (before auto-discovery)  
 **Sources Added:** 3 (Energy Systems, Historical Maps/Navigation, Specialized Collections)  
-**Completion Rate:** 28% (11 of 39 sources completed)  
+**Completion Rate:** 31% (12 of 39 sources completed)  
 
 ---
 
@@ -448,9 +448,10 @@ All 3 newly discovered sources have been appended to Category 1 (Survival Guide 
 **Specialized & Process (5 books):**
 
 24. **3D User Interfaces**
-    - Status: ⏳ Pending detailed extraction
+    - Status: ✅ Complete - Analysis document created
     - Priority: Medium
     - Focus: Spatial UI, diegetic interfaces
+    - Document: `game-dev-analysis-3d-ui.md`
 
 25. **Agile Game Development**
     - Status: ⏳ Pending detailed extraction
