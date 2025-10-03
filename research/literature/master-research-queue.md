@@ -20,9 +20,9 @@ This document tracks all identified sources for research and analysis for the Bl
 ## Queue Status
 
 **Total Sources:** 31  
-**Completed:** 7  
+**Completed:** 8  
 **In Progress:** 0  
-**Remaining:** 24  
+**Remaining:** 23  
 
 ---
 
@@ -66,23 +66,19 @@ This document tracks all identified sources for research and analysis for the Bl
    - Lines: 1,042
    - Completion Date: 2025-01-15
 
-### ⏳ PENDING SOURCES
-
 7. **Medical Textbooks Collection** - COMPLETED
    - Status: ✅ Complete
    - Document: `survival-content-extraction-06-medical-textbooks.md`
    - Lines: 1,187
    - Completion Date: 2025-01-15
-   - Priority: Medium (Medium-term Month 4-6)
-   - Focus: Healthcare systems, medical procedures
-   - Target: Disease management, pharmaceutical production, surgical systems
-   - Output: 250+ medical mechanics, pharmaceutical crafting, epidemic events
 
-8. **Encyclopedia Collections (Britannica, Americana)**
-   - Status: ⏳ Pending
-   - Priority: Low (Long-term Month 6+)
-   - Focus: In-game library content, comprehensive knowledge
-   - Target: Reference material for player-accessible information
+8. **Encyclopedia Collections (Britannica, Americana)** - COMPLETED
+   - Status: ✅ Complete
+   - Document: `survival-content-extraction-07-encyclopedia-collections.md`
+   - Lines: 894
+   - Completion Date: 2025-01-15
+
+### ⏳ PENDING SOURCES
 
 9. **Communication Systems Documentation**
    - Status: ⏳ Pending
