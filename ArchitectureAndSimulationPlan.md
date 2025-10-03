@@ -8,7 +8,7 @@ Designing an Earth-sized MMO world (40,075,020 m × 20,037,510 m in EPSG:4087) a
 
 - **Double/64-bit Coordinates**  
   Represent all world positions with double-precision floats or 64-bit integers to retain sub-meter accuracy planet-wide.  
-  - BlueMarble design: 64-bit integer coords with ±10,000 km vertical range (meter precision).  
+  - Blue Marble design: 64-bit integer coords with ±10,000 km vertical range (meter precision).  
   - Unreal Engine 5 LWC: 64-bit doubles, supports ≈88 million km.  
   - Flax Engine: switch to doubles for Solar-System scale.  
 
