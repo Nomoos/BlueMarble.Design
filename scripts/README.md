@@ -2,6 +2,10 @@
 
 This directory contains utility scripts for maintaining documentation quality in the BlueMarble.Design repository.
 
+**Quick Links:**
+- [Usage Examples](USAGE_EXAMPLES.md) - Platform-specific examples for all scripts
+- [Platform Compatibility](#platform-compatibility) - OS-specific requirements
+
 ## Available Scripts
 
 ### generate-research-issues.py
@@ -176,10 +180,15 @@ When adding new utility scripts:
 All scripts are designed to work on:
 
 - **Linux** - Native bash and Python support
-- **macOS** - Native bash and Python support
+- **macOS** - Native bash and Python support  
 - **Windows** - Using Git Bash, WSL, or PowerShell (where applicable)
 
-For Windows users without Git Bash or WSL, Python-based scripts can be run directly with Python.
+**Windows users** have multiple options:
+- PowerShell scripts (`.ps1`) work natively on Windows PowerShell 5.1+
+- Bash scripts (`.sh`) work in Git Bash or WSL
+- Python scripts (`.py`) work with Python 3 installed
+
+**Cross-platform PowerShell**: PowerShell Core is available on Linux and macOS, so `.ps1` scripts can run on all platforms with `pwsh` installed.
 
 ## Getting Help
 
@@ -189,9 +198,10 @@ If you encounter issues with any script:
 2. Verify you're running from the repository root
 3. Check script permissions: `ls -l scripts/`
 4. Review the script's comments for specific requirements
-5. Create an issue if the problem persists
+5. See [USAGE_EXAMPLES.md](USAGE_EXAMPLES.md) for detailed platform-specific examples
+6. Create an issue if the problem persists
 
 ---
 
-**Last Updated:** 2024-12-29  
+**Last Updated:** 2025-01-03  
 **Maintainers:** BlueMarble.Design Documentation Team
