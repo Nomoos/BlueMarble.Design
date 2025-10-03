@@ -32,7 +32,7 @@ Designing an Earth-sized MMO world (40,075,020 m × 20,037,510 m in EPSG:4087) a
   - Partition globe into tiles, use **octree/quadtree** per tile.  
   - Near: 0.25 m voxels.  
   - Far: merge into coarser cells / meshes.  
-  - Example: Octo voxel engine uses GPU ray-marching with LOD.  
+  - Example: [Octo voxel engine](https://github.com/OctoEngine/octo-voxel) (an open-source GPU-based voxel renderer) uses GPU ray-marching with LOD.  
 
 - **Rendering Pipeline**  
   - Origin-relative rendering (subtract camera position).  
