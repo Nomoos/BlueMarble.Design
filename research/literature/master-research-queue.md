@@ -19,10 +19,10 @@ This document tracks all identified sources for research and analysis for the Bl
 
 ## Queue Status
 
-**Total Sources:** 31  
-**Completed:** 10  
+**Total Sources:** 36 (updated: +5 from references)  
+**Completed:** 11  
 **In Progress:** 0  
-**Remaining:** 21  
+**Remaining:** 25  
 
 ---
 
@@ -98,6 +98,15 @@ This document tracks all identified sources for research and analysis for the Bl
 
 ### ✅ COMPLETED SOURCES
 
+1. **Game Programming in C++** - COMPLETED
+   - Status: ✅ Complete
+   - Document: `game-dev-analysis-01-game-programming-cpp.md`
+   - Lines: 1,150
+   - Completion Date: 2025-01-17
+   - Additional Sources Discovered: 5 (Game Engine Architecture, Real-Time Rendering, Network Programming for Games, Multiplayer Game Programming [expanded], C++ Best Practices)
+
+### ⏳ PENDING SOURCES (Original List)
+
 11. **Game Development Resources Overview** - COMPLETED
     - Status: ✅ Complete
     - Document: `game-development-resources-analysis.md`
@@ -109,24 +118,19 @@ This document tracks all identified sources for research and analysis for the Bl
 
 **Programming & Technical (7 books):**
 
-12. **Game Programming in C++**
-    - Status: ⏳ Pending detailed extraction
-    - Priority: High
-    - Focus: Core engine programming, memory management, entity systems
-
-13. **Game Programming Algorithms and Techniques**
+12. **Game Programming Algorithms and Techniques**
     - Status: ⏳ Pending detailed extraction
     - Priority: High
     - Focus: Pathfinding, procedural generation, optimization
 
-14. **Multiplayer Game Programming**
-    - Status: ⏳ Pending detailed extraction
+13. **Multiplayer Game Programming**
+    - Status: ⏳ Pending detailed extraction (expanded scope from references)
     - Priority: Critical
     - Focus: Network architecture, state synchronization, scalability
 
 **Design Theory (6 books):**
 
-15. **Introduction to Game Systems Design**
+14. **Introduction to Game Systems Design**
     - Status: ⏳ Pending detailed extraction
     - Priority: High
     - Focus: Core loops, system interaction, progression
@@ -210,13 +214,53 @@ This document tracks all identified sources for research and analysis for the Bl
     - Priority: Low
     - Focus: AR concepts (potential mobile companion app)
 
+### 🔍 NEWLY DISCOVERED SOURCES (From References)
+
+**Additional Technical Resources (6 sources discovered from Game Programming in C++):**
+
+31. **Game Engine Architecture**
+    - Status: ⏳ Pending
+    - Priority: High
+    - Focus: Engine design patterns, large-scale architecture, subsystem integration
+    - Source: Referenced in Game Programming in C++
+
+32. **Real-Time Rendering**
+    - Status: ⏳ Pending
+    - Priority: High
+    - Focus: Graphics pipeline, optimization techniques, shader programming
+    - Source: Referenced in Game Programming in C++
+
+33. **Network Programming for Games**
+    - Status: ⏳ Pending
+    - Priority: Critical (MMORPG focus)
+    - Focus: Authoritative servers, client prediction, lag compensation
+    - Source: Referenced in Game Programming in C++
+
+34. **Effective C++ / Modern C++ Best Practices**
+    - Status: ⏳ Pending
+    - Priority: Medium
+    - Focus: Performance optimization, memory management, best practices
+    - Source: Referenced in Game Programming in C++
+
+35. **Mathematics for 3D Game Programming**
+    - Status: ⏳ Pending
+    - Priority: High
+    - Focus: Vector math, quaternions, transforms, collision detection
+    - Source: Referenced in Game Programming in C++
+
+36. **Isometric Projection Techniques**
+    - Status: ⏳ Pending
+    - Priority: Medium
+    - Focus: UI/UX visual design, perspective systems
+    - Source: Issue comment #3364843099 (sketch documentation)
+
 ---
 
 ## Category 3: Tabletop RPG Design Analysis (Priority: High)
 
 ### ✅ COMPLETED SOURCES
 
-31. **Tabletop RPG Mechanics Overview** - COMPLETED
+37. **Tabletop RPG Mechanics Overview** - COMPLETED
     - Status: ✅ Complete
     - Document: `game-design-mechanics-analysis.md`
     - Lines: 1,263
