@@ -100,7 +100,7 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [x] Network Programming for Games (Critical)
+- [ ] Network Programming for Games (Critical)
 
 ---
 
