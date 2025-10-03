@@ -73,7 +73,7 @@ Designing an Earth-sized MMO world (40,075,020 m × 20,037,510 m in EPSG:4087) a
 
 - **Hybrid Array-Octree Storage**  
   - Flat voxel arrays (e.g. Zarr/HDF5) segmented into chunks.  
-  - Example chunk: `128×128×128`, ~2 MB uncompressed.  
+  - Example chunk: `128×128×128` (2,097,152 voxels), ~2 MB uncompressed (assuming 1 byte per voxel, e.g., `uint8` material IDs). For larger data types (e.g., `uint16` or `uint32`), chunk size will increase proportionally.
   - Store material IDs, compressed (Zstd).  
 
 - **Cloud-Optimized Formats**  
