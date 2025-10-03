@@ -76,7 +76,7 @@ This assignment group focuses on analyzing game development resources from the o
 
 ## Progress Tracking
 
-- [ ] RakNet (Open Source Version)
+- [x] RakNet (Open Source Version)
 - [ ] Reddit - r/MMORPG
 - [ ] All documents created and placed in `research/literature/`
 - [ ] All documents have proper front matter
@@ -110,7 +110,26 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** ENet Networking Library  
+**Discovered From:** RakNet (Open Source Version) analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Active alternative to RakNet, simpler API, used by many modern indie multiplayer games  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** GameNetworkingSockets (Valve)  
+**Discovered From:** RakNet (Open Source Version) analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Modern, actively maintained by Valve, used in Steam games, represents current industry best practices  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** yojimbo Networking Library  
+**Discovered From:** RakNet (Open Source Version) analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Modern C++ networking for action games, encrypted by default, good security patterns  
+**Estimated Effort:** 6-8 hours
 
 ---
 
