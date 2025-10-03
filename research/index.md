@@ -38,6 +38,20 @@ Formal references, summaries, and literature reviews from external sources.
   Analysis of survival knowledge systems from the awesome-survival repository, identifying skill hierarchies, 
   material processing chains, and knowledge preservation mechanics applicable to BlueMarble game design
 
+### Content Extraction Guides (Priority Order)
+
+- [Content Extraction 01: OpenStreetMap](literature/survival-content-extraction-01-openstreetmap.md) - 
+  Practical guide for extracting terrain topology, biome distribution, resource placement, and settlement patterns 
+  from OpenStreetMap data for planet-scale world generation
+  
+- [Content Extraction 02: Appropriate Technology Library](literature/survival-content-extraction-02-appropriate-technology.md) - 
+  Systematic extraction of 500+ crafting recipes from 1,050 ebooks covering sustainable technology, agriculture, 
+  metalworking, and construction for Tier 1-3 game content
+  
+- [Content Extraction 03: Survivor Library](literature/survival-content-extraction-03-survivor-library.md) - 
+  Historical technology extraction from pre-industrial manuals (1700s-1950s) for 340+ authentic recipes covering 
+  manufacturing, agriculture, construction, and specialized crafts
+
 ## Sources
 
 Bibliography, reading lists, and raw notes from external sources.

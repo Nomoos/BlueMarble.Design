@@ -13,6 +13,14 @@ This directory contains formal references, summaries, and literature reviews for
 - [example-topic.md](example-topic.md) - Example literature review format
 - [survival-guides-knowledge-domains-research.md](survival-guides-knowledge-domains-research.md) - Analysis of survival knowledge systems from awesome-survival repository
 
+## Content Extraction Guides
+
+Step-by-step guides for extracting actionable content from prioritized survival guide resources:
+
+1. [survival-content-extraction-01-openstreetmap.md](survival-content-extraction-01-openstreetmap.md) - OpenStreetMap data for world generation
+2. [survival-content-extraction-02-appropriate-technology.md](survival-content-extraction-02-appropriate-technology.md) - Appropriate Technology Library for crafting recipes
+3. [survival-content-extraction-03-survivor-library.md](survival-content-extraction-03-survivor-library.md) - Survivor Library for historical technology
+
 ## Guidelines
 
 - Use descriptive filenames: `topic-name.md` (e.g., `mmo-architecture-patterns.md`)
