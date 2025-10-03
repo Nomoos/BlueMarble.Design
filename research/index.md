@@ -52,6 +52,16 @@ Formal references, summaries, and literature reviews from external sources.
   Historical technology extraction from pre-industrial manuals (1700s-1950s) for 340+ authentic recipes covering 
   manufacturing, agriculture, construction, and specialized crafts
 
+### Game Design Analysis Documents
+
+- [Game Design Mechanics Analysis](literature/game-design-mechanics-analysis.md) - 
+  Comprehensive analysis of innovative mechanics from 9 tabletop RPGs (Masks, Mazes, Outgunned, Spire, Warhammer, 
+  Wildsea, Cyberpunk RED, Call of Cthulhu, Apocalypse World) with implementation patterns for BlueMarble
+  
+- [Game Development Resources Analysis](literature/game-development-resources-analysis.md) - 
+  Organized guide to 20+ game development books covering programming, design theory, multiplayer systems, 
+  content creation, and development process with prioritized reading list and application strategies
+
 ## Sources
 
 Bibliography, reading lists, and raw notes from external sources.

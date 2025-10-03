@@ -21,6 +21,13 @@ Step-by-step guides for extracting actionable content from prioritized survival 
 2. [survival-content-extraction-02-appropriate-technology.md](survival-content-extraction-02-appropriate-technology.md) - Appropriate Technology Library for crafting recipes
 3. [survival-content-extraction-03-survivor-library.md](survival-content-extraction-03-survivor-library.md) - Survivor Library for historical technology
 
+## Game Design Analysis
+
+Analysis documents examining game design patterns and development resources:
+
+1. [game-design-mechanics-analysis.md](game-design-mechanics-analysis.md) - Tabletop RPG mechanics analysis (Masks, Mazes, Outgunned, Spire, Warhammer, Wildsea, Cyberpunk RED, Call of Cthulhu, Apocalypse World)
+2. [game-development-resources-analysis.md](game-development-resources-analysis.md) - Game development books and resources guide
+
 ## Guidelines
 
 - Use descriptive filenames: `topic-name.md` (e.g., `mmo-architecture-patterns.md`)
