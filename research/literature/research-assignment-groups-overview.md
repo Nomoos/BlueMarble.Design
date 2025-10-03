@@ -363,7 +363,7 @@ With 40 parallel workers:
 When Phase 1 completes:
 1. Review "New Sources Discovery" sections in all 20 group files
 2. Use template: `/research/literature/research-assignment-template-phase-2.md`
-3. Create balanced Phase 2 assignment groups (up to 20 new groups if needed)
+3. Create balanced Phase 2 assignment groups (up to 40 new groups if needed)
 4. Update master research queue with all new sources
 5. Continue iterative research process with same parallel model
 
