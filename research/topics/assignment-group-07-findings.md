@@ -10,12 +10,14 @@ tags: [research-note, assignment-group-07, phase-1, learning-blender, agile-deve
 
 ## Overview
 
-This research note summarizes the key findings from Assignment Group 07's investigation into two high-priority topics essential for BlueMarble MMORPG development:
+This research note summarizes the key findings from Assignment Group 07's investigation into two
+high-priority topics essential for BlueMarble MMORPG development:
 
 1. **Learning Blender** - 3D modeling workflows and asset pipeline optimization
 2. **Agile Game Development** - Development methodologies and project management
 
-Both topics were assigned HIGH priority due to their importance for core game systems, content creation workflows, and team productivity.
+Both topics were assigned HIGH priority due to their importance for core game systems, content
+creation workflows, and team productivity.
 
 **Assignment Details:**
 - **Group:** 07
@@ -31,7 +33,8 @@ Both topics were assigned HIGH priority due to their importance for core game sy
 
 ### Research Question
 
-How can Blender's 3D modeling and asset pipeline capabilities be leveraged to create efficient, high-quality content for a planet-scale MMORPG?
+How can Blender's 3D modeling and asset pipeline capabilities be leveraged to create efficient,
+high-quality content for a planet-scale MMORPG?
 
 ### Key Findings
 
@@ -228,7 +231,8 @@ def export_all_collections(output_dir):
 
 ### Research Question
 
-How can Agile methodologies be adapted and applied to MMORPG development to improve team coordination, iteration cycles, and project management?
+How can Agile methodologies be adapted and applied to MMORPG development to improve team
+coordination, iteration cycles, and project management?
 
 ### Key Findings
 
@@ -281,7 +285,8 @@ How can Agile methodologies be adapted and applied to MMORPG development to impr
 5. Dependency Mapping: Identify blockers and cross-team needs
 
 **Example Sprint Goal for BlueMarble:**
-> "Players can gather basic resources (wood, stone) from the environment, store them in inventory, and craft simple tools at a workbench."
+> "Players can gather basic resources (wood, stone) from the environment, store them in inventory,
+> and craft simple tools at a workbench."
 
 **Story Breakdown:**
 ```
