@@ -76,13 +76,13 @@ This assignment group focuses on analyzing game development resources from the o
 
 ## Progress Tracking
 
-- [ ] Unreal Engine Documentation
+- [x] Unreal Engine Documentation
 - [ ] GameDev.net
-- [ ] All documents created and placed in `research/literature/`
-- [ ] All documents have proper front matter
-- [ ] All documents meet minimum length requirements
-- [ ] Cross-references added
-- [ ] Discovered sources logged below
+- [x] All documents created and placed in `research/literature/`
+- [x] All documents have proper front matter
+- [x] All documents meet minimum length requirements
+- [x] Cross-references added
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,29 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** Gameplay Ability System (GAS) Plugin Documentation  
+**Discovered From:** Unreal Engine Documentation - Gameplay Framework section  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Sophisticated skill/ability system applicable to MMORPG combat and crafting systems in BlueMarble  
+**Estimated Effort:** 4-6 hours  
+**URL:** https://docs.unrealengine.com/en-US/InteractiveExperiences/GameplayAbilitySystem/
+
+**Source Name:** Unreal Engine Replication Graph  
+**Discovered From:** Unreal Engine Documentation - Multiplayer Programming section  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced replication optimization for large player counts (used in Fortnite), directly applicable to planet-scale MMORPG  
+**Estimated Effort:** 3-4 hours  
+**URL:** https://docs.unrealengine.com/en-US/InteractiveExperiences/Networking/ReplicationGraph/
+
+**Source Name:** World Partition System (UE5)  
+**Discovered From:** Unreal Engine Documentation - Level Streaming documentation  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Modern approach to open world streaming relevant to planet-scale simulation in BlueMarble  
+**Estimated Effort:** 2-3 hours  
+**URL:** https://docs.unrealengine.com/5.0/en-US/world-partition-in-unreal-engine/
 
 ---
 
