@@ -36,6 +36,64 @@ This document tracks all identified sources for research and analysis for the Bl
 **Completed:** 11  
 **In Progress:** 1  
 **Remaining:** 74  
+**Total Sources:** 39 (updated: +3 from auto-discovery)  
+**Completed:** 11  
+**In Progress:** 0  
+**Remaining:** 28  
+
+**Original Count:** 36 sources (before auto-discovery)  
+**Sources Added:** 3 (Energy Systems, Historical Maps/Navigation, Specialized Collections)  
+**Completion Rate:** 28% (11 of 39 sources completed)  
+
+---
+
+## Auto-Discovery Summary
+
+### Sources Processed Through Auto-Discovery
+
+**Phase:** Complete  
+**Date:** 2025-01-17  
+**Method:** Cross-referenced awesome-survival repository structure against master queue
+
+**Sources Identified and Added:**
+
+1. **Source #11: Energy Systems Collection**
+   - **Category:** Survival Guide Collections
+   - **Priority:** High (Tier 2)
+   - **Content:** Solar, wind, hydroelectric, biofuel systems
+   - **Rationale:** Explicitly mentioned in repository structure (lines 58-61) but missing from queue
+   
+2. **Source #12: Historical Maps and Navigation Resources**
+   - **Category:** Survival Guide Collections
+   - **Priority:** High (Tier 1)
+   - **Content:** Historical cartography, navigation manuals, surveying
+   - **Rationale:** Listed in Domain 8 analysis (lines 371-372) as distinct from OpenStreetMap
+
+3. **Source #13: Specialized Collections (Deep Web Sources)**
+   - **Category:** Survival Guide Collections
+   - **Priority:** Medium (Tier 3)
+   - **Content:** Additional specialized collections, community forums, niche resources
+   - **Rationale:** Mentioned in repository structure (lines 63-65) as supplementary category
+
+### Summary Statistics
+
+**Before Auto-Discovery:**
+- Total Sources: 36
+- Completed: 11 (31%)
+- Remaining: 25
+
+**After Auto-Discovery:**
+- Total Sources: 39 (+3 new)
+- Completed: 11 (28%)
+- Remaining: 28 (+3 new)
+
+**Sources by Category:**
+- Category 1 (Survival Guide Collections): 13 sources (10 completed, 3 pending)
+- Category 2 (Game Development Books): 25 sources (1 completed, 24 pending)
+- Category 3 (Tabletop RPG Analysis): 1 source (completed)
+
+**New Sources Added at End:**
+All 3 newly discovered sources have been appended to Category 1 (Survival Guide Collections) as sources #11, #12, and #13, maintaining the existing numbering sequence while keeping completed sources distinct from pending sources.
 
 ---
 
@@ -113,21 +171,47 @@ This document tracks all identified sources for research and analysis for the Bl
     - Lines: 1,260
     - Completion Date: 2025-01-15
 
+### ⏳ PENDING SOURCES
+
+11. **Energy Systems Collection** - PENDING
+    - Status: ⏳ Pending detailed extraction
+    - Priority: High
+    - Focus: Solar power, wind generation, hydroelectric, biofuel production
+    - Source: awesome-survival repository - Energy Systems section
+    - Relevance: Power infrastructure for Tier 3-5 civilization systems
+
+12. **Historical Maps and Navigation Resources** - PENDING
+    - Status: ⏳ Pending detailed extraction
+    - Priority: High
+    - Focus: Historical map collections, navigation manuals, celestial navigation, land surveying
+    - Source: awesome-survival repository - Maps/Navigation section
+    - Relevance: Player navigation systems, cartography mechanics, historical accuracy for period gameplay
+
+13. **Specialized Collections (Deep Web Sources)** - PENDING
+    - Status: ⏳ Pending detailed extraction
+    - Priority: Medium
+    - Focus: Additional specialized collections, community forums, niche technical resources
+    - Source: awesome-survival repository - Deep Web Sources section
+    - Relevance: Gap-filling for specialized knowledge domains, community-contributed content
+
 ## Priority Matrix
 
 ### Tier 1: Immediate Game Content (Weeks 1-4)
 - **OpenStreetMap** - World generation foundation
 - **Appropriate Technology Library** - Core crafting recipes
 - **Survivor Library** - Historical technology progression
+- **Historical Maps and Navigation Resources** - Navigation systems and cartography
 
 ### Tier 2: Advanced Systems (Weeks 5-8)
 - **Great Science Textbooks** - Advanced engineering systems
 - **Military Manuals** - Large-scale warfare and logistics
 - **Medical Textbooks** - Healthcare and pharmaceutical systems
+- **Energy Systems** - Power generation and distribution infrastructure
 
 ### Tier 3: Knowledge Integration (Weeks 9-12)
 - **Encyclopedia Collections** - Cross-reference and validation
 - **CD3WD Collection** - Civilization rebuilding mechanics
+- **Specialized Collections** - Gap-filling and niche domains
 
 ## Extraction Metrics
 
@@ -262,6 +346,9 @@ This document tracks all identified sources for research and analysis for the Bl
 - **2025-01-15:** All 9 extraction guides completed
 - **2025-01-15:** Master queue document created
 - **2025-01-15:** Phase 2 completed, ready for Phase 3
+- **2025-01-17:** Added Energy Systems Collection from auto-discovery (+1 source)
+- **2025-01-17:** Added Historical Maps and Navigation Resources from auto-discovery (+1 source)
+- **2025-01-17:** Added Specialized Collections (Deep Web Sources) from auto-discovery (+1 source)
 
 ---
 
@@ -493,8 +580,8 @@ For each source, create:
 - Next Update: After completion
 
 **Remaining Work:**
-- 26 sources pending detailed analysis
-- Estimated total additional documentation: 15,000-20,000 lines
+- 29 sources pending detailed analysis
+- Estimated total additional documentation: 16,500-23,000 lines
 - Estimated time: 3-6 months of focused extraction work
 
 ---
@@ -508,6 +595,6 @@ For each source, create:
 
 ---
 
-**Last Updated:** 2025-01-15  
-**Next Source:** Great Science Textbooks Collection  
-**Status:** Ready to begin processing
+**Last Updated:** 2025-01-17  
+**Next Source:** Specialized Collections (Deep Web Sources) - newly discovered  
+**Status:** Auto-discovery phase complete - 3 sources added
