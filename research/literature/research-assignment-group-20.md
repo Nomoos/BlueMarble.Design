@@ -9,9 +9,9 @@ assignee: TBD
 ---
 
 **Document Type:** Research Assignment (Reserve)  
-**Version:** 1.0  
-**Total Topics:** 0 (initially)  
-**Status:** Reserved for Discovered Sources or Overflow
+**Version:** 1.1  
+**Total Topics:** 1 (activated)  
+**Status:** Active - Topic 20.1 in progress
 
 ## Overview
 
@@ -65,7 +65,32 @@ When activating this group:
 
 <!-- Topics will be added here as discoveries are made -->
 
-**Status:** No topics assigned yet
+#### Topic 20.1: Game Engine Architecture (HIGH)
+
+**Source Name:** Game Engine Architecture (3rd Edition) by Jason Gregory  
+**Discovered From:** Game Programming in C++ analysis (Group 1)  
+**Discovered By:** Group 1  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Referenced as critical source in "Game Programming in C++" analysis. Provides comprehensive coverage of modern game engine systems essential for MMORPG development, including multi-threaded architectures, networking layers, and world management systems.  
+**Estimated Effort:** 10-14 hours  
+**Date Discovered:** 2025-01-17
+
+**Focus Areas:**
+- Game engine subsystem architecture
+- Multi-threaded rendering and game logic
+- World streaming and level-of-detail systems
+- Collision detection and physics integration
+- Audio engine architecture
+- Resource management and asset pipelines
+
+**Deliverables:**
+- Comprehensive analysis document: `game-dev-analysis-20-game-engine-architecture.md`
+- Implementation recommendations for BlueMarble engine
+- Code examples and patterns
+- Integration guidelines with existing systems
+
+**Status:** ✅ Complete - Research document published
 
 ---
 
@@ -83,7 +108,8 @@ Follow same quality standards and documentation structure as other groups.
 
 ## Progress Tracking
 
-- [ ] Group 20 activation pending
+- [x] Group 20 activated - 2025-01-17
+- [x] Topic 20.1: Game Engine Architecture (High) - ✅ Complete
 
 ---
 
@@ -96,5 +122,6 @@ Follow same quality standards and documentation structure as other groups.
 ---
 
 **Created:** 2025-01-15  
-**Status:** Reserved - Awaiting Activation  
-**Capacity:** Ready for 1-3 topics as needed
+**Status:** Active - Processing Topic 20.1  
+**Capacity:** 1 topic assigned, ready for 1-2 more if needed  
+**Last Updated:** 2025-01-17
