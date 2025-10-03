@@ -20,6 +20,11 @@ Step-by-step guides for extracting actionable content from prioritized survival 
 1. [survival-content-extraction-01-openstreetmap.md](survival-content-extraction-01-openstreetmap.md) - OpenStreetMap data for world generation
 2. [survival-content-extraction-02-appropriate-technology.md](survival-content-extraction-02-appropriate-technology.md) - Appropriate Technology Library for crafting recipes
 3. [survival-content-extraction-03-survivor-library.md](survival-content-extraction-03-survivor-library.md) - Survivor Library for historical technology
+4. [survival-content-extraction-04-great-science-textbooks.md](survival-content-extraction-04-great-science-textbooks.md) - Great Science Textbooks for advanced engineering
+
+## Research Management
+
+1. [master-research-queue.md](master-research-queue.md) - Master tracking document for all research sources and priorities
 
 ## Game Design Analysis
 

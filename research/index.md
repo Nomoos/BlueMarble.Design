@@ -52,6 +52,15 @@ Formal references, summaries, and literature reviews from external sources.
   Historical technology extraction from pre-industrial manuals (1700s-1950s) for 340+ authentic recipes covering 
   manufacturing, agriculture, construction, and specialized crafts
 
+- [Content Extraction 04: Great Science Textbooks](literature/survival-content-extraction-04-great-science-textbooks.md) - 
+  Advanced engineering and science extraction from 88.9 GB collection for 300+ Tier 4-5 recipes covering metallurgy, 
+  chemical engineering, mechanical systems, electrical power, and energy systems
+
+### Research Management
+
+- [Master Research Queue](literature/master-research-queue.md) - 
+  Comprehensive tracking document for all 31 identified research sources with status, priorities, and processing strategy
+
 ### Game Design Analysis Documents
 
 - [Game Design Mechanics Analysis](literature/game-design-mechanics-analysis.md) - 
