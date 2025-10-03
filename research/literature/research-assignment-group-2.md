@@ -271,6 +271,40 @@ Track progress using this checklist:
 
 ---
 
+## New Sources Discovery
+
+During research, you may discover additional sources referenced in materials you're analyzing. Track them here for future research phases.
+
+### Discovery Template
+
+For each newly discovered source, add an entry:
+
+```markdown
+**Source Name:** [Title of discovered source]
+**Discovered From:** [Which topic led to this discovery]
+**Priority:** [Critical/High/Medium/Low - your assessment]
+**Category:** [GameDev-Tech/GameDev-Design/GameDev-Content/Survival/etc.]
+**Rationale:** [Why this source is relevant to BlueMarble]
+**Estimated Effort:** [Hours needed for analysis]
+```
+
+### Discovered Sources Log
+
+Add discovered sources below this line:
+
+---
+
+<!-- Example:
+**Source Name:** Distributed Systems for Game Servers
+**Discovered From:** Multiplayer Game Programming
+**Priority:** Critical
+**Category:** GameDev-Tech
+**Rationale:** Essential patterns for scalable MMORPG architecture mentioned repeatedly
+**Estimated Effort:** 8-10 hours
+-->
+
+---
+
 ## Submission Guidelines
 
 1. Create documents in `research/literature/` directory

@@ -202,6 +202,54 @@ All research outputs must meet these standards:
 - Master queue: `/research/literature/master-research-queue.md`
 - Update after each completion
 
+---
+
+## Source Discovery Process
+
+### During Research
+
+As demonstrated in previous research phases (e.g., analyzing "Game Programming in C++" discovered 5 additional sources), new relevant sources will be identified during analysis.
+
+### Discovery Tracking
+
+Each assignment group file includes a **"New Sources Discovery"** section where assignees should log:
+
+1. **Source Name** - Full title of discovered source
+2. **Discovered From** - Which topic led to this discovery
+3. **Priority** - Assignee's assessment (Critical/High/Medium/Low)
+4. **Category** - Type of source (GameDev-Tech, GameDev-Design, Survival, etc.)
+5. **Rationale** - Why this source is relevant to BlueMarble
+6. **Estimated Effort** - Hours needed for future analysis
+
+### Discovery Examples
+
+**Historical Pattern:**
+- Analyzing "Game Programming in C++" discovered:
+  - Game Engine Architecture (High priority)
+  - Real-Time Rendering (High priority)
+  - Network Programming for Games (Critical priority)
+  - Multiplayer Game Programming (Critical priority)
+  - Modern C++ Best Practices (Medium priority)
+
+**Expected Pattern:**
+- Analyzing technical books → discover advanced specialized topics
+- Analyzing design books → discover psychology/motivation research
+- Analyzing survival collections → discover specialized subcollections
+- Analyzing architecture → discover specific implementation guides
+
+### Source Redistribution
+
+After Phase 1 completion:
+
+1. **Collect Discoveries** - Gather all newly discovered sources from all 4 groups
+2. **Prioritize** - Review and validate priority assessments
+3. **Balance** - Create new assignment groups for Phase 2
+4. **Assign** - Distribute to team members for next research cycle
+
+This iterative process ensures comprehensive coverage while maintaining parallel execution efficiency.
+
+---
+
 ## Next Steps
 
 1. **Assign groups to team members** (4 assignees needed)
@@ -209,6 +257,16 @@ All research outputs must meet these standards:
 3. **Begin Phase 1** with Critical priority items
 4. **Weekly check-ins** to track progress and provide support
 5. **Final review** and master queue update upon completion
+6. **Phase 2 Planning** - After Phase 1, use discovered sources to create Phase 2 assignments
+
+### Phase 2+ Planning
+
+When Phase 1 completes:
+1. Review "New Sources Discovery" sections in all 4 group files
+2. Use template: `/research/literature/research-assignment-template-phase-2.md`
+3. Create balanced Phase 2 assignment groups from discovered sources
+4. Update master research queue with new sources
+5. Continue iterative research process
 
 ---
 
