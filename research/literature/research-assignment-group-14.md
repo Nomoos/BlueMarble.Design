@@ -100,7 +100,7 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Effective C++ / Modern C++ Best Practices (Medium)
+- [x] Effective C++ / Modern C++ Best Practices (Medium)
 
 ---
 
