@@ -350,7 +350,7 @@ With 40 parallel workers:
 
 ## Next Steps
 
-1. **Assign groups to 20 team members** (1 group per person)
+1. **Assign groups to 40 team members** (1 group per person)
 2. **Kick-off meeting** to review process and answer questions
 3. **Begin Phase 1** with all groups starting in parallel
 4. **Daily standups** first week for coordination
