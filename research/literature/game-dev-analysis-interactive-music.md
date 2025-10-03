@@ -20,8 +20,8 @@ parent-research: game-development-resources-analysis.md
 
 ## Executive Summary
 
-This analysis examines interactive music systems for MMORPGs, extracting patterns and techniques for implementing 
-dynamic audio in BlueMarble's planet-scale persistent world. Interactive music differs fundamentally from linear 
+This analysis examines interactive music systems for MMORPGs, extracting patterns and techniques for implementing
+dynamic audio in BlueMarble's planet-scale persistent world. Interactive music differs fundamentally from linear
 game soundtracks by adapting in real-time to player actions, environmental conditions, and narrative context.
 
 **Key Takeaways for BlueMarble:**
@@ -90,6 +90,7 @@ Victory: Base + Melodic (triumphant)
 - **Activity Layer:** Crafting, combat, resource gathering each add unique musical elements
 
 **Technical Implementation:**
+
 ```cpp
 class LayeredMusicSystem {
     struct MusicLayer {
@@ -163,6 +164,7 @@ Post-Combat: D → E → B1 (return to exploration)
 - **Discovery Moments:** Special phrases trigger when players discover new locations
 
 **Technical Implementation:**
+
 ```cpp
 class SequencedMusicSystem {
     enum PhraseType { Intro, Theme, Tension, Climax, Resolution };
@@ -229,6 +231,7 @@ class SequencedMusicSystem {
 - **Geological Events:** Pitch and tempo variations during earthquakes
 
 **Technical Implementation:**
+
 ```cpp
 class AdaptiveAudioProcessor {
     struct AudioState {
@@ -400,6 +403,7 @@ class StingerSystem {
 - **Time Evolution:** Music slowly evolves over real-world days/weeks
 
 **Example Biome Parameters:**
+
 ```cpp
 struct BiomeAudioProfile {
     std::string name;
@@ -566,19 +570,22 @@ for indie).
 
 **Three-Tier Approach:**
 
-**Tier 1: Global Music (Low Priority)**
+#### Tier 1: Global Music (Low Priority)
+
 - Time of day themes (dawn, day, dusk, night)
 - Seasonal variations
 - Special event music (holidays, server events)
 - Login/character creation themes
 
-**Tier 2: Regional Music (Medium Priority)**
+#### Tier 2: Regional Music (Medium Priority)
+
 - Biome-specific themes (forest, desert, tundra, ocean, volcanic, etc.)
 - Layered system with 4-6 layers per biome
 - Horizontal re-sequencing for long-term variety
 - Procedural variations based on terrain features
 
-**Tier 3: Local Music (High Priority)**
+#### Tier 3: Local Music (High Priority)
+
 - Combat music (player-specific)
 - Crafting/building music
 - Social gathering music
@@ -606,7 +613,8 @@ Local State (Per Player)
 
 ### Implementation Phases
 
-**Phase 1: Foundation (Alpha) - 3 months**
+#### Phase 1: Foundation (Alpha) - 3 months
+
 - Integrate FMOD or Wwise
 - Create basic layered music for 3 biomes
 - Implement smooth state transitions
@@ -614,11 +622,13 @@ Local State (Per Player)
 - Basic stinger events (death, discovery, level up)
 
 **Deliverables:**
+
 - Working music system with state management
 - ~20 minutes of interactive music content
 - Basic 3D audio spatialization
 
-**Phase 2: Expansion (Beta) - 6 months**
+#### Phase 2: Expansion (Beta) - 6 months
+
 - Extend to all major biomes (10+)
 - Implement horizontal re-sequencing
 - Add time-of-day variations
@@ -626,11 +636,13 @@ Local State (Per Player)
 - Enhanced stinger library (50+ events)
 
 **Deliverables:**
+
 - ~2 hours of interactive music content
 - Procedural generation for ambient layers
 - Full stinger system
 
-**Phase 3: Polish (Launch) - 3 months**
+#### Phase 3: Polish (Launch) - 3 months
+
 - Adaptive parameter system
 - Player density influences
 - Advanced geological event music
@@ -638,6 +650,7 @@ Local State (Per Player)
 - Music customization options (player preferences)
 
 **Deliverables:**
+
 - ~4+ hours of interactive music content
 - Fully adaptive system
 - Player customization UI
@@ -649,18 +662,21 @@ Local State (Per Player)
 ### Technical Requirements
 
 **Audio Format Recommendations:**
+
 - **Music Streams:** OGG Vorbis (good compression, streaming-friendly)
 - **Stingers/SFX:** WAV/FLAC (low latency, short duration)
 - **Sample Rate:** 44.1kHz (CD quality sufficient)
 - **Bit Depth:** 16-bit (24-bit for mastering, dither to 16 for distribution)
 
 **Memory Budget:**
+
 - Music System: 50-100 MB resident memory
 - Streaming Buffer: 2-4 MB per audio stream
 - Stinger Cache: 20-30 MB for frequently used events
 - Per-Region Budget: 5-10 MB music assets
 
 **Performance Targets:**
+
 - Music CPU: <2% per frame (on modern multi-core)
 - Streaming Bandwidth: <500 KB/s per player
 - Music Transition Latency: <100ms perceived
