@@ -60,6 +60,10 @@ Formal references, summaries, and literature reviews from external sources.
   Large-scale warfare systems extraction from 22,000+ military field manuals covering logistics, tactics, fortification, 
   command structures, and intelligence for planet-scale MMORPG combat operations
 
+- [Content Extraction 06: Medical Textbooks](literature/survival-content-extraction-06-medical-textbooks.md) - 
+  Healthcare systems and pharmaceutical production extraction covering 250+ medical mechanics, disease management, 
+  surgical procedures, and epidemic events for immersive medical gameplay
+
 ### Research Management
 
 - [Master Research Queue](literature/master-research-queue.md) - 

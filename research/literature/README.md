@@ -22,6 +22,7 @@ Step-by-step guides for extracting actionable content from prioritized survival 
 3. [survival-content-extraction-03-survivor-library.md](survival-content-extraction-03-survivor-library.md) - Survivor Library for historical technology
 4. [survival-content-extraction-04-great-science-textbooks.md](survival-content-extraction-04-great-science-textbooks.md) - Great Science Textbooks for advanced engineering
 5. [survival-content-extraction-05-military-manuals.md](survival-content-extraction-05-military-manuals.md) - Military Manuals for large-scale warfare systems
+6. [survival-content-extraction-06-medical-textbooks.md](survival-content-extraction-06-medical-textbooks.md) - Medical Textbooks for healthcare systems and pharmaceutical production
 
 ## Research Management
 

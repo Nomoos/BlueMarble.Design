@@ -20,9 +20,9 @@ This document tracks all identified sources for research and analysis for the Bl
 ## Queue Status
 
 **Total Sources:** 31  
-**Completed:** 6  
+**Completed:** 7  
 **In Progress:** 0  
-**Remaining:** 25  
+**Remaining:** 24  
 
 ---
 
@@ -68,17 +68,15 @@ This document tracks all identified sources for research and analysis for the Bl
 
 ### ⏳ PENDING SOURCES
 
-7. **Medical Textbooks Collection**
-   - Status: ⏳ Pending
-   - Priority: High (Medium-term Month 4-6)
-   - Focus: Logistics, tactics, large-scale operations
-   - Target: Supply chain management, strategic warfare, fortification
-
-7. **Medical Textbooks Collection**
-   - Status: ⏳ Pending
+7. **Medical Textbooks Collection** - COMPLETED
+   - Status: ✅ Complete
+   - Document: `survival-content-extraction-06-medical-textbooks.md`
+   - Lines: 1,187
+   - Completion Date: 2025-01-15
    - Priority: Medium (Medium-term Month 4-6)
    - Focus: Healthcare systems, medical procedures
    - Target: Disease management, pharmaceutical production, surgical systems
+   - Output: 250+ medical mechanics, pharmaceutical crafting, epidemic events
 
 8. **Encyclopedia Collections (Britannica, Americana)**
    - Status: ⏳ Pending
