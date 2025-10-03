@@ -1,18 +1,5 @@
 # Master Research and Analysis Queue
 
-This document tracks the comprehensive research effort to extract game-ready content from survival guide collections, with a focus on the awesome-survival repository (https://github.com/alx-xlx/awesome-survival).
-
-## Overview
-
-The awesome-survival repository contains 300+ GB of survival-related knowledge organized into several major categories. This queue tracks the analysis and content extraction from each major resource collection.
-
-## Research Status
-
-- **Total Sources Identified:** 9 major collections
-- **Completed:** 9 sources
-- **In Progress:** 0 sources
-- **Pending:** 0 sources
-- **Overall Completion:** 100%
 ---
 title: Master Research Queue for BlueMarble Content Extraction
 date: 2025-01-15
@@ -28,8 +15,17 @@ status: in-progress
 
 ## Overview
 
-This document tracks all identified sources for research and analysis for the BlueMarble project. Sources are organized by category and priority, with status tracking for completion.
+This document tracks the comprehensive research effort to extract game-ready content from survival guide collections, with a focus on the awesome-survival repository (https://github.com/alx-xlx/awesome-survival).
 
+The awesome-survival repository contains 300+ GB of survival-related knowledge organized into several major categories. This queue tracks the analysis and content extraction from each major resource collection.
+
+## Research Status
+
+- **Total Sources Identified:** 9 major collections
+- **Completed:** 9 sources
+- **In Progress:** 0 sources
+- **Pending:** 0 sources
+- **Overall Completion:** 100%
 ## Queue Status
 
 **Total Sources:** 86 (updated: +50 from online resources catalog)  
