@@ -7,9 +7,10 @@ plus parent and Phase 2 planning issues. The generated issues can be:
 1. Copied and pasted manually into GitHub
 2. Used with GitHub CLI: gh issue create --title "..." --body-file issue.md
 3. Used with GitHub API for automated issue creation
+4. Used with PowerShell script for Windows: scripts/create-research-issues.ps1
 
 Usage:
-    python3 generate-research-issues.py
+    python3 scripts/generate-research-issues.py
     
 Output:
     Creates files in /tmp/research-issues/ directory
@@ -303,12 +304,64 @@ This directory contains pre-generated GitHub issue content for the BlueMarble re
 ## Files
 
 - `issue-parent-phase-1.md` - Parent issue tracking all Phase 1 work
-- `issue-group-01.md` through `issue-group-20.md` - Individual group issues
+- `issue-group-01.md` through `issue-group-40.md` - Individual group issues (40 total)
 - `issue-phase-2-planning.md` - Phase 2 planning issue
 
 ## Usage
 
-### Option 1: Manual Creation (Copy/Paste)
+### Option 1: PowerShell Script (Windows - Recommended for Automation)
+
+**For Windows users**, use the PowerShell script to automate all issue creation:
+
+```powershell
+# First, generate the issue files
+python3 scripts/generate-research-issues.py
+
+# Then run the PowerShell script
+cd scripts
+.\create-research-issues.ps1
+
+# With assignee
+.\create-research-issues.ps1 -Assignee copilot
+
+# With custom output directory
+.\create-research-issues.ps1 -OutputDir "D:\research-issues"
+```
+
+**Requirements:**
+- PowerShell 5.1+ or PowerShell Core
+- GitHub CLI (`gh`) installed and authenticated
+- Run `gh auth login` before using the script
+
+**What it does:**
+- Creates all 42 issues automatically (1 parent + 40 groups + 1 phase 2)
+- Adds proper labels to each issue
+- Includes 120-second delays between issues to avoid rate limiting
+- Provides progress feedback and error handling
+
+### Option 2: Bash Script (Linux/macOS/Git Bash)
+
+```bash
+# Create parent issue
+gh issue create --title "Research Phase 1: 40 Parallel Assignment Groups" \\
+  --body-file issue-parent-phase-1.md \\
+  --label "research,phase-1,epic"
+
+# Create group issues with loop
+for i in {01..40}; do
+  gh issue create --title "Research Assignment Group $i" \\
+    --body-file "issue-group-$i.md" \\
+    --label "research,assignment-group-$i,phase-1"
+  sleep 120  # Wait 2 minutes between issues
+done
+
+# Create Phase 2 planning issue
+gh issue create --title "Research Phase 2: Planning and New Assignment Creation" \\
+  --body-file issue-phase-2-planning.md \\
+  --label "research,phase-2,planning"
+```
+
+### Option 3: Manual Creation (Copy/Paste)
 
 1. Go to GitHub Issues: https://github.com/Nomoos/BlueMarble.Design/issues/new
 2. Copy content from `issue-parent-phase-1.md`
@@ -318,28 +371,24 @@ This directory contains pre-generated GitHub issue content for the BlueMarble re
 6. Note the issue number
 7. Repeat for each group issue, linking to parent
 
-### Option 2: GitHub CLI
+### Option 4: GitHub CLI (Manual)
 
 ```bash
 # Create parent issue
-gh issue create --title "Phase 1 Research: Complete 28 Topics Across 20 Parallel Groups" \\
+gh issue create --title "Research Phase 1: 40 Parallel Assignment Groups" \\
   --body-file issue-parent-phase-1.md \\
-  --label "research,phase-1,parent-issue,epic"
+  --label "research,phase-1,epic"
 
-# Create group issues (repeat for 01-20)
-gh issue create --title "Research Assignment Group 01: Multiplayer Game Programming" \\
+# Create individual group issues (repeat for 01-40)
+gh issue create --title "Research Assignment Group 01" \\
   --body-file issue-group-01.md \\
   --label "research,assignment-group-01,priority-critical,phase-1"
 
 # Create Phase 2 planning issue
-gh issue create --title "Phase 2 Planning: Organize Discovered Sources" \\
+gh issue create --title "Research Phase 2: Planning and New Assignment Creation" \\
   --body-file issue-phase-2-planning.md \\
-  --label "research,phase-2,planning,source-discovery"
+  --label "research,phase-2,planning"
 ```
-
-### Option 3: GitHub API (Automated)
-
-See `create-issues-api.sh` script for automated creation using GitHub API.
 
 ## Issue Hierarchy
 
@@ -348,8 +397,8 @@ Phase 1 Research (Parent) #XXX
 ├── Group 01 #XXX
 ├── Group 02 #XXX
 ├── ...
-├── Group 19 #XXX
-└── Group 20 #XXX
+├── Group 39 #XXX
+└── Group 40 #XXX
 
 Phase 2 Planning #XXX (created after Phase 1 completes)
 ```
@@ -357,7 +406,7 @@ Phase 2 Planning #XXX (created after Phase 1 completes)
 ## Workflow
 
 1. Create parent Phase 1 issue first
-2. Create all 20 group issues, referencing parent issue number
+2. Create all 40 group issues, referencing parent issue number
 3. Assign each group issue to a team member
 4. Track progress as groups complete
 5. After Phase 1 complete, create Phase 2 planning issue
@@ -369,19 +418,24 @@ Make sure these labels exist in your repository:
 - `research`
 - `phase-1`
 - `phase-2`
-- `parent-issue`
 - `epic`
 - `planning`
-- `source-discovery`
 - `priority-critical`
 - `priority-high`
 - `priority-medium`
 - `priority-low`
-- `assignment-group-01` through `assignment-group-20`
+- `priority-very-low`
+- `assignment-group-01` through `assignment-group-40`
+
+## Platform Notes
+
+- **Windows**: Use PowerShell script (recommended) or Git Bash
+- **Linux/macOS**: Use Bash commands or PowerShell Core
+- **All platforms**: Manual copy/paste always works
 
 ## Assignees
 
-Update each issue with appropriate assignee after creation.
+Update each issue with appropriate assignee after creation, or use the `-Assignee` parameter with PowerShell script.
 """
     
     output_file = f"{OUTPUT_DIR}/README.md"
@@ -403,7 +457,7 @@ if __name__ == "__main__":
     generate_parent_issue()
     print()
     
-    print("Generating 20 group issues...")
+    print("Generating 40 group issues...")
     for group in groups_config:
         generate_group_issue(group)
     print()
