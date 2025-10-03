@@ -8,16 +8,29 @@ status: active
 ---
 
 **Document Type:** Assignment Overview  
-**Version:** 2.0 (Updated for 20 Parallel Groups)  
-**Total Topics:** 28 (across 20 groups)  
-**Total Assignees Needed:** 20  
+**Version:** 3.0 (Extended to 40 Parallel Groups)  
+**Total Topics:** 68 (28 master queue + 40 online resources)  
+**Total Assignees Needed:** 40  
 **Estimated Timeline:** 1-2 weeks
 
 ## Overview
 
-This document provides an overview of the 20 balanced research assignment groups created for maximum parallel execution. The 28 remaining research topics have been distributed across 20 groups to enable 20 team members to work simultaneously without merge conflicts.
+This document provides an overview of the 40 balanced research assignment groups created for maximum parallel execution. The research includes:
+- **Groups 1-20**: Original 28 topics from master research queue
+- **Groups 21-40**: 40 pending sources from `online-game-dev-resources.md`
 
-## Key Changes in Version 2.0
+All groups enable team members to work simultaneously without merge conflicts.
+
+## Key Changes in Version 3.0
+
+- **Extended Coverage**: Added Groups 21-40 for online game development resources
+- **Total Groups**: 40 parallel groups (was 20 in v2.0)
+- **New Sources**: 40 pending sources from `online-game-dev-resources.md` catalog
+- **Maintained Structure**: Groups 1-20 unchanged, Groups 21-40 added for new sources
+- **Priority Distribution**: 9 Critical, 22 High, 9 Medium from online resources added
+- **Isolation Preserved**: Each group still has 1-2 topics with unique deliverables
+
+## Key Changes in Version 2.0 (Previous)
 
 - **Increased Parallelization**: From 4 groups to 20 groups
 - **Reduced Merge Conflicts**: Each assignee works on 1-2 topics maximum
@@ -72,27 +85,57 @@ This document provides an overview of the 20 balanced research assignment groups
 
 ---
 
-## Priority Distribution Across All Groups
+## Online Resources Groups (Groups 21-40)
 
-| Priority | Count | Percentage | Groups |
-|----------|-------|------------|--------|
-| Critical | 2 | 7% | 1-2 |
-| High | 14 | 50% | 3-9 |
-| Medium | 7 | 25% | 10-15 |
-| Low | 3 | 11% | 16-18 |
-| Very Low | 1 | 4% | 19 |
-| Reserved | 1 | 4% | 20 |
-| **Total** | **28** | **100%** | **20 groups** |
+**New in Version 3.0:** These groups cover pending sources from `online-game-dev-resources.md`
+
+### Critical Priority (Groups 21-24)
+
+**Groups 21-24:** Critical game development resources
+- 2 Critical priority sources per group
+- Total: 8-9 Critical sources
+- Focus: Engine architecture, multiplayer networking, MMORPG systems
+- Effort per group: 8-12 hours
+
+### High Priority (Groups 25-35)
+
+**Groups 25-35:** High priority resources
+- 2 High priority sources per group
+- Total: ~22 High priority sources
+- Focus: AI, rendering, design patterns, development processes
+- Effort per group: 6-10 hours
+
+### Medium Priority (Groups 36-40)
+
+**Groups 36-40:** Medium priority resources
+- 2 Medium priority sources per group
+- Total: ~9 Medium priority sources
+- Focus: Tools, specialized topics, supplementary resources
+- Effort per group: 4-8 hours
+
+---
+
+## Combined Priority Distribution (All 40 Groups)
+
+| Priority | Original (1-20) | Online (21-40) | Total | Percentage |
+|----------|----------------|----------------|-------|------------|
+| Critical | 2 | 9 | 11 | 16% |
+| High | 14 | 22 | 36 | 53% |
+| Medium | 7 | 9 | 16 | 24% |
+| Low | 3 | 0 | 3 | 4% |
+| Very Low | 1 | 0 | 1 | 1% |
+| Reserved | 1 | 0 | 1 | 1% |
+| **Total** | **28** | **40** | **68** | **100%** |
 
 ## Workload Balance
 
 Groups are balanced for completion time:
 
-- **1 week completion:** Groups 16-20 (light workload)
-- **1-2 weeks completion:** Groups 11-15 (medium workload)
-- **2 weeks completion:** Groups 1-10 (full workload)
+- **1 week completion:** Groups 16-20 (light workload - original queue)
+- **1-2 weeks completion:** Groups 11-15, 36-40 (medium workload)
+- **2 weeks completion:** Groups 1-10, 21-35 (full workload - includes Critical sources)
 
-All groups can work in parallel without blocking each other.
+All 40 groups can work in parallel without blocking each other.
 
 ---
 

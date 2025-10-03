@@ -1,7 +1,7 @@
 # Phase 1 Research - Parent Issue
 
 ## Title
-Phase 1 Research: Complete 28 Research Topics Across 20 Parallel Groups
+Phase 1 Research: Complete 68 Research Topics Across 40 Parallel Groups
 
 ## Labels
 - `research`
@@ -11,26 +11,26 @@ Phase 1 Research: Complete 28 Research Topics Across 20 Parallel Groups
 
 ## Description
 
-This is the parent issue tracking Phase 1 research execution across 20 parallel assignment groups. Each group is a sub-issue containing 1-2 research topics designed for independent parallel execution without merge conflicts.
+This is the parent issue tracking Phase 1 research execution across 40 parallel assignment groups. Each group is a sub-issue containing 1-2 research topics designed for independent parallel execution without merge conflicts.
 
 ### Overview
 
-**Total Research Topics:** 28 (27 assigned + 1 reserve capacity)  
-**Assignment Groups:** 20  
+**Total Research Topics:** 68 (28 master queue + 40 online resources)  
+**Assignment Groups:** 40  
 **Timeline:** 1-2 weeks  
-**Total Effort:** 180-250 hours  
-**Per Person:** 9-12.5 hours average
+**Total Effort:** 400-550 hours  
+**Per Person:** 10-14 hours average
 
 ### Priority Distribution
 
-| Priority | Count | Groups |
-|----------|-------|--------|
-| Critical | 2 | 1-2 |
-| High | 14 | 3-9 |
-| Medium | 7 | 10-15 |
-| Low | 3 | 16-18 |
-| Very Low | 1 | 19 |
-| Reserved | 1 | 20 |
+| Priority | Master Queue (1-20) | Online (21-40) | Total |
+|----------|---------------------|----------------|-------|
+| Critical | 2 | 9 | 11 |
+| High | 14 | 22 | 36 |
+| Medium | 7 | 9 | 16 |
+| Low | 3 | 0 | 3 |
+| Very Low | 1 | 0 | 1 |
+| Reserved | 1 | 0 | 1 |
 
 ### Sub-Issues (Assignment Groups)
 
@@ -68,12 +68,38 @@ Track progress of all 20 parallel assignment groups:
 #### Reserve Capacity
 - [ ] #{{ISSUE_20}} - Group 20: Reserved for Discovered Sources (0h initially)
 
+#### Online Resources - Critical Priority (Groups 21-24)
+- [ ] #{{ISSUE_21}} - Group 21: Engine Architecture + Multiplayer Programming (Critical, 8-12h)
+- [ ] #{{ISSUE_22}} - Group 22: Network Programming + Real-Time Rendering (Critical, 8-12h)
+- [ ] #{{ISSUE_23}} - Group 23: AI + Art of Game Design (Critical, 8-12h)
+- [ ] #{{ISSUE_24}} - Group 24: Level Design + Game Patterns (Critical, 8-12h)
+
+#### Online Resources - High Priority (Groups 25-35)
+- [ ] #{{ISSUE_25}} - Group 25: MMORPG Development + Online Games (High, 6-10h)
+- [ ] #{{ISSUE_26}} - Group 26: MMO Architecture + 2D Unity (High, 6-10h)
+- [ ] #{{ISSUE_27}} - Group 27: Unity 2D + Godot Documentation (High, 6-10h)
+- [ ] #{{ISSUE_28}} - Group 28: Unity Learn + Unreal Documentation (High, 6-10h)
+- [ ] #{{ISSUE_29}} - Group 29: Gamasutra + GDQuest (High, 6-10h)
+- [ ] #{{ISSUE_30}} - Group 30: GameDev.net + Pattern Books (High, 6-10h)
+- [ ] #{{ISSUE_31}} - Group 31: Brackeys + Sebastian Lague (High, 6-10h)
+- [ ] #{{ISSUE_32}} - Group 32: Code Monkey + GameDev.tv (High, 6-10h)
+- [ ] #{{ISSUE_33}} - Group 33: GDC + TrinityCore (High, 6-10h)
+- [ ] #{{ISSUE_34}} - Group 34: CMaNGOS + AzerothCore (High, 6-10h)
+- [ ] #{{ISSUE_35}} - Group 35: WoWDev + Godot Engine (High, 6-10h)
+
+#### Online Resources - Medium Priority (Groups 36-40)
+- [ ] #{{ISSUE_36}} - Group 36: Online Courses + Documentation (Medium, 4-8h)
+- [ ] #{{ISSUE_37}} - Group 37: Community Resources + Tutorials (Medium, 4-8h)
+- [ ] #{{ISSUE_38}} - Group 38: Reference Materials + Guides (Medium, 4-8h)
+- [ ] #{{ISSUE_39}} - Group 39: Development Tools + Patterns (Medium, 4-8h)
+- [ ] #{{ISSUE_40}} - Group 40: Supplementary Resources + Archives (Medium, 4-8h)
+
 ### Phase 1 Execution Strategy
 
 **Week 1:**
-- Day 1-2: Complete Critical priority groups (1-2)
-- Day 1-7: Start all High priority groups (3-9)
-- Day 3-7: Start Medium priority groups (10-15)
+- Day 1-2: Complete Critical priority groups (1-2, 21-24)
+- Day 1-7: Start all High priority groups (3-9, 25-35)
+- Day 3-7: Start Medium priority groups (10-15, 36-40)
 
 **Week 2:**
 - Complete remaining High and Medium priority groups

@@ -29,6 +29,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Group configurations extracted from assignment files
 groups_config = [
+    # Original master queue groups (1-20)
     {"num": 1, "topics": 1, "priority": "Critical", "effort": "8-12h", "weeks": 2, "title": "Multiplayer Game Programming"},
     {"num": 2, "topics": 1, "priority": "Critical", "effort": "8-12h", "weeks": 2, "title": "Network Programming for Games"},
     {"num": 3, "topics": 2, "priority": "High", "effort": "10-14h", "weeks": 2, "title": "Energy Systems + Historical Maps"},
@@ -49,6 +50,27 @@ groups_config = [
     {"num": 18, "topics": 1, "priority": "Low", "effort": "3-4h", "weeks": 1, "title": "Augmented Reality"},
     {"num": 19, "topics": 1, "priority": "Very Low", "effort": "2-3h", "weeks": 1, "title": "Roblox Game Development"},
     {"num": 20, "topics": 0, "priority": "Reserved", "effort": "0h", "weeks": 0, "title": "Reserved for Discovered Sources"},
+    # Online resources groups (21-40)
+    {"num": 21, "topics": 2, "priority": "Critical", "effort": "8-12h", "weeks": 2, "title": "Engine Architecture + Multiplayer Programming"},
+    {"num": 22, "topics": 2, "priority": "Critical", "effort": "8-12h", "weeks": 2, "title": "Network Programming + Real-Time Rendering"},
+    {"num": 23, "topics": 2, "priority": "Critical", "effort": "8-12h", "weeks": 2, "title": "AI + Art of Game Design"},
+    {"num": 24, "topics": 2, "priority": "Critical", "effort": "8-12h", "weeks": 2, "title": "Level Design + Game Patterns"},
+    {"num": 25, "topics": 2, "priority": "High", "effort": "6-10h", "weeks": 2, "title": "MMORPG Development + Online Games"},
+    {"num": 26, "topics": 2, "priority": "High", "effort": "6-10h", "weeks": 2, "title": "MMO Architecture + 2D Unity"},
+    {"num": 27, "topics": 2, "priority": "High", "effort": "6-10h", "weeks": 2, "title": "Unity 2D + Godot Documentation"},
+    {"num": 28, "topics": 2, "priority": "High", "effort": "6-10h", "weeks": 2, "title": "Unity Learn + Unreal Documentation"},
+    {"num": 29, "topics": 2, "priority": "High", "effort": "6-10h", "weeks": 2, "title": "Gamasutra + GDQuest"},
+    {"num": 30, "topics": 2, "priority": "High", "effort": "6-10h", "weeks": 2, "title": "GameDev.net + Pattern Books"},
+    {"num": 31, "topics": 2, "priority": "High", "effort": "6-10h", "weeks": 2, "title": "Brackeys + Sebastian Lague"},
+    {"num": 32, "topics": 2, "priority": "High", "effort": "6-10h", "weeks": 2, "title": "Code Monkey + GameDev.tv"},
+    {"num": 33, "topics": 2, "priority": "High", "effort": "6-10h", "weeks": 2, "title": "GDC + TrinityCore"},
+    {"num": 34, "topics": 2, "priority": "High", "effort": "6-10h", "weeks": 2, "title": "CMaNGOS + AzerothCore"},
+    {"num": 35, "topics": 2, "priority": "High", "effort": "6-10h", "weeks": 2, "title": "WoWDev + Godot Engine"},
+    {"num": 36, "topics": 2, "priority": "Medium", "effort": "4-8h", "weeks": 1, "title": "Online Courses + Documentation"},
+    {"num": 37, "topics": 2, "priority": "Medium", "effort": "4-8h", "weeks": 1, "title": "Community Resources + Tutorials"},
+    {"num": 38, "topics": 2, "priority": "Medium", "effort": "4-8h", "weeks": 1, "title": "Reference Materials + Guides"},
+    {"num": 39, "topics": 2, "priority": "Medium", "effort": "4-8h", "weeks": 1, "title": "Development Tools + Patterns"},
+    {"num": 40, "topics": 2, "priority": "Medium", "effort": "4-8h", "weeks": 1, "title": "Supplementary Resources + Archives"},
 ]
 
 def generate_group_issue(group_config):
