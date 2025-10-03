@@ -4,6 +4,34 @@ This directory contains utility scripts for maintaining documentation quality in
 
 ## Available Scripts
 
+### generate-research-issues.py
+
+Generates GitHub issue content for all 20 research assignment groups plus parent and Phase 2 planning issues.
+
+**Usage:**
+
+```bash
+python3 scripts/generate-research-issues.py
+```
+
+**Output:**
+
+Creates issue files in `/tmp/research-issues/` directory:
+- `issue-parent-phase-1.md` - Parent issue for Phase 1
+- `issue-group-01.md` through `issue-group-20.md` - Individual group issues
+- `issue-phase-2-planning.md` - Phase 2 planning issue
+- `README.md` - Instructions for creating issues
+
+**Creating Issues:**
+
+Option 1: Manual (copy/paste into GitHub)
+Option 2: GitHub CLI (`gh issue create --body-file ...`)
+Option 3: GitHub API (automated script)
+
+See generated README.md for detailed instructions.
+
+---
+
 ### check-documentation-quality.sh
 
 A comprehensive script that validates documentation quality before committing.
