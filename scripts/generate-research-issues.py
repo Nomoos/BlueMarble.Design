@@ -2,7 +2,7 @@
 """
 Issue Generator for Research Assignment Groups
 
-This script generates GitHub issue content for all 20 research assignment groups
+This script generates GitHub issue content for all 40 research assignment groups
 plus parent and Phase 2 planning issues. The generated issues can be:
 1. Copied and pasted manually into GitHub
 2. Used with GitHub CLI: gh issue create --title "..." --body-file issue.md
