@@ -153,7 +153,26 @@ Add discovered sources below this line:
 
 ---
 
-<!-- Discovery entries go here -->
+**Source Name:** Game Programming in C++  
+**Discovered From:** Game Engine Architecture (Topic 2)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Provides foundational C++ programming techniques essential for engine implementation, including ECS patterns, game loop architecture, and memory management for long-running servers  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Real-Time Rendering  
+**Discovered From:** Game Engine Architecture (Topic 2)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Deep dive into rendering techniques including culling, LOD systems, and optimization strategies critical for planet-scale world visualization  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Network Programming for Games  
+**Discovered From:** Game Engine Architecture (Topic 2)  
+**Priority:** Critical  
+**Category:** GameDev-Tech  
+**Rationale:** Essential networking patterns for authoritative servers, client prediction, and lag compensation specifically needed for MMORPG architecture  
+**Estimated Effort:** 6-8 hours
 
 ---
 

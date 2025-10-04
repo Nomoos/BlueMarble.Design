@@ -1346,6 +1346,44 @@ end
 
 ---
 
+## Discovered Sources
+
+During this research, the following additional sources were identified as valuable for deeper investigation:
+
+### High Priority Sources
+
+1. **Game Programming in C++** by Sanjay Madhav
+   - **Discovery Context**: Referenced for foundational C++ patterns and ECS implementation details
+   - **Relevance**: Provides practical code examples for game loop architecture, component systems, and memory management essential for long-running MMORPG servers
+   - **Estimated Effort**: 6-8 hours
+   - **Status**: Already analyzed in separate document (game-dev-analysis-01-game-programming-cpp.md)
+
+2. **Real-Time Rendering** by Tomas Akenine-Möller et al.
+   - **Discovery Context**: Referenced for advanced rendering optimization techniques
+   - **Relevance**: Critical for implementing efficient culling, LOD systems, and rendering pipelines needed for planet-scale world visualization with thousands of entities
+   - **Estimated Effort**: 8-10 hours
+   - **Status**: Pending analysis
+
+3. **Network Programming for Games** by Joshua Glazer & Sanjay Madhav
+   - **Discovery Context**: Referenced for MMORPG networking architecture
+   - **Relevance**: Essential for implementing authoritative servers, client prediction, lag compensation, and state synchronization patterns specific to MMORPGs
+   - **Estimated Effort**: 6-8 hours
+   - **Status**: Pending analysis (Critical priority for BlueMarble)
+
+### Additional Discovered Resources
+
+4. **Multiplayer Game Programming** (expanded reference)
+   - **Discovery Context**: Mentioned in distributed architecture section
+   - **Relevance**: Covers distributed server architecture and player handoff between servers
+   - **Estimated Effort**: 4-6 hours
+
+5. **Modern C++ Best Practices** (Effective C++)
+   - **Discovery Context**: Referenced for performance optimization patterns
+   - **Relevance**: Memory management and performance optimization for persistent world servers
+   - **Estimated Effort**: 3-4 hours
+
+---
+
 ## Related Research
 
 ### Within BlueMarble Repository
