@@ -169,7 +169,9 @@ Add discovered sources below this line:
 **Priority:** Medium  
 **Category:** GameDev-Design  
 **Rationale:** Community-driven effort to catalog and standardize game design patterns with consistent vocabulary. Valuable for developing pattern language for BlueMarble's geological and survival systems.  
-**Estimated Effort:** 4-5 hours
+**Estimated Effort:** 4-5 hours  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-design-patterns-project.md`
 
 **Source Name:** Designer Notes Podcast by Soren Johnson  
 **Discovered From:** A Game Design Vocabulary research  
@@ -205,6 +207,20 @@ Add discovered sources below this line:
 **Category:** GameDev-Design  
 **Rationale:** Academic foundation for interactive narrative vocabulary. Relevant for understanding player agency in BlueMarble's discovery-driven narrative where players uncover geological history through exploration.  
 **Estimated Effort:** 6-8 hours
+
+**Source Name:** "Patterns in Game Design" by Staffan Björk & Jussi Holopainen (2005)  
+**Discovered From:** Game Design Patterns Project analysis  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Comprehensive academic treatment of game design patterns with extensive catalog and cross-referencing. Direct predecessor and complement to Game Design Patterns Project. Highly relevant for establishing BlueMarble pattern library with rigorous theoretical foundation.  
+**Estimated Effort:** 10-12 hours
+
+**Source Name:** "Design Patterns in FPS Levels" by Hullett & Whitehead (2010)  
+**Discovered From:** Game Design Patterns Project analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Empirical pattern identification methodology applicable to geological environment design. While FPS-focused, the spatial pattern analysis approach could inform BlueMarble terrain and exploration space design patterns.  
+**Estimated Effort:** 3-4 hours
 
 ---
 
