@@ -172,7 +172,29 @@ Add discovered sources below this line:
 **Priority:** Critical  
 **Category:** GameDev-Tech  
 **Rationale:** Essential networking patterns for authoritative servers, client prediction, and lag compensation specifically needed for MMORPG architecture  
+**Estimated Effort:** 6-8 hours  
+**Status:** ✅ Complete (game-dev-analysis-network-programming-games.md)
+
+**Source Name:** Multiplayer Game Programming (Extended)  
+**Discovered From:** Network Programming for Games Analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Deeper dive into lobby systems, matchmaking, and voice chat integration for MMORPGs  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Networked Graphics: Building Networked Games and Virtual Environments  
+**Discovered From:** Network Programming for Games Analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Techniques for streaming large worlds and distributed rendering for planet-scale visualization  
 **Estimated Effort:** 6-8 hours
+
+**Source Name:** Game Server Programming  
+**Discovered From:** Network Programming for Games Analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Server infrastructure patterns, deployment, monitoring, and operations for production MMORPGs  
+**Estimated Effort:** 5-7 hours
 
 ---
 
