@@ -127,7 +127,54 @@ Add discovered sources below this line:
 
 ---
 
-<!-- Discovery entries go here -->
+**Source Name:** Roblox Developer Hub Documentation  
+**Discovered From:** Roblox Game Development in 24 Hours research  
+**Priority:** Low  
+**Category:** GameDev-Specialized  
+**Rationale:** Official Roblox documentation provides detailed technical patterns (event-driven architecture, replication models, component systems) that are generalizable to multiplayer game development beyond the Roblox platform  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Game Programming Patterns by Robert Nystrom  
+**Discovered From:** Roblox Game Development in 24 Hours research  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Referenced extensively in Roblox development practices. Covers event systems, component patterns, and state management - highly applicable to BlueMarble's architecture  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Multiplayer Game Programming by Joshua Glazer  
+**Discovered From:** Roblox Game Development in 24 Hours research  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Covers networking patterns, client-server architecture, and replication strategies essential for BlueMarble's multiplayer geological simulation  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Designing Games: A Guide to Engineering Experiences by Tynan Sylvester  
+**Discovered From:** Roblox Game Development in 24 Hours research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Provides insights on player engagement, onboarding systems, and accessibility patterns that were key themes in Roblox's success  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Fortnite Creative Mode Platform Analysis  
+**Discovered From:** Roblox Game Development in 24 Hours research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Comparable user-generated content platform with different technical approach. Useful for comparative analysis of player creation tools  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Minecraft Modding Ecosystem Study  
+**Discovered From:** Roblox Game Development in 24 Hours research  
+**Priority:** Medium  
+**Category:** GameDev-Content  
+**Rationale:** Mature modding ecosystem with lessons for enabling player-driven content in BlueMarble. Community-driven content creation models  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** EVE Online Social Systems Architecture  
+**Discovered From:** Roblox Game Development in 24 Hours research  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Sophisticated guild/corporation systems and player-driven economy highly relevant to BlueMarble's planned social features  
+**Estimated Effort:** 5-6 hours
 
 ---
 

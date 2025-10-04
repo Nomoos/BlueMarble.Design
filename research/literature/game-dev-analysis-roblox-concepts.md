@@ -755,6 +755,19 @@ Based on Roblox analysis, these features would enhance BlueMarble:
 - Multiplayer Architecture best practices
 - User-Generated Content platform studies
 
+## Discovered Sources
+
+During this research, the following sources were identified as valuable for future investigation:
+
+1. **Game Programming Patterns** by Robert Nystrom - Deep dive into event systems and component patterns
+2. **Multiplayer Game Programming** by Joshua Glazer - Networking and replication strategies
+3. **Designing Games: A Guide to Engineering Experiences** by Tynan Sylvester - Player engagement design
+4. **Fortnite Creative Mode** - Comparative analysis of user-generated content platforms
+5. **Minecraft Modding Ecosystem** - Community-driven content creation models
+6. **EVE Online Social Systems** - Guild architecture and player-driven economy
+
+These sources have been logged in [research-assignment-group-19.md](research-assignment-group-19.md) for future research phases.
+
 ---
 
 **Document Status:** Complete  
