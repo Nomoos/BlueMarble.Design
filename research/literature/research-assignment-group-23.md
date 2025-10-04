@@ -116,7 +116,8 @@ During your research, if you discover additional valuable sources, log them here
 **Category:** GameDev-Tech  
 **Rationale:** Comprehensive technical blog covering real-time networking protocols, client prediction, lag compensation, and reliable UDP implementation - directly applicable to BlueMarble's multiplayer architecture  
 **Estimated Effort:** 6-8 hours  
-**URL:** https://gafferongames.com/
+**URL:** https://gafferongames.com/  
+**Status:** ⏳ Pending Analysis
 
 **Source Name:** Secure Remote Password (SRP6) Protocol Documentation  
 **Discovered From:** MMO Architecture: Source Code and Insights analysis  
@@ -124,7 +125,8 @@ During your research, if you discover additional valuable sources, log them here
 **Category:** GameDev-Tech  
 **Rationale:** Battle-tested authentication protocol used in WoW and other MMOs, provides secure authentication without transmitting passwords, essential for BlueMarble's authentication service design  
 **Estimated Effort:** 2-3 hours  
-**URL:** https://en.wikipedia.org/wiki/Secure_Remote_Password_protocol
+**URL:** https://en.wikipedia.org/wiki/Secure_Remote_Password_protocol  
+**Status:** ✅ Complete - Document: `game-dev-analysis-srp6-authentication-protocol.md` (915 lines)
 
 ---
 
