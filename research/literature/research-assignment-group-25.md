@@ -81,8 +81,8 @@ This assignment group focuses on analyzing game development resources from the o
 - [x] All documents created and placed in `research/literature/` (1 of 2)
 - [x] All documents have proper front matter (1 of 2)
 - [x] All documents meet minimum length requirements (1 of 2)
-- [ ] Cross-references added
-- [ ] Discovered sources logged below
+- [x] Cross-references added (WoW Programming complete)
+- [x] Discovered sources logged below (6 sources from WoW analysis)
 
 ## New Sources Discovery
 
@@ -110,7 +110,59 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+#### Discovery 1: TrinityCore MMORPG Server Implementation
+**Source Name:** TrinityCore - WoW 3.3.5a Emulator  
+**Discovered From:** World of Warcraft Programming analysis (Topic 25)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Production-quality C++ MMORPG server implementation with comprehensive database schema, networking protocol, and server architecture patterns directly applicable to BlueMarble's server design  
+**Estimated Effort:** 15-20 hours for deep code analysis  
+**URL:** https://github.com/TrinityCore/TrinityCore
+
+#### Discovery 2: CMaNGOS WoW Emulator Codebase
+**Source Name:** CMaNGOS - Clean WoW Server Emulator  
+**Discovered From:** World of Warcraft Programming analysis (Topic 25)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Well-documented, stable MMORPG codebase with multiple version support (Classic, TBC, WotLK). Clean architecture suitable for learning MMORPG design patterns  
+**Estimated Effort:** 12-15 hours for architecture study  
+**URL:** https://github.com/cmangos/
+
+#### Discovery 3: AzerothCore Modular MMORPG Framework
+**Source Name:** AzerothCore - Community-Driven WoW Emulator  
+**Discovered From:** World of Warcraft Programming analysis (Topic 25)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Modern C++ practices with modular plugin system, demonstrating extensible MMORPG architecture for BlueMarble's content system  
+**Estimated Effort:** 10-12 hours for plugin architecture analysis  
+**URL:** https://github.com/azerothcore/azerothcore-wotlk
+
+#### Discovery 4: wowdev.wiki Protocol Documentation
+**Source Name:** wowdev.wiki - WoW Network Protocol & File Format Documentation  
+**Discovered From:** World of Warcraft Programming analysis (Topic 25)  
+**Priority:** Critical  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive reverse-engineered documentation of WoW's network opcodes, packet structures, and file formats. Essential reference for designing BlueMarble's client-server protocol  
+**Estimated Effort:** 8-10 hours for protocol design extraction  
+**URL:** https://wowdev.wiki/
+
+#### Discovery 5: Multiplayer Game Programming (Book - Expanded Scope)
+**Source Name:** Multiplayer Game Programming: Architecting Networked Games by Glazer & Madhav  
+**Discovered From:** World of Warcraft Programming analysis (Topic 25)  
+**Priority:** Critical  
+**Category:** GameDev-Tech  
+**Rationale:** Referenced extensively in WoW architecture analysis. Covers authoritative servers, state synchronization, lag compensation - all critical for BlueMarble's networking layer  
+**Estimated Effort:** 15-20 hours for full analysis  
+**Note:** Already in queue, priority elevated due to WoW analysis findings
+
+#### Discovery 6: Game Engine Architecture (Book - Expanded Scope)
+**Source Name:** Game Engine Architecture (3rd Edition) by Jason Gregory  
+**Discovered From:** World of Warcraft Programming analysis (Topic 25)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Referenced for engine subsystem architecture, particularly relevant for BlueMarble's multi-layered server design (realm, world, instance servers)  
+**Estimated Effort:** 18-22 hours for comprehensive analysis  
+**Note:** Already in queue, priority elevated due to WoW analysis findings
 
 ---
 
