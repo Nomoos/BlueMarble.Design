@@ -280,6 +280,7 @@ Phase 1 success will be measured by:
 - [research-assignment-template-phase-2.md](research-assignment-template-phase-2.md) - Template for future phases
 - [master-research-queue.md](master-research-queue.md) - Master tracking of all sources
 - [README.md](README.md) - Research literature guidelines
+- [research-compliance-validation-guide.md](research-compliance-validation-guide.md) - **Validation guide for ensuring sub-issues and PRs respect assignment file requirements**
 
 ### Instructions for Copilot Workers
 

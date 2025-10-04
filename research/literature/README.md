@@ -19,6 +19,7 @@ This directory contains formal references, summaries, and literature reviews for
 2. [phase-1-research-note.md](phase-1-research-note.md) - Phase 1 organization: 68 topics across 40 parallel groups
 3. [research-assignment-groups-overview.md](research-assignment-groups-overview.md) - Overview of all 40 assignment groups
 4. [copilot-research-instructions.md](copilot-research-instructions.md) - Universal instructions for Copilot workers processing research assignments
+5. [research-compliance-validation-guide.md](research-compliance-validation-guide.md) - Validation guide for ensuring sub-issues and PRs respect assignment file requirements
 
 ## Content Extraction Guides
 
