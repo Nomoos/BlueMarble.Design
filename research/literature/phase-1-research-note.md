@@ -137,7 +137,17 @@ This document provides:
 
 ## Instructions for Child Issues
 
-**IMPORTANT**: Each child issue (Group 01 through Group 40) must process sources from their respective assignment file.
+**IMPORTANT**: Each child issue (Group 01 through Group 40) must process sources from their respective assignment file: `research/literature/research-assignment-group-{NUMBER}.md`
+
+### 🤖 For Copilot Workers
+
+**Universal Instructions:** See [copilot-research-instructions.md](copilot-research-instructions.md) for detailed, copy-paste ready instructions on how to:
+- Research source content in your assignment file
+- Create analysis documents in the correct format
+- Log discovered sources for Phase 2
+- Save and submit your work
+
+The instructions are self-contained and only require your group number.
 
 ### Step-by-Step Process for Each Group
 
@@ -270,6 +280,10 @@ Phase 1 success will be measured by:
 - [research-assignment-template-phase-2.md](research-assignment-template-phase-2.md) - Template for future phases
 - [master-research-queue.md](master-research-queue.md) - Master tracking of all sources
 - [README.md](README.md) - Research literature guidelines
+
+### Instructions for Copilot Workers
+
+- [copilot-research-instructions.md](copilot-research-instructions.md) - **Universal instructions for processing research assignments** (copy-paste ready)
 
 ### Example Documents
 

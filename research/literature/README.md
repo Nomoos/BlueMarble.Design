@@ -18,6 +18,7 @@ This directory contains formal references, summaries, and literature reviews for
 1. [master-research-queue.md](master-research-queue.md) - Master tracking document for all research sources and priorities
 2. [phase-1-research-note.md](phase-1-research-note.md) - Phase 1 organization: 68 topics across 40 parallel groups
 3. [research-assignment-groups-overview.md](research-assignment-groups-overview.md) - Overview of all 40 assignment groups
+4. [copilot-research-instructions.md](copilot-research-instructions.md) - Universal instructions for Copilot workers processing research assignments
 
 ## Content Extraction Guides
 
