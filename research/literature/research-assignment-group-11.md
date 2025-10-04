@@ -132,7 +132,10 @@ Add discovered sources below this line:
 **Priority:** High  
 **Category:** GameDev-Tech  
 **Rationale:** Comprehensive GPU programming techniques for particle systems and visual effects. Free online resource with specific chapters on high-speed particles and refraction simulation highly relevant for BlueMarble's VFX pipeline.  
-**Estimated Effort:** 8-12 hours (multiple relevant chapters)
+**Estimated Effort:** 8-12 hours (multiple relevant chapters)  
+**Status:** ✅ Complete  
+**Document:** `game-dev-analysis-02-gpu-gems.md`  
+**Completion Date:** 2025-01-15
 
 **Source Name:** Real-Time Rendering, 4th Edition  
 **Discovered From:** Visual Effects and Compositing (Topic 11)  

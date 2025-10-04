@@ -41,8 +41,9 @@ Analysis documents examining game design patterns and development resources:
 1. [game-design-mechanics-analysis.md](game-design-mechanics-analysis.md) - Tabletop RPG mechanics analysis (Masks, Mazes, Outgunned, Spire, Warhammer, Wildsea, Cyberpunk RED, Call of Cthulhu, Apocalypse World)
 2. [game-development-resources-analysis.md](game-development-resources-analysis.md) - Game development books and resources guide
 3. [game-dev-analysis-01-game-programming-cpp.md](game-dev-analysis-01-game-programming-cpp.md) - Deep dive analysis of Game Programming in C++
-4. [game-dev-analysis-vfx-compositing.md](game-dev-analysis-vfx-compositing.md) - Visual Effects and Compositing techniques for MMORPG development
-5. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
+4. [game-dev-analysis-02-gpu-gems.md](game-dev-analysis-02-gpu-gems.md) - GPU Gems Series analysis focusing on particle systems and GPU programming techniques
+5. [game-dev-analysis-vfx-compositing.md](game-dev-analysis-vfx-compositing.md) - Visual Effects and Compositing techniques for MMORPG development
+6. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
 
 ## Guidelines
 
