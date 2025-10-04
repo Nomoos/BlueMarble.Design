@@ -802,6 +802,24 @@ mapping data that could inform AR location selection
 - Location-based services infrastructure
 - Mobile UI/UX design patterns
 
+### Discovered Sources During This Research
+
+The following sources were discovered during AR research and logged for future investigation:
+
+**High Priority:**
+- Pokémon GO Case Study - Location-based AR at scale
+- Ingress Case Study - Territory control and faction warfare mechanics
+
+**Medium Priority:**
+- Unity AR & VR by Tutorials - Practical implementation guides
+- ARKit Documentation - iOS AR framework
+- ARCore Documentation - Android AR framework
+- Minecraft Earth Case Study - AR building and collaboration
+
+**Low Priority:**
+- Practical Augmented Reality (Book) - Comprehensive AR development guide
+- Augmented Reality: Principles and Practice (Book) - Academic AR foundations
+
 ---
 
 **Document Status:** Complete  
