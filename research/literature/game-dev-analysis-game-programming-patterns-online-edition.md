@@ -1425,6 +1425,35 @@ After implementing core patterns, expect:
 
 ---
 
+## Discovered Sources During Research
+
+The following sources were discovered while analyzing Game Programming Patterns and are recommended for future research:
+
+### 1. EnTT Library
+- **URL:** https://github.com/skypjack/entt
+- **Category:** GameDev-Tech
+- **Priority:** High
+- **Rationale:** Fast and reliable entity component system (C++) referenced extensively in the pattern analysis. Provides production-ready ECS implementation that directly applies to BlueMarble's entity architecture.
+- **Estimated Effort:** 4-6 hours (library documentation review and integration planning)
+
+### 2. flecs Library
+- **URL:** https://github.com/SanderMertens/flecs
+- **Category:** GameDev-Tech
+- **Priority:** Medium
+- **Rationale:** Alternative ECS implementation with multi-threading support and query capabilities. Could provide valuable comparison for architectural decisions.
+- **Estimated Effort:** 3-5 hours (comparative analysis with EnTT)
+
+### 3. Design Patterns (Gang of Four)
+- **Authors:** Gamma, Helm, Johnson, Vlissides
+- **Publisher:** Addison-Wesley
+- **ISBN:** 978-0201633610
+- **Category:** GameDev-Tech
+- **Priority:** Medium
+- **Rationale:** Original design patterns book that Game Programming Patterns builds upon. Provides foundational understanding of pattern concepts that could inform other BlueMarble systems.
+- **Estimated Effort:** 8-12 hours (selected chapters relevant to game development)
+
+---
+
 **Document Status:** Complete  
 **Last Updated:** 2025-01-17  
 **Lines:** 500+  

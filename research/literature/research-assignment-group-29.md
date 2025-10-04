@@ -82,7 +82,7 @@ This assignment group focuses on analyzing game development resources from the o
 - [x] All documents have proper front matter
 - [x] All documents meet minimum length requirements
 - [x] Cross-references added
-- [ ] Discovered sources logged below
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,26 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** EnTT - Entity Component System Library  
+**Discovered From:** Game Programming Patterns (Online Edition)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Fast and reliable C++ ECS implementation extensively referenced in pattern analysis. Provides production-ready solution for BlueMarble's entity architecture with cache-friendly data layout and parallel processing support.  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** flecs - Entity Component System Library  
+**Discovered From:** Game Programming Patterns (Online Edition)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Alternative C ECS implementation with multi-threading, queries, and prefab features. Valuable for comparative analysis of ECS architectures and architectural decision-making.  
+**Estimated Effort:** 3-5 hours
+
+**Source Name:** Design Patterns: Elements of Reusable Object-Oriented Software (Gang of Four)  
+**Discovered From:** Game Programming Patterns (Online Edition)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Foundational design patterns book that Game Programming Patterns builds upon. Selected chapters could inform architectural decisions for other BlueMarble systems beyond game-specific patterns.  
+**Estimated Effort:** 8-12 hours
 
 ---
 
