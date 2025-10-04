@@ -77,7 +77,7 @@ This assignment group focuses on analyzing game development resources from the o
 ## Progress Tracking
 
 - [x] Unreal Engine Documentation
-- [ ] GameDev.net
+- [x] GameDev.net
 - [x] All documents created and placed in `research/literature/`
 - [x] All documents have proper front matter
 - [x] All documents meet minimum length requirements
@@ -133,6 +133,30 @@ During your research, if you discover additional valuable sources, log them here
 **Rationale:** Modern approach to open world streaming relevant to planet-scale simulation in BlueMarble  
 **Estimated Effort:** 2-3 hours  
 **URL:** https://docs.unrealengine.com/5.0/en-US/world-partition-in-unreal-engine/
+
+**Source Name:** Valve's Networking Articles (Source Multiplayer Networking)  
+**Discovered From:** GameDev.net forum discussions on lag compensation  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Canonical reference for client-side prediction and lag compensation used in Source Engine games, directly applicable to BlueMarble's multiplayer architecture  
+**Estimated Effort:** 2-3 hours  
+**URL:** https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking
+
+**Source Name:** Glenn Fiedler's Game Networking Articles  
+**Discovered From:** GameDev.net programming article references  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive series on network physics, reliable UDP, and game networking fundamentals essential for MMORPG development  
+**Estimated Effort:** 4-5 hours  
+**URL:** https://gafferongames.com/
+
+**Source Name:** "1500 Archers on a 28.8k Modem" - Age of Empires Networking  
+**Discovered From:** GameDev.net community postmortem discussions  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Historical case study on efficient RTS networking applicable to large-scale entity synchronization in BlueMarble  
+**Estimated Effort:** 1-2 hours  
+**URL:** https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-networking-programming-in-age-of-empires-and-beyond
 
 ---
 
