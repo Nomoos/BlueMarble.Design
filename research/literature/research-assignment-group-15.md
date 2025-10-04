@@ -127,7 +127,40 @@ Add discovered sources below this line:
 
 ---
 
-<!-- Discovery entries go here -->
+**Source Name:** Game Programming Patterns by Robert Nystrom
+**Discovered From:** Isometric Projection Techniques (Topic 15)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Contains component systems and rendering patterns directly applicable to isometric entity management, depth sorting, and spatial partitioning for BlueMarble's strategic view mode
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Mathematics for 3D Game Programming and Computer Graphics by Eric Lengyel
+**Discovered From:** Isometric Projection Techniques (Topic 15)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Comprehensive coverage of projection transformations and coordinate systems needed for efficient screen-to-world transformations and camera mathematics in hybrid 3D/isometric rendering
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Game Engine Architecture by Jason Gregory
+**Discovered From:** Isometric Projection Techniques (Topic 15)
+**Priority:** High
+**Category:** GameDev-Tech
+**Rationale:** Essential for understanding camera systems, rendering pipelines, and scene management required to integrate isometric views with BlueMarble's 3D engine and implement seamless view mode transitions
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Red Blob Games - Isometric and Hexagonal Grids (Interactive Tutorial)
+**Discovered From:** Isometric Projection Techniques (Topic 15)
+**Priority:** Low
+**Category:** GameDev-Tech
+**Rationale:** Interactive educational resource for tile-based world representation and grid snapping mechanics for building placement in strategic mode
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** GDC Vault - "Optimizing Isometric Game Rendering"
+**Discovered From:** Isometric Projection Techniques (Topic 15)
+**Priority:** High
+**Category:** GameDev-Tech
+**Rationale:** Critical performance optimization techniques for culling, LOD systems, and batching required for planet-scale isometric visualization at continental scale
+**Estimated Effort:** 3-4 hours
 
 ---
 

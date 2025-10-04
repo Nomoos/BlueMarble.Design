@@ -13,7 +13,7 @@ parent-research: research-assignment-group-15.md
 **Category:** Game Development - Graphics & Visualization
 **Priority:** Medium
 **Status:** ✅ Complete
-**Lines:** 650+
+**Lines:** 1,180+
 **Related Topics:** Camera Systems, 2D/3D Rendering, UI/UX Design, Perspective Systems
 
 ---
@@ -1042,7 +1042,61 @@ Strategic View:
 
 ---
 
-## Part V: References and Further Reading
+## Part V: Additional Sources Discovered
+
+### Referenced Materials for Further Research
+
+During research on isometric projection techniques, several sources were identified that warrant deeper analysis for BlueMarble development:
+
+#### 1. **Game Programming Patterns** (Robert Nystrom)
+- **Relevance:** Component systems and rendering patterns applicable to isometric entity management
+- **BlueMarble Application:** Optimizing entity rendering order, depth sorting algorithms, spatial partitioning
+- **Priority:** Medium - architectural patterns for scalable isometric rendering
+- **Discovered From:** Isometric Projection Techniques research
+- **Estimated Effort:** 4-6 hours
+
+#### 2. **Mathematics for 3D Game Programming and Computer Graphics** (Eric Lengyel)
+- **Relevance:** Detailed coverage of projection transformations, coordinate systems, and camera mathematics
+- **BlueMarble Application:** Implementing efficient screen-to-world coordinate transformations, camera controllers
+- **Priority:** Medium - mathematical foundations for hybrid 3D/isometric rendering
+- **Discovered From:** Isometric Projection Techniques research
+- **Estimated Effort:** 6-8 hours
+
+#### 3. **Game Engine Architecture** (Jason Gregory)
+- **Relevance:** Camera systems, rendering pipelines, and scene management
+- **BlueMarble Application:** Integrating isometric views with existing 3D engine, view mode transitions
+- **Priority:** High - foundational for implementing strategic view mode
+- **Discovered From:** Isometric Projection Techniques research
+- **Estimated Effort:** 8-10 hours
+
+#### 4. **Red Blob Games - Isometric and Hexagonal Grids** (Interactive Tutorial)
+- **Relevance:** Interactive explanations of isometric coordinate systems and grid mathematics
+- **BlueMarble Application:** Tile-based world representation, grid snapping for building placement
+- **Priority:** Low - supplementary learning resource
+- **Discovered From:** Isometric Projection Techniques research
+- **Estimated Effort:** 2-3 hours
+
+#### 5. **GDC Vault - "Optimizing Isometric Game Rendering"**
+- **Relevance:** Performance optimization techniques for large-scale isometric games
+- **BlueMarble Application:** Culling strategies, LOD systems, batching techniques for planet-scale visualization
+- **Priority:** High - critical for rendering performance at continental scale
+- **Discovered From:** Isometric Projection Techniques research
+- **Estimated Effort:** 3-4 hours
+
+### Game Study Candidates
+
+The following games were identified as excellent case studies for isometric implementation:
+
+1. **Age of Empires II: Definitive Edition** - RTS with efficient large-scale isometric rendering
+2. **Divinity: Original Sin 2** - Modern isometric CRPG with 3D graphics and hybrid camera
+3. **Hades** - High-performance isometric action with dynamic lighting
+4. **Civilization VI** - Strategic view with hexagonal grid (adapted isometric principles)
+
+These games demonstrate successful implementations of concepts relevant to BlueMarble's strategic view mode.
+
+---
+
+## Part VI: References and Further Reading
 
 ### Books and Publications
 
