@@ -153,6 +153,78 @@ Add discovered sources below this line:
 
 ---
 
+**Source Name:** Foundations of Game Engine Development, Volume 2: Rendering (Eric Lengyel)  
+**Discovered From:** Real-Time Rendering topic research (Assignment Group 09, Topic 1)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Deep dive into GPU architecture and rendering pipeline implementation with practical examples. Complements Real-Time Rendering book with engine-specific implementation details critical for BlueMarble's custom rendering system.  
+**Estimated Effort:** 6-8 hours
+
+---
+
+**Source Name:** BDAM - Batched Dynamic Adaptive Meshes for High Performance Terrain Visualization (Cignoni et al., 2003)  
+**Discovered From:** Real-Time Rendering - terrain LOD research (Assignment Group 09, Topic 1)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Specialized adaptive terrain mesh generation algorithm directly applicable to BlueMarble's planetary-scale terrain rendering. Provides concrete implementation for dynamic LOD systems.  
+**Estimated Effort:** 3-4 hours
+
+---
+
+**Source Name:** Geometry Clipmaps: Terrain Rendering Using Nested Regular Grids (Losasso & Hoppe, 2004)  
+**Discovered From:** Real-Time Rendering - terrain systems analysis (Assignment Group 09, Topic 1)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Industry-standard technique for maintaining constant detail around viewer. Essential for infinite terrain with predictable memory usage on planetary scale.  
+**Estimated Effort:** 3-4 hours
+
+---
+
+**Source Name:** Rendering Massive Terrains using Chunked Level of Detail Control (Ulrich, 2002)  
+**Discovered From:** Real-Time Rendering - terrain chunking strategies (Assignment Group 09, Topic 1)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Alternative quad-tree approach to terrain LOD. Useful for comparing different strategies and evaluating hybrid approaches for BlueMarble.  
+**Estimated Effort:** 2-3 hours
+
+---
+
+**Source Name:** GPU Gems Series - Terrain and Vegetation Chapters (NVIDIA)  
+**Discovered From:** Real-Time Rendering - advanced rendering techniques (Assignment Group 09, Topic 1)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Free online collection of production-quality GPU programming techniques. Includes terrain rendering, vegetation, and atmospheric effects with practical shader implementations.  
+**Estimated Effort:** 4-5 hours
+
+---
+
+**Source Name:** The Rendering Technology of Horizon: Zero Dawn (GDC 2017)  
+**Discovered From:** Real-Time Rendering - open world case studies (Assignment Group 09, Topic 1)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** AAA open-world rendering breakdown with production-proven techniques for large-scale terrain, vegetation, and weather. Directly relevant scale and complexity for BlueMarble.  
+**Estimated Effort:** 2 hours
+
+---
+
+**Source Name:** Learn OpenGL - Advanced Topics (learnopengl.com)  
+**Discovered From:** Real-Time Rendering - shader programming examples (Assignment Group 09, Topic 1)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive OpenGL tutorial covering PBR, advanced lighting, and optimization. Good supplementary reference for shader implementation.  
+**Estimated Effort:** 2-3 hours
+
+---
+
+**Source Name:** A Deep Dive into Nanite Virtualized Geometry (GDC 2021)  
+**Discovered From:** Real-Time Rendering - future rendering technologies (Assignment Group 09, Topic 1)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Next-generation geometry rendering insights for future-proofing architecture decisions. Long-term consideration for BlueMarble's rendering evolution.  
+**Estimated Effort:** 2-3 hours
+
+---
+
 <!-- Discovery entries go here -->
 
 ---
