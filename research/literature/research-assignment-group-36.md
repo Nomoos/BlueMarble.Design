@@ -110,12 +110,14 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-**Source Name:** Math for Game Programmers: Noise-Based RNG (GDC 2017)  
+**Source Name:** ✅ Math for Game Programmers: Noise-Based RNG (GDC 2017)  
 **Discovered From:** Procedural World Generation research  
 **Priority:** High  
 **Category:** GameDev-Tech  
 **Rationale:** Comprehensive noise function overview critical for terrain generation with performance optimization techniques directly applicable to BlueMarble's real-time world generation  
-**Estimated Effort:** 4-6 hours
+**Estimated Effort:** 4-6 hours  
+**Status:** Complete - Analysis document created (800 lines)  
+**Document:** `game-dev-analysis-noise-based-rng.md`
 
 **Source Name:** Terrain Rendering in Far Cry 5 (GDC 2018)  
 **Discovered From:** Procedural World Generation research  
