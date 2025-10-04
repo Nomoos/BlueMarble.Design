@@ -153,7 +153,8 @@ Add discovered sources below this line:
 **Priority:** Medium  
 **Category:** GameDev-Tech  
 **Rationale:** Spatial audio implementation with HRTF for enhanced immersion in desktop gameplay  
-**Estimated Effort:** 4-5 hours
+**Estimated Effort:** 4-5 hours  
+**Status:** ✅ Complete - Processed as game-dev-analysis-steam-audio-spatial-sound.md
 
 **Source Name:** "Reducing VR Sickness Through Subtle Dynamic Field-Of-View Modification" - Columbia University  
 **Discovered From:** Unreal Engine VR Cookbook research (Topic 17)  
@@ -168,6 +169,41 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech  
 **Rationale:** VR performance optimization technique that may benefit planet-scale terrain rendering  
 **Estimated Effort:** 3-4 hours
+
+**Source Name:** Wwise Spatial Audio Comparison  
+**Discovered From:** Steam Audio Plugin research (Topic 17 → Discovered #1)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Alternative spatial audio middleware for comparison with Steam Audio, different trade-offs and licensing  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** FMOD Studio Spatial Audio  
+**Discovered From:** Steam Audio Plugin research (Topic 17 → Discovered #1)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Commercial spatial audio option with different features, useful for evaluating audio system choices  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Unreal Engine Native Audio System Deep Dive  
+**Discovered From:** Steam Audio Plugin research (Topic 17 → Discovered #1)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Understanding built-in Unreal audio capabilities vs plugin dependencies, may reduce complexity  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Acoustic Material Database (Real-World Coefficients)  
+**Discovered From:** Steam Audio Plugin research (Topic 17 → Discovered #1)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Reference data for realistic material acoustic properties in BlueMarble environments  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** Audio Pooling and Streaming Strategies for Open World Games  
+**Discovered From:** Steam Audio Plugin research (Topic 17 → Discovered #1)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Memory optimization critical for planet-scale soundscapes with thousands of audio sources  
+**Estimated Effort:** 4-5 hours
 
 ---
 
