@@ -181,6 +181,27 @@ Add discovered sources below this line:
 **Rationale:** Mathematical foundations for implementing various map projections in-game. Essential for accurate map rendering and coordinate conversions.  
 **Estimated Effort:** 5-6 hours
 
+**Source Name:** Gravimetric Survey Techniques  
+**Discovered From:** Geodetic Survey Manuals Collection  
+**Priority:** Low  
+**Category:** Survival - Advanced Geodesy  
+**Rationale:** Gravity measurements for geoid modeling and precise elevation determination. Advanced feature for scientific gameplay.  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Satellite Geodesy (Historical Pre-GPS)  
+**Discovered From:** Geodetic Survey Manuals Collection  
+**Priority:** Low  
+**Category:** Survival - Space Technology  
+**Rationale:** Pre-GPS satellite positioning techniques. Relevant if game includes space technology tier.  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Precise Time Transfer Methods  
+**Discovered From:** Geodetic Survey Manuals Collection  
+**Priority:** Medium  
+**Category:** Survival - Timekeeping and Coordination  
+**Rationale:** Methods for synchronizing chronometers across distances for longitude determination. Relevant for multi-player coordination and advanced navigation.  
+**Estimated Effort:** 3-4 hours
+
 ---
 
 <!-- Discovery entries go here -->
