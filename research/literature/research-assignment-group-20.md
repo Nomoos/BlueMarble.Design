@@ -9,9 +9,9 @@ assignee: TBD
 ---
 
 **Document Type:** Research Assignment (Reserve)  
-**Version:** 1.1  
-**Total Topics:** 1 (activated)  
-**Status:** Active - Topic 20.1 in progress
+**Version:** 1.2  
+**Total Topics:** 2 (both complete)  
+**Status:** Active - 2 topics completed, ready for next assignment
 
 ## Overview
 
@@ -81,6 +81,33 @@ When activating this group:
 **Estimated Effort:** 6-8 hours  
 **Date Discovered:** 2025-01-17
 
+**Source Name:** GPU Gems Series (1, 2, 3)  
+**Discovered From:** Real-Time Rendering analysis (Topic 20.2)  
+**Discovered By:** Group 20  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Collection of advanced graphics techniques including terrain rendering, water simulation, and particle effects applicable to BlueMarble.  
+**Estimated Effort:** 15-20 hours  
+**Date Discovered:** 2025-01-17
+
+**Source Name:** Physically Based Rendering: From Theory to Implementation  
+**Discovered From:** Real-Time Rendering analysis (Topic 20.2)  
+**Discovered By:** Group 20  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Deep dive into PBR theory and implementation for accurate material rendering in BlueMarble.  
+**Estimated Effort:** 12-15 hours  
+**Date Discovered:** 2025-01-17
+
+**Source Name:** Vulkan Programming Guide  
+**Discovered From:** Real-Time Rendering analysis (Topic 20.2)  
+**Discovered By:** Group 20  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Official Vulkan reference for implementing modern graphics features required by BlueMarble.  
+**Estimated Effort:** 10-12 hours  
+**Date Discovered:** 2025-01-17
+
 ### Assigned Topics
 
 <!-- Topics will be added here as discoveries are made -->
@@ -114,6 +141,35 @@ When activating this group:
 
 ---
 
+#### Topic 20.2: Real-Time Rendering (HIGH)
+
+**Source Name:** Real-Time Rendering (4th Edition)  
+**Discovered From:** Game Engine Architecture analysis (Topic 20.1)  
+**Discovered By:** Group 20  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Essential reference for advanced rendering techniques applicable to planet-scale terrain and atmospheric effects in BlueMarble. Covers modern graphics pipelines, shader programming, and optimization techniques critical for rendering Earth-scale environments.  
+**Estimated Effort:** 12-16 hours  
+**Date Discovered:** 2025-01-17
+
+**Focus Areas:**
+- Modern graphics pipeline architecture (Vulkan/DirectX 12)
+- Advanced terrain rendering techniques
+- Atmospheric and weather effects rendering
+- Level-of-detail (LOD) and culling strategies
+- Shader optimization for large-scale environments
+- Real-time global illumination
+
+**Deliverables:**
+- Comprehensive analysis document: `game-dev-analysis-20-real-time-rendering.md`
+- Implementation recommendations for BlueMarble rendering engine
+- Shader code examples and patterns
+- Performance optimization guidelines
+
+**Status:** ✅ Complete - Research document published
+
+---
+
 ## Work Guidelines
 
 When this group is activated, follow standard research process:
@@ -130,6 +186,7 @@ Follow same quality standards and documentation structure as other groups.
 
 - [x] Group 20 activated - 2025-01-17
 - [x] Topic 20.1: Game Engine Architecture (High) - ✅ Complete
+- [x] Topic 20.2: Real-Time Rendering (High) - ✅ Complete
 
 ---
 
@@ -142,6 +199,6 @@ Follow same quality standards and documentation structure as other groups.
 ---
 
 **Created:** 2025-01-15  
-**Status:** Active - Processing Topic 20.1  
-**Capacity:** 1 topic assigned, ready for 1-2 more if needed  
+**Status:** Active - 2 topics completed  
+**Capacity:** 2 topics completed, ready for 1 more if needed  
 **Last Updated:** 2025-01-17
