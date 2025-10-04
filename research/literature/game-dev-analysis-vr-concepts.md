@@ -835,6 +835,21 @@ Defer VR until post-launch. Focus on desktop experience. Design systems with VR 
 
 ---
 
+## Discovered Sources
+
+During this research, the following additional sources were identified for potential future investigation:
+
+1. **Half-Life: Alyx VR Interaction Design Case Study** - Industry-leading VR interaction patterns
+2. **Skyrim VR: Adapting Desktop MMORPG to VR** - Case study of MMORPG VR retrofitting
+3. **No Man's Sky VR Integration** - Exploration-focused game VR implementation
+4. **Steam Audio Plugin Documentation** - Spatial audio with HRTF for Unreal Engine
+5. **"Reducing VR Sickness Through Subtle Dynamic Field-Of-View Modification"** - Camera comfort research
+6. **Forward Rendering vs Deferred Rendering in UE5** - Performance optimization deep dive
+
+These sources have been logged in research-assignment-group-17.md for future research phases.
+
+---
+
 **Document Status:** Complete  
 **Last Updated:** 2025-01-16  
 **Assignment Group:** 17  

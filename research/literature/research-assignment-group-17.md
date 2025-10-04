@@ -127,7 +127,47 @@ Add discovered sources below this line:
 
 ---
 
-<!-- Discovery entries go here -->
+**Source Name:** Half-Life: Alyx VR Interaction Design Case Study  
+**Discovered From:** Unreal Engine VR Cookbook research (Topic 17)  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Industry-leading VR interaction patterns that could inform intuitive UI/UX design for BlueMarble desktop experience  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Skyrim VR: Adapting Desktop MMORPG to VR  
+**Discovered From:** Unreal Engine VR Cookbook research (Topic 17)  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Case study of retrofitting VR support to existing MMORPG, valuable if future VR expansion considered  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** No Man's Sky VR Integration  
+**Discovered From:** Unreal Engine VR Cookbook research (Topic 17)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Exploration-focused game VR implementation, relevant to BlueMarble's planet-scale exploration mechanics  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** Steam Audio Plugin Documentation (Unreal Engine)  
+**Discovered From:** Unreal Engine VR Cookbook research (Topic 17)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Spatial audio implementation with HRTF for enhanced immersion in desktop gameplay  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** "Reducing VR Sickness Through Subtle Dynamic Field-Of-View Modification" - Columbia University  
+**Discovered From:** Unreal Engine VR Cookbook research (Topic 17)  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Camera comfort research applicable to desktop camera controls and motion systems  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** Forward Rendering vs Deferred Rendering in Unreal Engine 5  
+**Discovered From:** Unreal Engine VR Cookbook research (Topic 17)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** VR performance optimization technique that may benefit planet-scale terrain rendering  
+**Estimated Effort:** 3-4 hours
 
 ---
 
