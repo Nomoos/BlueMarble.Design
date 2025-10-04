@@ -155,6 +155,34 @@ Add discovered sources below this line:
 **Rationale:** Open-source engine option with no licensing costs. While less mature than Unity/Unreal, worth considering for cost-conscious development. Provides comparison point for engine feature sets.  
 **Estimated Effort:** 3-4 hours for overview and comparison
 
+**Source Name:** Database Internals by Alex Petrov  
+**Discovered From:** Game Engine Architecture analysis (Topic 16 follow-up)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Deep dive into database architecture for MMORPG persistence layer. Critical for understanding PostgreSQL optimization and sharding strategies for BlueMarble's player data and world state.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Network Programming for Games by Glenn Fiedler  
+**Discovered From:** Game Engine Architecture analysis (Topic 16 follow-up)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Authoritative networking patterns for client-server games. Essential for implementing state synchronization, client prediction, and interest management at MMORPG scale.  
+**Estimated Effort:** 5-6 hours
+
+**Source Name:** Foundations of Game Engine Development (Series) by Eric Lengyel  
+**Discovered From:** Game Engine Architecture analysis (Topic 16 follow-up)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Multi-volume series covering Mathematics, Rendering, Collision Detection. Provides mathematical foundations for planet-scale terrain rendering and geological simulation.  
+**Estimated Effort:** 10-12 hours for all volumes
+
+**Source Name:** Unreal Engine C++ Source Code  
+**Discovered From:** Game Engine Architecture analysis (Topic 16 follow-up)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Hands-on analysis of production engine architecture. Provides real-world implementation examples of systems discussed in Game Engine Architecture book.  
+**Estimated Effort:** 8-10 hours
+
 <!-- Discovery entries go here -->
 
 ---
