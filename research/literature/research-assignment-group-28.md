@@ -82,7 +82,7 @@ This assignment group focuses on analyzing game development resources from the o
 - [x] All documents have proper front matter
 - [x] All documents meet minimum length requirements
 - [x] Cross-references added
-- [ ] Discovered sources logged below
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,26 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** RPG Creator Kit (Unity Learn)  
+**Discovered From:** Unity Learn - RPG Development (Topic 28.1)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Complete RPG example project with production-quality code patterns for combat, inventory, and quest systems directly applicable to BlueMarble's design  
+**Estimated Effort:** 8-12 hours
+
+**Source Name:** Unity Netcode for GameObjects Documentation  
+**Discovered From:** Unity Learn - RPG Development (Topic 28.1)  
+**Priority:** Critical  
+**Category:** GameDev-Tech  
+**Rationale:** Modern networking solution with client prediction and server reconciliation patterns essential for MMORPG development, includes practical implementation examples  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Unity Performance Best Practices Guide  
+**Discovered From:** Unity Learn - RPG Development (Topic 28.1)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive optimization techniques applicable to large-scale world simulation and entity management at planet scale  
+**Estimated Effort:** 4-6 hours
 
 ---
 

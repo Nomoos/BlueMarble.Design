@@ -1409,14 +1409,41 @@ void OnProjectileExpired(Projectile* proj) {
 
 ---
 
+## New Sources Discovered
+
+During this research, the following valuable sources were discovered that were not in the original catalog:
+
+1. **RPG Creator Kit** (Unity Learn)
+   - URL: <https://learn.unity.com/project/creator-kit-rpg>
+   - Priority: High
+   - Category: GameDev-Tech
+   - Rationale: Complete RPG example project with production-quality code patterns for combat, inventory, and quest systems
+   - Estimated Effort: 8-12 hours
+
+2. **Unity Netcode for GameObjects Documentation**
+   - URL: <https://docs.unity.com/netcode/>
+   - Priority: Critical
+   - Category: GameDev-Tech
+   - Rationale: Modern networking solution with client prediction and server reconciliation patterns essential for MMORPG development
+   - Estimated Effort: 6-8 hours
+
+3. **Unity Performance Best Practices Guide**
+   - URL: <https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity.html>
+   - Priority: High
+   - Category: GameDev-Tech
+   - Rationale: Comprehensive optimization techniques applicable to large-scale world simulation and entity management
+   - Estimated Effort: 4-6 hours
+
+---
+
 ## References
 
 ### Unity Learn Resources
 
 1. Unity Learn Platform - <https://learn.unity.com/>
-2. RPG Creator Kit - <https://learn.unity.com/project/creator-kit-rpg>
-3. Multiplayer Networking Documentation - <https://docs.unity.com/netcode/>
-4. Unity Best Practices - <https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity.html>
+2. RPG Creator Kit - <https://learn.unity.com/project/creator-kit-rpg> *(New Discovery)*
+3. Multiplayer Networking Documentation - <https://docs.unity.com/netcode/> *(New Discovery)*
+4. Unity Best Practices - <https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity.html> *(New Discovery)*
 
 ### Complementary Resources
 
