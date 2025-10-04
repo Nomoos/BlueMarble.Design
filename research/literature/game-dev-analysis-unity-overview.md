@@ -806,6 +806,30 @@ public class NetworkClient : MonoBehaviour
 
 ---
 
+## Discovered Sources
+
+During this research, the following sources were identified for future investigation:
+
+1. **Game Engine Architecture (4th Edition)** by Jason Gregory
+   - Comprehensive engine architecture patterns applicable to Unity vs. custom engine decision
+   - Priority: High | Estimated Effort: 8-10 hours
+
+2. **Real-Time Rendering (4th Edition)** by Tomas Akenine-Möller et al.
+   - Advanced rendering techniques for planet-scale terrain and LOD systems
+   - Priority: Medium | Estimated Effort: 6-8 hours
+
+3. **Unreal Engine Documentation**
+   - Alternative engine for comparative analysis with Unity
+   - Priority: Medium | Estimated Effort: 4-5 hours
+
+4. **Godot Engine Documentation**
+   - Open-source engine option for cost-conscious comparison
+   - Priority: Low | Estimated Effort: 3-4 hours
+
+These sources have been logged in the research-assignment-group-16.md file for future research phases.
+
+---
+
 **Document Status:** Complete  
 **Assignment Group:** 16  
 **Topic Number:** 16  

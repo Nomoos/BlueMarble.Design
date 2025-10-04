@@ -127,6 +127,34 @@ Add discovered sources below this line:
 
 ---
 
+**Source Name:** Game Engine Architecture (4th Edition) by Jason Gregory  
+**Discovered From:** Unity Game Development in 24 Hours analysis (Topic 16)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive reference for engine architecture patterns. Covers core systems (rendering, physics, AI, networking) applicable to both Unity and custom engine approaches. Essential for understanding trade-offs between using existing engines vs. building custom systems for BlueMarble.  
+**Estimated Effort:** 8-10 hours for full analysis
+
+**Source Name:** Real-Time Rendering (4th Edition) by Tomas Akenine-Möller et al.  
+**Discovered From:** Unity Game Development in 24 Hours analysis (Topic 16)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Deep dive into rendering techniques for planet-scale terrain visualization. Covers LOD systems, culling algorithms, and shader techniques needed for geological simulation rendering. Relevant for optimizing BlueMarble's visual performance.  
+**Estimated Effort:** 6-8 hours for relevant chapters
+
+**Source Name:** Unreal Engine Documentation  
+**Discovered From:** Unity Game Development in 24 Hours analysis (Topic 16)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Alternative engine comparison for BlueMarble. Unreal offers C++ source access and better large-scale world support than Unity. Worth evaluating as competitive option to Unity client approach.  
+**Estimated Effort:** 4-5 hours for comparative analysis
+
+**Source Name:** Godot Engine Documentation  
+**Discovered From:** Unity Game Development in 24 Hours analysis (Topic 16)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Open-source engine option with no licensing costs. While less mature than Unity/Unreal, worth considering for cost-conscious development. Provides comparison point for engine feature sets.  
+**Estimated Effort:** 3-4 hours for overview and comparison
+
 <!-- Discovery entries go here -->
 
 ---
