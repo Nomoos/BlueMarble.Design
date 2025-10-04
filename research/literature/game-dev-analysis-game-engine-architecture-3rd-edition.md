@@ -976,6 +976,55 @@ Simulating real-world geology for entire planet is computationally expensive.
 
 ---
 
+## Discovered Sources
+
+During the analysis of "Game Engine Architecture (3rd Edition)", the following valuable sources were identified for future research:
+
+### High Priority Discoveries
+
+1. **Game Programming Patterns** by Robert Nystrom
+   - Category: GameDev-Tech
+   - Rationale: Essential design patterns for game development (component, service locator, etc.)
+   - Estimated Effort: 6-8 hours
+
+2. **EnTT and Flecs** (ECS Libraries)
+   - Category: GameDev-Tech
+   - Rationale: Production-ready Entity Component System implementations for evaluation
+   - Estimated Effort: 4-6 hours
+
+3. **EVE Online Technical Blog**
+   - Category: GameDev-Tech
+   - Rationale: Planet-scale MMORPG architecture case studies from CCP Games
+   - Estimated Effort: 5-7 hours
+
+### Medium Priority Discoveries
+
+4. **Unreal Engine Source Code** (GitHub)
+   - Category: GameDev-Tech
+   - Rationale: Real-world AAA engine implementation examples
+   - Estimated Effort: 10-12 hours
+
+5. **Second Life Infrastructure Talks**
+   - Category: GameDev-Tech
+   - Rationale: Scaling virtual worlds to millions of users
+   - Estimated Effort: 3-4 hours
+
+6. **Interest Management in MMORPGs** (Academic Papers)
+   - Category: GameDev-Tech
+   - Rationale: Optimizing entity synchronization for scalability
+   - Estimated Effort: 4-5 hours
+
+### Low Priority Discoveries
+
+7. **TimescaleDB Documentation**
+   - Category: GameDev-Tech
+   - Rationale: Time-series optimization for geological simulation data
+   - Estimated Effort: 2-3 hours
+
+These sources have been logged in `research-assignment-group-21.md` for potential Phase 2 research assignments.
+
+---
+
 **Document Status:** Complete  
 **Analysis Date:** 2025-01-17  
 **Analyst:** Research Team  
