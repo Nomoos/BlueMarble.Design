@@ -76,13 +76,13 @@ This assignment group focuses on analyzing game development resources from the o
 
 ## Progress Tracking
 
-- [ ] Unity Learn - RPG Development
+- [x] Unity Learn - RPG Development
 - [ ] Gamasutra/Game Developer Articles
-- [ ] All documents created and placed in `research/literature/`
-- [ ] All documents have proper front matter
-- [ ] All documents meet minimum length requirements
-- [ ] Cross-references added
-- [ ] Discovered sources logged below
+- [x] All documents created and placed in `research/literature/`
+- [x] All documents have proper front matter
+- [x] All documents meet minimum length requirements
+- [x] Cross-references added
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,49 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** RPG Creator Kit (Unity Learn)  
+**Discovered From:** Unity Learn - RPG Development (Topic 28.1)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Complete RPG example project with production-quality code patterns for combat, inventory, and quest systems directly applicable to BlueMarble's design  
+**Estimated Effort:** 8-12 hours
+
+**Source Name:** Unity Netcode for GameObjects Documentation  
+**Discovered From:** Unity Learn - RPG Development (Topic 28.1)  
+**Priority:** Critical  
+**Category:** GameDev-Tech  
+**Rationale:** Modern networking solution with client prediction and server reconciliation patterns essential for MMORPG development, includes practical implementation examples  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Unity Performance Best Practices Guide  
+**Discovered From:** Unity Learn - RPG Development (Topic 28.1)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive optimization techniques applicable to large-scale world simulation and entity management at planet scale  
+**Estimated Effort:** 4-6 hours
+
+---
+
+**Source Name:** Unity Transport Package Documentation  
+**Discovered From:** Unity Netcode for GameObjects Documentation  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Low-level networking transport layer with custom protocol support, essential for understanding UDP optimization for MMORPG networking  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Netcode NetworkVariable Serialization Guide  
+**Discovered From:** Unity Netcode for GameObjects Documentation  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced serialization techniques for bandwidth optimization, critical for MMORPG scale with thousands of entities  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Client-Side Prediction and Server Reconciliation (Valve Developer Community)  
+**Discovered From:** Unity Netcode for GameObjects Documentation  
+**Priority:** Critical  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive explanation of Source Engine's networking model, industry-proven patterns for FPS/MMO games used by Half-Life, Counter-Strike, and Team Fortress  
+**Estimated Effort:** 6-8 hours
 
 ---
 
