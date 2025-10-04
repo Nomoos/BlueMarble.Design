@@ -29,17 +29,17 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 ## Queue Status
 
 **Total Sources:** 86 (updated: +50 from online resources catalog)  
-**Completed:** 11  
-**In Progress:** 1  
+**Completed:** 12  
+**In Progress:** 0  
 **Remaining:** 74  
 **Total Sources:** 39 (updated: +3 from auto-discovery)  
-**Completed:** 11  
+**Completed:** 12  
 **In Progress:** 0  
-**Remaining:** 28  
+**Remaining:** 27  
 
 **Original Count:** 36 sources (before auto-discovery)  
 **Sources Added:** 3 (Energy Systems, Historical Maps/Navigation, Specialized Collections)  
-**Completion Rate:** 28% (11 of 39 sources completed)  
+**Completion Rate:** 31% (12 of 39 sources completed)  
 
 ---
 
@@ -85,7 +85,7 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 
 **Sources by Category:**
 - Category 1 (Survival Guide Collections): 13 sources (10 completed, 3 pending)
-- Category 2 (Game Development Books): 25 sources (1 completed, 24 pending)
+- Category 2 (Game Development Books): 25 sources (2 completed, 23 pending)
 - Category 3 (Tabletop RPG Analysis): 1 source (completed)
 
 **New Sources Added at End:**
@@ -435,10 +435,14 @@ All 3 newly discovered sources have been appended to Category 1 (Survival Guide 
     - Priority: High
     - Focus: 3D modeling, asset pipeline, optimization
 
-22. **[digital]Visual Effects and Compositing**
-    - Status: ⏳ Pending detailed extraction
+22. **[digital]Visual Effects and Compositing** - COMPLETED
+    - Status: ✅ Complete
+    - Document: `game-dev-analysis-vfx-compositing.md`
+    - Lines: 1,023
+    - Completion Date: 2025-01-15
     - Priority: Medium
-    - Focus: VFX systems, particle effects, post-processing
+    - Focus: VFX systems, particle effects, post-processing, visual feedback, performance optimization
+    - Coverage: GPU particle systems, post-processing pipeline, LOD strategies, MMORPG-specific effects
 
 23. **Writing Interactive Music for Video Games**
     - Status: ⏳ Pending detailed extraction
