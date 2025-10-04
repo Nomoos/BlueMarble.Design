@@ -115,7 +115,8 @@ During your research, if you discover additional valuable sources, log them here
 **Priority:** High  
 **Category:** GameDev-Tech  
 **Rationale:** Active alternative to RakNet, simpler API, used by many modern indie multiplayer games  
-**Estimated Effort:** 6-8 hours
+**Estimated Effort:** 6-8 hours  
+**Status:** ✅ Analyzed in game-dev-analysis-enet-networking-library.md
 
 **Source Name:** GameNetworkingSockets (Valve)  
 **Discovered From:** RakNet (Open Source Version) analysis  
@@ -130,6 +131,20 @@ During your research, if you discover additional valuable sources, log them here
 **Category:** GameDev-Tech  
 **Rationale:** Modern C++ networking for action games, encrypted by default, good security patterns  
 **Estimated Effort:** 6-8 hours
+
+**Source Name:** libuv (Async I/O Library)  
+**Discovered From:** ENet Networking Library analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Could provide better async I/O performance for BlueMarble servers  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** kcp (Fast Reliable UDP Protocol)  
+**Discovered From:** ENet Networking Library analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Alternative reliability protocol with different trade-offs  
+**Estimated Effort:** 4-6 hours
 
 ---
 

@@ -499,7 +499,7 @@ This document catalogs online resources for game development with a focus on **R
 #### 34. **ENet (Networking Library)**
 - **URL:** http://enet.bespin.org/
 - **GitHub:** https://github.com/lsalzman/enet
-- **Status:** ⏳ Pending Analysis
+- **Status:** ✅ Analyzed in game-dev-analysis-enet-networking-library.md
 - **Priority:** High
 - **Language:** C
 - **Focus:**
