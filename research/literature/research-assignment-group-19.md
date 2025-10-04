@@ -139,7 +139,9 @@ Add discovered sources below this line:
 **Priority:** High  
 **Category:** GameDev-Tech  
 **Rationale:** Referenced extensively in Roblox development practices. Covers event systems, component patterns, and state management - highly applicable to BlueMarble's architecture  
-**Estimated Effort:** 8-10 hours
+**Estimated Effort:** 8-10 hours  
+**Status:** ✅ Completed  
+**Document:** game-dev-analysis-02-game-programming-patterns.md
 
 **Source Name:** Multiplayer Game Programming by Joshua Glazer  
 **Discovered From:** Roblox Game Development in 24 Hours research  
@@ -175,6 +177,34 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech  
 **Rationale:** Sophisticated guild/corporation systems and player-driven economy highly relevant to BlueMarble's planned social features  
 **Estimated Effort:** 5-6 hours
+
+**Source Name:** Data-Oriented Design by Richard Fabian  
+**Discovered From:** Game Programming Patterns research  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Performance-focused approach complementing component pattern. Critical for optimizing BlueMarble's entity system at scale  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Refactoring: Improving the Design of Existing Code by Martin Fowler  
+**Discovered From:** Game Programming Patterns research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Techniques for migrating to patterns. Useful for iterative improvement of BlueMarble's codebase  
+**Estimated Effort:** 5-6 hours
+
+**Source Name:** Game Engine Gems Series  
+**Discovered From:** Game Programming Patterns research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Pattern implementations in production engines. Real-world examples applicable to BlueMarble  
+**Estimated Effort:** 10-12 hours (multiple volumes)
+
+**Source Name:** Evolve Your Hierarchy - Mick West GDC Talk  
+**Discovered From:** Game Programming Patterns research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Component systems in practice. Addresses common pitfalls when transitioning from inheritance to composition  
+**Estimated Effort:** 2-3 hours
 
 ---
 
