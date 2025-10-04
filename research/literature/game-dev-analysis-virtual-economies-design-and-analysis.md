@@ -1660,6 +1660,19 @@ healthy_economy_indicators:
 - **Cross-Server Economy Synchronization** - If multiple server shards implemented
 - **Behavioral Economics in Games** - Player psychology and economic decisions
 
+### Discovered Sources During Research
+
+The following sources were discovered while analyzing "Virtual Economies: Design and Analysis" and are recommended for future research:
+
+1. **Castronova, E. (2001)** - "Virtual Worlds: A First-Hand Account of Market and Society on the Cyberian Frontier" - Foundational empirical research on virtual economies
+2. **Lehdonvirta, V. (2009)** - "Virtual Item Sales as a Revenue Model" - Monetization strategies for virtual goods
+3. **Szell, M., & Thurner, S. (2010)** - "Measuring Social Dynamics in MMORPGs" - Player behavior patterns analysis
+4. **EVE Online Quarterly Economic Reports** - Real-world MMORPG economic monitoring examples
+5. **Bartle, R. (2003)** - *Designing Virtual Worlds* - Classic virtual world design text
+6. **Salen, K., & Zimmerman, E. (2003)** - *Rules of Play* - Economic systems as game mechanics
+
+These sources have been logged in [research-assignment-group-35.md](./research-assignment-group-35.md) for future analysis.
+
 ---
 
 ## Appendix: Code Examples and Schemas
