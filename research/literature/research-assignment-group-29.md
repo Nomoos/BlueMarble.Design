@@ -115,7 +115,8 @@ During your research, if you discover additional valuable sources, log them here
 **Priority:** High  
 **Category:** GameDev-Tech  
 **Rationale:** Fast and reliable C++ ECS implementation extensively referenced in pattern analysis. Provides production-ready solution for BlueMarble's entity architecture with cache-friendly data layout and parallel processing support.  
-**Estimated Effort:** 4-6 hours
+**Estimated Effort:** 4-6 hours  
+**Status:** ✅ Completed - Analysis document created
 
 **Source Name:** flecs - Entity Component System Library  
 **Discovered From:** Game Programming Patterns (Online Edition)  
@@ -130,6 +131,31 @@ During your research, if you discover additional valuable sources, log them here
 **Category:** GameDev-Tech  
 **Rationale:** Foundational design patterns book that Game Programming Patterns builds upon. Selected chapters could inform architectural decisions for other BlueMarble systems beyond game-specific patterns.  
 **Estimated Effort:** 8-12 hours
+
+---
+
+### New Discoveries from EnTT Research
+
+**Source Name:** EntityX - C++ Entity Component System Library  
+**Discovered From:** EnTT Entity Component System Analysis  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Earlier C++ ECS library that influenced EnTT design. Provides historical context for ECS evolution in C++ and alternative implementation patterns.  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** Data-Oriented Design Book (Richard Fabian)  
+**Discovered From:** EnTT Entity Component System Analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Foundational concepts behind ECS architecture and cache-friendly data layouts. Essential for understanding performance characteristics and optimization strategies.  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** ECS Benchmark Repository  
+**Discovered From:** EnTT Entity Component System Analysis  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive benchmarks comparing various ECS implementations. Useful for validating architectural decisions and performance claims.  
+**Estimated Effort:** 2-3 hours
 
 ---
 
