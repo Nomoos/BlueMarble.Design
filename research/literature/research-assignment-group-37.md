@@ -110,7 +110,40 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** Unity 2D Documentation and Best Practices  
+**Discovered From:** 2D Game Development with Unity  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Official Unity documentation provides implementation details and performance optimization techniques for 2D games that complement the book's theoretical concepts  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** Latency Compensating Methods in Client/Server Protocol Design (GDC 2001)  
+**Discovered From:** 2D Game Development with Unity (networking patterns)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Valve's seminal GDC talk on client-side prediction and server reconciliation is directly applicable to BlueMarble's networked entity rendering  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** State Synchronization in Networked Games (Gaffer On Games)  
+**Discovered From:** 2D Game Development with Unity (networking patterns)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Glenn Fiedler's comprehensive series on networked game architecture provides practical implementation patterns for state synchronization in MMORPGs  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** World of Warcraft Client Architecture  
+**Discovered From:** 2D Game Development with Unity (MMORPG rendering patterns)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Blizzard's engineering talks on WoW's client architecture offer proven patterns for rendering thousands of entities in a persistent world  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Game Programming Patterns - Spatial Partitioning  
+**Discovered From:** 2D Game Development with Unity (collision detection optimization)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Covers quadtree and spatial hashing implementations essential for efficient entity queries in planet-scale environments  
+**Estimated Effort:** 2-3 hours
 
 ---
 
