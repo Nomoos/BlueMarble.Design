@@ -82,7 +82,7 @@ This assignment group focuses on analyzing game development resources from the o
 - [x] All documents have proper front matter
 - [x] All documents meet minimum length requirements
 - [x] Cross-references added
-- [ ] Discovered sources logged below
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,26 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** Mirror Networking  
+**Discovered From:** GameDev.tv (Unity Multiplayer Course references)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Open-source Unity networking solution that provides more control than built-in networking, essential for MMORPG-scale multiplayer with custom protocols and optimizations  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Fish-Networking (FishNet)  
+**Discovered From:** GameDev.tv (Modern Unity networking alternatives)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Modern Unity networking solution with better performance characteristics than Mirror, supports client-side prediction and server reconciliation out-of-the-box for smooth MMORPG gameplay  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Unity DOTS (Data-Oriented Tech Stack)  
+**Discovered From:** GameDev.tv (Performance optimization references)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Future scalability option for handling massive entity counts (geological features, resources, players) through ECS architecture and job system for multi-threaded performance  
+**Estimated Effort:** 10-12 hours
 
 ---
 

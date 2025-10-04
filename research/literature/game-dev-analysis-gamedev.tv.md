@@ -965,6 +965,35 @@ public class MineralVein : MonoBehaviour, IInteractable {
 
 ---
 
+## New Sources Discovered During Analysis
+
+During the analysis of GameDev.tv resources, the following additional sources were identified as valuable for BlueMarble MMORPG development:
+
+### 1. Mirror Networking
+- **Type:** Open-source Unity networking library
+- **URL:** https://github.com/vis2k/Mirror
+- **Priority:** High
+- **Rationale:** GameDev.tv courses reference Mirror as the modern replacement for Unity's deprecated UNET. Provides authoritative server model, client-side prediction, and better performance for MMORPGs.
+- **Next Action:** Schedule for detailed analysis in future research assignment
+
+### 2. Fish-Networking (FishNet)
+- **Type:** Modern Unity networking solution
+- **URL:** https://github.com/FirstGearGames/FishNet
+- **Priority:** High
+- **Rationale:** Emerging as a competitive alternative to Mirror with better performance characteristics and more flexible architecture. Supports both client-server and peer-to-peer models.
+- **Next Action:** Compare with Mirror for BlueMarble networking stack decision
+
+### 3. Unity DOTS (Data-Oriented Tech Stack)
+- **Type:** Unity's high-performance architecture system
+- **URL:** https://unity.com/dots
+- **Priority:** Medium
+- **Rationale:** For future scalability, DOTS offers ECS architecture and job system for multi-threaded performance when handling massive entity counts (geological features, resources, players across planet-scale map).
+- **Next Action:** Evaluate for Phase 4 optimization after core gameplay proven
+
+These discoveries have been logged in the parent research assignment document: [research-assignment-group-31.md](./research-assignment-group-31.md)
+
+---
+
 ## Related Research
 
 ### Within BlueMarble Repository
