@@ -127,7 +127,40 @@ Add discovered sources below this line:
 
 ---
 
-<!-- Discovery entries go here -->
+**Source Name:** 3D User Interfaces: Theory and Practice (2nd ed.) by LaViola et al.  
+**Discovered From:** 3D User Interfaces research  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Comprehensive textbook on 3D UI design patterns and techniques, directly applicable to BlueMarble's spatial interface needs for geological simulation and VR/AR future support  
+**Estimated Effort:** 12-16 hours
+
+**Source Name:** Beyond the HUD: User Interfaces for Increased Player Immersion in FPS Games  
+**Discovered From:** 3D User Interfaces research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Master's thesis exploring diegetic UI implementation, relevant for BlueMarble's goal of immersive geological scanner and crafting interfaces  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Game Accessibility Guidelines (gameaccessibilityguidelines.com)  
+**Discovered From:** 3D User Interfaces research  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Comprehensive checklist for accessible game design, essential for ensuring BlueMarble is playable by widest audience including colorblind modes, motion sensitivity, and alternative input methods  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Dead Space UI Design Postmortem  
+**Discovered From:** 3D User Interfaces research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Industry example of fully diegetic UI implementation, provides practical insights for integrating UI into BlueMarble's 3D world without breaking immersion  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Oculus/Meta VR Design Guidelines  
+**Discovered From:** 3D User Interfaces research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Official VR UI design standards, critical for Phase 3 VR/AR support planning and ensuring BlueMarble's UI architecture can scale to immersive technologies  
+**Estimated Effort:** 5-7 hours
 
 ---
 

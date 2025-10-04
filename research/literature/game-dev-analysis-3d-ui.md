@@ -1507,6 +1507,34 @@ BlueMarble should be playable by the widest possible audience:
 
 ---
 
+## Discovered Sources
+
+During this research, the following sources were identified as valuable for future research phases:
+
+1. **3D User Interfaces: Theory and Practice (2nd ed.)** by LaViola et al. (2017)
+   - Priority: High | Effort: 12-16h
+   - Comprehensive textbook covering spatial UI patterns applicable to planet-scale simulation
+
+2. **Beyond the HUD: User Interfaces for Increased Player Immersion in FPS Games**
+   - Priority: Medium | Effort: 4-6h  
+   - Master's thesis on diegetic UI implementation strategies
+
+3. **Game Accessibility Guidelines** (gameaccessibilityguidelines.com)
+   - Priority: High | Effort: 6-8h
+   - Essential resource for inclusive design and accessible game development
+
+4. **Dead Space UI Design Postmortem**
+   - Priority: Medium | Effort: 3-4h
+   - Industry case study of fully integrated diegetic interface systems
+
+5. **Oculus/Meta VR Design Guidelines**
+   - Priority: Medium | Effort: 5-7h
+   - Official VR standards for Phase 3 VR/AR support planning
+
+These sources are logged in the Assignment Group 13 file for Phase 2 research planning.
+
+---
+
 ## Appendix: Code Examples Repository
 
 Complete code examples for this document are available in:
