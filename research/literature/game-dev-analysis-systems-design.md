@@ -732,33 +732,48 @@ Each age unlocks:
 
 ## References
 
-### Books and Academic Sources
+### Primary Sources from Online Game Dev Resources Catalog
+
+**Primary Source:**
+- **The Art of Game Design: A Book of Lenses (3rd Edition)** by Jesse Schell
+  - Source Location: [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #6
+  - Publisher: CRC Press, ISBN 978-1138632059
+  - Focus Applied: Game design principles, player psychology, design lenses framework
+  - Specific Lenses Referenced:
+    - Lens #24: The Lens of the Loop - Core gameplay cycles
+    - Lens #25: The Lens of Meaningful Choices - Decision architecture
+    - Lens #32: The Lens of Goals - Progression systems
+    - Lens #42: The Lens of Economy - Resource management
+  - Online Resources: Deck of Lenses app (https://www.schellgames.com/art-of-game-design)
+
+### Supporting Books and Academic Sources
 
 1. **Game Design Workshop** by Tracy Fullerton
    - Chapters on core mechanics and feedback systems
    - Case studies of successful game loops
    - Playtesting methodologies
 
-2. **The Art of Game Design: A Book of Lenses** by Jesse Schell
-   - Lens #24: The Lens of the Loop
-   - Lens #25: The Lens of Meaningful Choices
-   - Lens #32: The Lens of Goals
-   - Lens #42: The Lens of Economy
-
-3. **A Theory of Fun for Game Design** by Raph Koster
+2. **A Theory of Fun for Game Design** by Raph Koster
    - Pattern recognition in games
    - Learning curves and mastery
    - Maintaining player interest
 
-4. **Game Mechanics: Advanced Game Design** by Ernest Adams and Joris Dormans
+3. **Game Mechanics: Advanced Game Design** by Ernest Adams and Joris Dormans
    - Mechanic design patterns
    - Economic systems in games
    - Progression systems
 
-5. **Designing Games: A Guide to Engineering Experiences** by Tynan Sylvester
+4. **Designing Games: A Guide to Engineering Experiences** by Tynan Sylvester
    - Systems thinking in game design
    - Player psychology
    - Balancing complexity and clarity
+
+5. **Game Programming Patterns** by Robert Nystrom
+   - Source Location: [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #8
+   - Free online: https://gameprogrammingpatterns.com/
+   - Component pattern (ECS) for system architecture
+   - Update method patterns for game loops
+   - Optimization patterns
 
 ### Industry Articles and GDC Talks
 
@@ -837,6 +852,34 @@ Each age unlocks:
    - Long-term progression loops
 
 ## Related Research
+
+### Newly Discovered Sources During Research
+
+During this research, the following additional sources were identified as highly relevant for future analysis:
+
+**1. Massively Multiplayer Game Development Series**
+- **Discovered From:** Research into economy and system scalability patterns
+- **Source:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #9
+- **Priority:** Critical for Phase 2
+- **Category:** GameDev-MMORPG
+- **Rationale:** Comprehensive coverage of MMORPG economy design and database patterns for persistent worlds - directly applicable to BlueMarble's large-scale geological simulation
+- **Estimated Effort:** 8-10 hours
+
+**2. Level Up! The Guide to Great Video Game Design**
+- **Discovered From:** Research into progression frameworks and mechanics design
+- **Source:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #7  
+- **Priority:** High
+- **Category:** GameDev-Design
+- **Rationale:** Specific focus on RPG systems design and top-down mechanics - directly applicable to BlueMarble's gameplay
+- **Estimated Effort:** 6-8 hours
+
+**3. Developing Online Games: An Insider's Guide**
+- **Discovered From:** Research into long-term player retention systems
+- **Source:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #10
+- **Priority:** Medium
+- **Category:** GameDev-LiveOps
+- **Rationale:** Player retention and community management for online survival games
+- **Estimated Effort:** 4-6 hours
 
 ### Within BlueMarble Repository
 

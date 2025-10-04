@@ -153,6 +153,30 @@ Add discovered sources below this line:
 
 ---
 
+**Source Name:** Massively Multiplayer Game Development Series (Volumes 1-2)  
+**Discovered From:** Topic 2 - Introduction to Game Systems Design (Economy and scalability research)  
+**Priority:** Critical  
+**Category:** GameDev-MMORPG  
+**Rationale:** Comprehensive coverage of MMORPG economy design, database patterns for persistent worlds, and system scalability - directly applicable to BlueMarble's large-scale geological simulation with player economy  
+**Estimated Effort:** 8-10 hours  
+**Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #9
+
+**Source Name:** Level Up! The Guide to Great Video Game Design (2nd Edition)  
+**Discovered From:** Topic 2 - Introduction to Game Systems Design (Progression frameworks and mechanics)  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Specific focus on RPG systems design, combat design, and top-down level design mechanics - directly applicable to BlueMarble's gameplay mechanics and progression systems  
+**Estimated Effort:** 6-8 hours  
+**Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #7
+
+**Source Name:** Developing Online Games: An Insider's Guide  
+**Discovered From:** Topic 2 - Introduction to Game Systems Design (Long-term player retention)  
+**Priority:** Medium  
+**Category:** GameDev-LiveOps  
+**Rationale:** Player retention strategies, community management, and live operations for online survival games - valuable for BlueMarble's multiplayer longevity  
+**Estimated Effort:** 4-6 hours  
+**Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #10
+
 <!-- Discovery entries go here -->
 
 ---
