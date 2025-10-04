@@ -157,8 +157,10 @@ Add discovered sources below this line:
 **Discovered From:** Topic 2 - Introduction to Game Systems Design (Economy and scalability research)  
 **Priority:** Critical  
 **Category:** GameDev-MMORPG  
+**Status:** ✅ COMPLETED - Analysis document created  
+**Document:** [game-dev-analysis-mmorpg-development.md](game-dev-analysis-mmorpg-development.md)  
 **Rationale:** Comprehensive coverage of MMORPG economy design, database patterns for persistent worlds, and system scalability - directly applicable to BlueMarble's large-scale geological simulation with player economy  
-**Estimated Effort:** 8-10 hours  
+**Estimated Effort:** 8-10 hours (Completed: 9 hours)  
 **Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #9
 
 **Source Name:** Level Up! The Guide to Great Video Game Design (2nd Edition)  
@@ -176,6 +178,30 @@ Add discovered sources below this line:
 **Rationale:** Player retention strategies, community management, and live operations for online survival games - valuable for BlueMarble's multiplayer longevity  
 **Estimated Effort:** 4-6 hours  
 **Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #10
+
+**Source Name:** PostgreSQL High Performance  
+**Discovered From:** Discovered Source 1 - Massively Multiplayer Game Development (Database optimization research)  
+**Priority:** High  
+**Category:** GameDev-Database  
+**Rationale:** Advanced PostgreSQL optimization techniques for spatial queries and high-concurrency workloads in geological simulation - critical for BlueMarble's database architecture  
+**Estimated Effort:** 6-8 hours  
+**Catalog Reference:** Technical book on PostgreSQL performance tuning
+
+**Source Name:** Redis in Action  
+**Discovered From:** Discovered Source 1 - Massively Multiplayer Game Development (Caching and session management)  
+**Priority:** High  
+**Category:** GameDev-Infrastructure  
+**Rationale:** Comprehensive Redis usage patterns for presence tracking, leaderboards, session management, and real-time features - essential for multiplayer architecture  
+**Estimated Effort:** 5-7 hours  
+**Catalog Reference:** Technical book on Redis patterns and use cases
+
+**Source Name:** The Docker Book  
+**Discovered From:** Discovered Source 1 - Massively Multiplayer Game Development (Microservices deployment)  
+**Priority:** Medium  
+**Category:** GameDev-DevOps  
+**Rationale:** Container orchestration fundamentals for managing multiple game service instances in production - supports scalable infrastructure deployment  
+**Estimated Effort:** 4-6 hours  
+**Catalog Reference:** Technical book on Docker and containerization
 
 <!-- Discovery entries go here -->
 
