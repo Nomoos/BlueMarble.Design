@@ -153,6 +153,36 @@ Add discovered sources below this line:
 
 ---
 
+**Source Name:** Geodetic Survey Manuals Collection  
+**Discovered From:** Historical Maps and Navigation Resources (Topic 2)  
+**Priority:** Medium  
+**Category:** Survival - Advanced Surveying  
+**Rationale:** Professional geodetic survey techniques including datum establishment, coordinate system transformations, and large-scale triangulation networks. Relevant for continental-scale mapping mechanics.  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Traditional Pacific Navigation (Polynesian Wayfinding)  
+**Discovered From:** Historical Maps and Navigation Resources (Topic 2)  
+**Priority:** Low  
+**Category:** Survival - Alternative Navigation Methods  
+**Rationale:** Non-instrument wayfinding techniques using stars, wave patterns, and wildlife observation. Alternative navigation skill trees for players without tools.  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Historical Chronometer Development Resources  
+**Discovered From:** Historical Maps and Navigation Resources (Topic 2)  
+**Priority:** Low  
+**Category:** Survival - Precision Timekeeping  
+**Rationale:** Detailed chronometer construction and maintenance. Relevant for high-tier crafting of navigation tools and longitude determination.  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Map Projection Mathematics References  
+**Discovered From:** Historical Maps and Navigation Resources (Topic 2)  
+**Priority:** Medium  
+**Category:** Technical - Cartography Implementation  
+**Rationale:** Mathematical foundations for implementing various map projections in-game. Essential for accurate map rendering and coordinate conversions.  
+**Estimated Effort:** 5-6 hours
+
+---
+
 <!-- Discovery entries go here -->
 
 ---
