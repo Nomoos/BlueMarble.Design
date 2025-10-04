@@ -28,18 +28,14 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 - **Overall Completion:** 100%
 ## Queue Status
 
-**Total Sources:** 86 (updated: +50 from online resources catalog)  
-**Completed:** 11  
-**In Progress:** 1  
-**Remaining:** 74  
 **Total Sources:** 39 (updated: +3 from auto-discovery)  
-**Completed:** 11  
+**Completed:** 12  
 **In Progress:** 0  
-**Remaining:** 28  
+**Remaining:** 27  
 
 **Original Count:** 36 sources (before auto-discovery)  
 **Sources Added:** 3 (Energy Systems, Historical Maps/Navigation, Specialized Collections)  
-**Completion Rate:** 28% (11 of 39 sources completed)  
+**Completion Rate:** 31% (12 of 39 sources completed)  
 
 ---
 
@@ -473,9 +469,10 @@ All 3 newly discovered sources have been appended to Category 1 (Survival Guide 
     - Focus: Unreal/VR-specific development
 
 29. **Roblox Game Development in 24 Hours**
-    - Status: ⏳ Pending
+    - Status: ✅ Completed
     - Priority: Very Low
-    - Focus: Platform-specific (likely not applicable)
+    - Focus: Platform-specific (generalizable concepts extracted)
+    - Document: game-dev-analysis-roblox-concepts.md
 
 30. **Augmented Reality / Practical Augmented Reality**
     - Status: ⏳ Pending
