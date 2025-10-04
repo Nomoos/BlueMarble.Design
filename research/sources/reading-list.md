@@ -3,7 +3,7 @@
 Curated reading list for BlueMarble research and development.
 
 **Last Updated:** 2025-01-17  
-**Total Sources:** 56 (50 books + 6 survival collections)  
+**Total Sources:** 73 (60 books + 13 survival collections)  
 **Completed Analysis:** 11 sources  
 **Status:** Active - Tracking all research literature sources
 
@@ -69,6 +69,19 @@ Curated reading list for BlueMarble research and development.
 ---
 
 ## Medium Priority (Supporting Systems)
+
+### Performance Optimization (C# vs C++)
+
+- [ ] **Writing High-Performance .NET Code (2nd Edition)** by Ben Watson - Comprehensive guide to .NET/C# performance with comparisons to native code, GC optimization, benchmarking
+- [ ] **Pro .NET Performance: Optimize Your C# Applications** by Sasha Goldshtein, Dima Zurbalev, Ido Flatow - Deep dive into .NET performance profiling with native code comparisons
+- [ ] **C++ High Performance (2nd Edition)** by Bjorn Andrist, Viktor Sehr - Modern C++ performance optimization with benchmark comparisons to managed languages including C#
+- [ ] **Optimized C++: Proven Techniques for Heightened Performance** by Kurt Guntheroth - C++ optimization strategies with comparisons to managed languages
+- [ ] **CLR via C# (4th Edition)** by Jeffrey Richter - Essential for understanding C# performance vs native code, CLR internals
+- [ ] **Pro .NET Memory Management** by Konrad Kokosa - Deep analysis of managed vs unmanaged memory performance
+- [ ] **C# Performance Best Practices** by Nick Harrison - Practical C# performance with native interop discussions
+- [ ] **High-Performance C# Programming** by Jason Alls - Modern C# performance techniques with .NET 6/7
+- [ ] **Effective C++ (3rd Edition)** by Scott Meyers - Industry standard C++ optimization reference
+- [ ] **More Effective C++** by Scott Meyers - Advanced C++ optimization patterns
 
 ### RPG and Top-Down Development
 

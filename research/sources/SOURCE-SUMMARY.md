@@ -16,9 +16,9 @@ This document provides a high-level summary of all research sources tracked in t
 | Category | Downloaded | Processed/Analyzed | Pending | Total |
 |----------|------------|-------------------|---------|-------|
 | **Survival Collections** | 10 | 10 | 3 | 13 |
-| **Books & Technical Resources** | N/A* | 1 | 49 | 50 |
+| **Books & Technical Resources** | N/A* | 1 | 59 | 60 |
 | **Online Resources** | N/A* | Ongoing | - | 20+ |
-| **TOTAL** | **10** | **11** | **52** | **63+** |
+| **TOTAL** | **10** | **11** | **62** | **73+** |
 
 \* Books and online resources are not physically downloaded; they are accessed as needed or already available.
 
@@ -54,13 +54,13 @@ This document provides a high-level summary of all research sources tracked in t
 
 ---
 
-### Books & Technical Resources (50 Total)
+### Books & Technical Resources (60 Total)
 
 #### Processed with Detailed Analysis (1)
 
 1. ✅ **Game Programming in C++** - Complete analysis (1,150 lines)
 
-#### Catalogued with Pending Analysis (49)
+#### Catalogued with Pending Analysis (59)
 
 **Critical Priority (4 books):**
 - Multiplayer Game Programming
@@ -73,7 +73,8 @@ This document provides a high-level summary of all research sources tracked in t
 - Game design theory: Art of Game Design, Level Up!, etc.
 - Development process books
 
-**Medium Priority (15 books):**
+**Medium Priority (25 books):**
+- **NEW: C# vs C++ Performance (10 books)** - Performance optimization, memory management, benchmarking
 - RPG development, procedural generation
 - Content creation tools
 - Virtual economies
@@ -82,9 +83,9 @@ This document provides a high-level summary of all research sources tracked in t
 - Platform-specific guides
 - Specialized topics
 
-**Documentation:** All 50 books catalogued in:
-- `sources.bib` (33 BibTeX entries)
-- `reading-list.md` (84 tracked items including online resources)
+**Documentation:** All 60 books catalogued in:
+- `sources.bib` (43 BibTeX entries)
+- `reading-list.md` (94 tracked items including online resources)
 
 ---
 

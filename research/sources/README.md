@@ -3,7 +3,7 @@
 This directory contains bibliography, reading lists, and source documentation for BlueMarble research.
 
 **Last Updated:** 2025-01-17  
-**Total Sources Tracked:** 63+ (50 books + 13 survival collections + 20+ online)  
+**Total Sources Tracked:** 73+ (60 books + 13 survival collections + 20+ online)  
 **Status:** Active - Comprehensive source tracking system
 
 ---
@@ -19,16 +19,17 @@ This directory contains bibliography, reading lists, and source documentation fo
   - Next steps and priorities
   
 - **sources.bib**: Complete bibliography in BibTeX format
-  - 33 BibTeX entries covering all major sources
-  - Categorized by topic (game programming, design theory, multiplayer, etc.)
-  - Includes survival knowledge collections
+  - 43 BibTeX entries covering all major sources
+  - Categorized by topic (game programming, design theory, multiplayer, performance optimization, etc.)
+  - Includes survival knowledge collections and C# vs C++ performance books
   - Online resources and open source projects
   
 - **reading-list.md**: Curated reading list with priorities and status tracking
-  - 84 tracked items across all source types
+  - 94 tracked items across all source types
   - Organized by priority (Critical, High, Medium, Low)
   - Tracks completion status (✓ completed, 🔍 in progress, ⏳ pending)
   - Cross-referenced with analysis documents
+  - Includes new C# vs C++ performance optimization section
   
 - **survival-sources.md**: Survival knowledge collection download sources
   - 13 major collections tracked
@@ -44,7 +45,7 @@ This directory contains bibliography, reading lists, and source documentation fo
 
 ## Source Categories
 
-### Game Development Books (50 sources)
+### Game Development Books (60 sources)
 
 #### Critical Priority (MMORPG Core)
 - Multiplayer Game Programming
@@ -60,6 +61,7 @@ This directory contains bibliography, reading lists, and source documentation fo
 - Open source project documentation
 
 #### Medium Priority (Supporting)
+- **Performance Optimization (10 books)** - C# vs C++ performance, memory management, benchmarking
 - Content creation tools
 - Procedural generation
 - Virtual economies
