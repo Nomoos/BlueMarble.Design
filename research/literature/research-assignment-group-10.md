@@ -155,6 +155,41 @@ Add discovered sources below this line:
 
 <!-- Discovery entries go here -->
 
+**Source Name:** "I Have No Words & I Must Design" by Greg Costikyan (2002)  
+**Discovered From:** A Game Design Vocabulary research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Seminal paper on the need for critical vocabulary in game design discourse. Directly addresses the challenges of communicating design concepts without standardized terminology. Highly relevant for establishing design communication standards in BlueMarble.  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** Game Design Patterns Project (gamedesignpatterns.org)  
+**Discovered From:** A Game Design Vocabulary research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Community-driven effort to catalog and standardize game design patterns with consistent vocabulary. Valuable for developing pattern language for BlueMarble's geological and survival systems.  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Designer Notes Podcast by Soren Johnson  
+**Discovered From:** A Game Design Vocabulary research  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Industry interviews discussing design vocabulary in practice. Provides real-world examples of how professional designers communicate complex concepts. Useful for understanding practical application of design terminology.  
+**Estimated Effort:** 6-8 hours (selective episodes)
+
+**Source Name:** "Games without Frontiers: Theories and Methods for Game Studies and Design" by Aki Järvinen (2008)  
+**Discovered From:** A Game Design Vocabulary research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Academic perspective on game design vocabulary and methodology. Bridges academic research with practical design communication, valuable for establishing theoretical foundation.  
+**Estimated Effort:** 5-6 hours
+
+**Source Name:** IGDA Game Design SIG Curriculum Framework  
+**Discovered From:** A Game Design Vocabulary research  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Educational standards for game design vocabulary. Useful for establishing baseline terminology for team onboarding and documentation standards in BlueMarble project.  
+**Estimated Effort:** 3-4 hours
+
 ---
 
 ## Submission Guidelines

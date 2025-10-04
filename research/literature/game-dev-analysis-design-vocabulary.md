@@ -856,6 +856,49 @@ that drives player progression and geological exploration.
 
 ---
 
+## Discovered Sources During Research
+
+During the analysis of game design vocabulary, several additional sources were discovered that may warrant future investigation:
+
+1. **"I Have No Words & I Must Design" by Greg Costikyan (2002)**
+   - **Category:** GameDev-Design
+   - **Priority:** Medium
+   - **Rationale:** Seminal paper on the need for critical vocabulary in game design discourse. Directly addresses the challenges of communicating design concepts without standardized terminology.
+   - **Estimated Effort:** 2-3 hours for analysis
+   - **Source:** Proceedings of Computer Games and Digital Cultures Conference
+
+2. **Game Design Patterns Project (gamedesignpatterns.org)**
+   - **Category:** GameDev-Design
+   - **Priority:** Medium
+   - **Rationale:** Community-driven effort to catalog and standardize game design patterns with consistent vocabulary. Valuable for pattern language development in BlueMarble.
+   - **Estimated Effort:** 4-5 hours for comprehensive review
+   - **Source:** Online collaborative project
+
+3. **Designer Notes Podcast by Soren Johnson**
+   - **Category:** GameDev-Design
+   - **Priority:** Low
+   - **Rationale:** Industry interviews discussing design vocabulary in practice. Provides real-world examples of how professional designers communicate complex concepts.
+   - **Estimated Effort:** 6-8 hours (selective episodes)
+   - **Source:** Podcast series with game designers
+
+4. **"Games without Frontiers" by Aki Järvinen (2008)**
+   - **Category:** GameDev-Design
+   - **Priority:** Medium
+   - **Rationale:** Academic perspective on game design vocabulary and methodology. Bridges academic research with practical design communication.
+   - **Estimated Effort:** 5-6 hours
+   - **Source:** Tampere University Press
+
+5. **IGDA Game Design SIG Curriculum Framework**
+   - **Category:** GameDev-Design
+   - **Priority:** Low
+   - **Rationale:** Educational standards for game design vocabulary. Useful for establishing baseline terminology for team onboarding.
+   - **Estimated Effort:** 3-4 hours
+   - **Source:** IGDA (International Game Developers Association)
+
+These sources have been logged in the Assignment Group 10 file for potential future research phases.
+
+---
+
 ## Appendix A: Quick Reference Glossary
 
 ### Core Concepts
