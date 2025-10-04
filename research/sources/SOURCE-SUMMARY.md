@@ -16,9 +16,9 @@ This document provides a high-level summary of all research sources tracked in t
 | Category | Downloaded | Processed/Analyzed | Pending | Total |
 |----------|------------|-------------------|---------|-------|
 | **Survival Collections** | 10 | 10 | 3 | 13 |
-| **Books & Technical Resources** | N/A* | 1 | 59 | 60 |
-| **Online Resources** | N/A* | Ongoing | - | 20+ |
-| **TOTAL** | **10** | **11** | **62** | **73+** |
+| **Books & Technical Resources** | N/A* | 2 | 58 | 60 |
+| **Online Resources** | N/A* | Ongoing | - | 25+ |
+| **TOTAL** | **10** | **12** | **61** | **78+** |
 
 \* Books and online resources are not physically downloaded; they are accessed as needed or already available.
 
@@ -56,11 +56,12 @@ This document provides a high-level summary of all research sources tracked in t
 
 ### Books & Technical Resources (60 Total)
 
-#### Processed with Detailed Analysis (1)
+#### Processed with Detailed Analysis (2)
 
 1. ✅ **Game Programming in C++** - Complete analysis (1,150 lines)
+2. ✅ **Multiplayer Game Programming: Architecting Networked Games** - Complete analysis (1,000 lines)
 
-#### Catalogued with Pending Analysis (59)
+#### Catalogued with Pending Analysis (58)
 
 **Critical Priority (4 books):**
 - Multiplayer Game Programming

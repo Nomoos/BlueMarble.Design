@@ -3,8 +3,8 @@
 Curated reading list for BlueMarble research and development.
 
 **Last Updated:** 2025-01-17  
-**Total Sources:** 73 (60 books + 13 survival collections)  
-**Completed Analysis:** 11 sources  
+**Total Sources:** 78 (60 books + 13 survival collections + 5 online resources)  
+**Completed Analysis:** 12 sources  
 **Status:** Active - Tracking all research literature sources
 
 ---
@@ -13,7 +13,7 @@ Curated reading list for BlueMarble research and development.
 
 ### Multiplayer Architecture
 
-- [ ] **Multiplayer Game Programming: Architecting Networked Games** by Joshua Glazer, Sanjay Madhav - Essential for planet-scale MMORPG networking, client-server architecture, state synchronization
+- [x] **Multiplayer Game Programming: Architecting Networked Games** by Joshua Glazer, Sanjay Madhav - Complete analysis (game-dev-analysis-02-multiplayer-programming.md)
 - [ ] **Network Programming for Games: Real-Time Multiplayer Systems** - Critical for MMORPG scalability, real-time protocols, distributed systems
 - [ ] **Game Engine Architecture (3rd Edition)** by Jason Gregory - Comprehensive engine architecture, subsystem integration, networking for multiplayer
 - [ ] **MMO Architecture: Source Code and Insights** - Direct MMORPG implementation patterns
@@ -141,6 +141,7 @@ Curated reading list for BlueMarble research and development.
 ### Documentation and Tutorials
 
 - [ ] **Game Programming Patterns (Online Edition)** by Robert Nystrom - Free online with code examples
+- [ ] **Gaffer on Games** by Glenn Fiedler - Excellent practical networking articles (https://gafferongames.com/)
 - [ ] **Gamasutra/Game Developer Articles** - Industry articles and postmortems
 - [ ] **GameDev.net** - Community tutorials and resources
 - [ ] **GDQuest - Godot Tutorials** - Video tutorials for Godot
@@ -149,6 +150,9 @@ Curated reading list for BlueMarble research and development.
 - [ ] **Code Monkey** - Unity game development
 - [ ] **GameDev.tv** - Course platform
 - [ ] **GDC (Game Developers Conference)** - Industry talks and presentations
+- [ ] **"1500 Archers on a 28.8"** - Age of Empires networking GDC talk
+- [ ] **Tribes Networking Model** - Mark Frohnmayer's pioneering FPS networking
+- [ ] **Quake 3 Source Code** - Reference implementation (https://github.com/id-Software/Quake-III-Arena)
 
 ### Communities and Forums
 
@@ -160,7 +164,7 @@ Curated reading list for BlueMarble research and development.
 
 ### Case Study Games
 
-- [ ] **EVE Online** - Large-scale space MMORPG systems
+- [ ] **EVE Online** - Large-scale space MMORPG systems (GDC talks)
 - [ ] **World of Warcraft** - Traditional MMORPG architecture
 - [ ] **Ultima Online** - Historical MMORPG design
 - [ ] **RuneScape (Old School)** - Browser-based MMORPG patterns
@@ -172,6 +176,7 @@ Curated reading list for BlueMarble research and development.
 ### Research Literature
 
 - [x] **Game Programming in C++** - Detailed analysis (game-dev-analysis-01-game-programming-cpp.md, 1,150 lines)
+- [x] **Multiplayer Game Programming** - Comprehensive networking analysis (game-dev-analysis-02-multiplayer-programming.md, 1,000 lines)
 - [x] **Tabletop RPG Mechanics Overview** - 9 RPGs analyzed (game-design-mechanics-analysis.md, 1,263 lines)
 - [x] **Game Development Resources Overview** - 20+ books organized (game-development-resources-analysis.md, 702 lines)
 - [x] **Online Game Development Resources Catalog** - Active auto-growing list (online-game-dev-resources.md, 880+ lines)
