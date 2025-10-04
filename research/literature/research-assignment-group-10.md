@@ -160,7 +160,9 @@ Add discovered sources below this line:
 **Priority:** Medium  
 **Category:** GameDev-Design  
 **Rationale:** Seminal paper on the need for critical vocabulary in game design discourse. Directly addresses the challenges of communicating design concepts without standardized terminology. Highly relevant for establishing design communication standards in BlueMarble.  
-**Estimated Effort:** 2-3 hours
+**Estimated Effort:** 2-3 hours  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-costikyan-vocabulary.md`
 
 **Source Name:** Game Design Patterns Project (gamedesignpatterns.org)  
 **Discovered From:** A Game Design Vocabulary research  
@@ -189,6 +191,20 @@ Add discovered sources below this line:
 **Category:** GameDev-Design  
 **Rationale:** Educational standards for game design vocabulary. Useful for establishing baseline terminology for team onboarding and documentation standards in BlueMarble project.  
 **Estimated Effort:** 3-4 hours
+
+**Source Name:** "Uncertainty in Games" by Greg Costikyan (2013)  
+**Discovered From:** Costikyan "I Have No Words & I Must Design" analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Book-length expansion of design vocabulary concepts, specifically focusing on information states and decision-making. Directly relevant to BlueMarble's geological prediction systems where players make decisions under uncertainty.  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** "Cybertext: Perspectives on Ergodic Literature" by Espen Aarseth (1997)  
+**Discovered From:** Costikyan "I Have No Words & I Must Design" analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Academic foundation for interactive narrative vocabulary. Relevant for understanding player agency in BlueMarble's discovery-driven narrative where players uncover geological history through exploration.  
+**Estimated Effort:** 6-8 hours
 
 ---
 
