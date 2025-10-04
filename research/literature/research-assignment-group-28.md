@@ -133,6 +133,29 @@ During your research, if you discover additional valuable sources, log them here
 
 ---
 
+**Source Name:** Unity Transport Package Documentation  
+**Discovered From:** Unity Netcode for GameObjects Documentation  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Low-level networking transport layer with custom protocol support, essential for understanding UDP optimization for MMORPG networking  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Netcode NetworkVariable Serialization Guide  
+**Discovered From:** Unity Netcode for GameObjects Documentation  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced serialization techniques for bandwidth optimization, critical for MMORPG scale with thousands of entities  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Client-Side Prediction and Server Reconciliation (Valve Developer Community)  
+**Discovered From:** Unity Netcode for GameObjects Documentation  
+**Priority:** Critical  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive explanation of Source Engine's networking model, industry-proven patterns for FPS/MMO games used by Half-Life, Counter-Strike, and Team Fortress  
+**Estimated Effort:** 6-8 hours
+
+---
+
 ## Submission Guidelines
 
 When complete:
