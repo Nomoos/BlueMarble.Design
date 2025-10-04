@@ -61,6 +61,26 @@ When activating this group:
 **Date Discovered:** [YYYY-MM-DD]
 ```
 
+### Newly Discovered Sources (From Topic 20.1 Analysis)
+
+**Source Name:** Real-Time Rendering (4th Edition)  
+**Discovered From:** Game Engine Architecture analysis (Topic 20.1)  
+**Discovered By:** Group 20  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Essential reference for advanced rendering techniques applicable to planet-scale terrain and atmospheric effects in BlueMarble.  
+**Estimated Effort:** 12-16 hours  
+**Date Discovered:** 2025-01-17
+
+**Source Name:** Graphics Programming Interface Design  
+**Discovered From:** Game Engine Architecture analysis (Topic 20.1)  
+**Discovered By:** Group 20  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Provides patterns for abstracting graphics APIs (Vulkan/OpenGL), important for BlueMarble's multi-platform support.  
+**Estimated Effort:** 6-8 hours  
+**Date Discovered:** 2025-01-17
+
 ### Assigned Topics
 
 <!-- Topics will be added here as discoveries are made -->

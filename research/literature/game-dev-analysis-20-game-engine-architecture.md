@@ -1076,6 +1076,24 @@ private:
 
 ---
 
+## Discovered Sources
+
+During this analysis, the following sources were identified for future research:
+
+1. **Real-Time Rendering (4th Edition)**
+   - **Priority:** High
+   - **Rationale:** Essential reference for advanced rendering techniques applicable to planet-scale terrain and atmospheric effects in BlueMarble
+   - **Estimated Effort:** 12-16 hours
+
+2. **Graphics Programming Interface Design**
+   - **Priority:** Medium
+   - **Rationale:** Provides patterns for abstracting graphics APIs (Vulkan/OpenGL), important for BlueMarble's multi-platform support
+   - **Estimated Effort:** 6-8 hours
+
+These sources have been logged in the research-assignment-group-20.md file for future assignment and analysis.
+
+---
+
 **Research Completed:** 2025-01-17  
 **Analysis Depth:** Comprehensive (950+ lines)  
 **Implementation Priority:** High (foundational systems)  
