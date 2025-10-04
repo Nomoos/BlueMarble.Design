@@ -13,6 +13,8 @@ status: active
 **Total Assignees Needed:** 40  
 **Estimated Timeline:** 1-2 weeks
 
+**See also:** [phase-1-research-note.md](phase-1-research-note.md) - Complete Phase 1 research note with instructions for child issues
+
 ## Overview
 
 This document provides an overview of the 40 balanced research assignment groups created for maximum parallel execution. The research includes:
