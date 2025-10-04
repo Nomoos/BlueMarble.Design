@@ -127,7 +127,47 @@ Add discovered sources below this line:
 
 ---
 
-<!-- Discovery entries go here -->
+**Source Name:** GPU Gems Series - NVIDIA Developer  
+**Discovered From:** Visual Effects and Compositing (Topic 11)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive GPU programming techniques for particle systems and visual effects. Free online resource with specific chapters on high-speed particles and refraction simulation highly relevant for BlueMarble's VFX pipeline.  
+**Estimated Effort:** 8-12 hours (multiple relevant chapters)
+
+**Source Name:** Real-Time Rendering, 4th Edition  
+**Discovered From:** Visual Effects and Compositing (Topic 11)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Industry-standard reference for graphics programming covering image-space effects and acceleration algorithms essential for MMORPG rendering performance optimization.  
+**Estimated Effort:** 12-16 hours (comprehensive book, focus on relevant chapters)
+
+**Source Name:** GDC Talk - "The Visual Effects of Guild Wars 2"  
+**Discovered From:** Visual Effects and Compositing (Topic 11)  
+**Priority:** Medium  
+**Category:** GameDev-Content  
+**Rationale:** Real-world MMORPG VFX system architecture case study from a successful MMO. Practical implementation insights for large-scale multiplayer VFX challenges.  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Unity VFX Graph Documentation  
+**Discovered From:** Visual Effects and Compositing (Topic 11)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Modern node-based VFX creation system documentation providing insights into GPU-driven particle workflows and shader graph patterns applicable to custom engine development.  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Unreal Engine Niagara Documentation  
+**Discovered From:** Visual Effects and Compositing (Topic 11)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced GPU particle system architecture from industry-leading engine. Provides patterns for compute shader-driven particles, LOD systems, and performance optimization strategies.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** ShaderToy Platform  
+**Discovered From:** Visual Effects and Compositing (Topic 11)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Community-driven shader examples and experiments. Useful for post-processing techniques, screen-space effects, and visual effect prototyping.  
+**Estimated Effort:** 2-4 hours (curated examples review)
 
 ---
 

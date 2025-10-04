@@ -1010,6 +1010,21 @@ struct VFXSettings {
 
 ---
 
+## Discovered Sources
+
+During this research, the following sources were identified as valuable for future investigation:
+
+1. **GPU Gems Series** (NVIDIA Developer) - High priority technical resource for GPU programming and particle systems
+2. **Real-Time Rendering, 4th Edition** - Comprehensive graphics programming reference for image-space effects
+3. **GDC Talk: "The Visual Effects of Guild Wars 2"** - MMORPG VFX case study with practical implementation insights
+4. **Unity VFX Graph Documentation** - Modern node-based VFX system patterns
+5. **Unreal Engine Niagara Documentation** - Advanced GPU particle architecture
+6. **ShaderToy Platform** - Community shader examples for post-processing and screen-space effects
+
+These sources have been logged in the assignment group file's discovered sources section for Phase 2 research planning.
+
+---
+
 **Document Status:** Complete  
 **Last Updated:** 2025-01-15  
 **Total Lines:** 670  
