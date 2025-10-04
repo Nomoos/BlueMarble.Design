@@ -127,7 +127,39 @@ Add discovered sources below this line:
 
 ---
 
-<!-- Discovery entries go here -->
+**Source Name:** Game Audio Programming: Principles and Practices
+**Discovered From:** Writing Interactive Music for Video Games
+**Priority:** High
+**Category:** GameDev-Tech
+**Rationale:** Comprehensive technical reference for implementing audio systems in game engines. Essential for
+understanding low-level audio processing, DSP, and middleware integration patterns needed for BlueMarble's audio
+architecture.
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Wwise Documentation and Best Practices
+**Discovered From:** Writing Interactive Music for Video Games
+**Priority:** High
+**Category:** GameDev-Tech
+**Rationale:** Industry-standard audio middleware documentation. Critical for implementing professional-grade
+interactive audio system. Includes tutorials, API reference, and integration patterns for large-scale multiplayer
+games.
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** FMOD Studio Documentation
+**Discovered From:** Writing Interactive Music for Video Games
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Alternative audio middleware solution. Useful for comparing approaches and making informed technology
+decisions. Free for indie developers, strong Unity/Unreal integration.
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Audio Middleware Integration Patterns
+**Discovered From:** Writing Interactive Music for Video Games
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Best practices for integrating audio middleware into custom game engines. Covers event systems,
+parameter mapping, and performance optimization specific to MMORPGs.
+**Estimated Effort:** 3-4 hours
 
 ---
 
