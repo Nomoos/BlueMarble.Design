@@ -1178,6 +1178,21 @@ std::string GetPlayerName(PlayerID id) {
 
 ---
 
+## Discovered Sources
+
+During this research, the following additional sources were identified as valuable for future analysis:
+
+1. **Effective Modern C++** (Scott Meyers, 2014) - Updated guidance for C++11/14 features
+2. **C++17 - The Complete Guide** (Nicolai Josuttis, 2019) - Comprehensive C++17 feature coverage
+3. **C++ Core Guidelines** (Stroustrup & Sutter) - Authoritative best practices from language creators
+4. **Data-Oriented Design Book** (Richard Fabian) - Cache-friendly structures for game engines
+5. **Awesome Modern C++** (GitHub) - Curated collection of modern C++ resources
+6. **C++ Best Practices Repository** (GitHub) - Community-maintained best practices guide
+
+These sources have been logged in the research assignment group file for future research phases.
+
+---
+
 **Document Status:** Complete  
 **Last Updated:** 2025-01-15  
 **Next Steps:** 
