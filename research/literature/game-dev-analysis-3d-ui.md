@@ -1511,6 +1511,8 @@ BlueMarble should be playable by the widest possible audience:
 
 During this research, the following sources were identified as valuable for future research phases:
 
+### Primary Discoveries (From Initial Research)
+
 1. **3D User Interfaces: Theory and Practice (2nd ed.)** by LaViola et al. (2017)
    - Priority: High | Effort: 12-16h
    - Comprehensive textbook covering spatial UI patterns applicable to planet-scale simulation
@@ -1530,6 +1532,46 @@ During this research, the following sources were identified as valuable for futu
 5. **Oculus/Meta VR Design Guidelines**
    - Priority: Medium | Effort: 5-7h
    - Official VR standards for Phase 3 VR/AR support planning
+
+### Secondary Discoveries (From Primary Sources)
+
+6. **Designing Accessible Interfaces for Video Games** (Stonehouse, 2014)
+   - Priority: Medium | Effort: 4-6h
+   - Academic research on accessibility implementation from Game Accessibility Conference
+
+7. **Game Usability Heuristics (PLAY)** - Desurvire & Wiberg (2009)
+   - Priority: Medium | Effort: 3-4h
+   - HCI research establishing usability evaluation framework for games
+
+8. **The Division's World-Integrated UI Postmortem**
+   - Priority: Medium | Effort: 3-4h
+   - AAA open-world diegetic UI implementation case study
+
+9. **Elite Dangerous VR Interface Design**
+   - Priority: Medium | Effort: 3-4h
+   - Space simulation VR UI implementation insights
+
+10. **W3C Web Content Accessibility Guidelines (WCAG)**
+    - Priority: High | Effort: 5-7h
+    - International accessibility standards for color contrast, text, interaction
+
+11. **Xbox Accessibility Guidelines (XAG)**
+    - Priority: Medium | Effort: 4-5h
+    - Platform-specific accessibility requirements for console support
+
+12. **GDC Talk - "Designing UI for VR"** by Mike Alger (Google)
+    - Priority: Medium | Effort: 2-3h
+    - Industry expert presentation on VR UI best practices
+
+13. **Gamasutra - "The Science of Game UI" Series**
+    - Priority: Medium | Effort: 4-5h
+    - Multi-part analysis of UI design patterns across game genres
+
+14. **SteamVR Interaction System Documentation**
+    - Priority: Low | Effort: 3-4h
+    - Valve's VR interaction framework for PC VR platform support
+
+**Total Additional Research Effort:** 52-66 hours across 14 discovered sources
 
 These sources are logged in the Assignment Group 13 file for Phase 2 research planning.
 
