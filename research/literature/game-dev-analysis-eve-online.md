@@ -814,6 +814,17 @@ Full Single-Shard Architecture:
 - [../topics/wow-emulator-architecture-networking.md](../topics/wow-emulator-architecture-networking.md) -
   MMORPG architecture comparison
 
+### Discovered Sources During Research
+
+The following sources were discovered while analyzing EVE Online and logged for future research:
+
+1. **CCP Games Developer Blogs** - Technical deep-dives on server architecture and economics
+2. **"Virtual Economies: Design and Analysis"** - Academic book with EVE case studies
+3. **EVE Fanfest/GDC Talks** - Conference presentations on scalability and system design
+4. **EVE University Wiki** - Comprehensive community documentation of game mechanics
+
+These sources have been logged in the parent assignment file for potential future analysis.
+
 ---
 
 **Document Status:** Complete  
