@@ -117,7 +117,7 @@ This document catalogs online resources for game development with a focus on **R
 - **Author:** Jesse Schell
 - **Publisher:** CRC Press
 - **ISBN:** 978-1138632059
-- **Status:** ⏳ Pending Analysis
+- **Status:** ✅ Analyzed in game-dev-analysis-systems-design.md
 - **Priority:** High
 - **Focus Areas:**
   - Game design principles
@@ -125,6 +125,7 @@ This document catalogs online resources for game development with a focus on **R
   - Design lenses framework
   - Playtesting methodology
 - **Relevance to BlueMarble:** Core design philosophy for MMORPG systems
+- **Analysis Document:** [game-dev-analysis-systems-design.md](game-dev-analysis-systems-design.md)
 - **Online Resources:**
   - Deck of Lenses app: https://www.schellgames.com/art-of-game-design
   - Author's talks: https://www.youtube.com/user/jesseschell
@@ -146,7 +147,7 @@ This document catalogs online resources for game development with a focus on **R
 - **Author:** Robert Nystrom
 - **Publisher:** Genever Benning
 - **ISBN:** 978-0990582908
-- **Status:** ⏳ Pending Analysis
+- **Status:** ✅ Referenced in game-dev-analysis-systems-design.md
 - **Priority:** High
 - **Focus Areas:**
   - Design patterns for games
@@ -154,6 +155,7 @@ This document catalogs online resources for game development with a focus on **R
   - Update method patterns
   - Optimization patterns
 - **Relevance to BlueMarble:** Clean architecture for MMORPG systems
+- **Analysis Document:** [game-dev-analysis-systems-design.md](game-dev-analysis-systems-design.md)
 - **Online Resources:**
   - Free online version: https://gameprogrammingpatterns.com/
   - GitHub: https://github.com/munificent/game-programming-patterns
@@ -165,7 +167,7 @@ This document catalogs online resources for game development with a focus on **R
 #### 9. **Massively Multiplayer Game Development (Series)**
 - **Editor:** Thor Alexander
 - **Publisher:** Charles River Media
-- **Status:** ⏳ Pending Analysis
+- **Status:** ✅ Analyzed in game-dev-analysis-mmorpg-development.md
 - **Priority:** Critical
 - **Volumes:**
   - Volume 1: ISBN 978-1584502432
@@ -177,6 +179,7 @@ This document catalogs online resources for game development with a focus on **R
   - Economy design
   - Social systems
 - **Relevance to BlueMarble:** Comprehensive MMORPG architecture guide
+- **Analysis Document:** [game-dev-analysis-mmorpg-development.md](game-dev-analysis-mmorpg-development.md)
 - **Note:** Some content may be dated but core concepts remain relevant
 
 #### 10. **Developing Online Games: An Insider's Guide**
