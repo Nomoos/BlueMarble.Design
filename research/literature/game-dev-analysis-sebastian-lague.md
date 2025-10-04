@@ -801,6 +801,44 @@ terrain.AddFeature(new ForestFeature());
 - Assignment Group 5: "Multiplayer Game Programming" - Networking for multiplayer
 - Assignment Group 8: "Game Programming Patterns" - Software architecture patterns
 
+### Discovered Sources During Research
+
+**Books:**
+1. **"The Nature of Code" by Daniel Shiffman**
+   - Focus: Algorithms for procedural generation and natural simulations
+   - Relevance: Ecosystem simulation, particle systems
+   - Status: Recommended for future research
+
+2. **"Real-Time Rendering" (4th Edition)**
+   - Already cataloged in online-game-dev-resources.md (Source #4)
+   - Confirmed high relevance by Sebastian Lague references
+
+**Academic Papers:**
+1. **"Marching Cubes: A High Resolution 3D Surface Construction Algorithm" (1987)**
+   - Authors: William E. Lorensen, Harvey E. Cline
+   - Critical for terrain modification system
+   - Status: High priority for technical team review
+
+2. **"Fast Poisson Disk Sampling in Arbitrary Dimensions" (2007)**
+   - Authors: Robert Bridson
+   - Application: Natural resource and vegetation distribution
+   - Status: Recommended for procedural generation team
+
+3. **"Jump Point Search" Optimization Papers**
+   - Application: Grid-based pathfinding optimization
+   - Status: Recommended for AI/pathfinding team
+
+**Code Resources:**
+1. **Sebastian Lague GitHub Repositories**
+   - URL: https://github.com/SebLague
+   - Contains open-source implementations of algorithms covered in videos
+   - Status: High priority for code review and learning
+
+**Complementary Creators:**
+1. **Brackeys** - Already cataloged (Source #21)
+2. **Code Monkey** - Next topic in this assignment group
+3. **GDC Talks** - Already cataloged (Source #25)
+
 ### Future Research Directions
 
 **Advanced Topics to Investigate:**
