@@ -183,6 +183,27 @@ Add discovered sources below this line:
 **Rationale:** Hands-on analysis of production engine architecture. Provides real-world implementation examples of systems discussed in Game Engine Architecture book.  
 **Estimated Effort:** 8-10 hours
 
+**Source Name:** GPU Gems Series (Volumes 1-3) edited by Fernando, Pharr, et al.  
+**Discovered From:** Real-Time Rendering analysis (Topic 16 follow-up)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Collection of GPU programming techniques from industry experts. Covers advanced rendering optimizations and effects applicable to BlueMarble's terrain and atmospheric rendering.  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Graphics Programming Black Book by Michael Abrash  
+**Discovered From:** Real-Time Rendering analysis (Topic 16 follow-up)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Low-level graphics optimization techniques. Historical perspective on performance optimization that still applies to modern rendering pipelines.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Vulkan Programming Guide by Kessenich, Sellers, Shreiner  
+**Discovered From:** Real-Time Rendering analysis (Topic 16 follow-up)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Modern low-level graphics API for maximum performance. Critical if BlueMarble needs custom rendering engine for planet-scale optimization beyond Unity/Unreal capabilities.  
+**Estimated Effort:** 10-12 hours
+
 <!-- Discovery entries go here -->
 
 ---
