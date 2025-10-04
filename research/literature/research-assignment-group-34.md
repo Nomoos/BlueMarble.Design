@@ -134,12 +134,13 @@ During your research, if you discover additional valuable sources, log them here
 **Estimated Effort:** 3-4 hours  
 **URL:** https://secure.runescape.com/m=news/archive?oldschool=1
 
-**Source Name:** GDC Talk: "Old School RuneScape's Journey"  
+**Source Name:** GDC Talk: "Old School RuneScape's Journey" ✅ PROCESSED  
 **Discovered From:** RuneScape (Old School) analysis  
 **Priority:** High  
 **Category:** GameDev-Design  
 **Rationale:** First-hand account of OSRS revival and community engagement strategies. Lessons on respecting core game identity while evolving.  
 **Estimated Effort:** 2-3 hours  
+**Analysis Document:** `game-dev-analysis-gdc-osrs-journey.md` (1,293 lines)  
 **URL:** Search on GDC Vault or YouTube
 
 ---
