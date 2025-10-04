@@ -167,7 +167,8 @@ Add discovered sources below this line:
 **Priority:** High  
 **Category:** GameDev-Design  
 **Rationale:** Industry-leading example of location-based AR at massive scale, highly relevant for territory control and real-world event systems  
-**Estimated Effort:** 3-4 hours
+**Estimated Effort:** 3-4 hours  
+**Status:** ✅ Complete - [game-dev-analysis-pokemon-go-case-study.md](game-dev-analysis-pokemon-go-case-study.md)
 
 **Source Name:** Ingress Case Study (Niantic)  
 **Discovered From:** Augmented Reality / Practical Augmented Reality topic research  
