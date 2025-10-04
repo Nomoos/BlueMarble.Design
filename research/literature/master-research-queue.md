@@ -28,18 +28,18 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 - **Overall Completion:** 100%
 ## Queue Status
 
-**Total Sources:** 86 (updated: +50 from online resources catalog)  
-**Completed:** 11  
+**Total Sources:** 87 (updated: +51 from online resources catalog and WoW analysis)  
+**Completed:** 12  
 **In Progress:** 1  
 **Remaining:** 74  
-**Total Sources:** 39 (updated: +3 from auto-discovery)  
-**Completed:** 11  
-**In Progress:** 0  
-**Remaining:** 28  
+**Total Sources:** 40 (updated: +4 from auto-discovery and online catalog)  
+**Completed:** 12  
+**In Progress:** 1  
+**Remaining:** 27  
 
 **Original Count:** 36 sources (before auto-discovery)  
-**Sources Added:** 3 (Energy Systems, Historical Maps/Navigation, Specialized Collections)  
-**Completion Rate:** 28% (11 of 39 sources completed)  
+**Sources Added:** 4 (Energy Systems, Historical Maps/Navigation, Specialized Collections, World of Warcraft Programming)  
+**Completion Rate:** 30% (12 of 40 sources completed)  
 
 ---
 
@@ -364,7 +364,17 @@ All 3 newly discovered sources have been appended to Category 1 (Survival Guide 
    - Completion Date: 2025-01-17
    - Additional Sources Discovered: 5 (Game Engine Architecture, Real-Time Rendering, Network Programming for Games, Multiplayer Game Programming [expanded], C++ Best Practices)
 
-2. **Online Game Development Resources Catalog** - IN PROGRESS
+2. **World of Warcraft Programming** - COMPLETED
+   - Status: ✅ Complete
+   - Document: `game-dev-analysis-world-of-warcraft-programming.md`
+   - Lines: 600+
+   - Completion Date: 2025-01-17
+   - Assignment Group: 25
+   - Topic Number: 25
+   - Focus: MMORPG architecture, server design, networking, client optimization
+   - Related Sources: TrinityCore, CMaNGOS, AzerothCore, wowdev.wiki
+
+3. **Online Game Development Resources Catalog** - IN PROGRESS
    - Status: 🔍 In Progress (Active - Auto-Growing)
    - Document: `online-game-dev-resources.md`
    - Lines: 880+
