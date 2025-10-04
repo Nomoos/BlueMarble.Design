@@ -1210,6 +1210,18 @@ void MovementSystem::Update(float deltaTime) {
 - State Machine Libraries: Boost.MSM, statechart (C++)
 - Object Pool Libraries: Boost.Pool
 
+### Discovered Sources
+
+During this analysis, the following implementation resources were identified for potential future investigation:
+
+1. **EnTT** - Modern, header-only C++ ECS library with excellent performance
+2. **flecs** - Cross-platform ECS library (C/C++) with built-in query system
+3. **Bevy ECS** - Modern ECS implementation in Rust (architectural insights)
+4. **Boost.MSM** - High-performance state machine library for C++
+5. **Boost.Pool** - Memory pool allocator library for efficient object pooling
+
+These sources have been logged in the Research Assignment Group 27 discoveries section for potential Phase 2 analysis.
+
 ---
 
 **Document Status:** ✅ Complete  

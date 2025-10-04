@@ -82,7 +82,7 @@ This assignment group focuses on analyzing game development resources from the o
 - [x] All documents have proper front matter
 - [x] All documents meet minimum length requirements
 - [x] Cross-references added
-- [ ] Discovered sources logged below
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,40 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** EnTT - Entity Component System Library  
+**Discovered From:** Game Programming Patterns analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Modern, header-only C++ ECS library with excellent performance for BlueMarble's entity management. Supports 10,000+ entities with cache-friendly component storage.  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** flecs - Fast and Flexible Entity Component System  
+**Discovered From:** Game Programming Patterns analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Cross-platform ECS library (C/C++) with built-in query system and reflection. Could be useful for multi-language integration.  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Bevy ECS (Rust)  
+**Discovered From:** Game Programming Patterns analysis  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Modern ECS implementation in Rust. While not C++, provides insights into modern ECS design patterns and could inform BlueMarble's architecture decisions.  
+**Estimated Effort:** 2-4 hours
+
+**Source Name:** Boost.MSM (Meta State Machine)  
+**Discovered From:** Game Programming Patterns analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** High-performance state machine library for C++. Directly applicable to NPC AI and player action state machines in BlueMarble.  
+**Estimated Effort:** 3-5 hours
+
+**Source Name:** Boost.Pool  
+**Discovered From:** Game Programming Patterns analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Memory pool allocator library for efficient object pooling. Critical for managing thousands of temporary objects (projectiles, effects) in MMORPG.  
+**Estimated Effort:** 2-3 hours
 
 ---
 
