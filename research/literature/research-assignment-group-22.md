@@ -82,7 +82,7 @@ This assignment group focuses on analyzing game development resources from the o
 - [x] All documents have proper front matter
 - [x] All documents meet minimum length requirements
 - [x] Cross-references added
-- [ ] Discovered sources logged below
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,33 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** Valve's Source Engine Networking Documentation  
+**Discovered From:** Network Programming for Games research (Topic 1)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Industry-proven implementation of lag compensation and client prediction used in Half-Life 2, Team Fortress 2, and other Source games. Direct applicability to BlueMarble's real-time multiplayer requirements.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Gabriel Gambetta - Fast-Paced Multiplayer Series  
+**Discovered From:** Network Programming for Games research (Topic 1)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Excellent tutorial series on client-side prediction and server reconciliation with clear visualizations and examples. Perfect for understanding core multiplayer concepts.  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Glenn Fiedler's "Networking for Game Programmers"  
+**Discovered From:** Network Programming for Games research (Topic 1)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive blog series covering UDP networking, reliability protocols, and flow control. Foundational material for custom protocol development.  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** IEEE Papers on Interest Management for MMOs  
+**Discovered From:** Network Programming for Games research (Topic 1)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Academic research on AOI algorithms and spatial partitioning for massively multiplayer games. Critical for BlueMarble's scalability to thousands of concurrent players.  
+**Estimated Effort:** 10-12 hours
 
 ---
 
