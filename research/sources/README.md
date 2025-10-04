@@ -3,7 +3,7 @@
 This directory contains bibliography, reading lists, and source documentation for BlueMarble research.
 
 **Last Updated:** 2025-01-17  
-**Total Sources Tracked:** 56 (50 books + 6 survival collections)  
+**Total Sources Tracked:** 63+ (50 books + 13 survival collections + 20+ online)  
 **Status:** Active - Comprehensive source tracking system
 
 ---
@@ -12,22 +12,29 @@ This directory contains bibliography, reading lists, and source documentation fo
 
 ### Primary Documentation
 
+- **SOURCE-SUMMARY.md**: 📊 **High-level summary table** with counts
+  - Quick reference: downloaded, processed, and total counts by category
+  - Progress metrics and completion rates
+  - Storage requirements and sizes
+  - Next steps and priorities
+  
 - **sources.bib**: Complete bibliography in BibTeX format
-  - 50+ books and resources
+  - 33 BibTeX entries covering all major sources
   - Categorized by topic (game programming, design theory, multiplayer, etc.)
   - Includes survival knowledge collections
   - Online resources and open source projects
   
 - **reading-list.md**: Curated reading list with priorities and status tracking
+  - 84 tracked items across all source types
   - Organized by priority (Critical, High, Medium, Low)
-  - Tracks completion status
+  - Tracks completion status (✓ completed, 🔍 in progress, ⏳ pending)
   - Cross-referenced with analysis documents
-  - 56 total sources with detailed categorization
   
 - **survival-sources.md**: Survival knowledge collection download sources
   - 13 major collections tracked
+  - 10 downloaded and analyzed, 3 pending
   - Download links and magnet URIs
-  - Size and format information
+  - Size and format information (~440-450 GB total)
   - Extraction pipeline status
   - Legal and licensing considerations
   
