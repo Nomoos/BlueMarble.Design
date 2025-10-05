@@ -285,23 +285,553 @@ The exploration of:
    - Source: Academic history journals
    - Relevance: Legal frameworks for controlled populations
 
-### Queue Group 3: Game Design Resources
+### Assignment Group 3: Game Design Resources (4 sources)
 
-1. **"Rimworld"** - Colony simulation game
-   - Source: Ludeon Studios, r/Rimworld community
-   - Relevance: Character stories, colony management, social dynamics
+#### Source 1: "Rimworld" by Ludeon Studios
+**Type:** Colony Simulation Game  
+**Status:** ✅ Processed  
+**Relevance:** Very High - Character stories, colony management, social dynamics in survival setting
 
-2. **"Factorio"** - Automation and resource extraction game
-   - Source: Wube Software, r/factorio community
-   - Relevance: Resource chains, optimization, scaling production
+**Key Concepts:**
+- AI Storyteller system creates dynamic narrative events
+- Individual colonist backstories, traits, relationships, and mood systems
+- Work priority system with skill specializations
+- Social relationships (romance, rivalries, friendships) affect gameplay
+- Environmental threats (raids, disease, weather, wildlife)
+- Research tree unlocking technology
+- Resource management and production chains
+- Base building with room quality and beauty mechanics
+- Psychological/mood management system
 
-3. **"Deep Rock Galactic"** - Cooperative mining game
-   - Source: Ghost Ship Games, r/DeepRockGalactic
-   - Relevance: Mining mechanics, team composition, resource gathering
+**Applicable Elements:**
+- Character traits affecting work efficiency and relationships (like species/clone differences)
+- Skills improve through use (mining, construction, research, medical)
+- Social dynamics between colonists (similar to multi-species interactions)
+- Work assignments and priority management
+- Mood/happiness system affecting productivity
+- Events threatening colony stability (raids = corporate actions?)
+- Technology progression through research
+- Resource extraction and processing chains
+- Individual character stories creating emergent narrative
 
-4. **"Oxygen Not Included"** - Life support and resource management
-   - Source: Klei Entertainment, r/Oxygennotincluded
-   - Relevance: Atmosphere management, resource loops, population needs
+**Game Design Insights:**
+- Individual character agency creates player investment
+- AI-driven storytelling reduces need for scripted content
+- Skill specialization forces cooperation and trade-offs
+- Social systems add depth beyond resource management
+- Mood/happiness as resource requiring management
+- Threats create urgency without constant combat
+- Research tree provides progression goals
+- Emergent narratives from system interactions
+
+**Mechanics to Adapt:**
+- **Character Trait System**: Different species/clone types have inherent traits
+  - Clones: Optimized for tasks, but limited social skills
+  - Naturals: More adaptable, better social dynamics
+  - Species-specific: Kronids work well in toxic areas, Veldari in teams
+  
+- **Skill Progression**: Use-based improvement with specialization
+  - Mining experience improves extraction efficiency
+  - Repeated tasks create expertise
+  - Cross-training possible but time-consuming
+
+- **Social Dynamics**: Relationships affect team performance
+  - Species prejudices creating initial penalties
+  - Working together improves relationships
+  - Clones may struggle with identity and belonging
+  
+- **Mood System**: Population happiness affects productivity
+  - Resource scarcity creates stress
+  - Recreation and social time needed
+  - Oppression mechanics (Architect surveillance) causing mood penalties
+  
+- **Event System**: Dynamic challenges beyond player control
+  - Architect inspections
+  - Resource quota changes
+  - Equipment failures
+  - Population incidents
+
+**Online Resources:**
+- Official site: https://rimworldgame.com/
+- r/Rimworld subreddit (500k+ members) - active modding and story-sharing community
+- Rimworld Wiki: https://rimworldwiki.com/
+- YouTube channels analyzing game systems (Adam vs Everything, Rarr, etc.)
+- Extensive modding community on Steam Workshop
+- Game design analyses on r/gamedesign
+
+**Notable Mechanics:**
+- Pawn (colonist) generation with random backgrounds
+- Opinion system (-100 to +100) affecting interactions
+- Scheduled activities (work, sleep, recreation, meals)
+- Quality levels for crafted items (awful to legendary)
+- Organ harvesting and medical systems (dark but player-driven)
+- Addiction and withdrawal mechanics
+- Mental breaks from stress (berserk, wander, break items)
+
+---
+
+#### Source 2: "Factorio" by Wube Software
+**Type:** Automation and Resource Processing Game  
+**Status:** ✅ Processed  
+**Relevance:** Very High - Resource extraction, processing chains, optimization, scaling
+
+**Key Concepts:**
+- Mine raw resources → Process → Manufacture → Automate
+- Belt/pipe logistics for resource transportation
+- Factory design and optimization as core gameplay
+- Pollution and environmental consequences
+- Enemy spawns (biters) react to pollution
+- Technology research unlocking automation
+- Massive scaling from hand-crafting to mega-factories
+- Modular design enabling incremental expansion
+- Resource patches deplete, forcing expansion
+
+**Applicable Elements:**
+- Complex multi-stage resource processing
+- Raw ore → smelted metal → plates → components → products
+- Logistics challenges (moving resources efficiently)
+- Pollution affecting environment (similar to mining damage)
+- Research unlocking better tools and methods
+- Scaling from individual work to industrial automation
+- Resource depletion driving expansion
+- Bottleneck identification and optimization
+- Modular construction allowing collaborative building
+
+**Game Design Insights:**
+- Clear inputs → outputs create understandable systems
+- Incremental complexity prevents overwhelming players
+- Optimization as its own reward (engineering satisfaction)
+- Visual feedback shows resource flow
+- Automation transitions player from worker to manager
+- Resource scarcity drives exploration and expansion
+- Environmental cost of industry creates moral dimension
+- Collaborative factory building in multiplayer
+
+**Mechanics to Adapt:**
+- **Resource Processing Chains**: Multi-stage refinement
+  - Raw ore → Crushed → Refined → Purified → Component
+  - Each stage requires different facilities/skills
+  - Quality improvements possible at each stage
+  - Byproducts and waste management
+  
+- **Logistics System**: Moving resources between locations
+  - Manual hauling (early game, labor-intensive)
+  - Conveyor systems (mid-game automation)
+  - Advanced transportation (late-game optimization)
+  - Logistics as skill specialization (Veldari species strength)
+  
+- **Automation Progression**: Reducing manual labor
+  - Hand mining → Automated drills → Advanced extractors
+  - Frees workers for more complex tasks
+  - Creates manager/overseer roles
+  - Reflects transition in mining colony development
+  
+- **Research System**: Unlocking better technology
+  - Costs resources and time
+  - Requires specialized research facilities
+  - Can be collaborative (multiple players contributing)
+  - Tech tree branches (mining, processing, automation, quality)
+  
+- **Environmental Impact**: Pollution and degradation
+  - Mining creates environmental damage
+  - Affects habitability and health
+  - Requires remediation efforts
+  - Creates tension with preservation factions
+  
+- **Expansion Pressure**: Depleting resources
+  - Nodes exhaust over time
+  - Forces exploration of new areas
+  - Creates conflict over territory
+  - Deeper/harder-to-reach resources last longer
+
+**Online Resources:**
+- Official site: https://factorio.com/
+- r/factorio subreddit (400k+ members) - blueprint sharing, optimization discussions
+- Factorio Wiki: https://wiki.factorio.com/
+- Tutorial series on YouTube (KatherineOfSky, Nilaus, Tuplex)
+- Active modding community (Krastorio 2, Space Exploration, Bob's/Angel's)
+- Factory optimization calculators and planning tools
+- GitHub repos for calculators and planners
+
+**Notable Mechanics:**
+- Blueprint system for copying factory designs
+- Circuit networks for conditional logic
+- Trains for long-distance transportation
+- Pollution spreads based on production
+- Biters evolve based on pollution and time
+- Science packs as research currency
+- Ratios and throughput calculations (engineering mindset)
+- Spaghetti vs. main bus factory design philosophies
+
+---
+
+#### Source 3: "Deep Rock Galactic" by Ghost Ship Games
+**Type:** Cooperative Mining FPS  
+**Status:** ✅ Processed  
+**Relevance:** High - Mining mechanics, team composition, procedural caves, resource gathering
+
+**Key Concepts:**
+- Four-player coop with distinct classes (Driller, Scout, Engineer, Gunner)
+- Procedurally generated cave systems for mining missions
+- Resource gathering as primary objective
+- Team coordination required for success
+- Dwarf miners working for corporate overlord (Management)
+- Hostile alien creatures in caves
+- Multiple mission types (mining, salvage, elimination, escort)
+- Beer and social hub between missions
+- "Rock and Stone!" - positive team culture
+
+**Applicable Elements:**
+- Class-based system with complementary abilities
+- Team composition affecting mission success
+- Procedural environments creating variety
+- Corporate employer relationship (humor but relevant)
+- Resource extraction under dangerous conditions
+- Mission briefings and objectives from management
+- Social space for team bonding
+- Progression through equipment upgrades
+
+**Game Design Insights:**
+- Class interdependence creates natural cooperation
+- Each role feels essential, not just different
+- Procedural generation provides infinite content
+- Corporate humor makes exploitation theme palatable
+- Quick mission structure (20-40 minutes) maintains engagement
+- Social features between missions build community
+- Progression is meaningful but not mandatory
+- "No meta" design - all builds viable
+
+**Mechanics to Adapt:**
+- **Species/Role System**: Different species excel at different tasks
+  - Humans: Generalists, adaptable
+  - Kronids: Natural miners, toxic resistance (like Driller)
+  - Veldari: Team coordination, logistics (like Scout with flares)
+  - Graven: Heavy work, deep mining (like Gunner with shields)
+  
+- **Mission Structure**: Objectives with resource extraction
+  - Primary: Extract X tons of specific ore
+  - Secondary: Bonus objectives for extra rewards
+  - Time/danger pressure creating urgency
+  - Safe return transport at mission end
+  
+- **Team Coordination Mechanics**:
+  - Classes/species needing each other's abilities
+  - Communication tools (pinging resources, threats)
+  - Resource sharing mechanics
+  - Reviving downed teammates
+  
+- **Procedural Environments**: Cave generation
+  - Each mining site unique
+  - Resources in varying quantities/locations
+  - Environmental hazards (gas, lava, instability)
+  - Verticality requiring different traversal methods
+  
+- **Progression System**: Equipment and modifications
+  - Earn resources to upgrade tools
+  - Cosmetic customization for identity
+  - Weapon/tool modifications changing playstyle
+  - No "winning" builds, preference-based
+  
+- **Social Hub**: Between-mission space
+  - Cantina/recreation area
+  - Mini-games and social activities
+  - Mission board for selecting assignments
+  - Character customization and loadout management
+
+**Online Resources:**
+- Official site: https://www.deeprockgalactic.com/
+- r/DeepRockGalactic subreddit (300k+ members) - extremely positive community
+- Deep Rock Galactic Wiki: https://deeprockgalactic.fandom.com/
+- YouTube guides on class synergies and mission strategies
+- Active Discord community
+- Developer transparency and community engagement
+- "Rock and Stone!" greeting became cultural phenomenon
+
+**Notable Mechanics:**
+- Terrain is fully destructible (core to mining gameplay)
+- Classes have unique traversal tools (drills, ziplines, platforms, grappling hook)
+- Mission complexity scales with difficulty (Hazard 1-5+)
+- "Bosco" drone companion for solo players
+- Beer buffs and debuffs (optional, fun social element)
+- Season pass system (cosmetic rewards, free)
+- No PvP, pure cooperation focus
+- Management as humorous corporate overlord character
+
+---
+
+#### Source 4: "Oxygen Not Included" by Klei Entertainment
+**Type:** Colony Management / Life Support Simulation  
+**Status:** ✅ Processed  
+**Relevance:** Very High - Resource loops, atmosphere management, population needs, colony survival
+
+**Key Concepts:**
+- Manage life support systems for duplicant (clone) colony
+- Oxygen, temperature, food, water, sanitation as critical resources
+- Closed-loop resource management
+- Stress and morale affecting duplicant behavior
+- Scientific accuracy in gas/liquid/thermal physics
+- Cascading system failures if not properly managed
+- Research unlocking new technologies
+- Expansion into hostile environments
+- Asteroid base building
+
+**Applicable Elements:**
+- Life support as constant pressure
+- Population management (duplicants = clones conceptually)
+- Duplicants have traits affecting work efficiency
+- Resource loops (waste → fertilizer, CO2 → algae, etc.)
+- Stress system affecting performance and health
+- Research tree for technology advancement
+- Environmental hazards (heat, cold, gas, disease)
+- Infrastructure expansion into dangerous areas
+- Job assignments and skill development
+
+**Game Design Insights:**
+- Interconnected systems create deep gameplay
+- Scientific accuracy doesn't prevent fun
+- Population needs create constant pressure
+- Planning ahead essential (reactive gameplay fails)
+- System understanding required for success
+- Failures are learning opportunities
+- Automation reduces micromanagement over time
+- Visual clarity in complex systems
+
+**Mechanics to Adapt:**
+- **Life Support Systems**: Critical infrastructure
+  - Oxygen generation (air recyclers, algae farms)
+  - Water purification and distribution
+  - Food production and storage
+  - Waste management and recycling
+  - Temperature regulation (heating/cooling)
+  
+- **Resource Loop Design**: Circular economies
+  - Waste products become inputs for other processes
+  - Polluted water → filtration → clean water
+  - CO2 → captured → used in production
+  - Organic waste → composting → fertilizer
+  - Efficient loops = sustainable colony
+  
+- **Duplicant (Clone) Management**:
+  - Traits affecting work (similar to game's duplicants)
+  - Specialized clones for specific tasks
+  - Skill development through training
+  - Stress management affecting productivity
+  - Health and disease systems
+  
+- **Stress and Morale**: Psychological management
+  - Work conditions affect stress levels
+  - Recreation and downtime required
+  - Overworked duplicants have breakdowns
+  - Environmental quality (decor, space) matters
+  - Social interactions affecting morale
+  
+- **Technology Research**: Scientific progression
+  - Research requires dedicated workers
+  - Unlocks better life support technologies
+  - Improves resource efficiency
+  - Enables expansion to hostile areas
+  
+- **Environmental Challenges**: Hostile conditions
+  - Temperature extremes
+  - Toxic atmospheres
+  - Disease and germs
+  - Radiation (in DLC)
+  - Requires protective equipment or adaptation
+
+**Online Resources:**
+- Official site: https://www.klei.com/games/oxygen-not-included
+- r/Oxygennotincluded subreddit (150k+ members) - colony sharing, problem-solving
+- Oxygen Not Included Wiki: https://oxygennotincluded.fandom.com/
+- Francis John's YouTube tutorials (definitive guide series)
+- Tools and calculators on GitHub
+- Active modding community
+- Detailed game mechanics discussions
+
+**Notable Mechanics:**
+- Thermal simulation (heat transfer, phase changes)
+- Gas/liquid pressure and flow physics
+- Germ simulation and disease spread
+- Crop growth cycles and farming
+- Critter ranching and genetics
+- Automation sensors and logic gates
+- Power grid management
+- Job priorities and task scheduling
+- Duplicant personality traits and reactions
+- "Ugly crying" stress response (destructive)
+
+---
+
+## Summary of Assignment Group 3
+
+**Common Themes Across Game Design Sources:**
+1. **Specialization and Cooperation**: All four games emphasize distinct roles working together
+2. **Resource Management Depth**: Complex chains from extraction to finished products
+3. **System Interdependence**: Actions in one area affect others (pollution, stress, logistics)
+4. **Progression Through Understanding**: Players advance by learning systems, not just grinding
+5. **Automation as Goal**: Transitioning from manual labor to managed systems
+6. **Environmental Challenges**: Hostile conditions requiring adaptation and technology
+
+**Unique Contributions:**
+- **Rimworld**: Character-driven emergent storytelling, social dynamics, AI storytelling
+- **Factorio**: Industrial optimization, visual resource flow, engineering satisfaction
+- **Deep Rock Galactic**: Class synergy in action gameplay, positive team culture, procedural missions
+- **Oxygen Not Included**: Scientific simulation, life support complexity, closed-loop resource management
+
+**Direct Applications to Sci-Fi Mining World:**
+
+1. **Multi-Species as Classes** (Deep Rock Galactic model):
+   - Each species has unique abilities and roles
+   - Team composition matters for mission success
+   - Interdependence creates cooperation necessity
+   
+2. **Character Systems** (Rimworld model):
+   - Individual workers with traits, skills, relationships
+   - Mood/stress affecting productivity
+   - Emergent stories from character interactions
+   - Clone vs. Natural creating distinct character types
+
+3. **Resource Processing** (Factorio model):
+   - Multi-stage refinement chains
+   - Logistics as gameplay challenge
+   - Automation progression
+   - Optimization as satisfying gameplay
+
+4. **Life Support Integration** (Oxygen Not Included model):
+   - Air, water, food as constant concerns
+   - Closed-loop resource management
+   - Infrastructure as critical to survival
+   - Environmental hazards requiring technology
+
+5. **Mission Structure** (Deep Rock Galactic model):
+   - Clear objectives with time pressure
+   - Procedural variation in locations
+   - Social hub between missions
+   - Corporate management as mission giver
+
+**Implementation Priorities:**
+
+**Phase 1: Core Systems**
+- Character traits and species differences
+- Basic resource extraction and processing
+- Work assignment and skill development
+- Simple life support (food, air, water)
+
+**Phase 2: Depth**
+- Social relationship systems
+- Complex resource chains
+- Research/technology tree
+- Environmental challenges
+
+**Phase 3: Automation**
+- Automated resource extraction
+- Logistics systems
+- AI worker management
+- Infrastructure upgrades
+
+**Phase 4: Narrative**
+- Event system for dynamic stories
+- Corporate management interactions
+- Faction relationships
+- Long-term goals and rebellion mechanics
+
+**Key Design Lessons:**
+
+1. **Start Simple, Add Complexity**: All four games have accessible entry points
+2. **Visual Feedback**: Show resource flow and system states clearly
+3. **Meaningful Choices**: Decisions should have clear trade-offs
+4. **Positive Failure**: Failures teach, they don't punish excessively
+5. **Community Building**: Social features and shared experiences matter
+6. **Respect Player Time**: Quick sessions or save-anywhere flexibility
+7. **Mod Support**: Community content extends game life
+8. **Balance Simulation and Fun**: Realism serves gameplay, not vice versa
+
+---
+
+## Discovered Sources for Future Processing
+
+### Queue Group 4: Reddit Discussions (Added 3 new sources)
+
+1. **r/worldbuilding** - "Mining colony world-building" threads
+2. **r/scifi** - "Best corporate dystopia stories"
+3. **r/gamedesign** - "Resource management mechanics"
+4. **r/WritingPrompts** - Space mining and corporate control prompts
+5. **r/RimWorld** - Colony storytelling and emergent narratives (NEW)
+6. **r/factorio** - Optimization strategies and blueprint sharing (NEW)
+7. **r/DeepRockGalactic** - Community positivity and cooperation culture (NEW)
+
+### Queue Group 5: GitHub Repositories (Added 4 new sources)
+
+1. **Space Station 13** codebases
+2. **Stationeers** mods and tools
+3. **Game Design Patterns** repositories
+4. **Procedural generation** tools for mining/caves
+5. **Factorio Blueprint Tools** - Planning and calculator tools (NEW)
+6. **Rimworld Mod Framework** - Extending game systems (NEW)
+7. **ONI Tools** - Colony calculators and simulators (NEW)
+8. **Cave Generation Algorithms** - Procedural dungeon/cave generation (NEW)
+
+---
+
+## Research Notes
+
+### Integration of Game Design Insights
+
+**Combining Rimworld + Deep Rock Galactic**:
+- Character-driven narrative (Rimworld) + Class-based cooperation (DRG)
+- Individual colonist stories with team mission structure
+- Social hub (DRG cantina) with relationship system (Rimworld)
+- Result: Characters with personalities doing team missions
+
+**Combining Factorio + Oxygen Not Included**:
+- Resource chain complexity (Factorio) + Life support criticality (ONI)
+- Automation progression (Factorio) + System interdependence (ONI)
+- Visual resource flow (Factorio) + Scientific accuracy (ONI)
+- Result: Deep industrial simulation with survival pressure
+
+**All Four Combined for Mining World**:
+- **Character Layer** (Rimworld): Individual workers with traits, skills, relationships
+- **Resource Layer** (Factorio): Complex extraction and processing chains
+- **Survival Layer** (ONI): Life support, stress, environmental hazards
+- **Mission Layer** (DRG): Team objectives in procedural locations
+- **Narrative Layer**: Corporate control, species dynamics, clone identity
+
+### Potential Pitfalls from Game Analysis
+
+1. **Too Much Complexity**: ONI and Factorio can overwhelm new players
+   - Solution: Gradual introduction, tutorials, optional depth
+   
+2. **Micromanagement**: Rimworld requires constant attention
+   - Solution: Automation options, queue systems, pause capability
+   
+3. **Repetition**: DRG missions can feel samey after many hours
+   - Solution: Varied mission types, random events, narrative progression
+   
+4. **Learning Curve**: All four have steep initial curves
+   - Solution: Streamlined onboarding, clear feedback, helpful tutorials
+
+### Next Steps
+
+**For Further Research:**
+1. Process Queue Group 4 (Reddit discussions) for community perspectives
+2. Process Queue Group 5 (GitHub repos) for technical implementation
+3. Process Queue Group 2 (Academic sources) for theoretical grounding
+
+**Awaiting:** Comment "next" to process next source group, or specify particular queue/source to investigate.
+
+---
+
+**Status:** Assignment Group 3 complete (4/4 sources processed). Ready for next assignment group.
+
+**Groups Completed:** 
+- ✅ Group 1: Literary Sources (4/4)
+- ✅ Group 3: Game Design Resources (4/4)
+
+**Groups Remaining:**
+- ⏳ Group 2: Academic Sources (4 queued)
+- ⏳ Group 4: Reddit Discussions (7 sources, 4 to process)
+- ⏳ Group 5: GitHub Repositories (8 sources, 4 to process)
+
+**Last Updated:** 2024
 
 ### Queue Group 4: Reddit Discussions
 
