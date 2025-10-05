@@ -76,13 +76,13 @@ This assignment group focuses on analyzing game development resources from the o
 
 ## Progress Tracking
 
-- [ ] AI for Games (3rd Edition)
-- [ ] The Art of Game Design: A Book of Lenses (3rd Edition)
-- [ ] All documents created and placed in `research/literature/`
-- [ ] All documents have proper front matter
-- [ ] All documents meet minimum length requirements
-- [ ] Cross-references added
-- [ ] Discovered sources logged below
+- [x] AI for Games (3rd Edition) - ✅ Complete (1237 lines)
+- [x] The Art of Game Design: A Book of Lenses (3rd Edition) - ✅ Complete (1213 lines)
+- [x] Document created and placed in `research/literature/`
+- [x] Document has proper front matter
+- [x] Document meets minimum length requirements (1237 lines > 300-500)
+- [x] Cross-references added
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,49 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** Recast & Detour Navigation Library  
+**Discovered From:** AI for Games (3rd Edition) - Navigation mesh implementation  
+**Priority:** Critical  
+**Category:** GameDev-Tech  
+**Rationale:** Industry-standard library for navmesh generation and pathfinding, essential for NPC navigation in BlueMarble's planet-scale world. Already referenced in game_dev_repos.md  
+**Estimated Effort:** Integration work (20-30 hours)
+
+**Source Name:** Game AI Pro Series (Online Free Books)  
+**Discovered From:** AI for Games (3rd Edition) - References section  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Free online collection of AI techniques from professional game developers. Covers advanced topics like tactical reasoning and emergent behaviors.  
+**Estimated Effort:** 15-20 hours per volume for relevant chapters
+
+**Source Name:** F.E.A.R. AI Postmortem - "Three States and a Plan" (GDC 2006) - ✅ Complete  
+**Discovered From:** AI for Games (3rd Edition) - GOAP case study  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Seminal GDC talk describing GOAP implementation in commercial game. Direct application to BlueMarble's NPC planning systems.  
+**Estimated Effort:** 2-3 hours  
+**Analysis Document:** `game-dev-analysis-fear-ai-three-states-and-a-plan.md` (899 lines)
+
+**Source Name:** Halo 3 AI - "Building a Better Battle" (GDC 2008) - ✅ Complete  
+**Discovered From:** AI for Games (3rd Edition) - Tactical AI section  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Describes spatial reasoning and tactical positioning for combat AI. Applicable to BlueMarble's faction combat system.  
+**Estimated Effort:** 2-3 hours  
+**Analysis Document:** `game-dev-analysis-halo3-building-better-battle.md` (1143 lines)
+
+**Source Name:** AI Game Development by Alex J. Champandard  
+**Discovered From:** AI for Games (3rd Edition) - Complementary reading  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive AI techniques book covering neural networks and learning systems for games.  
+**Estimated Effort:** 10-15 hours
+
+**Source Name:** Programming Game AI by Example by Mat Buckland  
+**Discovered From:** AI for Games (3rd Edition) - Complementary reading  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Practical examples of AI implementation with source code. Good for implementation reference.  
+**Estimated Effort:** 8-12 hours
 
 ---
 

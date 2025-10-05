@@ -125,8 +125,8 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Advanced Game Design (High)
-- [ ] Players Making Decisions (High)
+- [x] Advanced Game Design (High)
+- [x] Players Making Decisions (High)
 
 ---
 
@@ -153,7 +153,68 @@ Add discovered sources below this line:
 
 ---
 
-<!-- Discovery entries go here -->
+**Source Name:** Flow: The Psychology of Optimal Experience by Mihaly Csikszentmihalyi  
+**Discovered From:** Advanced Game Design and Player Decision research  
+**Priority:** High  
+**Category:** GameDev-Design, Psychology  
+**Rationale:** Core theory for maintaining player engagement through challenge-skill balance, directly applicable to BlueMarble's progressive complexity system  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** The Art of Choosing by Sheena Iyengar  
+**Discovered From:** Players Making Decisions research  
+**Priority:** High  
+**Category:** GameDev-Design, Behavioral Psychology  
+**Rationale:** Research on choice overload and decision fatigue critical for BlueMarble's decision space management  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Thinking, Fast and Slow by Daniel Kahneman  
+**Discovered From:** Players Making Decisions research  
+**Priority:** Medium  
+**Category:** GameDev-Design, Behavioral Economics  
+**Rationale:** Understanding cognitive biases and heuristics for risk/reward system design  
+**Estimated Effort:** 5-7 hours
+
+**Source Name:** Nudge: Improving Decisions by Richard Thaler & Cass Sunstein  
+**Discovered From:** Players Making Decisions research  
+**Priority:** Medium  
+**Category:** GameDev-Design, Behavioral Economics  
+**Rationale:** Choice architecture principles for guiding player decisions without restricting freedom  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Emergence: The Connected Lives of Ants, Brains, Cities by Steven Johnson  
+**Discovered From:** Advanced Game Design research  
+**Priority:** Medium  
+**Category:** GameDev-Design, Systems Theory  
+**Rationale:** Understanding emergent systems theory for designing BlueMarble's geological emergence visibility  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Factorio (Game Analysis)  
+**Discovered From:** Advanced Game Design research  
+**Priority:** Medium  
+**Category:** GameDev-Design, Case Study  
+**Rationale:** Excellent example of complexity management through progressive factory logistics systems  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** Journey (Game Analysis)  
+**Discovered From:** Players Making Decisions research  
+**Priority:** Low  
+**Category:** GameDev-Design, Case Study  
+**Rationale:** Example of intrinsic motivation through discovery and minimalist design  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** Dark Souls (Game Analysis)  
+**Discovered From:** Players Making Decisions research  
+**Priority:** Medium  
+**Category:** GameDev-Design, Case Study  
+**Rationale:** Meaningful choices with permanent consequences, risk/reward balance  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** XCOM (Game Analysis)  
+**Discovered From:** Players Making Decisions research  
+**Priority:** High  
+**Category:** GameDev-Design, Case Study  
+**Rationale:** Exemplary risk/reward decision-making and tactical choice design  
+**Estimated Effort:** 3-4 hours
 
 ---
 
