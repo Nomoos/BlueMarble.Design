@@ -123,7 +123,8 @@ During your research, if you discover additional valuable sources, log them here
 **Priority:** Medium  
 **Category:** GameDev-Tech  
 **Rationale:** Alternative C ECS implementation with multi-threading, queries, and prefab features. Valuable for comparative analysis of ECS architectures and architectural decision-making.  
-**Estimated Effort:** 3-5 hours
+**Estimated Effort:** 3-5 hours  
+**Status:** ✅ Completed - Analysis document created
 
 **Source Name:** Design Patterns: Elements of Reusable Object-Oriented Software (Gang of Four)  
 **Discovered From:** Game Programming Patterns (Online Edition)  
@@ -156,6 +157,31 @@ During your research, if you discover additional valuable sources, log them here
 **Category:** GameDev-Tech  
 **Rationale:** Comprehensive benchmarks comparing various ECS implementations. Useful for validating architectural decisions and performance claims.  
 **Estimated Effort:** 2-3 hours
+
+---
+
+### New Discoveries from flecs Research
+
+**Source Name:** Unity DOTS (Data-Oriented Technology Stack)  
+**Discovered From:** flecs Entity Component System Analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Commercial archetype-based ECS implementation from Unity. Provides real-world examples of archetype architecture at massive scale and production challenges.  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** ECS FAQ Repository  
+**Discovered From:** flecs Entity Component System Analysis  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive FAQ covering ECS architectures, design decisions, and trade-offs. Excellent reference for team education and architectural discussions.  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** Archetype-Based ECS Academic Papers  
+**Discovered From:** flecs Entity Component System Analysis  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Academic research on archetype-based memory layouts and performance characteristics. Deep understanding of performance trade-offs.  
+**Estimated Effort:** 6-8 hours
 
 ---
 
