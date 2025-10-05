@@ -200,6 +200,21 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Production reliability practices for distributed systems. Critical for BlueMarble operations and monitoring.
 **Estimated Effort:** 10-12 hours
+**Status:** ✅ Complete (2025-01-15) - Document: game-dev-analysis-site-reliability-engineering.md
+
+**Source Name:** Chaos Engineering by Casey Rosenthal and Nora Jones
+**Discovered From:** Site Reliability Engineering (Discovered Source Processing - Batch 2)
+**Priority:** High
+**Category:** GameDev-Tech
+**Rationale:** Proactive resilience testing through controlled experiments. Critical for validating BlueMarble's fault tolerance before production incidents.
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** The Phoenix Project by Gene Kim
+**Discovered From:** Site Reliability Engineering (Discovered Source Processing - Batch 2)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** DevOps transformation narrative. Provides context for SRE culture and organizational change needed for BlueMarble team.
+**Estimated Effort:** 4-6 hours
 
 ---
 
