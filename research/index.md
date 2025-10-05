@@ -86,7 +86,9 @@ Bibliography, reading lists, and raw notes from external sources.
 - [sources.bib](sources/sources.bib) - Bibliography
 - [Reading List](sources/reading-list.md) - Curated reading list
 - [Quotes](sources/quotes.md) - Notable quotes and excerpts
-- [Game Design Sources](game-design/game-sources.md) - Curated collection of game design, research, theory,
+- [Content Design Research](game-design/step-1-foundation/content-design-research.md) - Comprehensive guide to content 
+  design as a discipline: roles, skills, development cycle integration, and applications to BlueMarble
+- [Game Design Sources](game-design/step-1-foundation/game-sources.md) - Curated collection of game design, research, theory,
   and gamification sources
 
 ## Existing Research Areas

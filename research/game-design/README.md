@@ -23,6 +23,26 @@ Each step contains detailed research documents and can be explored independently
 
 ## Research Documents
 
+### [Content Design Research](step-1-foundation/content-design-research.md)
+Comprehensive research on content design as a discipline within game development, covering definition, roles, 
+skills, and integration with the development cycle.
+
+**Key Topics**:
+
+- Definition and core focus areas of content design (quests, dialogue, tutorials, world-building)
+- Content designer responsibilities and deliverables
+- Essential skills for beginners and career progression path
+- Game development cycle and content design's role in each phase
+- Applications to BlueMarble's medieval MMO simulation context
+- Resources and further learning for aspiring content designers
+
+**Relevance to BlueMarble**:
+- Educational quest content teaching geological and historical concepts
+- Medieval profession tutorial chains and guild systems
+- Dynamic economic missions responding to player-driven economy
+- Tutorial design for complex simulation systems
+- Integration with existing skill, material, and profession research
+
 ### [Game Design Sources](game-sources.md)
 Curated collection of 15 high-quality sources covering game design principles, game research, game theory, 
 gamification, and related fields.
