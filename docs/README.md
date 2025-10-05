@@ -21,6 +21,7 @@ This directory contains comprehensive design documentation for BlueMarble, a top
 - [Economy Systems](./systems/economy-systems.md) - Trading, crafting, and resource management
 
 ### Gameplay Specifications
+- **[Game Design Roles Guidelines](./gameplay/game-design-roles-guidelines.md) - Team structure, responsibilities, and collaboration patterns**
 - [Core Game Design Document](./gameplay/gdd-core-game-design.md) - Core design vision and mechanics
 - [Content Rating Guidelines](./gameplay/content-rating-guidelines.md) - Content standards and maturity boundaries
 - [Player Progression System](./gameplay/spec-player-progression-system.md) - Character advancement and skill systems
