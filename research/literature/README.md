@@ -44,8 +44,9 @@ Analysis documents examining game design patterns and development resources:
 4. [game-dev-analysis-02-gpu-gems.md](game-dev-analysis-02-gpu-gems.md) - GPU Gems Series analysis focusing on particle systems and GPU programming techniques
 5. [game-dev-analysis-03-real-time-rendering.md](game-dev-analysis-03-real-time-rendering.md) - Real-Time Rendering, 4th Edition covering PBR, image-space effects, and advanced lighting
 6. [game-dev-analysis-04-guild-wars-2-vfx.md](game-dev-analysis-04-guild-wars-2-vfx.md) - Guild Wars 2 VFX System case study for MMORPG production insights
-7. [game-dev-analysis-vfx-compositing.md](game-dev-analysis-vfx-compositing.md) - Visual Effects and Compositing techniques for MMORPG development
-8. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
+7. [game-dev-analysis-05-unity-vfx-graph.md](game-dev-analysis-05-unity-vfx-graph.md) - Unity VFX Graph node-based workflow and GPU-driven particle systems
+8. [game-dev-analysis-vfx-compositing.md](game-dev-analysis-vfx-compositing.md) - Visual Effects and Compositing techniques for MMORPG development
+9. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
 
 ## Guidelines
 

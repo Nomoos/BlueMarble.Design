@@ -162,7 +162,10 @@ Add discovered sources below this line:
 **Priority:** Medium  
 **Category:** GameDev-Tech  
 **Rationale:** Modern node-based VFX creation system documentation providing insights into GPU-driven particle workflows and shader graph patterns applicable to custom engine development.  
-**Estimated Effort:** 4-6 hours
+**Estimated Effort:** 4-6 hours  
+**Status:** ✅ Complete  
+**Document:** `game-dev-analysis-05-unity-vfx-graph.md`  
+**Completion Date:** 2025-01-15
 
 **Source Name:** Unreal Engine Niagara Documentation  
 **Discovered From:** Visual Effects and Compositing (Topic 11)  
@@ -177,6 +180,13 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech  
 **Rationale:** Community-driven shader examples and experiments. Useful for post-processing techniques, screen-space effects, and visual effect prototyping.  
 **Estimated Effort:** 2-4 hours (curated examples review)
+
+**Source Name:** Houdini VFX for Games  
+**Discovered From:** Unity VFX Graph Documentation (Topic 11 → Source 4)  
+**Priority:** Low  
+**Category:** GameDev-Content  
+**Rationale:** Professional VFX creation tool used in AAA game development. Offers procedural VFX generation and simulation capabilities that could inform BlueMarble's geological effect authoring.  
+**Estimated Effort:** 6-8 hours
 
 ---
 
