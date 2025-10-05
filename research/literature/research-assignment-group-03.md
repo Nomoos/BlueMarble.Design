@@ -202,6 +202,20 @@ Add discovered sources below this line:
 **Rationale:** Methods for synchronizing chronometers across distances for longitude determination. Relevant for multi-player coordination and advanced navigation.  
 **Estimated Effort:** 3-4 hours
 
+**Source Name:** Indigenous Navigation Systems Worldwide  
+**Discovered From:** Traditional Pacific Navigation (Polynesian Wayfinding)  
+**Priority:** Low  
+**Category:** Survival - Cultural Navigation Methods  
+**Rationale:** Traditional navigation techniques from other cultures (Arctic Inuit, Arabian desert, Australian Aboriginal). Could add cultural diversity to navigation systems.  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Cognitive Neuroscience of Spatial Navigation  
+**Discovered From:** Traditional Pacific Navigation (Polynesian Wayfinding)  
+**Priority:** Low  
+**Category:** Technical - Navigation Psychology  
+**Rationale:** Scientific understanding of how humans create mental maps and navigate. Could inform UI/UX design for navigation systems.  
+**Estimated Effort:** 3-4 hours
+
 ---
 
 <!-- Discovery entries go here -->
