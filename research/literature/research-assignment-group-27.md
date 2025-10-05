@@ -77,7 +77,7 @@ This assignment group focuses on analyzing game development resources from the o
 ## Progress Tracking
 
 - [x] Game Programming Patterns
-- [ ] Developing Online Games: An Insider's Guide
+- [x] Developing Online Games: An Insider's Guide
 - [x] All documents created and placed in `research/literature/`
 - [x] All documents have proper front matter
 - [x] All documents meet minimum length requirements
