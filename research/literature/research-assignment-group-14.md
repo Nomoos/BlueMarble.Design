@@ -4,15 +4,15 @@
 title: Research Assignment Group 14
 date: 2025-01-15
 tags: [research-queue, assignment, parallel-work]
-status: pending
-assignee: TBD
+status: complete
+assignee: Assignment Group 14
 ---
 
 **Document Type:** Research Assignment  
 **Version:** 1.0  
 **Total Topics:** 1  
 **Priority Mix:** 1 Medium  
-**Status:** Ready for Assignment
+**Status:** Complete
 
 ## Overview
 
@@ -100,7 +100,7 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Effective C++ / Modern C++ Best Practices (Medium)
+- [x] Effective C++ / Modern C++ Best Practices (Medium)
 
 ---
 
@@ -127,7 +127,89 @@ Add discovered sources below this line:
 
 ---
 
-<!-- Discovery entries go here -->
+**Source Name:** Effective C++ (3rd Edition) by Scott Meyers  
+**Discovered From:** Modern C++ Best Practices research  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Foundational C++ best practices and common pitfalls, essential for building robust BlueMarble codebase with proper memory management and RAII patterns  
+**Estimated Effort:** 10-12 hours
+
+**Source Name:** Modern C++ Design by Andrei Alexandrescu  
+**Discovered From:** C++ Best Practices research  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced template metaprogramming and design patterns for zero-cost abstractions in game engine architecture  
+**Estimated Effort:** 12-15 hours
+
+**Source Name:** C++ Concurrency in Action by Anthony Williams  
+**Discovered From:** Modern C++ Best Practices research  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Essential for multithreaded MMORPG server architecture, covering thread safety, lock-free programming, and parallel algorithms  
+**Estimated Effort:** 10-12 hours
+
+**Source Name:** API Design for C++ by Martin Reddy  
+**Discovered From:** Code organization patterns research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Creating maintainable and extensible C++ interfaces for BlueMarble's modular architecture and plugin system  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** C++17/C++20 Standard Documentation  
+**Discovered From:** Modern C++ features research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Official feature documentation for constexpr, concepts, ranges, and other modern features used in BlueMarble  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Optimizing Software in C++ by Agner Fog  
+**Discovered From:** Effective C++ performance sections  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Low-level optimization techniques, assembly understanding, and CPU-specific optimizations for performance-critical game systems  
+**Estimated Effort:** 10-12 hours
+
+**Source Name:** Data-Oriented Design by Richard Fabian  
+**Discovered From:** Cache-friendly data structures section  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Cache-friendly data structures essential for BlueMarble's ECS architecture and high-performance entity processing  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** C++ Move Semantics - The Complete Guide by Nicolai Josuttis  
+**Discovered From:** Modern C++ Design patterns  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive coverage of move semantics, perfect forwarding, and value categories critical for efficient resource management  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Template Metaprogramming by David Abrahams & Aleksey Gurtovoy  
+**Discovered From:** Modern C++ Design  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced compile-time programming techniques for zero-overhead abstractions and type-safe APIs  
+**Estimated Effort:** 10-12 hours
+
+**Source Name:** CppCon Talks - Performance Track  
+**Discovered From:** C++ community resources  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Industry expert presentations on optimization, featuring real-world game engine case studies and benchmarking techniques  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Game Programming Gems Series  
+**Discovered From:** API Design for C++  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Practical game programming techniques and patterns collected from industry professionals across multiple volumes  
+**Estimated Effort:** 12-15 hours
+
+**Source Name:** Memory Management in C++ - Various Sources  
+**Discovered From:** Custom allocators section  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Custom allocators, memory pools, and allocation strategies for long-running MMORPG servers with minimal fragmentation  
+**Estimated Effort:** 8-10 hours
 
 ---
 

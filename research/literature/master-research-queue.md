@@ -33,13 +33,13 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 **In Progress:** 1  
 **Remaining:** 74  
 **Total Sources:** 39 (updated: +3 from auto-discovery)  
-**Completed:** 12  
+**Completed:** 13  
 **In Progress:** 0  
-**Remaining:** 27  
+**Remaining:** 26  
 
 **Original Count:** 36 sources (before auto-discovery)  
 **Sources Added:** 3 (Energy Systems, Historical Maps/Navigation, Specialized Collections)  
-**Completion Rate:** 31% (12 of 39 sources completed)  
+**Completion Rate:** 33% (13 of 39 sources completed)  
 
 ---
 
@@ -506,9 +506,10 @@ All 3 newly discovered sources have been appended to Category 1 (Survival Guide 
     - Source: Referenced in Game Programming in C++
 
 34. **Effective C++ / Modern C++ Best Practices**
-    - Status: ⏳ Pending
+    - Status: ✅ Complete - Analysis document created
     - Priority: Medium
     - Focus: Performance optimization, memory management, best practices
+    - Document: `game-dev-analysis-cpp-best-practices.md`
     - Source: Referenced in Game Programming in C++
 
 35. **Mathematics for 3D Game Programming**
