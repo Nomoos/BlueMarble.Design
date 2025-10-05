@@ -119,12 +119,14 @@ During your research, if you discover additional valuable sources, log them here
 **Status:** Complete - Analysis document created (800 lines)  
 **Document:** `game-dev-analysis-noise-based-rng.md`
 
-**Source Name:** Terrain Rendering in Far Cry 5 (GDC 2018)  
+**Source Name:** ✅ Terrain Rendering in Far Cry 5 (GDC 2018)  
 **Discovered From:** Procedural World Generation research  
 **Priority:** High  
 **Category:** GameDev-Tech  
 **Rationale:** Production-quality LOD system and streaming/memory management for open-world games at BlueMarble's target scale  
-**Estimated Effort:** 5-7 hours
+**Estimated Effort:** 5-7 hours  
+**Status:** Complete - Analysis document created (1154 lines)  
+**Document:** `game-dev-analysis-far-cry-5-terrain.md`
 
 **Source Name:** No Man's Sky: Procedural Generation (GDC 2015/2017)  
 **Discovered From:** Procedural World Generation research  
