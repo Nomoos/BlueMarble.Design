@@ -33,13 +33,13 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 **In Progress:** 1  
 **Remaining:** 74  
 **Total Sources:** 39 (updated: +3 from auto-discovery)  
-**Completed:** 14  
+**Completed:** 15  
 **In Progress:** 0  
-**Remaining:** 25  
+**Remaining:** 24  
 
 **Original Count:** 36 sources (before auto-discovery)  
 **Sources Added:** 3 (Energy Systems, Historical Maps/Navigation, Specialized Collections)  
-**Completion Rate:** 36% (14 of 39 sources completed)  
+**Completion Rate:** 38% (15 of 39 sources completed)  
 
 ---
 
@@ -85,7 +85,7 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 
 **Sources by Category:**
 - Category 1 (Survival Guide Collections): 13 sources (10 completed, 3 pending)
-- Category 2 (Game Development Books): 25 sources (4 completed, 21 pending)
+- Category 2 (Game Development Books): 25 sources (5 completed, 20 pending)
 - Category 3 (Tabletop RPG Analysis): 1 source (completed)
 
 **New Sources Added at End:**

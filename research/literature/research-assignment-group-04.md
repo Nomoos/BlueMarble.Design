@@ -125,7 +125,7 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Game Programming Algorithms and Techniques (High)
+- [x] Game Programming Algorithms and Techniques (High)
 - [x] Introduction to Game Systems Design (High)
 
 ---
@@ -228,6 +228,22 @@ Add discovered sources below this line:
 **Rationale:** Understanding player motivation types and retention strategies - essential for long-term engagement in BlueMarble  
 **Estimated Effort:** 3-4 hours  
 **Catalog Reference:** Industry talks and research papers on player motivation
+
+**Source Name:** Real-Time Collision Detection by Christer Ericson  
+**Discovered From:** Topic 1 - Game Programming Algorithms and Techniques (Physics and collision)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive collision detection algorithms for geological physics and structural interactions - critical for BlueMarble's terrain physics  
+**Estimated Effort:** 8-10 hours  
+**Catalog Reference:** Technical book on collision detection algorithms
+
+**Source Name:** AI for Games (3rd Edition) by Ian Millington  
+**Discovered From:** Topic 1 - Game Programming Algorithms and Techniques (AI behavior systems)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced AI techniques for environmental behaviors and dynamic world events - essential for realistic geological hazard systems  
+**Estimated Effort:** 10-12 hours  
+**Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #5
 
 <!-- Discovery entries go here -->
 
