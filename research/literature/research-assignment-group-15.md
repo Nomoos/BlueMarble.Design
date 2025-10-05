@@ -142,6 +142,8 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Comprehensive coverage of projection transformations and coordinate systems needed for efficient screen-to-world transformations and camera mathematics in hybrid 3D/isometric rendering
 **Estimated Effort:** 6-8 hours
+**Status:** ✅ Processed - Analysis complete (game-dev-analysis-mathematics-3d-graphics.md)
+**New Sources Discovered:** 3 (Real-Time Rendering, 3D Math Primer, Foundations of Game Engine Development)
 
 **Source Name:** Game Engine Architecture by Jason Gregory
 **Discovered From:** Isometric Projection Techniques (Topic 15)
@@ -184,6 +186,27 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Practical implementations of spatial partitioning and rendering optimization patterns with real-world examples applicable to BlueMarble
 **Estimated Effort:** 8-10 hours per volume
+
+**Source Name:** Real-Time Rendering by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman
+**Discovered From:** Mathematics for 3D Game Programming (derived from Topic 15)
+**Priority:** High
+**Category:** GameDev-Tech
+**Rationale:** Industry-standard comprehensive reference for modern rendering techniques, advanced culling, LOD systems, and pipeline optimization critical for isometric view performance
+**Estimated Effort:** 12-15 hours
+
+**Source Name:** 3D Math Primer for Graphics and Game Development by Fletcher Dunn and Ian Parberry
+**Discovered From:** Mathematics for 3D Game Programming (derived from Topic 15)
+**Priority:** Low
+**Category:** GameDev-Tech
+**Rationale:** Accessible introduction to 3D mathematics concepts useful as team training resource and reference for coordinate transformation implementations
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Foundations of Game Engine Development: Volume 1 (Mathematics) by Eric Lengyel
+**Discovered From:** Mathematics for 3D Game Programming (derived from Topic 15)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Companion resource with engine-specific focus providing practical implementation patterns for transformation pipeline in game engines
+**Estimated Effort:** 8-10 hours
 
 ---
 
