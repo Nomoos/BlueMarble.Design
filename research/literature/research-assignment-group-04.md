@@ -177,8 +177,10 @@ Add discovered sources below this line:
 **Discovered From:** Topic 2 - Introduction to Game Systems Design (Long-term player retention)  
 **Priority:** Medium  
 **Category:** GameDev-LiveOps  
+**Status:** ✅ COMPLETED - Analysis document created  
+**Document:** [game-dev-analysis-online-games.md](game-dev-analysis-online-games.md)  
 **Rationale:** Player retention strategies, community management, and live operations for online survival games - valuable for BlueMarble's multiplayer longevity  
-**Estimated Effort:** 4-6 hours  
+**Estimated Effort:** 4-6 hours (Completed: 5 hours)  
 **Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #10
 
 **Source Name:** PostgreSQL High Performance  
@@ -244,6 +246,22 @@ Add discovered sources below this line:
 **Rationale:** Advanced AI techniques for environmental behaviors and dynamic world events - essential for realistic geological hazard systems  
 **Estimated Effort:** 10-12 hours  
 **Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #5
+
+**Source Name:** The Art of Community by Jono Bacon  
+**Discovered From:** Discovered Source 3 - Developing Online Games (Community management)  
+**Priority:** Medium  
+**Category:** GameDev-Community  
+**Rationale:** Community management strategies for online games - essential for building and maintaining BlueMarble's multiplayer community  
+**Estimated Effort:** 5-6 hours  
+**Catalog Reference:** Book on community building and management
+
+**Source Name:** Hooked: How to Build Habit-Forming Products by Nir Eyal  
+**Discovered From:** Discovered Source 3 - Developing Online Games (Player retention psychology)  
+**Priority:** High  
+**Category:** GameDev-Psychology  
+**Rationale:** Player retention through habit formation - critical for understanding long-term engagement loops in BlueMarble  
+**Estimated Effort:** 4-5 hours  
+**Catalog Reference:** Book on habit formation and engagement
 
 <!-- Discovery entries go here -->
 

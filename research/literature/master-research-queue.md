@@ -33,13 +33,13 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 **In Progress:** 1  
 **Remaining:** 74  
 **Total Sources:** 39 (updated: +3 from auto-discovery)  
-**Completed:** 15  
+**Completed:** 16  
 **In Progress:** 0  
-**Remaining:** 24  
+**Remaining:** 23  
 
 **Original Count:** 36 sources (before auto-discovery)  
 **Sources Added:** 3 (Energy Systems, Historical Maps/Navigation, Specialized Collections)  
-**Completion Rate:** 38% (15 of 39 sources completed)  
+**Completion Rate:** 41% (16 of 39 sources completed)  
 
 ---
 
@@ -85,7 +85,7 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 
 **Sources by Category:**
 - Category 1 (Survival Guide Collections): 13 sources (10 completed, 3 pending)
-- Category 2 (Game Development Books): 25 sources (5 completed, 20 pending)
+- Category 2 (Game Development Books): 25 sources (6 completed, 19 pending)
 - Category 3 (Tabletop RPG Analysis): 1 source (completed)
 
 **New Sources Added at End:**
@@ -349,6 +349,7 @@ All 3 newly discovered sources have been appended to Category 1 (Survival Guide 
 - **2025-01-19:** Completed "Massively Multiplayer Game Development Series" analysis (Group 04, Discovered Source 1)
 - **2025-01-19:** Completed "Level Up! The Guide to Great Video Game Design" analysis (Group 04, Discovered Source 2)
 - **2025-01-19:** Completed "Game Programming Algorithms and Techniques" analysis (Group 04, Topic 1)
+- **2025-01-19:** Completed "Developing Online Games: An Insider's Guide" analysis (Group 04, Discovered Source 3)
 
 ---
 
@@ -403,6 +404,15 @@ All 3 newly discovered sources have been appended to Category 1 (Survival Guide 
    - Assignment: Group 04, Topic 1
    - Focus: Pathfinding, procedural generation, optimization, AI, physics
    - Additional Sources Discovered: 2 (Real-Time Collision Detection, AI for Games 3rd Edition)
+
+6. **Developing Online Games: An Insider's Guide** - COMPLETED
+   - Status: ✅ Complete
+   - Document: `game-dev-analysis-online-games.md`
+   - Lines: 427
+   - Completion Date: 2025-01-19
+   - Assignment: Group 04, Discovered Source 3
+   - Focus: Live operations, community management, player retention, business models
+   - Additional Sources Discovered: 2 (The Art of Community, Hooked)
 
 ### ⏳ PENDING SOURCES (Original List)
 

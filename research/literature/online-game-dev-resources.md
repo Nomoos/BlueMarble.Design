@@ -187,7 +187,7 @@ This document catalogs online resources for game development with a focus on **R
 - **Author:** Jessica Mulligan, Bridgette Patrovsky
 - **Publisher:** New Riders
 - **ISBN:** 978-1592730001
-- **Status:** ⏳ Pending Analysis
+- **Status:** ✅ Analyzed in game-dev-analysis-online-games.md
 - **Priority:** High
 - **Focus Areas:**
   - Online game business models
@@ -195,6 +195,7 @@ This document catalogs online resources for game development with a focus on **R
   - Live operations
   - Player retention
 - **Relevance to BlueMarble:** MMORPG live operations and community
+- **Analysis Document:** [game-dev-analysis-online-games.md](game-dev-analysis-online-games.md)
 
 #### 11. **MMO Architecture: Source Code and Insights**
 - **Status:** ⏳ Research Required
