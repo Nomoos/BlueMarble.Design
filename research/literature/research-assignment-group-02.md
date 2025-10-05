@@ -133,6 +133,7 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Covers modern protocols (WebRTC, QUIC) not in primary sources. Relevant for future web client support in BlueMarble MMORPG.
 **Estimated Effort:** 6-8 hours
+**Status:** ✅ Complete (2025-01-15) - Document: game-dev-analysis-real-time-communication-modern-games.md
 
 **Source Name:** Practical Networked Applications in C++ by William Nagel
 **Discovered From:** Network Programming for Games (Topic 1)
@@ -147,6 +148,27 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Foundational knowledge on distributed systems. Relevant for server sharding architecture.
 **Estimated Effort:** 12-15 hours (large textbook, selective reading)
+
+**Source Name:** WebTransport API for Game Networking
+**Discovered From:** Real-Time Communication Networks (Discovered Source 1)
+**Priority:** High
+**Category:** GameDev-Tech
+**Rationale:** Newer standard replacing WebRTC DataChannel for game networking. Built on QUIC with cleaner API. Should evaluate for BlueMarble web client.
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** WebCodecs API for Audio/Voice Chat
+**Discovered From:** Real-Time Communication Networks (Discovered Source 1)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Browser-based audio encoding/decoding for voice chat without WebRTC complexity. Relevant if adding voice features to BlueMarble.
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** WebGPU Best Practices for Games
+**Discovered From:** Real-Time Communication Networks (Discovered Source 1)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Comprehensive optimization guide for WebGPU rendering. Relevant for web client graphics performance in BlueMarble.
+**Estimated Effort:** 5-7 hours
 
 ---
 
