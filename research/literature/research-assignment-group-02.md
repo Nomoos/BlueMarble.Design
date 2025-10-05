@@ -208,6 +208,7 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Proactive resilience testing through controlled experiments. Critical for validating BlueMarble's fault tolerance before production incidents.
 **Estimated Effort:** 6-8 hours
+**Status:** ✅ Complete (2025-01-15) - Document: game-dev-analysis-chaos-engineering.md
 
 **Source Name:** The Phoenix Project by Gene Kim
 **Discovered From:** Site Reliability Engineering (Discovered Source Processing - Batch 2)
@@ -215,6 +216,20 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** DevOps transformation narrative. Provides context for SRE culture and organizational change needed for BlueMarble team.
 **Estimated Effort:** 4-6 hours
+
+**Source Name:** Principles of Chaos Engineering (Website)
+**Discovered From:** Chaos Engineering (Batch 3, Source 1)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Foundational principles and community best practices for chaos engineering. Complements book knowledge with real-world case studies.
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** Chaos Engineering: Crash Test Your Applications (Udemy Course)
+**Discovered From:** Chaos Engineering (Batch 3, Source 1)
+**Priority:** Low
+**Category:** GameDev-Tech
+**Rationale:** Hands-on course with practical labs. Good for team training and onboarding new engineers to chaos engineering practices.
+**Estimated Effort:** 8-10 hours
 
 ---
 
