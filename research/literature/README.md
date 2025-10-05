@@ -42,8 +42,9 @@ Analysis documents examining game design patterns and development resources:
 2. [game-development-resources-analysis.md](game-development-resources-analysis.md) - Game development books and resources guide
 3. [game-dev-analysis-01-game-programming-cpp.md](game-dev-analysis-01-game-programming-cpp.md) - Deep dive analysis of Game Programming in C++
 4. [game-dev-analysis-02-gpu-gems.md](game-dev-analysis-02-gpu-gems.md) - GPU Gems Series analysis focusing on particle systems and GPU programming techniques
-5. [game-dev-analysis-vfx-compositing.md](game-dev-analysis-vfx-compositing.md) - Visual Effects and Compositing techniques for MMORPG development
-6. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
+5. [game-dev-analysis-03-real-time-rendering.md](game-dev-analysis-03-real-time-rendering.md) - Real-Time Rendering, 4th Edition covering PBR, image-space effects, and advanced lighting
+6. [game-dev-analysis-vfx-compositing.md](game-dev-analysis-vfx-compositing.md) - Visual Effects and Compositing techniques for MMORPG development
+7. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
 
 ## Guidelines
 
