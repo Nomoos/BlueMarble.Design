@@ -83,6 +83,12 @@ This assignment group focuses on analyzing game development resources from the o
 - [ ] All documents meet minimum length requirements
 - [ ] Cross-references added
 - [ ] Discovered sources logged below
+- [x] Reddit - r/MMORPG
+- [x] All documents created and placed in `research/literature/`
+- [x] All documents have proper front matter
+- [x] All documents meet minimum length requirements
+- [x] Cross-references added
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -175,6 +181,53 @@ During your research, if you discover additional valuable sources, log them here
 **Category:** GameDev-Tech  
 **Rationale:** Author of yojimbo, comprehensive game networking tutorial series  
 **Estimated Effort:** 6-8 hours
+**Source Name:** GameNetworkingSockets (Valve Steam Networking)  
+**Discovered From:** RakNet alternatives research  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Modern, actively maintained networking library from Valve used in Steam games, production-proven for large-scale multiplayer. Superior alternative to archived RakNet  
+**Estimated Effort:** 4-5 hours  
+**URL:** https://github.com/ValveSoftware/GameNetworkingSockets
+
+**Source Name:** yojimbo Network Library  
+**Discovered From:** RakNet alternatives and modern C++ networking  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Modern C++ dedicated server networking library, cleaner API than RakNet, good architectural reference for BlueMarble networking layer  
+**Estimated Effort:** 2-3 hours  
+**URL:** https://github.com/networkprotocol/yojimbo
+
+**Source Name:** ENet Reliable UDP Library  
+**Discovered From:** RakNet comparison and lightweight alternatives  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Simpler, more maintainable alternative to RakNet, still actively developed, used in many successful indie multiplayer games  
+**Estimated Effort:** 2-3 hours  
+**URL:** http://enet.bespin.org/
+
+**Source Name:** MMORPG.com (News and Reviews Site)  
+**Discovered From:** Frequent links in r/MMORPG discussions  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Comprehensive MMORPG news, reviews, and industry analysis. Excellent source for market trends and player sentiment tracking  
+**Estimated Effort:** 2-3 hours  
+**URL:** https://www.mmorpg.com/
+
+**Source Name:** Massively Overpowered (MMO News Blog)  
+**Discovered From:** Community citations for industry news in r/MMORPG  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Daily MMORPG news coverage, developer interviews, and community features. Tracks industry trends and player expectations  
+**Estimated Effort:** 2-3 hours  
+**URL:** https://massivelyop.com/
+
+**Source Name:** YouTube MMORPG Analysis Channels (Josh Strife Hayes, TheLazyPeon)  
+**Discovered From:** Video content frequently shared in r/MMORPG  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Popular MMORPG reviewers with detailed game analysis, player perspective, and market commentary valuable for understanding player expectations  
+**Estimated Effort:** 3-4 hours  
+**URLs:** Various YouTube channels covering MMORPG content
 
 ---
 
