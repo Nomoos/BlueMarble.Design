@@ -127,6 +127,53 @@ Add discovered sources below this line:
 
 ---
 
+**Source Name:** Effective Modern C++ (Scott Meyers, O'Reilly Media, 2014)
+**Discovered From:** Effective C++ / Modern C++ Best Practices research
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Provides updated guidance for C++11/14 features including move semantics, smart pointers, and modern idioms essential for high-performance game server development. Complements the original Effective C++ with focus on modern language features.
+**Estimated Effort:** 6-8 hours
+**Status:** ✅ Complete - Analysis document created: game-dev-analysis-effective-modern-cpp.md
+
+**Source Name:** C++17 - The Complete Guide (Nicolai Josuttis, Leanpub, 2019)
+**Discovered From:** Effective C++ / Modern C++ Best Practices research
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Comprehensive coverage of C++17 features including structured bindings, std::optional, std::variant, and constexpr improvements. These features directly improve BlueMarble codebase maintainability and performance.
+**Estimated Effort:** 6-8 hours
+**Status:** ✅ Complete - Analysis document created: game-dev-analysis-cpp17-complete-guide.md
+
+**Source Name:** C++ Core Guidelines (Stroustrup & Sutter, isocpp.github.io)
+**Discovered From:** Effective C++ / Modern C++ Best Practices research
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Authoritative best practices guide maintained by C++ language creators. Provides specific guidance on resource management, performance, and code organization applicable to long-running MMORPG servers.
+**Estimated Effort:** 4-6 hours (reference material, can be consulted as needed)
+**Status:** ✅ Complete - Analysis document created: game-dev-analysis-cpp-core-guidelines.md
+
+**Source Name:** Data-Oriented Design Book (Richard Fabian, dataorienteddesign.com)
+**Discovered From:** Effective C++ / Modern C++ Best Practices research
+**Priority:** High
+**Category:** GameDev-Tech
+**Rationale:** Focuses on cache-friendly data structures and performance optimization for game engines. Directly applicable to BlueMarble's entity component system and large-scale world simulation needs.
+**Estimated Effort:** 8-10 hours
+**Status:** ✅ Complete - Analysis document created: game-dev-analysis-data-oriented-design.md
+
+**Source Name:** Awesome Modern C++ (GitHub curated list)
+**Discovered From:** Effective C++ / Modern C++ Best Practices research
+**Priority:** Low
+**Category:** GameDev-Tech
+**Rationale:** Curated collection of modern C++ libraries, tools, and resources. Useful reference for discovering additional performance libraries and development tools.
+**Estimated Effort:** 2-3 hours (catalog review)
+**Status:** ✅ Complete - Analysis document created: game-dev-analysis-awesome-modern-cpp.md
+
+**Source Name:** C++ Best Practices GitHub Repository (cpp-best-practices/cppbestpractices)
+**Discovered From:** Effective C++ / Modern C++ Best Practices research
+**Priority:** Low
+**Category:** GameDev-Tech
+**Rationale:** Community-maintained best practices guide with practical examples. Supplements formal books with real-world coding patterns.
+**Estimated Effort:** 2-3 hours (reference material)
+**Status:** ✅ Complete - Analysis document created: game-dev-analysis-cpp-best-practices-repo.md
 **Source Name:** Effective C++ (3rd Edition) by Scott Meyers  
 **Discovered From:** Modern C++ Best Practices research  
 **Priority:** High  
