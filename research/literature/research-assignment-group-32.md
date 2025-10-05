@@ -128,12 +128,14 @@ During your research, if you discover additional valuable sources, log them here
 **Status:** Analysis complete (1,392 lines)  
 **Document:** game-dev-analysis-high-scalability-blog.md
 
-**Source Name:** Chaos Engineering for Game Servers  
+**Source Name:** Chaos Engineering for Game Servers ✅ COMPLETE  
 **Discovered From:** Reddit r/gamedev postmortem discussions  
 **Priority:** Medium  
 **Category:** GameDev-Tech  
 **Rationale:** Emerging practice for improving MMORPG robustness, prevents production failures  
-**Estimated Effort:** 3-5 hours
+**Estimated Effort:** 3-5 hours  
+**Status:** Analysis complete (1,046 lines)  
+**Document:** game-dev-analysis-chaos-engineering.md
 
 **Source Name:** GafferOnGames Networking Series  
 **Discovered From:** GameDev Stack Exchange answer references  
@@ -190,6 +192,20 @@ During your research, if you discover additional valuable sources, log them here
 **Category:** GameDev-Tech  
 **Rationale:** Cloud provider best practices for deploying scalable game infrastructure  
 **Estimated Effort:** 5-7 hours
+
+**Source Name:** Netflix Chaos Monkey  
+**Discovered From:** Chaos Engineering principles and tooling references  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Original chaos engineering tool, open source, well-documented implementation  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Gremlin Chaos Engineering Platform  
+**Discovered From:** Commercial chaos engineering solutions for production systems  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Commercial alternative with game-specific scenarios, easier than building custom  
+**Estimated Effort:** 2-3 hours
 
 ---
 
