@@ -185,7 +185,9 @@ Add discovered sources below this line:
 **Priority:** Medium  
 **Category:** GameDev-Design  
 **Rationale:** Academic perspective on game design vocabulary and methodology. Bridges academic research with practical design communication, valuable for establishing theoretical foundation.  
-**Estimated Effort:** 5-6 hours
+**Estimated Effort:** 5-6 hours  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-jarvinen-games-without-frontiers.md`
 
 **Source Name:** IGDA Game Design SIG Curriculum Framework  
 **Discovered From:** A Game Design Vocabulary research  
