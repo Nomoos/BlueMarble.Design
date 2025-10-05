@@ -862,6 +862,7 @@ target_link_libraries(BlueMarbleServer PRIVATE EnTT::EnTT)
 ### Related BlueMarble Research
 - [Game Programming Patterns Analysis](game-dev-analysis-game-programming-patterns.md)
 - [Game Programming in C++ Analysis](game-dev-analysis-01-game-programming-cpp.md)
+- [flecs ECS Library Analysis](game-dev-analysis-flecs-ecs-library.md) - Alternative ECS with relationships
 
 ### Games Using EnTT
 - Minecraft (Bedrock Edition uses similar ECS)

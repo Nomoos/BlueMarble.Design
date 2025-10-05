@@ -1215,7 +1215,7 @@ void MovementSystem::Update(float deltaTime) {
 During this analysis, the following implementation resources were identified for potential future investigation:
 
 1. **EnTT** - Modern, header-only C++ ECS library with excellent performance ✅ [Analysis Complete](game-dev-analysis-entt-ecs-library.md)
-2. **flecs** - Cross-platform ECS library (C/C++) with built-in query system
+2. **flecs** - Cross-platform ECS library (C/C++) with built-in query system ✅ [Analysis Complete](game-dev-analysis-flecs-ecs-library.md)
 3. **Bevy ECS** - Modern ECS implementation in Rust (architectural insights)
 4. **Boost.MSM** - High-performance state machine library for C++
 5. **Boost.Pool** - Memory pool allocator library for efficient object pooling
