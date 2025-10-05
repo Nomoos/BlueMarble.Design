@@ -34,6 +34,11 @@ This document tracks the remaining discovered sources from Assignment Group 35 t
    - Document: [game-dev-analysis-virtual-worlds-cyberian-frontier.md](./game-dev-analysis-virtual-worlds-cyberian-frontier.md)
    - Completed: 2025-01-17
 
+3. **Virtual Item Sales as a Revenue Model** (Discovered #2)
+   - Status: ✅ Complete
+   - Document: [game-dev-analysis-virtual-item-sales-revenue-model.md](./game-dev-analysis-virtual-item-sales-revenue-model.md)
+   - Completed: 2025-01-17
+
 ---
 
 ## 📋 Pending Sources Queue
