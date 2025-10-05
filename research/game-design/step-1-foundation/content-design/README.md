@@ -31,6 +31,9 @@ This directory contains comprehensive research on content design in game develop
 **Implementing for BlueMarble?** See:
 - [BlueMarble Applications](content-design-bluemarble.md) - Specific recommendations
 - [Development Cycle Integration](content-design-in-development.md) - How content fits each phase
+- [Content Rating Guidelines](../../../../docs/gameplay/content-rating-guidelines.md) - BlueMarble's content boundaries
+
+**Important:** Many games analyzed in this research are M-rated (Mature 17+). BlueMarble targets Teen/PEGI 12 rating. We study these games for **content design techniques** (quest structure, player agency) while explicitly **NOT adopting mature content**. See [Content Rating Guidelines](../../../../docs/gameplay/content-rating-guidelines.md) for details.
 
 ## Topic Files
 
