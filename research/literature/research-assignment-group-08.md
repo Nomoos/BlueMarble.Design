@@ -125,7 +125,7 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Introduction to Game Design, Prototyping and Development (High)
+- [x] Introduction to Game Design, Prototyping and Development (High)
 - [x] Game Engine Architecture (High)
 
 ---
@@ -194,6 +194,27 @@ Add discovered sources below this line:
 **Priority:** High  
 **Category:** GameDev-Tech  
 **Rationale:** Server infrastructure patterns, deployment, monitoring, and operations for production MMORPGs  
+**Estimated Effort:** 5-7 hours
+
+**Source Name:** The Art of Game Design: A Book of Lenses  
+**Discovered From:** Introduction to Game Design, Prototyping and Development  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Comprehensive design methodology and player psychology applicable to MMORPG systems  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Game Development Best Practices  
+**Discovered From:** Introduction to Game Design, Prototyping and Development  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Practical guidance for managing game development team and production workflows  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Agile Game Development with Scrum  
+**Discovered From:** Introduction to Game Design, Prototyping and Development  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Proven methodology for managing iterative game development processes  
 **Estimated Effort:** 5-7 hours
 
 ---
