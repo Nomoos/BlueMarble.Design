@@ -1164,7 +1164,7 @@ public class QuestValidation
                feedback.ChoicesFeltMeaningful &&
                feedback.ConsequencesVisible &&
                feedback.CharacterDevelopmentPresent &&
-               feedback.ImersionMaintained &&
+               feedback.ImmersionMaintained &&
                !feedback.ForcedToOptimize;
     }
     
