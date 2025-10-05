@@ -182,7 +182,10 @@ Add discovered sources below this line:
 **Priority:** Low  
 **Category:** GameDev-Tech  
 **Rationale:** Community-driven shader examples and experiments. Useful for post-processing techniques, screen-space effects, and visual effect prototyping.  
-**Estimated Effort:** 2-4 hours (curated examples review)
+**Estimated Effort:** 2-4 hours (curated examples review)  
+**Status:** ✅ Complete  
+**Document:** `game-dev-analysis-07-shadertoy.md`  
+**Completion Date:** 2025-01-15
 
 **Source Name:** Houdini VFX for Games  
 **Discovered From:** Unity VFX Graph Documentation (Topic 11 → Source 4)  

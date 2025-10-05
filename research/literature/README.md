@@ -46,8 +46,9 @@ Analysis documents examining game design patterns and development resources:
 6. [game-dev-analysis-04-guild-wars-2-vfx.md](game-dev-analysis-04-guild-wars-2-vfx.md) - Guild Wars 2 VFX System case study for MMORPG production insights
 7. [game-dev-analysis-05-unity-vfx-graph.md](game-dev-analysis-05-unity-vfx-graph.md) - Unity VFX Graph node-based workflow and GPU-driven particle systems
 8. [game-dev-analysis-06-unreal-niagara.md](game-dev-analysis-06-unreal-niagara.md) - Unreal Engine Niagara advanced particle system architecture and data-driven design
-9. [game-dev-analysis-vfx-compositing.md](game-dev-analysis-vfx-compositing.md) - Visual Effects and Compositing techniques for MMORPG development
-10. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
+9. [game-dev-analysis-07-shadertoy.md](game-dev-analysis-07-shadertoy.md) - ShaderToy Platform shader prototyping and procedural generation techniques
+10. [game-dev-analysis-vfx-compositing.md](game-dev-analysis-vfx-compositing.md) - Visual Effects and Compositing techniques for MMORPG development
+11. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
 
 ## Guidelines
 
