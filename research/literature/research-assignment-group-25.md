@@ -77,12 +77,22 @@ This assignment group focuses on analyzing game development resources from the o
 ## Progress Tracking
 
 - [x] World of Warcraft Programming
-- [ ] Real-Time Rendering (4th Edition)
+- [ ] Real-Time Rendering (4th Edition) - Selected for processing
 - [x] All documents created and placed in `research/literature/` (1 of 2)
 - [x] All documents have proper front matter (1 of 2)
 - [x] All documents meet minimum length requirements (1 of 2)
 - [x] Cross-references added (WoW Programming complete)
 - [x] Discovered sources logged below (6 sources from WoW analysis)
+
+**Batch Processing Status (4 sources requested):**
+- ⏳ Topic 2: Real-Time Rendering - Priority 1 (Original assignment)
+- ⏳ Discovery 2: CMaNGOS - Priority 2 (High priority discovered source)
+- ⏳ Discovery 3: AzerothCore - Priority 3 (Medium priority discovered source)
+- ⏳ Discovery 5: Multiplayer Game Programming - Priority 4 (Critical priority book)
+
+**Scope Note:** Processing 4 comprehensive sources (est. 1,200-2,400 lines total, 40-80 hours research effort per assignment estimates) represents substantial work. Proceeding with phased delivery to ensure quality standards are maintained.
+
+**Current Phase:** Preparing Real-Time Rendering analysis (final piece of original Assignment Group 25)
 
 ## New Sources Discovery
 
