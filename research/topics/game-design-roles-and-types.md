@@ -502,6 +502,7 @@ For BlueMarble's geological MMORPG, the recommended team structure:
 
 ## Related Documents
 
+- **[Game Design Roles Guidelines](../../docs/gameplay/game-design-roles-guidelines.md)** - Practical guidelines for implementing these roles in BlueMarble
 - [Game Design Mechanics Analysis](../literature/game-design-mechanics-analysis.md) - Mechanics from tabletop RPGs
 - [Advanced Game Design Principles](../literature/game-dev-analysis-advanced-design.md) - Emergent gameplay and complexity
 - [Player Decision Making](../literature/game-dev-analysis-player-decisions.md) - Player psychology and motivation
