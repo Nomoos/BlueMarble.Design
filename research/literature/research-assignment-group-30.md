@@ -76,13 +76,13 @@ This assignment group focuses on analyzing game development resources from the o
 
 ## Progress Tracking
 
-- [ ] Sebastian Lague
-- [ ] Code Monkey
-- [ ] All documents created and placed in `research/literature/`
-- [ ] All documents have proper front matter
-- [ ] All documents meet minimum length requirements
-- [ ] Cross-references added
-- [ ] Discovered sources logged below
+- [x] Sebastian Lague - Analysis complete (game-dev-analysis-sebastian-lague.md)
+- [x] Code Monkey - Analysis complete (game-dev-analysis-code-monkey.md)
+- [x] All documents created and placed in `research/literature/`
+- [x] All documents have proper front matter
+- [x] All documents meet minimum length requirements
+- [x] Cross-references added
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,86 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** The Nature of Code by Daniel Shiffman  
+**Discovered From:** Sebastian Lague (referenced for algorithm explanations)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Covers fundamental algorithms for procedural generation, particle systems, and natural simulations that apply to BlueMarble's ecosystem and terrain systems  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Real-Time Rendering (4th Edition)  
+**Discovered From:** Sebastian Lague (already in online-game-dev-resources.md)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Referenced by Sebastian Lague for graphics optimization techniques, already cataloged in main resource list as source #4  
+**Estimated Effort:** Already queued in Assignment Group 4
+
+**Source Name:** Marching Cubes Algorithm (Original 1987 Paper)  
+**Discovered From:** Sebastian Lague (implements in videos)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Academic foundation for terrain modification system; essential for understanding voxel-based terrain generation used in BlueMarble's mining/building mechanics  
+**Estimated Effort:** 2-3 hours  
+**Status:** ✅ Complete - Analysis document created: algorithm-analysis-marching-cubes.md
+
+**Source Name:** Fast Poisson Disk Sampling Paper (2007)  
+**Discovered From:** Sebastian Lague (used for vegetation placement)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Algorithm for natural resource distribution and vegetation placement; directly applicable to BlueMarble's procedural ecosystem generation  
+**Estimated Effort:** 2-3 hours  
+**Status:** ✅ Complete - Analysis document created: algorithm-analysis-fast-poisson-disk-sampling.md
+
+**Source Name:** Jump Point Search Paper  
+**Discovered From:** Sebastian Lague (A* optimization)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced pathfinding optimization for grid-based navigation; could significantly improve NPC pathfinding performance in BlueMarble  
+**Estimated Effort:** 3-4 hours  
+**Status:** ✅ Complete - Analysis document created: algorithm-analysis-jump-point-search.md
+
+**Source Name:** Brackeys YouTube Channel (Archive)  
+**Discovered From:** Sebastian Lague (complementary content)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Unity tutorials covering RPG mechanics, 2D game development; already cataloged in online-game-dev-resources.md as source #21  
+**Estimated Effort:** Already cataloged
+
+**Source Name:** Sebastian Lague GitHub Repositories  
+**Discovered From:** Sebastian Lague videos (accompanying source code)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Open-source implementations of procedural generation, pathfinding, and optimization techniques; provides working code examples for BlueMarble team reference  
+**Estimated Effort:** 4-6 hours (reviewing multiple projects)  
+**Status:** ✅ Complete - Analysis document created: code-analysis-sebastian-lague-github.md
+
+**Source Name:** Unity Netcode for GameObjects Documentation  
+**Discovered From:** Code Monkey (primary multiplayer framework)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Official Unity multiplayer networking framework documentation; essential for implementing BlueMarble's multiplayer infrastructure  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Unity Gaming Services (Lobby & Relay)  
+**Discovered From:** Code Monkey (matchmaking and instances)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Cloud services for lobby/matchmaking and small-scale multiplayer relay; useful for dungeon instances and party formation  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Photon PUN 2  
+**Discovered From:** Code Monkey (alternative networking solution)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Popular third-party multiplayer framework; alternative to Unity Netcode with different trade-offs  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Mirror Networking  
+**Discovered From:** Code Monkey (open-source networking)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Open-source networking framework based on UNET; community-driven with active development  
+**Estimated Effort:** 4-5 hours
 
 ---
 
