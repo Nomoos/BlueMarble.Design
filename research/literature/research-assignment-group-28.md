@@ -77,7 +77,7 @@ This assignment group focuses on analyzing game development resources from the o
 ## Progress Tracking
 
 - [x] Unity Learn - RPG Development
-- [ ] Gamasutra/Game Developer Articles
+- [x] Gamasutra/Game Developer Articles
 - [x] All documents created and placed in `research/literature/`
 - [x] All documents have proper front matter
 - [x] All documents meet minimum length requirements
@@ -176,6 +176,22 @@ During your research, if you discover additional valuable sources, log them here
 **Category:** GameDev-Tech  
 **Rationale:** Deep dive into Source Engine's entity networking system and performance optimization techniques  
 **Estimated Effort:** 6-8 hours
+
+---
+
+**Source Name:** GDC Vault - MMORPG Development Talks  
+**Discovered From:** Gamasutra/Game Developer Articles  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Conference presentations from MMORPG developers with detailed technical insights from shipped AAA games  
+**Estimated Effort:** 10-12 hours
+
+**Source Name:** Designing Virtual Worlds by Richard Bartle  
+**Discovered From:** Gamasutra/Game Developer Articles  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Foundational text on MMORPG design by MUD co-creator, industry-standard reference  
+**Estimated Effort:** 15-20 hours
 
 ---
 
