@@ -149,6 +149,7 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Foundational knowledge on distributed systems. Relevant for server sharding architecture.
 **Estimated Effort:** 12-15 hours (large textbook, selective reading)
+**Status:** ✅ Complete (2025-01-15) - Document: game-dev-analysis-distributed-systems.md
 
 **Source Name:** WebTransport API for Game Networking
 **Discovered From:** Real-Time Communication Networks (Discovered Source 1)
@@ -185,6 +186,20 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** C++17/20 design patterns specifically for game development. Relevant for BlueMarble architecture.
 **Estimated Effort:** 8-10 hours
+
+**Source Name:** Cloud Native Patterns by Cornelia Davis
+**Discovered From:** Distributed Systems (Discovered Source Processing)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Modern cloud-native patterns for distributed systems. Relevant for BlueMarble's cloud deployment (AWS/GCP/Azure).
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Site Reliability Engineering by Google
+**Discovered From:** Distributed Systems (Discovered Source Processing)
+**Priority:** High
+**Category:** GameDev-Tech
+**Rationale:** Production reliability practices for distributed systems. Critical for BlueMarble operations and monitoring.
+**Estimated Effort:** 10-12 hours
 
 ---
 
