@@ -28,6 +28,18 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 - **Overall Completion:** 100%
 ## Queue Status
 
+**Total Sources:** 89 (updated: +1 TrinityCore analysis)  
+**Completed:** 14  
+**In Progress:** 1  
+**Remaining:** 74  
+**Total Sources:** 42 (updated: +1 from discovered source processing)  
+**Completed:** 14  
+**In Progress:** 1  
+**Remaining:** 27  
+
+**Original Count:** 36 sources (before auto-discovery)  
+**Sources Added:** 6 (Energy Systems, Historical Maps/Navigation, Specialized Collections, World of Warcraft Programming, wowdev.wiki, TrinityCore)  
+**Completion Rate:** 33% (14 of 42 sources completed)  
 **Total Sources:** 86 (updated: +50 from online resources catalog)  
 **Completed:** 12  
 **In Progress:** 0  
@@ -449,7 +461,35 @@ All sources have been comprehensively documented in the `research/sources/` dire
    - Completion Date: 2025-01-17
    - Additional Sources Discovered: 5 (Game Engine Architecture, Real-Time Rendering, Network Programming for Games, Multiplayer Game Programming [expanded], C++ Best Practices)
 
-2. **Online Game Development Resources Catalog** - IN PROGRESS
+2. **World of Warcraft Programming** - COMPLETED
+   - Status: ✅ Complete
+   - Document: `game-dev-analysis-world-of-warcraft-programming.md`
+   - Lines: 600+
+   - Completion Date: 2025-01-17
+   - Assignment Group: 25
+   - Topic Number: 25
+   - Focus: MMORPG architecture, server design, networking, client optimization
+   - Related Sources: TrinityCore, CMaNGOS, AzerothCore, wowdev.wiki
+
+3. **wowdev.wiki Protocol Documentation** - COMPLETED
+   - Status: ✅ Complete
+   - Document: `game-dev-analysis-wowdev-wiki-protocol.md`
+   - Lines: 1,450+
+   - Completion Date: 2025-01-17
+   - Discovered From: World of Warcraft Programming (Topic 25)
+   - Focus: Network protocol design, opcodes, packet structures, authentication, binary serialization
+   - Related Sources: TrinityCore, CMaNGOS, AzerothCore
+
+4. **TrinityCore MMORPG Server Implementation** - COMPLETED
+   - Status: ✅ Complete
+   - Document: `game-dev-analysis-trinitycore-server.md`
+   - Lines: 1,269
+   - Completion Date: 2025-01-17
+   - Discovered From: World of Warcraft Programming (Topic 25)
+   - Focus: Server architecture, database design, opcode handlers, spatial management, scripting system
+   - Related Sources: CMaNGOS, AzerothCore, wowdev.wiki
+
+5. **Online Game Development Resources Catalog** - IN PROGRESS
    - Status: 🔍 In Progress (Active - Auto-Growing)
    - Document: `online-game-dev-resources.md`
    - Lines: 880+
