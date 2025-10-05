@@ -149,6 +149,7 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Authoritative best practices guide maintained by C++ language creators. Provides specific guidance on resource management, performance, and code organization applicable to long-running MMORPG servers.
 **Estimated Effort:** 4-6 hours (reference material, can be consulted as needed)
+**Status:** ✅ Complete - Analysis document created: game-dev-analysis-cpp-core-guidelines.md
 
 **Source Name:** Data-Oriented Design Book (Richard Fabian, dataorienteddesign.com)
 **Discovered From:** Effective C++ / Modern C++ Best Practices research
