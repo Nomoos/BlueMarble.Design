@@ -17,6 +17,9 @@ Comprehensive research on skill progression systems from leading MMORPGs, focusi
 - [Skill Relationships and Compatibility Research](skill-relationships-compatibility-research.md) - Parent-child skill bonuses and synergies
 - [Skill System Child Research Issues](skill-system-child-research-issues.md) - Implementation considerations
 
+### Player Engagement Research
+- [Gender Differences in Time Management Mechanics](gender-differences-time-management-research.md) - Player engagement patterns with routine-based progression systems
+
 ### Game-Specific Analysis
 - [Eco Skill System Research](eco-skill-system-research.md) - Collaborative specialization and forced interdependence
 - [Life is Feudal Skill Specialization Research](life-is-feudal-skill-specialization-system-research.md) - Hard skill cap and mastery systems
