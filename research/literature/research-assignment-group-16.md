@@ -204,6 +204,27 @@ Add discovered sources below this line:
 **Rationale:** Modern low-level graphics API for maximum performance. Critical if BlueMarble needs custom rendering engine for planet-scale optimization beyond Unity/Unreal capabilities.  
 **Estimated Effort:** 10-12 hours
 
+**Source Name:** PostgreSQL High Performance by Gregory Smith  
+**Discovered From:** Database Internals analysis (Topic 16 follow-up)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** PostgreSQL tuning and optimization techniques. Essential for maximizing database performance for MMORPG workloads with thousands of concurrent connections and transactions.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Redis in Action by Josiah Carlson  
+**Discovered From:** Database Internals analysis (Topic 16 follow-up)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced Redis caching patterns and data structures. Critical for implementing high-performance cache layer for player sessions and position data.  
+**Estimated Effort:** 5-6 hours
+
+**Source Name:** Cassandra: The Definitive Guide by Jeff Carpenter  
+**Discovered From:** Database Internals analysis (Topic 16 follow-up)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Alternative distributed database for high write throughput. May be useful if PostgreSQL sharding proves insufficient for geological simulation data writes.  
+**Estimated Effort:** 6-8 hours
+
 <!-- Discovery entries go here -->
 
 ---
