@@ -165,6 +165,7 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Browser-based audio encoding/decoding for voice chat without WebRTC complexity. Relevant if adding voice features to BlueMarble.
 **Estimated Effort:** 6-8 hours
+**Status:** ✅ Complete (2025-01-15) - Document: game-dev-analysis-webcodecs-api-audio-voice-chat.md
 
 **Source Name:** WebGPU Best Practices for Games
 **Discovered From:** Real-Time Communication Networks (Discovered Source 1)
