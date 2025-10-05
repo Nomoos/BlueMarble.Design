@@ -38,6 +38,11 @@ Formal references, summaries, and literature reviews from external sources.
   Analysis of survival knowledge systems from the awesome-survival repository, identifying skill hierarchies, 
   material processing chains, and knowledge preservation mechanics applicable to BlueMarble game design
 
+- [Daily Routine Frustration and Cursor Accuracy Research](literature/game-dev-research-cursor-accuracy-gender-accessibility.md) - 
+  Research on gender differences in motor skills, cursor accuracy requirements in games, and accessibility design 
+  for routine-based systems. Analysis of The Sims' success and recommendations for BlueMarble's routine-based 
+  progression system to attract underserved demographics (women, older players, disabled players)
+
 ### Content Extraction Guides (Priority Order)
 
 - [Content Extraction 01: OpenStreetMap](literature/survival-content-extraction-01-openstreetmap.md) - 
