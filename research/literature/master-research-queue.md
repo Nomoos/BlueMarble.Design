@@ -33,13 +33,13 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 **In Progress:** 1  
 **Remaining:** 74  
 **Total Sources:** 39 (updated: +3 from auto-discovery)  
-**Completed:** 13  
+**Completed:** 14  
 **In Progress:** 0  
-**Remaining:** 26  
+**Remaining:** 25  
 
 **Original Count:** 36 sources (before auto-discovery)  
 **Sources Added:** 3 (Energy Systems, Historical Maps/Navigation, Specialized Collections)  
-**Completion Rate:** 33% (13 of 39 sources completed)  
+**Completion Rate:** 36% (14 of 39 sources completed)  
 
 ---
 
@@ -519,9 +519,10 @@ All 3 newly discovered sources have been appended to Category 1 (Survival Guide 
     - Source: Referenced in Game Programming in C++
 
 36. **Isometric Projection Techniques**
-    - Status: ⏳ Pending
+    - Status: ✅ Complete - Analysis document created
     - Priority: Medium
     - Focus: UI/UX visual design, perspective systems
+    - Document: `game-dev-analysis-isometric-projection.md`
     - Source: Issue comment #3364843099 (sketch documentation)
 
 ---
