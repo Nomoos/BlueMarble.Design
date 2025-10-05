@@ -77,7 +77,7 @@ This assignment group focuses on analyzing game development resources from the o
 ## Progress Tracking
 
 - [x] MMO Architecture: Source Code and Insights
-- [ ] GDC (Game Developers Conference)
+- [x] GDC (Game Developers Conference)
 - [x] All documents created and placed in `research/literature/`
 - [x] All documents have proper front matter
 - [x] All documents meet minimum length requirements
@@ -127,6 +127,24 @@ During your research, if you discover additional valuable sources, log them here
 **Estimated Effort:** 2-3 hours  
 **URL:** https://en.wikipedia.org/wiki/Secure_Remote_Password_protocol  
 **Status:** ✅ Complete - Document: `game-dev-analysis-srp6-authentication-protocol.md` (915 lines)
+
+**Source Name:** Designing Diablo III's Combat (GDC 2013)  
+**Discovered From:** GDC (Game Developers Conference) analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Action RPG combat design principles applicable to BlueMarble's real-time combat system, focus on combat feel and feedback systems  
+**Estimated Effort:** 3-4 hours  
+**URL:** GDC Vault - search "Diablo III Combat"  
+**Status:** ⏳ Pending Analysis
+
+**Source Name:** The Game Outcomes Project (GDC series)  
+**Discovered From:** GDC (Game Developers Conference) analysis  
+**Priority:** High  
+**Category:** GameDev-Process  
+**Rationale:** Research on what makes game projects succeed or fail, critical for BlueMarble project management and team dynamics  
+**Estimated Effort:** 4-5 hours  
+**URL:** GDC Vault - search "Game Outcomes Project"  
+**Status:** ⏳ Pending Analysis
 
 ---
 
