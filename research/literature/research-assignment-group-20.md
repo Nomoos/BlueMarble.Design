@@ -9,9 +9,9 @@ assignee: TBD
 ---
 
 **Document Type:** Research Assignment (Reserve)  
-**Version:** 1.2  
-**Total Topics:** 2 (both complete)  
-**Status:** Active - 2 topics completed, ready for next assignment
+**Version:** 1.3  
+**Total Topics:** 3 (all complete)  
+**Status:** Active - 3 topics completed, ready for next assignment
 
 ## Overview
 
@@ -108,6 +108,24 @@ When activating this group:
 **Estimated Effort:** 10-12 hours  
 **Date Discovered:** 2025-01-17
 
+**Source Name:** Vulkan Specification (Latest Version)  
+**Discovered From:** Vulkan Programming Guide analysis (Topic 20.3)  
+**Discovered By:** Group 20  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Official reference documentation for all Vulkan features, extensions, and best practices.  
+**Estimated Effort:** 8-10 hours  
+**Date Discovered:** 2025-01-17
+
+**Source Name:** GPU Architecture Guides (NVIDIA, AMD, Intel)  
+**Discovered From:** Vulkan Programming Guide analysis (Topic 20.3)  
+**Discovered By:** Group 20  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Vendor-specific optimization guides for maximum performance on different GPU architectures.  
+**Estimated Effort:** 10-12 hours  
+**Date Discovered:** 2025-01-17
+
 ### Assigned Topics
 
 <!-- Topics will be added here as discoveries are made -->
@@ -170,6 +188,35 @@ When activating this group:
 
 ---
 
+#### Topic 20.3: Vulkan Programming Guide (HIGH)
+
+**Source Name:** Vulkan Programming Guide  
+**Discovered From:** Real-Time Rendering analysis (Topic 20.2)  
+**Discovered By:** Group 20  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Official Vulkan reference for implementing modern graphics features required by BlueMarble. Essential for understanding low-level graphics programming, command buffer management, synchronization primitives, and performance optimization in Vulkan.  
+**Estimated Effort:** 10-12 hours  
+**Date Discovered:** 2025-01-17
+
+**Focus Areas:**
+- Vulkan initialization and device selection
+- Command buffer recording and submission
+- Synchronization (semaphores, fences, barriers)
+- Memory management and allocation strategies
+- Descriptor sets and pipeline layouts
+- Render passes and framebuffers
+
+**Deliverables:**
+- Comprehensive analysis document: `game-dev-analysis-20-vulkan-programming.md`
+- Implementation recommendations for BlueMarble's Vulkan renderer
+- Code examples for critical Vulkan patterns
+- Performance optimization guidelines
+
+**Status:** ✅ Complete - Research document published
+
+---
+
 ## Work Guidelines
 
 When this group is activated, follow standard research process:
@@ -187,6 +234,7 @@ Follow same quality standards and documentation structure as other groups.
 - [x] Group 20 activated - 2025-01-17
 - [x] Topic 20.1: Game Engine Architecture (High) - ✅ Complete
 - [x] Topic 20.2: Real-Time Rendering (High) - ✅ Complete
+- [x] Topic 20.3: Vulkan Programming Guide (High) - ✅ Complete
 
 ---
 
@@ -199,6 +247,6 @@ Follow same quality standards and documentation structure as other groups.
 ---
 
 **Created:** 2025-01-15  
-**Status:** Active - 2 topics completed  
-**Capacity:** 2 topics completed, ready for 1 more if needed  
+**Status:** Active - 3 topics completed  
+**Capacity:** 3 topics completed, ready for 1 more if needed  
 **Last Updated:** 2025-01-17
