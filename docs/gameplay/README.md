@@ -4,6 +4,10 @@ This directory contains all documentation related to gameplay mechanics, systems
 
 ## Document Categories
 
+### Design Guidelines
+
+- [Content Rating and Maturity Guidelines](content-rating-guidelines.md) - Content standards and acceptable content boundaries
+
 ### Core Mechanics
 
 - Combat systems
