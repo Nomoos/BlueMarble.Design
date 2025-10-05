@@ -142,6 +142,14 @@ Link liberally between related documents. Each major directory has an `index.md`
 
 ## Getting Started
 
+### Understanding the Repository Structure
+
+**New to the repository?** Start with the [Folder Structure Guide](FOLDER_STRUCTURE_GUIDE.md) to understand:
+- The purpose of each directory (research, design, docs)
+- Where to place different types of documents
+- How to navigate the documentation
+- Examples and decision framework
+
 ### For Design Contributors
 
 1. Review the [Contributing Guidelines](CONTRIBUTING.md) and [Documentation Best Practices](DOCUMENTATION_BEST_PRACTICES.md)
@@ -169,6 +177,7 @@ Link liberally between related documents. Each major directory has an `index.md`
 
 ## Documentation Standards
 
+- **[Folder Structure Guide](FOLDER_STRUCTURE_GUIDE.md)** - Understanding the repository organization
 - **[Documentation Best Practices](DOCUMENTATION_BEST_PRACTICES.md)** - Guidelines for creating high-quality documentation
 - **[Contributing Guidelines](CONTRIBUTING.md)** - How to contribute to the repository
 - **[Usage Examples](USAGE_EXAMPLES.md)** - Practical examples of using the repository structure
