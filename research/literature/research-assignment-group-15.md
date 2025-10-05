@@ -4,15 +4,15 @@
 title: Research Assignment Group 15
 date: 2025-01-15
 tags: [research-queue, assignment, parallel-work]
-status: pending
-assignee: TBD
+status: complete
+assignee: Assignment Group 15
 ---
 
 **Document Type:** Research Assignment  
 **Version:** 1.0  
 **Total Topics:** 1  
 **Priority Mix:** 1 Medium  
-**Status:** Ready for Assignment
+**Status:** Complete
 
 ## Overview
 
@@ -100,7 +100,7 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Isometric Projection Techniques (Medium)
+- [x] Isometric Projection Techniques (Medium)
 
 ---
 
@@ -127,7 +127,75 @@ Add discovered sources below this line:
 
 ---
 
-<!-- Discovery entries go here -->
+**Source Name:** Isometric Game Programming by Ernest Pazera  
+**Discovered From:** Isometric Projection Techniques research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive guide to isometric rendering techniques and tile-based systems, applicable to BlueMarble's strategic map views and minimap design  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Diablo II Game Development Postmortem  
+**Discovered From:** Isometric Projection research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Industry case study of hybrid 2D/3D isometric rendering in AAA game, relevant for understanding performance trade-offs  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** SimCity 2000 Technical Design  
+**Discovered From:** Isometric game history  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Classic isometric city builder that pioneered tile-based techniques, historical perspective on isometric design patterns  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Mathematics for 3D Game Programming (Isometric Chapter)  
+**Discovered From:** Projection mathematics research  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Mathematical foundations of projection systems and coordinate transformations essential for custom camera implementations  
+**Estimated Effort:** 5-7 hours
+
+**Source Name:** Real-Time Rendering (Projection Systems Chapter)  
+**Discovered From:** Camera systems research  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Academic treatment of projection matrices and camera systems, fundamental for understanding rendering pipeline  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Tile-Based Game Rendering by Richard Davey  
+**Discovered From:** Isometric Game Programming  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Practical implementation of tile-based rendering systems for efficient terrain representation  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Depth Sorting Algorithms for 2.5D Games  
+**Discovered From:** Painter's algorithm section  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Efficient algorithms for painter's algorithm and occlusion handling in isometric rendering  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** StarCraft Engine Architecture  
+**Discovered From:** Diablo II postmortem  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Isometric RTS engine design and performance optimization at scale, relevant for multiplayer considerations  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Age of Empires II Rendering System  
+**Discovered From:** StarCraft engine analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Sprite-based isometric rendering at scale with thousands of units, performance optimization techniques  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Sprite Cutting and Occlusion Techniques  
+**Discovered From:** Depth sorting algorithms  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced techniques for handling overlapping sprites in isometric views, edge case handling  
+**Estimated Effort:** 3-4 hours
 
 ---
 

@@ -76,13 +76,13 @@ This assignment group focuses on analyzing game development resources from the o
 
 ## Progress Tracking
 
-- [ ] Game Programming Patterns (Online Edition)
-- [ ] Brackeys (Historical Archive)
-- [ ] All documents created and placed in `research/literature/`
-- [ ] All documents have proper front matter
-- [ ] All documents meet minimum length requirements
-- [ ] Cross-references added
-- [ ] Discovered sources logged below
+- [x] Game Programming Patterns (Online Edition)
+- [x] Brackeys (Historical Archive)
+- [x] All documents created and placed in `research/literature/`
+- [x] All documents have proper front matter
+- [x] All documents meet minimum length requirements
+- [x] Cross-references added
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,78 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** EnTT - Entity Component System Library  
+**Discovered From:** Game Programming Patterns (Online Edition)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Fast and reliable C++ ECS implementation extensively referenced in pattern analysis. Provides production-ready solution for BlueMarble's entity architecture with cache-friendly data layout and parallel processing support.  
+**Estimated Effort:** 4-6 hours  
+**Status:** ✅ Completed - Analysis document created
+
+**Source Name:** flecs - Entity Component System Library  
+**Discovered From:** Game Programming Patterns (Online Edition)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Alternative C ECS implementation with multi-threading, queries, and prefab features. Valuable for comparative analysis of ECS architectures and architectural decision-making.  
+**Estimated Effort:** 3-5 hours  
+**Status:** ✅ Completed - Analysis document created
+
+**Source Name:** Design Patterns: Elements of Reusable Object-Oriented Software (Gang of Four)  
+**Discovered From:** Game Programming Patterns (Online Edition)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Foundational design patterns book that Game Programming Patterns builds upon. Selected chapters could inform architectural decisions for other BlueMarble systems beyond game-specific patterns.  
+**Estimated Effort:** 8-12 hours
+
+---
+
+### New Discoveries from EnTT Research
+
+**Source Name:** EntityX - C++ Entity Component System Library  
+**Discovered From:** EnTT Entity Component System Analysis  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Earlier C++ ECS library that influenced EnTT design. Provides historical context for ECS evolution in C++ and alternative implementation patterns.  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** Data-Oriented Design Book (Richard Fabian)  
+**Discovered From:** EnTT Entity Component System Analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Foundational concepts behind ECS architecture and cache-friendly data layouts. Essential for understanding performance characteristics and optimization strategies.  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** ECS Benchmark Repository  
+**Discovered From:** EnTT Entity Component System Analysis  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive benchmarks comparing various ECS implementations. Useful for validating architectural decisions and performance claims.  
+**Estimated Effort:** 2-3 hours
+
+---
+
+### New Discoveries from flecs Research
+
+**Source Name:** Unity DOTS (Data-Oriented Technology Stack)  
+**Discovered From:** flecs Entity Component System Analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Commercial archetype-based ECS implementation from Unity. Provides real-world examples of archetype architecture at massive scale and production challenges.  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** ECS FAQ Repository  
+**Discovered From:** flecs Entity Component System Analysis  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive FAQ covering ECS architectures, design decisions, and trade-offs. Excellent reference for team education and architectural discussions.  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** Archetype-Based ECS Academic Papers  
+**Discovered From:** flecs Entity Component System Analysis  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Academic research on archetype-based memory layouts and performance characteristics. Deep understanding of performance trade-offs.  
+**Estimated Effort:** 6-8 hours
 
 ---
 
