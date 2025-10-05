@@ -213,7 +213,9 @@ Add discovered sources below this line:
 **Priority:** High  
 **Category:** GameDev-Design  
 **Rationale:** Comprehensive academic treatment of game design patterns with extensive catalog and cross-referencing. Direct predecessor and complement to Game Design Patterns Project. Highly relevant for establishing BlueMarble pattern library with rigorous theoretical foundation.  
-**Estimated Effort:** 10-12 hours
+**Estimated Effort:** 10-12 hours  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-bjork-holopainen-patterns.md`
 
 **Source Name:** "Design Patterns in FPS Levels" by Hullett & Whitehead (2010)  
 **Discovered From:** Game Design Patterns Project analysis  
@@ -221,6 +223,13 @@ Add discovered sources below this line:
 **Category:** GameDev-Design  
 **Rationale:** Empirical pattern identification methodology applicable to geological environment design. While FPS-focused, the spatial pattern analysis approach could inform BlueMarble terrain and exploration space design patterns.  
 **Estimated Effort:** 3-4 hours
+
+**Source Name:** "Game Design Reader: A Rules of Play Anthology" edited by Katie Salen & Eric Zimmerman (2007)  
+**Discovered From:** Björk & Holopainen "Patterns in Game Design" analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Anthology includes Björk's overview of game design patterns along with other foundational game design texts. Comprehensive resource for design theory education relevant for establishing theoretical foundation for BlueMarble design discussions.  
+**Estimated Effort:** 12-15 hours (selective reading)
 
 ---
 
