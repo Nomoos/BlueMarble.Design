@@ -126,7 +126,7 @@ Each analysis document should include:
 Track progress using this checklist:
 
 - [x] Real-Time Rendering (High) - Completed: `game-dev-analysis-real-time-rendering.md`
-- [ ] Mathematics for 3D Game Programming (High)
+- [x] Mathematics for 3D Game Programming (High) - Completed: `game-dev-analysis-3d-mathematics.md`
 
 ---
 
@@ -228,6 +228,24 @@ Add discovered sources below this line:
 ---
 
 <!-- Discovery entries go here -->
+
+**Source Name:** Robust Geometric Computations (Jonathan Shewchuk)  
+**Discovered From:** Mathematics for 3D Game Programming research (Assignment Group 09, Topic 2)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced numerical techniques for geometric computations. Critical for ensuring stability in collision detection and spatial queries on planetary scale.  
+**Estimated Effort:** 3-4 hours
+
+---
+
+**Source Name:** Game Physics Pearls (Edited by Gino van den Bergen and Dirk Gregorius)  
+**Discovered From:** Mathematics for 3D Game Programming research (Assignment Group 09, Topic 2)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Collection of advanced physics techniques from industry experts. Relevant for geological simulation and entity physics in BlueMarble.  
+**Estimated Effort:** 4-5 hours
+
+---
 
 ---
 
