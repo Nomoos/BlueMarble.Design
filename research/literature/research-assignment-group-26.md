@@ -77,7 +77,7 @@ This assignment group focuses on analyzing game development resources from the o
 ## Progress Tracking
 
 - [x] AI for Games (3rd Edition) - ✅ Complete (1237 lines)
-- [ ] The Art of Game Design: A Book of Lenses (3rd Edition)
+- [x] The Art of Game Design: A Book of Lenses (3rd Edition) - ✅ Complete (1213 lines)
 - [x] Document created and placed in `research/literature/`
 - [x] Document has proper front matter
 - [x] Document meets minimum length requirements (1237 lines > 300-500)
