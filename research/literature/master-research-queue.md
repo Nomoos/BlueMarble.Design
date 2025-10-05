@@ -44,6 +44,13 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 **In Progress:** 0  
 **Remaining:** 69  
 **Total Sources:** 39 (updated: +3 from auto-discovery)  
+**Completed:** 12  
+**In Progress:** 0  
+**Remaining:** 27  
+
+**Original Count:** 36 sources (before auto-discovery)  
+**Sources Added:** 3 (Energy Systems, Historical Maps/Navigation, Specialized Collections)  
+**Completion Rate:** 31% (12 of 39 sources completed)  
 **Completed:** 11  
 **Total Sources:** 56 (updated: 2025-01-17)  
 **Completed Analysis:** 11  
@@ -521,9 +528,11 @@ All sources have been comprehensively documented in the `research/sources/` dire
     - Focus: Core loops, system interaction, progression
 
 16. **A Game Design Vocabulary**
-    - Status: ⏳ Pending detailed extraction
+    - Status: ✅ Complete
     - Priority: Medium
     - Focus: Design terminology, communication frameworks
+    - Document: `game-dev-analysis-design-vocabulary.md`
+    - Completed: 2025-01-15
 
 17. **Advanced Game Design**
     - Status: ⏳ Pending detailed extraction
