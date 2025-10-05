@@ -260,7 +260,9 @@ Add discovered sources below this line:
 **Priority:** Medium  
 **Category:** GameDev-Design  
 **Rationale:** Nobel Prize-winning research on decision-making under uncertainty. Highly relevant for understanding how players actually make decisions in BlueMarble's uncertain geological systems. Covers systematic biases, heuristics, and probability judgment that should inform UI design.  
-**Estimated Effort:** 10-12 hours (selective reading)
+**Estimated Effort:** 10-12 hours (selective reading)  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-kahneman-thinking-fast-slow.md`
 
 **Source Name:** "The Signal and the Noise" by Nate Silver (2012)  
 **Discovered From:** Costikyan "Uncertainty in Games" analysis  
@@ -296,6 +298,27 @@ Add discovered sources below this line:
 **Category:** GameDev-Design  
 **Rationale:** Contemporary game theory exploring fiction/rules interaction beyond anthology excerpt. Relevant for BlueMarble's narrative-simulation balance where geological history discovery emerges from simulation interaction.  
 **Estimated Effort:** 6-8 hours
+
+**Source Name:** "Judgment Under Uncertainty: Heuristics and Biases" (1982)  
+**Discovered From:** Kahneman "Thinking, Fast and Slow" analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Anthology of foundational research papers on cognitive biases. Original publications that Kahneman's book summarizes. More technical and detailed treatment of specific biases relevant to BlueMarble's decision-making systems.  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** "Nudge: Improving Decisions About Health, Wealth, and Happiness" by Thaler & Sunstein (2008)  
+**Discovered From:** Kahneman "Thinking, Fast and Slow" analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Application of behavioral economics to "choice architecture" - how presentation of options influences decisions. Relevant for designing BlueMarble interfaces that guide players toward better decisions while preserving agency.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** "Predictably Irrational" by Dan Ariely (2008)  
+**Discovered From:** Kahneman "Thinking, Fast and Slow" analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Accessible treatment of behavioral economics focused on consumer decisions and market psychology. Relevant for BlueMarble's economic simulation (mineral trading, resource valuation).  
+**Estimated Effort:** 5-6 hours
 
 ---
 
