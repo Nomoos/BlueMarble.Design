@@ -245,7 +245,9 @@ Add discovered sources below this line:
 **Priority:** High  
 **Category:** Survival-Technical  
 **Rationale:** Most comprehensive online mineral database with 50,000+ minerals documented. Includes locality data, specimen photos, and technical specifications. Essential reference for realistic mineral distribution and properties in BlueMarble.  
-**Estimated Effort:** 5-6 hours (systematic review)
+**Estimated Effort:** 5-6 hours (systematic review)  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `survival-content-extraction-mindat-database.md`
 
 ---
 
