@@ -216,6 +216,13 @@ Add discovered sources below this line:
 **Rationale:** Scientific understanding of how humans create mental maps and navigate. Could inform UI/UX design for navigation systems.  
 **Estimated Effort:** 3-4 hours
 
+**Source Name:** Astronomical Observatories and Time Standards  
+**Discovered From:** Historical Chronometer Development Resources  
+**Priority:** Low  
+**Category:** Survival - Astronomical Infrastructure  
+**Rationale:** Historical methods for establishing accurate time standards using astronomical observations. Relevant for observatory building mechanics and authoritative time distribution.  
+**Estimated Effort:** 3-4 hours
+
 ---
 
 <!-- Discovery entries go here -->
