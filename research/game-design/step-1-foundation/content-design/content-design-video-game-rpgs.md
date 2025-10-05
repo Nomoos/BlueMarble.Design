@@ -11,6 +11,8 @@
 
 This document analyzes content design approaches in five major video game RPGs: Kingdom Come: Deliverance, The Witcher 3, Cyberpunk 2077, Gothic, and Baldur's Gate 3. Each game offers unique lessons on quest design, player agency, and content structure applicable to BlueMarble.
 
+**Important Note:** Many games analyzed here are M-rated (Mature 17+) and contain content inappropriate for BlueMarble's Teen/PEGI 12 target rating. We study these games for their **content design techniques** (quest structure, player agency, branching narratives) while explicitly **NOT adopting their mature content** (graphic violence, sexual themes, strong profanity). See [Content Rating Guidelines](../../../../docs/gameplay/content-rating-guidelines.md) for BlueMarble's content boundaries.
+
 ---
 
 ## Content Design in Video Game RPGs
@@ -410,6 +412,7 @@ Across all analyzed RPGs, several patterns emerge:
 
 - [Content Design Index](README.md) - Full topic navigation
 - [Content Design Overview](content-design-overview.md) - Foundation concepts
+- [Content Rating Guidelines](../../../../docs/gameplay/content-rating-guidelines.md) - BlueMarble's content boundaries and what we learn vs. adopt
 
 ---
 
