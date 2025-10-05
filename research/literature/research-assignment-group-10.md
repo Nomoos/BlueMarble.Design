@@ -201,7 +201,9 @@ Add discovered sources below this line:
 **Priority:** Medium  
 **Category:** GameDev-Design  
 **Rationale:** Book-length expansion of design vocabulary concepts, specifically focusing on information states and decision-making. Directly relevant to BlueMarble's geological prediction systems where players make decisions under uncertainty.  
-**Estimated Effort:** 8-10 hours
+**Estimated Effort:** 8-10 hours  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-costikyan-uncertainty.md`
 
 **Source Name:** "Cybertext: Perspectives on Ergodic Literature" by Espen Aarseth (1997)  
 **Discovered From:** Costikyan "I Have No Words & I Must Design" analysis  
@@ -248,6 +250,20 @@ Add discovered sources below this line:
 **Estimated Effort:** 5-6 hours (systematic review)  
 **Status:** ✅ Complete (2025-01-15)  
 **Document:** `survival-content-extraction-mindat-database.md`
+
+**Source Name:** "Thinking, Fast and Slow" by Daniel Kahneman (2011)  
+**Discovered From:** Costikyan "Uncertainty in Games" analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Nobel Prize-winning research on decision-making under uncertainty. Highly relevant for understanding how players actually make decisions in BlueMarble's uncertain geological systems. Covers systematic biases, heuristics, and probability judgment that should inform UI design.  
+**Estimated Effort:** 10-12 hours (selective reading)
+
+**Source Name:** "The Signal and the Noise" by Nate Silver (2012)  
+**Discovered From:** Costikyan "Uncertainty in Games" analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Practical guide to prediction and managing uncertainty in complex systems. Relevant for implementing player prediction systems and statistical literacy features in BlueMarble. Accessible treatment of Bayesian thinking.  
+**Estimated Effort:** 6-8 hours
 
 ---
 
