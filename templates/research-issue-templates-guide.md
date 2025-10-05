@@ -110,10 +110,10 @@ For each of the 12 research areas, create a sub-issue:
 4. **Milestone Tracking**: Use GitHub milestones to track phases
 
 ### Documentation Integration
-- Research reports go in `docs/research/`
+- Research reports go in `research/topics/` or relevant research subdirectory
 - Technical specs go in `docs/systems/`
-- Implementation guides go in `research/spatial-data-storage/`
-- Update `research/RESEARCH_ISSUES_SUMMARY.md` as work progresses
+- Implementation guides go in appropriate research area (e.g., `research/spatial-data-storage/`)
+- Update relevant research index files as work progresses
 
 ### Completion Process
 1. Complete research work in sub-issue

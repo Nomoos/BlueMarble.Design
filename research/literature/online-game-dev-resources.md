@@ -802,7 +802,7 @@ This document catalogs online resources for game development with a focus on **R
 ## Integration with BlueMarble Research
 
 ### Related Documents:
-- [game_dev_repos.md](../../docs/research/game_dev_repos.md) - Open source repository analysis
+- [game_dev_repos.md](../market-research/game_dev_repos.md) - Open source repository analysis
 - [game-development-resources-analysis.md](./game-development-resources-analysis.md) - Book analysis and reading guide
 - [game-dev-analysis-01-game-programming-cpp.md](./game-dev-analysis-01-game-programming-cpp.md) - Deep dive into Game Programming in C++
 - [master-research-queue.md](./master-research-queue.md) - Overall research tracking
