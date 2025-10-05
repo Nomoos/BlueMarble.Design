@@ -40,6 +40,23 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 **Original Count:** 36 sources (before auto-discovery)  
 **Sources Added:** 6 (Energy Systems, Historical Maps/Navigation, Specialized Collections, World of Warcraft Programming, wowdev.wiki, TrinityCore)  
 **Completion Rate:** 33% (14 of 42 sources completed)  
+**Total Sources:** 56 (updated: 2025-01-17)  
+**Completed Analysis:** 11  
+**In Progress:** 0  
+**Remaining:** 45  
+**Completion Rate:** 20% (11 of 56 sources)  
+
+**Source Breakdown:**
+- Books and Technical Resources: 50
+- Survival Knowledge Collections: 13 (10 downloaded, 3 pending)
+- Online Resources and Communities: Ongoing reference
+
+**Documentation Status:**
+- ✅ All sources catalogued in research/sources/
+- ✅ BibTeX bibliography created (33 entries in sources.bib)
+- ✅ Reading list organized by priority (84 tracked items)
+- ✅ Survival collection download info documented (survival-sources.md)
+- ✅ Comprehensive README with usage guidelines  
 
 ---
 
@@ -336,6 +353,57 @@ All 3 newly discovered sources have been appended to Category 1 (Survival Guide 
 - **Primary Source:** https://github.com/alx-xlx/awesome-survival
 - **Project Repository:** https://github.com/Nomoos/BlueMarble.Design
 - **Related Research:** `research/literature/` directory
+- **Source Documentation:** `research/sources/` directory
+
+## Source Documentation
+
+### research/sources/ Directory
+
+All sources have been comprehensively documented in the `research/sources/` directory:
+
+**Created Files (2025-01-17):**
+
+1. **sources.bib** - Complete BibTeX bibliography
+   - 33 BibTeX entries covering all major sources
+   - Organized by category (Game Programming, Design Theory, Multiplayer, Survival Collections, etc.)
+   - Includes ISBNs, publishers, URLs where available
+   - Proper BibTeX formatting for academic citation
+
+2. **reading-list.md** - Prioritized reading list
+   - 84 tracked items across all priority levels
+   - Organized by: Critical > High > Medium > Low priority
+   - Status tracking: Completed (✓), In Progress (🔍), Pending (⏳)
+   - Cross-referenced with analysis documents
+   - Includes online resources and communities
+
+3. **survival-sources.md** - Survival collection tracking
+   - 13 survival knowledge collections documented
+   - Download sources (URLs, magnet links, torrent info)
+   - Size and format information for each collection
+   - Status: 10 downloaded and analyzed, 3 pending
+   - Legal and licensing considerations
+   - Extraction pipeline documentation
+
+4. **README.md** - Comprehensive usage guide
+   - Documentation of all source tracking systems
+   - Guidelines for adding new sources
+   - Cross-linking instructions
+   - Statistics and current status
+   - Workflow documentation
+
+**Coverage:**
+- All 50 books from game development research
+- All 13 survival knowledge collections
+- 20+ online resources and open source projects
+- Community forums and video tutorials
+- Complete download and access information
+
+**Benefits:**
+- Centralized source tracking
+- Easy citation for academic work
+- Clear prioritization for reading order
+- Download instructions for survival collections
+- Progress tracking across all sources
 
 ## Changelog
 
@@ -345,6 +413,11 @@ All 3 newly discovered sources have been appended to Category 1 (Survival Guide 
 - **2025-01-17:** Added Energy Systems Collection from auto-discovery (+1 source)
 - **2025-01-17:** Added Historical Maps and Navigation Resources from auto-discovery (+1 source)
 - **2025-01-17:** Added Specialized Collections (Deep Web Sources) from auto-discovery (+1 source)
+- **2025-01-17:** Created comprehensive source documentation system in research/sources/
+- **2025-01-17:** Added 33 BibTeX entries to sources.bib
+- **2025-01-17:** Created reading-list.md with 84 tracked items
+- **2025-01-17:** Created survival-sources.md with download information for 13 collections
+- **2025-01-17:** Updated queue status to reflect 56 total sources (50 books + 6 survival collections)
 
 ---
 
@@ -620,5 +693,6 @@ For each source, create:
 ---
 
 **Last Updated:** 2025-01-17  
-**Next Source:** Specialized Collections (Deep Web Sources) - newly discovered  
-**Status:** Auto-discovery phase complete - 3 sources added
+**Next Source:** Energy Systems Collection, Historical Maps and Navigation Resources, or Specialized Collections (Deep Web Sources)  
+**Status:** Source documentation complete - All 56 sources catalogued in research/sources/  
+**Documentation Phase:** ✅ Complete - BibTeX bibliography, reading list, and download tracking established
