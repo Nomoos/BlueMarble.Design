@@ -29,6 +29,17 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 ## Queue Status
 
 **Total Sources:** 86 (updated: +50 from online resources catalog)  
+**Completed:** 11  
+**In Progress:** 1  
+**Remaining:** 74  
+**Total Sources:** 39 (updated: +3 from auto-discovery)  
+**Completed:** 14  
+**In Progress:** 0  
+**Remaining:** 25  
+
+**Original Count:** 36 sources (before auto-discovery)  
+**Sources Added:** 3 (Energy Systems, Historical Maps/Navigation, Specialized Collections)  
+**Completion Rate:** 36% (14 of 39 sources completed)  
 **Completed:** 12  
 **In Progress:** 1  
 **Remaining:** 73  
@@ -627,9 +638,10 @@ All sources have been comprehensively documented in the `research/sources/` dire
 **Specialized & Process (5 books):**
 
 24. **3D User Interfaces**
-    - Status: ⏳ Pending detailed extraction
+    - Status: ✅ Complete - Analysis document created
     - Priority: Medium
     - Focus: Spatial UI, diegetic interfaces
+    - Document: `game-dev-analysis-3d-ui.md`
 
 25. **Agile Game Development**
     - Status: ⏳ Pending detailed extraction
@@ -685,9 +697,10 @@ All sources have been comprehensively documented in the `research/sources/` dire
     - Source: Referenced in Game Programming in C++
 
 34. **Effective C++ / Modern C++ Best Practices**
-    - Status: ⏳ Pending
+    - Status: ✅ Complete - Analysis document created
     - Priority: Medium
     - Focus: Performance optimization, memory management, best practices
+    - Document: `game-dev-analysis-cpp-best-practices.md`
     - Source: Referenced in Game Programming in C++
 
 35. **Mathematics for 3D Game Programming**
@@ -697,9 +710,10 @@ All sources have been comprehensively documented in the `research/sources/` dire
     - Source: Referenced in Game Programming in C++
 
 36. **Isometric Projection Techniques**
-    - Status: ⏳ Pending
+    - Status: ✅ Complete - Analysis document created
     - Priority: Medium
     - Focus: UI/UX visual design, perspective systems
+    - Document: `game-dev-analysis-isometric-projection.md`
     - Source: Issue comment #3364843099 (sketch documentation)
 
 ---
