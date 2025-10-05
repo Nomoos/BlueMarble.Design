@@ -124,6 +124,8 @@ This document details the core gameplay systems that drive player engagement and
 - **Optional PvP:** Players can flag for PvP combat
 - **Open PvP:** Always-on player combat in designated areas
 - **Structured PvP:** Battlegrounds and arena matches
+  > **Tournament System Research:** See [Anime Tournament and Progression Systems Analysis](../../research/literature/media-analysis-anime-tournament-progression-systems.md)
+  > for detailed tournament mechanics, ranking systems, and competitive progression design.
 
 #### PvP Mechanics
 - **Honor System:** Reputation based on PvP behavior
@@ -277,6 +279,8 @@ This document details the core gameplay systems that drive player engagement and
 
 #### Player-Driven Events
 - **Tournaments:** Player-organized competitions
+  > **Detailed Research:** See [Anime Tournament and Progression Systems Analysis](../../research/literature/media-analysis-anime-tournament-progression-systems.md)
+  > for comprehensive tournament system design inspired by Hunter x Hunter and Tower of God.
 - **Market Events:** Economic opportunities and challenges
 - **Exploration Expeditions:** Group discovery missions
 - **Cultural Events:** Role-playing and social gatherings
