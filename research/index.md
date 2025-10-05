@@ -11,6 +11,10 @@ and typically 200-400 lines.
 
 ### Available Topics
 
+- [Game Design Roles and Types](topics/game-design-roles-and-types.md) - 
+  Comprehensive overview of game design specializations (Systems, Combat, Economy, Level, Narrative, UX, Progression, 
+  Meta-Game designers), their responsibilities, tools, and methodological approaches for modern game development
+
 - [World of Warcraft Emulators – Architecture & Communication](topics/wow-emulator-architecture-networking.md) -
   MMO server architecture, authentication systems, and networking protocols from open-source WoW emulators
 
