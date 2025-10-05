@@ -175,7 +175,8 @@ Add discovered sources below this line:
 **Priority:** High  
 **Category:** GameDev-Design  
 **Rationale:** Original location-based faction warfare game that pioneered territory control mechanics applicable to BlueMarble  
-**Estimated Effort:** 3-4 hours
+**Estimated Effort:** 3-4 hours  
+**Status:** ✅ Complete - [game-dev-analysis-ingress-case-study.md](game-dev-analysis-ingress-case-study.md)
 
 **Source Name:** Minecraft Earth Case Study  
 **Discovered From:** Augmented Reality / Practical Augmented Reality topic research  
