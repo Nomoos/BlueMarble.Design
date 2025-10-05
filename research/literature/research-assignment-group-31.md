@@ -77,7 +77,7 @@ This assignment group focuses on analyzing game development resources from the o
 ## Progress Tracking
 
 - [x] GameDev.tv
-- [ ] ENet (Networking Library)
+- [x] ENet (Networking Library)
 - [x] All documents created and placed in `research/literature/`
 - [x] All documents have proper front matter
 - [x] All documents meet minimum length requirements
@@ -132,6 +132,20 @@ During your research, if you discover additional valuable sources, log them here
 **Category:** GameDev-Tech  
 **Rationale:** Future scalability option for handling massive entity counts (geological features, resources, players) through ECS architecture and job system for multi-threaded performance  
 **Estimated Effort:** 10-12 hours
+
+**Source Name:** KCP Protocol  
+**Discovered From:** ENet (Networking Library) - Alternative UDP library  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Claims 30%-40% faster than TCP for game networking. Could be compared against ENet for BlueMarble's specific use case with lower latency requirements  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Gaffer On Games (Networking Articles)  
+**Discovered From:** ENet (Networking Library) - Referenced networking resource  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Authoritative resource on game networking fundamentals, client-side prediction, lag compensation, and networked physics. Essential reading for implementing robust MMORPG networking  
+**Estimated Effort:** 8-10 hours
 
 ---
 
