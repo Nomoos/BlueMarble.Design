@@ -76,13 +76,19 @@ This assignment group focuses on analyzing game development resources from the o
 
 ## Progress Tracking
 
-- [ ] RakNet (Open Source Version)
+- [x] RakNet (Open Source Version)
 - [ ] Reddit - r/MMORPG
 - [ ] All documents created and placed in `research/literature/`
 - [ ] All documents have proper front matter
 - [ ] All documents meet minimum length requirements
 - [ ] Cross-references added
 - [ ] Discovered sources logged below
+- [x] Reddit - r/MMORPG
+- [x] All documents created and placed in `research/literature/`
+- [x] All documents have proper front matter
+- [x] All documents meet minimum length requirements
+- [x] Cross-references added
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +116,118 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** ENet Networking Library  
+**Discovered From:** RakNet (Open Source Version) analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Active alternative to RakNet, simpler API, used by many modern indie multiplayer games  
+**Estimated Effort:** 6-8 hours  
+**Status:** ✅ Analyzed in game-dev-analysis-enet-networking-library.md
+
+**Source Name:** GameNetworkingSockets (Valve)  
+**Discovered From:** RakNet (Open Source Version) analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Modern, actively maintained by Valve, used in Steam games, represents current industry best practices  
+**Estimated Effort:** 8-10 hours  
+**Status:** ✅ Analyzed in game-dev-analysis-gamenetworkingsockets-valve.md
+
+**Source Name:** yojimbo Networking Library  
+**Discovered From:** RakNet (Open Source Version) analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Modern C++ networking for action games, encrypted by default, good security patterns  
+**Estimated Effort:** 6-8 hours  
+**Status:** ✅ Analyzed in game-dev-analysis-yojimbo-networking-library.md
+
+**Source Name:** libuv (Async I/O Library)  
+**Discovered From:** ENet Networking Library analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Could provide better async I/O performance for BlueMarble servers  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** kcp (Fast Reliable UDP Protocol)  
+**Discovered From:** ENet Networking Library analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Alternative reliability protocol with different trade-offs  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** WebRTC Native Code Package  
+**Discovered From:** GameNetworkingSockets (Valve) analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Direct WebRTC integration for browser clients  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Steamworks SDK Documentation  
+**Discovered From:** GameNetworkingSockets (Valve) analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Required for full GNS feature utilization and Steam integration  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** libsodium Cryptography Library  
+**Discovered From:** yojimbo Networking Library analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Underlying crypto library used by yojimbo, understanding it helps with security  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Glenn Fiedler's Networking Articles  
+**Discovered From:** yojimbo Networking Library analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Author of yojimbo, comprehensive game networking tutorial series  
+**Estimated Effort:** 6-8 hours
+**Source Name:** GameNetworkingSockets (Valve Steam Networking)  
+**Discovered From:** RakNet alternatives research  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Modern, actively maintained networking library from Valve used in Steam games, production-proven for large-scale multiplayer. Superior alternative to archived RakNet  
+**Estimated Effort:** 4-5 hours  
+**URL:** https://github.com/ValveSoftware/GameNetworkingSockets
+
+**Source Name:** yojimbo Network Library  
+**Discovered From:** RakNet alternatives and modern C++ networking  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Modern C++ dedicated server networking library, cleaner API than RakNet, good architectural reference for BlueMarble networking layer  
+**Estimated Effort:** 2-3 hours  
+**URL:** https://github.com/networkprotocol/yojimbo
+
+**Source Name:** ENet Reliable UDP Library  
+**Discovered From:** RakNet comparison and lightweight alternatives  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Simpler, more maintainable alternative to RakNet, still actively developed, used in many successful indie multiplayer games  
+**Estimated Effort:** 2-3 hours  
+**URL:** http://enet.bespin.org/
+
+**Source Name:** MMORPG.com (News and Reviews Site)  
+**Discovered From:** Frequent links in r/MMORPG discussions  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Comprehensive MMORPG news, reviews, and industry analysis. Excellent source for market trends and player sentiment tracking  
+**Estimated Effort:** 2-3 hours  
+**URL:** https://www.mmorpg.com/
+
+**Source Name:** Massively Overpowered (MMO News Blog)  
+**Discovered From:** Community citations for industry news in r/MMORPG  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Daily MMORPG news coverage, developer interviews, and community features. Tracks industry trends and player expectations  
+**Estimated Effort:** 2-3 hours  
+**URL:** https://massivelyop.com/
+
+**Source Name:** YouTube MMORPG Analysis Channels (Josh Strife Hayes, TheLazyPeon)  
+**Discovered From:** Video content frequently shared in r/MMORPG  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Popular MMORPG reviewers with detailed game analysis, player perspective, and market commentary valuable for understanding player expectations  
+**Estimated Effort:** 3-4 hours  
+**URLs:** Various YouTube channels covering MMORPG content
 
 ---
 

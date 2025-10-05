@@ -13,6 +13,9 @@ and typically 200-400 lines.
 
 - [World of Warcraft Emulators – Architecture & Communication](topics/wow-emulator-architecture-networking.md) -
   MMO server architecture, authentication systems, and networking protocols from open-source WoW emulators
+  
+- [Why Don't Women Play Games? - Gender Barriers in Gaming](topics/why-dont-women-play-games.md) -
+  Analysis of historical and cultural barriers preventing women's full participation in gaming, with actionable insights for inclusive game design
 
 ## Notes
 
@@ -86,6 +89,10 @@ Bibliography, reading lists, and raw notes from external sources.
 - [sources.bib](sources/sources.bib) - Bibliography
 - [Reading List](sources/reading-list.md) - Curated reading list
 - [Quotes](sources/quotes.md) - Notable quotes and excerpts
+- [Content Design Research](game-design/step-1-foundation/content-design/) - Comprehensive research on content 
+  design organized into focused topics: definition, workflow, video game RPG analysis, tabletop RPG analysis, 
+  comparative analysis, professional practice, and BlueMarble applications. See the 
+  [Content Design Index](game-design/step-1-foundation/content-design/README.md) for navigation.
 - [Game Design Sources](game-design/game-sources.md) - Curated collection of game design, research, theory,
   and gamification sources
 
