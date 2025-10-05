@@ -16,7 +16,7 @@ source: https://github.com/alx-xlx/awesome-survival
 This research document analyzes the awesome-survival repository, a comprehensive collection of survival-related knowledge spanning 300+ GB of content. The analysis focuses on identifying knowledge domains, extracting actionable content for game systems, and mapping resources to BlueMarble's technology tier structure.
 
 **Key Findings:**
-- 9 major resource collections identified
+- 10 major resource collections identified
 - 500+ extractable crafting recipes
 - Technology progression from primitive (Tier 1) to industrial (Tier 5)
 - Well-organized knowledge domains suitable for game integration
@@ -25,6 +25,7 @@ This research document analyzes the awesome-survival repository, a comprehensive
 **Recommendations:**
 - Prioritize Appropriate Technology Library for early-game crafting
 - Use OpenStreetMap for world generation foundation
+- Extract Open Source Ecology GVCS for industrial tier progression
 - Extract military manuals for late-game large-scale systems
 - Implement phased extraction over 10-12 weeks
 
@@ -713,7 +714,7 @@ def export_to_game_format(reviewed_recipe):
 
 ### Quantitative Metrics
 - **Recipe Count:** 500+ unique recipes extracted
-- **Coverage:** All 9 knowledge domains represented
+- **Coverage:** All 13 knowledge domains represented
 - **Quality:** 95%+ recipes with complete specifications
 - **Balance:** 90%+ recipes pass balance testing
 - **Authenticity:** 100% recipes traceable to source
@@ -768,7 +769,7 @@ The awesome-survival repository provides an exceptional foundation for creating 
 
 **Key Takeaways:**
 - 300+ GB of curated content available
-- 9 major knowledge domains identified and mapped
+- 13 knowledge domains identified and mapped (10 extraction guides)
 - Clear extraction methodology established
 - Integration pathways defined for all game systems
 - Phased approach ensures manageable implementation
@@ -898,7 +899,13 @@ Based on the awesome-survival repository structure, survival knowledge clusters 
 **Game Mapping:** Hydration systems, settlement water supply, irrigation
 **Dependencies:** Chemistry, engineering, container crafting
 
-#### 12. Knowledge Preservation
+#### 12. Industrial Manufacturing
+**Resources:** Open Source Ecology GVCS, industrial design documentation
+**Content:** Machine construction, industrial processes, automated production, village-scale infrastructure
+**Game Mapping:** Late-game industrial systems, automated production, settlement infrastructure
+**Dependencies:** Material processing, energy systems, mechanical engineering
+
+#### 13. Knowledge Preservation
 **Resources:** Library management, data curation, archival systems
 **Content:** Information organization, knowledge storage, teaching systems
 **Game Mapping:** Player libraries, skill teaching, information sharing
@@ -2047,6 +2054,7 @@ innovative social mechanics across individual, settlement, regional, and planeta
 
 - **Great Science Textbooks DVD Library** - Foundational scientific knowledge
 - **Appropriate Technology Library** - 1050+ ebooks on sustainable technology
+- **Open Source Ecology GVCS** - 50 industrial machines for village-scale civilization
 - **CD3WD** - Civilization rebuilding knowledge collection
 - **Survivor Library** - How to survive when technology fails
 - **Military Manuals Collection** - 22,000+ technical and field manuals
@@ -2062,7 +2070,9 @@ innovative social mechanics across individual, settlement, regional, and planeta
 - `survival-content-extraction-05-military-manuals.md` - Warfare systems
 - `survival-content-extraction-06-medical-textbooks.md` - Healthcare systems
 - `survival-content-extraction-07-encyclopedia-collections.md` - Knowledge validation
+- `survival-content-extraction-08-communication-systems.md` - Communication infrastructure
 - `survival-content-extraction-09-cd3wd-collection.md` - Civilization rebuilding
+- `survival-content-extraction-10-opensource-ecology.md` - Industrial machines and GVCS
 
 ### Additional Reading
 
