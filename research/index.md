@@ -88,6 +88,9 @@ Bibliography, reading lists, and raw notes from external sources.
 - [Quotes](sources/quotes.md) - Notable quotes and excerpts
 - [Game Design Sources](game-design/game-sources.md) - Curated collection of game design, research, theory,
   and gamification sources
+- [From Inspiration to Design Document](game-design/step-1-foundation/from-inspiration-to-design-document.md) - 
+  Comprehensive guide on the game design process from inspiration to formal documentation, covering concept development,
+  building game building blocks, and creating effective design documents
 
 ## Existing Research Areas
 

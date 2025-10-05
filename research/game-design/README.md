@@ -23,6 +23,19 @@ Each step contains detailed research documents and can be explored independently
 
 ## Research Documents
 
+### [From Inspiration to Design Document](step-1-foundation/from-inspiration-to-design-document.md)
+Comprehensive guide on the game design process from initial inspiration through formal design documentation.
+
+**Key Topics**:
+
+- Capturing and developing initial game ideas
+- How game concepts are born and evolve from inspiration
+- Building basic game building blocks (mechanics, systems, feedback loops)
+- Understanding what design documents are and their purpose
+- How to effectively present ideas in design documentation
+- Structuring documents for clarity, actionability, and maintainability
+- Best practices for design documentation workflow
+
 ### [Game Design Sources](game-sources.md)
 Curated collection of 15 high-quality sources covering game design principles, game research, game theory, 
 gamification, and related fields.
