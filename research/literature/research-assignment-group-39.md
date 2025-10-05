@@ -131,7 +131,8 @@ During your research, if you discover additional valuable sources, log them here
 **Priority:** Medium  
 **Category:** GameDev-Tech  
 **Rationale:** Modern C++ networking for action games, encrypted by default, good security patterns  
-**Estimated Effort:** 6-8 hours
+**Estimated Effort:** 6-8 hours  
+**Status:** ✅ Analyzed in game-dev-analysis-yojimbo-networking-library.md
 
 **Source Name:** libuv (Async I/O Library)  
 **Discovered From:** ENet Networking Library analysis  
@@ -160,6 +161,20 @@ During your research, if you discover additional valuable sources, log them here
 **Category:** GameDev-Tech  
 **Rationale:** Required for full GNS feature utilization and Steam integration  
 **Estimated Effort:** 4-6 hours
+
+**Source Name:** libsodium Cryptography Library  
+**Discovered From:** yojimbo Networking Library analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Underlying crypto library used by yojimbo, understanding it helps with security  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Glenn Fiedler's Networking Articles  
+**Discovered From:** yojimbo Networking Library analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Author of yojimbo, comprehensive game networking tutorial series  
+**Estimated Effort:** 6-8 hours
 
 ---
 
