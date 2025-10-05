@@ -77,7 +77,7 @@ This assignment group focuses on analyzing game development resources from the o
 ## Progress Tracking
 
 - [x] Unity Forums
-- [ ] Unreal Engine Forums
+- [x] Unreal Engine Forums
 - [x] Discovered Source 1: Unity Multiplayer Networking Documentation
 - [x] Discovered Source 2: Mirror Networking Framework
 - [x] Discovered Source 3: Unity Best Practices - Performance Optimization
