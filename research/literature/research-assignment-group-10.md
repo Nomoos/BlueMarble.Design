@@ -242,7 +242,9 @@ Add discovered sources below this line:
 **Priority:** Medium  
 **Category:** Survival-Technical  
 **Rationale:** Comprehensive reference on mineral properties, identification, and occurrence. Essential for creating accurate mineral simulation systems with detailed technical specifications for hundreds of minerals.  
-**Estimated Effort:** 8-10 hours (selective reading)
+**Estimated Effort:** 8-10 hours (selective reading)  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `survival-content-extraction-encyclopedia-mineralogy.md`
 
 **Source Name:** Mindat.org Mineral Database  
 **Discovered From:** Specialized Collections research  
