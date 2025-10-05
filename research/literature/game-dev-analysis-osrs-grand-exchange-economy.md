@@ -16,7 +16,7 @@ discovered-from: game-dev-analysis-runescape-old-school.md
 **Category:** MMORPG Economics - Market Systems & Player Trading  
 **Priority:** High  
 **Status:** ✅ Complete  
-**Lines:** 600+  
+**Lines:** 1,453  
 **Related Sources:** RuneScape (Old School) Analysis, Virtual Economies Design, Market Manipulation Detection
 
 ---
