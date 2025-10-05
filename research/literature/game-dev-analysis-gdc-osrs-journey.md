@@ -16,7 +16,7 @@ discovered-from: game-dev-analysis-runescape-old-school.md
 **Category:** MMORPG Development - Community Engagement & Live Operations  
 **Priority:** High  
 **Status:** ✅ Complete  
-**Lines:** 400+  
+**Lines:** 1,293  
 **Related Sources:** RuneScape (Old School) Analysis, Community-Driven Development, Live Service Games
 
 ---
