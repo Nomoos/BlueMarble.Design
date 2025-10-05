@@ -125,8 +125,8 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Game Programming Algorithms and Techniques (High)
-- [ ] Introduction to Game Systems Design (High)
+- [x] Game Programming Algorithms and Techniques (High)
+- [x] Introduction to Game Systems Design (High)
 
 ---
 
@@ -153,6 +153,116 @@ Add discovered sources below this line:
 
 ---
 
+**Source Name:** Massively Multiplayer Game Development Series (Volumes 1-2)  
+**Discovered From:** Topic 2 - Introduction to Game Systems Design (Economy and scalability research)  
+**Priority:** Critical  
+**Category:** GameDev-MMORPG  
+**Status:** ✅ COMPLETED - Analysis document created  
+**Document:** [game-dev-analysis-mmorpg-development.md](game-dev-analysis-mmorpg-development.md)  
+**Rationale:** Comprehensive coverage of MMORPG economy design, database patterns for persistent worlds, and system scalability - directly applicable to BlueMarble's large-scale geological simulation with player economy  
+**Estimated Effort:** 8-10 hours (Completed: 9 hours)  
+**Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #9
+
+**Source Name:** Level Up! The Guide to Great Video Game Design (2nd Edition)  
+**Discovered From:** Topic 2 - Introduction to Game Systems Design (Progression frameworks and mechanics)  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Status:** ✅ COMPLETED - Analysis document created  
+**Document:** [game-dev-analysis-level-design.md](game-dev-analysis-level-design.md)  
+**Rationale:** Specific focus on RPG systems design, combat design, and top-down level design mechanics - directly applicable to BlueMarble's gameplay mechanics and progression systems  
+**Estimated Effort:** 6-8 hours (Completed: 7 hours)  
+**Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #7
+
+**Source Name:** Developing Online Games: An Insider's Guide  
+**Discovered From:** Topic 2 - Introduction to Game Systems Design (Long-term player retention)  
+**Priority:** Medium  
+**Category:** GameDev-LiveOps  
+**Status:** ✅ COMPLETED - Analysis document created  
+**Document:** [game-dev-analysis-online-games.md](game-dev-analysis-online-games.md)  
+**Rationale:** Player retention strategies, community management, and live operations for online survival games - valuable for BlueMarble's multiplayer longevity  
+**Estimated Effort:** 4-6 hours (Completed: 5 hours)  
+**Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #10
+
+**Source Name:** PostgreSQL High Performance  
+**Discovered From:** Discovered Source 1 - Massively Multiplayer Game Development (Database optimization research)  
+**Priority:** High  
+**Category:** GameDev-Database  
+**Rationale:** Advanced PostgreSQL optimization techniques for spatial queries and high-concurrency workloads in geological simulation - critical for BlueMarble's database architecture  
+**Estimated Effort:** 6-8 hours  
+**Catalog Reference:** Technical book on PostgreSQL performance tuning
+
+**Source Name:** Redis in Action  
+**Discovered From:** Discovered Source 1 - Massively Multiplayer Game Development (Caching and session management)  
+**Priority:** High  
+**Category:** GameDev-Infrastructure  
+**Rationale:** Comprehensive Redis usage patterns for presence tracking, leaderboards, session management, and real-time features - essential for multiplayer architecture  
+**Estimated Effort:** 5-7 hours  
+**Catalog Reference:** Technical book on Redis patterns and use cases
+
+**Source Name:** The Docker Book  
+**Discovered From:** Discovered Source 1 - Massively Multiplayer Game Development (Microservices deployment)  
+**Priority:** Medium  
+**Category:** GameDev-DevOps  
+**Rationale:** Container orchestration fundamentals for managing multiple game service instances in production - supports scalable infrastructure deployment  
+**Estimated Effort:** 4-6 hours  
+**Catalog Reference:** Technical book on Docker and containerization
+
+**Source Name:** Game Feel by Steve Swink  
+**Discovered From:** Discovered Source 2 - Level Up! The Guide to Great Video Game Design (Combat responsiveness)  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Deep dive into player control responsiveness, animation timing, and tactile feedback - critical for making geological interactions feel satisfying in BlueMarble  
+**Estimated Effort:** 6-8 hours  
+**Catalog Reference:** Technical book on game feel and player control
+
+**Source Name:** Rules of Play by Katie Salen and Eric Zimmerman  
+**Discovered From:** Discovered Source 2 - Level Up! The Guide to Great Video Game Design (Game systems theory)  
+**Priority:** Medium  
+**Category:** GameDev-Theory  
+**Rationale:** Theoretical foundation for understanding game systems, rules, and play - provides academic framework for design decisions  
+**Estimated Effort:** 8-10 hours  
+**Catalog Reference:** Academic text on game design theory
+
+**Source Name:** Designing for Motivation (GDC Talks/Papers)  
+**Discovered From:** Discovered Source 2 - Level Up! The Guide to Great Video Game Design (Player psychology)  
+**Priority:** Medium  
+**Category:** GameDev-Psychology  
+**Rationale:** Understanding player motivation types and retention strategies - essential for long-term engagement in BlueMarble  
+**Estimated Effort:** 3-4 hours  
+**Catalog Reference:** Industry talks and research papers on player motivation
+
+**Source Name:** Real-Time Collision Detection by Christer Ericson  
+**Discovered From:** Topic 1 - Game Programming Algorithms and Techniques (Physics and collision)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive collision detection algorithms for geological physics and structural interactions - critical for BlueMarble's terrain physics  
+**Estimated Effort:** 8-10 hours  
+**Catalog Reference:** Technical book on collision detection algorithms
+
+**Source Name:** AI for Games (3rd Edition) by Ian Millington  
+**Discovered From:** Topic 1 - Game Programming Algorithms and Techniques (AI behavior systems)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced AI techniques for environmental behaviors and dynamic world events - essential for realistic geological hazard systems  
+**Estimated Effort:** 10-12 hours  
+**Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #5
+
+**Source Name:** The Art of Community by Jono Bacon  
+**Discovered From:** Discovered Source 3 - Developing Online Games (Community management)  
+**Priority:** Medium  
+**Category:** GameDev-Community  
+**Rationale:** Community management strategies for online games - essential for building and maintaining BlueMarble's multiplayer community  
+**Estimated Effort:** 5-6 hours  
+**Catalog Reference:** Book on community building and management
+
+**Source Name:** Hooked: How to Build Habit-Forming Products by Nir Eyal  
+**Discovered From:** Discovered Source 3 - Developing Online Games (Player retention psychology)  
+**Priority:** High  
+**Category:** GameDev-Psychology  
+**Rationale:** Player retention through habit formation - critical for understanding long-term engagement loops in BlueMarble  
+**Estimated Effort:** 4-5 hours  
+**Catalog Reference:** Book on habit formation and engagement
+
 <!-- Discovery entries go here -->
 
 ---
@@ -178,6 +288,6 @@ Add discovered sources below this line:
 ---
 
 **Created:** 2025-01-15  
-**Last Updated:** 2025-01-15  
-**Status:** Ready for Assignment  
+**Last Updated:** 2025-01-19  
+**Status:** Partially Complete (1 of 2 topics done)  
 **Next Action:** Assign to team member
