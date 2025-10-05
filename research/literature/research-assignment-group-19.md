@@ -148,7 +148,9 @@ Add discovered sources below this line:
 **Priority:** High  
 **Category:** GameDev-Tech  
 **Rationale:** Covers networking patterns, client-server architecture, and replication strategies essential for BlueMarble's multiplayer geological simulation  
-**Estimated Effort:** 8-10 hours
+**Estimated Effort:** 8-10 hours  
+**Status:** ✅ Completed  
+**Document:** game-dev-analysis-03-multiplayer-programming.md
 
 **Source Name:** Designing Games: A Guide to Engineering Experiences by Tynan Sylvester  
 **Discovered From:** Roblox Game Development in 24 Hours research  
@@ -205,6 +207,34 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech  
 **Rationale:** Component systems in practice. Addresses common pitfalls when transitioning from inheritance to composition  
 **Estimated Effort:** 2-3 hours
+
+**Source Name:** Network Programming for Games by Glenn Fiedler  
+**Discovered From:** Multiplayer Game Programming research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Deep dive into low-level networking. Covers packet handling, reliability, and connection management for real-time games  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Real-Time Collision Detection by Christer Ericson  
+**Discovered From:** Multiplayer Game Programming research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Spatial algorithms essential for Area of Interest management. Critical for efficient proximity queries in large worlds  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Overwatch Gameplay Architecture (GDC Talk)  
+**Discovered From:** Multiplayer Game Programming research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Modern FPS networking patterns. Demonstrates practical latency compensation and deterministic gameplay in competitive multiplayer  
+**Estimated Effort:** 2-3 hours
+
+**Source Name:** EVE Online Stackless Python Architecture  
+**Discovered From:** Multiplayer Game Programming research  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Massive concurrent player handling in persistent MMO. Directly applicable to BlueMarble's scalability challenges  
+**Estimated Effort:** 4-5 hours
 
 ---
 
