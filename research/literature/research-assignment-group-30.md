@@ -77,7 +77,7 @@ This assignment group focuses on analyzing game development resources from the o
 ## Progress Tracking
 
 - [x] Sebastian Lague - Analysis complete (game-dev-analysis-sebastian-lague.md)
-- [ ] Code Monkey
+- [x] Code Monkey - Analysis complete (game-dev-analysis-code-monkey.md)
 - [x] All documents created and placed in `research/literature/`
 - [x] All documents have proper front matter
 - [x] All documents meet minimum length requirements
@@ -160,6 +160,34 @@ During your research, if you discover additional valuable sources, log them here
 **Rationale:** Open-source implementations of procedural generation, pathfinding, and optimization techniques; provides working code examples for BlueMarble team reference  
 **Estimated Effort:** 4-6 hours (reviewing multiple projects)  
 **Status:** ✅ Complete - Analysis document created: code-analysis-sebastian-lague-github.md
+
+**Source Name:** Unity Netcode for GameObjects Documentation  
+**Discovered From:** Code Monkey (primary multiplayer framework)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Official Unity multiplayer networking framework documentation; essential for implementing BlueMarble's multiplayer infrastructure  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Unity Gaming Services (Lobby & Relay)  
+**Discovered From:** Code Monkey (matchmaking and instances)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Cloud services for lobby/matchmaking and small-scale multiplayer relay; useful for dungeon instances and party formation  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Photon PUN 2  
+**Discovered From:** Code Monkey (alternative networking solution)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Popular third-party multiplayer framework; alternative to Unity Netcode with different trade-offs  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Mirror Networking  
+**Discovered From:** Code Monkey (open-source networking)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Open-source networking framework based on UNET; community-driven with active development  
+**Estimated Effort:** 4-5 hours
 
 ---
 
