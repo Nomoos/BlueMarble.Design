@@ -76,8 +76,8 @@ This assignment group focuses on analyzing game development resources from the o
 
 ## Progress Tracking
 
-- [x] EVE Online - `game-dev-analysis-eve-online.md` (Complete - 550+ lines)
-- [ ] Ultima Online
+- [x] EVE Online - `game-dev-analysis-eve-online.md` (Complete - 838 lines)
+- [x] Ultima Online - `game-dev-analysis-ultima-online.md` (Complete - 700+ lines)
 - [x] EVE Online document created and placed in `research/literature/`
 - [x] EVE Online document has proper front matter
 - [x] EVE Online document meets minimum length requirements
