@@ -90,7 +90,7 @@ Bibliography, reading lists, and raw notes from external sources.
   design organized into focused topics: definition, workflow, video game RPG analysis, tabletop RPG analysis, 
   comparative analysis, professional practice, and BlueMarble applications. See the 
   [Content Design Index](game-design/step-1-foundation/content-design/README.md) for navigation.
-- [Game Design Sources](game-design/step-1-foundation/game-sources.md) - Curated collection of game design, research, theory,
+- [Game Design Sources](game-design/game-sources.md) - Curated collection of game design, research, theory,
   and gamification sources
 
 ## Existing Research Areas
