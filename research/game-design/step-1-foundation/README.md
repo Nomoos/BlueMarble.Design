@@ -19,6 +19,7 @@ This step establishes the foundational concepts for BlueMarble's game design, in
 - [Player Freedom Analysis](player-freedom-analysis.md) - Framework for maximizing player agency through geological reality
 - [Game Design Sources](game-sources.md) - Curated collection of game design, research, theory, and gamification sources
 - [From Inspiration to Design Document](from-inspiration-to-design-document.md) - Comprehensive guide on the game design process from initial ideas to formal documentation
+- [Narrative Inspiration: Sci-Fi Mining World](narrative-inspiration-sci-fi-mining-world.md) - Science fiction setting without magic featuring multi-species mining colony, superior race oversight, cloning, and controlled reproduction
 
 ## Key Concepts
 

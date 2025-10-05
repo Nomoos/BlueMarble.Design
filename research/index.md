@@ -91,6 +91,9 @@ Bibliography, reading lists, and raw notes from external sources.
 - [From Inspiration to Design Document](game-design/step-1-foundation/from-inspiration-to-design-document.md) - 
   Comprehensive guide on the game design process from inspiration to formal documentation, covering concept development,
   building game building blocks, and creating effective design documents
+- [Narrative Inspiration: Sci-Fi Mining World](game-design/step-1-foundation/narrative-inspiration-sci-fi-mining-world.md) - 
+  Science fiction narrative framework without magic, featuring multi-species mining colony, clone generation, controlled
+  reproduction, and resource extraction under superior race oversight
 
 ## Existing Research Areas
 

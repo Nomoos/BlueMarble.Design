@@ -36,6 +36,20 @@ Comprehensive guide on the game design process from initial inspiration through 
 - Structuring documents for clarity, actionability, and maintainability
 - Best practices for design documentation workflow
 
+### [Narrative Inspiration: Sci-Fi Mining World](step-1-foundation/narrative-inspiration-sci-fi-mining-world.md)
+Science fiction narrative inspiration for a game without magic, featuring a multi-species mining colony controlled by a superior race.
+
+**Key Topics**:
+
+- World as experimental mining operation by advanced species
+- Multi-species population dynamics (humans, Kronids, Veldari, Graven)
+- Clone generation and controlled reproduction systems
+- Resource credit economy and black markets
+- Technology without magic (genetic engineering, cybernetics, AI, automation)
+- Narrative themes: identity, freedom vs. security, cooperation under oppression
+- Character archetypes and story hooks
+- Gameplay integration concepts for mining, economy, and multi-species cooperation
+
 ### [Game Design Sources](game-sources.md)
 Curated collection of 15 high-quality sources covering game design principles, game research, game theory, 
 gamification, and related fields.
