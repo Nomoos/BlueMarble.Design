@@ -10,6 +10,7 @@ This step contains comprehensive research on game systems from leading MMORPGs a
 2. **[Step 2.2: Material Systems](step-2.2-material-systems/)** - Material quality, geological integration, and property systems
 3. **[Step 2.3: Crafting Systems](step-2.3-crafting-systems/)** - Advanced crafting mechanics and workflow design
 4. **[Step 2.4: Historical Research](step-2.4-historical-research/)** - Authentic historical professions and guild systems
+5. **[Step 2.5: Player Experience](step-2.5-player-experience/)** - Player psychology, demographics, and gameplay preferences
 
 Each sub-step contains detailed analysis of multiple reference games and actionable recommendations for BlueMarble integration.
 
@@ -56,6 +57,12 @@ Each sub-step contains detailed analysis of multiple reference games and actiona
 - Apprenticeship progression systems
 - Economic interdependence
 - Realistic specialization pathways
+
+### Player Psychology and Demographics
+- Gender differences in gaming preferences
+- Indirect control vs. direct execution appeal
+- Cognitive load and accessibility considerations
+- Social learning and collaborative gameplay
 
 ## Related Steps
 
