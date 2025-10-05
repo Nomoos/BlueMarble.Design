@@ -178,7 +178,8 @@ Add discovered sources below this line:
 **Priority:** High  
 **Category:** GameDev-Tech  
 **Rationale:** Industry-standard technique for maintaining constant detail around viewer. Essential for infinite terrain with predictable memory usage on planetary scale.  
-**Estimated Effort:** 3-4 hours
+**Estimated Effort:** 3-4 hours  
+**Status:** ✅ Complete - Analysis document: `game-dev-analysis-geometry-clipmaps.md`
 
 ---
 
@@ -244,6 +245,15 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech  
 **Rationale:** Collection of advanced physics techniques from industry experts. Relevant for geological simulation and entity physics in BlueMarble.  
 **Estimated Effort:** 4-5 hours
+
+---
+
+**Source Name:** GPU Gems 2 - Terrain Rendering Chapter (NVIDIA)  
+**Discovered From:** Geometry Clipmaps research (Assignment Group 09, discovered source)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Detailed GPU implementation of geometry clipmaps with code examples. Essential for practical implementation in BlueMarble.  
+**Estimated Effort:** 2-3 hours
 
 ---
 
