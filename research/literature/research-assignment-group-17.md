@@ -168,7 +168,8 @@ Add discovered sources below this line:
 **Priority:** Medium  
 **Category:** GameDev-Tech  
 **Rationale:** VR performance optimization technique that may benefit planet-scale terrain rendering  
-**Estimated Effort:** 3-4 hours
+**Estimated Effort:** 3-4 hours  
+**Status:** ✅ Complete - Processed as game-dev-analysis-forward-vs-deferred-rendering.md
 
 **Source Name:** Wwise Spatial Audio Comparison  
 **Discovered From:** Steam Audio Plugin research (Topic 17 → Discovered #1)  
@@ -204,6 +205,34 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech  
 **Rationale:** Memory optimization critical for planet-scale soundscapes with thousands of audio sources  
 **Estimated Effort:** 4-5 hours
+
+**Source Name:** Nanite Virtualized Geometry in Unreal Engine 5  
+**Discovered From:** Forward vs Deferred Rendering research (Topic 17 → Discovered #2)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Revolutionary geometry system interaction with rendering pipeline, critical for planet-scale terrain detail  
+**Estimated Effort:** 5-6 hours
+
+**Source Name:** Lumen Global Illumination Performance Analysis  
+**Discovered From:** Forward vs Deferred Rendering research (Topic 17 → Discovered #2)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Dynamic GI system compatibility with forward rendering, impacts lighting quality and performance  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Virtual Shadow Maps (Unreal Engine 5)  
+**Discovered From:** Forward vs Deferred Rendering research (Topic 17 → Discovered #2)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** New shadowing system optimized for forward+, significant quality and performance improvements  
+**Estimated Effort:** 4-5 hours
+
+**Source Name:** Temporal Super Resolution (TSR) vs MSAA  
+**Discovered From:** Forward vs Deferred Rendering research (Topic 17 → Discovered #2)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** UE5's upscaling technology comparison, affects rendering pipeline choice and quality  
+**Estimated Effort:** 3-4 hours
 
 ---
 
