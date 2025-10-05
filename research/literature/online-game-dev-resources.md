@@ -721,6 +721,21 @@ This document catalogs online resources for game development with a focus on **R
   - Biome systems
   - Performance optimization
 
+#### 50a. **Latency Compensating Methods in Client/Server Protocol Design (GDC 2001)**
+- **Author:** Yahn Bernier (Valve Software)
+- **URL:** https://developer.valvesoftware.com/wiki/Latency_Compensating_Methods
+- **Status:** ✅ Analysis Complete
+- **Priority:** High
+- **Analysis Document:** `game-dev-analysis-latency-compensating-methods-gdc2001.md`
+- **Discovered From:** 2D Game Development with Unity (networking patterns)
+- **Topics:**
+  - Client-side prediction
+  - Server reconciliation
+  - Lag compensation for hit detection
+  - Entity interpolation
+  - Input command buffering
+- **Relevance to BlueMarble:** Fundamental networking architecture for responsive multiplayer gameplay
+
 ---
 
 ## Auto-Growth Tracking
