@@ -178,7 +178,9 @@ Add discovered sources below this line:
 **Priority:** High  
 **Category:** GameDev-Tech  
 **Rationale:** Sophisticated guild/corporation systems and player-driven economy highly relevant to BlueMarble's planned social features  
-**Estimated Effort:** 5-6 hours
+**Estimated Effort:** 5-6 hours  
+**Status:** ✅ Completed  
+**Document:** game-dev-analysis-04-eve-online-social-systems.md
 
 **Source Name:** Data-Oriented Design by Richard Fabian  
 **Discovered From:** Game Programming Patterns research  
@@ -235,6 +237,27 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech  
 **Rationale:** Massive concurrent player handling in persistent MMO. Directly applicable to BlueMarble's scalability challenges  
 **Estimated Effort:** 4-5 hours
+
+**Source Name:** Second Life Economy Study  
+**Discovered From:** EVE Online Social Systems research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Virtual world economy patterns and player-driven content markets. Lessons for BlueMarble's trading systems  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** World of Warcraft Guild Management Systems  
+**Discovered From:** EVE Online Social Systems research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Guild progression mechanics and member engagement systems. Applicable to BlueMarble's guild features  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** Entropia Universe Real Cash Economy  
+**Discovered From:** EVE Online Social Systems research  
+**Priority:** Low  
+**Category:** GameDev-Specialized  
+**Rationale:** Real money trading systems in MMO. Interesting but lower priority for BlueMarble's initial development  
+**Estimated Effort:** 2-3 hours
 
 ---
 
