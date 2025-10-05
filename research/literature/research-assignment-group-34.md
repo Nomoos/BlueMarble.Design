@@ -76,13 +76,13 @@ This assignment group focuses on analyzing game development resources from the o
 
 ## Progress Tracking
 
-- [ ] RuneScape (Old School)
-- [ ] Procedural Generation in Game Design
-- [ ] All documents created and placed in `research/literature/`
-- [ ] All documents have proper front matter
-- [ ] All documents meet minimum length requirements
-- [ ] Cross-references added
-- [ ] Discovered sources logged below
+- [x] RuneScape (Old School)
+- [x] Procedural Generation in Game Design
+- [x] All documents created and placed in `research/literature/`
+- [x] All documents have proper front matter
+- [x] All documents meet minimum length requirements
+- [x] Cross-references added
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,41 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** RuneLite (Official Third-Party Client) ✅ PROCESSED  
+**Discovered From:** RuneScape (Old School) analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Open-source game client demonstrating extensibility and community-driven development patterns. Shows how to support third-party tools while maintaining game integrity.  
+**Estimated Effort:** 4-6 hours  
+**Analysis Document:** `game-dev-analysis-runelite-third-party-client.md` (922 lines)  
+**URL:** https://runelite.net/
+
+**Source Name:** OSRS Grand Exchange Economy Data (GE Tracker) ✅ PROCESSED  
+**Discovered From:** RuneScape (Old School) analysis  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Real-world example of player-driven economy with historical price tracking, supply/demand analysis, and market manipulation detection. Directly applicable to BlueMarble's resource economy design.  
+**Estimated Effort:** 6-8 hours  
+**Analysis Document:** `game-dev-analysis-osrs-grand-exchange-economy.md` (1,453 lines)  
+**URL:** https://www.ge-tracker.com/
+
+**Source Name:** Jagex Developer Blogs on OSRS Updates ✅ PROCESSED  
+**Discovered From:** RuneScape (Old School) analysis  
+**Priority:** Medium  
+**Category:** GameDev-Content  
+**Rationale:** Case studies on community-driven development, polling systems, and content update strategies for long-running MMORPGs.  
+**Estimated Effort:** 3-4 hours  
+**Analysis Document:** `game-dev-analysis-jagex-developer-blogs.md` (957 lines)  
+**URL:** https://secure.runescape.com/m=news/archive?oldschool=1
+
+**Source Name:** GDC Talk: "Old School RuneScape's Journey" ✅ PROCESSED  
+**Discovered From:** RuneScape (Old School) analysis  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** First-hand account of OSRS revival and community engagement strategies. Lessons on respecting core game identity while evolving.  
+**Estimated Effort:** 2-3 hours  
+**Analysis Document:** `game-dev-analysis-gdc-osrs-journey.md` (1,293 lines)  
+**URL:** Search on GDC Vault or YouTube
 
 ---
 
