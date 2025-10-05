@@ -233,7 +233,9 @@ Add discovered sources below this line:
 **Priority:** Medium  
 **Category:** GameDev-Design  
 **Rationale:** Anthology includes Björk's overview of game design patterns along with other foundational game design texts. Comprehensive resource for design theory education relevant for establishing theoretical foundation for BlueMarble design discussions.  
-**Estimated Effort:** 12-15 hours (selective reading)
+**Estimated Effort:** 12-15 hours (selective reading)  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-game-design-reader.md`
 
 **Source Name:** "The Encyclopedia of Mineralogy" edited by Keith Frye (1981)  
 **Discovered From:** Specialized Collections research  
@@ -263,6 +265,34 @@ Add discovered sources below this line:
 **Priority:** Low  
 **Category:** GameDev-Design  
 **Rationale:** Practical guide to prediction and managing uncertainty in complex systems. Relevant for implementing player prediction systems and statistical literacy features in BlueMarble. Accessible treatment of Bayesian thinking.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** "Homo Ludens" by Johan Huizinga (1938) - Full text  
+**Discovered From:** Game Design Reader anthology analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Foundational play theory (anthology includes excerpt only). Establishes magic circle concept and play as separate from ordinary life. Relevant to BlueMarble's "playful science" approach where geological investigation becomes engaging play activity.  
+**Estimated Effort:** 8-10 hours (selective reading, classic dense philosophical text)
+
+**Source Name:** "Man, Play, and Games" by Roger Caillois (1961) - Full text  
+**Discovered From:** Game Design Reader anthology analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Full exploration of game classification (anthology includes classification chapter only). Four categories (agon/competition, alea/chance, mimicry/simulation, ilinx/vertigo) directly applicable to BlueMarble's simulation and chance elements.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** "The Grasshopper: Games, Life and Utopia" by Bernard Suits (1978) - Full text  
+**Discovered From:** Game Design Reader anthology analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Philosophical exploration of game definition beyond anthology excerpt. "Voluntary attempt to overcome unnecessary obstacles" concept validates BlueMarble's use of constraints to create interesting problems. Less practically applicable than other sources.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** "Half-Real" by Jesper Juul (2005) - Full book  
+**Discovered From:** Game Design Reader anthology analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Contemporary game theory exploring fiction/rules interaction beyond anthology excerpt. Relevant for BlueMarble's narrative-simulation balance where geological history discovery emerges from simulation interaction.  
 **Estimated Effort:** 6-8 hours
 
 ---
