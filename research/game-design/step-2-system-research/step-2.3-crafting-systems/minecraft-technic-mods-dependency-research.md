@@ -73,32 +73,30 @@ Research successfully completed if it:
 
 ### Research Approach
 
-Mixed-methods analysis combining:
-- Documentation review of mod wikis and changelogs
-- Gameplay analysis through Let's Play videos and tutorials
-- Community feedback analysis from forums and Reddit
-- Direct experimentation with Technic modpacks
+This document synthesizes publicly available information about Minecraft Technic modpacks and their technology mods, focusing on documented game mechanics and design patterns that can inform BlueMarble's crafting system design.
 
-### Data Collection Methods
+### Information Sources
 
-- **Documentation Analysis:** Review of 8+ major mod wikis (40+ hours)
-- **Video Analysis:** Analysis of 50+ hours of gameplay footage
-- **Community Research:** Review of 200+ forum threads and discussions
-- **Hands-on Testing:** 20+ hours of direct gameplay with key mods
+- Official mod documentation and wikis (FTB Wiki, Technic Wiki, mod-specific wikis)
+- Publicly available gameplay tutorials and community guides
+- Community discussions on Reddit (r/feedthebeast) and forums
+- Published mod changelogs and design documents
 
-### Data Sources
+### Analysis Focus
 
-- Official mod wikis (FTB Wiki, Technic Wiki, individual mod documentation)
-- YouTube creators (DireWolf20, Etho, Mischief of Mice)
-- Reddit communities (r/feedthebeast, r/tekkit)
-- Technic Forums and Discord servers
+The analysis examines:
+1. Documented dependency chains and progression systems
+2. Power generation and distribution mechanics
+3. Material processing and transformation systems
+4. Integration patterns between different mods
+5. Design patterns applicable to BlueMarble's geological simulation
 
 ### Limitations
 
-- Mods evolve rapidly; analysis represents state as of January 2025
-- Focus on most popular mods may miss innovative smaller mods
-- Player experience varies greatly with expertise level
-- Some design decisions are technical limitations rather than intentional design
+- Analysis based on publicly documented mechanics; may not cover all edge cases
+- Mods evolve over time; information reflects general design patterns rather than specific versions
+- Focus on most established mods; smaller or newer mods not included
+- Some design decisions may be technical limitations rather than intentional choices
 
 ## Technic Platform Overview
 
@@ -1839,15 +1837,16 @@ Industrial Scale:
    - Mekanism Wiki
    - Create Mod Documentation
 
-2. **Gameplay Analysis**
-   - 50+ hours of Let's Play analysis
-   - 20+ hours hands-on testing
-   - Community tutorial series review
+2. **Community Resources**
+   - Feed The Beast Wiki (ftb.fandom.com)
+   - Technic Wiki (tekkitmain.fandom.com)
+   - Reddit r/feedthebeast community
+   - Minecraft Forums (modded section)
 
-3. **Community Feedback**
-   - 200+ forum thread analysis
-   - Reddit r/feedthebeast survey data
-   - Discord community discussions
+3. **Tutorial and Educational Content**
+   - Community-created guides and tutorials
+   - Mod spotlight videos
+   - Modpack playthroughs
 
 **Secondary Sources:**
 
