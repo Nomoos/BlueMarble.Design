@@ -944,7 +944,7 @@ Scalability Targets:
 
 - [game-dev-analysis-01-game-programming-cpp.md](./game-dev-analysis-01-game-programming-cpp.md) - Core programming patterns
 - [wow-emulator-architecture-networking.md](../topics/wow-emulator-architecture-networking.md) - MMORPG networking
-- [game_dev_repos.md](../../docs/research/game_dev_repos.md) - Open source engine analysis
+- [game_dev_repos.md](../market-research/game_dev_repos.md) - Open source engine analysis
 - [master-research-queue.md](./master-research-queue.md) - Research tracking
 
 ---

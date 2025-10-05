@@ -106,6 +106,15 @@ Bibliography, reading lists, and raw notes from external sources.
   Science fiction narrative framework without magic, featuring multi-species mining colony, clone generation, controlled
   reproduction, and resource extraction under superior race oversight
 
+## Market Research
+
+Market analysis, competitive research, and industry trends.
+
+- [Market Research](market-research/) - Market analysis and competitive landscape
+- [Market Research Overview](market-research/market-research.md) - Competitive analysis and market positioning
+- [Game Development Repositories](market-research/game_dev_repos.md) - Analysis of game development repositories and resources
+- [Voxel Games Sources](market-research/voxel_games_sources.md) - Research on voxel-based games and technologies
+
 ## Existing Research Areas
 
 For comprehensive research areas, see:
@@ -113,6 +122,7 @@ For comprehensive research areas, see:
 - [Spatial Data Storage](spatial-data-storage/) - Spatial data storage strategies
 - [Game Design](game-design/) - Game design research and analysis
 - [GPT Research](gpt-research/) - Research from AI conversations
+- [Market Research](market-research/) - Market analysis and competitive landscape
 
 ## Contributing
 
