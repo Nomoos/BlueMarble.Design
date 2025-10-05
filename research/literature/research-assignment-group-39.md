@@ -77,6 +77,12 @@ This assignment group focuses on analyzing game development resources from the o
 ## Progress Tracking
 
 - [x] RakNet (Open Source Version)
+- [ ] Reddit - r/MMORPG
+- [ ] All documents created and placed in `research/literature/`
+- [ ] All documents have proper front matter
+- [ ] All documents meet minimum length requirements
+- [ ] Cross-references added
+- [ ] Discovered sources logged below
 - [x] Reddit - r/MMORPG
 - [x] All documents created and placed in `research/literature/`
 - [x] All documents have proper front matter
@@ -110,6 +116,71 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
+**Source Name:** ENet Networking Library  
+**Discovered From:** RakNet (Open Source Version) analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Active alternative to RakNet, simpler API, used by many modern indie multiplayer games  
+**Estimated Effort:** 6-8 hours  
+**Status:** ✅ Analyzed in game-dev-analysis-enet-networking-library.md
+
+**Source Name:** GameNetworkingSockets (Valve)  
+**Discovered From:** RakNet (Open Source Version) analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Modern, actively maintained by Valve, used in Steam games, represents current industry best practices  
+**Estimated Effort:** 8-10 hours  
+**Status:** ✅ Analyzed in game-dev-analysis-gamenetworkingsockets-valve.md
+
+**Source Name:** yojimbo Networking Library  
+**Discovered From:** RakNet (Open Source Version) analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Modern C++ networking for action games, encrypted by default, good security patterns  
+**Estimated Effort:** 6-8 hours  
+**Status:** ✅ Analyzed in game-dev-analysis-yojimbo-networking-library.md
+
+**Source Name:** libuv (Async I/O Library)  
+**Discovered From:** ENet Networking Library analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Could provide better async I/O performance for BlueMarble servers  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** kcp (Fast Reliable UDP Protocol)  
+**Discovered From:** ENet Networking Library analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Alternative reliability protocol with different trade-offs  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** WebRTC Native Code Package  
+**Discovered From:** GameNetworkingSockets (Valve) analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Direct WebRTC integration for browser clients  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Steamworks SDK Documentation  
+**Discovered From:** GameNetworkingSockets (Valve) analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Required for full GNS feature utilization and Steam integration  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** libsodium Cryptography Library  
+**Discovered From:** yojimbo Networking Library analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Underlying crypto library used by yojimbo, understanding it helps with security  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Glenn Fiedler's Networking Articles  
+**Discovered From:** yojimbo Networking Library analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Author of yojimbo, comprehensive game networking tutorial series  
+**Estimated Effort:** 6-8 hours
 **Source Name:** GameNetworkingSockets (Valve Steam Networking)  
 **Discovered From:** RakNet alternatives research  
 **Priority:** High  
