@@ -133,6 +133,8 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Contains component systems and rendering patterns directly applicable to isometric entity management, depth sorting, and spatial partitioning for BlueMarble's strategic view mode
 **Estimated Effort:** 4-6 hours
+**Status:** ✅ Processed - Analysis complete (game-dev-analysis-game-programming-patterns.md)
+**New Sources Discovered:** 3 (Design Patterns: Gang of Four, Data-Oriented Design, Game Engine Gems)
 
 **Source Name:** Mathematics for 3D Game Programming and Computer Graphics by Eric Lengyel
 **Discovered From:** Isometric Projection Techniques (Topic 15)
@@ -161,6 +163,27 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Critical performance optimization techniques for culling, LOD systems, and batching required for planet-scale isometric visualization at continental scale
 **Estimated Effort:** 3-4 hours
+
+**Source Name:** Design Patterns: Elements of Reusable Object-Oriented Software (Gang of Four)
+**Discovered From:** Game Programming Patterns (derived from Topic 15)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Foundation patterns that Game Programming Patterns builds upon, essential for understanding core architectural patterns used in BlueMarble's engine systems
+**Estimated Effort:** 10-12 hours
+
+**Source Name:** Data-Oriented Design by Richard Fabian
+**Discovered From:** Game Programming Patterns (derived from Topic 15)
+**Priority:** High
+**Category:** GameDev-Tech
+**Rationale:** Cache-friendly programming and component system optimization critical for rendering thousands of entities efficiently in isometric view mode
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Game Engine Gems series
+**Discovered From:** Game Programming Patterns (derived from Topic 15)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Practical implementations of spatial partitioning and rendering optimization patterns with real-world examples applicable to BlueMarble
+**Estimated Effort:** 8-10 hours per volume
 
 ---
 
