@@ -167,8 +167,10 @@ Add discovered sources below this line:
 **Discovered From:** Topic 2 - Introduction to Game Systems Design (Progression frameworks and mechanics)  
 **Priority:** High  
 **Category:** GameDev-Design  
+**Status:** ✅ COMPLETED - Analysis document created  
+**Document:** [game-dev-analysis-level-design.md](game-dev-analysis-level-design.md)  
 **Rationale:** Specific focus on RPG systems design, combat design, and top-down level design mechanics - directly applicable to BlueMarble's gameplay mechanics and progression systems  
-**Estimated Effort:** 6-8 hours  
+**Estimated Effort:** 6-8 hours (Completed: 7 hours)  
 **Catalog Reference:** [online-game-dev-resources.md](online-game-dev-resources.md) - Entry #7
 
 **Source Name:** Developing Online Games: An Insider's Guide  
@@ -202,6 +204,30 @@ Add discovered sources below this line:
 **Rationale:** Container orchestration fundamentals for managing multiple game service instances in production - supports scalable infrastructure deployment  
 **Estimated Effort:** 4-6 hours  
 **Catalog Reference:** Technical book on Docker and containerization
+
+**Source Name:** Game Feel by Steve Swink  
+**Discovered From:** Discovered Source 2 - Level Up! The Guide to Great Video Game Design (Combat responsiveness)  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Deep dive into player control responsiveness, animation timing, and tactile feedback - critical for making geological interactions feel satisfying in BlueMarble  
+**Estimated Effort:** 6-8 hours  
+**Catalog Reference:** Technical book on game feel and player control
+
+**Source Name:** Rules of Play by Katie Salen and Eric Zimmerman  
+**Discovered From:** Discovered Source 2 - Level Up! The Guide to Great Video Game Design (Game systems theory)  
+**Priority:** Medium  
+**Category:** GameDev-Theory  
+**Rationale:** Theoretical foundation for understanding game systems, rules, and play - provides academic framework for design decisions  
+**Estimated Effort:** 8-10 hours  
+**Catalog Reference:** Academic text on game design theory
+
+**Source Name:** Designing for Motivation (GDC Talks/Papers)  
+**Discovered From:** Discovered Source 2 - Level Up! The Guide to Great Video Game Design (Player psychology)  
+**Priority:** Medium  
+**Category:** GameDev-Psychology  
+**Rationale:** Understanding player motivation types and retention strategies - essential for long-term engagement in BlueMarble  
+**Estimated Effort:** 3-4 hours  
+**Catalog Reference:** Industry talks and research papers on player motivation
 
 <!-- Discovery entries go here -->
 
