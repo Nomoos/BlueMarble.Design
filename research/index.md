@@ -13,6 +13,9 @@ and typically 200-400 lines.
 
 - [World of Warcraft Emulators – Architecture & Communication](topics/wow-emulator-architecture-networking.md) -
   MMO server architecture, authentication systems, and networking protocols from open-source WoW emulators
+  
+- [Why Don't Women Play Games? - Gender Barriers in Gaming](topics/why-dont-women-play-games.md) -
+  Analysis of historical and cultural barriers preventing women's full participation in gaming, with actionable insights for inclusive game design
 
 ## Notes
 
