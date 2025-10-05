@@ -125,7 +125,7 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Specialized Collections (Deep Web Sources) (Medium)
+- [x] Specialized Collections (Deep Web Sources) (Medium) - ✅ Complete (2025-01-15)
 - [x] A Game Design Vocabulary (Medium) - ✅ Complete (2025-01-15)
 
 ---
@@ -230,6 +230,20 @@ Add discovered sources below this line:
 **Category:** GameDev-Design  
 **Rationale:** Anthology includes Björk's overview of game design patterns along with other foundational game design texts. Comprehensive resource for design theory education relevant for establishing theoretical foundation for BlueMarble design discussions.  
 **Estimated Effort:** 12-15 hours (selective reading)
+
+**Source Name:** "The Encyclopedia of Mineralogy" edited by Keith Frye (1981)  
+**Discovered From:** Specialized Collections research  
+**Priority:** Medium  
+**Category:** Survival-Technical  
+**Rationale:** Comprehensive reference on mineral properties, identification, and occurrence. Essential for creating accurate mineral simulation systems with detailed technical specifications for hundreds of minerals.  
+**Estimated Effort:** 8-10 hours (selective reading)
+
+**Source Name:** Mindat.org Mineral Database  
+**Discovered From:** Specialized Collections research  
+**Priority:** High  
+**Category:** Survival-Technical  
+**Rationale:** Most comprehensive online mineral database with 50,000+ minerals documented. Includes locality data, specimen photos, and technical specifications. Essential reference for realistic mineral distribution and properties in BlueMarble.  
+**Estimated Effort:** 5-6 hours (systematic review)
 
 ---
 
