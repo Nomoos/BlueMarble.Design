@@ -1,6 +1,20 @@
 # BlueMarble Research
 
-This directory contains research documentation for various aspects of the BlueMarble geomorphological simulation project.
+This directory contains **all research documentation** for the BlueMarble project, including market analysis, game design research, technical research, and experimental findings.
+
+> **Note**: This is the primary location for **all research activities**. For high-level design vision, see the [/design](../design/) directory. For technical implementation specifications, see the [/docs](../docs/) directory.
+
+## Purpose
+
+The `/research` directory serves as the central hub for:
+
+- **Research Topics**: Small, focused research notes (200-400 lines)
+- **Market Research**: Competitive analysis and market trends
+- **Game Design Research**: Game mechanics and systems research
+- **Technical Research**: Spatial data, algorithms, and technical analysis
+- **Experiments**: Structured experiment logs and findings
+- **Literature Reviews**: Academic papers and technical documentation analysis
+- **Sources**: Bibliography, reading lists, and external references
 
 ## Organizational Structure
 
@@ -18,6 +32,17 @@ See [RESEARCH_ORGANIZATION.md](RESEARCH_ORGANIZATION.md) for complete organizati
 ```
 research/
 ├── README.md                    # This file - research overview
+├── index.md                     # Master index of all research
+├── topics/                      # Small focused research notes (200-400 lines)
+├── notes/                       # Informal research notes and ideas
+├── experiments/                 # Structured experiment logs
+├── literature/                  # Formal references and literature reviews
+├── sources/                     # Bibliography, reading list, quotes
+├── market-research/             # Market analysis and competitive research
+│   ├── README.md               # Market research overview
+│   ├── market-research.md      # Competitive analysis and positioning
+│   ├── game_dev_repos.md       # Game development repositories analysis
+│   └── voxel_games_sources.md  # Voxel games research
 ├── spatial-data-storage/        # Spatial data storage strategies research
 │   ├── README.md               # Overview of spatial storage approaches
 │   ├── comparison-analysis.md  # Detailed comparison of storage methods
@@ -30,13 +55,23 @@ research/
 │   ├── mechanics-research.md   # Game systems inspired by classic economic simulations
 │   ├── implementation-plan.md  # Phased development roadmap
 │   └── player-freedom-analysis.md  # Maximizing player agency through intelligent constraints
-└── gpt-research/                # Research from ChatGPT conversations
-    ├── README.md               # Guide for importing GPT research
-    ├── conversation-dr_68dbe0cc/  # Pending research import
-    └── conversation-dr_68dbe0e4/  # Pending research import
+├── gpt-research/                # Research from ChatGPT conversations
+│   ├── README.md               # Guide for importing GPT research
+│   ├── conversation-dr_68dbe0cc/  # Pending research import
+│   └── conversation-dr_68dbe0e4/  # Pending research import
+└── templates/                   # Research organization templates
 ```
 
 ## Research Areas
+
+### Market Research (`market-research/`)
+
+Competitive analysis, market trends, and industry research, including:
+
+- Competitive landscape analysis
+- Game development repositories and resources
+- Voxel-based games and technologies
+- Market positioning and opportunities
 
 ### Spatial Data Storage (`spatial-data-storage/`)
 

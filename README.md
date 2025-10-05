@@ -16,7 +16,7 @@ This repository serves as the central hub for all design-related activities in t
 ## Repository Structure
 
 ```
-├── research/                # Research hub
+├── research/                # Research hub - all research activities
 │   ├── README.md           # Research guidelines
 │   ├── index.md            # Master index of research
 │   ├── topics/             # Small focused research notes (200-400 lines)
@@ -26,8 +26,9 @@ This repository serves as the central hub for all design-related activities in t
 │   ├── sources/            # Bibliography, reading list, quotes
 │   ├── game-design/        # Game design research area
 │   ├── spatial-data-storage/ # Spatial data storage research
+│   ├── market-research/    # Market analysis and competitive research
 │   └── gpt-research/       # AI-assisted research
-├── design/                  # Design documentation hub
+├── design/                  # Design vision hub - high-level concepts
 │   ├── README.md           # Design guidelines
 │   ├── index.md            # Design document index
 │   ├── pillars.md          # High-level vision and pillars
@@ -36,12 +37,17 @@ This repository serves as the central hub for all design-related activities in t
 │   ├── narrative.md        # Story, world, characters
 │   ├── styleguide.md       # Visual design system and style guide
 │   ├── wireframes/         # UI/UX wireframes and screen mockups
-│   │   └── ui-wireframes.md # Interface mockups (general)
 │   ├── architecture/       # System architecture diagrams
 │   ├── ux/                 # User experience design
-│   │   └── controls.md     # Input schemes
 │   ├── island_start_game_design.md # Existing design
 │   └── one-page-design.md  # Existing design
+├── docs/                    # Technical documentation - implementation specs
+│   ├── core/               # Core design documents (GDD, TDD)
+│   ├── gameplay/           # Gameplay mechanics and systems
+│   ├── world/              # World building, lore, narrative
+│   ├── systems/            # Core systems and technical design
+│   ├── ui-ux/              # User interface and experience design
+│   └── audio/              # Audio design and music concepts
 ├── roadmap/                 # Strategic planning and roadmap
 │   ├── README.md           # Planning guidelines
 │   ├── roadmap.md          # Big picture by quarter/phase
@@ -53,14 +59,6 @@ This repository serves as the central hub for all design-related activities in t
 │   ├── milestone-guide.md  # Milestone structure and tracking
 │   ├── roadmap-management-guide.md # How to manage roadmap
 │   └── feature-prioritization-guide.md # Feature prioritization
-├── docs/                    # Comprehensive documentation
-│   ├── core/               # Core design documents (GDD, TDD)
-│   ├── gameplay/           # Gameplay mechanics and systems
-│   ├── world/              # World building, lore, narrative
-│   ├── systems/            # Core systems and technical design
-│   ├── ui-ux/              # User interface and experience design
-│   ├── audio/              # Audio design and music concepts
-│   └── research/           # Market research and analysis
 ├── templates/               # Document templates
 │   ├── research-note.md    # Small focused research (200-400 lines)
 │   ├── design-doc.md       # Design document template
@@ -72,18 +70,48 @@ This repository serves as the central hub for all design-related activities in t
 ├── scripts/                 # Utility scripts
 └── .github/                 # GitHub configuration
     ├── ISSUE_TEMPLATE/     # Issue templates
-    │   ├── bug_report.yml
-    │   ├── chore.yml
-    │   ├── design_task.yml
-    │   └── research_note.yml
     ├── workflows/          # CI/CD workflows
-    │   ├── quality.yml     # Markdown lint, link check, spellcheck
-    │   ├── config-lint.yml # YAML/JSON validation
-    │   └── autolabel.yml   # Auto-label and size PRs
     ├── CODEOWNERS          # Review assignments
     ├── PULL_REQUEST_TEMPLATE.md
     └── dependabot.yml      # Dependency updates
 ```
+
+## Directory Purpose
+
+### `/research` - Research Hub
+All research activities including:
+- **Topics**: Focused research notes (200-400 lines)
+- **Market Research**: Competitive analysis and market trends
+- **Game Design Research**: Game mechanics and systems research
+- **Spatial Data**: Technical research on data structures
+- **Experiments**: Structured experiment logs
+- **Literature**: Academic papers and technical documentation reviews
+- **Sources**: Bibliography and external references
+
+### `/design` - Design Vision Hub
+High-level design concepts and vision:
+- **Design Pillars**: Core vision and principles
+- **Game Mechanics**: Core loops and systems concepts
+- **Economy & Progression**: High-level economic design
+- **Narrative**: Story and world concepts
+- **Wireframes**: UI/UX mockups
+- **Style Guide**: Visual design system
+
+### `/docs` - Technical Documentation
+Detailed technical implementation specifications:
+- **Core Documents**: Game Design Document (GDD) and Technical Design Document (TDD)
+- **Gameplay Systems**: Detailed mechanics specifications
+- **System Architecture**: Technical design and APIs
+- **World Design**: Detailed lore and world building
+- **UI/UX**: Interface specifications
+- **Audio**: Sound design specifications
+
+### `/roadmap` - Strategic Planning
+Project planning and tracking:
+- Quarterly roadmaps
+- Milestones and deliverables
+- Task breakdowns
+- Feature prioritization
 
 ## Key Principles
 
@@ -169,8 +197,11 @@ Link liberally between related documents. Each major directory has an `index.md`
 - **[World Lore](./docs/world/world-lore.md)** - Setting, history, and cultural elements
 - **[Audio Guidelines](./docs/audio/audio-guidelines.md)** - Music and sound design principles
 
-### Research Foundation
-- **[Market Research](./docs/research/market-research.md)** - Competitive analysis and market positioning
+### Research
+For research documentation, see the [research directory](./research/) which includes:
+- **[Market Research](./research/market-research/)** - Competitive analysis and market positioning
+- **[Game Design Research](./research/game-design/)** - Game mechanics and systems research
+- **[Research Index](./research/index.md)** - Complete research overview
 
 ## Document Types
 
