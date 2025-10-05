@@ -156,6 +156,29 @@ During your research, if you discover additional valuable sources, log them here
 
 ---
 
+**Source Name:** Gaffer on Games - Networking for Game Programmers  
+**Discovered From:** Valve Source Engine Multiplayer Networking  
+**Priority:** Critical  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive series on networking fundamentals, UDP protocols, and real-time networking for games by industry expert Glenn Fiedler  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Gabriel Gambetta - Fast-Paced Multiplayer  
+**Discovered From:** Valve Source Engine Multiplayer Networking  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Detailed explanation of client-server architecture with interactive visualizations of prediction and lag compensation  
+**Estimated Effort:** 4-6 hours
+
+**Source Name:** Source Engine Networking Performance Analysis (Valve)  
+**Discovered From:** Valve Source Engine Multiplayer Networking  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Deep dive into Source Engine's entity networking system and performance optimization techniques  
+**Estimated Effort:** 6-8 hours
+
+---
+
 ## Submission Guidelines
 
 When complete:
