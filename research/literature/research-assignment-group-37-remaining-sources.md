@@ -6,7 +6,7 @@ This document lists the remaining discovered sources from the Assignment Group 3
 
 - ✅ **Source 1:** Unity 2D Documentation and Best Practices - **COMPLETE**
 - ✅ **Source 2:** Latency Compensating Methods in Client/Server Protocol Design (GDC 2001) - **COMPLETE**
-- ⏳ **Source 3:** State Synchronization in Networked Games (Gaffer On Games) - **PENDING**
+- ✅ **Source 3:** State Synchronization in Networked Games (Gaffer On Games) - **COMPLETE**
 - ⏳ **Source 4:** World of Warcraft Client Architecture - **PENDING**
 - ⏳ **Source 5:** Game Programming Patterns - Spatial Partitioning - **PENDING**
 
