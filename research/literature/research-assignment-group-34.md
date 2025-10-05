@@ -110,12 +110,13 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-**Source Name:** RuneLite (Official Third-Party Client)  
+**Source Name:** RuneLite (Official Third-Party Client) ✅ PROCESSED  
 **Discovered From:** RuneScape (Old School) analysis  
 **Priority:** Medium  
 **Category:** GameDev-Tech  
 **Rationale:** Open-source game client demonstrating extensibility and community-driven development patterns. Shows how to support third-party tools while maintaining game integrity.  
 **Estimated Effort:** 4-6 hours  
+**Analysis Document:** `game-dev-analysis-runelite-third-party-client.md` (922 lines)  
 **URL:** https://runelite.net/
 
 **Source Name:** OSRS Grand Exchange Economy Data (GE Tracker) ✅ PROCESSED  
@@ -127,12 +128,13 @@ During your research, if you discover additional valuable sources, log them here
 **Analysis Document:** `game-dev-analysis-osrs-grand-exchange-economy.md` (1,453 lines)  
 **URL:** https://www.ge-tracker.com/
 
-**Source Name:** Jagex Developer Blogs on OSRS Updates  
+**Source Name:** Jagex Developer Blogs on OSRS Updates ✅ PROCESSED  
 **Discovered From:** RuneScape (Old School) analysis  
 **Priority:** Medium  
 **Category:** GameDev-Content  
 **Rationale:** Case studies on community-driven development, polling systems, and content update strategies for long-running MMORPGs.  
 **Estimated Effort:** 3-4 hours  
+**Analysis Document:** `game-dev-analysis-jagex-developer-blogs.md` (957 lines)  
 **URL:** https://secure.runescape.com/m=news/archive?oldschool=1
 
 **Source Name:** GDC Talk: "Old School RuneScape's Journey" ✅ PROCESSED  
