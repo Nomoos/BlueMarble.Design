@@ -141,6 +141,7 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Practical C++ implementations of networking patterns. Directly applicable to BlueMarble codebase.
 **Estimated Effort:** 8-10 hours
+**Status:** ✅ Complete (2025-01-15) - Document: game-dev-analysis-practical-networked-applications-cpp.md
 
 **Source Name:** Distributed Systems by Maarten van Steen and Andrew Tanenbaum
 **Discovered From:** Network Programming for Games (Topic 1)
@@ -169,6 +170,20 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Comprehensive optimization guide for WebGPU rendering. Relevant for web client graphics performance in BlueMarble.
 **Estimated Effort:** 5-7 hours
+
+**Source Name:** C++ Network Programming with Patterns, Frameworks, and ACE
+**Discovered From:** Practical Networked Applications in C++ (Discovered Source 2)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Advanced C++ networking patterns using ACE framework. Alternative to Boost.Asio with different design philosophy.
+**Estimated Effort:** 10-12 hours
+
+**Source Name:** Modern C++ Design Patterns for Games
+**Discovered From:** Practical Networked Applications in C++ (Discovered Source 2)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** C++17/20 design patterns specifically for game development. Relevant for BlueMarble architecture.
+**Estimated Effort:** 8-10 hours
 
 ---
 
