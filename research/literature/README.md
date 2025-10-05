@@ -48,7 +48,8 @@ Analysis documents examining game design patterns and development resources:
 8. [game-dev-analysis-06-unreal-niagara.md](game-dev-analysis-06-unreal-niagara.md) - Unreal Engine Niagara advanced particle system architecture and data-driven design
 9. [game-dev-analysis-07-shadertoy.md](game-dev-analysis-07-shadertoy.md) - ShaderToy Platform shader prototyping and procedural generation techniques
 10. [game-dev-analysis-vfx-compositing.md](game-dev-analysis-vfx-compositing.md) - Visual Effects and Compositing techniques for MMORPG development
-11. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
+11. [game-dev-analysis-the-sims-and-gaming-women-phenomenon.md](game-dev-analysis-the-sims-and-gaming-women-phenomenon.md) - The Sims franchise and the gaming woman phenomenon: gender, casual gaming, social simulation, and player demographics
+12. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
 
 ## Guidelines
 
