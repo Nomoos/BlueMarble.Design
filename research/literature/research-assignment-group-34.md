@@ -77,7 +77,7 @@ This assignment group focuses on analyzing game development resources from the o
 ## Progress Tracking
 
 - [x] RuneScape (Old School)
-- [ ] Procedural Generation in Game Design
+- [x] Procedural Generation in Game Design
 - [x] All documents created and placed in `research/literature/`
 - [x] All documents have proper front matter
 - [x] All documents meet minimum length requirements
