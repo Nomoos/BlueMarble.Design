@@ -8,6 +8,7 @@ Research on advanced crafting mechanics and base workflow design from leading MM
 
 - [Advanced Crafting System Research](advanced-crafting-system-research.md) - Industry trends in flexible material selection, risk/reward mechanics, and player control
 - [Base Crafting Workflows Research](base-crafting-workflows-research.md) - Tool integration, workstation proximity, and UI/UX patterns for accessible crafting
+- [Minecraft Technic Mods Dependency Research](minecraft-technic-mods-dependency-research.md) - Analysis of realistic technology progression and dependency systems in Technic modpacks
 
 ## Key Crafting Patterns
 
@@ -26,6 +27,13 @@ Research on advanced crafting mechanics and base workflow design from leading MM
 - **Queue Management**: Bulk crafting without repetitive clicking
 - **Progressive Disclosure**: Complexity scales with player expertise
 
+### Dependency System Patterns
+- **Tiered Material Gates**: Each tier requires materials from previous tier
+- **Infrastructure Dependencies**: Machines require supporting systems (power, water, ventilation)
+- **Byproduct Chains**: Processing generates secondary outputs used in other processes
+- **Multi-Stage Processing**: Complex products require sequential processes
+- **Alternate Paths**: Multiple valid approaches to achieving same goal
+
 ## Reference Games Analysis
 
 ### Advanced Crafting Leaders
@@ -39,6 +47,12 @@ Research on advanced crafting mechanics and base workflow design from leading MM
 - **Eco Global Survival**: Collaborative specialization requirements
 - **WoW**: Accessible mass production systems
 - **FFXIV**: Progressive complexity for dedicated crafters
+
+### Dependency System Leaders
+- **Minecraft Technic Mods**: Multi-tier technology progression with realistic dependencies
+- **IndustrialCraft 2**: Tiered power systems and infrastructure requirements
+- **GregTech**: Extreme realism with 5x ore processing chains
+- **Create**: Physics-based mechanical systems with visible material flow
 
 ## BlueMarble Integration
 

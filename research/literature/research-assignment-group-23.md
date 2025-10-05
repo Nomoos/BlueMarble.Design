@@ -76,13 +76,13 @@ This assignment group focuses on analyzing game development resources from the o
 
 ## Progress Tracking
 
-- [ ] MMO Architecture: Source Code and Insights
-- [ ] GDC (Game Developers Conference)
-- [ ] All documents created and placed in `research/literature/`
-- [ ] All documents have proper front matter
-- [ ] All documents meet minimum length requirements
-- [ ] Cross-references added
-- [ ] Discovered sources logged below
+- [x] MMO Architecture: Source Code and Insights
+- [x] GDC (Game Developers Conference)
+- [x] All documents created and placed in `research/literature/`
+- [x] All documents have proper front matter
+- [x] All documents meet minimum length requirements
+- [x] Cross-references added
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,41 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** Networking for Game Programmers (Gaffer On Games)  
+**Discovered From:** MMO Architecture: Source Code and Insights analysis  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive technical blog covering real-time networking protocols, client prediction, lag compensation, and reliable UDP implementation - directly applicable to BlueMarble's multiplayer architecture  
+**Estimated Effort:** 6-8 hours  
+**URL:** https://gafferongames.com/  
+**Status:** ✅ Complete - Document: `game-dev-analysis-networking-for-game-programmers.md` (919 lines)
+
+**Source Name:** Secure Remote Password (SRP6) Protocol Documentation  
+**Discovered From:** MMO Architecture: Source Code and Insights analysis  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Battle-tested authentication protocol used in WoW and other MMOs, provides secure authentication without transmitting passwords, essential for BlueMarble's authentication service design  
+**Estimated Effort:** 2-3 hours  
+**URL:** https://en.wikipedia.org/wiki/Secure_Remote_Password_protocol  
+**Status:** ✅ Complete - Document: `game-dev-analysis-srp6-authentication-protocol.md` (915 lines)
+
+**Source Name:** Designing Diablo III's Combat (GDC 2013)  
+**Discovered From:** GDC (Game Developers Conference) analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Action RPG combat design principles applicable to BlueMarble's real-time combat system, focus on combat feel and feedback systems  
+**Estimated Effort:** 3-4 hours  
+**URL:** GDC Vault - search "Diablo III Combat"  
+**Status:** ✅ Complete - Document: `game-dev-analysis-diablo-3-combat-design.md` (743 lines)
+
+**Source Name:** The Game Outcomes Project (GDC series)  
+**Discovered From:** GDC (Game Developers Conference) analysis  
+**Priority:** High  
+**Category:** GameDev-Process  
+**Rationale:** Research on what makes game projects succeed or fail, critical for BlueMarble project management and team dynamics  
+**Estimated Effort:** 4-5 hours  
+**URL:** GDC Vault - search "Game Outcomes Project"  
+**Status:** ✅ Complete - Document: `game-dev-analysis-game-outcomes-project.md` (714 lines)
 
 ---
 
