@@ -23,18 +23,23 @@ Each step contains detailed research documents and can be explored independently
 
 ## Research Documents
 
-### [Content Design Research](step-1-foundation/content-design-research.md)
-Comprehensive research on content design as a discipline within game development, covering definition, roles, 
-skills, and integration with the development cycle.
+### [Content Design Research](step-1-foundation/content-design/)
+Comprehensive research on content design in game development, organized into focused topic files for easier 
+navigation and reference.
 
 **Key Topics**:
 
-- Definition and core focus areas of content design (quests, dialogue, tutorials, world-building)
-- Content designer responsibilities and deliverables
-- Essential skills for beginners and career progression path
-- Game development cycle and content design's role in each phase
-- Applications to BlueMarble's medieval MMO simulation context
-- Resources and further learning for aspiring content designers
+- **[Overview](step-1-foundation/content-design/content-design-overview.md)**: Definition, core focus areas, and relationship to other disciplines
+- **[Workflow](step-1-foundation/content-design/content-design-workflow.md)**: 5-phase process, design patterns, tools and techniques
+- **[Video Game RPGs](step-1-foundation/content-design/content-design-video-game-rpgs.md)**: Analysis of KCD, Witcher 3, Cyberpunk, Gothic, BG3
+- **[Tabletop RPGs](step-1-foundation/content-design/content-design-tabletop-rpgs.md)**: Analysis of D&D, Dračí hlídka, Spire, Blades, Heart
+- **[Comparative Analysis](step-1-foundation/content-design/content-design-comparative-analysis.md)**: Differences and commonalities between video game and tabletop RPGs
+- **[Professional Practice](step-1-foundation/content-design/content-designer-role.md)**: Role, skills, and career progression
+- **[Development Integration](step-1-foundation/content-design/content-design-in-development.md)**: Content design in each dev phase
+- **[BlueMarble Applications](step-1-foundation/content-design/content-design-bluemarble.md)**: Implementation recommendations
+- **[Resources](step-1-foundation/content-design/content-design-resources.md)**: Books, courses, tools, and learning paths
+
+See the **[Content Design Index](step-1-foundation/content-design/README.md)** for complete navigation and topic organization.
 
 **Relevance to BlueMarble**:
 - Educational quest content teaching geological and historical concepts
