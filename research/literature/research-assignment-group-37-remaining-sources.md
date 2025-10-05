@@ -121,4 +121,4 @@ When user comments "next", process the next source in the list following the sam
 ---
 
 **Last Updated:** 2025-01-17  
-**Current Status:** Sources 1-2 complete, 3 sources remaining
+**Current Status:** Sources 1-3 complete, 2 discovered + 1 original remaining

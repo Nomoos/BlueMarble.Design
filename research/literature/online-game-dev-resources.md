@@ -324,6 +324,20 @@ This document catalogs online resources for game development with a focus on **R
   - Programming: https://www.gamedev.net/articles/programming/
   - Game Design: https://www.gamedev.net/articles/game-design/
 
+#### 19a. **Gaffer On Games (Glenn Fiedler)**
+- **URL:** https://gafferongames.com/
+- **Author:** Glenn Fiedler
+- **Status:** ✅ Analysis Complete (State Synchronization)
+- **Priority:** High
+- **Analysis Document:** `game-dev-analysis-state-synchronization-gaffer-on-games.md`
+- **Discovered From:** 2D Game Development with Unity (networking patterns)
+- **Key Series:**
+  - Networked Physics: https://gafferongames.com/categories/networked-physics/
+  - State Synchronization: https://gafferongames.com/post/state_synchronization/
+  - Snapshot Interpolation and Compression
+  - Reliable Ordered Messages over UDP
+- **Relevance to BlueMarble:** Industry-leading networking techniques for real-time multiplayer games
+
 #### 20. **Game Programming Patterns (Online Edition)**
 - **URL:** https://gameprogrammingpatterns.com/
 - **Author:** Robert Nystrom
