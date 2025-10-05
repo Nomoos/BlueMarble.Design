@@ -151,6 +151,8 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Essential for understanding camera systems, rendering pipelines, and scene management required to integrate isometric views with BlueMarble's 3D engine and implement seamless view mode transitions
 **Estimated Effort:** 8-10 hours
+**Status:** ✅ Processed - Analysis complete (game-dev-analysis-game-engine-architecture.md)
+**New Sources Discovered:** 2 (Real-Time Collision Detection, GPU Gems series)
 
 **Source Name:** Red Blob Games - Isometric and Hexagonal Grids (Interactive Tutorial)
 **Discovered From:** Isometric Projection Techniques (Topic 15)
@@ -207,6 +209,20 @@ Add discovered sources below this line:
 **Category:** GameDev-Tech
 **Rationale:** Companion resource with engine-specific focus providing practical implementation patterns for transformation pipeline in game engines
 **Estimated Effort:** 8-10 hours
+
+**Source Name:** Real-Time Collision Detection by Christer Ericson
+**Discovered From:** Game Engine Architecture (derived from Topic 15)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Advanced spatial partitioning and collision detection algorithms for optimizing entity queries and interaction detection in isometric grid systems
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** GPU Gems series
+**Discovered From:** Game Engine Architecture (derived from Topic 15)
+**Priority:** Medium
+**Category:** GameDev-Tech
+**Rationale:** Advanced GPU rendering techniques and shader-based optimizations applicable to isometric scene rendering
+**Estimated Effort:** 10-12 hours per volume
 
 ---
 
