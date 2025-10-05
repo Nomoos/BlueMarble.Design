@@ -100,7 +100,7 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Augmented Reality / Practical Augmented Reality (Low)
+- [x] Augmented Reality / Practical Augmented Reality (Low)
 
 ---
 
@@ -127,7 +127,67 @@ Add discovered sources below this line:
 
 ---
 
-<!-- Discovery entries go here -->
+**Source Name:** Practical Augmented Reality by Steve Aukstakalnis  
+**Discovered From:** Augmented Reality / Practical Augmented Reality topic research  
+**Priority:** Low  
+**Category:** GameDev-Specialized  
+**Rationale:** Comprehensive guide to AR development principles and practical implementation strategies for mobile AR experiences  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Augmented Reality: Principles and Practice by Dieter Schmalstieg & Tobias Höllerer  
+**Discovered From:** Augmented Reality / Practical Augmented Reality topic research  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Academic foundation for AR algorithms, computer vision, and tracking systems applicable to advanced AR features  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Unity AR & VR by Tutorials (raywenderlich.com)  
+**Discovered From:** Augmented Reality / Practical Augmented Reality topic research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Practical Unity-based AR development tutorials for implementing mobile companion app features  
+**Estimated Effort:** 5-7 hours  
+**Status:** ✅ Complete - [game-dev-analysis-ar-technical-implementation.md](game-dev-analysis-ar-technical-implementation.md)
+
+**Source Name:** ARKit Documentation (Apple)  
+**Discovered From:** Augmented Reality / Practical Augmented Reality topic research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Official iOS AR framework documentation essential for iOS companion app development  
+**Estimated Effort:** 4-6 hours  
+**Status:** ✅ Complete - [game-dev-analysis-ar-technical-implementation.md](game-dev-analysis-ar-technical-implementation.md)
+
+**Source Name:** ARCore Documentation (Google)  
+**Discovered From:** Augmented Reality / Practical Augmented Reality topic research  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Official Android AR framework documentation essential for Android companion app development  
+**Estimated Effort:** 4-6 hours  
+**Status:** ✅ Complete - [game-dev-analysis-ar-technical-implementation.md](game-dev-analysis-ar-technical-implementation.md)
+
+**Source Name:** Pokémon GO Case Study  
+**Discovered From:** Augmented Reality / Practical Augmented Reality topic research  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Industry-leading example of location-based AR at massive scale, highly relevant for territory control and real-world event systems  
+**Estimated Effort:** 3-4 hours  
+**Status:** ✅ Complete - [game-dev-analysis-pokemon-go-case-study.md](game-dev-analysis-pokemon-go-case-study.md)
+
+**Source Name:** Ingress Case Study (Niantic)  
+**Discovered From:** Augmented Reality / Practical Augmented Reality topic research  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Original location-based faction warfare game that pioneered territory control mechanics applicable to BlueMarble  
+**Estimated Effort:** 3-4 hours  
+**Status:** ✅ Complete - [game-dev-analysis-ingress-case-study.md](game-dev-analysis-ingress-case-study.md)
+
+**Source Name:** Minecraft Earth Case Study  
+**Discovered From:** Augmented Reality / Practical Augmented Reality topic research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** AR building and collaboration mechanics relevant to base planning features, though discontinued provides valuable lessons learned  
+**Estimated Effort:** 2-3 hours  
+**Status:** ✅ Complete - [game-dev-analysis-minecraft-earth-case-study.md](game-dev-analysis-minecraft-earth-case-study.md)
 
 ---
 
