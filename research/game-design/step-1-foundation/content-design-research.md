@@ -1021,10 +1021,10 @@ Based on BlueMarble's design documents, content design will be essential for:
 
 BlueMarble's content design should build on existing research:
 
-- **[Historic Jobs Research](historic-jobs-medieval-to-1750-research.md)**: Source material for profession quests
-- **[Skill System Research](skill-knowledge-system-research.md)**: Integration of quests with progression
-- **[Material System Research](life-is-feudal-material-system-analysis.md)**: Quests teaching material quality
-- **[Development Process Analysis](../literature/game-development-resources-analysis.md)**: Agile content production
+- **[Historic Jobs Research](../step-2-system-research/step-2.4-historical-research/historic-jobs-medieval-to-1750-research.md)**: Source material for profession quests
+- **[Skill System Research](../README.md#skill-and-knowledge-system-research)**: Integration of quests with progression
+- **[Material System Research](../README.md#life-is-feudal-material-system-analysis)**: Quests teaching material quality
+- **[Development Process Analysis](../../literature/game-development-resources-analysis.md)**: Agile content production
 
 ---
 
@@ -1200,16 +1200,16 @@ Analyze these games for content design:
 ### Related BlueMarble Research
 
 - **[Game Design Sources](game-sources.md)**: Foundational game design reading
-- **[Historic Jobs Medieval to 1750](historic-jobs-medieval-to-1750-research.md)**: Source material for profession quests
-- **[Skill and Knowledge System Research](skill-knowledge-system-research.md)**: Integration with progression
-- **[Life is Feudal Material System](life-is-feudal-material-system-analysis.md)**: Content teaching material mechanics
-- **[Game Development Resources Analysis](../literature/game-development-resources-analysis.md)**: Development process context
+- **[Historic Jobs Medieval to 1750](../step-2-system-research/step-2.4-historical-research/historic-jobs-medieval-to-1750-research.md)**: Source material for profession quests
+- **[Skill and Knowledge System Research](../README.md#skill-and-knowledge-system-research)**: Integration with progression
+- **[Life is Feudal Material System](../README.md#life-is-feudal-material-system-analysis)**: Content teaching material mechanics
+- **[Game Development Resources Analysis](../../literature/game-development-resources-analysis.md)**: Development process context
 
 ### Related BlueMarble Design Documents
 
-- **[Island Start Game Design](../../design/island_start_game_design.md)**: Core game mechanics to support with content
-- **[Design Index](../../design/index.md)**: Overall design vision
-- **[Contributing Guide](../../CONTRIBUTING.md)**: Documentation standards
+- **[Island Start Game Design](../../../design/island_start_game_design.md)**: Core game mechanics to support with content
+- **[Design Index](../../../design/index.md)**: Overall design vision
+- **[Contributing Guide](../../../CONTRIBUTING.md)**: Documentation standards
 
 ---
 
