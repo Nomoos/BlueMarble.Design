@@ -436,6 +436,56 @@ profession systems and economic simulation.
 - Aligns with existing skill research for seamless integration
 - Supports social structure and economic interdependence gameplay
 
+### [Slavery and Labor Systems Research](step-2-system-research/step-2.4-historical-research/slavery-and-labor-systems-research.md)
+Comprehensive research document examining slavery, slave trades, and forced labor systems from historical, economic, and game design perspectives. Provides educational context while informing ethical game design decisions for BlueMarble's economic and social simulation systems.
+
+**Key Topics**:
+- Historical slavery systems across civilizations (Ancient, Medieval, Islamic, East Asian)
+- Slave trade networks (Trans-Atlantic, Trans-Saharan, Indian Ocean)
+- Alternative labor systems (indentured servitude, serfdom, debt peonage, guild apprenticeship)
+- Slavery representation in video games (Civilization, Paradox games, RPGs)
+- Ethical game design considerations and industry guidelines
+- Implementation recommendations for BlueMarble using alternative labor systems
+
+**Historical Coverage**:
+- Ancient World (Mesopotamia, Egypt, Greece, Rome)
+- Medieval European systems (serfdom vs. slavery, thrall systems)
+- Islamic world systems (Mamluk military slavery, domestic slavery)
+- East Asian systems (Chinese and Japanese historical labor)
+- Slave trade economics and mechanics across 1,300+ years
+- Economic analysis and justifications (historical and modern critiques)
+
+**Game Design Analysis**:
+- Successful approaches (Freedom Cry, This War of Mine)
+- Problematic representations to avoid
+- Player agency and moral choice systems
+- Historical accuracy vs. ethical gameplay balance
+- Content warnings and age appropriateness
+- Developer responsibility and consultation processes
+
+**Recommended Approach for BlueMarble**:
+- Indentured servitude system with time-limited contracts
+- Guild apprenticeship as skill-training mechanism
+- Serfdom/feudal obligations for NPCs (not players)
+- Contract labor and debt systems with protections
+- Liberation and reform gameplay opportunities
+- Historical education through in-game documentation
+
+**Implementation Guidelines**:
+- What to avoid (ownership of people, exploitation optimization, racialized systems)
+- Positive elements to include (liberation, economic justice, social mobility)
+- Integration with existing skill, guild, and economic systems
+- Four-phase implementation plan (12 months)
+- Ethical review and testing procedures
+
+**Applicability to BlueMarble**:
+- Informs labor system design with historical authenticity and ethical responsibility
+- Provides alternatives to direct slavery representation
+- Supports guild and apprenticeship system implementation
+- Enables complex economic gameplay without exploitation mechanics
+- Integrates with existing profession and skill research
+- Supports player-driven narratives about social justice and reform
+
 ### [Mortal Online 2 Material System Analysis](mortal-online-2-material-system-research.md)
 Comprehensive analysis of Mortal Online 2's material grading and crafting systems for BlueMarble's material quality mechanics.
 
