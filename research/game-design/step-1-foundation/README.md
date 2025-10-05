@@ -10,6 +10,7 @@ This step establishes the foundational concepts for BlueMarble's game design, in
 2. **Core Mechanics** - Game systems inspired by economic simulations
 3. **Design Philosophy** - Player freedom through intelligent constraints
 4. **Research Sources** - Curated game design theory and practice
+5. **Design Process** - From inspiration to design documentation
 
 ## Research Content
 
@@ -17,6 +18,9 @@ This step establishes the foundational concepts for BlueMarble's game design, in
 - [Mechanics Research](mechanics-research.md) - Game systems inspired by Port Royale 1 and The Guild 1400
 - [Player Freedom Analysis](player-freedom-analysis.md) - Framework for maximizing player agency through geological reality
 - [Game Design Sources](game-sources.md) - Curated collection of game design, research, theory, and gamification sources
+- [From Inspiration to Design Document](from-inspiration-to-design-document.md) - Comprehensive guide on the game design process from initial ideas to formal documentation
+- [Narrative Inspiration: Sci-Fi Mining World](narrative-inspiration-sci-fi-mining-world.md) - Science fiction setting without magic featuring multi-species mining colony, superior race oversight, cloning, and controlled reproduction
+- [Research Sources: Sci-Fi Mining World](sci-fi-mining-sources.md) - Online sources, literature, and references for sci-fi mining world narrative concept
 
 ## Key Concepts
 
