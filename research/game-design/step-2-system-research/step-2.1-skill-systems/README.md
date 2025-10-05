@@ -16,6 +16,7 @@ Comprehensive research on skill progression systems from leading MMORPGs, focusi
 - [Skill Caps and Decay Research](skill-caps-and-decay-research.md) - Specialization through skill limits and maintenance
 - [Skill Relationships and Compatibility Research](skill-relationships-compatibility-research.md) - Parent-child skill bonuses and synergies
 - [Skill System Child Research Issues](skill-system-child-research-issues.md) - Implementation considerations
+- [Cursor Precision vs. Action Queueing Research](cursor-precision-vs-action-queueing-research.md) - UI/UX interaction paradigms and planning efficiency
 
 ### Game-Specific Analysis
 - [Eco Skill System Research](eco-skill-system-research.md) - Collaborative specialization and forced interdependence
