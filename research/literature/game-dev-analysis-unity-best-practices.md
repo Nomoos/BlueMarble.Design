@@ -681,8 +681,8 @@ public class BlueMarblePhysics {
     }
     
     public void OptimizePhysicsSettings() {
-        // Reduce fixed timestep for less frequent physics updates
-        Time.fixedDeltaTime = 0.02f; // 50 Hz instead of 50 Hz
+        // Keep default fixed timestep for physics updates
+        Time.fixedDeltaTime = 0.02f; // 50 Hz (Unity default)
         
         // Adjust solver iterations based on needs
         Physics.defaultSolverIterations = 6; // Default is 6
