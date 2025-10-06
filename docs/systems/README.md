@@ -37,6 +37,8 @@ guidelines for BlueMarble.
 - **[Marketplace API](api-marketplace.md)** - Player trading marketplace API specification
 - **[Marketplace Developer Guide](marketplace-developer-guide.md)** - Integration guide for marketplace systems
 - **[Gameplay Systems](gameplay-systems.md)** - Core game mechanics and systems
+- **[Player Protection System QA Test Plan](qa-test-plan-player-protection.md)** - Comprehensive testing
+  strategy for player protection features
 - Physics and collision systems
 - AI and NPC behavior systems
 - Networking and multiplayer architecture
