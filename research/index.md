@@ -11,6 +11,15 @@ and typically 200-400 lines.
 
 ### Available Topics
 
+- **[ADR-001: Coordinate Data Type Selection](topics/adr-001-coordinate-data-type-selection.md)** - 
+  Architectural Decision Record proposing Fixed-Point 64-bit (40/24) for world coordinates with hybrid Float strategy. 
+  Documents decision rationale, consequences, implementation timeline, and review criteria
+
+- [Coordinate Data Type Optimization](topics/coordinate-data-type-optimization.md) - 
+  Comprehensive analysis of float, double, and fixed-point data types for storing world dimensions and height up to 
+  20,000 km. Includes precision calculations, performance benchmarks, memory implications, and recommendations for 
+  BlueMarble engine implementation with hybrid storage strategy
+
 - [Game Design Roles and Types](topics/game-design-roles-and-types.md) - 
   Comprehensive overview of game design specializations (Systems, Combat, Economy, Level, Narrative, UX, Progression, 
   Meta-Game designers), their responsibilities, tools, and methodological approaches for modern game development

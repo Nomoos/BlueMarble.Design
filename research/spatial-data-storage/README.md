@@ -19,6 +19,8 @@ Each step contains detailed research documents and can be explored independently
 ### Core Research Documents
 - **[Current Implementation Analysis](current-implementation.md)** - Analysis of BlueMarble's existing spatial data architecture
 - **[Comparison Analysis](comparison-analysis.md)** - Detailed comparison of spatial storage approaches
+- **[Coordinate Data Type Optimization](../topics/coordinate-data-type-optimization.md)** - **NEW**: Analysis of float/double/fixed-point for 20,000 km world scale with precision, performance, and scalability implications
+- **[ADR-001: Coordinate Data Type Selection](../topics/adr-001-coordinate-data-type-selection.md)** - **NEW**: Architectural Decision Record proposing Fixed-Point 64-bit (40/24) for world coordinates
 - **[Octree Optimization Guide](octree-optimization-guide.md)** - Advanced octree optimization strategies
 - **[Hybrid Array + Octree Storage Strategy](hybrid-array-octree-storage-strategy.md)** - **NEW**: Comprehensive strategy for using flat chunked arrays as primary storage with octree/R-tree as secondary acceleration indices. Addresses sparse updates, asynchronous rebuild, and optimal query performance.
 - **[Octree + Vector Boundary Integration](octree-vector-boundary-integration.md)** - **COMPLETED**: Comprehensive research on hybrid octree/vector systems for precise features
