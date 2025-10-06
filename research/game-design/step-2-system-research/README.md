@@ -11,6 +11,7 @@ This step contains comprehensive research on game systems from leading MMORPGs a
 3. **[Step 2.3: Crafting Systems](step-2.3-crafting-systems/)** - Advanced crafting mechanics and workflow design
 4. **[Step 2.4: Historical Research](step-2.4-historical-research/)** - Authentic historical professions and guild systems
 5. **[Step 2.5: Quest and Contract Systems](step-2.5-quest-systems/)** - Player-created content, repeatable quests vs one-time contracts
+6. **[Step 2.6: Weather and Climate Systems](step-2.6-weather-climate-systems/)** - Weather modeling, seasonal cycles, and climate change mechanics
 
 Each sub-step contains detailed analysis of multiple reference games and actionable recommendations for BlueMarble integration.
 
@@ -65,6 +66,12 @@ Each sub-step contains detailed analysis of multiple reference games and actiona
 - Repeatable vs one-time contract patterns
 - Economic implications of quest types
 - Supply chain and market integration
+
+### Weather and Climate Systems
+- Realistic weather simulation and seasonal cycles
+- Climate change mechanics and player impact
+- Integration with mining, construction, and economy
+- Ecosystem connections and hydrological cycles
 
 ## Related Steps
 
