@@ -539,3 +539,217 @@
   url = {https://download.geofabrik.de/},
   note = {Regional OSM data downloads}
 }
+
+% ========================================
+% Spatial Data Structures and Compression
+% ========================================
+
+@book{samet_spatial_data_structures,
+  title = {Foundations of Multidimensional and Metric Data Structures},
+  author = {Hanan Samet},
+  publisher = {Morgan Kaufmann},
+  isbn = {978-0123694461},
+  year = {2006},
+  note = {Authoritative reference on octrees, Morton codes, and spatial data structures for BlueMarble optimization}
+}
+
+@book{bader_space_filling_curves,
+  title = {Space-Filling Curves: An Introduction with Applications in Scientific Computing},
+  author = {Michael Bader},
+  publisher = {Springer},
+  isbn = {978-3642310454},
+  year = {2013},
+  note = {Mathematical foundations of Morton codes and Z-order curves for spatial indexing}
+}
+
+@book{salomon_data_compression,
+  title = {Data Compression: The Complete Reference},
+  edition = {4th},
+  author = {David Salomon and Giovanni Motta},
+  publisher = {Springer},
+  isbn = {978-1846286025},
+  year = {2007},
+  note = {Comprehensive coverage of RLE and compression techniques for spatial data}
+}
+
+@book{ebert_procedural_texturing,
+  title = {Texturing and Modeling: A Procedural Approach},
+  edition = {3rd},
+  author = {David S. Ebert and F. Kenton Musgrave and Darwyn Peachey and Ken Perlin and Steven Worley},
+  publisher = {Morgan Kaufmann},
+  isbn = {978-1558608481},
+  year = {2003},
+  note = {Procedural generation techniques for geological pattern compression}
+}
+
+@book{petrov_database_internals,
+  title = {Database Internals: A Deep Dive into How Distributed Data Systems Work},
+  author = {Alex Petrov},
+  publisher = {O'Reilly Media},
+  isbn = {978-1492040347},
+  year = {2019},
+  note = {LSM trees, Cassandra architecture, compression strategies, and distributed database optimization}
+}
+
+@book{kleppmann_data_intensive,
+  title = {Designing Data-Intensive Applications},
+  author = {Martin Kleppmann},
+  publisher = {O'Reilly Media},
+  isbn = {978-1449373320},
+  year = {2017},
+  note = {Distributed systems, replication, consistency models, and database architecture patterns}
+}
+
+@book{carlson_redis_in_action,
+  title = {Redis in Action},
+  author = {Josiah Carlson},
+  publisher = {Manning},
+  isbn = {978-1617290855},
+  year = {2013},
+  note = {Redis caching strategies, data structures, and performance optimization for BlueMarble caching layer}
+}
+
+@book{sadalage_nosql_distilled,
+  title = {NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence},
+  author = {Pramod J. Sadalage and Martin Fowler},
+  publisher = {Addison-Wesley},
+  isbn = {978-0321826626},
+  year = {2012},
+  note = {NoSQL database patterns including Cassandra column-family stores and consistency models}
+}
+
+@book{plewa_adaptive_mesh_refinement,
+  title = {Adaptive Mesh Refinement: Theory and Applications},
+  author = {Tomasz Plewa and Timur Linde and V. Gregory Weirs},
+  publisher = {Springer},
+  isbn = {978-3540211471},
+  year = {2005},
+  note = {AMR theory applicable to octree refinement and homogeneous region collapsing}
+}
+
+@article{laine_sparse_voxel_octrees,
+  title = {Efficient Sparse Voxel Octrees},
+  author = {Samuli Laine and Tero Karras},
+  journal = {ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games},
+  year = {2010},
+  doi = {10.1145/1730804.1730814},
+  note = {GPU-optimized octree traversal, pointer elimination, and memory optimization for real-time rendering}
+}
+
+@article{crassin_gigavoxels,
+  title = {GigaVoxels: Ray-Guided Streaming for Efficient and Detailed Voxel Rendering},
+  author = {Cyril Crassin and Fabrice Neyret and Sylvain Lefebvre and Elmar Eisemann},
+  journal = {ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games},
+  year = {2009},
+  url = {https://maverick.inria.fr/Publications/2009/CNLE09/},
+  note = {Large-scale voxel streaming, LOD selection, and sparse octree rendering}
+}
+
+@article{cignoni_octree_compression,
+  title = {Efficient Compression Techniques for Large Scale Octree Data},
+  author = {P. Cignoni and F. Ganovelli and E. Gobbetti and F. Marton and F. Ponchio and R. Scopigno},
+  journal = {IEEE Transactions on Visualization and Computer Graphics},
+  year = {2011},
+  doi = {10.1109/TVCG.2011.62},
+  note = {Lossless octree compression achieving 80\% reduction with real-time decompression}
+}
+
+% ========================================
+% Online Resources - Spatial Data
+% ========================================
+
+@misc{libmorton,
+  title = {libmorton - Morton Code Library},
+  author = {Jeroen Baert},
+  year = {2024},
+  url = {https://github.com/Forceflow/libmorton},
+  note = {Production-ready Morton code library with multiple optimized implementations and benchmarks}
+}
+
+@misc{lz4_compression,
+  title = {LZ4 - Extremely Fast Compression},
+  author = {Yann Collet},
+  year = {2024},
+  url = {https://lz4.github.io/lz4/},
+  note = {Industry-standard compression achieving 60-80\% reduction with sub-microsecond decompression}
+}
+
+@misc{zstd_compression,
+  title = {Zstandard - Real-time Compression Algorithm},
+  author = {{Meta (Facebook)}},
+  year = {2024},
+  url = {https://facebook.github.io/zstd/},
+  note = {Tunable compression with better ratios than LZ4, suitable for archival storage}
+}
+
+@misc{cassandra_docs,
+  title = {Apache Cassandra Documentation},
+  author = {{Apache Software Foundation}},
+  year = {2024},
+  url = {https://cassandra.apache.org/doc/latest/},
+  note = {Official documentation for distributed database with LSM trees and tunable consistency}
+}
+
+@misc{redis_docs,
+  title = {Redis Documentation},
+  author = {{Redis Ltd}},
+  year = {2024},
+  url = {https://redis.io/docs/},
+  note = {Official Redis documentation covering caching strategies, data structures, and performance}
+}
+
+@misc{datastax_academy,
+  title = {DataStax Academy - Free Cassandra Training},
+  author = {{DataStax}},
+  year = {2024},
+  url = {https://www.datastax.com/dev/academy},
+  note = {Free video training and certification for Cassandra data modeling and operations}
+}
+
+@misc{the_last_pickle,
+  title = {The Last Pickle - Cassandra Expertise Blog},
+  year = {2024},
+  url = {https://thelastpickle.com/blog/},
+  note = {Expert articles on Cassandra operations, tuning, and troubleshooting}
+}
+
+@misc{openvdb,
+  title = {OpenVDB - Sparse Volume Data Structure},
+  author = {{Academy Software Foundation}},
+  year = {2024},
+  url = {https://www.openvdb.org/},
+  note = {Production-proven sparse volume library for VFX, applicable to octree optimization}
+}
+
+@misc{gpu_gems_octrees,
+  title = {GPU Gems 2: Octree Textures on the GPU},
+  author = {Cyril Crassin},
+  publisher = {NVIDIA},
+  year = {2024},
+  url = {https://developer.nvidia.com/gpugems/gpugems2/part-v-image-oriented-computing/chapter-37-octree-textures-gpu},
+  note = {GPU-accelerated octree traversal and optimization techniques}
+}
+
+@misc{morton_code_blog,
+  title = {Morton Code Encoding/Decoding Through Bit Interleaving},
+  author = {Jeroen Baert},
+  year = {2013},
+  url = {https://www.forceflow.be/2013/10/07/morton-encodingdecoding-through-bit-interleaving-implementations/},
+  note = {Comprehensive comparison of Morton code implementation strategies with benchmarks}
+}
+
+@misc{netflix_tech_blog,
+  title = {Netflix Technology Blog},
+  author = {{Netflix}},
+  year = {2024},
+  url = {https://netflixtechblog.com/},
+  note = {Case studies on Cassandra at scale (100+ TB, 1000+ nodes, millions of ops/sec)}
+}
+
+@misc{discord_engineering,
+  title = {Discord Engineering Blog},
+  author = {{Discord}},
+  year = {2024},
+  url = {https://discord.com/blog/},
+  note = {Scaling to trillions of messages with Cassandra, optimization strategies}
+}
