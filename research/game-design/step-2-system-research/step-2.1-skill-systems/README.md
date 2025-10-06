@@ -11,10 +11,14 @@ Comprehensive research on skill progression systems from leading MMORPGs, focusi
 - [Realistic Basic Skills Research](realistic-basic-skills-research.md) - Fifteen core skills with 1024-level progression system
 - [Assembly Skills System Research](assembly-skills-system-research.md) - Gathering and crafting skill integration
 - [Player Stats and Attribute Systems Research](player-stats-attribute-systems-research.md) - Character attribute frameworks
+- [Character Needs and Security Systems Research](character-needs-security-systems-research.md) - Hunger/thirst/fatigue, routine interruption, player guard hiring, and anti-exploitation systems
 
 ### Advanced Mechanics
 - [Skill Caps and Decay Research](skill-caps-and-decay-research.md) - Specialization through skill limits and maintenance
 - [Skill Relationships and Compatibility Research](skill-relationships-compatibility-research.md) - Parent-child skill bonuses and synergies
+- [Death Mechanics and Inventory Systems Research](death-mechanics-and-inventory-systems-research.md) - Death penalties and item persistence
+- [Quest-Based Mentorship Research](quest-based-mentorship-research.md) - Player teaching and knowledge transfer
+- [Gender Preferences and Aiming Mechanics Research](gender-preferences-aiming-mechanics-research.md) - Character customization and combat systems
 - [Skill System Child Research Issues](skill-system-child-research-issues.md) - Implementation considerations
 
 ### Game-Specific Analysis
