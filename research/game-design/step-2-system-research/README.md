@@ -10,6 +10,7 @@ This step contains comprehensive research on game systems from leading MMORPGs a
 2. **[Step 2.2: Material Systems](step-2.2-material-systems/)** - Material quality, geological integration, and property systems
 3. **[Step 2.3: Crafting Systems](step-2.3-crafting-systems/)** - Advanced crafting mechanics and workflow design
 4. **[Step 2.4: Historical Research](step-2.4-historical-research/)** - Authentic historical professions and guild systems
+5. **[Step 2.5: Economy Systems](step-2.5-economy-systems/)** - Player-driven markets, quest contracts, and trading mechanisms
 
 Each sub-step contains detailed analysis of multiple reference games and actionable recommendations for BlueMarble integration.
 
@@ -30,6 +31,8 @@ Each sub-step contains detailed analysis of multiple reference games and actiona
 - Vintage Story (knowledge discovery)
 - Eco Global Survival (collaborative specialization)
 - Port Royale 1 & The Guild 1400 (economic simulation)
+- Old School RuneScape (Grand Exchange market system)
+- EVE Online (contract systems)
 
 ## Key Research Themes
 
@@ -56,6 +59,12 @@ Each sub-step contains detailed analysis of multiple reference games and actiona
 - Apprenticeship progression systems
 - Economic interdependence
 - Realistic specialization pathways
+
+### Economy Systems
+- Quest-based contracts vs. centralized markets
+- Player-driven trading mechanisms
+- Economic specialization and arbitrage
+- Dual-system economy design
 
 ## Related Steps
 
