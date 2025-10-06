@@ -11,6 +11,14 @@ and typically 200-400 lines.
 
 ### Available Topics
 
+- **[AI Issue Template Research](topics/ai-issue-template-research.md)** - 
+  AI-enhanced issue template system with automated research suggestions, intelligent categorization using NLP/ML, 
+  and context analysis for improved issue quality and developer productivity
+
+- **[Multi-Resolution Blending for Geological Processes](topics/multi-resolution-blending-geological-processes.md)** - 
+  Scale-dependent geological process simulation, hierarchical data structures (octrees), advanced blending algorithms 
+  (Gaussian, mass-conserving), and real-time performance optimization for planetary-scale geology
+
 - [Game Design Roles and Types](topics/game-design-roles-and-types.md) - 
   Comprehensive overview of game design specializations (Systems, Combat, Economy, Level, Narrative, UX, Progression, 
   Meta-Game designers), their responsibilities, tools, and methodological approaches for modern game development
@@ -102,6 +110,10 @@ Bibliography, reading lists, and raw notes from external sources.
 - [From Inspiration to Design Document](game-design/step-1-foundation/from-inspiration-to-design-document.md) - 
   Comprehensive guide on the game design process from inspiration to formal documentation, covering concept development,
   building game building blocks, and creating effective design documents
+- **[Comprehensive Game Mechanics Implementation](game-design/comprehensive-game-mechanics-implementation.md)** - 
+  In-depth research and implementation guide for core game mechanics (mining, building, terrain modification) with 
+  inspiration from Port Royale 1 and The Guild 1400, including real-world engineering principles, economic integration, 
+  and phased implementation roadmap
 - [Narrative Inspiration: Sci-Fi Mining World](game-design/step-1-foundation/narrative-inspiration-sci-fi-mining-world.md) - 
   Science fiction narrative framework without magic, featuring multi-species mining colony, clone generation, controlled
   reproduction, and resource extraction under superior race oversight

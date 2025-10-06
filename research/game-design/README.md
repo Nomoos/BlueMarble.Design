@@ -98,7 +98,7 @@ requirements.
 - Performance targets for real-time geological interaction
 - Octree spatial indexing with adaptive compression strategies
 
-### [Mechanics Research](mechanics-research.md)
+### [Mechanics Research](step-1-foundation/mechanics-research.md)
 Analysis of game systems inspired by Port Royale 1 and The Guild 1400, adapted for geological context.
 
 **Key Topics**:
@@ -107,6 +107,21 @@ Analysis of game systems inspired by Port Royale 1 and The Guild 1400, adapted f
 - Multi-generational dynasty management with geological specializations
 - Professional guilds providing gameplay bonuses and knowledge sharing
 - Political influence through actual economic and infrastructure control
+
+### [Comprehensive Game Mechanics Implementation](comprehensive-game-mechanics-implementation.md)
+In-depth research and implementation guide for BlueMarble's core game mechanics: mining, building, and terrain modification.
+
+**Key Topics**:
+- Mining mechanics with Dwarf Fortress, Minecraft, and Port Royale 1 insights
+- Building systems with The Guild 1400 inspiration and geological constraints
+- Terrain modification mechanics from academic geotechnical engineering
+- Real-time extraction systems with geological validation
+- Construction process with multi-phase implementation
+- Large-scale terraforming with multi-player coordination
+- Performance optimization using delta overlays and spatial partitioning
+- Economic integration connecting mining, building, and markets
+- Implementation roadmap with phased development (16-20 weeks)
+- Academic and industry sources including rock mechanics, construction management
 
 ### [Skill and Knowledge System Research](skill-knowledge-system-research.md)
 Comprehensive analysis of skill and knowledge progression systems in MMORPGs with recommendations for BlueMarble.
