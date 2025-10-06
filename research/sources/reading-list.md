@@ -3,7 +3,7 @@
 Curated reading list for BlueMarble research and development.
 
 **Last Updated:** 2025-01-17  
-**Total Sources:** 78 (60 books + 13 survival collections + 5 online resources)  
+**Total Sources:** 79 (60 books + 13 survival collections + 6 online resources)  
 **Completed Analysis:** 12 sources  
 **Status:** Active - Tracking all research literature sources
 
@@ -153,6 +153,7 @@ Curated reading list for BlueMarble research and development.
 - [ ] **"1500 Archers on a 28.8"** - Age of Empires networking GDC talk
 - [ ] **Tribes Networking Model** - Mark Frohnmayer's pioneering FPS networking
 - [ ] **Quake 3 Source Code** - Reference implementation (https://github.com/id-Software/Quake-III-Arena)
+- [ ] **Palacký University Olomouc - Geoinformatics Publications** - Academic research in geoinformatics, GIS, cartography, geodesy (https://www.geoinformatics.upol.cz/veda-vyzkum/publikace/)
 
 ### Communities and Forums
 

@@ -19,7 +19,7 @@ This directory contains bibliography, reading lists, and source documentation fo
   - Next steps and priorities
   
 - **sources.bib**: Complete bibliography in BibTeX format
-  - 43 BibTeX entries covering all major sources
+  - 44 BibTeX entries covering all major sources
   - Categorized by topic (game programming, design theory, multiplayer, performance optimization, etc.)
   - Includes survival knowledge collections and C# vs C++ performance books
   - Online resources and open source projects
