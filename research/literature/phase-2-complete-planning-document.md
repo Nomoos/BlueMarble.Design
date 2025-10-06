@@ -9,11 +9,11 @@ phase: 2-planning
 ---
 
 **Document Type:** Phase 2 Planning Document  
-**Version:** 1.0  
+**Version:** 2.0  
 **Total Discovered Sources:** 52  
-**Distribution Groups:** 40  
+**Distribution Groups:** 5  
 **Total Estimated Effort:** 200-280 hours  
-**Timeline:** 8 weeks
+**Timeline:** 8-10 weeks
 
 ---
 
@@ -23,10 +23,10 @@ This document contains the complete Phase 2 research planning, including source 
 
 **Phase 2 Overview:**
 - **52 discovered sources** identified during Phase 1 research
-- **40 parallel assignment groups** for maximum efficiency
+- **5 parallel assignment groups** for focused, deep research
 - **200-280 hours** total research effort
-- **8-week timeline** for completion
-- **Balanced workload** of 4-12 hours per group
+- **8-10 week timeline** for completion
+- **Balanced workload** of 40-56 hours per group (~10-11 sources each)
 
 **Priority Distribution:**
 - Critical: 5 sources (10%)
@@ -387,187 +387,238 @@ Total discovered sources aggregated from all 40 Phase 1 groups:
 
 ---
 
-## Step 3: Distribution Across 40 Groups (COMPLETE ✅)
+## Step 3: Distribution Across 5 Groups (COMPLETE ✅)
 
 ### Distribution Strategy
 
-**Goals:**
-- Balance workload (4-12 hours per group)
-- Maintain parallel execution capability
-- Group related sources together
-- Prioritize critical/high sources first
-- Reserve low-priority for final groups
+**Approach:**
+- **5 focused groups** instead of 40 parallel groups
+- **Deep research** on ~10-11 sources per group
+- **Category-based distribution** to maintain coherence
+- **Sequential processing** within each group using 4-source batches
+- **40-56 hours per group** (manageable for dedicated research)
+
+**Assignment Instructions for Each Group:**
+```
+Next pick max 4 sources original from the assignment group or discovered during processing your assignment group and process them one by one, always save new sources from source for later process, after that write summary and wait for comment next to process next source, if there is non write completed and summary into comments
+```
 
 **Workload Targets:**
-- Groups 1-15: 8-12 hours (Critical + High priority)
-- Groups 16-38: 4-10 hours (High + Medium priority)
-- Groups 39-40: 4-6 hours (Low priority wrap-up)
+- Group 01: Critical GameDev-Tech (11 sources, 67-89h)
+- Group 02: High GameDev-Tech (11 sources, 80-105h)
+- Group 03: High GameDev-Design (10 sources, 55-74h)
+- Group 04: Medium Priority Mix (10 sources, 50-69h)
+- Group 05: Survival + Low Priority (10 sources, 42-61h)
 
-### Complete 40-Group Distribution Plan
+### Complete 5-Group Distribution Plan
 
-#### Critical Priority Groups (1-5)
+#### Group 01: Critical GameDev-Tech (11 sources - 67-89 hours)
 
-**Group 01: EVE Scaling + Redis**
-- EVE Online 10K Battle (8-10h)
-- Redis for Game State (6-8h)
-- **Total:** 14-18h (Critical)
+**Priority:** Critical/High  
+**Category:** GameDev-Tech  
+**Estimated Effort:** 67-89 hours (8-12 weeks with 4-source batches)
 
-**Group 02: GPU Noise + Horizon**
-- GPU-Based Noise Generation (6-8h)
-- Horizon Zero Dawn (7-9h)
-- **Total:** 13-17h (Critical + High)
+**Assignment Instructions:**
+```
+Next pick max 4 sources original from the assignment group or discovered during processing your assignment group and process them one by one, always save new sources from source for later process, after that write summary and wait for comment next to process next source, if there is non write completed and summary into comments
+```
 
-**Group 03: Perlin/Simplex + Marching Cubes**
-- Advanced Perlin/Simplex (5-7h)
-- Marching Cubes (6-8h)
-- **Total:** 11-15h (Critical + High)
+**Sources:**
+1. EVE Online 10K Player Battle Architecture (Critical, 8-10h)
+2. Redis for Game State Management (Critical, 6-8h)
+3. GPU-Based Noise Generation (Critical, 6-8h)
+4. Advanced Perlin and Simplex Noise (Critical, 5-7h)
+5. Marching Cubes Algorithm (High, 6-8h)
+6. Horizon Zero Dawn: World Building (High, 7-9h)
+7. Cities Skylines: Traffic Simulation (High, 6-8h)
+8. Godot Engine Architecture (High, 8-10h)
+9. C# Performance Optimization (High, 5-7h)
+10. Advanced Data Structures (High, 6-8h)
+11. WebSocket vs. UDP Communication (Medium, 4-6h)
 
-**Group 04: Cities Skylines + EVE Economics**
-- Cities Skylines Traffic (6-8h)
-- EVE Economic Reports (2-3h)
-- **Total:** 8-11h (High + Critical)
+**Total:** 67-89 hours  
+**Batch Processing:** 
+- Batch 1 (sources 1-4): 25-33h
+- Batch 2 (sources 5-8): 27-35h  
+- Batch 3 (sources 9-11): 15-21h
 
-**Group 05: Godot Engine**
-- Godot Engine Architecture (8-10h)
-- **Total:** 8-10h (High)
+**Rationale:** Core technical foundation for MMORPG development. EVE scaling, state management, and procedural generation are critical for the game's technical architecture.
 
-#### High Priority Groups (6-15)
+---
 
-**Group 06: C# Optimization + Data Structures**
-- C# Performance Optimization (5-7h)
-- Advanced Data Structures (6-8h)
-- **Total:** 11-15h (High)
+#### Group 02: High GameDev-Tech (11 sources - 80-105 hours)
 
-**Group 07: Procedural Generation Book**
-- Procedural Generation in Game Design (8-12h)
-- **Total:** 8-12h (High)
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Estimated Effort:** 80-105 hours (10-14 weeks with 4-source batches)
 
-**Group 08: Online Games Insider's Guide**
-- Developing Online Games (10-12h)
-- **Total:** 10-12h (High)
+**Assignment Instructions:**
+```
+Next pick max 4 sources original from the assignment group or discovered during processing your assignment group and process them one by one, always save new sources from source for later process, after that write summary and wait for comment next to process next source, if there is non write completed and summary into comments
+```
 
-**Group 09: MMORPG Economics + Bartle**
-- GDC MMORPG Economics (8-10h)
-- **Total:** 8-10h (High)
+**Sources:**
+1. Procedural Generation in Game Design (Book) (High, 8-12h)
+2. Developing Online Games: Insider's Guide (High, 10-12h)
+3. Microservices for Game Backends (Medium, 7-9h)
+4. Kubernetes for Game Servers (Medium, 6-8h)
+5. Distributed Database Systems Papers (Medium, 12-15h)
+6. Cloud Architecture Patterns (Medium, 8-10h)
+7. Player Matchmaking Algorithms (Medium, 5-7h)
+8. Anti-Cheat Systems (Medium, 6-8h)
+9. Shader Programming for Terrain (Medium, 7-9h)
+10. Procedural Audio Generation (Medium, 5-7h)
+11. Real-Time VFX Systems (Medium, 6-8h)
 
-**Group 10: Designing Virtual Worlds**
-- Designing Virtual Worlds (Bartle) (8-10h)
-- **Total:** 8-10h (High)
+**Total:** 80-105 hours  
+**Batch Processing:**
+- Batch 1 (sources 1-4): 31-41h
+- Batch 2 (sources 5-8): 31-40h
+- Batch 3 (sources 9-11): 18-24h
 
-**Group 11: Level Up! Game Design**
-- Level Up! The Guide to Great Video Game Design (8-10h)
-- **Total:** 8-10h (High)
+**Rationale:** Advanced technical systems and infrastructure. Backend architecture, procedural content, and rendering systems essential for scalability and quality.
 
-**Group 12: Retention + Community**
-- Player Retention Psychology (5-7h)
-- Community Management (6-8h)
-- **Total:** 11-15h (High)
+---
 
-**Group 13: Monetization + Tutorial**
-- Monetization Without Pay-to-Win (4-6h)
-- Tutorial Design and Onboarding (5-7h)
-- **Total:** 9-13h (High)
+#### Group 03: High GameDev-Design (10 sources - 55-74 hours)
 
-**Group 14: Guild + Faction Systems**
-- Guild System Design (4-6h)
-- Faction and Conflict Systems (5-7h)
-- **Total:** 9-13h (High)
+**Priority:** High/Critical  
+**Category:** GameDev-Design  
+**Estimated Effort:** 55-74 hours (8-11 weeks with 4-source batches)
 
-**Group 15: Quest Generation + Loot**
-- Quest Generation Systems (6-8h)
-- Loot Tables and Drop Rates (4-6h)
-- **Total:** 10-14h (High + Medium)
+**Assignment Instructions:**
+```
+Next pick max 4 sources original from the assignment group or discovered during processing your assignment group and process them one by one, always save new sources from source for later process, after that write summary and wait for comment next to process next source, if there is non write completed and summary into comments
+```
 
-#### Medium Priority Groups (16-38)
+**Sources:**
+1. EVE Online Economic Reports (Critical, 2-3h)
+2. GDC Talks on MMORPG Economics (High, 8-10h)
+3. Designing Virtual Worlds (Bartle) (High, 8-10h)
+4. Level Up! The Guide to Great Video Game Design (High, 8-10h)
+5. Player Retention Psychology (High, 5-7h)
+6. Community Management Best Practices (High, 6-8h)
+7. Monetization Without Pay-to-Win (High, 4-6h)
+8. Tutorial Design and Onboarding (High, 5-7h)
+9. Guild System Design (High, 4-6h)
+10. Faction and Conflict Systems (High, 5-7h)
 
-**Group 16: Matchmaking + Anti-Cheat**
-- Player Matchmaking (5-7h)
-- Anti-Cheat Systems (6-8h)
-- **Total:** 11-15h (Medium)
+**Total:** 55-74 hours  
+**Batch Processing:**
+- Batch 1 (sources 1-4): 26-33h
+- Batch 2 (sources 5-8): 20-28h
+- Batch 3 (sources 9-10): 9-13h
 
-**Group 17: WebSocket vs UDP**
-- WebSocket vs. UDP (4-6h)
-- **Total:** 4-6h (Medium)
+**Rationale:** Game design fundamentals and player systems. MMO economies, virtual world design, and player retention are crucial for long-term success.
 
-**Group 18: Microservices Architecture**
-- Microservices for Game Backends (7-9h)
-- **Total:** 7-9h (Medium)
+---
 
-**Group 19: Kubernetes Orchestration**
-- Kubernetes for Game Servers (6-8h)
-- **Total:** 6-8h (Medium)
+#### Group 04: Medium Priority Mix (10 sources - 50-69 hours)
 
-**Group 20: Procedural Audio + VFX**
-- Procedural Audio (5-7h)
-- Real-Time VFX (6-8h)
-- **Total:** 11-15h (Medium)
+**Priority:** Medium  
+**Category:** Mixed (Design + Tech + Survival)  
+**Estimated Effort:** 50-69 hours (8-10 weeks with 4-source batches)
 
-**Group 21: Shader Programming**
-- Shader Programming for Terrain (7-9h)
-- **Total:** 7-9h (Medium)
+**Assignment Instructions:**
+```
+Next pick max 4 sources original from the assignment group or discovered during processing your assignment group and process them one by one, always save new sources from source for later process, after that write summary and wait for comment next to process next source, if there is non write completed and summary into comments
+```
 
-**Group 22: Advanced Survival + Weather**
-- Advanced Survival Mechanics (5-7h)
-- Realistic Weather (6-8h)
-- **Total:** 11-15h (Medium)
+**Sources:**
+1. Quest Generation Systems (Medium, 6-8h)
+2. Loot Tables and Drop Rates (Medium, 4-6h)
+3. Social Dynamics in MMORPGs (Medium, 3-4h)
+4. Rules of Play: Game Design Fundamentals (Medium, 6-8h)
+5. Advanced Survival Mechanics (Medium, 5-7h)
+6. Realistic Weather Simulation (Medium, 6-8h)
+7. Agriculture and Farming Systems (Medium, 5-7h)
+8. Crafting System Design (Medium, 4-6h)
+9. NPC AI and Behavior Trees (Medium, 6-8h)
+10. Dynamic Difficulty Adjustment (Medium, 5-7h)
 
-**Group 23: Agriculture + Crafting**
-- Agriculture and Farming (5-7h)
-- Crafting System Design (4-6h)
-- **Total:** 9-13h (Medium)
+**Total:** 50-69 hours  
+**Batch Processing:**
+- Batch 1 (sources 1-4): 19-26h
+- Batch 2 (sources 5-8): 20-28h
+- Batch 3 (sources 9-10): 11-15h
 
-**Group 24: Distributed Databases**
-- Distributed Database Systems (12-15h)
-- **Total:** 12-15h (Medium)
+**Rationale:** Supporting systems and quality enhancements. Quest systems, survival mechanics, and AI behaviors round out the game experience.
 
-**Group 25: Cloud Architecture**
-- Cloud Architecture Patterns (8-10h)
-- **Total:** 8-10h (Medium)
+---
 
-**Group 26: Social Dynamics + Rules of Play**
-- Social Dynamics in MMORPGs (3-4h)
-- Rules of Play (6-8h)
-- **Total:** 9-12h (Medium)
+#### Group 05: Survival + Low Priority (10 sources - 42-61 hours)
 
-**Group 27-38: Reserved for additional discoveries**
-- Groups 27-38 available for sources discovered during Phase 2
-- Or can be used to split larger sources
-- Average target: 6-8 hours per group
+**Priority:** Low/Medium  
+**Category:** Survival + Exploration  
+**Estimated Effort:** 42-61 hours (7-10 weeks with 4-source batches)
 
-#### Low Priority Groups (39-40)
+**Assignment Instructions:**
+```
+Next pick max 4 sources original from the assignment group or discovered during processing your assignment group and process them one by one, always save new sources from source for later process, after that write summary and wait for comment next to process next source, if there is non write completed and summary into comments
+```
 
-**Group 39: Resource Distribution + Day/Night**
-- Resource Distribution (4-6h)
-- Day/Night Cycle (3-5h)
-- **Total:** 7-11h (Low)
+**Sources:**
+1. Resource Distribution Algorithms (Low, 4-6h)
+2. Day/Night Cycle Implementation (Low, 3-5h)
+3. Historical Building Techniques (Low, 4-6h)
+4. Primitive Tools and Technology (Low, 3-5h)
+5. Inventory Management UI/UX (Low, 4-6h)
+6. Navigation and Wayfinding Systems (Medium, 5-7h)
+7. Biome Generation and Ecosystems (Medium, 6-8h)
+8. Wildlife Behavior Simulation (Medium, 5-7h)
+9. Base Building Mechanics (Medium, 6-8h)
+10. Historical Accuracy in Survival Games (Low, 2-3h)
 
-**Group 40: Historical + Primitive + Inventory**
-- Historical Building (4-6h)
-- Primitive Tools (3-5h)
-- Inventory Management (4-6h)
-- **Total:** 11-17h (Low)
+**Total:** 42-61 hours  
+**Batch Processing:**
+- Batch 1 (sources 1-4): 14-22h
+- Batch 2 (sources 5-8): 20-28h
+- Batch 3 (sources 9-10): 8-11h
+
+**Rationale:** Survival mechanics and exploratory research. These enhance realism and provide depth to the survival gameplay loop.
+
+---
 
 ### Distribution Summary
 
-**Groups by Priority:**
-- Critical Priority: 5 groups (Groups 1-5)
-- High Priority: 10 groups (Groups 6-15)
-- Medium Priority: 23 groups (Groups 16-38)
-- Low Priority: 2 groups (Groups 39-40)
+**Groups by Category:**
+- Group 01: Critical/High GameDev-Tech (11 sources, 67-89h)
+- Group 02: High GameDev-Tech (11 sources, 80-105h)
+- Group 03: High GameDev-Design (10 sources, 55-74h)
+- Group 04: Medium Priority Mix (10 sources, 50-69h)
+- Group 05: Survival + Low Priority (10 sources, 42-61h)
+
+**Total:** 52 sources across 5 groups
 
 **Workload Balance:**
-- Minimum per group: 4 hours
-- Maximum per group: 18 hours
-- Average per group: 7-10 hours
-- Total across 40 groups: 280-400 hours
+- Minimum per group: 42 hours (Group 05)
+- Maximum per group: 105 hours (Group 02)
+- Average per group: 59-80 hours
+- Total effort: 294-398 hours
 
-**Reserved Capacity:**
-- Groups 27-38 (12 groups) available for:
-  - Sources discovered during Phase 2
-  - Splitting larger sources
-  - Overflow from other groups
+**Processing Strategy:**
+- Each group processes sources in batches of 4
+- After completing a 4-source batch, write comprehensive summary
+- Wait for "next" comment before starting next batch
+- Log newly discovered sources for future phases
+- Report progress after each batch completion
+- Mark group complete only when all sources finished
 
----
+**Batch Workflow:**
+1. Pick 4 sources from assignment
+2. Process each source individually with full analysis
+3. Save any new sources discovered for later
+4. Write batch summary covering all 4 sources
+5. Wait for comment before proceeding
+6. If more sources remain, repeat steps 1-5
+7. If all sources complete, write final group summary
+
+**Timeline:**
+- Week 1-2: Groups start, first batches underway
+- Week 3-6: Mid-cycle, most groups on batch 2
+- Week 7-10: Final batches completing
+- Week 11-12: All groups complete, Phase 2 summary
+
 
 ## Step 4: Generate Assignment Files (READY ✅)
 
@@ -576,10 +627,10 @@ Total discovered sources aggregated from all 40 Phase 1 groups:
 Each Phase 2 assignment file follows this structure:
 
 ```markdown
-# Phase 2 Research Assignment Group [NUMBER]
+# Phase 2 Research Assignment Group [01-05]
 
 ---
-title: Phase 2 Assignment Group [NUMBER] - [Topic Names]
+title: Phase 2 Assignment Group [01-05] - [Category Focus]
 date: 2025-01-17
 tags: [research, phase-2, assignment-group-[NUMBER], [categories]]
 status: pending
@@ -588,53 +639,75 @@ priority: [Critical/High/Medium/Low]
 
 **Document Type:** Phase 2 Research Assignment  
 **Version:** 1.0  
-**Total Topics:** [1-2]  
-**Estimated Effort:** [4-18] hours  
+**Total Topics:** [10-11 sources]  
+**Estimated Effort:** [42-105] hours  
 **Priority:** [Critical/High/Medium/Low]
+**Processing:** 4-source batches
 
 ## Overview
 
-This assignment group focuses on [brief description of topics].
+This assignment group focuses on [category description].
 
-**Sources:**
+**Assignment Instructions:**
+```
+Next pick max 4 sources original from the assignment group or discovered during processing your assignment group and process them one by one, always save new sources from source for later process, after that write summary and wait for comment next to process next source, if there is non write completed and summary into comments
+```
+
+**Sources (Total: 10-11):**
 1. [Source Name] ([Priority], [Hours])
 2. [Source Name] ([Priority], [Hours])
+3. [Source Name] ([Priority], [Hours])
+4. [Source Name] ([Priority], [Hours])
+5. [Source Name] ([Priority], [Hours])
+6. [Source Name] ([Priority], [Hours])
+7. [Source Name] ([Priority], [Hours])
+8. [Source Name] ([Priority], [Hours])
+9. [Source Name] ([Priority], [Hours])
+10. [Source Name] ([Priority], [Hours])
+[11. [Source Name] ([Priority], [Hours])]
 
 **Total Estimated Effort:** [X-Y] hours
 
+**Batch Processing:**
+- Batch 1 (sources 1-4): [X-Y]h
+- Batch 2 (sources 5-8): [X-Y]h
+- Batch 3 (sources 9-11): [X-Y]h
+
 ---
 
-## Topic 1: [Source Name]
+## Source Details
+
+### Source 1: [Source Name]
 
 **Priority:** [Critical/High/Medium/Low]  
 **Category:** [GameDev-Tech/Design/Art, Survival, Architecture]  
 **Estimated Effort:** [X-Y] hours
 
-### Source Information
+#### Source Information
 
 **Title:** [Full Title]  
 **Author:** [Author Name(s)]  
 **Publisher/URL:** [Publisher or URL]  
 **Discovered From:** [Original Research Context]
 
-### Rationale
+#### Rationale
 
 [Why this source is important for BlueMarble]
 
-### Key Topics to Cover
+#### Key Topics to Cover
 
 - [Topic 1]
 - [Topic 2]
 - [Topic 3]
 - [Topic 4]
 
-### BlueMarble Application
+#### BlueMarble Application
 
 - [Application 1]
 - [Application 2]
 - [Application 3]
 
-### Deliverable
+#### Deliverable
 
 **Document Name:** `[filename].md`  
 **Minimum Length:** 400-600 lines (aim for 1000+ for depth)
@@ -650,13 +723,44 @@ This assignment group focuses on [brief description of topics].
 
 ---
 
-## Progress Tracking
+[Repeat for Sources 2-11]
 
-- [ ] Source review and note-taking (30%)
-- [ ] Analysis and synthesis (40%)
-- [ ] Documentation writing (30%)
-- [ ] Quality review and cross-references
-- [ ] Update this file with completion status
+---
+
+## Batch Progress Tracking
+
+### Batch 1 (Sources 1-4)
+- [ ] Source 1 reviewed and documented
+- [ ] Source 2 reviewed and documented
+- [ ] Source 3 reviewed and documented
+- [ ] Source 4 reviewed and documented
+- [ ] Batch 1 summary written
+- [ ] Waiting for "next" comment
+
+### Batch 2 (Sources 5-8)
+- [ ] Source 5 reviewed and documented
+- [ ] Source 6 reviewed and documented
+- [ ] Source 7 reviewed and documented
+- [ ] Source 8 reviewed and documented
+- [ ] Batch 2 summary written
+- [ ] Waiting for "next" comment
+
+### Batch 3 (Sources 9-11)
+- [ ] Source 9 reviewed and documented
+- [ ] Source 10 reviewed and documented
+- [ ] Source 11 reviewed and documented (if applicable)
+- [ ] Batch 3 summary written
+- [ ] Final group summary written
+- [ ] Group marked COMPLETE
+
+## Discovered Sources Log
+
+Sources discovered while processing this group:
+
+1. [New Source Name] - [Brief description] - Priority: [TBD] - Effort: [TBD]
+2. [New Source Name] - [Brief description] - Priority: [TBD] - Effort: [TBD]
+
+[Log any sources discovered during research for Phase 3 planning]
 
 ---
 
@@ -908,13 +1012,13 @@ Add to `master-research-queue.md`:
 - [x] All 52 sources identified and cataloged
 - [x] Priorities assigned (Critical/High/Medium/Low)
 - [x] Categories assigned (Tech/Design/Art/Survival/Architecture)
-- [x] Effort estimates validated (4-18h per group)
-- [x] 40 groups balanced for parallel execution
+- [x] Effort estimates validated (40-105h per group)
+- [x] 5 groups balanced with 4-source batch processing
 - [x] No duplicate sources across groups
-- [x] Related sources grouped together
+- [x] Related sources grouped by category
 - [x] Critical sources prioritized first
 - [x] Distribution plan documented
-- [x] Timeline created (8 weeks)
+- [x] Timeline created (8-12 weeks)
 
 ### During Execution
 
