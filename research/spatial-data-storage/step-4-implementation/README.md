@@ -16,15 +16,20 @@ This step provides detailed implementation guides, integration strategies, and d
 
 ### Core Implementation Guides
 - [Implementation Guide](implementation-guide.md) - Step-by-step deployment guide for compression systems
+- [Grid + Vector Hybrid Implementation](grid-vector-hybrid-implementation.md) - Complete implementation guide for dense simulation hybrid storage
 - [Delta Overlay Implementation](delta-overlay-implementation.md) - Change tracking and overlay systems
 - [Multi-Resolution Blending Implementation](multi-resolution-blending-implementation.md) - Technical implementation specifications
 - [Material Inheritance Implementation](material-inheritance-implementation.md) - Quality inheritance through processing chains
 
 ### Integration Documentation
+- [Grid + Vector Geomorphology Integration](grid-vector-geomorphology-integration.md) - Integration with geological simulation processes
 - [Delta Overlay Integration Guide](delta-overlay-integration-guide.md) - Integration with BlueMarble architecture
 - [Material Inheritance Integration Examples](material-inheritance-integration-examples.md) - Practical integration examples
 - [Multi-Layer Query Optimization Implementation](multi-layer-query-optimization-implementation.md) - Query optimization strategies
 - [Multi-Layer Query Optimization Examples](multi-layer-query-optimization-examples.md) - Code examples and patterns
+
+### Testing and Performance
+- [Grid + Vector Performance Benchmarks](grid-vector-performance-benchmarks.md) - Comprehensive benchmark suite and performance testing
 
 ### Migration and Operations
 - [Database Migration Strategy](database-migration-strategy.md) - Safe migration from existing to new storage
