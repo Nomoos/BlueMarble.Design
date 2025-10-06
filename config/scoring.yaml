@@ -1,0 +1,41 @@
+# Scoring Configuration
+# This file will configure scoring criteria for the StoryGenerator pipeline
+
+scoring:
+  version: "1.0.0"
+  
+  # Criteria for evaluating generated content
+  criteria:
+    - name: "coherence"
+      weight: 0.3
+      description: "Logical flow and consistency of the story"
+      min_score: 0.0
+      max_score: 1.0
+      
+    - name: "creativity"
+      weight: 0.25
+      description: "Originality and innovation in the content"
+      min_score: 0.0
+      max_score: 1.0
+      
+    - name: "engagement"
+      weight: 0.25
+      description: "How engaging and interesting the content is"
+      min_score: 0.0
+      max_score: 1.0
+      
+    - name: "technical_quality"
+      weight: 0.2
+      description: "Technical execution and production quality"
+      min_score: 0.0
+      max_score: 1.0
+  
+  # Thresholds for pass/fail decisions
+  thresholds:
+    minimum_overall: 0.6
+    minimum_per_criterion: 0.4
+  
+  # Scoring model settings
+  settings:
+    enable_human_review: false
+    auto_approve_threshold: 0.85

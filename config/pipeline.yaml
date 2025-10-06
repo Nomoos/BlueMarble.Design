@@ -1,0 +1,37 @@
+# Pipeline Configuration
+# This file will configure the StoryGenerator pipeline from idea to video
+
+pipeline:
+  name: "StoryGenerator"
+  version: "1.0.0"
+  
+  stages:
+    - name: "idea"
+      enabled: true
+      # Configuration for idea generation stage
+      
+    - name: "script"
+      enabled: true
+      # Configuration for script generation stage
+      
+    - name: "storyboard"
+      enabled: true
+      # Configuration for storyboard creation stage
+      
+    - name: "assets"
+      enabled: true
+      # Configuration for asset collection stage
+      
+    - name: "render"
+      enabled: true
+      # Configuration for video rendering stage
+      
+    - name: "output"
+      enabled: true
+      # Configuration for output stage
+
+  # Global settings
+  settings:
+    output_format: "mp4"
+    resolution: "1920x1080"
+    frame_rate: 30
