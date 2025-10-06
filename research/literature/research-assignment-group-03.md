@@ -125,8 +125,10 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Energy Systems Collection (High)
-- [x] Historical Maps and Navigation Resources (High)
+- [x] Energy Systems Collection (High) - ✅ Complete
+- [x] Historical Maps and Navigation Resources (High) - ✅ Complete
+
+**Status:** ✅ COMPLETE - Both topics analyzed and documented
 
 ---
 
