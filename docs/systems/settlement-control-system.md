@@ -24,6 +24,594 @@ control, diplomatic relationships, territorial disputes, and federative manageme
 Control is not permanent or arbitrary; it's based on measurable influence that can grow, diminish,
 or be contested.
 
+## Design Influences from Successful Games
+
+The Settlement Control System draws inspiration from proven mechanics in successful multiplayer games,
+adapting their best practices to BlueMarble's geological and dynasty-focused gameplay:
+
+### Travian - Cultural Expansion and Loyalty
+
+**Adopted Mechanics:**
+
+- **Cultural Influence Points**: Players accumulate influence over time through cultural development
+- **Loyalty System**: Conquered settlements have loyalty ratings that affect productivity and control stability
+- **Capital Designation**: One settlement serves as capital with enhanced bonuses
+- **Distance Penalties**: Remote settlements are harder to defend and supply
+- **Population-Based Production**: Settlement population directly affects resource generation
+
+**BlueMarble Adaptation:**
+
+```csharp
+public class SettlementLoyalty
+{
+    public Guid SettlementId { get; set; }
+    public float CurrentLoyalty { get; set; }  // 0-100
+    public Guid OriginalFounderId { get; set; }
+    public Guid CurrentControllerId { get; set; }
+    
+    // Loyalty affects control stability
+    public float ControlStabilityModifier => CurrentLoyalty / 100f;
+    
+    // Loyalty changes over time
+    public void UpdateLoyalty(float deltaTime)
+    {
+        // Loyalty trends toward controller's influence
+        if (CurrentControllerId == OriginalFounderId)
+        {
+            // Original controller regains loyalty faster
+            CurrentLoyalty = Math.Min(100f, CurrentLoyalty + 0.5f * deltaTime);
+        }
+        else
+        {
+            // New controller gains loyalty slowly
+            CurrentLoyalty = Math.Min(100f, CurrentLoyalty + 0.1f * deltaTime);
+        }
+    }
+    
+    // Low loyalty increases vulnerability
+    public float GetVulnerabilityMultiplier()
+    {
+        return 2.0f - (CurrentLoyalty / 100f);  // 1.0x at 100 loyalty, 2.0x at 0 loyalty
+    }
+}
+
+public class CulturalInfluencePoints
+{
+    public Guid EntityId { get; set; }
+    public float AvailablePoints { get; set; }
+    public float PointGenerationRate { get; set; }
+    
+    // Culture points enable expansion
+    public float CalculatePointGeneration(List<Settlement> controlledSettlements)
+    {
+        float baseRate = 10f;
+        
+        // More settlements generate more culture
+        float settlementBonus = controlledSettlements.Count * 5f;
+        
+        // Cultural buildings boost generation
+        float culturalBonus = controlledSettlements
+            .Sum(s => s.Infrastructure
+                .Where(b => b.Type == BuildingType.Cultural)
+                .Sum(b => b.CultureBonus));
+        
+        return baseRate + settlementBonus + culturalBonus;
+    }
+    
+    // Founding new settlements costs culture points
+    public bool CanAffordSettlement(SettlementSize size)
+    {
+        float cost = GetSettlementCost(size);
+        return AvailablePoints >= cost;
+    }
+    
+    private float GetSettlementCost(SettlementSize size)
+    {
+        return size switch
+        {
+            SettlementSize.Outpost => 500f,
+            SettlementSize.Village => 1000f,
+            SettlementSize.Town => 2500f,
+            SettlementSize.City => 5000f,
+            SettlementSize.Metropolis => 10000f,
+            _ => 500f
+        };
+    }
+}
+```
+
+### Rust - Maintenance and Decay Systems
+
+**Adopted Mechanics:**
+
+- **Upkeep Costs**: Regular resource consumption to maintain structures
+- **Decay Timers**: Unmaintained structures gradually deteriorate
+- **Authorization Levels**: Tiered access control (owner, moderator, guest)
+- **Tool Cupboard Radius**: Physical control radius from structures
+- **Exponential Scaling**: Larger bases cost disproportionately more to maintain
+
+**BlueMarble Adaptation:**
+
+```csharp
+public class SettlementUpkeep
+{
+    public Guid SettlementId { get; set; }
+    public Dictionary<Resource, float> DailyUpkeepCosts { get; set; }
+    public DateTime LastUpkeepPaid { get; set; }
+    public float DecayAccumulator { get; set; }
+    
+    public void CalculateUpkeepCosts(Settlement settlement)
+    {
+        DailyUpkeepCosts = new Dictionary<Resource, float>();
+        
+        // Base cost scales with settlement size
+        float sizeMultiplier = settlement.Size switch
+        {
+            SettlementSize.Outpost => 1.0f,
+            SettlementSize.Village => 2.5f,
+            SettlementSize.Town => 6.0f,
+            SettlementSize.City => 15.0f,
+            SettlementSize.Metropolis => 40.0f,
+            _ => 1.0f
+        };
+        
+        // Infrastructure increases upkeep
+        float infrastructureCost = settlement.Infrastructure.Count * 10f;
+        
+        // Distance from capital increases costs
+        float distancePenalty = CalculateDistancePenalty(settlement);
+        
+        float totalCost = (100f * sizeMultiplier + infrastructureCost) * distancePenalty;
+        
+        // Convert to resource requirements
+        DailyUpkeepCosts[Resource.Food] = totalCost * 0.4f;
+        DailyUpkeepCosts[Resource.Materials] = totalCost * 0.3f;
+        DailyUpkeepCosts[Resource.Currency] = totalCost * 0.3f;
+    }
+    
+    public void ProcessUpkeep(Dictionary<Resource, float> availableResources)
+    {
+        bool canAfford = true;
+        
+        foreach (var cost in DailyUpkeepCosts)
+        {
+            if (!availableResources.ContainsKey(cost.Key) || 
+                availableResources[cost.Key] < cost.Value)
+            {
+                canAfford = false;
+                break;
+            }
+        }
+        
+        if (canAfford)
+        {
+            // Deduct resources
+            foreach (var cost in DailyUpkeepCosts)
+            {
+                availableResources[cost.Key] -= cost.Value;
+            }
+            
+            LastUpkeepPaid = DateTime.UtcNow;
+            DecayAccumulator = 0f;
+        }
+        else
+        {
+            // Start decay
+            float daysSinceUpkeep = (DateTime.UtcNow - LastUpkeepPaid).Days;
+            DecayAccumulator += daysSinceUpkeep;
+        }
+    }
+    
+    public float GetDecayLevel()
+    {
+        // 0 = no decay, 1.0 = completely decayed
+        return Math.Min(1.0f, DecayAccumulator / 30f);  // Full decay after 30 days
+    }
+    
+    private float CalculateDistancePenalty(Settlement settlement)
+    {
+        // Would integrate with actual distance calculations
+        return 1.0f;  // Placeholder
+    }
+}
+
+public class SettlementAuthorization
+{
+    public Guid SettlementId { get; set; }
+    public Dictionary<Guid, AuthorizationLevel> Authorizations { get; set; }
+    
+    public enum AuthorizationLevel
+    {
+        Owner,      // Full control
+        Governor,   // Manage, build, modify
+        Builder,    // Can build and modify
+        Resident,   // Can use facilities
+        Visitor     // Limited access
+    }
+    
+    public bool CanPerformAction(Guid entityId, SettlementAction action)
+    {
+        if (!Authorizations.TryGetValue(entityId, out var level))
+            return false;
+        
+        return action switch
+        {
+            SettlementAction.TransferControl => level == AuthorizationLevel.Owner,
+            SettlementAction.ChangeGovernance => level <= AuthorizationLevel.Governor,
+            SettlementAction.BuildInfrastructure => level <= AuthorizationLevel.Builder,
+            SettlementAction.UseFacilities => level <= AuthorizationLevel.Resident,
+            SettlementAction.Visit => true,
+            _ => false
+        };
+    }
+}
+
+public enum SettlementAction
+{
+    TransferControl,
+    ChangeGovernance,
+    BuildInfrastructure,
+    UseFacilities,
+    Visit
+}
+```
+
+### Minecraft - Granular Permissions and Visual Boundaries
+
+**Adopted Mechanics:**
+
+- **Claim Blocks**: Limited resource for claiming territory
+- **Subclaims**: Subdivide areas with different permissions
+- **Permission Flags**: Fine-grained control (build, break, interact, access)
+- **Visual Boundaries**: Clear indication of claimed territory
+- **Trust System**: Assign permissions to specific players
+
+**BlueMarble Adaptation:**
+
+```csharp
+public class TerritoryClaimSystem
+{
+    public Guid EntityId { get; set; }
+    public float AvailableClaimBlocks { get; set; }
+    public List<TerritorialClaim> Claims { get; set; }
+    
+    // Earn claim blocks through playtime and achievements
+    public void EarnClaimBlocks(float amount)
+    {
+        AvailableClaimBlocks += amount;
+    }
+    
+    public bool CanClaimTerritory(float areaSize)
+    {
+        return AvailableClaimBlocks >= areaSize;
+    }
+    
+    public TerritorialClaim CreateClaim(Coordinate3D center, float radius)
+    {
+        float area = CalculateArea(radius);
+        
+        if (!CanClaimTerritory(area))
+            return null;
+        
+        var claim = new TerritorialClaim
+        {
+            ClaimId = Guid.NewGuid(),
+            OwnerId = EntityId,
+            Center = center,
+            Radius = radius,
+            Area = area,
+            Permissions = new TerritoryPermissions()
+        };
+        
+        AvailableClaimBlocks -= area;
+        Claims.Add(claim);
+        
+        return claim;
+    }
+    
+    private float CalculateArea(float radius)
+    {
+        return (float)(Math.PI * radius * radius);
+    }
+}
+
+public class TerritorialClaim
+{
+    public Guid ClaimId { get; set; }
+    public Guid OwnerId { get; set; }
+    public Coordinate3D Center { get; set; }
+    public float Radius { get; set; }
+    public float Area { get; set; }
+    public TerritoryPermissions Permissions { get; set; }
+    public List<SubClaim> SubClaims { get; set; }
+    
+    // Visual boundary for players
+    public List<Coordinate3D> GetBoundaryPoints()
+    {
+        var points = new List<Coordinate3D>();
+        int segments = 32;
+        
+        for (int i = 0; i < segments; i++)
+        {
+            float angle = (float)(2 * Math.PI * i / segments);
+            points.Add(new Coordinate3D(
+                Center.X + Radius * (float)Math.Cos(angle),
+                Center.Y + Radius * (float)Math.Sin(angle),
+                Center.Z
+            ));
+        }
+        
+        return points;
+    }
+}
+
+public class TerritoryPermissions
+{
+    public Dictionary<Guid, PermissionFlags> EntityPermissions { get; set; }
+    public PermissionFlags PublicPermissions { get; set; }
+    
+    public TerritoryPermissions()
+    {
+        EntityPermissions = new Dictionary<Guid, PermissionFlags>();
+        PublicPermissions = PermissionFlags.None;
+    }
+    
+    public void GrantPermission(Guid entityId, PermissionFlags flags)
+    {
+        EntityPermissions[entityId] = flags;
+    }
+    
+    public bool HasPermission(Guid entityId, PermissionFlags requiredFlag)
+    {
+        if (EntityPermissions.TryGetValue(entityId, out var flags))
+        {
+            return flags.HasFlag(requiredFlag);
+        }
+        
+        return PublicPermissions.HasFlag(requiredFlag);
+    }
+}
+
+[Flags]
+public enum PermissionFlags
+{
+    None = 0,
+    Build = 1,
+    Destroy = 2,
+    Interact = 4,
+    AccessStorage = 8,
+    AccessFacilities = 16,
+    Harvest = 32,
+    All = Build | Destroy | Interact | AccessStorage | AccessFacilities | Harvest
+}
+
+public class SubClaim
+{
+    public Guid SubClaimId { get; set; }
+    public Guid ParentClaimId { get; set; }
+    public Coordinate3D Center { get; set; }
+    public float Radius { get; set; }
+    public TerritoryPermissions Permissions { get; set; }
+    public string Name { get; set; }  // e.g., "Mining Zone", "Public Market"
+}
+```
+
+### EVE Online - Sovereignty and Vulnerability Windows
+
+**Adopted Mechanics:**
+
+- **Sovereignty Structures**: Physical anchors for territorial control
+- **Vulnerability Timers**: Defenders set when structures can be attacked
+- **Influence Projection**: Control radiates from strategic structures
+- **Strategic Value**: Different systems have different values
+- **Contested State**: Multi-phase territorial conquest
+
+**BlueMarble Adaptation:**
+
+```csharp
+public class SovereigntyStructure
+{
+    public Guid StructureId { get; set; }
+    public Guid OwnerId { get; set; }
+    public StructureType Type { get; set; }
+    public Coordinate3D Location { get; set; }
+    public float HealthPoints { get; set; }
+    public float MaxHealthPoints { get; set; }
+    public SovereigntyState State { get; set; }
+    
+    // Vulnerability window
+    public TimeSpan VulnerabilityStart { get; set; }  // e.g., 18:00 local time
+    public TimeSpan VulnerabilityDuration { get; set; }  // e.g., 3 hours
+    
+    // Control radius
+    public float InfluenceRadius { get; set; }
+    
+    public bool IsVulnerable(DateTime currentTime)
+    {
+        var localTime = currentTime.TimeOfDay;
+        var vulnerabilityEnd = VulnerabilityStart.Add(VulnerabilityDuration);
+        
+        if (vulnerabilityEnd.TotalHours > 24)
+        {
+            // Window crosses midnight
+            return localTime >= VulnerabilityStart || 
+                   localTime <= TimeSpan.FromHours(vulnerabilityEnd.TotalHours - 24);
+        }
+        
+        return localTime >= VulnerabilityStart && localTime <= vulnerabilityEnd;
+    }
+    
+    public float GetInfluenceStrength(Coordinate3D point)
+    {
+        float distance = CalculateDistance(Location, point);
+        
+        if (distance > InfluenceRadius)
+            return 0f;
+        
+        // Influence falls off with distance
+        return (1.0f - distance / InfluenceRadius) * (HealthPoints / MaxHealthPoints);
+    }
+    
+    private float CalculateDistance(Coordinate3D a, Coordinate3D b)
+    {
+        return (float)Math.Sqrt(
+            Math.Pow(a.X - b.X, 2) + 
+            Math.Pow(a.Y - b.Y, 2) + 
+            Math.Pow(a.Z - b.Z, 2));
+    }
+}
+
+public enum StructureType
+{
+    Citadel,        // Major control structure
+    Fortress,       // Defensive structure
+    IndustryHub,    // Economic center
+    Observatory     // Strategic monitoring
+}
+
+public enum SovereigntyState
+{
+    Stable,         // Normal state
+    Reinforced,     // Under attack, waiting for vulnerability
+    Contested,      // Active battle for control
+    Captured        // Recently changed hands
+}
+
+public class ContestedTerritory
+{
+    public Guid TerritoryId { get; set; }
+    public Guid AttackerId { get; set; }
+    public Guid DefenderId { get; set; }
+    public ConflictPhase CurrentPhase { get; set; }
+    public DateTime PhaseStartTime { get; set; }
+    public float AttackerProgress { get; set; }  // 0-100
+    
+    // Multi-phase conquest system
+    public void AdvancePhase()
+    {
+        CurrentPhase = CurrentPhase switch
+        {
+            ConflictPhase.Initial => ConflictPhase.Entosis,
+            ConflictPhase.Entosis => ConflictPhase.Reinforced,
+            ConflictPhase.Reinforced => ConflictPhase.FinalBattle,
+            ConflictPhase.FinalBattle => ConflictPhase.Captured,
+            _ => ConflictPhase.Initial
+        };
+        
+        PhaseStartTime = DateTime.UtcNow;
+    }
+    
+    public TimeSpan GetPhaseTimeRemaining()
+    {
+        var phaseDuration = CurrentPhase switch
+        {
+            ConflictPhase.Initial => TimeSpan.FromHours(1),
+            ConflictPhase.Entosis => TimeSpan.FromHours(6),
+            ConflictPhase.Reinforced => TimeSpan.FromDays(1),
+            ConflictPhase.FinalBattle => TimeSpan.FromHours(3),
+            _ => TimeSpan.Zero
+        };
+        
+        var elapsed = DateTime.UtcNow - PhaseStartTime;
+        return phaseDuration - elapsed;
+    }
+}
+
+public enum ConflictPhase
+{
+    Initial,        // Conflict declared
+    Entosis,        // Initial attack phase
+    Reinforced,     // Waiting for vulnerability window
+    FinalBattle,    // Decisive battle
+    Captured        // Territory changes hands
+}
+
+public class InfluenceMap
+{
+    private Dictionary<Coordinate3D, Dictionary<Guid, float>> _influenceGrid;
+    
+    public void CalculateInfluence(List<SovereigntyStructure> structures)
+    {
+        _influenceGrid = new Dictionary<Coordinate3D, Dictionary<Guid, float>>();
+        
+        // Calculate influence from each structure
+        foreach (var structure in structures)
+        {
+            ProjectInfluence(structure);
+        }
+    }
+    
+    private void ProjectInfluence(SovereigntyStructure structure)
+    {
+        // Project influence in radius around structure
+        int gridSize = (int)structure.InfluenceRadius;
+        
+        for (int x = -gridSize; x <= gridSize; x++)
+        {
+            for (int y = -gridSize; y <= gridSize; y++)
+            {
+                for (int z = -gridSize; z <= gridSize; z++)
+                {
+                    var point = new Coordinate3D(
+                        structure.Location.X + x,
+                        structure.Location.Y + y,
+                        structure.Location.Z + z
+                    );
+                    
+                    float influence = structure.GetInfluenceStrength(point);
+                    
+                    if (influence > 0)
+                    {
+                        if (!_influenceGrid.ContainsKey(point))
+                            _influenceGrid[point] = new Dictionary<Guid, float>();
+                        
+                        _influenceGrid[point][structure.OwnerId] = 
+                            Math.Max(_influenceGrid[point].GetValueOrDefault(structure.OwnerId, 0f), influence);
+                    }
+                }
+            }
+        }
+    }
+    
+    public Guid? GetDominantController(Coordinate3D point)
+    {
+        if (!_influenceGrid.TryGetValue(point, out var influences))
+            return null;
+        
+        return influences.OrderByDescending(kvp => kvp.Value).First().Key;
+    }
+    
+    public bool IsContested(Coordinate3D point, float threshold = 0.2f)
+    {
+        if (!_influenceGrid.TryGetValue(point, out var influences))
+            return false;
+        
+        if (influences.Count < 2)
+            return false;
+        
+        var sorted = influences.OrderByDescending(kvp => kvp.Value).ToList();
+        float topInfluence = sorted[0].Value;
+        float secondInfluence = sorted[1].Value;
+        
+        // Contested if second place is within threshold of first
+        return (topInfluence - secondInfluence) / topInfluence < threshold;
+    }
+}
+```
+
+### Integration Summary
+
+These proven mechanics enhance the Settlement Control System with:
+
+1. **Active Maintenance** (Rust): Regular upkeep prevents passive expansion
+2. **Cultural Expansion** (Travian): Gradual influence growth enables strategic planning
+3. **Loyalty Dynamics** (Travian): Conquered territories require ongoing management
+4. **Permission Granularity** (Minecraft): Detailed control delegation
+5. **Visual Clarity** (Minecraft): Players can see territory boundaries
+6. **Strategic Timing** (EVE): Vulnerability windows add tactical depth
+7. **Influence Projection** (EVE): Control radiates from key structures
+8. **Contested States** (EVE): Clear phases during territorial conflicts
+
 ## System Architecture
 
 ### High-Level Components
@@ -277,6 +865,14 @@ public class Settlement
     public List<Building> Infrastructure { get; set; }
     public Dictionary<Guid, float> InfluenceChallenges { get; set; }  // Entity ID -> Challenge strength
     
+    // Game-inspired enhancements
+    public SettlementLoyalty Loyalty { get; set; }
+    public SettlementUpkeep Upkeep { get; set; }
+    public SettlementAuthorization Authorization { get; set; }
+    public List<SovereigntyStructure> SovereigntyStructures { get; set; }
+    public TerritorialClaim TerritorialClaim { get; set; }
+    public ContestedTerritory ContestedStatus { get; set; }
+    
     // Governance
     public GovernanceType GovernanceType { get; set; }
     public List<Policy> ActivePolicies { get; set; }
@@ -305,6 +901,19 @@ public class Settlement
         // Infrastructure makes it easier to control (reduces threshold)
         float infrastructureBonus = Infrastructure.Count * 5f;
         baseThreshold = Math.Max(baseThreshold - infrastructureBonus, baseThreshold * 0.7f);
+        
+        // Loyalty affects control difficulty
+        if (Loyalty != null)
+        {
+            baseThreshold *= Loyalty.GetVulnerabilityMultiplier();
+        }
+        
+        // Decay increases vulnerability
+        if (Upkeep != null)
+        {
+            float decayLevel = Upkeep.GetDecayLevel();
+            baseThreshold *= (1.0f - (decayLevel * 0.5f));  // Up to 50% reduction at full decay
+        }
         
         RequiredInfluenceThreshold = baseThreshold;
         return baseThreshold;
@@ -1546,6 +2155,462 @@ foreach (var dispute in disputes)
    - Separate cultural influence system
    - Cultural dominance affects settlement loyalty
    - Language, traditions, and customs spread
+
+## Advanced Game Mechanics in Practice
+
+### Scenario 5: Maintaining a Decaying Settlement (Rust-Inspired)
+
+```csharp
+var settlementManager = new SettlementManager(diplomacyManager);
+var settlement = settlementManager.GetSettlement(settlementId);
+
+// Check upkeep requirements
+var upkeep = settlement.Upkeep;
+upkeep.CalculateUpkeepCosts(settlement);
+
+Console.WriteLine($"Daily upkeep for {settlement.Name}:");
+foreach (var cost in upkeep.DailyUpkeepCosts)
+{
+    Console.WriteLine($"  {cost.Key}: {cost.Value}");
+}
+
+// Player has resources available
+var playerResources = new Dictionary<Resource, float>
+{
+    [Resource.Food] = 1000f,
+    [Resource.Materials] = 500f,
+    [Resource.Currency] = 750f
+};
+
+// Process upkeep payment
+upkeep.ProcessUpkeep(playerResources);
+
+if (upkeep.DecayAccumulator > 0)
+{
+    Console.WriteLine($"Warning: Settlement is decaying! Decay level: {upkeep.GetDecayLevel() * 100}%");
+    Console.WriteLine($"Control threshold reduced by {upkeep.GetDecayLevel() * 50}%");
+}
+else
+{
+    Console.WriteLine("Upkeep paid successfully. Settlement maintained.");
+}
+```
+
+### Scenario 6: Cultural Expansion System (Travian-Inspired)
+
+```csharp
+var culturalSystem = new CulturalInfluencePoints
+{
+    EntityId = playerProfile.EntityId,
+    AvailablePoints = 0f
+};
+
+// Generate culture points over time
+var controlledSettlements = settlementManager.GetSettlementsControlledBy(playerProfile.EntityId);
+culturalSystem.PointGenerationRate = culturalSystem.CalculatePointGeneration(controlledSettlements);
+
+Console.WriteLine($"Generating {culturalSystem.PointGenerationRate} culture points per day");
+Console.WriteLine($"Current culture points: {culturalSystem.AvailablePoints}");
+
+// Accumulate points
+culturalSystem.AvailablePoints += culturalSystem.PointGenerationRate;
+
+// Attempt to found new settlement
+if (culturalSystem.CanAffordSettlement(SettlementSize.Village))
+{
+    Console.WriteLine("Sufficient culture points to found a new village!");
+    
+    var result = settlementManager.EstablishSettlement(
+        playerProfile,
+        new Coordinate3D(150, 250, 60),
+        "New Frontier Village",
+        SettlementType.Agricultural);
+    
+    if (result.Success)
+    {
+        // Deduct culture points
+        float cost = 1000f;  // Village cost
+        culturalSystem.AvailablePoints -= cost;
+        Console.WriteLine($"Village founded! Remaining culture points: {culturalSystem.AvailablePoints}");
+    }
+}
+```
+
+### Scenario 7: Loyalty and Conquest (Travian-Inspired)
+
+```csharp
+// Player conquers a settlement
+var conqueredSettlement = settlementManager.GetSettlement(targetSettlementId);
+var conquerorProfile = socialSystem.GetInfluenceProfile(conquerorId);
+
+// Transfer control
+var transferResult = settlementManager.ChallengeSettlementControl(
+    targetSettlementId,
+    conquerorProfile);
+
+if (transferResult.Success)
+{
+    // Initialize loyalty system for conquered settlement
+    conqueredSettlement.Loyalty = new SettlementLoyalty
+    {
+        SettlementId = conqueredSettlement.SettlementId,
+        CurrentLoyalty = 20f,  // Start with low loyalty
+        OriginalFounderId = transferResult.PreviousController.Value,
+        CurrentControllerId = conquerorId
+    };
+    
+    Console.WriteLine($"Settlement conquered! Starting loyalty: {conqueredSettlement.Loyalty.CurrentLoyalty}%");
+    Console.WriteLine($"Control stability: {conqueredSettlement.Loyalty.ControlStabilityModifier * 100}%");
+    
+    // Loyalty affects vulnerability
+    float vulnerabilityMultiplier = conqueredSettlement.Loyalty.GetVulnerabilityMultiplier();
+    Console.WriteLine($"Settlement is {vulnerabilityMultiplier}x more vulnerable to reconquest");
+    
+    // Over time, loyalty increases
+    for (int days = 0; days < 100; days++)
+    {
+        conqueredSettlement.Loyalty.UpdateLoyalty(1.0f);  // 1 day
+        
+        if (days % 10 == 0)
+        {
+            Console.WriteLine($"Day {days}: Loyalty = {conqueredSettlement.Loyalty.CurrentLoyalty:F1}%");
+        }
+    }
+}
+```
+
+### Scenario 8: Territory Claims and Permissions (Minecraft-Inspired)
+
+```csharp
+var claimSystem = new TerritoryClaimSystem
+{
+    EntityId = guildId,
+    AvailableClaimBlocks = 5000f,
+    Claims = new List<TerritorialClaim>()
+};
+
+// Create main territory claim
+var mainClaim = claimSystem.CreateClaim(
+    new Coordinate3D(200, 300, 50),
+    radius: 50f);
+
+if (mainClaim != null)
+{
+    Console.WriteLine($"Territory claimed! Area: {mainClaim.Area:F0} blocks");
+    Console.WriteLine($"Remaining claim blocks: {claimSystem.AvailableClaimBlocks:F0}");
+    
+    // Grant permissions to guild members
+    mainClaim.Permissions.GrantPermission(member1Id, PermissionFlags.Build | PermissionFlags.Harvest);
+    mainClaim.Permissions.GrantPermission(member2Id, PermissionFlags.All);
+    
+    // Set public permissions
+    mainClaim.Permissions.PublicPermissions = PermissionFlags.Visit | PermissionFlags.Interact;
+    
+    // Create subclaim for mining zone
+    var miningZone = new SubClaim
+    {
+        SubClaimId = Guid.NewGuid(),
+        ParentClaimId = mainClaim.ClaimId,
+        Center = new Coordinate3D(210, 310, 45),
+        Radius = 15f,
+        Name = "Mining Zone",
+        Permissions = new TerritoryPermissions()
+    };
+    
+    // Different permissions in mining zone
+    miningZone.Permissions.GrantPermission(miningGuildId, PermissionFlags.All);
+    miningZone.Permissions.PublicPermissions = PermissionFlags.None;
+    
+    mainClaim.SubClaims.Add(miningZone);
+    
+    Console.WriteLine($"Created subclaim: {miningZone.Name}");
+    
+    // Check permissions
+    bool canBuild = mainClaim.Permissions.HasPermission(member1Id, PermissionFlags.Build);
+    Console.WriteLine($"Member 1 can build: {canBuild}");
+    
+    // Get visual boundaries for rendering
+    var boundaryPoints = mainClaim.GetBoundaryPoints();
+    Console.WriteLine($"Boundary has {boundaryPoints.Count} points for visualization");
+}
+```
+
+### Scenario 9: Sovereignty Structures and Vulnerability Windows (EVE-Inspired)
+
+```csharp
+// Deploy sovereignty structure
+var citadel = new SovereigntyStructure
+{
+    StructureId = Guid.NewGuid(),
+    OwnerId = allianceId,
+    Type = StructureType.Citadel,
+    Location = new Coordinate3D(500, 500, 100),
+    HealthPoints = 10000f,
+    MaxHealthPoints = 10000f,
+    State = SovereigntyState.Stable,
+    VulnerabilityStart = TimeSpan.FromHours(18),  // 6 PM local time
+    VulnerabilityDuration = TimeSpan.FromHours(3), // 3-hour window
+    InfluenceRadius = 200f
+};
+
+Console.WriteLine($"Citadel deployed at {citadel.Location}");
+Console.WriteLine($"Vulnerable: {citadel.VulnerabilityStart} - " +
+                  $"{citadel.VulnerabilityStart.Add(citadel.VulnerabilityDuration)}");
+
+// Check if currently vulnerable
+var currentTime = DateTime.UtcNow;
+bool isVulnerable = citadel.IsVulnerable(currentTime);
+Console.WriteLine($"Currently vulnerable: {isVulnerable}");
+
+// Calculate influence at various points
+var testPoint1 = new Coordinate3D(550, 550, 100);  // Nearby
+var testPoint2 = new Coordinate3D(800, 800, 100);  // Far away
+
+float influence1 = citadel.GetInfluenceStrength(testPoint1);
+float influence2 = citadel.GetInfluenceStrength(testPoint2);
+
+Console.WriteLine($"Influence at nearby point: {influence1 * 100:F0}%");
+Console.WriteLine($"Influence at distant point: {influence2 * 100:F0}%");
+
+// Attack scenario - structure becomes reinforced
+if (isVulnerable)
+{
+    citadel.HealthPoints -= 5000f;  // Take damage
+    
+    if (citadel.HealthPoints < citadel.MaxHealthPoints * 0.25f)
+    {
+        citadel.State = SovereigntyState.Reinforced;
+        Console.WriteLine("Citadel reinforced! Waiting for next vulnerability window...");
+    }
+}
+```
+
+### Scenario 10: Contested Territory with Multi-Phase Conquest (EVE-Inspired)
+
+```csharp
+// Initiate territorial conflict
+var contestedTerritory = new ContestedTerritory
+{
+    TerritoryId = territoryId,
+    AttackerId = attackingGuildId,
+    DefenderId = defendingGuildId,
+    CurrentPhase = ConflictPhase.Initial,
+    PhaseStartTime = DateTime.UtcNow,
+    AttackerProgress = 0f
+};
+
+Console.WriteLine($"Territorial conflict initiated!");
+Console.WriteLine($"Attacker: {attackingGuildId}");
+Console.WriteLine($"Defender: {defendingGuildId}");
+
+// Simulate conflict progression
+while (contestedTerritory.CurrentPhase != ConflictPhase.Captured)
+{
+    var timeRemaining = contestedTerritory.GetPhaseTimeRemaining();
+    Console.WriteLine($"\nPhase: {contestedTerritory.CurrentPhase}");
+    Console.WriteLine($"Time remaining: {timeRemaining.TotalHours:F1} hours");
+    Console.WriteLine($"Attacker progress: {contestedTerritory.AttackerProgress:F0}%");
+    
+    // Simulate attacker making progress
+    contestedTerritory.AttackerProgress += 25f;
+    
+    if (contestedTerritory.AttackerProgress >= 100f)
+    {
+        contestedTerritory.AttackerProgress = 0f;
+        contestedTerritory.AdvancePhase();
+        Console.WriteLine($"Phase complete! Advancing to {contestedTerritory.CurrentPhase}");
+    }
+    
+    if (contestedTerritory.CurrentPhase == ConflictPhase.Captured)
+    {
+        Console.WriteLine("\nTerritory captured!");
+        
+        // Transfer control to attacker
+        var settlement = settlementManager.GetSettlement(territoryId);
+        var attackerProfile = socialSystem.GetInfluenceProfile(attackingGuildId);
+        settlement.TransferControl(attackerProfile);
+        
+        break;
+    }
+    
+    // Break after a few iterations for demo
+    if (contestedTerritory.CurrentPhase == ConflictPhase.FinalBattle)
+        break;
+}
+```
+
+### Scenario 11: Influence Map Visualization (EVE-Inspired)
+
+```csharp
+// Create influence map for a region
+var influenceMap = new InfluenceMap();
+
+// Multiple factions have structures in the region
+var structures = new List<SovereigntyStructure>
+{
+    new SovereigntyStructure 
+    { 
+        OwnerId = faction1Id, 
+        Location = new Coordinate3D(100, 100, 50),
+        InfluenceRadius = 150f,
+        HealthPoints = 10000f,
+        MaxHealthPoints = 10000f
+    },
+    new SovereigntyStructure 
+    { 
+        OwnerId = faction2Id, 
+        Location = new Coordinate3D(250, 100, 50),
+        InfluenceRadius = 150f,
+        HealthPoints = 8000f,
+        MaxHealthPoints = 10000f
+    },
+    new SovereigntyStructure 
+    { 
+        OwnerId = faction3Id, 
+        Location = new Coordinate3D(175, 200, 50),
+        InfluenceRadius = 100f,
+        HealthPoints = 6000f,
+        MaxHealthPoints = 10000f
+    }
+};
+
+// Calculate influence across the region
+influenceMap.CalculateInfluence(structures);
+
+// Check control at specific points
+var checkPoint = new Coordinate3D(175, 150, 50);
+var dominantController = influenceMap.GetDominantController(checkPoint);
+bool isContested = influenceMap.IsContested(checkPoint);
+
+if (dominantController.HasValue)
+{
+    Console.WriteLine($"Point {checkPoint} controlled by: {dominantController.Value}");
+}
+
+if (isContested)
+{
+    Console.WriteLine("This area is contested between multiple factions!");
+}
+else
+{
+    Console.WriteLine("This area has clear control.");
+}
+
+// Visualize influence map (pseudo-code for rendering)
+Console.WriteLine("\nInfluence Map (ASCII representation):");
+for (int y = 0; y < 30; y++)
+{
+    for (int x = 0; x < 40; x++)
+    {
+        var point = new Coordinate3D(x * 10, y * 10, 50);
+        var controller = influenceMap.GetDominantController(point);
+        var contested = influenceMap.IsContested(point);
+        
+        if (contested)
+            Console.Write("?");
+        else if (controller == faction1Id)
+            Console.Write("1");
+        else if (controller == faction2Id)
+            Console.Write("2");
+        else if (controller == faction3Id)
+            Console.Write("3");
+        else
+            Console.Write(".");
+    }
+    Console.WriteLine();
+}
+```
+
+### Scenario 12: Integrated Settlement with All Systems
+
+```csharp
+// Create a fully-featured settlement using all game-inspired mechanics
+var advancedSettlement = new Settlement
+{
+    SettlementId = Guid.NewGuid(),
+    Name = "Fortress Prime",
+    Location = new Coordinate3D(1000, 1000, 100),
+    Size = SettlementSize.City,
+    Type = SettlementType.Military,
+    Population = 5000,
+    StrategicValue = 85f,
+    
+    // Loyalty system (Travian-inspired)
+    Loyalty = new SettlementLoyalty
+    {
+        CurrentLoyalty = 75f,
+        OriginalFounderId = founderId,
+        CurrentControllerId = founderId
+    },
+    
+    // Upkeep system (Rust-inspired)
+    Upkeep = new SettlementUpkeep
+    {
+        SettlementId = Guid.NewGuid(),
+        LastUpkeepPaid = DateTime.UtcNow,
+        DecayAccumulator = 0f
+    },
+    
+    // Authorization system (Rust-inspired)
+    Authorization = new SettlementAuthorization
+    {
+        SettlementId = Guid.NewGuid(),
+        Authorizations = new Dictionary<Guid, SettlementAuthorization.AuthorizationLevel>
+        {
+            [founderId] = SettlementAuthorization.AuthorizationLevel.Owner,
+            [governor1Id] = SettlementAuthorization.AuthorizationLevel.Governor,
+            [builder1Id] = SettlementAuthorization.AuthorizationLevel.Builder
+        }
+    },
+    
+    // Sovereignty structures (EVE-inspired)
+    SovereigntyStructures = new List<SovereigntyStructure>
+    {
+        new SovereigntyStructure
+        {
+            Type = StructureType.Citadel,
+            Location = new Coordinate3D(1000, 1000, 100),
+            InfluenceRadius = 250f,
+            VulnerabilityStart = TimeSpan.FromHours(20),
+            VulnerabilityDuration = TimeSpan.FromHours(2)
+        }
+    },
+    
+    // Territory claim (Minecraft-inspired)
+    TerritorialClaim = new TerritorialClaim
+    {
+        ClaimId = Guid.NewGuid(),
+        OwnerId = founderId,
+        Center = new Coordinate3D(1000, 1000, 100),
+        Radius = 300f,
+        Permissions = new TerritoryPermissions
+        {
+            PublicPermissions = PermissionFlags.Visit
+        }
+    }
+};
+
+// Calculate influence requirements with all modifiers
+advancedSettlement.Upkeep.CalculateUpkeepCosts(advancedSettlement);
+float influenceThreshold = advancedSettlement.CalculateInfluenceThreshold();
+
+Console.WriteLine($"\n=== {advancedSettlement.Name} Status ===");
+Console.WriteLine($"Type: {advancedSettlement.Type} {advancedSettlement.Size}");
+Console.WriteLine($"Population: {advancedSettlement.Population:N0}");
+Console.WriteLine($"Strategic Value: {advancedSettlement.StrategicValue:F0}");
+Console.WriteLine($"\nLoyalty: {advancedSettlement.Loyalty.CurrentLoyalty:F0}%");
+Console.WriteLine($"Control Stability: {advancedSettlement.Loyalty.ControlStabilityModifier * 100:F0}%");
+Console.WriteLine($"\nRequired Influence: {influenceThreshold:F0}");
+Console.WriteLine($"Decay Level: {advancedSettlement.Upkeep.GetDecayLevel() * 100:F0}%");
+Console.WriteLine($"\nDaily Upkeep:");
+foreach (var cost in advancedSettlement.Upkeep.DailyUpkeepCosts)
+{
+    Console.WriteLine($"  {cost.Key}: {cost.Value:F0}");
+}
+Console.WriteLine($"\nSovereignty Structures: {advancedSettlement.SovereigntyStructures.Count}");
+Console.WriteLine($"Territory Radius: {advancedSettlement.TerritorialClaim.Radius:F0}m");
+Console.WriteLine($"Authorized Users: {advancedSettlement.Authorization.Authorizations.Count}");
+```
 
 ## Conclusion
 
