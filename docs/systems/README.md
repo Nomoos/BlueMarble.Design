@@ -36,6 +36,8 @@ guidelines for BlueMarble.
 - **[Social Interaction and Settlement Management System](social-interaction-settlement-system.md)** - Comprehensive system for influence-based territorial control, diplomacy, and federations
 - **[Social Interaction API](api-social-interaction.md)** - RESTful API for settlements, diplomacy, and federations
 - **[Economy Systems](economy-systems.md)** - Economic balance and trading mechanics
+- **[Achievement and Reputation System](achievement-reputation-system.md)** - Achievement tracking, reputation management, and reward distribution
+- **[Achievement and Reputation API](api-achievement-reputation.md)** - RESTful API for achievements, reputation, and trust scoring
 - **[Marketplace API](api-marketplace.md)** - Player trading marketplace API specification
 - **[Marketplace Developer Guide](marketplace-developer-guide.md)** - Integration guide for marketplace systems
 - **[Gameplay Systems](gameplay-systems.md)** - Core game mechanics and systems
