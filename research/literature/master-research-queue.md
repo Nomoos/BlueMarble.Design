@@ -21,12 +21,19 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 
 ## Research Status
 
-- **Total Sources Identified:** 9 major collections
-- **Completed:** 9 sources
-- **In Progress:** 0 sources
-- **Pending:** 0 sources
-- **Overall Completion:** 100%
-## Queue Status
+**Overall Completion:** Ongoing - Expanded to include academic research sources
+
+## Queue Status (Updated 2025-01-23)
+
+**Total Sources:** 40 (updated: +1 academic dissertation)  
+**Completed:** 16  
+**In Progress:** 1 (academic dissertation - active source discovery, 50+ related sources cataloged)  
+**Remaining:** 23  
+
+**Latest Addition:** Category 4 - Academic Research Sources (PhD dissertations and theses)  
+**Latest Activity:** Discovered 50+ related academic sources across 12 categories for Kučera dissertation research
+
+**Previous Queue Status:**
 
 **Total Sources:** 39 (updated: +3 from auto-discovery)  
 **Completed:** 16  
@@ -835,9 +842,37 @@ For each source, create:
 
 ---
 
-**Last Updated:** 2025-01-17  
-**Next Source:** Awaiting next assignment or instruction  
-**Status:** Assignment Group 23 COMPLETE - All topics (2/2) and discovered sources (4/4) finished
-**Next Source:** Energy Systems Collection, Historical Maps and Navigation Resources, or Specialized Collections (Deep Web Sources)  
-**Status:** Source documentation complete - All 56 sources catalogued in research/sources/  
-**Documentation Phase:** ✅ Complete - BibTeX bibliography, reading list, and download tracking established
+## Category 4: Academic Research Sources
+
+### Academic Dissertations and Theses
+
+**Purpose:** Track academic research from geoinformatics, cartography, and related fields that provide theoretical foundations and contemporary methodologies for BlueMarble's spatial systems.
+
+14. **Geoinformatics PhD Dissertation - Kučera (2024)** - IN PROGRESS
+    - Status: 📝 In Progress - Source discovery phase active
+    - Document: `academic-analysis-geoinformatics-phd-kucera-2024.md`
+    - Discovered Sources Document: `discovered-sources-geoinformatics-academic-2024.md`
+    - Institution: Palacký University Olomouc, Department of Geoinformatics
+    - Source: https://www.geoinformatics.upol.cz/dprace/phd/kucera24/
+    - Priority: Medium-High
+    - Focus: Cartographic systems, map projections, geodetic coordinate transformations
+    - Relevance: Spherical planet generation, professional cartography, coordinate systems
+    - Lines: 1,086 (expanded with source discovery section)
+    - Discovered Sources: 50+ academic sources cataloged in 12 categories
+    - Date Created: 2025-01-23
+    - Last Updated: 2025-01-23
+    - Next Steps: Access dissertation, acquire priority sources, begin systematic analysis
+
+**Category Status:**
+- Total Academic Sources: 1
+- Completed: 0
+- In Progress: 1 (draft/pending access)
+- Pending: 0
+
+---
+
+**Last Updated:** 2025-01-23  
+**Latest Addition:** Academic research category with PhD dissertation from Palacký University  
+**Next Source:** Complete dissertation analysis once accessed, or continue with Energy Systems Collection  
+**Status:** Master queue expanded to include academic research sources  
+**Documentation Phase:** ✅ Complete - All source types catalogued and tracked
