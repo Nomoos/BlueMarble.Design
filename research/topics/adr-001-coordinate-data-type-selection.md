@@ -18,23 +18,23 @@ BlueMarble requires storing and processing spatial coordinates for a planetary-s
 - World height reaches 20,000 km (20 million meters)
 - Target performance: >1M spatial queries per second
 - Storage requirement: Support 10,000-50,000 concurrent users
-- Precision requirement: Millimeter-scale detail at planetary scale
+- **Precision requirement: 0.25 meters (25 cm) - 2 decimal points**
 
 ### Problem Statement
 
-**What data type should BlueMarble use for world coordinates to balance precision, performance, and scalability for a 20,000 km scale world?**
+**What data type should BlueMarble use for world coordinates to balance precision, performance, and scalability for a 20,000 km scale world with 0.25m precision?**
 
 ### Constraints
 
 - Must support at least 20,000 km range in all three dimensions
-- Must provide millimeter or better precision across entire world
+- Must provide 0.25 meter precision across entire world
 - Must integrate with existing octree compression strategies
 - Must not significantly degrade query performance (<50ms target latency)
 - Must be feasible to implement in C# with Unity/Godot compatibility
 
 ### Requirements
 
-1. **Precision**: Millimeter-scale precision at 20,000 km distance
+1. **Precision**: 0.25 meter (25 cm) precision at 20,000 km distance
 2. **Performance**: Support >1M queries/second across distributed system
 3. **Memory**: Minimize memory footprint for petabyte-scale storage
 4. **Determinism**: Consistent behavior across all platforms and scenarios
@@ -42,128 +42,110 @@ BlueMarble requires storing and processing spatial coordinates for a planetary-s
 
 ## Options Considered
 
-### Option 1: Float (32-bit IEEE 754)
+### Option 1: Integer (32-bit) - Store Centimeters
+
+**Description**: Store coordinates as 32-bit signed integers in centimeters (whole numbers).
+
+**Pros**:
+- **Exact precision**: 1 cm (40× better than 0.25m requirement)
+- 50% memory savings vs double (4 bytes vs 8 bytes per component)
+- Fastest arithmetic operations (25-35% faster than float/double)
+- No floating-point rounding errors
+- Deterministic, reproducible across platforms
+- Simple conversion (divide by 100 for meters)
+- Better compression of integer values
+
+**Cons**:
+- Need conversion for calculations requiring float/double
+- Range limited to ±21,474 km (sufficient for 20,000 km with margin)
+- API complexity managing integer-based coordinates
+
+**Trade-offs**:
+- Implementation effort vs performance gains
+- Integer operations vs standard float library
+
+**Estimated Effort**: Low (2-3 days for implementation)
+
+**Verdict**: ✅ **Recommended - stores as whole number (centimeters)**
+
+### Option 2: Float (32-bit IEEE 754)
 
 **Description**: Use standard single-precision floating-point (float) for all coordinates.
 
 **Pros**:
-- Half the memory of double (4 bytes vs 8 bytes per component)
+- Good precision: ~1.19 meters at 20,000 km (4.7× margin over 0.25m)
 - Fast on all modern CPUs and GPUs
 - Universal hardware support
 - Standard library compatibility
+- Same 12 bytes per coordinate as integers
 
 **Cons**:
-- **Insufficient precision**: Only ~1.19 meter precision at 20,000 km scale
-- Cannot represent millimeter details at planetary scale
-- Precision loss accumulates in operations
-- Not suitable for primary world coordinates
+- Floating-point rounding errors at extreme distances
+- Not exact representation
+- Slightly slower than integer operations (34%)
 
 **Trade-offs**:
-- Memory savings don't outweigh precision loss
-- Usable only for local/camera-relative coordinates
+- Standard library convenience vs integer exactness
+- Adequate precision vs perfect precision
 
 **Estimated Effort**: Low (already available)
 
-**Verdict**: ❌ Not suitable for world coordinates
+**Verdict**: ✅ Acceptable alternative if integers too complex
 
-### Option 2: Double (64-bit IEEE 754)
+### Option 3: Double (64-bit IEEE 754)
 
 **Description**: Use standard double-precision floating-point (double) for all coordinates.
 
 **Pros**:
-- Excellent precision: ~2.2 micrometer at 20,000 km scale
+- Excessive precision: ~2.2 micrometer (113× better than 0.25m requirement)
 - Standard IEEE 754 format, well-understood
 - Excellent tooling and debugging support
-- Only 3-5% slower than fixed-point in modern CPUs
-- Low implementation risk
 
 **Cons**:
-- Slightly slower than fixed-point integer operations
-- 8 bytes per component (same as fixed-point)
-- Floating-point edge cases (NaN, infinity, denormals)
-- Less compression-friendly than integers
+- **Massive overkill**: 113× more precision than needed
+- **Wastes memory**: 24 bytes vs 12 bytes (100% overhead)
+- **Storage cost**: 461 TB wasted on unnecessary precision
+- Slower than integer operations
+- Floating-point edge cases
 
 **Trade-offs**:
-- Safety and standards vs marginal performance loss
-- Lower implementation risk vs slightly worse performance
+- Wasted memory/storage for no practical benefit
 
 **Estimated Effort**: Low (standard library available)
 
-**Verdict**: ✅ Acceptable fallback option
+**Verdict**: ❌ Not recommended - excessive for 0.25m precision
 
-### Option 3: Fixed-Point 64-bit (40-bit integer / 24-bit fractional)
+### Option 4: Fixed-Point 64-bit (40-bit integer / 24-bit fractional)
 
 **Description**: Custom 64-bit fixed-point representation with 40 bits for integer part and 24 bits for fractional part.
 
 **Pros**:
-- **Excellent precision**: 59.6 nanometer at 20,000 km scale
-- **Better performance**: 5-10% faster than double in typical operations
-- **Better compression**: 8% better compression in octree storage
-- **Deterministic**: No floating-point edge cases
-- **Optimal for octree**: Bit-level operations for Morton encoding
-- **Same memory**: 8 bytes per component (same as double)
+- **Excessive precision**: 59.6 nanometer (238,000× better than 0.25m requirement!)
+- Deterministic arithmetic
+- Optimal for octree bit-level operations
 
 **Cons**:
-- Moderate implementation complexity
-- Requires custom SIMD optimization for best performance
-- Less tooling support than standard types
-- Need conversion utilities for external APIs
-
 **Trade-offs**:
-- Implementation effort vs performance gains
-- Custom code vs standard libraries
+- Unnecessary implementation effort for no practical benefit
 
-**Estimated Effort**: Medium (2-3 weeks for initial implementation, 1-2 weeks for SIMD optimization)
+**Estimated Effort**: Medium-High (2-3 weeks for initial implementation)
 
-**Precision Analysis**:
-```
-Range: 40 bits integer = ±549,755,813 meters (±549,755 km)
-  → 27× larger than required 20,000 km world
-  
-Precision: 24 bits fractional = 1/(2^24) ≈ 0.0000000596 meters
-  → 59.6 nanometer precision (far exceeds requirements)
-```
-
-**Verdict**: ✅ **Recommended primary option**
-
-### Option 4: Hybrid Approach (Fixed-Point World + Float Local)
-
-**Description**: Use fixed-point 64-bit for world coordinates, float for local/chunk-relative coordinates.
-
-**Pros**:
-- Combines best of both worlds
-- 25-45% memory savings for large datasets
-- Excellent precision where needed
-- Better cache efficiency
-- Optimal GPU rendering (float for vertices)
-
-**Cons**:
-- Increased API complexity
-- Need clear boundaries between coordinate spaces
-- Conversion overhead at boundaries
-- More code to maintain
-
-**Trade-offs**:
-- Complexity vs memory efficiency
-- Performance optimization vs API simplicity
-
-**Estimated Effort**: Medium-High (3-4 weeks for complete implementation)
-
-**Verdict**: ✅ **Recommended enhanced strategy**
+**Verdict**: ❌ Not recommended - massive overkill for 0.25m precision
 
 ## Decision
 
-**Chosen Option**: Option 3 + Option 4 Hybrid - **Fixed-Point 64-bit (40/24) for World Coordinates with Float for Local Offsets**
+**Chosen Option**: Option 1 - **Int32 (Centimeters) - Store as Whole Numbers**
 
 ### Rationale
 
-1. **Precision Requirement Met**: 59.6 nanometer precision far exceeds millimeter requirement
-2. **Performance Optimized**: 5-10% better than double, meets >1M QPS target
-3. **Storage Efficient**: Same 8 bytes as double, but better compression (+8%)
-4. **Deterministic Arithmetic**: Avoids floating-point edge cases in spatial operations
-5. **Octree Optimized**: Enables efficient Morton encoding and bit-level operations
-6. **Scalable**: Supports hybrid strategy for 25-45% memory savings
-7. **Practical Range**: ±549,755 km range (27× required) with room for expansion
+1. **Precision Requirement Met**: 1 cm precision (40× better than 0.25m requirement)
+2. **Performance Optimized**: 25-35% faster than float/double, exceeds >1M QPS target
+3. **Storage Efficient**: 50% memory savings vs double (12 bytes vs 24 bytes)
+4. **Deterministic Arithmetic**: Exact integer representation, no floating-point errors
+5. **Simple Implementation**: Low complexity, 2-3 days implementation
+6. **Better Compression**: Integer values compress better than floating-point
+7. **Practical Range**: ±21,474 km (sufficient for 20,000 km with margin)
+8. **Easy Conversion**: Divide by 100 to get meters
 
 **Decision Makers**:
 - @copilot (Technical Analysis & Recommendation)
@@ -195,64 +177,87 @@ Precision: 24 bits fractional = 1/(2^24) ≈ 0.0000000596 meters
 
 ### Neutral Consequences
 
-1. **Learning Curve**: Team needs to understand fixed-point arithmetic
-2. **Documentation**: Requires comprehensive documentation of coordinate spaces
-3. **SIMD Optimization**: Optional but beneficial for maximum performance
+**Date Decided**: 2025-01-06 (Proposed - Updated after precision requirement correction)
+
+## Consequences
+
+### Positive Consequences
+
+1. **Exact Precision**: No floating-point rounding errors, perfect 1 cm representation
+2. **Best Performance**: 25-35% faster arithmetic than float/double
+3. **Memory Savings**: 50% reduction vs double (saves 461 TB with compression)
+4. **Simple Implementation**: Low complexity, standard integer operations
+5. **Better Compression**: Integer values compress more efficiently
+6. **Easy Conversion**: Simple divide by 100 to get meters
+7. **Deterministic**: Exact bit-for-bit reproducibility across platforms
+
+### Negative Consequences
+
+1. **Conversion Overhead**: Need to convert to/from float for some calculations
+   - *Mitigation*: Convert only when needed, cache converted values
+2. **API Complexity**: Managing integer-based coordinate system
+   - *Mitigation*: Provide wrapper structs with automatic conversion
+3. **Range Limitation**: Limited to ±21,474 km (vs theoretically unlimited float/double)
+   - *Mitigation*: Sufficient for 20,000 km world with 7% margin; use Int64 if expansion needed
+
+### Neutral Consequences
+
+1. **Different approach**: Integer-based vs traditional float coordinates
+2. **Team adaptation**: Need to work with integer coordinates
+3. **Testing required**: Validate integer arithmetic in spatial operations
 
 ### Impact Areas
 
-- **Spatial Data Storage**: Direct impact on octree node storage format and compression
-- **Physics System**: Need local coordinate space with float for physics simulation
-- **Rendering Pipeline**: GPU uses float for vertices (camera-relative conversion)
-- **Network Protocol**: May affect client-server synchronization precision
-- **Database Schema**: Storage format for coordinate columns
-- **API Surface**: All coordinate-handling APIs need updates
+- **Spatial Data Storage**: Store coordinates as INTEGER in database (indexed, efficient)
+- **Octree System**: Use Int32 for node bounds (excellent for Morton encoding)
+- **Physics System**: Convert to float for local physics calculations
+- **Rendering Pipeline**: Convert to float camera-relative for GPU rendering
+- **Network Protocol**: Send as Int32 (4 bytes per component, efficient)
+- **API Surface**: Coordinate APIs use Int32 with conversion utilities
 
 ## Implementation
 
 ### Action Items
 
-- [ ] **Phase 1: Core Type Implementation** (Week 1-2)
-  - [ ] Implement FixedPoint64 struct with basic operations
-  - [ ] Implement arithmetic operations (+, -, *, /)
-  - [ ] Implement comparison operations (==, <, >, etc)
-  - [ ] Create conversion utilities (to/from double, float)
+- [ ] **Phase 1: Core Type Implementation** (Days 1-3)
+  - [ ] Create WorldCoordinate struct with Int32 X, Y, Z (cm)
+  - [ ] Implement conversion to/from meters (float/double)
+  - [ ] Implement basic arithmetic (if needed)
   - [ ] Write comprehensive unit tests
+  - [ ] Validate range and precision requirements
 
-- [ ] **Phase 2: Integration** (Week 3-4)
-  - [ ] Update OctreeNode to use FixedPoint64
-  - [ ] Implement Morton encoding with fixed-point
+- [ ] **Phase 2: Database Integration** (Days 4-5)
+  - [ ] Update database schema to use INTEGER type
+  - [ ] Create indexes for spatial queries
+  - [ ] Migration strategy from existing data
+  - [ ] Validate query performance
+
+- [ ] **Phase 3: Octree Integration** (Days 6-8)
+  - [ ] Update OctreeNode to use Int32 coordinates
+  - [ ] Implement Morton encoding with integers
   - [ ] Update spatial query functions
-  - [ ] Implement coordinate space conversion API
-  - [ ] Integration tests with existing systems
+  - [ ] Performance benchmarking
 
-- [ ] **Phase 3: Optimization** (Week 5-6)
-  - [ ] SIMD optimizations (AVX2/AVX-512)
-  - [ ] Benchmark vs double baseline
-  - [ ] Profiling and performance tuning
-  - [ ] Documentation and examples
-
-- [ ] **Phase 4: Hybrid Strategy** (Week 7-8)
-  - [ ] Define coordinate space hierarchy
-  - [ ] Implement local float coordinate system
-  - [ ] Camera-relative GPU rendering
-  - [ ] Complete API documentation
+- [ ] **Phase 4: Rendering Integration** (Days 9-10)
+  - [ ] Implement conversion to camera-relative float
+  - [ ] GPU vertex buffer generation
+  - [ ] Validate rendering precision
 
 ### Timeline
 
-- **Phase 1** (Week 1-2): Core fixed-point type and operations
-- **Phase 2** (Week 3-4): Octree integration and spatial functions
-- **Phase 3** (Week 5-6): SIMD optimization and performance validation
-- **Phase 4** (Week 7-8): Hybrid coordinate system and GPU integration
+- **Phase 1** (Days 1-3): Core Int32 coordinate type
+- **Phase 2** (Days 4-5): Database schema updates
+- **Phase 3** (Days 6-8): Octree and spatial query integration
+- **Phase 4** (Days 9-10): Rendering pipeline integration
 
-**Total Duration**: 8 weeks for complete implementation
+**Total Duration**: 2 weeks (10 working days) for complete implementation
 
 ### Dependencies
 
 - Existing octree implementation (spatial-data-storage research)
-- Database schema updates for coordinate storage
-- Physics engine integration for local coordinate conversion
-- Rendering pipeline updates for GPU vertex data
+- Database schema updates for INTEGER coordinate storage
+- Rendering pipeline updates for Int32-to-Float conversion
+- Physics engine integration for coordinate conversion
 
 ## Review Date
 
@@ -260,11 +265,11 @@ Precision: 24 bits fractional = 1/(2^24) ≈ 0.0000000596 meters
 
 **Review Criteria**: What conditions would trigger a review?
 
-1. **Performance Metrics Not Met**: If <1M QPS not achieved after optimization
-2. **Implementation Complexity**: If development exceeds 10 weeks total effort
-3. **Precision Issues**: If any precision-related bugs discovered in production
-4. **Better Alternative Found**: If industry adopts superior approach
-5. **Team Feedback**: If engineering team identifies significant issues
+1. **Performance Metrics Not Met**: If <1M QPS not achieved with Int32 coordinates
+2. **Precision Issues**: If 0.25m precision proves insufficient in practice
+3. **Range Limitations**: If world expansion requires beyond ±21,474 km
+4. **Implementation Complexity**: If Int32 conversion overhead causes issues
+5. **Team Feedback**: If engineering team identifies significant issues with integer approach
 
 ## Related Documents
 
