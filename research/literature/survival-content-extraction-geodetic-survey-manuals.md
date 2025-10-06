@@ -839,6 +839,10 @@ During extraction from geodetic survey manuals, the following additional sources
    - Spatial Reference Systems database
    - Datum transformation grids
 
+4. **Koníček PhD Thesis (2024)** - Palacký University Olomouc, Department of Geoinformatics
+   - URL: https://www.geoinformatics.upol.cz/dprace/phd/konicek24/
+   - Research on cartographic projections and geoinformatics applications
+
 ---
 
 **Document Status:** Completed  
