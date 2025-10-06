@@ -16,13 +16,14 @@ BlueMarble requires storing and processing spatial coordinates for a planetary-s
 
 - BlueMarble targets petabyte-scale 3D material storage using octree data structures
 - World height reaches 20,000 km (20 million meters)
+- **Primary use case**: Geological simulations and other scientific simulations
 - Target performance: >1M spatial queries per second
 - Storage requirement: Support 10,000-50,000 concurrent users
 - **Precision requirement: 0.25 meters (25 cm) - 2 decimal points**
 
 ### Problem Statement
 
-**What data type should BlueMarble use for world coordinates to balance precision, performance, and scalability for a 20,000 km scale world with 0.25m precision?**
+**What data type should BlueMarble use for world coordinates to balance precision, performance, and scalability for geological simulations at 20,000 km scale world with 0.25m precision?**
 
 ### Constraints
 
@@ -48,17 +49,18 @@ BlueMarble requires storing and processing spatial coordinates for a planetary-s
 
 **Pros**:
 - **Exact precision**: 1 cm (40× better than 0.25m requirement)
+- **Preferred for geological simulations**: Integer math eliminates floating-point drift
+- **Preferred for scientific simulations**: Deterministic, reproducible results
 - 50% memory savings vs double (4 bytes vs 8 bytes per component)
 - Fastest arithmetic operations (25-35% faster than float/double)
 - No floating-point rounding errors
-- Deterministic, reproducible across platforms
-- Simple conversion (divide by 100 for meters)
+- Simple conversion (divide by 100 for meters when needed)
 - Better compression of integer values
 
 **Cons**:
-- Need conversion for calculations requiring float/double
+- Need conversion for some calculations (minor overhead)
 - Range limited to ±21,474 km (sufficient for 20,000 km with margin)
-- API complexity managing integer-based coordinates
+- Rendering requires conversion to float (but rendering doesn't matter - simulations do)
 
 **Trade-offs**:
 - Implementation effort vs performance gains
@@ -157,35 +159,44 @@ BlueMarble requires storing and processing spatial coordinates for a planetary-s
 
 ### Positive Consequences
 
-1. **Superior Precision**: Sub-micrometer precision ensures no quality loss at any scale
-2. **Better Performance**: 5-10% improvement in spatial queries supports scalability goals
-3. **Improved Compression**: 8% better octree compression reduces storage costs
-4. **Deterministic Behavior**: Eliminates floating-point edge case bugs
-5. **Memory Efficient**: Hybrid approach saves 25-45% memory in large datasets
-6. **Future-Proof**: 27× headroom allows for larger worlds without changes
+1. **Exact Precision**: No floating-point rounding errors, perfect 1 cm representation
+2. **Optimal for Simulations**: Integer coordinates preferred for geological and scientific simulations
+3. **Best Performance**: 25-35% faster arithmetic than float/double
+4. **Memory Savings**: 50% reduction vs double (saves 461 TB with compression)
+5. **Deterministic Behavior**: Exact bit-for-bit reproducibility eliminates simulation drift
+6. **Simple Implementation**: Low complexity, standard integer operations
+7. **Better Compression**: Integer values compress more efficiently
+8. **Easy Conversion**: Simple divide by 100 to get meters when needed
 
 ### Negative Consequences
 
-1. **Implementation Effort**: Requires 2-3 weeks for core implementation
-   - *Mitigation*: Can phase in gradually, starting with core types
-2. **Testing Burden**: Need comprehensive testing of custom arithmetic
-   - *Mitigation*: Develop robust test suite with edge cases
-3. **API Complexity**: Hybrid approach adds coordinate space conversions
+1. **Conversion Overhead**: Need to convert to/from float for some calculations
+   - *Mitigation*: Convert only when needed, cache converted values
+   - *Note*: Simulations use integers directly; only rendering needs conversion
+2. **Rendering Conversion**: GPU rendering requires float conversion
+   - *Mitigation*: Convert to camera-relative float on-demand
+   - *Note*: Rendering doesn't matter - simulation precision matters
+3. **Range Limitation**: Limited to ±21,474 km (vs theoretically unlimited float/double)
+   - *Mitigation*: Sufficient for 20,000 km world with 7% margin; use Int64 if expansion needed
    - *Mitigation*: Provide clear API boundaries and automatic conversions
 4. **External Integration**: Need conversion for third-party libraries
    - *Mitigation*: Implement efficient conversion utilities
 
 ### Neutral Consequences
 
-**Date Decided**: 2025-01-06 (Proposed - Updated after precision requirement correction)
+1. **Different approach**: Integer-based vs traditional float coordinates
+2. **Team adaptation**: Need to work with integer coordinates in simulations
+3. **Testing required**: Validate integer arithmetic in spatial operations
 
-## Consequences
+### Impact Areas
 
-### Positive Consequences
-
-1. **Exact Precision**: No floating-point rounding errors, perfect 1 cm representation
-2. **Best Performance**: 25-35% faster arithmetic than float/double
-3. **Memory Savings**: 50% reduction vs double (saves 461 TB with compression)
+- **Geological Simulations**: Primary beneficiary - exact integer calculations
+- **Scientific Simulations**: Deterministic, reproducible results critical for accuracy
+- **Spatial Data Storage**: Store coordinates as INTEGER in database (indexed, efficient)
+- **Octree System**: Use Int32 for node bounds (excellent for Morton encoding)
+- **Rendering Pipeline**: Convert to float camera-relative for GPU (secondary concern)
+- **Network Protocol**: Send as Int32 (4 bytes per component, efficient)
+- **API Surface**: Coordinate APIs use Int32 with conversion utilities
 4. **Simple Implementation**: Low complexity, standard integer operations
 5. **Better Compression**: Integer values compress more efficiently
 6. **Easy Conversion**: Simple divide by 100 to get meters

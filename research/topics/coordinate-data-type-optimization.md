@@ -21,13 +21,14 @@ BlueMarble requires storing and processing spatial coordinates for a world with 
 
 - **World height**: ~20,000 km (20,000,000 meters)
 - **Required precision**: 0.25 meters (25 cm) - 2 decimal points
+- **Primary use case**: Geological simulations and other scientific simulations
 - **Data volume**: Petabyte-scale 3D octree storage
 - **Query frequency**: >1M queries/second target
 - **Concurrent users**: 10,000-50,000 simultaneous
 
 ### Critical Question
 
-**What data type provides optimal balance between precision, performance, and storage for BlueMarble's 20,000 km world scale with 0.25m precision requirement?**
+**What data type provides optimal balance between precision, performance, and storage for BlueMarble's geological simulations at 20,000 km world scale with 0.25m precision requirement?**
 
 ## Key Findings
 
@@ -175,28 +176,39 @@ public struct FixedPoint64
 - **Double** provides 113× excess precision and wastes memory
 - **Fixed-Point** provides 238,000× excess precision - massive overkill
 
-### Finding 5: Hybrid Approach with Integers
+### Finding 5: Integer Coordinates for Simulations (Rendering is Secondary)
 
-**Strategy**: Use integers (cm) for world coordinates, float for GPU rendering
+**Strategy**: Use integers (cm) for all simulations and world storage; convert to float only for GPU rendering
 
 ```csharp
-// World-space coordinates: Integer centimeters
+// Primary: World-space coordinates for simulations (Integer centimeters)
 public struct WorldCoordinate
 {
     public int X, Y, Z; // 12 bytes, stored in centimeters
     
-    // Convert to meters:
+    // For geological simulations: use directly as integers
+    // For physics calculations: convert to meters when needed
     public Vector3 ToMeters() => new Vector3(X / 100f, Y / 100f, Z / 100f);
 }
 
-// GPU vertex data: Float (camera-relative for rendering)
+// Secondary: GPU rendering only (Float camera-relative)
 public struct VertexPosition
 {
     public float X, Y, Z; // 12 bytes
-    // Camera-relative coordinates
-    // Precision: excellent in visible range
+    // Converted from Int32 world coords for rendering
+    // Rendering precision doesn't matter - simulation precision does
 }
 ```
+
+**Primary Use Cases (Integer):**
+- **Geological simulations**: Exact integer math, no drift
+- **Scientific simulations**: Deterministic, reproducible results
+- **World storage**: Database INTEGER type
+- **Network protocol**: 4 bytes per component
+
+**Secondary Use Case (Float conversion):**
+- **GPU rendering**: Convert to camera-relative float only when rendering
+- Rendering precision is not critical - simulation precision is what matters
 
 **Memory Savings Example:**
 
@@ -206,16 +218,17 @@ public struct VertexPosition
 Option 1 - All Double:
 - 100M × 24 bytes = 2.4 GB per dataset
 
-Option 2 - Integer (cm):
+Option 2 - Integer (cm) for simulations:
 - 100M × 12 bytes = 1.2 GB per dataset
 - Savings: 50% reduction (1.2 GB saved)
 
-Option 3 - Integer world + Float GPU:
-- 50M × 12 bytes (world) + 50M × 12 bytes (GPU) = 1.2 GB
-- Savings: 50% reduction, same memory as all integers
+Option 3 - Integer world + Float GPU (separate):
+- World/simulations: Int32 stored once
+- Rendering: Float computed on-demand from Int32
+- No extra storage needed
 ```
 
-**Verdict**: ✅ **Integer (cm) for world, float for GPU - optimal hybrid**
+**Verdict**: ✅ **Integer (cm) for simulations and storage; float only for rendering (secondary)**
 
 ## Evidence
 
@@ -306,7 +319,7 @@ Memory per coord:   12 bytes (Int32/Float) vs 24 bytes (Double)
 
 ## Implications for Design
 
-### Implication 1: Primary Recommendation - Integer (Centimeters)
+### Implication 1: Primary Recommendation - Integer (Centimeters) for Simulations
 
 **Recommendation**: Store world coordinates as 32-bit signed integers in centimeters
 
@@ -316,17 +329,21 @@ Memory per coord:   12 bytes (Int32/Float) vs 24 bytes (Double)
 - **Performance**: Fastest integer arithmetic (25-35% faster than float/double)
 - **Memory**: 12 bytes per coordinate (50% less than double)
 - **Determinism**: Exact representation, no floating-point errors
+- **Simulation-Ready**: Integer coordinates preferred for geological and scientific simulations
 - **Simplicity**: Easy conversion (divide by 100 for meters)
 
 **Design Considerations**:
-- Store coordinates as `int` in centimeters
-- Convert to float/double only when needed for calculations
-- GPU rendering converts to camera-relative float coordinates
+- Store coordinates as `int` in centimeters for all simulations
+- **Geological simulations**: Use Int32 directly (exact, deterministic)
+- **Scientific simulations**: Integer math avoids accumulation errors
+- **Rendering**: Convert to camera-relative float only for GPU (rendering is secondary concern)
 - Database stores as INTEGER type (efficient, indexed)
 
 **Potential Impact**:
 - Storage: 50% reduction vs double (461 TB vs 922 TB with compression)
 - Performance: 25-35% faster arithmetic operations
+- Simulation quality: Exact representation eliminates floating-point drift
+- Geological accuracy: Deterministic calculations across all platforms
 - Precision: Exact 1 cm precision (no rounding errors)
 - Scalability: Better compression and cache efficiency
 
@@ -430,10 +447,12 @@ Memory per coord:   12 bytes (Int32/Float) vs 24 bytes (Double)
 
 ## Recommended Decision
 
-### Primary: Int32 (Centimeters) - Store as Whole Numbers
+### Primary: Int32 (Centimeters) - Store as Whole Numbers for Simulations
 
 **Justification**:
 - ✅ Exact precision (1 cm = 40× better than 0.25m requirement)
+- ✅ **Preferred for geological simulations**: Integer coordinates eliminate floating-point drift
+- ✅ **Preferred for scientific simulations**: Deterministic, reproducible calculations
 - ✅ Fastest performance (25-35% faster than float/double)
 - ✅ 50% memory savings vs double (12 bytes vs 24 bytes)
 - ✅ Deterministic arithmetic (no floating-point errors)
@@ -459,4 +478,4 @@ Memory per coord:   12 bytes (Int32/Float) vs 24 bytes (Double)
 
 ---
 
-**Conclusion**: BlueMarble should store world coordinates as **Int32 (centimeters)** - whole numbers. This provides exact 1 cm precision (far exceeding the 0.25m requirement), fastest performance, and 50% memory savings compared to double. Convert to float/double only when needed for calculations, and use float for GPU rendering (camera-relative).
+**Conclusion**: BlueMarble should store world coordinates as **Int32 (centimeters)** - whole numbers. This provides exact 1 cm precision (far exceeding the 0.25m requirement), fastest performance, and 50% memory savings compared to double. **Integer coordinates are preferred for geological and other simulations** where deterministic, exact calculations matter. Rendering (float conversion) is a secondary concern - convert to camera-relative float only when needed for GPU rendering.

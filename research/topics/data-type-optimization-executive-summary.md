@@ -10,18 +10,21 @@
 
 ## The Problem
 
-BlueMarble needs to store coordinates for a world up to **20,000 km** in scale while maintaining **0.25 meter (25 cm) precision** for detailed simulation. The choice between float, double, fixed-point, and integer data types impacts:
+BlueMarble needs to store coordinates for a world up to **20,000 km** in scale while maintaining **0.25 meter (25 cm) precision** for **geological and scientific simulations**. The choice between float, double, fixed-point, and integer data types impacts:
 
 - Precision (can we represent 25 cm details?)
+- Simulation accuracy (deterministic calculations matter)
 - Performance (CPU speed, memory bandwidth)
 - Storage (petabyte-scale datasets)
 - Scalability (>1M queries/second target)
+
+**Note**: Rendering precision doesn't matter - simulation precision does.
 
 ---
 
 ## Quick Answer
 
-### ✅ Recommended: Int32 (Store as Centimeters)
+### ✅ Recommended: Int32 (Store as Centimeters) for Simulations
 
 ```
 Structure: 32-bit signed integer storing centimeters
@@ -32,16 +35,20 @@ Memory:    4 bytes per component (50% savings vs double)
 
 **Why?**
 - ✅ Exact precision (1 cm, no floating-point errors)
+- ✅ **Preferred for geological simulations** (integer math, no drift)
+- ✅ **Preferred for scientific simulations** (deterministic results)
 - ✅ 25-35% faster arithmetic than float/double
 - ✅ 50% memory savings (12 bytes vs 24 bytes per coordinate)
 - ✅ Better compression of integer values
 - ✅ Simple conversion (divide by 100 for meters)
-- ✅ Low implementation complexity (2-3 days)
+- ✅ Low implementation complexity (2 weeks)
 
 **When to use:**
-- World coordinates (planetary scale)
-- Database storage (INTEGER type)
+- Geological simulations (use Int32 directly)
+- Scientific simulations (exact calculations)
+- World coordinates (database storage)
 - Network protocol (4 bytes per component)
+- **Rendering**: Convert to float only for GPU (rendering doesn't matter)
 
 ---
 
@@ -88,17 +95,28 @@ Use case:  None - completely unnecessary
 
 ---
 
-## Hybrid Strategy (Optimal Approach)
+## Implementation Strategy (Simulations First, Rendering Secondary)
 
-Use integers for world storage, float for GPU rendering:
+Use integers for simulations and world storage; convert to float only for rendering:
 
 ```csharp
-// World coordinates (database, network)
+// PRIMARY: Geological and scientific simulations (Integer centimeters)
 WorldPosition: int[3]        // 12 bytes, stored in centimeters
+                            // Use directly in simulations
+                            // Exact, deterministic calculations
 
-// GPU rendering (camera-relative)
-VertexPosition: float[3]     // 12 bytes, converted for rendering
+// SECONDARY: GPU rendering only (Float camera-relative)
+VertexPosition: float[3]     // 12 bytes, converted from Int32 for rendering
+                            // Rendering precision doesn't matter
+                            // Simulation precision matters
 ```
+
+**Priority Order:**
+1. **Geological simulations**: Use Int32 directly (exact integer math)
+2. **Scientific simulations**: Use Int32 directly (deterministic)
+3. **World storage**: Store as Int32 (database INTEGER type)
+4. **Network protocol**: Send as Int32 (efficient)
+5. **Rendering**: Convert to float on-demand (secondary concern)
 
 **Memory Impact**: 50% reduction vs double (12 bytes vs 24 bytes per coordinate)
 
@@ -146,11 +164,13 @@ Total: 2 weeks (10 working days) for complete implementation
 ## Key Takeaways
 
 1. **Precision requirement corrected** - 0.25m, not millimeter-scale
-2. **Int32 is perfect** - Exact 1 cm precision, 40× better than needed
-3. **Float is acceptable** - 1.19m precision with 4.7× margin
-4. **Double is overkill** - 113× excess precision, wastes 50% memory
-5. **Fixed-Point unnecessary** - 238,000× excess precision, complex for no benefit
-6. **Store as whole numbers** - Centimeters (Int32) for exact representation
+2. **Int32 is perfect for simulations** - Exact 1 cm precision, 40× better than needed
+3. **Geological simulations prefer integers** - No floating-point drift, deterministic
+4. **Rendering doesn't matter** - Convert to float only for GPU (secondary concern)
+5. **Float is acceptable alternative** - 1.19m precision with 4.7× margin
+6. **Double is overkill** - 113× excess precision, wastes 50% memory
+7. **Fixed-Point unnecessary** - 238,000× excess precision, complex for no benefit
+8. **Store as whole numbers** - Centimeters (Int32) for exact representation
 
 ---
 
@@ -191,4 +211,4 @@ Total: 2 weeks (10 working days) for complete implementation
 
 ---
 
-**Recommendation**: Store world coordinates as **Int32 (centimeters)** - whole numbers. This provides exact 1 cm precision (40× better than 0.25m requirement), fastest performance (25-35% faster), and 50% memory savings vs double.
+**Recommendation**: Store world coordinates as **Int32 (centimeters)** - whole numbers. This provides exact 1 cm precision (40× better than 0.25m requirement), fastest performance (25-35% faster), and 50% memory savings vs double. **Integer coordinates are preferred for geological and other simulations** where exact, deterministic calculations matter. Rendering (float conversion) is a secondary concern - convert to camera-relative float only when needed for GPU rendering.
