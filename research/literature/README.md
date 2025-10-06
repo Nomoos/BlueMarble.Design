@@ -13,6 +13,15 @@ This directory contains formal references, summaries, and literature reviews for
 - [example-topic.md](example-topic.md) - Example literature review format
 - [survival-guides-knowledge-domains-research.md](survival-guides-knowledge-domains-research.md) - Analysis of survival knowledge systems from awesome-survival repository
 
+## Algorithm Analysis
+
+Comprehensive analysis of algorithms relevant to BlueMarble development:
+
+1. [algorithm-analysis-fast-poisson-disk-sampling.md](algorithm-analysis-fast-poisson-disk-sampling.md) - Fast Poisson Disk Sampling for spatial distribution
+2. [algorithm-analysis-jump-point-search.md](algorithm-analysis-jump-point-search.md) - Jump Point Search pathfinding optimization
+3. [algorithm-analysis-marching-cubes.md](algorithm-analysis-marching-cubes.md) - Marching Cubes for 3D surface extraction
+4. [algorithm-analysis-multi-flow-direction.md](algorithm-analysis-multi-flow-direction.md) - Multi-Flow Direction algorithms for hydrological modeling (Freeman 1991, Quinn 1991/1995)
+
 ## Research Management
 
 1. [master-research-queue.md](master-research-queue.md) - Master tracking document for all research sources and priorities
