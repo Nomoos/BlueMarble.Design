@@ -815,6 +815,7 @@ No additional sources discovered during extraction of map projection mathematics
 
 - [survival-content-extraction-historical-navigation.md](./survival-content-extraction-historical-navigation.md) - Parent research that discovered this topic
 - [survival-content-extraction-geodetic-survey-manuals.md](./survival-content-extraction-geodetic-survey-manuals.md) - Datum and coordinate systems
+- [academic-thesis-pohankova-geoinformatics.md](./academic-thesis-pohankova-geoinformatics.md) - PhD research in geoinformatics (pending analysis)
 - [../spatial-data-storage/](../spatial-data-storage/) - Spatial database with projection support
 
 ### External Resources

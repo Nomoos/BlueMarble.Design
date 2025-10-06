@@ -61,6 +61,10 @@ Curated reading list for BlueMarble research and development.
 - [ ] **Historical Maps and Navigation Resources** - Cartography, celestial navigation, surveying
 - [ ] **Specialized Collections (Deep Web Sources)** - Niche technical resources
 
+### Geographic and Cartographic Research
+
+- [ ] **PhD Dissertation in Geoinformatics** (Pohánková, 2025) - Academic research from Palacký University Olomouc on geodesy, cartography, spatial analysis, or remote sensing - potentially relevant for BlueMarble's spherical planet generation, map projections, and spatial data systems
+
 ### Development Process
 
 - [ ] **Agile Game Development** - Sprint planning, iteration process
