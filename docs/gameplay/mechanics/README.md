@@ -21,6 +21,9 @@ Mechanics documents provide formal specifications including:
 - **[Terraforming](./terraforming.md)** - Landscape modification and environmental engineering
 - **[Trade System](./trade-system.md)** - Player-to-player and NPC trading mechanics
 - **[Anti-Exploitation](./anti-exploitation.md)** - Protection systems and security mechanisms
+### Social Interaction Systems
+
+- **[Social Interaction Mechanics](./social-interaction-mechanics.md)** - Player-facing mechanics for settlements, diplomacy, and federations
 
 ### Crafting System
 
