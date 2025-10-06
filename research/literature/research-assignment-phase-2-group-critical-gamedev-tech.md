@@ -713,24 +713,40 @@ decisions. This research covers protocol comparison, use cases, and hybrid appro
 - [ ] Final group summary written
 - [ ] Group marked COMPLETE
 
-## Discovered Sources Log
+## New Sources Discovery
 
-Sources discovered while processing this group will be logged here for Phase 3:
+During your research, if you discover additional valuable sources, log them here:
 
-**Template:**
+### Discovery Template
 
-```text
-[Number]. [Source Name]
-   - Discovered from: [Which source in this group]
-   - Priority: [Critical/High/Medium/Low]
-   - Category: [GameDev-Tech/Design/etc.]
-   - Estimated Effort: [X-Y hours]
-   - Rationale: [Brief description]
+```markdown
+**Source Name:** [Name of discovered source]
+**Discovered From:** [Which source in this group led to this discovery]
+**Priority:** [Critical/High/Medium/Low]
+**Category:** [GameDev-Tech/GameDev-Design/GameDev-Content/Survival/Architecture/Other]
+**Rationale:** [Why this source is valuable for BlueMarble - be specific about applications]
+**Estimated Effort:** [X-Y hours needed to analyze]
+**Reference:** [URL, book citation, or other source identifier]
 ```
 
-**Discoveries:**
+### Example
 
-(To be filled during research)
+**Source Name:** Spatial Hashing for MMO Interest Management
+**Discovered From:** EVE Online 10K Player Battle Architecture - while researching entity management
+**Priority:** High
+**Category:** GameDev-Tech
+**Rationale:** Advanced spatial partitioning technique for managing thousands of entities in proximity checks,
+directly applicable to BlueMarble's planet-scale entity management and view culling
+**Estimated Effort:** 4-6 hours
+**Reference:** Academic paper or GDC talk URL
+
+### Discoveries Log
+
+**Instructions:** Add discovered sources below using the template format. These will be aggregated for Phase 3 planning.
+
+---
+
+*No sources discovered yet. This section will be populated as research progresses through each batch.*
 
 ---
 
