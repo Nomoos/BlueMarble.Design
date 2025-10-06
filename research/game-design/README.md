@@ -437,26 +437,49 @@ profession systems and economic simulation.
 - Supports social structure and economic interdependence gameplay
 
 ### [Slavery and Labor Systems Research](step-2-system-research/step-2.4-historical-research/slavery-and-labor-systems-research.md)
-Comprehensive research document examining slavery, slave trades, and forced labor systems from historical, economic, and game design perspectives. Provides educational context while informing ethical game design decisions for BlueMarble's economic and social simulation systems.
+Comprehensive research document examining slavery, slave trades, forced labor systems, historic auctions, and piracy from historical, economic, and game design perspectives. Provides educational context while informing ethical game design decisions for BlueMarble's economic and social simulation systems.
 
 **Key Topics**:
 - Historical slavery systems across civilizations (Ancient, Medieval, Islamic, East Asian)
 - Slave trade networks (Trans-Atlantic, Trans-Saharan, Indian Ocean)
+- Historic auction systems and markets (Roman, Medieval, Islamic, Colonial)
+- Piracy and maritime raiding (Ancient, Barbary Corsairs, Caribbean Golden Age, Asian)
 - Alternative labor systems (indentured servitude, serfdom, debt peonage, guild apprenticeship)
-- Slavery representation in video games (Civilization, Paradox games, RPGs)
+- Slavery and piracy representation in video games (Civilization, Paradox games, Assassin's Creed, Sea of Thieves)
 - Ethical game design considerations and industry guidelines
-- Implementation recommendations for BlueMarble using alternative labor systems
+- Implementation recommendations for BlueMarble using alternative systems
 
 **Historical Coverage**:
 - Ancient World (Mesopotamia, Egypt, Greece, Rome)
-- Medieval European systems (serfdom vs. slavery, thrall systems)
-- Islamic world systems (Mamluk military slavery, domestic slavery)
-- East Asian systems (Chinese and Japanese historical labor)
+- Medieval European systems (serfdom vs. slavery, thrall systems, Viking raids)
+- Islamic world systems (Mamluk military slavery, domestic slavery, Barbary Corsairs)
+- East Asian systems (Chinese and Japanese historical labor, Asian piracy)
 - Slave trade economics and mechanics across 1,300+ years
+- Auction market structures from ancient Rome to colonial Americas
+- Piracy from ancient Mediterranean through Golden Age Caribbean
 - Economic analysis and justifications (historical and modern critiques)
 
+**Auction Systems Research**:
+- Roman slave markets and auction mechanics
+- Medieval European trading patterns
+- Islamic market organization and legal frameworks
+- Trans-Atlantic colonial auction systems (scramble sales, auction blocks)
+- Pricing factors and economic instruments
+- Implementation recommendations for goods/property auctions (not people)
+
+**Piracy Research**:
+- Ancient Mediterranean and Viking raids
+- Barbary Corsairs and ransom systems
+- Caribbean Golden Age piracy (1650s-1730s)
+- Asian piracy confederations
+- Economic motivations and plunder distribution
+- Naval combat and suppression efforts
+- Game implementations (AC IV: Black Flag, Sea of Thieves, Sid Meier's Pirates!)
+
 **Game Design Analysis**:
-- Successful approaches (Freedom Cry, This War of Mine)
+- Successful approaches (Freedom Cry, This War of Mine, AC IV: Black Flag)
+- Piracy game mechanics that balance history and ethics
+- Auction systems in economic simulations
 - Problematic representations to avoid
 - Player agency and moral choice systems
 - Historical accuracy vs. ethical gameplay balance
@@ -468,14 +491,20 @@ Comprehensive research document examining slavery, slave trades, and forced labo
 - Guild apprenticeship as skill-training mechanism
 - Serfdom/feudal obligations for NPCs (not players)
 - Contract labor and debt systems with protections
+- Auction systems for goods, property, and contracts (not people)
+- Maritime trade with piracy as player career option
+- Naval combat and plunder distribution mechanics
+- Consequence systems for piracy with legal alternatives
 - Liberation and reform gameplay opportunities
 - Historical education through in-game documentation
 
 **Implementation Guidelines**:
 - What to avoid (ownership of people, exploitation optimization, racialized systems)
-- Positive elements to include (liberation, economic justice, social mobility)
+- Positive elements to include (liberation, economic justice, social mobility, maritime trade)
 - Integration with existing skill, guild, and economic systems
-- Four-phase implementation plan (12 months)
+- Naval systems and piracy mechanics with ethical considerations
+- Auction house businesses for player-driven economy
+- Multi-phase implementation plan (12+ months)
 - Ethical review and testing procedures
 
 **Applicability to BlueMarble**:
@@ -483,8 +512,11 @@ Comprehensive research document examining slavery, slave trades, and forced labo
 - Provides alternatives to direct slavery representation
 - Supports guild and apprenticeship system implementation
 - Enables complex economic gameplay without exploitation mechanics
+- Adds maritime trade and naval career options
+- Creates auction systems for player-driven economy
 - Integrates with existing profession and skill research
 - Supports player-driven narratives about social justice and reform
+- Enables piracy gameplay with consequences and alternatives
 
 ### [Mortal Online 2 Material System Analysis](mortal-online-2-material-system-research.md)
 Comprehensive analysis of Mortal Online 2's material grading and crafting systems for BlueMarble's material quality mechanics.
