@@ -11,6 +11,10 @@ and typically 200-400 lines.
 
 ### Available Topics
 
+- **[Data Type Optimization - Executive Summary](topics/data-type-optimization-executive-summary.md)** - 
+  Quick reference guide comparing float, double, and fixed-point for 20,000 km world. Includes decision matrix, 
+  performance benchmarks, and implementation timeline. **Start here for overview.**
+
 - **[ADR-001: Coordinate Data Type Selection](topics/adr-001-coordinate-data-type-selection.md)** - 
   Architectural Decision Record proposing Fixed-Point 64-bit (40/24) for world coordinates with hybrid Float strategy. 
   Documents decision rationale, consequences, implementation timeline, and review criteria
