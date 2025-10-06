@@ -17,8 +17,8 @@ This document provides a high-level summary of all research sources tracked in t
 |----------|------------|-------------------|---------|-------|
 | **Survival Collections** | 10 | 10 | 3 | 13 |
 | **Books & Technical Resources** | N/A* | 2 | 58 | 60 |
-| **Online Resources** | N/A* | Ongoing | - | 25+ |
-| **TOTAL** | **10** | **12** | **61** | **78+** |
+| **Online Resources** | N/A* | Ongoing | - | 26+ |
+| **TOTAL** | **10** | **12** | **61** | **79+** |
 
 \* Books and online resources are not physically downloaded; they are accessed as needed or already available.
 
@@ -85,8 +85,8 @@ This document provides a high-level summary of all research sources tracked in t
 - Specialized topics
 
 **Documentation:** All 60 books catalogued in:
-- `sources.bib` (43 BibTeX entries)
-- `reading-list.md` (94 tracked items including online resources)
+- `sources.bib` (44 BibTeX entries)
+- `reading-list.md` (95 tracked items including online resources)
 
 ---
 
@@ -98,6 +98,7 @@ This document provides a high-level summary of all research sources tracked in t
 - Godot Engine, Unity Learn, Unreal Engine Documentation
 - Game Programming Patterns (online edition)
 - Gamasutra/Game Developer articles
+- Palacký University Olomouc - Geoinformatics Publications (academic research)
 
 **Open Source Projects:**
 - TrinityCore, CMaNGOS, AzerothCore (MMORPG emulators)
