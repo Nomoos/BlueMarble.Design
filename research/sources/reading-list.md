@@ -2,9 +2,9 @@
 
 Curated reading list for BlueMarble research and development.
 
-**Last Updated:** 2025-01-17  
-**Total Sources:** 78 (60 books + 13 survival collections + 5 online resources)  
-**Completed Analysis:** 12 sources  
+**Last Updated:** 2025-10-06  
+**Total Sources:** 91 (73 books + 13 survival collections + 5 online resources)  
+**Completed Analysis:** 20 sources (includes 8 fantasy literature sources)  
 **Status:** Active - Tracking all research literature sources
 
 ---
@@ -44,6 +44,26 @@ Curated reading list for BlueMarble research and development.
 - [ ] **Players Making Decisions** - Player psychology, meaningful choices, risk/reward
 - [ ] **Fundamentals of Game Design** - Genre conventions, player types, core mechanics
 - [ ] **Games, Design and Play** - Iterative design, playtesting, prototyping
+
+### Fantasy Literature for World-Building and Narrative Design
+
+**Reference Document:** [Fantasy Literature Sources](../game-design/step-1-foundation/fantasy-literature-sources.md)
+
+- [x] **"The Lord of the Rings"** by J.R.R. Tolkien - World-building, faction systems, environmental storytelling (analyzed in fantasy-literature-sources.md)
+- [x] **"Ranger's Apprentice"** series by John Flanagan - Apprenticeship system, skill progression, stealth mechanics (analyzed in fantasy-literature-sources.md)
+- [x] **"The Wheel of Time"** by Robert Jordan - Structured magic system, factional warfare, political simulation (analyzed in fantasy-literature-sources.md)
+- [x] **"Mistborn"** trilogy by Brandon Sanderson - Resource-based powers, heist mechanics, class revolution (analyzed in fantasy-literature-sources.md)
+- [x] **"The Name of the Wind"** by Patrick Rothfuss - Academic progression, economic survival, multiple skill trees (analyzed in fantasy-literature-sources.md)
+- [x] **"The Stormlight Archive"** by Brandon Sanderson - Environmental events, bond mechanics, oath-based progression (analyzed in fantasy-literature-sources.md)
+- [x] **"The First Law"** trilogy by Joe Abercrombie - Moral ambiguity, realistic combat consequences, political intrigue (analyzed in fantasy-literature-sources.md)
+- [x] **"The Broken Earth"** trilogy by N.K. Jemisin - **HIGHLY RELEVANT** - Geological powers, apocalyptic events, class oppression (analyzed in fantasy-literature-sources.md)
+- [ ] **"The Earthsea Cycle"** by Ursula K. Le Guin - True names as power, wizard training, environmental balance
+- [ ] **"The Farseer Trilogy"** by Robin Hobb - Assassination gameplay, animal bonding, character growth
+- [ ] **"Discworld"** series by Terry Pratchett - Guild systems, city management, satirical world-building
+- [ ] **"The Goblin Emperor"** by Katherine Addison - Court politics, cultural differences, outsider perspective
+- [ ] **"The Poppy War"** by R.F. Kuang - Military academy, drug-based magic, war consequences
+
+**Application to BlueMarble:** These fantasy sources provide insights for apprenticeship systems, geological power mechanics (especially Jemisin), faction dynamics, skill progression, quest design, and environmental storytelling that can be adapted to BlueMarble's sci-fi geological setting.
 
 ### Survival Knowledge Collections
 
@@ -180,6 +200,7 @@ Curated reading list for BlueMarble research and development.
 - [x] **Tabletop RPG Mechanics Overview** - 9 RPGs analyzed (game-design-mechanics-analysis.md, 1,263 lines)
 - [x] **Game Development Resources Overview** - 20+ books organized (game-development-resources-analysis.md, 702 lines)
 - [x] **Online Game Development Resources Catalog** - Active auto-growing list (online-game-dev-resources.md, 880+ lines)
+- [x] **Fantasy Literature Sources** - 8 major fantasy series analyzed for game design application (fantasy-literature-sources.md, 780+ lines)
 
 ### Survival Content Extraction (10 completed)
 

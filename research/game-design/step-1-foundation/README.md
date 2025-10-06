@@ -21,6 +21,7 @@ This step establishes the foundational concepts for BlueMarble's game design, in
 - [From Inspiration to Design Document](from-inspiration-to-design-document.md) - Comprehensive guide on the game design process from initial ideas to formal documentation
 - [Narrative Inspiration: Sci-Fi Mining World](narrative-inspiration-sci-fi-mining-world.md) - Science fiction setting without magic featuring multi-species mining colony, superior race oversight, cloning, and controlled reproduction
 - [Research Sources: Sci-Fi Mining World](sci-fi-mining-sources.md) - Online sources, literature, and references for sci-fi mining world narrative concept
+- [Fantasy Literature Sources](fantasy-literature-sources.md) - Analysis of fantasy literature (Tolkien, Flanagan, Sanderson, Jemisin, etc.) for world-building, narrative design, and game mechanics inspiration
 
 ## Key Concepts
 
