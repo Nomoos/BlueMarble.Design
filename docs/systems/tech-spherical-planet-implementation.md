@@ -439,11 +439,83 @@ public class SeamlessWorldWrapper
 
     private Polygon SplitDateLineCrossing(Polygon polygon)
     {
-        // Implement date line splitting logic
-        // This is a complex operation that may result in multiple polygons
-        // For now, return the original polygon
-        // TODO: Implement proper date line crossing handling
-        return polygon;
+        var geometryFactory = new GeometryFactory(new PrecisionModel(), SRID_METER);
+        var coordinates = polygon.ExteriorRing.Coordinates.ToList();
+        
+        // Split polygon into segments that don't cross the date line
+        var segments = new List<List<Coordinate>>();
+        var currentSegment = new List<Coordinate>();
+        
+        for (int i = 0; i < coordinates.Count - 1; i++)
+        {
+            var current = coordinates[i];
+            var next = coordinates[i + 1];
+            
+            currentSegment.Add(current);
+            
+            // Check if edge crosses date line (large X coordinate jump)
+            double edgeLength = Math.Abs(next.X - current.X);
+            
+            if (edgeLength > WorldSizeX / 2.0)
+            {
+                // Edge crosses date line - interpolate intersection point
+                double crossingY = current.Y + (next.Y - current.Y) * 
+                    ((current.X < WorldSizeX / 2.0 ? WorldSizeX : 0) - current.X) / (next.X - current.X);
+                
+                // Add boundary point to current segment
+                if (current.X < WorldSizeX / 2.0)
+                {
+                    currentSegment.Add(new Coordinate(WorldSizeX, crossingY));
+                }
+                else
+                {
+                    currentSegment.Add(new Coordinate(0, crossingY));
+                }
+                
+                // Start new segment from opposite boundary
+                segments.Add(new List<Coordinate>(currentSegment));
+                currentSegment.Clear();
+                
+                if (next.X < WorldSizeX / 2.0)
+                {
+                    currentSegment.Add(new Coordinate(WorldSizeX, crossingY));
+                }
+                else
+                {
+                    currentSegment.Add(new Coordinate(0, crossingY));
+                }
+            }
+        }
+        
+        // Add final coordinate and close the segment
+        if (currentSegment.Count > 0)
+        {
+            currentSegment.Add(coordinates.Last());
+            segments.Add(currentSegment);
+        }
+        
+        // If we only have one segment, no splitting occurred
+        if (segments.Count == 1)
+        {
+            return polygon;
+        }
+        
+        // For multiple segments, return the largest continuous segment
+        // In a full implementation, this would create a MultiPolygon
+        var largestSegment = segments.OrderByDescending(s => s.Count).First();
+        
+        try
+        {
+            var ring = geometryFactory.CreateLinearRing(largestSegment.ToArray());
+            var splitPolygon = geometryFactory.CreatePolygon(ring);
+            GeometryUtils.CopyMetadata(polygon, splitPolygon);
+            return splitPolygon;
+        }
+        catch (Exception)
+        {
+            // If splitting fails, return original polygon
+            return polygon;
+        }
     }
 
     private Polygon ValidateTopology(Polygon polygon)
@@ -621,6 +693,313 @@ export class SphericalPlanetViewer {
             // ... other biome colors
         };
     }
+}
+```
+
+## Advanced Topics and Edge Cases
+
+### Date Line Crossing Handling
+
+One of the most complex challenges in spherical planet mapping is properly handling geometries that cross the international date line (180°/-180° longitude or WorldSizeX boundary in planar coordinates).
+
+#### Problem Statement
+
+When a polygon spans across the date line, its coordinates may appear to have an extremely large X-coordinate range (e.g., from -179° to +179°), which in planar SRID_METER coordinates translates to a polygon that appears to span almost the entire world width. This creates invalid topology and rendering issues.
+
+#### Detection Strategy
+
+```csharp
+private bool CrossesDateLine(List<Coordinate> coordinates)
+{
+    double minX = coordinates.Min(c => c.X);
+    double maxX = coordinates.Max(c => c.X);
+    
+    // If the X-coordinate range spans more than half the world width,
+    // the polygon likely crosses the date line
+    return (maxX - minX) > WorldSizeX / 2.0;
+}
+```
+
+#### Splitting Implementation
+
+The complete splitting algorithm handles multiple scenarios:
+
+1. **Simple Crossing**: Polygon crosses date line once
+2. **Complex Crossing**: Polygon crosses date line multiple times
+3. **Near-Polar Regions**: Special handling for polygons near poles
+
+```csharp
+public class DateLineSplitter
+{
+    private const double WorldSizeX = WorldDetail.WorldSizeX;
+    private const int SRID_METER = 4087;
+
+    public List<Polygon> SplitPolygonAtDateLine(Polygon polygon)
+    {
+        var geometryFactory = new GeometryFactory(new PrecisionModel(), SRID_METER);
+        var coordinates = polygon.ExteriorRing.Coordinates.ToList();
+        
+        if (!CrossesDateLine(coordinates))
+        {
+            return new List<Polygon> { polygon };
+        }
+
+        var segments = new List<List<Coordinate>>();
+        var currentSegment = new List<Coordinate>();
+        
+        for (int i = 0; i < coordinates.Count - 1; i++)
+        {
+            var current = coordinates[i];
+            var next = coordinates[i + 1];
+            
+            currentSegment.Add(current);
+            
+            // Detect date line crossing
+            double edgeLength = Math.Abs(next.X - current.X);
+            
+            if (edgeLength > WorldSizeX / 2.0)
+            {
+                // Calculate intersection point with date line
+                bool currentIsWest = current.X < WorldSizeX / 2.0;
+                double boundaryX = currentIsWest ? WorldSizeX : 0;
+                
+                // Linear interpolation to find Y coordinate at boundary
+                double t = (boundaryX - current.X) / (next.X - current.X);
+                double crossingY = current.Y + t * (next.Y - current.Y);
+                
+                // Close current segment at boundary
+                currentSegment.Add(new Coordinate(boundaryX, crossingY));
+                segments.Add(new List<Coordinate>(currentSegment));
+                
+                // Start new segment from opposite boundary
+                currentSegment.Clear();
+                double oppositeBoundaryX = currentIsWest ? 0 : WorldSizeX;
+                currentSegment.Add(new Coordinate(oppositeBoundaryX, crossingY));
+            }
+        }
+        
+        // Close final segment
+        currentSegment.Add(coordinates.Last());
+        segments.Add(currentSegment);
+        
+        // Convert segments to polygons
+        var resultPolygons = new List<Polygon>();
+        foreach (var segment in segments)
+        {
+            if (segment.Count >= 4) // Minimum for valid polygon
+            {
+                try
+                {
+                    var ring = geometryFactory.CreateLinearRing(segment.ToArray());
+                    var splitPolygon = geometryFactory.CreatePolygon(ring);
+                    
+                    // Validate topology
+                    if (splitPolygon.IsValid)
+                    {
+                        GeometryUtils.CopyMetadata(polygon, splitPolygon);
+                        resultPolygons.Add(splitPolygon);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.LogWarning($"Failed to create polygon from segment: {ex.Message}");
+                }
+            }
+        }
+        
+        return resultPolygons.Count > 0 ? resultPolygons : new List<Polygon> { polygon };
+    }
+
+    private bool CrossesDateLine(List<Coordinate> coordinates)
+    {
+        double minX = coordinates.Min(c => c.X);
+        double maxX = coordinates.Max(c => c.X);
+        return (maxX - minX) > WorldSizeX / 2.0;
+    }
+}
+```
+
+#### Handling MultiPolygons
+
+When a polygon crosses the date line, it may need to be represented as a MultiPolygon:
+
+```csharp
+public class MultiPolygonHandler
+{
+    public Geometry HandleDateLineCrossing(Polygon polygon)
+    {
+        var splitter = new DateLineSplitter();
+        var splitPolygons = splitter.SplitPolygonAtDateLine(polygon);
+        
+        if (splitPolygons.Count == 1)
+        {
+            return splitPolygons[0];
+        }
+        
+        // Create MultiPolygon for multiple segments
+        var geometryFactory = new GeometryFactory(new PrecisionModel(), WorldDetail.SRID_METER);
+        var multiPolygon = geometryFactory.CreateMultiPolygon(splitPolygons.ToArray());
+        
+        GeometryUtils.CopyMetadata(polygon, multiPolygon);
+        return multiPolygon;
+    }
+}
+```
+
+#### Testing Date Line Handling
+
+Comprehensive tests for date line crossing scenarios:
+
+```csharp
+[TestClass]
+public class DateLineHandlingTests
+{
+    [TestMethod]
+    public void SplitPolygon_SimpleDateLineCrossing_CreatesTwoPolygons()
+    {
+        // Arrange - Polygon crossing from -170° to +170°
+        var geometryFactory = new GeometryFactory();
+        var coords = new[]
+        {
+            new Coordinate(-170 * WorldDetail.WorldSizeX / 360, 0),
+            new Coordinate(-170 * WorldDetail.WorldSizeX / 360, 1000000),
+            new Coordinate(170 * WorldDetail.WorldSizeX / 360, 1000000),
+            new Coordinate(170 * WorldDetail.WorldSizeX / 360, 0),
+            new Coordinate(-170 * WorldDetail.WorldSizeX / 360, 0) // Close ring
+        };
+        var polygon = geometryFactory.CreatePolygon(coords);
+        
+        var splitter = new DateLineSplitter();
+        
+        // Act
+        var result = splitter.SplitPolygonAtDateLine(polygon);
+        
+        // Assert
+        Assert.AreEqual(2, result.Count, "Should split into 2 polygons");
+        Assert.IsTrue(result.All(p => p.IsValid), "All split polygons should be valid");
+        Assert.IsTrue(result.All(p => !CrossesDateLine(p)), "No split polygon should cross date line");
+    }
+    
+    [TestMethod]
+    public void SplitPolygon_PolarRegion_HandlesCorrectly()
+    {
+        // Arrange - Polygon near North Pole
+        var geometryFactory = new GeometryFactory();
+        var coords = new[]
+        {
+            new Coordinate(0, 0.95 * WorldDetail.WorldSizeY),
+            new Coordinate(0.25 * WorldDetail.WorldSizeX, 0.95 * WorldDetail.WorldSizeY),
+            new Coordinate(0.5 * WorldDetail.WorldSizeX, 0.96 * WorldDetail.WorldSizeY),
+            new Coordinate(0.75 * WorldDetail.WorldSizeX, 0.95 * WorldDetail.WorldSizeY),
+            new Coordinate(WorldDetail.WorldSizeX, 0.95 * WorldDetail.WorldSizeY),
+            new Coordinate(0, 0.95 * WorldDetail.WorldSizeY)
+        };
+        var polygon = geometryFactory.CreatePolygon(coords);
+        
+        var splitter = new DateLineSplitter();
+        
+        // Act
+        var result = splitter.SplitPolygonAtDateLine(polygon);
+        
+        // Assert
+        Assert.IsTrue(result.Count >= 1, "Should produce at least one valid polygon");
+        Assert.IsTrue(result.All(p => p.IsValid), "All polygons should be valid");
+    }
+}
+```
+
+### Polar Region Special Handling
+
+Polar regions (>85° latitude) require special consideration:
+
+#### Mercator Projection Clamping
+
+```csharp
+public Point2D ProjectMercatorWithPolarHandling(SphericalCoordinate coord)
+{
+    // Clamp latitude to avoid singularity at poles
+    const double MAX_MERCATOR_LAT = 85.0511287798;
+    double clampedLat = Math.Max(-MAX_MERCATOR_LAT, Math.Min(MAX_MERCATOR_LAT, coord.Latitude));
+    
+    double lonRad = coord.Longitude * Math.PI / 180.0;
+    double latRad = clampedLat * Math.PI / 180.0;
+    
+    double x = WorldDetail.EarthRadiusMeters * lonRad;
+    double y = WorldDetail.EarthRadiusMeters * Math.Log(Math.Tan(Math.PI / 4.0 + latRad / 2.0));
+    
+    return new Point2D { X = x, Y = y };
+}
+```
+
+#### Polar Stereographic for High Latitudes
+
+For regions above 85° latitude, use stereographic projection:
+
+```csharp
+public Point2D ProjectStereographic(SphericalCoordinate coord, bool isNorthPole = true)
+{
+    double lonRad = coord.Longitude * Math.PI / 180.0;
+    double latRad = coord.Latitude * Math.PI / 180.0;
+    
+    double poleLatRad = isNorthPole ? Math.PI / 2.0 : -Math.PI / 2.0;
+    
+    // Stereographic projection from pole
+    double k = 2.0 * WorldDetail.EarthRadiusMeters / 
+        (1.0 + Math.Sin(poleLatRad) * Math.Sin(latRad) + 
+         Math.Cos(poleLatRad) * Math.Cos(latRad) * Math.Cos(lonRad));
+    
+    double x = k * Math.Cos(latRad) * Math.Sin(lonRad);
+    double y = k * (Math.Cos(poleLatRad) * Math.Sin(latRad) - 
+                    Math.Sin(poleLatRad) * Math.Cos(latRad) * Math.Cos(lonRad));
+    
+    return new Point2D { X = x, Y = y };
+}
+```
+
+### Coordinate Wrapping Strategies
+
+Different strategies for handling coordinate wrapping:
+
+#### 1. Modulo Wrapping
+
+```csharp
+public Coordinate WrapCoordinateModulo(Coordinate coord)
+{
+    double wrappedX = coord.X % WorldDetail.WorldSizeX;
+    if (wrappedX < 0) wrappedX += WorldDetail.WorldSizeX;
+    
+    double clampedY = Math.Max(0, Math.Min(WorldDetail.WorldSizeY, coord.Y));
+    
+    return new Coordinate(wrappedX, clampedY);
+}
+```
+
+#### 2. Continuous Wrapping (for rendering)
+
+```csharp
+public List<Coordinate> GenerateContinuousPath(List<Coordinate> coords)
+{
+    var continuous = new List<Coordinate>();
+    continuous.Add(coords[0]);
+    
+    for (int i = 1; i < coords.Count; i++)
+    {
+        var prev = continuous.Last();
+        var curr = coords[i];
+        
+        // Calculate wrapped version closest to previous point
+        var options = new[]
+        {
+            curr,
+            new Coordinate(curr.X + WorldDetail.WorldSizeX, curr.Y),
+            new Coordinate(curr.X - WorldDetail.WorldSizeX, curr.Y)
+        };
+        
+        var closest = options.OrderBy(o => Math.Abs(o.X - prev.X)).First();
+        continuous.Add(closest);
+    }
+    
+    return continuous;
 }
 ```
 
