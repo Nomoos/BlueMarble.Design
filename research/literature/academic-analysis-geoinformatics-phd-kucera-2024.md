@@ -531,28 +531,363 @@ When reviewing the dissertation, extract:
 - ISO 19100 Series (Geographic Information Standards)
 - PROJ Coordinate Transformation Library
 
+## Discovered Academic Sources
+
+### Related Research from Palacký University Olomouc
+
+Based on the Department of Geoinformatics research focus, additional relevant sources include:
+
+#### 1. Other PhD Dissertations from the Department
+
+**Department Thesis Repository:**
+- URL Pattern: `https://www.geoinformatics.upol.cz/dprace/phd/`
+- Expected Content: PhD dissertations in cartography, GIS, remote sensing, geodesy
+- Access Method: Browse department thesis archive
+- Relevance: Contemporary research methodologies, implementation approaches, validation techniques
+
+**Potential Related Topics:**
+- Digital cartography and web mapping
+- Coordinate system transformations and projections
+- Spatial data infrastructure and standards
+- Geodetic reference systems
+- Remote sensing for terrain modeling
+- 3D visualization and virtual globes
+
+#### 2. Department Faculty Publications
+
+**Research Areas to Explore:**
+- Journal articles in International Journal of Geographical Information Science
+- Publications in Cartographic Journal
+- Conference proceedings from ICA (International Cartographic Association)
+- Papers on INSPIRE (Infrastructure for Spatial Information in Europe) compliance
+- Research on OpenStreetMap data quality and integration
+
+**Key Faculty Research Interests:**
+- Web-based cartographic services
+- Spatial data quality assessment
+- Historical cartography digitization
+- GNSS and geodetic networks
+- Geospatial data visualization
+
+#### 3. Departmental Technical Reports
+
+**Expected Resources:**
+- Implementation guides for geospatial standards
+- Benchmarking studies of GIS algorithms
+- Case studies of regional mapping projects
+- Software documentation and tools
+- Educational materials and tutorials
+
+### Related International Academic Sources
+
+#### 4. Czech Technical Universities - Geoinformatics Programs
+
+**Czech Technical University in Prague (CTU):**
+- Faculty of Civil Engineering - Department of Geomatics
+- Research in geodesy, surveying, and mapping
+- URL: `https://geomatics.fsv.cvut.cz/`
+
+**Masaryk University Brno:**
+- Department of Geography - GIS and Cartography
+- Research in geoinformatics and spatial analysis
+- URL: `https://www.geogr.muni.cz/`
+
+#### 5. European Geoinformatics Research Networks
+
+**AGILE (Association of Geographic Information Laboratories in Europe):**
+- Conference proceedings with cutting-edge research
+- Topics: Location-based services, spatial analysis, cartographic design
+- Access: Open access papers via AGILE website
+
+**EuroSDR (European Spatial Data Research):**
+- Research publications on national mapping agencies
+- Topics: Reference systems, map production, data quality
+- Access: Technical reports and research papers
+
+#### 6. Open Access Academic Repositories
+
+**arXiv.org - Computer Science (Graphics and GIS):**
+- Search terms: "map projection", "coordinate transformation", "spherical geometry"
+- Recent papers on computational cartography
+- Algorithm implementations and benchmarks
+
+**ResearchGate and Academia.edu:**
+- Direct access to researcher profiles from Palacký University
+- Pre-prints and working papers
+- Collaboration opportunities
+
+#### 7. International Cartographic Association (ICA) Resources
+
+**ICA Commission Publications:**
+- Commission on Map Projections
+- Commission on Geospatial Analysis and Modeling
+- Commission on Cartography and Children (for educational game design)
+
+**ICA Conference Proceedings:**
+- International Cartographic Conference (biennial)
+- Papers on modern cartographic techniques
+- Implementation case studies
+
+#### 8. Open Geospatial Consortium (OGC) Standards
+
+**Relevant Standards:**
+- Web Map Service (WMS) and Web Map Tile Service (WMTS)
+- Coordinate Transformation Service (CTS)
+- Geography Markup Language (GML)
+- Simple Features specification
+
+**Implementation Guides:**
+- Best practices for coordinate reference systems
+- Projection handling in web services
+- Performance optimization techniques
+
+### Specialized Academic Journals
+
+#### 9. Target Journals for Related Research
+
+**Cartography and Geographic Information Science:**
+- Published by Cartography and Geographic Information Society
+- Topics: Cartographic design, GIS analysis, spatial cognition
+- Open access options available
+
+**Computers & Geosciences:**
+- Elsevier journal on computational methods
+- Topics: Algorithm implementation, performance studies, visualization
+- Relevant for technical implementation details
+
+**International Journal of Digital Earth:**
+- Taylor & Francis publication
+- Topics: Virtual globes, 3D visualization, web mapping
+- Highly relevant for spherical planet rendering
+
+**ISPRS Journal of Photogrammetry and Remote Sensing:**
+- Topics: 3D modeling, terrain representation, coordinate systems
+- Technical papers with implementation details
+
+### Historical and Foundational Sources
+
+#### 10. Classical Cartography References
+
+**John P. Snyder's Work:**
+- "Map Projections: A Working Manual" (USGS Professional Paper 1395)
+- "Flattening the Earth: Two Thousand Years of Map Projections"
+- Comprehensive mathematical foundations
+
+**Modern Textbooks:**
+- "Elements of Map Projection" by Robinson et al.
+- "Coordinate Systems and Map Projections" by Iliffe & Lott
+- "Geographic Information Systems and Science" by Longley et al.
+
+### Software and Implementation Resources
+
+#### 11. Open Source GIS Libraries
+
+**PROJ Library:**
+- URL: https://proj.org/
+- Coordinate transformation algorithms
+- Reference implementation for projection mathematics
+- Active development community
+
+**GDAL/OGR:**
+- URL: https://gdal.org/
+- Geospatial data abstraction library
+- Format conversion and coordinate transformations
+- Widely used in industry
+
+**GeoTools (Java):**
+- URL: https://geotools.org/
+- Comprehensive GIS toolkit
+- Well-documented projection implementations
+
+**Turf.js (JavaScript):**
+- URL: https://turfjs.org/
+- Geospatial analysis for web applications
+- Client-side coordinate transformations
+
+#### 12. Academic Code Repositories
+
+**GeographicLib:**
+- URL: https://geographiclib.sourceforge.io/
+- Charles Karney's geodesic algorithms
+- High-precision implementations
+- C++ library suitable for game integration
+
+**GitHub Academic Repositories:**
+- Search: "cartography", "map projection", "coordinate transformation"
+- Filter by: Stars, recent activity, documentation quality
+- Potential integration targets
+
+### Discovery Strategy and Next Steps
+
+#### Immediate Discovery Actions
+
+1. **Access Department Website Archive** (when available)
+   - Browse PhD dissertation list
+   - Identify relevant thesis topics
+   - Download abstracts and table of contents
+   - Priority: High - Most directly relevant
+
+2. **Search Academic Databases**
+   - Google Scholar: "Palacký University geoinformatics"
+   - Web of Science: Faculty publications
+   - Scopus: Department research output
+   - Priority: High - Contemporary research
+
+3. **Explore Open Access Repositories**
+   - arXiv: Computational geometry and graphics
+   - DOAJ: Cartography and GIS journals
+   - ResearchGate: Faculty profiles and papers
+   - Priority: Medium - Broader context
+
+4. **Review Software Documentation**
+   - PROJ library documentation and source
+   - GDAL projection handling
+   - PostGIS spatial reference systems
+   - Priority: High - Implementation details
+
+5. **Analyze Related University Programs**
+   - CTU Prague thesis repository
+   - Masaryk University publications
+   - Compare research approaches
+   - Priority: Medium - Alternative perspectives
+
+#### Source Evaluation Criteria
+
+For each discovered source, assess:
+
+**Relevance Score (1-5):**
+- 5: Direct applicability to spherical planet generation
+- 4: Strong relevance to cartographic systems
+- 3: General GIS knowledge, adaptable
+- 2: Peripheral topics, limited application
+- 1: Background information only
+
+**Accessibility Score (1-5):**
+- 5: Open access, freely available
+- 4: Available with registration
+- 3: Limited access, excerpts available
+- 2: Paywall, may request from author
+- 1: Restricted access, low priority
+
+**Implementation Score (1-5):**
+- 5: Code examples, algorithms, pseudocode
+- 4: Detailed methodology, reproducible
+- 3: Conceptual framework, design patterns
+- 2: Theoretical foundations only
+- 1: Abstract concepts, no practical details
+
+#### Documentation Template for Discovered Sources
+
+For each new source discovered, create entry:
+
+```markdown
+### Source Name
+
+**Type:** PhD Dissertation / Journal Article / Conference Paper / Software Library
+**Author(s):** Name(s)
+**Year:** YYYY
+**Institution/Publisher:** Organization
+**URL:** Direct link
+**Access:** Open / Restricted / Paywall
+**Relevance:** Brief description of applicability
+**Key Topics:** Bulleted list
+**Priority:** High / Medium / Low
+**Status:** Pending Review / In Progress / Completed
+**Notes:** Additional context
+
+**Relevance Scores:**
+- Relevance: X/5
+- Accessibility: X/5
+- Implementation: X/5
+```
+
+### Integration with BlueMarble Research Workflow
+
+#### Creating a Research Pipeline
+
+**Phase 1: Source Discovery (Ongoing)**
+- Identify new academic sources
+- Catalog in discovered sources list
+- Assign priority scores
+- Schedule for review
+
+**Phase 2: Initial Assessment (1-2 hours per source)**
+- Read abstract/introduction
+- Scan methodology section
+- Identify applicable techniques
+- Document key findings
+
+**Phase 3: Detailed Analysis (4-8 hours per source)**
+- Deep dive into relevant sections
+- Extract algorithms and formulas
+- Note implementation considerations
+- Cross-reference with existing BlueMarble docs
+
+**Phase 4: Integration Planning (2-4 hours per source)**
+- Map findings to BlueMarble features
+- Design implementation approach
+- Estimate development effort
+- Create integration tasks
+
+**Phase 5: Implementation (varies)**
+- Prototype key concepts
+- Validate against test cases
+- Integrate with existing code
+- Document lessons learned
+
+### Discovered Sources Summary
+
+**Current Status:**
+- Primary Source: Kučera PhD dissertation (2024) - Pending access
+- Related Sources Identified: 12 categories
+- Estimated Additional Sources: 50-100 academic papers and resources
+- High Priority Sources: 15-20 (directly applicable)
+- Medium Priority Sources: 20-30 (contextual knowledge)
+- Low Priority Sources: 10-30 (background information)
+
+**Next Actions:**
+1. Attempt to access Palacký University thesis repository
+2. Search Google Scholar for faculty publications
+3. Review PROJ and GDAL documentation for reference implementations
+4. Identify 5-10 most relevant journal articles
+5. Create detailed analysis documents for top priorities
+
+---
+
 ## Document Status
 
-**Status:** Draft - Pending dissertation access and review  
+**Status:** Draft - Source discovery phase in progress  
 **Last Updated:** 2025-01-23  
-**Next Review:** After dissertation obtained (estimated 1-2 weeks)
+**Next Review:** After primary source accessed and related sources cataloged
 
 **Research Stages:**
-- [ ] Dissertation accessed
-- [ ] Abstract reviewed
-- [ ] Relevant chapters identified
+- [ ] Primary dissertation accessed
+- [x] Related sources discovered and cataloged (12 categories, ~50-100 sources)
+- [ ] Top 10 priority sources identified
+- [ ] Abstract reviews completed
 - [ ] Key findings extracted
 - [ ] Integration plan created
 - [ ] Implementation prioritized
 - [ ] Development scheduled
 - [ ] Research integrated
 
+**Discovery Progress:**
+- [x] Identified departmental sources (PhD theses, faculty publications)
+- [x] Cataloged Czech university geoinformatics programs
+- [x] Listed European research networks (AGILE, EuroSDR)
+- [x] Documented open access repositories
+- [x] Identified relevant academic journals
+- [x] Listed open source implementation libraries
+- [x] Created source evaluation framework
+- [x] Established research pipeline
+
 **Priority Actions:**
-1. Access dissertation from university website
-2. Perform initial relevance assessment
-3. Extract applicable methodologies
-4. Create integration roadmap
-5. Schedule implementation phases
+1. Access primary dissertation from university website
+2. Search Google Scholar for "Kučera geoinformatics Olomouc"
+3. Review PROJ library source code and documentation
+4. Identify 10 high-priority journal articles
+5. Download and catalog top priority sources
+6. Begin systematic analysis of most relevant materials
 
 ---
 

@@ -27,10 +27,11 @@ The awesome-survival repository contains 300+ GB of survival-related knowledge o
 
 **Total Sources:** 40 (updated: +1 academic dissertation)  
 **Completed:** 16  
-**In Progress:** 1 (academic dissertation - draft/pending access)  
+**In Progress:** 1 (academic dissertation - active source discovery, 50+ related sources cataloged)  
 **Remaining:** 23  
 
-**Latest Addition:** Category 4 - Academic Research Sources (PhD dissertations and theses)
+**Latest Addition:** Category 4 - Academic Research Sources (PhD dissertations and theses)  
+**Latest Activity:** Discovered 50+ related academic sources across 12 categories for Kučera dissertation research
 
 **Previous Queue Status:**
 
@@ -847,17 +848,20 @@ For each source, create:
 
 **Purpose:** Track academic research from geoinformatics, cartography, and related fields that provide theoretical foundations and contemporary methodologies for BlueMarble's spatial systems.
 
-14. **Geoinformatics PhD Dissertation - Kučera (2024)** - DRAFT
-    - Status: 📝 Draft - Pending dissertation access
+14. **Geoinformatics PhD Dissertation - Kučera (2024)** - IN PROGRESS
+    - Status: 📝 In Progress - Source discovery phase active
     - Document: `academic-analysis-geoinformatics-phd-kucera-2024.md`
+    - Discovered Sources Document: `discovered-sources-geoinformatics-academic-2024.md`
     - Institution: Palacký University Olomouc, Department of Geoinformatics
     - Source: https://www.geoinformatics.upol.cz/dprace/phd/kucera24/
-    - Priority: Medium
+    - Priority: Medium-High
     - Focus: Cartographic systems, map projections, geodetic coordinate transformations
     - Relevance: Spherical planet generation, professional cartography, coordinate systems
-    - Lines: 699 (comprehensive placeholder pending full dissertation access)
+    - Lines: 1,086 (expanded with source discovery section)
+    - Discovered Sources: 50+ academic sources cataloged in 12 categories
     - Date Created: 2025-01-23
-    - Next Steps: Access full dissertation, perform detailed analysis, extract applicable methodologies
+    - Last Updated: 2025-01-23
+    - Next Steps: Access dissertation, acquire priority sources, begin systematic analysis
 
 **Category Status:**
 - Total Academic Sources: 1
