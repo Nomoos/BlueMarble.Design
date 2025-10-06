@@ -11,6 +11,20 @@ This interactive prototype demonstrates a comprehensive economic simulation syst
 - **Regional Specialization** with geographic pricing advantages
 - **Trade Route Optimization** with profitability calculations
 
+## Screenshots
+
+### Initial State
+![Economic Prototype Initial](economic-prototype-initial.png)
+The prototype shows the initial market state with all 11 commodities displayed, organized by category.
+
+### Trade Route Analysis
+![Economic Prototype Trade Analysis](economic-prototype-trade-analysis.png)
+Interactive trade route calculator showing detailed profitability analysis including buy/sell prices, fuel costs, travel time, and net profit margins.
+
+### Regional Specialization
+![Economic Prototype Final](economic-prototype-final.png)
+Regional price comparison showing Asia's specialization in Cloth (+33%), Spices (+31%), and Fine Art (+26%) with real-time market dynamics and statistics.
+
 ## Running the Prototype
 
 ### Local Development
