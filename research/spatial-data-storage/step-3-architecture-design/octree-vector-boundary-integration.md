@@ -4,9 +4,14 @@
 
 This document addresses the critical research question: **Should boundaries remain in vector form for precision?** The answer is yes, with specific implementation strategies for optimal performance. This research provides comprehensive algorithms, accuracy analysis, performance benchmarks, and a complete implementation guide for integrating octree bulk storage with precise vector boundaries, specifically targeting exact coastline precision and efficient interior material storage in BlueMarble.
 
-**Context**: BlueMarble currently uses a quadtree-based frontend spatial indexing system (8-level tree, ~65,536 cells) with NetTopologySuite (NTS) backend for polygon operations in EPSG:4087 coordinate system (world equidistant cylindrical projection in meters). This research proposes migrating to a hybrid 3D octree + vector boundary system to support true 3D material storage, achieve adaptive resolution (0.25m to 1000m), and maintain exact precision for critical geological boundaries.
+**Context**: BlueMarble currently uses a quadtree-based frontend spatial indexing system (8-level tree,
+~65,536 cells) with NetTopologySuite (NTS) backend for polygon operations in EPSG:4087 coordinate
+system (world equidistant cylindrical projection in meters). This research proposes migrating to a
+hybrid 3D octree + vector boundary system to support true 3D material storage, achieve adaptive
+resolution (0.25m to 1000m), and maintain exact precision for critical geological boundaries.
 
-**Expected Impact**: 
+**Expected Impact**:
+
 - Improved boundary precision (from ~1m to ~0.1m)
 - Storage efficiency (92-99% reduction through material inheritance and compression)
 - True 3D support (altitude dimension 0-10,000m)
@@ -14,7 +19,9 @@ This document addresses the critical research question: **Should boundaries rema
 - Performance improvement (0.8ms average query time vs current 2-3ms)
 
 **Key Findings**:
-- Hybrid approach maintains exact vector precision for critical boundaries while leveraging octree efficiency for bulk storage
+
+- Hybrid approach maintains exact vector precision for critical boundaries while leveraging octree
+  efficiency for bulk storage
 - Material inheritance reduces memory by 80-99% for homogeneous regions (oceans, deserts)
 - R-tree spatial indexing provides optimal query performance for boundary proximity detection
 - Adaptive query strategies reduce boundary checks by 80% in interior regions
@@ -23,6 +30,7 @@ This document addresses the critical research question: **Should boundaries rema
 - Complete implementation roadmap: 11 weeks from foundation to production deployment
 
 **Implementation Deliverables**:
+
 - Core 3D octree data structures with implicit material inheritance
 - Vector boundary precision integration using R-tree spatial indexing
 - Hybrid query engine with adaptive boundary detection
@@ -89,16 +97,17 @@ This document addresses the critical research question: **Should boundaries rema
 
 **Existing BlueMarble Spatial Data Storage**:
 
-BlueMarble currently employs a hybrid approach combining frontend quadtree indexing with backend NetTopologySuite (NTS) polygon operations:
+BlueMarble currently employs a hybrid approach combining frontend quadtree indexing with backend
+NetTopologySuite (NTS) polygon operations:
 
-```
+```text
 Current Architecture:
 Frontend (JavaScript)          Backend (C#)               Storage
 ├── Quadtree indexing         ├── NetTopologySuite       ├── GeoPackage
 ├── 8-level spatial tree      ├── Polygon operations     ├── EPSG:4087 (meters)
 ├── Interactive queries       ├── Geometry validation    └── Cross-platform
-└── Coordinate conversion     └── Geomorphological       
-                                processes                
+└── Coordinate conversion     └── Geomorphological
+                                processes
 ```
 
 **Key Components**:
@@ -125,6 +134,7 @@ Frontend (JavaScript)          Backend (C#)               Storage
    - **Altitude range**: 0-10,000m (surface to upper atmosphere)
 
 **Limitations of Current System**:
+
 - **2D-focused**: Quadtree is inherently 2D, limiting vertical dimension support
 - **Fixed resolution**: 8-level quadtree provides limited adaptive resolution
 - **No material inheritance**: Every cell requires explicit material storage
@@ -132,6 +142,7 @@ Frontend (JavaScript)          Backend (C#)               Storage
 - **Memory overhead**: Storing explicit polygons for all features is inefficient
 
 **Motivation for Hybrid Octree + Vector Approach**:
+
 - Extend to true 3D with octree (supports altitude dimension)
 - Maintain exact precision for critical boundaries (coastlines, faults) via vectors
 - Achieve 80% memory reduction through material inheritance
@@ -140,9 +151,11 @@ Frontend (JavaScript)          Backend (C#)               Storage
 
 ### 1.1 Research Objectives
 
-**Primary Question**: Should geological boundaries (coastlines, faults, political borders) remain in vector form for precision while bulk materials are stored in octrees?
+**Primary Question**: Should geological boundaries (coastlines, faults, political borders) remain in
+vector form for precision while bulk materials are stored in octrees?
 
 **Research Goals**:
+
 1. Design algorithms for efficient octree + vector integration
 2. Benchmark accuracy improvements for coastline representation
 3. Analyze performance characteristics under realistic workloads
@@ -195,17 +208,20 @@ public static class TestScenarios
 ### 1.3 Evaluation Metrics
 
 **Accuracy Metrics**:
+
 - Boundary position error (meters)
 - Material classification accuracy near boundaries
 - Geometric fidelity preservation
 
 **Performance Metrics**:
+
 - Query response time (ms)
 - Memory usage (MB per km²)
 - Boundary index construction time
 - Cache hit ratios
 
 **Storage Metrics**:
+
 - Total storage size (GB)
 - Vector vs octree storage ratio
 - Compression effectiveness
