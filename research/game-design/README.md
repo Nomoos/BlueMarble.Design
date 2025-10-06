@@ -16,6 +16,7 @@ This research is organized in a step-by-step structure with recursive sub-steps 
    - [Step 2.2: Material Systems](step-2-system-research/step-2.2-material-systems/) - Material quality and geological integration
    - [Step 2.3: Crafting Systems](step-2-system-research/step-2.3-crafting-systems/) - Advanced crafting and workflow design
    - [Step 2.4: Historical Research](step-2-system-research/step-2.4-historical-research/) - Authentic medieval professions
+   - [Step 2.5: Economy Systems](step-2-system-research/step-2.5-economy-systems/) - Player-driven economies and quest contracts
 3. **[Step 3: Integration Design](step-3-integration-design/)** - Designing integration with BlueMarble's geological simulation
 4. **[Step 4: Implementation Planning](step-4-implementation-planning/)** - Phased development roadmap (16-20 months)
 
@@ -409,6 +410,38 @@ profession systems and economic simulation.
 - Creates foundation for player-driven economy with specialized roles
 - Aligns with existing skill research for seamless integration
 - Supports social structure and economic interdependence gameplay
+
+### [Economy-Driven Quest Systems Research](step-2-system-research/step-2.5-economy-systems/economy-driven-quest-systems-research.md)
+Comprehensive analysis of how economy-focused players treat quests as contracts and mini-auctions, with detailed comparison to traditional market systems.
+
+**Key Topics**:
+- Contract-based quest systems (EVE Online contracts, Star Wars Galaxies missions)
+- Auction-based quest mechanics (Albion Online crafting orders, Path of Exile Heist contracts)
+- Dynamic events as economic opportunities (Guild Wars 2 contribution rewards)
+- When to use contracts vs. markets (decision framework)
+- Hybrid economic models combining markets and contracts
+- Implementation architecture (database schemas, API designs)
+- Economic balancing and anti-abuse mechanisms
+
+**Research Highlights**:
+- EVE Online's contract system as gold standard for player-to-player economic relationships
+- Item exchange, courier, auction, and mercenary contract types
+- Player-created missions enabling decentralized economic opportunities
+- Crafting orders as hybrid auction-market systems
+- Contribution-based rewards creating competitive dynamics
+- Trust infrastructure through reputation, escrow, and dispute resolution
+- Specialization rewards through economic incentives
+- Risk-reward transparency and quality differentiation
+
+**Applicability to BlueMarble**:
+- Geological sample collection contracts with quality requirements
+- Survey mission bidding systems for specialized field work
+- Laboratory analysis orders matching analysts with researchers
+- Expedition support services (logistics, equipment, safety)
+- Research collaboration frameworks with shared rewards
+- Reputation systems adapted for scientific work quality
+- Hybrid economy: markets for commodities, contracts for specialized services
+- Dynamic geological events as economic opportunities
 
 ### [Mortal Online 2 Material System Analysis](mortal-online-2-material-system-research.md)
 Comprehensive analysis of Mortal Online 2's material grading and crafting systems for BlueMarble's material quality mechanics.
