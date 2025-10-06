@@ -419,8 +419,35 @@ Economic systems continuously process:
 - **Scalability**: System performance with increasing player numbers and complexity
 - **Stability**: Reliability during intensive computational operations
 
+## Detailed Mechanics Documentation
+
+For comprehensive technical specifications and implementation details of each major game system, refer to the detailed mechanics documentation:
+
+### Core Systems
+
+- **[Mining and Resource Extraction](./gameplay/mechanics/mining-resource-extraction.md)** - Complete resource discovery, extraction network planning, and mining operations including 3D tunnel systems, geological surveys, infrastructure management, and safety systems
+- **[Building and Construction](./gameplay/mechanics/building-construction.md)** - Comprehensive construction mechanics covering site assessment, foundation design, building specifications, quality systems, and maintenance
+- **[Terraforming and Landscape Modification](./gameplay/mechanics/terraforming.md)** - Large-scale environmental engineering including surface modifications, water management, vegetation control, and climate engineering
+- **[Trade and Commerce Systems](./gameplay/mechanics/trade-system.md)** - Complete trading mechanics covering player-to-player trading, regional markets, contracts, NPC merchants, and trade routes
+- **[Anti-Exploitation and Protection](./gameplay/mechanics/anti-exploitation.md)** - Multi-layered security systems including property rights, permission management, active defense, criminal tracking, and recovery mechanisms
+
+### Additional Systems
+
+- **[Crafting System Overview](./gameplay/mechanics/crafting-mechanics-overview.md)** - Complete crafting system mechanics
+- **[Crafting Success Model](./gameplay/mechanics/crafting-success-model.md)** - Mathematical models for crafting success rates
+- **[Crafting Quality Model](./gameplay/mechanics/crafting-quality-model.md)** - Quality calculation systems for crafted items
+
+Each detailed mechanics document provides:
+- Complete system specifications with code examples
+- Mathematical models and formulas
+- Balance considerations and testing requirements
+- Implementation notes and performance considerations
+- Integration guidelines with other systems
+
 ## Conclusion
 
 This game mechanics design successfully demonstrates how geological simulation platforms can be transformed into engaging interactive economic experiences while maintaining scientific integrity. By drawing inspiration from proven economic simulation games like Port Royale 1 and The Guild 1400, and grounding all mechanics in authentic geological processes, this design creates a unique gaming framework that educates while entertaining.
+
+The comprehensive mechanics documentation provides detailed technical specifications for implementing these systems, ensuring that the vision of a geologically-authentic, economically-sophisticated MMORPG can be realized with precision and depth.
 
 The emphasis on player freedom through understanding, realistic constraints, and authentic processes ensures that geological simulation games can remain scientifically valuable while providing unprecedented gameplay depth and originality. The phased implementation approach minimizes development risk while delivering incremental value, positioning geological simulation gaming as a revolutionary entry in both the educational simulation and economic strategy gaming markets.

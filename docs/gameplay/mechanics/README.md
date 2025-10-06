@@ -14,6 +14,14 @@ Mechanics documents provide formal specifications including:
 
 ## Available Documents
 
+### Core Game Systems
+
+- **[Mining and Resource Extraction](./mining-resource-extraction.md)** - Comprehensive resource discovery and extraction mechanics
+- **[Building and Construction](./building-construction.md)** - Complete construction and building systems
+- **[Terraforming](./terraforming.md)** - Landscape modification and environmental engineering
+- **[Trade System](./trade-system.md)** - Player-to-player and NPC trading mechanics
+- **[Anti-Exploitation](./anti-exploitation.md)** - Protection systems and security mechanisms
+
 ### Crafting System
 
 - **[Crafting Mechanics Overview](./crafting-mechanics-overview.md)** - Complete system overview
