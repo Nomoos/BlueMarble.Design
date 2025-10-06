@@ -2,9 +2,9 @@
 
 Curated reading list for BlueMarble research and development.
 
-**Last Updated:** 2025-01-17  
-**Total Sources:** 78 (60 books + 13 survival collections + 5 online resources)  
-**Completed Analysis:** 12 sources  
+**Last Updated:** 2025-01-28  
+**Total Sources:** 103 (75 books + 13 survival collections + 15 online resources)  
+**Completed Analysis:** 17 sources  
 **Status:** Active - Tracking all research literature sources
 
 ---
@@ -34,6 +34,20 @@ Curated reading list for BlueMarble research and development.
 - [ ] **Real-Time Rendering (4th Edition)** by Tomas Akenine-Möller, Eric Haines, Naty Hoffman - Graphics pipeline optimization, LOD systems for planetary scale
 - [ ] **AI for Games (3rd Edition)** by Ian Millington, John Funge - NPC AI, pathfinding, decision-making architectures
 - [ ] **Game Programming Patterns** by Robert Nystrom - Design patterns for game development (online: https://gameprogrammingpatterns.com/)
+
+### Spatial Data Structures and Compression
+
+- [x] **Foundations of Multidimensional and Metric Data Structures** by Hanan Samet (2006) - Complete analysis (spatial-data-analysis-morton-code-octree-pointerless-storage.md, spatial-data-analysis-homogeneous-region-collapsing.md)
+- [x] **Space-Filling Curves: An Introduction with Applications in Scientific Computing** by Michael Bader (2013) - Morton code theory (spatial-data-analysis-morton-code-octree-pointerless-storage.md)
+- [x] **Data Compression: The Complete Reference (4th Edition)** by David Salomon, Giovanni Motta (2007) - RLE and compression techniques (spatial-data-analysis-hybrid-compression-strategies.md)
+- [x] **Texturing and Modeling: A Procedural Approach (3rd Edition)** by David S. Ebert et al. (2003) - Procedural generation for compression (spatial-data-analysis-hybrid-compression-strategies.md)
+- [x] **Database Internals** by Alex Petrov (2019) - LSM trees, Cassandra, compression (spatial-data-analysis-database-architecture.md, spatial-data-analysis-multi-layer-query-optimization.md)
+- [x] **Designing Data-Intensive Applications** by Martin Kleppmann (2017) - Distributed systems and consistency (spatial-data-analysis-database-architecture.md, spatial-data-analysis-multi-layer-query-optimization.md)
+- [x] **Redis in Action** by Josiah Carlson (2013) - Caching strategies (spatial-data-analysis-multi-layer-query-optimization.md)
+- [x] **NoSQL Distilled** by Pramod J. Sadalage, Martin Fowler (2012) - NoSQL patterns (spatial-data-analysis-database-architecture.md)
+- [x] **Adaptive Mesh Refinement: Theory and Applications** by Tomasz Plewa et al. (2005) - AMR theory (spatial-data-analysis-homogeneous-region-collapsing.md)
+- [x] **Efficient Sparse Voxel Octrees** by Samuli Laine, Tero Karras (2010) - GPU octrees (spatial-data-analysis-morton-code-octree-pointerless-storage.md, spatial-data-analysis-homogeneous-region-collapsing.md)
+- [x] **GigaVoxels** by Cyril Crassin et al. (2009) - Large-scale voxel rendering (spatial-data-analysis-hybrid-compression-strategies.md, spatial-data-analysis-homogeneous-region-collapsing.md)
 
 ### Game Design Theory
 
@@ -181,9 +195,38 @@ Curated reading list for BlueMarble research and development.
 - [x] **Game Development Resources Overview** - 20+ books organized (game-development-resources-analysis.md, 702 lines)
 - [x] **Online Game Development Resources Catalog** - Active auto-growing list (online-game-dev-resources.md, 880+ lines)
 
+### Spatial Data Storage Research (5 completed)
+
+- [x] **Hybrid Compression Strategies for Petabyte-Scale Octree Storage** - Comprehensive analysis (spatial-data-analysis-hybrid-compression-strategies.md, 900+ lines)
+- [x] **Morton Code Octree and Pointerless Storage** - Spatial indexing and memory optimization (spatial-data-analysis-morton-code-octree-pointerless-storage.md, 950+ lines)
+- [x] **Multi-Layer Query Optimization for Read-Dominant Workloads** - Caching and performance (spatial-data-analysis-multi-layer-query-optimization.md, 950+ lines)
+- [x] **Database Architecture for Petabyte-Scale 3D Octree Storage** - Cassandra + Redis architecture (spatial-data-analysis-database-architecture.md, 1,000+ lines)
+- [x] **Homogeneous Region Collapsing for Octree Optimization** - Memory reduction strategies (spatial-data-analysis-homogeneous-region-collapsing.md, 1,000+ lines)
+
 ### Survival Content Extraction (10 completed)
 
 All survival extraction guides completed with detailed methodology, JSON schemas, and implementation plans.
+
+---
+
+## Online Resources and Libraries
+
+### Spatial Data and Compression
+
+- [x] **libmorton** - Production-ready Morton code library (https://github.com/Forceflow/libmorton) - Referenced in spatial-data-analysis-morton-code-octree-pointerless-storage.md
+- [x] **LZ4 Compression Library** - Fast compression for Cassandra (https://lz4.github.io/lz4/) - Referenced in spatial-data-analysis-hybrid-compression-strategies.md, spatial-data-analysis-database-architecture.md
+- [x] **Zstandard (Zstd)** - Tunable compression algorithm (https://facebook.github.io/zstd/) - Referenced in spatial-data-analysis-hybrid-compression-strategies.md, spatial-data-analysis-database-architecture.md
+- [x] **OpenVDB** - Sparse volume data structure (https://www.openvdb.org/) - Referenced in spatial-data-analysis-morton-code-octree-pointerless-storage.md, spatial-data-analysis-homogeneous-region-collapsing.md
+- [x] **GPU Gems 2: Octree Textures on the GPU** - NVIDIA GPU techniques (https://developer.nvidia.com/gpugems/gpugems2) - Referenced in spatial-data-analysis-hybrid-compression-strategies.md
+
+### Database and Caching
+
+- [x] **Apache Cassandra Documentation** - Distributed database (https://cassandra.apache.org/doc/latest/) - Referenced in spatial-data-analysis-database-architecture.md, spatial-data-analysis-multi-layer-query-optimization.md
+- [x] **Redis Documentation** - In-memory caching (https://redis.io/docs/) - Referenced in spatial-data-analysis-multi-layer-query-optimization.md, spatial-data-analysis-database-architecture.md
+- [x] **DataStax Academy** - Free Cassandra training (https://www.datastax.com/dev/academy) - Referenced in spatial-data-analysis-database-architecture.md
+- [x] **The Last Pickle Blog** - Cassandra expertise (https://thelastpickle.com/blog/) - Referenced in spatial-data-analysis-database-architecture.md, spatial-data-analysis-multi-layer-query-optimization.md
+- [x] **Netflix Technology Blog** - Cassandra at scale case studies (https://netflixtechblog.com/) - Referenced in spatial-data-analysis-database-architecture.md, spatial-data-analysis-multi-layer-query-optimization.md
+- [x] **Discord Engineering Blog** - Scaling to trillions of messages (https://discord.com/blog/) - Referenced in spatial-data-analysis-database-architecture.md, spatial-data-analysis-multi-layer-query-optimization.md
 
 ---
 
