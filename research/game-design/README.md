@@ -23,6 +23,21 @@ Each step contains detailed research documents and can be explored independently
 
 ## Research Documents
 
+### [Game World Summary](step-1-foundation/game-world-summary.md) ⭐ **EXECUTIVE SUMMARY**
+Comprehensive consolidation of all game world parameters, mechanics design, and technical specifications. This document provides a complete overview covering:
+
+**Key Topics**:
+
+- Complete world dimensions and technical parameters (2D current, 3D proposed)
+- Game mechanics from Port Royale 1 and The Guild 1400 adapted for geological context
+- Original mechanics: ecosystem engineering, real-time geological interaction, 3D mining
+- Data types specification for large-scale world dimensions and game values
+- Spatial data storage recommendations with hybrid array + octree architecture
+- Integration strategy and backward compatibility approach
+- Complete reference links to detailed research documents
+
+**Start here for a complete overview before diving into detailed research.**
+
 ### [From Inspiration to Design Document](step-1-foundation/from-inspiration-to-design-document.md)
 Comprehensive guide on the game design process from initial inspiration through formal design documentation.
 
