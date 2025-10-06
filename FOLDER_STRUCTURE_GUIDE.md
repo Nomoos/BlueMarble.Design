@@ -13,7 +13,14 @@ BlueMarble.Design/
 ├── docs/            # Technical implementation specs
 ├── roadmap/         # Strategic planning
 ├── templates/       # Document templates
-└── assets/          # Design assets
+├── assets/          # Design assets
+├── config/          # StoryGenerator pipeline configuration
+├── idea/            # Story ideas (pipeline stage 1)
+├── script/          # Generated scripts (pipeline stage 2)
+├── storyboard/      # Visual storyboards (pipeline stage 3)
+├── pipeline-assets/ # Video production assets (pipeline stage 4)
+├── render/          # Video rendering (pipeline stage 5)
+└── output/          # Final videos (pipeline stage 6)
 ```
 
 ### Information Flow
@@ -192,6 +199,20 @@ Visual assets, mockups, diagrams, and reference materials.
 ### `.github` - Repository Configuration
 
 GitHub-specific configuration including issue templates, workflows, and automation.
+
+### StoryGenerator Pipeline Directories
+
+The repository includes a complete video generation pipeline (see [STORYGENERATOR_PIPELINE.md](STORYGENERATOR_PIPELINE.md) for details):
+
+- **`/config`**: Pipeline configuration (pipeline.yaml, scoring.yaml)
+- **`/idea`**: Initial story concepts and ideas
+- **`/script`**: Generated scripts from ideas
+- **`/storyboard`**: Visual planning and shot breakdowns
+- **`/pipeline-assets`**: Media files for video production (separate from `/assets`)
+- **`/render`**: Video rendering and composition
+- **`/output`**: Final rendered videos
+
+The pipeline follows a sequential workflow: Idea → Script → Storyboard → Assets → Render → Output
 
 ## Migration from Old Structure
 

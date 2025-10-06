@@ -66,6 +66,15 @@ This repository serves as the central hub for all design-related activities in t
 │   ├── playtest-report.md  # Playtest documentation
 │   ├── decision-record.md  # ADR-style decisions
 │   └── [existing templates] # Game design, feature specs, etc.
+├── config/                  # StoryGenerator pipeline configuration
+│   ├── pipeline.yaml       # Pipeline structure and settings
+│   └── scoring.yaml        # Quality evaluation criteria
+├── idea/                    # Story ideas (pipeline stage 1)
+├── script/                  # Generated scripts (pipeline stage 2)
+├── storyboard/              # Visual storyboards (pipeline stage 3)
+├── pipeline-assets/         # Video production assets (pipeline stage 4)
+├── render/                  # Video rendering (pipeline stage 5)
+├── output/                  # Final videos (pipeline stage 6)
 ├── assets/                  # Design assets, mockups, references
 ├── scripts/                 # Utility scripts
 └── .github/                 # GitHub configuration
@@ -112,6 +121,16 @@ Project planning and tracking:
 - Milestones and deliverables
 - Task breakdowns
 - Feature prioritization
+
+### StoryGenerator Pipeline
+The repository includes a complete video generation pipeline (see [STORYGENERATOR_PIPELINE.md](STORYGENERATOR_PIPELINE.md)):
+- **`/config`**: Pipeline configuration files (pipeline.yaml, scoring.yaml)
+- **`/idea`**: Initial story concepts and ideas
+- **`/script`**: Generated scripts from ideas
+- **`/storyboard`**: Visual planning and shot breakdowns
+- **`/pipeline-assets`**: Media files for video production
+- **`/render`**: Video rendering and composition
+- **`/output`**: Final rendered videos
 
 ## Key Principles
 
