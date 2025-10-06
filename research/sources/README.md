@@ -2,8 +2,8 @@
 
 This directory contains bibliography, reading lists, and source documentation for BlueMarble research.
 
-**Last Updated:** 2025-01-17  
-**Total Sources Tracked:** 73+ (60 books + 13 survival collections + 20+ online)  
+**Last Updated:** 2025-01-24  
+**Total Sources Tracked:** 96+ (60 books + 13 survival collections + 23 academic theses + 20+ online)  
 **Status:** Active - Comprehensive source tracking system
 
 ---
@@ -19,10 +19,11 @@ This directory contains bibliography, reading lists, and source documentation fo
   - Next steps and priorities
   
 - **sources.bib**: Complete bibliography in BibTeX format
-  - 43 BibTeX entries covering all major sources
-  - Categorized by topic (game programming, design theory, multiplayer, performance optimization, etc.)
-  - Includes survival knowledge collections and C# vs C++ performance books
-  - Online resources and open source projects
+  - 74 BibTeX entries covering all major sources
+  - 27 books on game programming, design theory, multiplayer, performance optimization
+  - 24 misc entries: survival knowledge collections, online resources, and open source projects
+  - 23 academic master's theses from geoinformatics and GIS research
+  - Categorized by topic and relevance to BlueMarble systems
   
 - **reading-list.md**: Curated reading list with priorities and status tracking
   - 94 tracked items across all source types
@@ -91,6 +92,26 @@ This directory contains bibliography, reading lists, and source documentation fo
 12. Historical Maps and Navigation Resources
 13. Specialized Collections (Deep Web Sources)
 
+### Academic Theses - Geoinformatics and GIS (23 sources)
+
+#### Master's Theses from Palacký University Olomouc (2022)
+- Digital twins and GIS-game engine integration
+- Geodesign and spatial planning applications
+- Geovisualization techniques and data analysis
+- 3D modeling and accessibility design
+- Movement tracking and visualization
+- Web-based visualization solutions
+- Simulation game portal development
+- User experience and cartographic research
+
+**Relevance to BlueMarble:**
+- GIS integration with game engines (digital twins)
+- Spatial data visualization techniques
+- Movement tracking systems for players
+- Accessibility considerations in 3D environments
+- Simulation game design patterns
+- Web-based visualization solutions
+
 ### Online Resources (20+ sources)
 - Documentation (Godot, Unity, Unreal)
 - Open source projects (TrinityCore, CMaNGOS, etc.)
@@ -119,6 +140,7 @@ Maintain a BibTeX file with all research sources using standard BibTeX format:
 
 **Entry Types:**
 - `@book` - Published books
+- `@mastersthesis` - Master's theses
 - `@misc` - Online resources, documentation, collections
 - `@article` - Academic papers (if added)
 
@@ -132,6 +154,7 @@ Maintain a BibTeX file with all research sources using standard BibTeX format:
 - Online Resources and Documentation
 - Open Source Projects
 - Survival and Technology Resources
+- Academic Theses - Geoinformatics and GIS
 - Geographic and Map Data
 
 ### Reading List (reading-list.md)
@@ -301,6 +324,13 @@ Link sources to relevant documentation:
 - Medium Priority: 15
 - Low Priority: 6
 - Completed Analysis: 4
+
+**Academic Theses:**
+- Total: 23 (Master's theses from Palacký University Olomouc)
+- Year: 2022
+- Field: Geoinformatics and GIS
+- Highly Relevant: 3 (digital twins, game engine integration, simulation games)
+- Status: Catalogued, pending detailed review
 
 **Survival Collections:**
 - Total: 13
