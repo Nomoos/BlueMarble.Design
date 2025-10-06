@@ -14,6 +14,10 @@ Mechanics documents provide formal specifications including:
 
 ## Available Documents
 
+### Social Interaction Systems
+
+- **[Social Interaction Mechanics](./social-interaction-mechanics.md)** - Player-facing mechanics for settlements, diplomacy, and federations
+
 ### Crafting System
 
 - **[Crafting Mechanics Overview](./crafting-mechanics-overview.md)** - Complete system overview
