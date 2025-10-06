@@ -1436,6 +1436,18 @@ This weather and climate system creates a dynamic, immersive world where natural
 
 The system maintains balance by ensuring sufficient windows for core activities while creating meaningful weather-driven challenges that reward planning and adaptation.
 
+## Academic References
+
+### Remote Sensing and Vegetation Studies
+
+1. **Pohanková, Tereza** - "Modelling Spatiotemporal Variability of Evapotranspiration and Cooling Function of
+   Vegetation using Remote Sensing Methods"  
+   Supervisor: doc. Vilém Pechanec, Ph.D.  
+   *This thesis provides valuable insights into evapotranspiration modeling and the cooling effects of vegetation,
+   which are directly applicable to the vegetation and water cycle systems in the Ecosystem Integration section.
+   The research methods can inform our implementation of realistic plant-climate interactions and the hydrological
+   cycle.*
+
 ## Related Documentation
 
 - [Geological Systems Research](../step-1-foundation/mechanics-research.md)
