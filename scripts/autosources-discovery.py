@@ -64,8 +64,27 @@ class SourceDiscovery:
         ]
         
         for doc_file in self.research_dir.glob("*.md"):
-            if phase_filter and f"phase-{phase_filter}" not in doc_file.name:
-                continue
+            # If phase_filter is set, check both filename and frontmatter for phase info
+            if phase_filter:
+                phase_in_name = f"phase-{phase_filter}" in doc_file.name
+                try:
+                    with open(doc_file, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    frontmatter = self._extract_frontmatter(content)
+                    phase_in_frontmatter = False
+                    # Accept both int and str for phase in frontmatter
+                    if frontmatter and "phase" in frontmatter:
+                        phase_value = frontmatter["phase"]
+                        # Try to normalize to int for comparison
+                        try:
+                            phase_in_frontmatter = int(phase_value) == int(phase_filter)
+                        except Exception:
+                            phase_in_frontmatter = str(phase_value) == str(phase_filter)
+                    if not (phase_in_name or phase_in_frontmatter):
+                        continue
+                except Exception as e:
+                    print(f"Error reading {doc_file} for phase filtering: {e}")
+                    continue
                 
             self._scan_document(doc_file, patterns)
         
