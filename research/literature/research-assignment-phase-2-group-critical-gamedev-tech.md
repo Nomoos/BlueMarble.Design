@@ -689,11 +689,11 @@ decisions. This research covers protocol comparison, use cases, and hybrid appro
 
 ### Batch 1 (Sources 1-4)
 
-- [ ] Source 1 (EVE Online 10K Battle) reviewed and documented
-- [ ] Source 2 (Redis State Management) reviewed and documented
-- [ ] Source 3 (GPU Noise Generation) reviewed and documented
-- [ ] Source 4 (Advanced Perlin/Simplex) reviewed and documented
-- [ ] Batch 1 summary written
+- [x] Source 1 (EVE Online 10K Battle) reviewed and documented - EXISTING: `game-dev-analysis-eve-online-large-scale-combat.md` (1301 lines)
+- [x] Source 2 (Redis State Management) reviewed and documented - EXISTING: `game-dev-analysis-redis-streams.md` (1429 lines)
+- [x] Source 3 (GPU Noise Generation) reviewed and documented - NEW: `game-dev-analysis-gpu-noise-generation-techniques.md` (650 lines)
+- [x] Source 4 (Advanced Perlin/Simplex) reviewed and documented - NEW: `game-dev-analysis-advanced-perlin-simplex-noise.md` (780 lines)
+- [x] Batch 1 summary written
 - [ ] Waiting for "next" comment
 
 ### Batch 2 (Sources 5-8)
