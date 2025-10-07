@@ -196,12 +196,12 @@ Curated reading list for BlueMarble research and development.
 - [x] **Corpse decomposition** - Decomposition stages and factors for realistic survival mechanics (Processed in Batch 1)
 - [x] **Organ (biology)** - Biological organ systems for medical and survival systems (Processed in Batch 1)
 - [x] **Bacteria** - Bacterial processes for decomposition and fermentation systems (Processed in Batch 1)
-- [ ] **Scavenger** - Scavenger ecology for wildlife and food chain simulation
+- [x] **Scavenger** - Scavenger ecology for wildlife and food chain simulation (Processed in Batch 2)
 
 **Engineering and Materials Science:**
-- [ ] **Structural integrity and failure** - Structural mechanics for building and crafting systems
-- [ ] **Structural load** - Load calculations for construction and building systems
-- [ ] **Engineering** - General engineering principles for technology progression
+- [x] **Structural integrity and failure** - Structural mechanics for building and crafting systems (Processed in Batch 2)
+- [x] **Structural load** - Load calculations for construction and building systems (Processed in Batch 2)
+- [x] **Engineering** - General engineering principles for technology progression (Processed in Batch 2)
 - [ ] **Cast iron** - Cast iron properties for metalworking and crafting systems
 - [ ] **Iron-cementite meta-stable diagram** (Research online) - Phase diagrams for advanced metallurgy
 

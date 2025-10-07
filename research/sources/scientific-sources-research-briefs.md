@@ -4,8 +4,8 @@ Processing scientific reference sources for BlueMarble game systems integration.
 
 **Status:** Processing in batches of 4  
 **Total Sources:** 21  
-**Processed:** 4  
-**Remaining:** 17
+**Processed:** 8  
+**Remaining:** 13
 
 ---
 
@@ -150,13 +150,153 @@ The first four sources establish foundational biological systems for BlueMarble'
 
 ---
 
-## Batch 2: [To be processed]
+## Batch 2: Biology and Engineering (Sources 5-8)
 
-**Remaining Sources (17):**
-- Scavenger (Biology)
-- Structural integrity and failure (Engineering)
-- Structural load (Engineering)
-- Engineering (Engineering)
+### Source 5: Scavenger
+**URL:** https://en.wikipedia.org/wiki/Scavenger
+
+**Key Facts:**
+- Scavengers feed primarily on dead animals (carrion) rather than hunting live prey
+- Key ecological role: nutrient recycling, disease control, carcass removal
+- Types: obligate scavengers (vultures, condors) vs. facultative scavengers (crows, hyenas, bears)
+- Scavengers often have specialized adaptations: keen sense of smell, strong digestive systems, social feeding behaviors
+- Competition hierarchy: large predators → large scavengers → small scavengers → insects
+- Carcass depletion timeline: hours to days depending on scavenger population and carcass size
+
+**Implications/Risks:**
+- Adds ecological depth to wildlife systems and food chains
+- Natural corpse cleanup mechanism (player kills, NPC deaths, wildlife deaths)
+- Risk of trivializing death if scavengers remove corpses too quickly
+- Performance overhead for scavenger AI detection and pathfinding to corpses
+- Player exploitation potential: intentional kills to attract scavengers for harvesting
+
+**Action Items:**
+- Implement scavenger AI: detection radius for corpses, preference for fresh vs. decomposed
+- Create scavenger species hierarchy: vultures (aerial), hyenas (ground), insects (final cleanup)
+- Design scavenger loot tables: bones, hide scraps, meat (lower quality than fresh kills)
+- Add scavenger-player interactions: aggressive defense of food, flee if threatened
+- Balance corpse cleanup timing: enough time for player looting, but automatic cleanup
+- Consider scavenger attractions as hunting strategy (bait traps, ambush predators)
+- Implement disease transmission risk from scavenger-consumed carrion
+
+---
+
+### Source 6: Structural Integrity and Failure
+**URL:** https://en.wikipedia.org/wiki/Structural_integrity_and_failure
+
+**Key Facts:**
+- Structural integrity: ability of a structure to withstand intended loads without failure
+- Failure modes: yielding (permanent deformation), fracture (breaking), buckling (collapse), fatigue (repeated stress)
+- Load types: dead load (self-weight), live load (occupants, furniture), environmental (wind, snow, earthquakes)
+- Safety factor: structures designed to handle multiples of expected load (typically 1.5-3x)
+- Material properties critical: tensile strength, compressive strength, shear strength, elasticity
+- Progressive collapse: localized failure spreads to entire structure (critical in large buildings)
+
+**Implications/Risks:**
+- Foundation for realistic building and crafting durability systems
+- Enables siege warfare mechanics: structural weak points, progressive damage
+- Complexity risk: over-simulation may bog down performance or confuse players
+- Player frustration if structures fail unexpectedly without clear feedback
+- Griefing potential: players intentionally triggering structural failures
+
+**Action Items:**
+- Implement load calculation system: weight of materials, occupants, stored items
+- Define structural integrity score: health percentage, failure thresholds
+- Create visual feedback: cracks, stress indicators, material strain effects
+- Design failure modes: partial collapse, complete collapse, slow degradation
+- Add material-specific properties: stone (compression), wood (flexibility), metal (tensile)
+- Implement support structure mechanics: pillars, beams, foundations required
+- Balance realism with gameplay: simplified load calculations, warning signs before failure
+- Create repair/reinforcement mechanics: bracing, material upgrades, foundation work
+
+---
+
+### Source 7: Structural Load
+**URL:** https://en.wikipedia.org/wiki/Structural_load
+
+**Key Facts:**
+- Dead loads: permanent/static (building materials, fixed equipment) - predictable and constant
+- Live loads: temporary/dynamic (people, furniture, snow, stored goods) - variable and location-dependent
+- Environmental loads: wind pressure, seismic forces, snow accumulation, temperature changes
+- Point loads vs. distributed loads: concentrated weight vs. spread across area
+- Load paths: how forces transfer through structure to foundation (critical for design)
+- Dynamic loads: impact, vibration, moving loads (more damaging than static equivalents)
+
+**Implications/Risks:**
+- More detailed companion to structural integrity - focuses on load sources
+- Enables realistic storage and building capacity limits
+- Risk of tedious micromanagement if players must calculate loads constantly
+- Opportunity for emergent gameplay: overloading storage causes collapse
+- Balance challenge: realism vs. fun (players want to build, not calculate)
+
+**Action Items:**
+- Define material load capacities: wood beams support X kg, stone pillars support Y kg
+- Implement storage weight limits: chests, shelves, warehouses have capacity
+- Create building occupancy limits: floors can support N players/NPCs simultaneously
+- Add environmental load events: snowstorms add load, earthquakes stress structures
+- Design load visualization: color-coded stress overlays in build mode
+- Implement load distribution: weight spreads to adjacent supports
+- Add dynamic load effects: rapid movement, impacts stress structures differently
+- Create load-based crafting challenges: bridges must support carts, towers need foundations
+
+---
+
+### Source 8: Engineering
+**URL:** https://en.wikipedia.org/wiki/Engineering
+
+**Key Facts:**
+- Engineering: application of science and mathematics to design solutions and solve problems
+- Major disciplines: civil (infrastructure), mechanical (machines), electrical (power/electronics), chemical (processes)
+- Engineering process: problem definition → research → design → testing → implementation → maintenance
+- Key principles: efficiency, safety, sustainability, cost-effectiveness, manufacturability
+- Technological progression: empirical methods → theoretical understanding → computational optimization
+- Interdisciplinary nature: modern engineering combines multiple fields
+
+**Implications/Risks:**
+- Provides meta-framework for BlueMarble's entire technology progression system
+- Risk of oversimplification: reducing complex engineering to simple recipes
+- Opportunity for skill-based progression: players learn engineering principles through play
+- May need to balance historical accuracy with game pace (centuries of progress → years of gameplay)
+
+**Action Items:**
+- Design technology tree structure: empirical → scientific → advanced tiers
+- Implement engineering disciplines as skill branches: civil, mechanical, chemical, electrical
+- Create research mechanics: experimentation, blueprint refinement, testing prototypes
+- Add engineering problem-solving gameplay: optimize designs for efficiency/cost/materials
+- Implement quality control: failed designs, iterations, learning from mistakes
+- Design interdisciplinary synergies: combining skills unlocks advanced technologies
+- Create engineering challenges: bridge building, machine design, process optimization
+- Add engineering education system: apprenticeships, studying texts, experimentation
+- Balance empirical discovery (trial and error) with theoretical learning (research/study)
+
+---
+
+## Batch 2 Summary
+
+This batch transitions from biological systems to engineering fundamentals, establishing the foundation for BlueMarble's construction and technology systems. **Scavenger** completes the biological ecology by adding natural cleanup mechanisms and predator-prey dynamics. The three engineering sources work together: **Structural Integrity** defines failure mechanics, **Structural Load** specifies forces that cause failure, and **Engineering** provides the overarching framework for technological progression and problem-solving.
+
+**Cross-Source Insights:**
+- Scavenger ecology connects to decomposition (Batch 1): together they create complete lifecycle simulation
+- Structural integrity and load are inseparable: one defines capacity, the other defines demand
+- Engineering as discipline encompasses all crafting and building systems planned for BlueMarble
+- Balance tension: realistic simulation depth vs. accessible, fun gameplay
+
+**Implementation Priority:**
+1. Basic structural load system (immediate: affects all building)
+2. Simple integrity scoring (foundations for construction gameplay)
+3. Engineering skill tree framework (organizes all tech progression)
+4. Scavenger AI (polish: enhances immersion but not critical)
+
+**Next Steps:**
+- Process Batch 3: Complete engineering sources (Cast iron, Iron-cementite diagram)
+- Begin physics/chemistry batch: Gas laws and material properties
+- Start prototyping structural integrity with test building scenarios
+
+---
+
+## Batch 3: [To be processed]
+
+**Remaining Sources (13):**
 - Cast iron (Engineering)
 - Iron-cementite meta-stable diagram (Engineering)
 - Surface tension (Physics)
