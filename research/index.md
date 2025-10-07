@@ -24,6 +24,9 @@ and typically 200-400 lines.
 - [Board Games in Video Games and Regulatory Considerations](topics/board-games-in-video-games-and-regulatory-considerations.md) -
   Research on implementing traditional board games (Chess, Shogi, Go, Mancala) as mini-games in MMORPGs, with comprehensive analysis of cryptocurrency integration and gambling regulations
 
+- [Spire: The City Must Fall - Universe Knowledge Base](topics/spire-the-city-must-fall-universe-knowledge-base.md) -
+  Comprehensive reference document covering Spire's dark fantasy setting, resistance mechanics, stress/fallout system, character classes, factions, themes, and design lessons applicable to BlueMarble
+
 ## Notes
 
 Informal research notes and brainstorming for ideas in development.
