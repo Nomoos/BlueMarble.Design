@@ -230,6 +230,179 @@ These sources should be investigated and catalogued for comprehensive research i
 
 ---
 
+## SOURCES Checklist
+
+- [x] **Source 39**: Auction tier fee structures - Processed in batch 1
+- [x] **Source 58**: Transport mechanics - Processed in batch 1
+- [x] **Source 59**: Auction system scope and design - Processed in batch 1
+- [x] **Source 60**: Seasonal effects - Processed in batch 1
+- [ ] **Source 61**: Winter preservation
+- [ ] **Source 62**: Regional specialization
+- [ ] **Source 63**: Commission rates
+
+---
+
+## Source Analysis
+
+### Batch 1: Sources 39, 58, 59, 60
+
+#### Source 39: Auction Tier Fee Structures
+
+**Title/ID:** Source 39 - Auction tier fee structures (lines 149-158, 169-177)
+
+**Key Facts:**
+
+- Defines tiered auction house system with escalating fees based on geographic reach
+- Local markets: 1-3% commission rates
+- Global markets: 6-8% commission rates
+- Fee structure includes both listing fees and commission rates
+- Visibility parameter determines buyer reach (citywide vs worldwide)
+
+**Implications/Risks:**
+
+- Fee balance critical to encourage market usage while providing currency sink
+- Too high fees may discourage global market usage, limiting intercontinental trade
+- Too low fees may fail to control inflation adequately
+- Regional market arbitrage may be exploited if fee differentials are too large
+
+**Action Items:**
+
+- ✅ Implemented in design/auction-economy.md with three-tier system (Local 1.5%, Regional 3%, Global 7%)
+- ✅ Added fee comparison tables in assets/diagrams/marketplace/auction-tier-system.md
+- Economic balancing testing needed during MVP phase
+- Monitor player behavior to adjust fee rates based on actual market usage patterns
+
+---
+
+#### Source 58: Transport Mechanics
+
+**Title/ID:** Source 58 - Transport mechanics (lines 563-572, 590-599, 613-620, 621-629, 645-653)
+
+**Key Facts:**
+
+- Multiple transport methods with different capacity, speed, cost, and risk attributes
+- Cargo ship example: high capacity, moderate cost (fuel_cost + port_fees), medium risk
+- Transport time formula: `time = distance/speed`
+- Weather and terrain modify travel time and risk
+- Risk formula: `risk ≈ base_risk × (1 + distance/10000) × (1 + terrain_difficulty)`
+- Guild/NPC convoy options reduce risk but increase costs
+- Insurance available to mitigate loss
+
+**Implications/Risks:**
+
+- Complex system requiring significant server-side calculation for route simulation
+- Balance needed between realism and player convenience
+- Risk mechanics must be engaging without being punitive
+- Weather/terrain systems add computational overhead
+- Insurance pricing must balance coverage with premium costs
+
+**Action Items:**
+
+- ✅ Implemented 5 transport methods in design/auction-economy.md (walking, cart, wagon, ship, airship)
+- ✅ Transport cost and risk formulas documented
+- Need to implement weather/terrain modifier system (Priority 2)
+- Need to add insurance system for transport (Priority 2)
+- Develop guild convoy mechanics (Priority 3)
+- Performance testing required for real-time route calculations
+
+---
+
+#### Source 59: Auction System Scope and Design
+
+**Title/ID:** Source 59 - Auction system scope and design (lines 29-33)
+
+**Key Facts:**
+
+- Hybrid, player-driven market philosophy
+- Regional auctions create meaningful trade opportunities
+- Physical transport of goods required (no instant teleportation)
+- Auctions generate economic sinks via fees
+- Supports professions like traders and couriers
+
+**Implications/Risks:**
+
+- Physical transport requirement may frustrate players expecting instant gratification
+- Requires robust courier/transport gameplay to support economy
+- Player-driven market dependent on active player base in all regions
+- Economic sinks must be calibrated to prevent over-draining currency
+- Courier profession viability depends on sufficient trade volume
+
+**Action Items:**
+
+- ✅ Core philosophy integrated throughout design/auction-economy.md
+- ✅ Player professions documented (trader, courier, market specialist)
+- Need player education on hybrid market benefits vs instant-access systems
+- Monitor regional market health to ensure all regions have adequate liquidity
+- Develop NPC backup systems for low-population regions
+- Create tutorial content explaining transport-based economy
+
+---
+
+#### Source 60: Seasonal Effects
+
+**Title/ID:** Source 60 - Seasonal effects (lines 857-861, 877-881, 877-885)
+
+**Key Facts:**
+
+- Four-season cycle affects supply, demand, and trade routes
+- Summer harvests: +80% crop supply, grain prices drop to ~60%
+- Drought conditions: ×2 grain prices, 50% yield reduction
+- Winter: increased fuel demand, natural cold storage
+- Seasons can freeze roads/rivers or flood terrain, closing routes
+- Cyclical modifiers encourage strategic timing of trading and production
+
+**Implications/Risks:**
+
+- Seasonal price swings may create market instability if not properly dampened
+- Route closures during winter could isolate regions economically
+- Players may hoard goods to exploit seasonal price changes
+- Extreme weather events could disrupt planned trade routes
+- Seasonal mechanics add complexity to player decision-making
+
+**Action Items:**
+
+- ✅ Implemented complete four-season system in design/auction-economy.md
+- ✅ Supply/demand modifiers documented for all seasons
+- ✅ Route availability changes included in design
+- Need to implement seasonal route restrictions (Priority 1)
+- Develop price smoothing mechanisms to prevent excessive volatility
+- Add seasonal event notifications for players
+- Monitor for hoarding exploits and implement countermeasures if needed
+- Create seasonal trading guides for player education
+
+---
+
+### Batch 1 Summary
+
+Processed sources 39, 58, 59, and 60 covering auction tier structures, transport mechanics, system scope, and seasonal
+effects. These four sources form the foundational pillars of the auction economy system:
+
+**Cross-Source Insights:**
+
+- The tiered fee structure (S39) works synergistically with transport costs (S58) to create meaningful trade-offs
+  between local convenience and global reach
+- Physical transport requirement (S59) gains depth through seasonal route changes (S60), creating strategic timing
+  considerations
+- Economic sinks from auction fees (S39) combined with transport costs (S58) and spoilage provide robust inflation
+  control
+- Seasonal effects (S60) interact with preservation methods and transport times (S58) to add complexity without being
+  overwhelming
+
+**Key Integration Points:**
+
+- All four sources successfully integrated into design/auction-economy.md
+- Visual diagrams created to illustrate tier hierarchy and seasonal route changes
+- Implementation roadmap prioritizes core mechanics (fees, transport, seasons) in MVP
+
+**Next Steps:**
+
+- Process remaining sources 61-63 in next batch to complete source analysis
+- Begin technical feasibility review with development team
+- Develop database schema for auction, transport, and seasonal systems
+- Create UI mockups incorporating seasonal indicators and transport options
+
+---
+
 ## Integration Recommendations
 
 ### Immediate Enhancements (Priority 1)
