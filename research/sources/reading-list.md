@@ -3,7 +3,7 @@
 Curated reading list for BlueMarble research and development.
 
 **Last Updated:** 2024  
-**Total Sources:** 91 (73 books + 13 survival collections + 5 online resources)  
+**Total Sources:** 112 (73 books + 13 survival collections + 5 online resources + 21 scientific references)  
 **Completed Analysis:** 20 sources (includes 8 fantasy literature sources)  
 **Status:** Active - Tracking all research literature sources
 
@@ -188,6 +188,40 @@ Curated reading list for BlueMarble research and development.
 - [ ] **World of Warcraft** - Traditional MMORPG architecture
 - [ ] **Ultima Online** - Historical MMORPG design
 - [ ] **RuneScape (Old School)** - Browser-based MMORPG patterns
+
+### Scientific Reference Sources (Wikipedia)
+
+**Biology and Organic Systems:**
+- [x] **Decomposition** - Biological decomposition processes for crafting and survival systems (Processed in Batch 1)
+- [x] **Corpse decomposition** - Decomposition stages and factors for realistic survival mechanics (Processed in Batch 1)
+- [x] **Organ (biology)** - Biological organ systems for medical and survival systems (Processed in Batch 1)
+- [x] **Bacteria** - Bacterial processes for decomposition and fermentation systems (Processed in Batch 1)
+- [x] **Scavenger** - Scavenger ecology for wildlife and food chain simulation (Processed in Batch 2)
+
+**Engineering and Materials Science:**
+- [x] **Structural integrity and failure** - Structural mechanics for building and crafting systems (Processed in Batch 2)
+- [x] **Structural load** - Load calculations for construction and building systems (Processed in Batch 2)
+- [x] **Engineering** - General engineering principles for technology progression (Processed in Batch 2)
+- [x] **Cast iron** - Cast iron properties for metalworking and crafting systems (Processed in Batch 3)
+- [x] **Iron-cementite meta-stable diagram** (Research online) - Phase diagrams for advanced metallurgy (Processed in Batch 3)
+
+**Physics and Chemistry:**
+- [x] **Surface tension** - Surface tension physics for liquid behavior simulation (Processed in Batch 3)
+- [x] **Redox** - Oxidation-reduction chemistry for crafting and metallurgy (Processed in Batch 3)
+- [x] **Viscosity** - Viscosity properties for fluid simulation and crafting (Processed in Batch 4)
+- [x] **Navier–Stokes equations** - Fluid dynamics equations for atmospheric and water simulation (Processed in Batch 4)
+- [x] **Gay-Lussac's law** - Gas law for pressure-temperature relationships in crafting (Processed in Batch 4)
+- [x] **Boyle's law** - Gas law for pressure-volume relationships in systems (Processed in Batch 4)
+
+**Atmospheric Science:**
+- [x] **Atmosphere** - Atmospheric composition and structure for planetary simulation (Processed in Batch 5)
+- [x] **Magnetosphere** - Planetary magnetosphere for space weather simulation (Processed in Batch 5)
+- [x] **Solar wind** - Solar wind effects for space weather and radiation systems (Processed in Batch 5)
+- [x] **Inversion (meteorology)** - Temperature inversion for weather and climate simulation (Processed in Batch 5)
+- [x] **Reducing atmosphere** - Atmospheric chemistry for planetary atmosphere variation (Processed in Batch 6)
+- [x] **Thermochemistry** - Chemical thermodynamics for crafting and smelting systems (Processed in Batch 6)
+
+**Application to BlueMarble:** These scientific resources provide foundational knowledge for realistic simulation systems including: crafting and metallurgy (iron-cementite diagrams, thermochemistry), atmospheric simulation (gas laws, atmospheric science), structural engineering (building systems), and survival mechanics (decomposition, biological systems).
 
 ---
 

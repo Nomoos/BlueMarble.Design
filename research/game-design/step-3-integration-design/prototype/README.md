@@ -214,6 +214,28 @@ where:
 - JavaScript enabled
 - No external dependencies (pure vanilla JS)
 
+## New: Multi-Step Commodity Swap Router
+
+A new **1inch-inspired swap routing system** has been added to demonstrate optimal pathfinding for commodity exchanges!
+
+### Features
+- **Multi-step routing**: Finds optimal paths through intermediate commodities when direct markets are unavailable or expensive
+- **Dijkstra's algorithm**: Uses graph-based pathfinding to minimize exchange costs
+- **Smart comparison**: Automatically compares direct vs multi-step routes
+- **Cost optimization**: Accounts for transaction fees, slippage, and market liquidity
+
+### Try it now
+Open `swap-router-demo.html` in your browser to see the swap router in action!
+
+**Example scenarios:**
+- Wood → Iron: Small direct market vs multi-step through Carrot
+- Wood → Blueberry: No direct market, must route through intermediaries
+- Wood → Cherry: Large direct market is optimal
+
+📚 **Full documentation**: See `/research/topics/multi-step-commodity-swap-routing.md` for complete technical details.
+
+---
+
 ## Future Enhancements
 
 1. **Player Ships**: Track individual ship movements on map
