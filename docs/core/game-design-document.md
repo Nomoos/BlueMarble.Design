@@ -41,9 +41,13 @@ BlueMarble is a top-down MMORPG that combines classic MMO elements with modern d
 - **Player Housing:** Customizable personal spaces and guild halls
 
 #### Social Systems
+- **Settlement Management:** Influence-based territorial control with villages, towns, cities, and specialized settlements
+- **Diplomatic System:** Comprehensive relationship management including alliances, rivalries, and wars
+- **Federation System:** Multi-guild alliances with collective influence and shared resources
 - **Guild System:** Player organizations with ranks, benefits, and goals
 - **Trading:** Player-to-player economy with auction houses and direct trade
 - **Communication:** Multiple chat channels, friend lists, and messaging systems
+- **See:** [Social Interaction and Settlement Management System](../systems/social-interaction-settlement-system.md)
 
 #### Combat System
 - **Real-time Combat:** Action-oriented combat with skill-based mechanics

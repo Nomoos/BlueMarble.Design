@@ -4,8 +4,8 @@
 title: Research Assignment Group 16
 date: 2025-01-15
 tags: [research-queue, assignment, parallel-work]
-status: pending
-assignee: TBD
+status: complete
+assignee: Copilot
 ---
 
 **Document Type:** Research Assignment  
@@ -100,7 +100,7 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Unity Game Development in 24 Hours (Low)
+- [x] Unity Game Development in 24 Hours (Low) - ✅ Completed: game-dev-analysis-unity-overview.md
 
 ---
 
@@ -126,6 +126,104 @@ For each newly discovered source, add an entry:
 Add discovered sources below this line:
 
 ---
+
+**Source Name:** Game Engine Architecture (4th Edition) by Jason Gregory  
+**Discovered From:** Unity Game Development in 24 Hours analysis (Topic 16)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Comprehensive reference for engine architecture patterns. Covers core systems (rendering, physics, AI, networking) applicable to both Unity and custom engine approaches. Essential for understanding trade-offs between using existing engines vs. building custom systems for BlueMarble.  
+**Estimated Effort:** 8-10 hours for full analysis
+
+**Source Name:** Real-Time Rendering (4th Edition) by Tomas Akenine-Möller et al.  
+**Discovered From:** Unity Game Development in 24 Hours analysis (Topic 16)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Deep dive into rendering techniques for planet-scale terrain visualization. Covers LOD systems, culling algorithms, and shader techniques needed for geological simulation rendering. Relevant for optimizing BlueMarble's visual performance.  
+**Estimated Effort:** 6-8 hours for relevant chapters
+
+**Source Name:** Unreal Engine Documentation  
+**Discovered From:** Unity Game Development in 24 Hours analysis (Topic 16)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Alternative engine comparison for BlueMarble. Unreal offers C++ source access and better large-scale world support than Unity. Worth evaluating as competitive option to Unity client approach.  
+**Estimated Effort:** 4-5 hours for comparative analysis
+
+**Source Name:** Godot Engine Documentation  
+**Discovered From:** Unity Game Development in 24 Hours analysis (Topic 16)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Open-source engine option with no licensing costs. While less mature than Unity/Unreal, worth considering for cost-conscious development. Provides comparison point for engine feature sets.  
+**Estimated Effort:** 3-4 hours for overview and comparison
+
+**Source Name:** Database Internals by Alex Petrov  
+**Discovered From:** Game Engine Architecture analysis (Topic 16 follow-up)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Deep dive into database architecture for MMORPG persistence layer. Critical for understanding PostgreSQL optimization and sharding strategies for BlueMarble's player data and world state.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Network Programming for Games by Glenn Fiedler  
+**Discovered From:** Game Engine Architecture analysis (Topic 16 follow-up)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Authoritative networking patterns for client-server games. Essential for implementing state synchronization, client prediction, and interest management at MMORPG scale.  
+**Estimated Effort:** 5-6 hours
+
+**Source Name:** Foundations of Game Engine Development (Series) by Eric Lengyel  
+**Discovered From:** Game Engine Architecture analysis (Topic 16 follow-up)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Multi-volume series covering Mathematics, Rendering, Collision Detection. Provides mathematical foundations for planet-scale terrain rendering and geological simulation.  
+**Estimated Effort:** 10-12 hours for all volumes
+
+**Source Name:** Unreal Engine C++ Source Code  
+**Discovered From:** Game Engine Architecture analysis (Topic 16 follow-up)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Hands-on analysis of production engine architecture. Provides real-world implementation examples of systems discussed in Game Engine Architecture book.  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** GPU Gems Series (Volumes 1-3) edited by Fernando, Pharr, et al.  
+**Discovered From:** Real-Time Rendering analysis (Topic 16 follow-up)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Collection of GPU programming techniques from industry experts. Covers advanced rendering optimizations and effects applicable to BlueMarble's terrain and atmospheric rendering.  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** Graphics Programming Black Book by Michael Abrash  
+**Discovered From:** Real-Time Rendering analysis (Topic 16 follow-up)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Low-level graphics optimization techniques. Historical perspective on performance optimization that still applies to modern rendering pipelines.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Vulkan Programming Guide by Kessenich, Sellers, Shreiner  
+**Discovered From:** Real-Time Rendering analysis (Topic 16 follow-up)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Modern low-level graphics API for maximum performance. Critical if BlueMarble needs custom rendering engine for planet-scale optimization beyond Unity/Unreal capabilities.  
+**Estimated Effort:** 10-12 hours
+
+**Source Name:** PostgreSQL High Performance by Gregory Smith  
+**Discovered From:** Database Internals analysis (Topic 16 follow-up)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** PostgreSQL tuning and optimization techniques. Essential for maximizing database performance for MMORPG workloads with thousands of concurrent connections and transactions.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** Redis in Action by Josiah Carlson  
+**Discovered From:** Database Internals analysis (Topic 16 follow-up)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Advanced Redis caching patterns and data structures. Critical for implementing high-performance cache layer for player sessions and position data.  
+**Estimated Effort:** 5-6 hours
+
+**Source Name:** Cassandra: The Definitive Guide by Jeff Carpenter  
+**Discovered From:** Database Internals analysis (Topic 16 follow-up)  
+**Priority:** Low  
+**Category:** GameDev-Tech  
+**Rationale:** Alternative distributed database for high write throughput. May be useful if PostgreSQL sharding proves insufficient for geological simulation data writes.  
+**Estimated Effort:** 6-8 hours
 
 <!-- Discovery entries go here -->
 

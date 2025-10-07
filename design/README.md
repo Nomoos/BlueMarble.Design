@@ -1,16 +1,18 @@
 # Design Directory
 
-This directory contains game design documentation for BlueMarble, focusing on iterative design development and vision
-documentation for the medieval MMO simulation game.
+This directory contains **high-level game design vision and concepts** for BlueMarble, focusing on iterative design development and foundational design direction for the medieval MMO simulation game.
+
+> **Note**: This directory focuses on **design vision and concepts**. For detailed technical implementation specifications, see the [/docs](../docs/) directory. For research and exploratory work, see the [/research](../research/) directory.
 
 ## Purpose
 
 The `/design` folder serves as the central location for:
 
-- **Game Design Documents**: Core design vision and mechanics documentation
+- **Design Vision**: High-level game design direction and principles
+- **Core Design Concepts**: Foundational mechanics and systems concepts
 - **Iterative Design Process**: Version-controlled design evolution and refinement
-- **Design Vision Storage**: Foundational design concepts and direction
-- **Design Specifications**: Detailed game mechanics and systems design
+- **Design Pillars**: Core values and design philosophy
+- **Conceptual Documentation**: Early-stage design thinking and vision
 
 ## Folder Structure
 
@@ -32,8 +34,9 @@ design/
 ### Design Specifications
 
 - **File Pattern**: `spec-[feature-name].md`
-- **Purpose**: Detailed feature specifications and implementation guidance
-- **Content**: Specific feature requirements, user flows, and technical considerations
+- **Purpose**: Conceptual feature design and high-level requirements
+- **Content**: Design concepts, user flows, and high-level considerations
+- **Note**: For detailed technical specifications, use `/docs` directory
 
 ## Workflow and Update Process
 
