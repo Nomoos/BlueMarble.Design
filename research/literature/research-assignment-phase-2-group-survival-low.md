@@ -642,12 +642,12 @@ Balancing historical accuracy with engaging gameplay is an ongoing challenge in 
 
 ### Batch 2 (Sources 5-8)
 
-- [ ] Source 5 reviewed and documented
-- [ ] Source 6 reviewed and documented
-- [ ] Source 7 reviewed and documented
-- [ ] Source 8 reviewed and documented
-- [ ] Batch 2 summary written
-- [ ] Waiting for "next" comment
+- [x] Source 5 reviewed and documented - `survival-analysis-inventory-management-ui-ux.md` (894 lines)
+- [x] Source 6 reviewed and documented - `survival-analysis-navigation-wayfinding-systems.md` (725 lines)
+- [x] Source 7 reviewed and documented - `survival-analysis-biome-generation-ecosystems.md` (635 lines)
+- [x] Source 8 reviewed and documented - `survival-analysis-wildlife-behavior-simulation.md` (703 lines)
+- [x] Batch 2 summary written - `phase-2-group-05-batch-2-summary.md` (353 lines)
+- [x] Waiting for "next" comment
 
 ### Batch 3 (Sources 9-10)
 
