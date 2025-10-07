@@ -2,8 +2,9 @@
 title: Phase 2 Assignment Group 01 - Critical GameDev-Tech
 date: 2025-01-17
 tags: [research, phase-2, assignment-group-01, gamedev-tech, critical]
-status: pending
+status: ready
 priority: Critical
+assignee: TBD
 ---
 
 ## Phase 2 Research Assignment Group 01
