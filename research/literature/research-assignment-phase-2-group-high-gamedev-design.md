@@ -468,7 +468,7 @@ Track progress using this checklist:
 ### Batch 1 (Sources 1-4)
 - [x] EVE Online Economic Reports (Critical) - ✅ Complete (2025-01-20)
 - [x] GDC Talks on MMORPG Economics (High) - ✅ Complete (2025-01-20)
-- [ ] Designing Virtual Worlds (Bartle) (High)
+- [x] Designing Virtual Worlds (Bartle) (High) - ✅ Complete (2025-01-20)
 - [ ] Level Up! The Guide to Great Video Game Design (High)
 - [ ] Batch 1 summary completed
 - [ ] Batch 1 feedback received
