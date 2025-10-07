@@ -92,7 +92,9 @@ Designing an Earth-sized MMO world (40,075,020 m × 20,037,510 m in EPSG:4087) a
   - Load high-res voxels around player.  
   - Medium resolution at mid-distance.  
   - Low-res background.  
-  - Unload distant chunks, use LRU caches.  
+  - Unload distant chunks, use LRU caches.
+
+**📖 For detailed storage architecture, compression strategies, and streaming implementation, see [Step 6: Voxel Data Storage & Streaming](research/game-design/step-6-voxel-data-storage-streaming.md).**
 
 ---
 

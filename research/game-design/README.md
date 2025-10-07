@@ -19,7 +19,8 @@ This research is organized in a step-by-step structure with recursive sub-steps 
 3. **[Step 3: Integration Design](step-3-integration-design/)** - Designing integration with BlueMarble's geological simulation
 4. **[Step 4: Implementation Planning](step-4-implementation-planning/)** - Phased development roadmap (16-20 months)
 5. **[Step 5: Coordinate Systems & Engine Choice](step-5-coordinate-systems-engine-choice.md)** - 64-bit precision, floating origin, and engine selection
-6. **[Step 8: MMORPG GIS Key Takeaways](step-8-mmorpg-gis-key-takeaways.md)** - Comprehensive guide to planet-scale architecture principles
+6. **[Step 6: Voxel Data Storage & Streaming](step-6-voxel-data-storage-streaming.md)** - Petabyte-scale data management and intelligent streaming
+7. **[Step 8: MMORPG GIS Key Takeaways](step-8-mmorpg-gis-key-takeaways.md)** - Comprehensive guide to planet-scale architecture principles
 
 Each step contains detailed research documents and can be explored independently or sequentially.
 
@@ -113,6 +114,78 @@ Comprehensive technical guide on coordinate systems and game engine selection fo
 - Enables seamless exploration without precision loss
 - Supports scientific accuracy in geological simulation
 - Performance optimization through origin shifting
+
+### [Step 6: Voxel Data Storage & Streaming](step-6-voxel-data-storage-streaming.md) ⭐ **DATA ARCHITECTURE**
+Comprehensive guide on storing and streaming planet-scale voxel data at petabyte scale. Essential for understanding data structures, cloud storage, and intelligent streaming.
+
+**Key Topics**:
+
+1. **The Scale Challenge** - Understanding data volume
+   - Raw data calculation (1 septillion voxels → 10 PB compressed)
+   - Sparse storage strategies (5% surface, 80% mid-layer, 95% deep)
+   - Impossibility of full storage, need for procedural generation
+
+2. **Hybrid Array-Octree Storage** - Best of both worlds
+   - Chunk-based organization (128×128×128 voxels = 2 MB)
+   - SparseVoxelOctree for empty regions (homogeneous optimization)
+   - DenseVoxelChunk for varied terrain (flat array performance)
+   - Compression strategies (Zstd, run-length encoding)
+
+3. **Cloud-Optimized Formats** - Zarr for voxel arrays
+   - Chunked, compressed N-dimensional arrays
+   - Cloud backends (S3, GCS, Azure)
+   - LOD pyramid generation (5 levels)
+   - Lazy loading and sparse storage
+
+4. **Spatial Indexing** - Fast queries
+   - S2 Geometry for global indexing (1.2km cells)
+   - Morton codes for cache-friendly access (Z-order curve)
+   - Spatial query optimization
+   - Multi-resolution indexing
+
+5. **Streaming Strategy** - Intelligent chunk loading
+   - Priority-based loading (distance + velocity prediction)
+   - LRU cache implementation
+   - View frustum culling
+   - Budget-limited loading (2 chunks/frame)
+
+6. **Performance Optimization** - Scaling techniques
+   - Parallel chunk processing (8+ threads)
+   - Memory-mapped files for large datasets
+   - Async I/O operations
+   - Compression on worker threads
+
+7. **Implementation Roadmap** - 14-week plan
+   - Phase 1: Core storage (Weeks 1-3)
+   - Phase 2: Spatial indexing (Weeks 4-5)
+   - Phase 3: Cloud integration (Weeks 6-8)
+   - Phase 4: Streaming (Weeks 9-11)
+   - Phase 5: Optimization (Weeks 12-14)
+
+**Code Examples**:
+- Complete SparseVoxelOctree implementation (C#)
+- DenseVoxelChunk with compression (C#)
+- Zarr storage setup (Python)
+- LOD pyramid generation (Python)
+- S2 Geometry spatial index (C#)
+- Morton code encoding/decoding (C#)
+- ChunkStreamingManager with priority queue (C#)
+- LRU cache implementation (C#)
+- Parallel processing framework (C#)
+- Memory-mapped file storage (C#)
+
+**Storage Formats**:
+- Zarr for chunked arrays (cloud-native)
+- Zstd compression (10:1 for terrain, 1000:1 for homogeneous)
+- S2 cells for global indexing (Level 10-15)
+- Morton codes for spatial locality
+
+**Relevance to BlueMarble**:
+- Enables petabyte-scale world storage
+- Supports real-time streaming (1km view distance)
+- Scientific accuracy through lossless compression
+- Cloud-native for distributed access
+- Efficient memory usage (<4 GB active chunks)
 
 ### [Step 8: MMORPG GIS Key Takeaways](step-8-mmorpg-gis-key-takeaways.md) ⭐ **ARCHITECTURE GUIDE**
 Comprehensive guide expanding on the six critical principles for building planet-scale MMORPG systems with GIS integration. Essential reading for understanding BlueMarble's technical architecture.
