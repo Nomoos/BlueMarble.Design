@@ -93,7 +93,7 @@ stakeholder alignment
 Template for comprehensive research reports including methodology, findings, and recommendations.
 
 **Usage:** Market research, technical analysis, player studies, competitive analysis  
-**Output Location:** `docs/research/`
+**Output Location:** `research/market-research/` or relevant research subdirectory
 
 ### Issue Management Templates
 
@@ -222,7 +222,7 @@ For research-related work, use the research issue template system:
 | Feature Spec | `feature-specification.md` | `docs/gameplay/`, `docs/systems/`, `docs/ui-ux/` |
 | Requirements Gathering | `requirements-gathering.md` | `docs/systems/`, `docs/gameplay/`, project folder |
 | API Spec | `api-specification.md` | `docs/systems/` |
-| Research Report | `research-report.md` | `docs/research/` |
+| Research Report | `research-report.md` | `research/market-research/` or relevant research subdirectory |
 | Main Research Issue | `research-roadmap-main-issue.md` | GitHub Issues |
 | Infrastructure Roadmap | `infrastructure-research-roadmap-issue.md` | GitHub Issues |
 | Core Systems Roadmap | `core-systems-design-roadmap-issue.md` | GitHub Issues |

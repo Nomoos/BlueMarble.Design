@@ -9,9 +9,9 @@ assignee: TBD
 ---
 
 **Document Type:** Research Assignment (Reserve)  
-**Version:** 1.0  
-**Total Topics:** 0 (initially)  
-**Status:** Reserved for Discovered Sources or Overflow
+**Version:** 1.3  
+**Total Topics:** 3 (all complete)  
+**Status:** Active - 3 topics completed, ready for next assignment
 
 ## Overview
 
@@ -61,11 +61,159 @@ When activating this group:
 **Date Discovered:** [YYYY-MM-DD]
 ```
 
+### Newly Discovered Sources (From Topic 20.1 Analysis)
+
+**Source Name:** Real-Time Rendering (4th Edition)  
+**Discovered From:** Game Engine Architecture analysis (Topic 20.1)  
+**Discovered By:** Group 20  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Essential reference for advanced rendering techniques applicable to planet-scale terrain and atmospheric effects in BlueMarble.  
+**Estimated Effort:** 12-16 hours  
+**Date Discovered:** 2025-01-17
+
+**Source Name:** Graphics Programming Interface Design  
+**Discovered From:** Game Engine Architecture analysis (Topic 20.1)  
+**Discovered By:** Group 20  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Provides patterns for abstracting graphics APIs (Vulkan/OpenGL), important for BlueMarble's multi-platform support.  
+**Estimated Effort:** 6-8 hours  
+**Date Discovered:** 2025-01-17
+
+**Source Name:** GPU Gems Series (1, 2, 3)  
+**Discovered From:** Real-Time Rendering analysis (Topic 20.2)  
+**Discovered By:** Group 20  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Collection of advanced graphics techniques including terrain rendering, water simulation, and particle effects applicable to BlueMarble.  
+**Estimated Effort:** 15-20 hours  
+**Date Discovered:** 2025-01-17
+
+**Source Name:** Physically Based Rendering: From Theory to Implementation  
+**Discovered From:** Real-Time Rendering analysis (Topic 20.2)  
+**Discovered By:** Group 20  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Deep dive into PBR theory and implementation for accurate material rendering in BlueMarble.  
+**Estimated Effort:** 12-15 hours  
+**Date Discovered:** 2025-01-17
+
+**Source Name:** Vulkan Programming Guide  
+**Discovered From:** Real-Time Rendering analysis (Topic 20.2)  
+**Discovered By:** Group 20  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Official Vulkan reference for implementing modern graphics features required by BlueMarble.  
+**Estimated Effort:** 10-12 hours  
+**Date Discovered:** 2025-01-17
+
+**Source Name:** Vulkan Specification (Latest Version)  
+**Discovered From:** Vulkan Programming Guide analysis (Topic 20.3)  
+**Discovered By:** Group 20  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Official reference documentation for all Vulkan features, extensions, and best practices.  
+**Estimated Effort:** 8-10 hours  
+**Date Discovered:** 2025-01-17
+
+**Source Name:** GPU Architecture Guides (NVIDIA, AMD, Intel)  
+**Discovered From:** Vulkan Programming Guide analysis (Topic 20.3)  
+**Discovered By:** Group 20  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Vendor-specific optimization guides for maximum performance on different GPU architectures.  
+**Estimated Effort:** 10-12 hours  
+**Date Discovered:** 2025-01-17
+
 ### Assigned Topics
 
 <!-- Topics will be added here as discoveries are made -->
 
-**Status:** No topics assigned yet
+#### Topic 20.1: Game Engine Architecture (HIGH)
+
+**Source Name:** Game Engine Architecture (3rd Edition) by Jason Gregory  
+**Discovered From:** Game Programming in C++ analysis (Group 1)  
+**Discovered By:** Group 1  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Referenced as critical source in "Game Programming in C++" analysis. Provides comprehensive coverage of modern game engine systems essential for MMORPG development, including multi-threaded architectures, networking layers, and world management systems.  
+**Estimated Effort:** 10-14 hours  
+**Date Discovered:** 2025-01-17
+
+**Focus Areas:**
+- Game engine subsystem architecture
+- Multi-threaded rendering and game logic
+- World streaming and level-of-detail systems
+- Collision detection and physics integration
+- Audio engine architecture
+- Resource management and asset pipelines
+
+**Deliverables:**
+- Comprehensive analysis document: `game-dev-analysis-20-game-engine-architecture.md`
+- Implementation recommendations for BlueMarble engine
+- Code examples and patterns
+- Integration guidelines with existing systems
+
+**Status:** ✅ Complete - Research document published
+
+---
+
+#### Topic 20.2: Real-Time Rendering (HIGH)
+
+**Source Name:** Real-Time Rendering (4th Edition)  
+**Discovered From:** Game Engine Architecture analysis (Topic 20.1)  
+**Discovered By:** Group 20  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Essential reference for advanced rendering techniques applicable to planet-scale terrain and atmospheric effects in BlueMarble. Covers modern graphics pipelines, shader programming, and optimization techniques critical for rendering Earth-scale environments.  
+**Estimated Effort:** 12-16 hours  
+**Date Discovered:** 2025-01-17
+
+**Focus Areas:**
+- Modern graphics pipeline architecture (Vulkan/DirectX 12)
+- Advanced terrain rendering techniques
+- Atmospheric and weather effects rendering
+- Level-of-detail (LOD) and culling strategies
+- Shader optimization for large-scale environments
+- Real-time global illumination
+
+**Deliverables:**
+- Comprehensive analysis document: `game-dev-analysis-20-real-time-rendering.md`
+- Implementation recommendations for BlueMarble rendering engine
+- Shader code examples and patterns
+- Performance optimization guidelines
+
+**Status:** ✅ Complete - Research document published
+
+---
+
+#### Topic 20.3: Vulkan Programming Guide (HIGH)
+
+**Source Name:** Vulkan Programming Guide  
+**Discovered From:** Real-Time Rendering analysis (Topic 20.2)  
+**Discovered By:** Group 20  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Official Vulkan reference for implementing modern graphics features required by BlueMarble. Essential for understanding low-level graphics programming, command buffer management, synchronization primitives, and performance optimization in Vulkan.  
+**Estimated Effort:** 10-12 hours  
+**Date Discovered:** 2025-01-17
+
+**Focus Areas:**
+- Vulkan initialization and device selection
+- Command buffer recording and submission
+- Synchronization (semaphores, fences, barriers)
+- Memory management and allocation strategies
+- Descriptor sets and pipeline layouts
+- Render passes and framebuffers
+
+**Deliverables:**
+- Comprehensive analysis document: `game-dev-analysis-20-vulkan-programming.md`
+- Implementation recommendations for BlueMarble's Vulkan renderer
+- Code examples for critical Vulkan patterns
+- Performance optimization guidelines
+
+**Status:** ✅ Complete - Research document published
 
 ---
 
@@ -83,7 +231,10 @@ Follow same quality standards and documentation structure as other groups.
 
 ## Progress Tracking
 
-- [ ] Group 20 activation pending
+- [x] Group 20 activated - 2025-01-17
+- [x] Topic 20.1: Game Engine Architecture (High) - ✅ Complete
+- [x] Topic 20.2: Real-Time Rendering (High) - ✅ Complete
+- [x] Topic 20.3: Vulkan Programming Guide (High) - ✅ Complete
 
 ---
 
@@ -96,5 +247,6 @@ Follow same quality standards and documentation structure as other groups.
 ---
 
 **Created:** 2025-01-15  
-**Status:** Reserved - Awaiting Activation  
-**Capacity:** Ready for 1-3 topics as needed
+**Status:** Active - 3 topics completed  
+**Capacity:** 3 topics completed, ready for 1 more if needed  
+**Last Updated:** 2025-01-17

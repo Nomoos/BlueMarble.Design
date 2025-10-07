@@ -23,6 +23,32 @@ Each step contains detailed research documents and can be explored independently
 
 ## Research Documents
 
+### [From Inspiration to Design Document](step-1-foundation/from-inspiration-to-design-document.md)
+Comprehensive guide on the game design process from initial inspiration through formal design documentation.
+
+**Key Topics**:
+
+- Capturing and developing initial game ideas
+- How game concepts are born and evolve from inspiration
+- Building basic game building blocks (mechanics, systems, feedback loops)
+- Understanding what design documents are and their purpose
+- How to effectively present ideas in design documentation
+- Structuring documents for clarity, actionability, and maintainability
+- Best practices for design documentation workflow
+
+### [Narrative Inspiration: Sci-Fi Mining World](step-1-foundation/narrative-inspiration-sci-fi-mining-world.md)
+Science fiction narrative inspiration for a game without magic, featuring a multi-species mining colony controlled by a superior race.
+
+**Key Topics**:
+
+- World as experimental mining operation by advanced species
+- Multi-species population dynamics (humans, Kronids, Veldari, Graven)
+- Clone generation and controlled reproduction systems
+- Resource credit economy and black markets
+- Technology without magic (genetic engineering, cybernetics, AI, automation)
+- Narrative themes: identity, freedom vs. security, cooperation under oppression
+- Character archetypes and story hooks
+- Gameplay integration concepts for mining, economy, and multi-species cooperation
 ### [Content Design Research](step-1-foundation/content-design/)
 Comprehensive research on content design in game development, organized into focused topic files for easier 
 navigation and reference.
