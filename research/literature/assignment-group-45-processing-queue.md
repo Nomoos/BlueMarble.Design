@@ -66,11 +66,11 @@ This document tracks the processing of sources from Assignment Group 45 - Engine
    - Completed: 2025-01-17
    - Lines: 950+
 
-7. **Unity NetCode for DOTS** (Batch 4 - Discovered Source 2)
+8. **Naughty Dog Engine Architecture** (Batch 4 - Discovered Source 3)
    - Status: ✅ Complete
-   - Document: [game-dev-analysis-unity-netcode-for-dots.md](./game-dev-analysis-unity-netcode-for-dots.md)
+   - Document: [game-dev-analysis-naughty-dog-engine-architecture.md](./game-dev-analysis-naughty-dog-engine-architecture.md)
    - Completed: 2025-01-17
-   - Lines: 1100+
+   - Lines: 1000+
 
 ---
 
@@ -475,6 +475,59 @@ Sources discovered during Group 45 processing will be logged here for Phase 4 re
     - Rationale: Blend physics with animation for natural movement
     - Estimated Effort: 6-8 hours
 
+**From Source 7: Unity NetCode for DOTS**
+
+26. **Interest Management Techniques**
+    - Discovered From: NetCode - Relevancy systems
+    - Priority: High
+    - Category: GameDev-Tech
+    - Rationale: Scaling to 1000+ players per server
+    - Estimated Effort: 6-8 hours
+
+27. **Bandwidth Optimization for Multiplayer**
+    - Discovered From: NetCode - Network performance
+    - Priority: High
+    - Category: GameDev-Tech
+    - Rationale: Reduce server costs and improve player experience
+    - Estimated Effort: 4-6 hours
+
+28. **Client-Side Prediction Patterns**
+    - Discovered From: NetCode - Prediction system
+    - Priority: High
+    - Category: GameDev-Tech
+    - Rationale: Responsive multiplayer gameplay feel
+    - Estimated Effort: 6-8 hours
+
+29. **Server Architecture for MMOs**
+    - Discovered From: NetCode - Scalability patterns
+    - Priority: High
+    - Category: GameDev-Tech
+    - Rationale: Infrastructure for massive player counts
+    - Estimated Effort: 8-10 hours
+
+**From Source 8: Naughty Dog Engine Architecture**
+
+30. **Parallelizing the Naughty Dog Engine Using Fibers (GDC 2015)**
+    - Discovered From: Naughty Dog job system research
+    - Priority: High
+    - Category: GameDev-Tech
+    - Rationale: Advanced job system implementation with fibers
+    - Estimated Effort: 6-8 hours
+
+31. **Culling the Battlefield: Data Oriented Design in Practice (GDC 2018)**
+    - Discovered From: Data-oriented design patterns
+    - Priority: High
+    - Category: GameDev-Tech
+    - Rationale: DICE/Frostbite similar approach case study
+    - Estimated Effort: 6-8 hours
+
+32. **Frame Graph: Extensible Rendering Architecture in Frostbite (GDC 2017)**
+    - Discovered From: Frame graph implementation details
+    - Priority: High
+    - Category: GameDev-Tech
+    - Rationale: Production frame graph system architecture
+    - Estimated Effort: 8-10 hours
+
 ---
 
 ## Batch Summaries
@@ -565,9 +618,9 @@ Following assignment instructions to "pick max 4 sources...discovered during pro
 
 ### Source #8 (Discovered 3): Naughty Dog Engine Architecture
 
-**Status:** ⏳ Pending
+**Status:** ✅ Complete - Analysis document created
 
-**Deliverable:** Analysis covering AAA production engine architecture patterns, subsystem design from shipped titles, performance optimization workflows, and lessons for BlueMarble.
+**Deliverable:** Comprehensive analysis covering job-based parallelism, data-oriented design patterns (Structure of Arrays), frame graph GPU orchestration, memory budget management, asset streaming pipeline, and AAA performance optimization philosophy applied to BlueMarble.
 
 ---
 
@@ -581,21 +634,24 @@ Following assignment instructions to "pick max 4 sources...discovered during pro
 
 ## 🎉 Group 45 Status: Batch 4 In Progress!
 
-**Total Documentation:** 7,850+ lines  
-**Sources Analyzed:** 7 (5 original + 2 discovered)  
+**Total Documentation:** 8,600+ lines  
+**Sources Analyzed:** 8 (5 original + 3 discovered)  
 **Batch Summaries:** 3  
-**Discovered Sources:** 29 total discovered  
-**Status:** ⏳ **BATCH 4 IN PROGRESS** (2 of 4 complete)
+**Discovered Sources:** 32 total discovered  
+**Status:** ⏳ **BATCH 4 IN PROGRESS** (3 of 4 complete)
 
 **Key Achievements:**
 - ✅ 10,000+ agent architecture at 60 FPS
 - ✅ 10,000+ physics entities with deterministic simulation
 - ✅ 1000+ player networking with area-of-interest
 - ✅ 100km+ planetary-scale world design
+- ✅ Job-based parallelism patterns from AAA studios
+- ✅ Data-oriented design with cache optimization
+- ✅ Frame graph GPU orchestration
 - ✅ Production-ready ECS/DOTS patterns
 - ✅ Complete subsystem integration blueprints
 
-**Remaining Work:** 2 more discovered sources (Naughty Dog Architecture, Entities Graphics)
+**Remaining Work:** 1 more discovered source (Entities Graphics), then Batch 4 summary
 
 ---
 
