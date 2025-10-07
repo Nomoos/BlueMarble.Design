@@ -175,25 +175,28 @@ Structured Quest Chain Benefits:
 
 Successful sandbox games use **tiered quest systems**:
 
-**Tier 1: Structured Core (15-20% of content)**
+#### Tier 1: Structured Core (15-20% of content)
+
 - Main story questline (optional but recommended)
 - Tutorial quest chains (required for new players)
 - Major faction questlines (choice of which to pursue)
 - System introduction missions (teaches core mechanics)
 
-**Tier 2: Semi-Structured Threads (25-35% of content)**
+#### Tier 2: Semi-Structured Threads (25-35% of content)
+
 - Character relationship arcs (player chooses which to pursue)
 - Regional storylines (self-contained but sequential)
 - Profession advancement paths (structured but optional)
 - Dynamic event chains (triggered by player actions)
 
-**Tier 3: Optional Discovery (45-60% of content)**
+#### Tier 3: Optional Discovery (45-60% of content)
+
 - Environmental storytelling (no quest marker)
 - Hidden locations and secrets (pure exploration)
 - Emergent narrative opportunities (systemic gameplay)
 - Cultural/historical lore (found through investigation)
 
-**Case Study: Baldur's Gate 3**
+#### Case Study: Baldur's Gate 3
 
 BG3 implements this hybrid perfectly:
 
@@ -222,8 +225,9 @@ Geological sandbox environments naturally support side quest worldbuilding:
 
 **Geological Discovery Quests (Optional Side Content):**
 
-**Example 1: "The Ancient River"**
-```
+#### Example 1: "The Ancient River"
+
+```text
 Discovery Method: Player notices unusual mineral deposits
 Investigation: Following geological clues reveals:
 ├── Ancient river bed (dry for 10,000 years)
@@ -244,8 +248,9 @@ Player Experience:
 - Memorable "eureka" moment when pieces connect
 ```
 
-**Example 2: "The Unstable Mine"**
-```
+#### Example 2: "The Unstable Mine"
+
+```text
 Discovery Method: Player hears rumors in tavern (optional conversation)
 Investigation: Optional quest chain:
 ├── Talk to retired miners (oral history)
@@ -268,8 +273,9 @@ Player Experience:
 
 **Structured Core for System Learning:**
 
-**Tutorial Quest Chain: "First Expedition"**
-```
+#### Tutorial Quest Chain: "First Expedition"
+
+```text
 Required for new players:
 1. Basic Resource Identification
    └── Teaches rock types, ore recognition
@@ -293,32 +299,38 @@ Purpose:
 
 **Psychological Principles:**
 
-**1. Self-Determination Theory**
+#### 1. Self-Determination Theory
+
 - **Autonomy**: Side quests provide choice (intrinsically motivating)
 - **Competence**: Discovery creates mastery feeling
 - **Relatedness**: Shared discoveries build community
 
-**2. Exploration Drive**
+#### 2. Exploration Drive
+
 - Humans naturally curious about hidden information
 - "What's over that hill?" motivates exploration
 - Side quests reward this natural impulse
 - Structured chains feel like chores by comparison
 
-**3. Ownership and Investment**
+#### 3. Ownership and Investment
+
 - Players value self-discovered content more highly
 - "I found this" creates emotional attachment
 - Side quests feel like personal achievements
 - Main quests feel like developer obligations
 
-**4. Emergent Narrative**
+#### 4. Emergent Narrative
+
 - Players create their own story through quest order
 - Side quests allow unique combinations
 - Personal narrative emerges from choices
 - More memorable than linear progression
 
 **Research Quote:**
-> "Players in sandbox environments report 73% higher satisfaction with self-discovered content 
-> versus developer-directed content, even when the actual content quality is identical." 
+
+> "Players in sandbox environments report 73% higher satisfaction with self-discovered content
+> versus developer-directed content, even when the actual content quality is identical."
+>
 > - GDC 2022 Player Engagement Study
 
 ### 7. Content Design Implications for BlueMarble
@@ -327,7 +339,7 @@ Purpose:
 
 Based on research, BlueMarble should implement:
 
-```
+```text
 Total Quest Content Distribution:
 ├── 15% Structured Chains (Core Systems)
 │   ├── New player tutorial (5%)
@@ -348,8 +360,9 @@ Total Quest Content Distribution:
 
 **Design Principles for BlueMarble Side Quests:**
 
-**1. Integrate with Geological Systems**
-```
+#### 1. Integrate with Geological Systems
+
+```text
 Side Quest: "The Moving Mountain"
 Trigger: Player observes hillside position changing over weeks
 Investigation: Optional tracking project
@@ -362,8 +375,9 @@ Worldbuilding: Teaches geological time, creep processes, risk assessment
 BlueMarble Value: Uses real simulation data, not scripted
 ```
 
-**2. Multi-Solution Paths**
-```
+#### 2. Multi-Solution Paths
+
+```text
 Side Quest: "The Forgotten Quarry"
 Discovery: Player finds abandoned quarry
 Completion Options:
@@ -375,8 +389,9 @@ Completion Options:
 All paths valid, teach different systems, reward different player types
 ```
 
-**3. No Time Pressure**
-```
+#### 3. No Time Pressure
+
+```text
 Design Rule: Side quests never expire
 Rationale:
 - Sandbox players value freedom to explore at own pace
@@ -385,8 +400,9 @@ Rationale:
 - Replayability benefits from non-linear access
 ```
 
-**4. Cascading Worldbuilding**
-```
+#### 4. Cascading Worldbuilding
+
+```text
 Design Pattern: Breadcrumb Worldbuilding
 Side Quest A reveals: Ancient civilization existed
 └── Leads to Side Quest B: What happened to them?
@@ -405,34 +421,40 @@ No required order, but natural progression emerges
 Reference: [`content-design-video-game-rpgs.md`](../game-design/step-1-foundation/content-design/content-design-video-game-rpgs.md)
 
 > "**Quest Quality Over Quantity:**
+>
 > - ~200 quests, all hand-crafted
 > - Every quest has unique setup, not generic 'fetch/kill'
 > - Side quests often as compelling as main story
 > - Environmental storytelling between quests"
-
-**Application:** BlueMarble should prioritize fewer, higher-quality side quests over numerous structured chains.
+>
+> **Application:** BlueMarble should prioritize fewer, higher-quality side quests over numerous
+> structured chains.
 
 **From Sandbox Freedom Research:**
 
 Reference: [`assignment-group-05-topic-5-findings.md`](assignment-group-05-topic-5-findings.md)
 
 > "**Three-Tier Freedom Model:**
+>
 > - Tier 1: Core Freedom (Always Available)
 > - Tier 2: Earned Freedom (Progression-Gated)
 > - Tier 3: Collaborative Freedom (Social Requirements)"
-
-**Application:** Side quests should primarily exist in Tier 1 (always accessible), with some Tier 2 content requiring specific skills/knowledge to understand.
+>
+> **Application:** Side quests should primarily exist in Tier 1 (always accessible), with some
+> Tier 2 content requiring specific skills/knowledge to understand.
 
 **From Dynamic Economic Missions:**
 
 Reference: [`content-design-bluemarble.md`](../game-design/step-1-foundation/content-design/content-design-bluemarble.md)
 
 > "**Dynamic Quest: 'Supply and Demand'**
+>
 > Trigger: Resource shortage detected in marketplace
 > Objective: Varies based on shortage
 > Content Designer Role: Design quest templates for different economic scenarios"
-
-**Application:** Semi-structured content can respond to player economy while maintaining optional status.
+>
+> **Application:** Semi-structured content can respond to player economy while maintaining optional
+> status.
 
 ---
 
@@ -440,19 +462,22 @@ Reference: [`content-design-bluemarble.md`](../game-design/step-1-foundation/con
 
 ### Content Design Strategy
 
-**1. Prioritize Optional Discovery Content (55% of effort)**
+#### 1. Prioritize Optional Discovery Content (55% of effort)
+
 - Design systems that generate worldbuilding opportunities
 - Create geological mysteries that players can investigate
 - Implement environmental storytelling through rock formations, fossils, and structures
 - Enable emergent narrative through player actions affecting geology
 
-**2. Structured Chains for Foundation Only (15% of effort)**
+#### 2. Structured Chains for Foundation Only (15% of effort)
+
 - Comprehensive new player tutorial (essential systems)
 - Major faction introduction questlines (player chooses which)
 - Core profession certification paths (teaches complex mechanics)
 - These are "on-ramps" to sandbox freedom
 
-**3. Semi-Structured Regional Content (30% of effort)**
+#### 3. Semi-Structured Regional Content (30% of effort)
+
 - Geological survey campaigns (optional but sequential)
 - Regional history investigations (unlocked by location discovery)
 - Dynamic economic opportunities (triggered by player market)
@@ -489,7 +514,7 @@ INSERT INTO quests_master VALUES (
 
 **Content Creation Pipeline:**
 
-```
+```text
 Step 1: Identify Geological Phenomena
 ├── Real geological processes in simulation
 ├── Interesting formations, events, or patterns
@@ -520,7 +545,7 @@ Step 5: Rewards and Recognition
 
 **Hybrid Approach for New Players:**
 
-```
+```text
 Hour 0-2: Structured Tutorial
 ├── Required quest chain teaches core systems
 ├── Linear progression ensures competency
@@ -545,26 +570,31 @@ Fallback: Structured guidance always available
 **Side Quest Quality Checklist:**
 
 ✅ **Discovery-Based**
+
 - No quest marker until player naturally encounters trigger
 - Investigation method feels organic to world
 - Multiple discovery paths possible
 
 ✅ **Worldbuilding Integration**
+
 - Reveals something meaningful about planet/geology/culture
 - Connects to broader narrative threads
 - Teaches real geological principles
 
 ✅ **Multi-Solution Design**
+
 - At least 3 distinct approaches to completion
 - Different player specializations valuable
 - No "correct" solution, only different perspectives
 
 ✅ **Systemic Integration**
+
 - Uses real simulation data, not scripted events
 - Consequences affect ongoing geological processes
 - Player actions create persistent world changes
 
 ✅ **Optional but Rewarding**
+
 - Never required for progression
 - Rewards appropriate to effort and discovery
 - Practical knowledge applicable to future gameplay
@@ -576,18 +606,21 @@ Fallback: Structured guidance always available
 ### Academic Research
 
 **Player Motivation in Open World Games:**
+
 - Intrinsic motivation (autonomy, mastery, purpose) higher in optional content
 - Extrinsic motivation (rewards, progression) sufficient for structured content
 - Sandbox players score 40% higher on "exploration" motivation metric
 
 **Worldbuilding Effectiveness:**
+
 - Environmental storytelling retention: 68% vs 45% for exposition
 - Player-discovered lore recalled at 2.3x rate of told information
 - Emotional investment 55% higher in self-discovered narrative
 
 ### Industry Case Studies
 
-**The Witcher 3:** 200 quests, 80% optional → 96% positive reviews, "side quests as good as main"
+**The Witcher 3:** 200 quests, 80% optional → 96% positive reviews, "side quests as good as
+main"
 
 **Skyrim:** Radiant quest system → Most played single-player game of 2010s decade
 
@@ -637,7 +670,8 @@ Fallback: Structured guidance always available
 
 **Research Answer:**
 
-**Yes, sandbox players strongly prefer optional side quests for worldbuilding over structured quest chains**, with these qualifications:
+**Yes, sandbox players strongly prefer optional side quests for worldbuilding over structured
+quest chains**, with these qualifications:
 
 1. ✅ **Side quests excel** at organic worldbuilding, player agency, and long-term engagement
 2. ⚠️ **Structured chains needed** for onboarding, complex system teaching, and critical narrative
@@ -647,12 +681,14 @@ Fallback: Structured guidance always available
 **For BlueMarble specifically:**
 
 The geological sandbox environment is **ideal for side quest worldbuilding** because:
+
 - Natural phenomena create organic discovery opportunities
 - Simulation generates real mysteries to investigate
 - Geological processes teach real-world principles
 - Player actions create persistent, meaningful world changes
 
-**Recommendation:** Invest heavily in optional, discovery-based side quest content while maintaining minimal structured chains for essential system introduction.
+**Recommendation:** Invest heavily in optional, discovery-based side quest content while maintaining
+minimal structured chains for essential system introduction.
 
 ---
 
