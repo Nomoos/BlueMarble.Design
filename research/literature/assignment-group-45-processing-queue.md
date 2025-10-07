@@ -338,6 +338,36 @@ Sources discovered during Group 45 processing will be logged here for Phase 4 re
     - Rationale: Stream entities in/out for open worlds
     - Estimated Effort: 8-10 hours
 
+**From Source 3: Game Engine Architecture - Subsystems**
+
+11. **Naughty Dog Engine Architecture (GDC Talks)**
+    - Discovered From: Game Engine Architecture - Real-world examples
+    - Priority: High
+    - Category: GameDev-Tech
+    - Rationale: Production engine architecture from AAA studio
+    - Estimated Effort: 6-8 hours
+
+12. **Memory Management Patterns for Games**
+    - Discovered From: Game Engine Architecture - Memory chapter
+    - Priority: Medium
+    - Category: GameDev-Tech
+    - Rationale: Advanced memory management techniques
+    - Estimated Effort: 4-6 hours
+
+13. **Game Engine Profiling and Optimization**
+    - Discovered From: Game Engine Architecture - Performance chapter
+    - Priority: High
+    - Category: GameDev-Tech
+    - Rationale: Profiling tools and optimization workflows
+    - Estimated Effort: 6-8 hours
+
+14. **Asset Pipeline Architecture**
+    - Discovered From: Game Engine Architecture - Tools chapter
+    - Priority: Medium
+    - Category: GameDev-Tech
+    - Rationale: Automated asset processing pipelines
+    - Estimated Effort: 6-8 hours
+
 ---
 
 ## Batch Summaries
@@ -459,8 +489,8 @@ After all 5 sources complete:
 
 **Document Status:** Active  
 **Last Updated:** 2025-01-17  
-**Current Action:** Begin Batch 2 - Process Source 3 (Game Engine Architecture by Jason Gregory)  
-**Next Milestone:** Complete Batch 2 (Sources 3-4)  
+**Current Action:** Processing Source 4 (Unity ECS/DOTS Documentation)  
+**Next Milestone:** Complete Batch 2, write summary  
 **Next Group:** Group 46 (Advanced Networking & Polish)
 
 ---
