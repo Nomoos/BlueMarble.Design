@@ -1166,6 +1166,74 @@ Make small parameter changes and monitor effects.
 - [Player Resource Dashboard](../spec-player-resource-dashboard.md) - UI for resource management
 - [Marketplace Usage Guide](../marketplace-usage-guide.md) - Player trading guide
 
+## References
+
+### Game Economy Examples
+
+1. **RuneScape (Old School RuneScape)**
+   - Official Website: <https://oldschool.runescape.com/>
+   - Wiki: <https://oldschool.runescape.wiki/>
+   - Developer: Jagex
+   - Key Features: Item degradation, construction skill, alchemy system, death penalties
+   - Economy Analysis: Player-driven Grand Exchange with dynamic pricing
+
+2. **Albion Online**
+   - Official Website: <https://albiononline.com/>
+   - Developer: Sandbox Interactive
+   - Key Features: 100% player-driven economy, full-loot PvP, localized resources
+   - Economy Model: All gear is player-crafted, risk-based resource distribution
+
+3. **Eco**
+   - Official Website: <https://play.eco/>
+   - Developer: Strange Loop Games
+   - Key Features: Player-owned shops, contract system, resource-backed currency
+   - Economy Model: Player governance, environmental impact, sustainable practices
+
+4. **Life is Feudal**
+   - Official Website: <https://lifeisfeudal.com/>
+   - Developer: Bitbox Ltd.
+   - Key Features: Quality system (0-100), skill-based progression, terraforming
+   - Economy Model: Material quality affects outputs, specialization rewards
+
+### Academic and Industry Sources
+
+1. **"Virtual Economies: Design and Analysis"**
+   - Authors: Vili Lehdonvirta, Edward Castronova
+   - Publisher: MIT Press, 2014
+   - Topics: Economic theory, virtual currency, market design, player behavior
+
+2. **"Designing Virtual Worlds"**
+   - Author: Richard A. Bartle
+   - Publisher: New Riders, 2003
+   - Topics: World design, player psychology, economic systems, game balance
+
+3. **"Game Economy Design"**
+   - GDC Talks and Resources
+   - Topics: Faucets and sinks, inflation control, progression curves, monetization
+
+4. **EVE Online Economic Reports**
+   - CCP Games Quarterly Economic Reports
+   - Source: <https://www.eveonline.com/news>
+   - Topics: Real-world economic analysis, inflation metrics, market dynamics
+
+### Research Documentation
+
+1. **BlueMarble Economic Research**
+   - [Phase 3 Research: Game Economy](../../../research/literature/phase-3-issue-description.md)
+   - [Virtual Economies Analysis](../../../research/literature/game-dev-analysis-virtual-economies-design-and-analysis.md)
+   - [OSRS Grand Exchange Economy](../../../research/literature/game-dev-analysis-osrs-grand-exchange-economy.md)
+   - [Port Royale-Inspired Trading](../../../research/game-design/step-3-integration-design/economic-system-design.md)
+
+### Supply Chain and Economic Theory
+
+1. **Supply Chain Management Principles**
+   - Concepts: Throughput, inventory turnover, value chains, bottleneck analysis
+   - Application: Real-world logistics adapted to virtual economies
+
+2. **Economic Balance Strategies**
+   - Concepts: Price elasticity, supply-demand equilibrium, inflation control
+   - Application: Dynamic pricing, resource scarcity, market stabilization
+
 ## Notes
 
 - This document focuses on material economy (physical resources), not currency economy
