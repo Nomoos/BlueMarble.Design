@@ -171,4 +171,6 @@ Designing an Earth-sized MMO world (40,075,020 m × 20,037,510 m in EPSG:4087) a
 - **Sharding + AOI networking**: only send what matters.  
 - **Async + GPU acceleration**: keep performance viable.
 
+**📖 For detailed explanations, code examples, and implementation guides for each principle, see [Step 8: MMORPG GIS Key Takeaways](research/game-design/step-8-mmorpg-gis-key-takeaways.md).**
+
 ---
