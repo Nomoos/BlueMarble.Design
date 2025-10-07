@@ -21,6 +21,9 @@ and typically 200-400 lines.
 - [Why Don't Women Play Games? - Gender Barriers in Gaming](topics/why-dont-women-play-games.md) -
   Analysis of historical and cultural barriers preventing women's full participation in gaming, with actionable insights for inclusive game design
 
+- [Board Games in Video Games and Regulatory Considerations](topics/board-games-in-video-games-and-regulatory-considerations.md) -
+  Research on implementing traditional board games (Chess, Shogi, Go, Mancala) as mini-games in MMORPGs, with comprehensive analysis of cryptocurrency integration and gambling regulations
+
 ## Notes
 
 Informal research notes and brainstorming for ideas in development.
