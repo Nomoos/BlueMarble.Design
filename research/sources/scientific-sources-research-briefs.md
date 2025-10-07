@@ -4,8 +4,8 @@ Processing scientific reference sources for BlueMarble game systems integration.
 
 **Status:** Processing in batches of 4  
 **Total Sources:** 21  
-**Processed:** 8  
-**Remaining:** 13
+**Processed:** 12  
+**Remaining:** 9
 
 ---
 
@@ -294,13 +294,159 @@ This batch transitions from biological systems to engineering fundamentals, esta
 
 ---
 
-## Batch 3: [To be processed]
+## Batch 3: Engineering Materials and Chemistry (Sources 9-12)
 
-**Remaining Sources (13):**
-- Cast iron (Engineering)
-- Iron-cementite meta-stable diagram (Engineering)
-- Surface tension (Physics)
-- Redox (Physics)
+### Source 9: Cast Iron
+**URL:** https://en.wikipedia.org/wiki/Cast_iron
+
+**Key Facts:**
+- Iron-carbon alloy with 2-4% carbon content (higher than steel's 0.1-2%)
+- Brittle but excellent compressive strength, good for casting complex shapes
+- Types: gray cast iron (graphite flakes), white cast iron (iron carbide), ductile/nodular (spherical graphite)
+- Lower melting point than steel (~1150-1200°C vs ~1370-1540°C) - easier to cast
+- Excellent wear resistance and vibration damping properties
+- Historical significance: enabled Industrial Revolution with mass-produced parts
+- Cannot be forged or welded easily due to brittleness
+
+**Implications/Risks:**
+- Foundation for mid-tier metalworking progression (between wrought iron and steel)
+- Enables complex part casting: gears, pipes, machine components, cookware
+- Material property trade-offs: strong but brittle vs. steel (strong and ductile)
+- Crafting choice mechanics: cast iron for specific applications, steel for others
+- Historical accuracy: pre-Industrial players should use cast iron before advanced steel
+
+**Action Items:**
+- Add cast iron recipe: pig iron + controlled carbon → cast iron (furnace/cupola)
+- Define material properties: high compressive strength, low tensile strength, brittle
+- Implement casting mechanics: mold creation, pouring, cooling, finishing
+- Create cast iron applications: pipes, stoves, cookware, machine parts, cannon barrels
+- Design material choice gameplay: cast iron cheaper but limited uses vs. steel
+- Add quality variants: gray (general), white (hard but brittle), ductile (modern, expensive)
+- Implement melting point advantages: easier smelting than steel (lower fuel costs)
+- Create failure mechanics: cast iron cracks under tension/impact but endures compression
+
+---
+
+### Source 10: Iron-Cementite Meta-stable Diagram
+**URL:** Research iron-carbon phase diagrams online
+
+**Key Facts:**
+- Phase diagram showing iron-carbon alloy states at different temperatures and carbon percentages
+- Key phases: ferrite (α-iron, soft), austenite (γ-iron, high temp), cementite (Fe₃C, hard/brittle)
+- Critical temperatures: 723°C (eutectoid), 1147°C (eutectic), 1538°C (iron melting point)
+- Steel range: 0.008-2.14% carbon; Cast iron range: 2.14-6.67% carbon
+- Heat treatment basis: controlled heating/cooling changes microstructure and properties
+- Pearlite: layered ferrite-cementite structure formed at eutectoid point
+- Enables prediction of material properties from composition and heat treatment
+
+**Implications/Risks:**
+- Extremely technical - may be too complex for most players
+- Enables advanced metallurgy gameplay: heat treatment, quenching, tempering
+- Risk of over-simulation: real metallurgists use this, but is it fun?
+- Opportunity for expert-tier crafting: master smiths control carbon content precisely
+- Educational potential: teaches real metallurgy through gameplay
+
+**Action Items:**
+- Design simplified phase diagram UI: visual representation of temperature-carbon-properties
+- Implement heat treatment mechanics: heating, quenching, tempering alter properties
+- Create carbon control system: add/remove carbon during smelting/forging
+- Add microstructure effects: pearlite (tough), martensite (hard), ferrite (soft)
+- Design expert-tier recipes: Damascus steel, spring steel, tool steel variants
+- Implement quality gradient: crude (rough control) → masterwork (precise control)
+- Add educational tooltips: explain phase transformations in accessible terms
+- Balance accessibility: optional depth for interested players, not required for basic smithing
+- Consider mini-game: temperature control challenge for optimal properties
+
+---
+
+### Source 11: Surface Tension
+**URL:** https://en.wikipedia.org/wiki/Surface_tension
+
+**Key Facts:**
+- Cohesive forces at liquid surface create elastic "skin" effect
+- Measured in N/m (newtons per meter) or dyne/cm
+- Causes: capillary action, droplet formation, meniscus effects, water striders walking on water
+- Temperature dependent: decreases as temperature increases
+- Surfactants reduce surface tension (soaps, detergents)
+- Critical for many processes: droplet formation, bubble stability, wetting/spreading
+
+**Implications/Risks:**
+- Enables realistic liquid behavior: droplets, puddles, capillary effects
+- Soap/detergent crafting: surfactants for cleaning, textile processing
+- Visual polish: proper droplet physics enhances immersion
+- Performance cost: accurate surface tension simulation is computationally expensive
+- May be imperceptible to players if over-detailed
+
+**Action Items:**
+- Implement simplified surface tension: droplet formation, puddle behavior
+- Add capillary action: liquids climb porous materials (wicks, sponges)
+- Create surfactant mechanics: soaps reduce surface tension for cleaning
+- Design droplet physics: rain, splashes, pouring liquids form appropriate shapes
+- Add wetting mechanics: hydrophobic (repels water) vs. hydrophilic (attracts) surfaces
+- Implement bubble stability: soap bubbles, foam formation for brewing/washing
+- Balance visual quality with performance: use approximations, not full simulation
+- Add crafting applications: oil separation (surface tension differences), ink spreading
+
+---
+
+### Source 12: Redox (Oxidation-Reduction)
+**URL:** https://en.wikipedia.org/wiki/Redox
+
+**Key Facts:**
+- Redox: electron transfer between chemical species (oxidation = lose electrons, reduction = gain electrons)
+- Fundamental to: combustion, corrosion, metallurgy, batteries, respiration, photosynthesis
+- Oxidizing agents (accept electrons): oxygen, halogens, acids
+- Reducing agents (donate electrons): carbon, hydrogen, metals
+- Smelting uses redox: metal oxides reduced by carbon → pure metal + CO₂
+- Corrosion: metal oxidation by oxygen/water (rust, patina, tarnish)
+
+**Implications/Risks:**
+- Foundation for all metallurgy and crafting chemistry
+- Enables realistic smelting: ores (metal oxides) + fuel (carbon) → metal + slag
+- Corrosion mechanics: metal degradation over time, requiring maintenance
+- Battery/energy storage: redox reactions store/release electrical energy
+- Fire and combustion: oxidation of fuels produces heat and light
+
+**Action Items:**
+- Implement smelting chemistry: ore reduction using carbon/charcoal as reducing agent
+- Add corrosion system: metals oxidize in air/water (rust on iron, patina on copper)
+- Create fuel types: reducing agents (carbon, hydrogen) vs. oxidizing agents (oxygen, nitrates)
+- Design protection mechanics: oils, coatings, alloying prevent corrosion
+- Implement electrochemistry: batteries, electroplating, electrolysis (advanced tier)
+- Add fire/combustion mechanics: oxygen availability affects burn rate and heat
+- Create redox-based crafting: bleaching (oxidation), dyeing (reduction), pickling (acid reduction)
+- Design material aging: fresh metal → oxidized → heavily corroded → failure
+- Add atmospheric effects: humid environments accelerate corrosion
+
+---
+
+## Batch 3 Summary
+
+Batch 3 completes the engineering materials focus and begins chemistry fundamentals. **Cast iron** and **Iron-cementite diagrams** provide deep metallurgical realism, enabling tiered metalworking progression and expert-level crafting. **Surface tension** adds liquid physics for visual polish and crafting mechanics (soaps, capillary action). **Redox chemistry** is foundational, underlying all smelting, corrosion, and combustion systems.
+
+**Cross-Source Insights:**
+- Cast iron and phase diagrams work together: composition and heat treatment determine final properties
+- Redox reactions explain WHY smelting works: ores are reduced to pure metals
+- Surface tension connects to other liquid properties (viscosity, flow) for complete fluid simulation
+- All four sources enable realistic material science: from ore to finished product with property control
+
+**Implementation Priority:**
+1. Redox smelting chemistry (critical: affects all metalworking)
+2. Cast iron recipes and applications (immediate gameplay value)
+3. Corrosion/maintenance systems (adds depth and economy)
+4. Phase diagram mechanics (optional expert content)
+5. Surface tension effects (visual polish)
+
+**Next Steps:**
+- Process Batch 4: Continue physics/chemistry (Viscosity, Navier-Stokes, gas laws)
+- Begin atmospheric science batch after physics complete
+- Prototype smelting system with redox chemistry integration
+
+---
+
+## Batch 4: [To be processed]
+
+**Remaining Sources (9):**
 - Viscosity (Physics)
 - Navier–Stokes equations (Physics)
 - Gay-Lussac's law (Physics)

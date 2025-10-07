@@ -202,12 +202,12 @@ Curated reading list for BlueMarble research and development.
 - [x] **Structural integrity and failure** - Structural mechanics for building and crafting systems (Processed in Batch 2)
 - [x] **Structural load** - Load calculations for construction and building systems (Processed in Batch 2)
 - [x] **Engineering** - General engineering principles for technology progression (Processed in Batch 2)
-- [ ] **Cast iron** - Cast iron properties for metalworking and crafting systems
-- [ ] **Iron-cementite meta-stable diagram** (Research online) - Phase diagrams for advanced metallurgy
+- [x] **Cast iron** - Cast iron properties for metalworking and crafting systems (Processed in Batch 3)
+- [x] **Iron-cementite meta-stable diagram** (Research online) - Phase diagrams for advanced metallurgy (Processed in Batch 3)
 
 **Physics and Chemistry:**
-- [ ] **Surface tension** - Surface tension physics for liquid behavior simulation
-- [ ] **Redox** - Oxidation-reduction chemistry for crafting and metallurgy
+- [x] **Surface tension** - Surface tension physics for liquid behavior simulation (Processed in Batch 3)
+- [x] **Redox** - Oxidation-reduction chemistry for crafting and metallurgy (Processed in Batch 3)
 - [ ] **Viscosity** - Viscosity properties for fluid simulation and crafting
 - [ ] **Navier–Stokes equations** - Fluid dynamics equations for atmospheric and water simulation
 - [ ] **Gay-Lussac's law** - Gas law for pressure-temperature relationships in crafting
