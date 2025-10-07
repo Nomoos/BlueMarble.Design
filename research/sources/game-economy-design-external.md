@@ -236,9 +236,9 @@ These sources should be investigated and catalogued for comprehensive research i
 - [x] **Source 58**: Transport mechanics - Processed in batch 1
 - [x] **Source 59**: Auction system scope and design - Processed in batch 1
 - [x] **Source 60**: Seasonal effects - Processed in batch 1
-- [ ] **Source 61**: Winter preservation
-- [ ] **Source 62**: Regional specialization
-- [ ] **Source 63**: Commission rates
+- [x] **Source 61**: Winter preservation - Processed in batch 2
+- [x] **Source 62**: Regional specialization - Processed in batch 2
+- [x] **Source 63**: Commission rates - Processed in batch 2
 
 ---
 
@@ -400,6 +400,183 @@ effects. These four sources form the foundational pillars of the auction economy
 - Begin technical feasibility review with development team
 - Develop database schema for auction, transport, and seasonal systems
 - Create UI mockups incorporating seasonal indicators and transport options
+
+---
+
+### Batch 2: Sources 61, 62, 63
+
+#### Source 61: Winter Preservation
+
+**Title/ID:** Source 61 - Winter preservation (lines 1-4)
+
+**Key Facts:**
+
+- Winter season provides natural cold storage through snow and cold temperatures
+- Snow naturally preserves food items, extending shelf life
+- Cold weather reduces spoilage rates for perishable goods
+- Natural preservation effect is seasonal and location-dependent
+- Complements artificial preservation methods (cold storage facilities)
+
+**Implications/Risks:**
+
+- Seasonal preservation creates timing strategy for food storage and trading
+- Winter advantage may lead to food hoarding exploits before winter arrives
+- Regional variation needed (arctic vs temperate vs tropical climates)
+- Balance required between natural preservation and artificial methods
+- Player education needed on seasonal preservation mechanics
+
+**Action Items:**
+
+- ✅ Implemented in design/auction-economy.md with winter deterioration multiplier (0.5x)
+- ✅ Natural cold storage noted in seasonal effects section
+- ✅ Winter section documents fuel demand spike and food preservation
+- Need to add climate zone variations for preservation effects (Priority 2)
+- Implement storage duration tracking for spoilage calculations
+- Add seasonal transition notifications for preservation planning
+- Monitor for pre-winter hoarding behavior and adjust if exploitative
+
+---
+
+#### Source 62: Regional Specialization
+
+**Title/ID:** Source 62 - Regional specialization (lines 1172-1181)
+
+**Key Facts:**
+
+- Geographic nodes embody regional specialization based on local resources
+- Resource-rich areas supply local goods at lower prices
+- Scarce resources in a region command premium prices
+- Major cities naturally become trading hubs due to connectivity
+- Regional price differentials drive inter-node trade and arbitrage
+- Physical location of nodes affects what goods are abundant vs scarce
+
+**Implications/Risks:**
+
+- Requires careful balancing of resource distribution across regions
+- Price differentials must be significant enough to justify transport costs
+- Risk of regional monopolies if one area controls critical resources
+- New player experience varies by starting region (resource availability)
+- Regional specialization dependent on active player population in all regions
+- Economic isolation possible if trade routes are not well-established
+
+**Action Items:**
+
+- ✅ Implemented in design/auction-economy.md with regional specialization examples table
+- ✅ Auction nodes section documents resource-rich vs scarce dynamics
+- ✅ Transport mechanics enable inter-regional trade
+- Need to develop resource distribution map for game world (Priority 1)
+- Implement dynamic price adjustment based on local supply/demand
+- Add NPC traders to support low-population regions
+- Create economic health monitoring dashboard for regional markets
+- Design starter region balancing to ensure fair new player experience
+
+---
+
+#### Source 63: Commission Rates
+
+**Title/ID:** Source 63 - Commission rates (lines 128-132)
+
+**Key Facts:**
+
+- Commission rates are percentage-based fees taken from sale price
+- Rates scale with auction tier: local (1-3%) to global (6-8%)
+- Commission serves as primary economic sink for auction system
+- Taken automatically at time of sale completion
+- Combined with listing fees to create dual-fee structure
+- Higher visibility/reach markets justify higher commission rates
+
+**Implications/Risks:**
+
+- Commission rates must balance revenue sink with player satisfaction
+- Too high rates discourage use of global markets, limiting trade
+- Too low rates fail to control inflation adequately
+- Competitive pressure from player-run auction services if NPC fees too high
+- Rate changes post-launch may upset established trading patterns
+- Need clear communication to players about where fees go (removed from economy)
+
+**Action Items:**
+
+- ✅ Implemented in design/auction-economy.md with three-tier commission structure
+- ✅ Local (1.5%), Regional (3%), Global (7%) rates documented
+- ✅ Economic balance section explains currency sink function
+- ✅ Fee comparison tables in visual diagrams
+- Monitor transaction volumes across tiers to assess rate appropriateness
+- A/B test commission rates in beta to find optimal balance
+- Implement fee transparency UI showing breakdown of costs
+- Design player-run auctioneer profession with competitive rates
+- Create economic reports tracking currency removed via fees
+
+---
+
+### Batch 2 Summary
+
+Processed sources 61, 62, and 63 covering winter preservation, regional specialization, and commission rates. These three
+sources provide the supporting mechanics that enhance the foundational pillars from Batch 1:
+
+**Cross-Source Insights:**
+
+- Winter preservation (S61) integrates with seasonal effects (S60) to create strategic timing for food trading, while
+  regional specialization (S62) determines which regions benefit most from preservation
+- Regional price differentials (S62) work with commission rates (S63) to create economic trade-offs: pay higher fees for
+  global reach or accept regional price limitations
+- Natural preservation (S61) reduces pressure on artificial cold storage infrastructure, particularly in winter regions,
+  affecting regional specialization patterns
+- Commission rate tiers (S63) align with transport costs (S58) to create balanced cost structures across auction tiers
+
+**Key Integration Points:**
+
+- All three sources successfully integrated into design/auction-economy.md
+- Winter preservation effects documented in seasonal cycle section (0.5x deterioration)
+- Regional specialization examples provided in auction nodes section
+- Commission rates established for all three auction tiers with economic justification
+
+**Completion Status:**
+
+All 7 discovery sources now processed and analyzed. Source analysis complete.
+
+---
+
+### FINAL SUMMARY
+
+Successfully processed and analyzed all 7 discovery sources referenced in the original external research document. The
+sources break down into two complementary groups:
+
+**Foundational Systems (Batch 1):**
+
+- Source 39: Auction tier fee structures establishing the economic framework
+- Source 58: Transport mechanics providing physical movement and risk/cost calculations
+- Source 59: System scope defining hybrid player-driven market philosophy
+- Source 60: Seasonal effects creating cyclical supply/demand variations
+
+**Supporting Mechanics (Batch 2):**
+
+- Source 61: Winter preservation adding natural spoilage mitigation
+- Source 62: Regional specialization driving inter-regional trade opportunities
+- Source 63: Commission rates implementing primary currency sink mechanism
+
+**Comprehensive Integration:**
+
+All seven sources have been successfully integrated into the design/auction-economy.md document with appropriate
+implementation priorities. The design creates a cohesive system where:
+
+1. Tiered auctions with escalating fees balance convenience against reach
+2. Physical transport with multiple methods adds strategic depth
+3. Seasonal cycles affect supply, demand, routes, and preservation
+4. Regional specialization creates natural trade opportunities
+5. Commission rates and transport costs provide robust inflation control
+6. Natural and artificial preservation methods give players strategic options
+
+**Implementation Readiness:**
+
+- Complete design specification ready for technical review
+- Visual diagrams illustrate key system interactions
+- Three-tier implementation roadmap (MVP, Enhanced, Advanced)
+- Risk analysis and balancing considerations documented for each source
+- Action items identified with priority levels for development planning
+
+The auction economy design is comprehensive, balanced, and ready for development team review and prototyping.
+
+## COMPLETED
 
 ---
 
