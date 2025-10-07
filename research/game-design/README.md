@@ -20,7 +20,8 @@ This research is organized in a step-by-step structure with recursive sub-steps 
 4. **[Step 4: Implementation Planning](step-4-implementation-planning/)** - Phased development roadmap (16-20 months)
 5. **[Step 5: Coordinate Systems & Engine Choice](step-5-coordinate-systems-engine-choice.md)** - 64-bit precision, floating origin, and engine selection
 6. **[Step 6: Voxel Data Storage & Streaming](step-6-voxel-data-storage-streaming.md)** - Petabyte-scale data management and intelligent streaming
-7. **[Step 8: MMORPG GIS Key Takeaways](step-8-mmorpg-gis-key-takeaways.md)** - Comprehensive guide to planet-scale architecture principles
+7. **[Step 7: Rendering & LOD Strategy](step-7-rendering-lod-strategy.md)** - Multi-resolution terrain, culling, and GPU optimization
+8. **[Step 8: MMORPG GIS Key Takeaways](step-8-mmorpg-gis-key-takeaways.md)** - Comprehensive guide to planet-scale architecture principles
 
 Each step contains detailed research documents and can be explored independently or sequentially.
 
@@ -186,6 +187,95 @@ Comprehensive guide on storing and streaming planet-scale voxel data at petabyte
 - Scientific accuracy through lossless compression
 - Cloud-native for distributed access
 - Efficient memory usage (<4 GB active chunks)
+
+### [Step 7: Rendering & LOD Strategy](step-7-rendering-lod-strategy.md) ⭐ **RENDERING PIPELINE**
+Comprehensive rendering guide for planet-scale worlds with efficient Level of Detail (LOD) management. Essential for maintaining 60 FPS while rendering massive terrains.
+
+**Key Topics**:
+
+1. **Multi-Resolution Terrain System** - 6 LOD levels
+   - LOD level design (0.25m to 256m resolution)
+   - Distance-based LOD selection with hysteresis
+   - Screen-space error metric for accurate transitions
+   - Seamless LOD transitions without popping artifacts
+
+2. **Octree/Quadtree Partitioning** - Spatial organization
+   - Quadtree for 2D surface LOD management
+   - Octree for 3D voxel LOD management
+   - Adaptive subdivision based on camera distance
+   - Frustum culling for octree nodes
+
+3. **Origin-Relative Rendering** - Precision maintenance
+   - Camera-relative mesh rendering
+   - Origin shift detection (5km threshold)
+   - Coordinate conversion for rendering
+   - Precision validation (<10km range)
+
+4. **Frustum and Occlusion Culling** - Visibility optimization
+   - Efficient frustum plane calculation
+   - Batch frustum culling
+   - Hardware occlusion queries
+   - Visibility caching strategies
+
+5. **Multi-Threaded Mesh Generation** - Parallel processing
+   - Worker thread pool (4+ threads)
+   - Greedy meshing algorithm
+   - LOD-aware mesh generation
+   - Main thread callback system
+
+6. **GPU Ray-Marching** - Advanced rendering
+   - HLSL voxel ray-marching shader
+   - Normal calculation from voxel data
+   - Material system integration
+   - Distance-based step optimization
+
+7. **Atmosphere & Skydome** - Environmental rendering
+   - Atmospheric scattering (Rayleigh + Mie)
+   - Day-night cycle (20 min real-time)
+   - Dynamic sun direction and color
+   - Celestial body rendering
+
+8. **Performance Optimization** - Budget management
+   - Draw call batching (instanced rendering)
+   - Adaptive quality based on frame time
+   - Render budget manager (8ms target)
+   - Dynamic chunk prioritization
+
+9. **Implementation Roadmap** - 12-week plan
+   - Phase 1: Core LOD system (Weeks 1-3)
+   - Phase 2: Culling systems (Weeks 4-5)
+   - Phase 3: Rendering pipeline (Weeks 6-8)
+   - Phase 4: Atmosphere & lighting (Weeks 9-10)
+   - Phase 5: Optimization (Weeks 11-12)
+
+**Code Examples**:
+- Complete LOD selector with hysteresis (C#)
+- Quadtree/Octree implementations (C#)
+- Origin-relative renderer (C#)
+- Frustum culler (C#)
+- Occlusion culler with hardware queries (C#)
+- Parallel mesh generator (C#)
+- GPU ray-marching shader (HLSL)
+- Atmospheric scattering renderer (C#)
+- Day-night cycle system (C#)
+- Draw call batcher (C#)
+- Render budget manager (C#)
+
+**Rendering Techniques**:
+- LOD selection (distance-based + screen-space error)
+- Seamless transitions with alpha blending
+- Camera-relative rendering for precision
+- Instanced rendering for batching
+- GPU ray-marching for voxels
+- Atmospheric scattering (physically-based)
+
+**Relevance to BlueMarble**:
+- Maintains 60 FPS with planet-scale terrain
+- Sub-meter voxel rendering at close range
+- Automatic LOD management reduces complexity
+- Multi-threaded mesh generation prevents stuttering
+- Scientific accuracy in atmosphere rendering
+- Scalable to thousands of visible chunks
 
 ### [Step 8: MMORPG GIS Key Takeaways](step-8-mmorpg-gis-key-takeaways.md) ⭐ **ARCHITECTURE GUIDE**
 Comprehensive guide expanding on the six critical principles for building planet-scale MMORPG systems with GIS integration. Essential reading for understanding BlueMarble's technical architecture.

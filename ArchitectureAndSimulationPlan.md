@@ -44,7 +44,9 @@ Designing an Earth-sized MMO world (40,075,020 m × 20,037,510 m in EPSG:4087) a
 
 - **Atmosphere & Skydome**  
   - Use skydome/sky-sphere shaders following camera.  
-  - Weather/day-night at coarse resolution.  
+  - Weather/day-night at coarse resolution.
+
+**📖 For detailed LOD algorithms, culling techniques, and rendering optimization, see [Step 7: Rendering & LOD Strategy](research/game-design/step-7-rendering-lod-strategy.md).**
 
 ---
 
