@@ -114,6 +114,14 @@ Individual deep-dive analyses of Lovecraft's most influential works:
     - Environmental storytelling approaches
     - Practical checklists and templates
 
+19. **[Parasitic Character Concept](lovecraft-parasitic-character-concept.md)**
+    - Player as parasitic entity rather than traditional race
+    - Host-symbiote relationship mechanics and progression
+    - Body-switching, integration, and consciousness systems
+    - Goa'uld-inspired gameplay with Lovecraftian themes
+    - Moral complexity and identity horror
+    - Complete game design framework for implementation
+
 ## How to Use This Research
 
 ### For Quest Design
@@ -152,6 +160,8 @@ Individual deep-dive analyses of Lovecraft's most influential works:
 - Gradual revelation and investigation
 - Madness as mechanic and narrative device
 - Ancient forces beyond comprehension
+- Identity horror and consciousness transfer
+- Parasitic relationships and body horror
 
 ### Key Entities for Reference
 - **Cthulhu**: Dead but dreaming in R'lyeh, telepathic influence
