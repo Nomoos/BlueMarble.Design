@@ -7,7 +7,7 @@ This tool automatically discovers and catalogs research sources from:
 1. Existing research documents (citations and references)
 2. Related source recommendations
 3. Cross-references within completed research
-4. Academic and industry databases (when accessible)
+4. (Planned) Academic and industry databases (future enhancement; not yet implemented)
 
 Usage:
     python autosources-discovery.py [options]
