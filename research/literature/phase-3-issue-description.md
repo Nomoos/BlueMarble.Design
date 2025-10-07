@@ -307,9 +307,9 @@ Each assignment group follows the standardized workflow:
 
 ## Timeline
 
-**Week 1-3:** Groups 01 & 04 (Critical Economy + GPU Performance)  
-**Week 4-7:** Groups 02 & 05 (Economy Case Studies + Engine Architecture)  
-**Week 8-10:** Groups 03 & 06 (Balance & Networking)  
+**Week 1-3:** Groups 41 & 44 (Critical Economy + GPU Performance)  
+**Week 4-7:** Groups 42 & 45 (Economy Case Studies + Engine Architecture)  
+**Week 8-10:** Groups 43 & 46 (Balance & Networking)  
 **Week 11-14:** Final integration, documentation, Phase 4 planning
 
 ---
