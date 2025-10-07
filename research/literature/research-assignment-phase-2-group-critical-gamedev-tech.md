@@ -698,11 +698,11 @@ decisions. This research covers protocol comparison, use cases, and hybrid appro
 
 ### Batch 2 (Sources 5-8)
 
-- [ ] Source 5 (Marching Cubes) reviewed and documented
-- [ ] Source 6 (Horizon Zero Dawn) reviewed and documented
-- [ ] Source 7 (Cities Skylines Traffic) reviewed and documented
-- [ ] Source 8 (Godot Architecture) reviewed and documented
-- [ ] Batch 2 summary written
+- [x] Source 5 (Marching Cubes) reviewed and documented - EXISTING: `algorithm-analysis-marching-cubes.md` (875 lines)
+- [x] Source 6 (Horizon Zero Dawn) reviewed and documented - NEW: `game-dev-analysis-horizon-zero-dawn-world-building.md` (695 lines)
+- [x] Source 7 (Cities Skylines Traffic) reviewed and documented - NEW: `game-dev-analysis-cities-skylines-traffic-simulation.md` (669 lines)
+- [x] Source 8 (Godot Architecture) reviewed and documented - NEW: `game-dev-analysis-godot-engine-architecture.md` (640 lines)
+- [x] Batch 2 summary written
 - [ ] Waiting for "next" comment
 
 ### Batch 3 (Sources 9-11)
