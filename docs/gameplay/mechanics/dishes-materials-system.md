@@ -1577,10 +1577,10 @@ This section tracks the analysis of research sources that informed this Game Des
 - [x] S2: Fruit Conservation and Decay Research (processed in batch 1)
 - [x] S3: Eco Global Survival Material System Research (processed in batch 1)
 - [x] S4: Vintage Story Material System Research (processed in batch 1)
-- [ ] S5: Life is Feudal Material System Analysis
-- [ ] S6: Mortal Online 2 Material System Research
-- [ ] S7: Wurm Online Material System Research
-- [ ] S8: Novus Inceptio Material System Research
+- [x] S5: Life is Feudal Material System Analysis (processed in batch 2)
+- [x] S6: Mortal Online 2 Material System Research (processed in batch 2)
+- [x] S7: Wurm Online Material System Research (processed in batch 2)
+- [x] S8: Novus Inceptio Material System Research (processed in batch 2)
 - [ ] S9: Advanced Crafting System Research
 - [ ] S10: Base Crafting Workflows Research
 
@@ -1724,3 +1724,161 @@ The first four sources provide complementary foundations for BlueMarble's item e
 4. Design knowledge discovery system for recipes and optimal resource locations
 5. Create collaborative progression mechanics (teaching, shared research)
 6. Balance environmental complexity against accessibility for casual players
+
+---
+
+### Batch 2: Source Briefs (S5-S8)
+
+#### S5: Life is Feudal Material System Analysis
+
+**Key Facts:**
+
+- Hard skill cap (600 points total) forces meaningful specialization and player interdependence
+- Quality scale 0-100 with continuous progression rather than discrete tiers
+- Quality calculation: Base (skill/requirement × 100) + Material Modifier + Tool Modifier ± Random
+- Skill tier unlocks at 30/60/90 create clear progression milestones (Poor/Journeyman/Expert)
+- Material quality directly impacts final product quality with 5-15% degradation per processing stage
+- Multi-stage crafting chains accumulate quality bonuses/penalties (ore → ingot → sword)
+- Alignment system (crafting vs combat) creates distinct character build paths
+- Parent-child skill relationships encourage logical skill combinations
+
+**Implications/Risks:**
+
+- Hard skill caps create genuine specialization but may frustrate players wanting flexibility
+- 600-point limit works for Life is Feudal's small-server model; MMO scale needs adjustment
+- Quality inheritance through processing chains adds depth but increases complexity
+- Parent-child skill bonuses encourage min-maxing and could limit viable builds
+- Continuous 0-100 scale provides smooth progression but may feel less impactful than tier jumps
+- Alignment system could restrict character flexibility or create balance issues
+
+**Action Items:**
+
+- Implement soft skill cap (diminishing returns after 600 points) instead of hard cap
+- Add 0-100 continuous quality scale with visual quality tier labels for clarity
+- Create quality calculation formula incorporating skill, materials, and tools
+- Design 3-milestone progression system (Novice 30/Journeyman 60/Master 90)
+- Implement 5-15% quality degradation per processing stage in crafting chains
+- Balance alignment bonuses to encourage but not mandate specific builds
+
+#### S6: Mortal Online 2 Material System Research
+
+**Key Facts:**
+
+- Multi-dimensional material properties (durability, weight, density, yield, hardness, flexibility)
+- Materials defined by realistic physical properties rather than simple quality grades
+- Player-driven quality emerges from material selection and processing decisions
+- Knowledge-based discovery system where players learn optimal combinations through experimentation
+- Alloy system allows mixing materials for custom property balance (e.g., steel variants)
+- Different materials optimal for different purposes (no single "best" material)
+- Economic value tied directly to material properties and rarity
+- Tool requirements scale with material hardness (can't work hard materials with weak tools)
+
+**Implications/Risks:**
+
+- Multi-property system creates authentic material behavior but significantly increases complexity
+- Knowledge-based discovery requires extensive testing that may frustrate casual players
+- Alloy mixing system adds depth but needs careful balancing to avoid dominant meta recipes
+- Material property realism may conflict with gameplay balance (realistic tungsten too strong)
+- Property-based value calculation complex but creates natural market segmentation
+- Tool-material interdependency creates gear requirements that may gate progression
+
+**Action Items:**
+
+- Implement 4-6 core material properties (durability, weight, hardness, flexibility)
+- Create material property database with realistic but balanced values
+- Design alloy mixing system with 2-3 ingredient combinations max
+- Add material property UI display showing tradeoffs clearly
+- Implement tool hardness requirements for working specific materials
+- Create material discovery journal tracking experimented combinations
+- Balance material properties for multiple viable "best for purpose" options
+
+#### S7: Wurm Online Material System Research
+
+**Key Facts:**
+
+- Comprehensive 0-100 Quality Level (QL) system affecting all items and materials
+- QL affects tool effectiveness, durability, speed, damage output, and market value
+- Quality calculation uses multiplicative relationship between skill, tool QL, and material QL
+- Over 130 skills directly interact with quality system creating deep interdependencies
+- Quality degradation over time creates ongoing demand and economic cycles
+- Precise quality display (e.g., "QL 45.23") provides clear feedback
+- Player skill directly determines maximum craftable quality range
+- Quality-based market segmentation supports robust player economy (low/mid/high quality goods)
+
+**Implications/Risks:**
+
+- 130+ skills with quality interactions creates overwhelming complexity for new players
+- Precise decimal quality (45.23) may feel overly granular and harder to comprehend
+- Quality degradation mechanic creates item sinks but could frustrate players losing items
+- Multiplicative quality relationships mean low skill = poor results regardless of materials
+- Market segmentation works well but requires sufficient player population per quality tier
+- Quality system depth excellent for dedicated players but high barrier to entry
+
+**Action Items:**
+
+- Adopt 0-100 continuous quality scale with integer display (simpler than decimals)
+- Implement skill-based max quality ranges (Skill 30 → max QL 40, Skill 90 → max QL 95)
+- Create multiplicative quality formula: Final QL = (Skill × Material QL × Tool QL) / normalizer
+- Add quality degradation for realism but at slower rate than Wurm (gameplay balance)
+- Design 3-tier market segmentation (Basic 0-40, Quality 40-70, Premium 70-100)
+- Limit quality-affecting skills to 30-40 core skills for manageability
+- Include quality impact explanations in tooltips for transparency
+
+#### S8: Novus Inceptio Material System Research
+
+**Key Facts:**
+
+- Geological knowledge is core mechanic driving material discovery and extraction efficiency
+- Material quality tied directly to geological formation characteristics (vein type, depth, host rock)
+- Resource identification requires geological knowledge acquisition (can't identify until learned)
+- Technology tree gates access to advanced materials and processing methods
+- Use-based skill progression for both gathering and crafting
+- Emergent specialization through knowledge discovery rather than class restrictions
+- Material properties affect crafting outcomes and tool requirements
+- Most directly applicable to BlueMarble due to shared geological simulation foundation
+
+**Implications/Risks:**
+
+- Knowledge-gated resource identification may frustrate players who can't identify what they find
+- Geological authenticity excellent for BlueMarble's goals but increases learning curve
+- Use-based progression works well but requires careful tuning of gain rates
+- Technology tree gating provides structure but may create bottlenecks in progression
+- Emergent specialization ideal for player agency but harder to balance than classes
+- Small player base suggests niche appeal - geological depth may limit mainstream adoption
+
+**Action Items:**
+
+- Implement geological knowledge system for identifying ore types and formations
+- Create technology tree with clear progression paths (Stone → Bronze → Iron → Steel)
+- Add geological survey tools for discovering high-quality deposit locations
+- Design knowledge acquisition through use, discovery, and optional teaching
+- Tie material quality to realistic geological factors (vein richness, depth, purity)
+- Balance geological authenticity with accessibility (simplified vs realistic modes)
+- Create knowledge sharing mechanics (books, teaching, guild libraries)
+- Add visual cues for unidentified resources (mystery ore → identified copper ore)
+
+---
+
+### Batch 2 Summary
+
+The second batch reveals sophisticated quality and material systems from hardcore sandbox MMORPGs. S5 (Life is Feudal) demonstrates how hard skill caps force meaningful specialization and economic interdependence. S6 (Mortal Online 2) shows multi-dimensional material properties creating authentic tradeoffs where different materials excel for different purposes. S7 (Wurm Online) provides the most comprehensive quality system with 130+ skills interacting through multiplicative relationships. S8 (Novus Inceptio) offers the most directly applicable model due to shared geological simulation roots, emphasizing knowledge-driven discovery.
+
+**Key Cross-Source Insights:**
+
+- Continuous 0-100 quality scales (S5, S7) provide smoother progression than discrete tiers
+- Multi-property material systems (S6) create authentic choices but require careful UI/UX design
+- Skill caps and specialization (S5) drive player economy but need soft rather than hard limits for MMO scale
+- Knowledge-based progression (S6, S8) rewards exploration and experimentation
+- Quality inheritance through crafting chains (S5, S7) adds depth and economic tiers
+- Geological integration (S8) aligns perfectly with BlueMarble's educational goals
+
+**Integration Recommendations:**
+
+1. Adopt 0-100 continuous quality scale with clear milestone labels (30/60/90)
+2. Implement 4-6 core material properties (durability, weight, hardness, flexibility, conductivity, rarity)
+3. Create soft skill specialization (diminishing returns) rather than hard caps
+4. Design geological knowledge discovery system for resource identification
+5. Add multiplicative quality formula: (Skill × Material × Tool) / normalizer
+6. Implement quality degradation at gameplay-friendly rates (slower than Wurm)
+7. Create 3-tier market segmentation (Basic/Quality/Premium)
+8. Balance geological authenticity with accessibility through difficulty modes
