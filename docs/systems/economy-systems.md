@@ -451,6 +451,325 @@ The auction house system is planned as a future addition to complement the marke
 - **Corrective Actions:** Appropriate penalties and market corrections
 - **Communication:** Transparent reporting to the community
 
+## Reputation and Trust Systems
+
+> **Comprehensive Documentation:** See [Achievement and Reputation System Design](achievement-reputation-system.md)
+> for complete technical specifications, database schemas, API endpoints, and integration details.
+
+### Player Trust Score
+
+The Player Trust Score is a comprehensive metric that tracks reliability and trustworthiness in economic and social
+interactions. This system protects honest players while providing benefits to those who demonstrate consistent positive
+behavior.
+
+#### Trust Score Components
+
+1. **Trading Reputation (0-200 points)**
+   - Success rate of completed trades
+   - Volume of trading activity
+   - Buyer/seller feedback ratings
+   - Resolution of disputes
+
+2. **Quest Completion Rate (0-200 points)**
+   - Percentage of accepted quests completed
+   - Timeliness of quest completions
+   - Quality of quest outcomes
+   - Reliability in group quests
+
+3. **Guild Contribution (0-200 points)**
+   - Relative contribution to guild activities
+   - Resource donations to guild bank
+   - Participation in guild events
+   - Leadership and mentoring activities
+
+4. **Community Reports (0-200 points, negative from reports)**
+   - Inverse score based on verified reports
+   - Heavy penalty for confirmed violations
+   - Grace period for new players
+   - Appeal and review process
+
+5. **Helpfulness (0-200 points)**
+   - Mentoring new players
+   - Assisting with quests
+   - Resource sharing
+   - Positive community interactions
+
+#### Trust Tiers and Benefits
+
+**Untrusted (0-199 points)**
+- Limited market access
+- Reduced listing capacity (5 items)
+- Higher transaction fees (standard + 5%)
+- No premium features
+- Frequent activity monitoring
+
+**Neutral (200-399 points)**
+- Standard market access
+- Normal listing capacity (10 items)
+- Standard transaction fees
+- Basic features available
+- Standard monitoring
+
+**Reliable (400-599 points)**
+- Enhanced market access
+- Increased listings (15 items)
+- Reduced fees (-5%)
+- Can create auctions
+- Trusted trader badge
+
+**Trusted (600-799 points)**
+- Premium market access
+- High listing capacity (25 items)
+- Significant fee reduction (-10%)
+- Premium listings available
+- Priority customer support
+- Can offer escrow services
+
+**Exemplary (800-1000 points)**
+- Elite market access
+- Maximum listings (50 items)
+- Maximum fee reduction (-20%)
+- All premium features
+- Market maker status
+- Community recognition
+- Can mediate disputes
+
+#### Trust Score Calculation
+
+```
+Total Score = Trading (0-200) + Quest (0-200) + Guild (0-200) + 
+              Community (0-200) + Helpfulness (0-200)
+
+Modified Score = Total Score × Account Age Multiplier (1.0-1.2)
+
+Final Score = min(1000, Modified Score)
+```
+
+Account age multiplier increases by 0.1 per year of account age, up to a maximum of 1.2× bonus.
+
+### Faction Reputation System
+
+Faction Reputation tracks player standing with various organizations, guilds, and factions within BlueMarble. This
+system provides depth to world interactions and unlocks unique content based on player choices and actions.
+
+#### Reputation Levels
+
+| Level | Reputation Range | Description |
+|-------|-----------------|-------------|
+| **Hated** | -10000 to -6000 | Hostile on sight, attacked by faction NPCs |
+| **Hostile** | -5999 to -3000 | Aggressive stance, very limited services |
+| **Unfriendly** | -2999 to -1000 | Cold reception, basic services only |
+| **Neutral** | -999 to 999 | Standard interactions, normal prices |
+| **Friendly** | 1000 to 2999 | Welcoming, 5% discount on goods and services |
+| **Honored** | 3000 to 5999 | Respected member, 10% discount, special items |
+| **Revered** | 6000 to 9999 | Highly esteemed, 15% discount, rare items, faction abilities |
+| **Exalted** | 10000+ | Champion status, 20% discount, unique rewards, legendary items |
+
+#### Reputation Gain Sources
+
+**Quest Completion**
+- Standard quests: 10-50 reputation
+- Daily quests: 75-100 reputation
+- Elite quests: 150-250 reputation
+- Raid quests: 500-1000 reputation
+
+**Resource Donations**
+- Resource turn-ins: 5-25 reputation
+- Rare material donations: 50-100 reputation
+- Crafted item donations: Varies by quality
+
+**Event Participation**
+- Faction defense events: 100-200 reputation
+- Special events: 150-500 reputation
+- World events: 300-1000 reputation
+
+**Achievement Completion**
+- Faction-specific achievements: 250-500 reputation
+- Legendary achievements: 1000+ reputation
+
+#### Reputation Spread Mechanics
+
+Actions that affect one faction also impact related factions based on their relationships:
+
+**Allied Factions (30% positive spread)**
+- Gaining reputation with one faction provides 30% of that gain to allied factions
+- Example: +1000 with Faction A → +300 with allied Faction B
+
+**Hostile Factions (30% negative spread)**
+- Gaining reputation with one faction reduces reputation with enemy factions
+- Example: +1000 with Faction A → -300 with enemy Faction C
+
+**Neutral Factions (No spread)**
+- Neutral factions are unaffected by reputation changes elsewhere
+
+This system creates meaningful choices where players cannot simultaneously be friends with all factions and must
+strategically choose their alliances.
+
+#### Reputation Benefits by Level
+
+**Friendly (1000-2999)**
+- 5% vendor discount
+- Access to faction-specific quest givers
+- Basic faction items available
+- Friendly NPC greetings and dialogue
+
+**Honored (3000-5999)**
+- 10% vendor discount
+- Advanced faction quests unlocked
+- Special equipment and patterns
+- Faction tabard/insignia available
+- Access to faction bank
+
+**Revered (6000-9999)**
+- 15% vendor discount
+- Elite faction quests
+- Rare mounts or pets
+- Unique faction abilities
+- Access to restricted areas
+- Special faction titles
+
+**Exalted (10000+)**
+- 20% vendor discount
+- Legendary equipment access
+- Unique cosmetic rewards
+- Faction champion title
+- Vote in faction decisions
+- Special quest chains
+- Exclusive faction dungeons/raids
+
+### Market Access Based on Reputation
+
+#### Listing Privileges
+
+Player Trust Score determines marketplace capabilities:
+
+| Trust Tier | Max Listings | Max Item Value | Listing Fee Modifier |
+|-----------|--------------|----------------|---------------------|
+| Untrusted | 5 | 1,000 gold | +5% |
+| Neutral | 10 | 10,000 gold | 0% |
+| Reliable | 15 | 50,000 gold | -5% |
+| Trusted | 25 | 250,000 gold | -10% |
+| Exemplary | 50 | No limit | -20% |
+
+#### Premium Features Access
+
+**Auction Creation** (Requires Reliable or higher)
+- Create time-limited auctions with bidding
+- Set reserve prices
+- Auto-extend on last-minute bids
+
+**Bulk Listings** (Requires Trusted or higher)
+- List multiple items simultaneously
+- Bulk pricing tools
+- Inventory management features
+
+**Premium Storefront** (Requires Exemplary)
+- Personalized seller page
+- Featured listings
+- Marketing tools
+- Analytics dashboard
+
+**Escrow Services** (Requires Trusted or higher)
+- Secure high-value transactions
+- Third-party verification
+- Dispute resolution support
+
+### Reputation Protection and Anti-Exploit
+
+#### Fraud Detection
+
+**Pattern Analysis**
+- Unusual trading patterns flagged for review
+- Rapid reputation gains investigated
+- Collusion detection through network analysis
+
+**Rate Limiting**
+- Maximum reputation gain per day
+- Diminishing returns on repetitive actions
+- Cooldowns on high-value reputation activities
+
+**Mutual Inflation Prevention**
+- Reduced reputation gain from frequent partners
+- Network analysis for reputation farming rings
+- Diversity bonus for varied interactions
+
+#### Report System
+
+**Player Reports**
+- Community-driven reporting of suspicious behavior
+- Investigation of verified reports
+- Reputation penalties for confirmed violations
+
+**Report Types**
+- Trade scam
+- Quest griefing
+- Market manipulation
+- Harassment
+- Exploiting
+
+**Report Resolution**
+- Automated initial screening
+- Human review for serious cases
+- Evidence evaluation
+- Fair penalty application
+- Appeal process available
+
+#### Recovery Mechanisms
+
+**Reputation Repair**
+- Gradual recovery over time
+- Special quests for reputation restoration
+- Community service opportunities
+- Probationary period with monitoring
+
+**Fresh Start Protection**
+- Grace period for new players
+- Educational warnings before penalties
+- Mentorship program for struggling players
+
+### Integration with Economic Systems
+
+#### Vendor Pricing
+
+Faction reputation directly affects vendor prices:
+
+```
+Final Price = Base Price × Reputation Modifier
+
+Reputation Modifiers:
+- Hated: 1.5× (50% markup)
+- Hostile: 1.2× (20% markup)
+- Unfriendly: 1.1× (10% markup)
+- Neutral: 1.0× (standard price)
+- Friendly: 0.95× (5% discount)
+- Honored: 0.90× (10% discount)
+- Revered: 0.85× (15% discount)
+- Exalted: 0.80× (20% discount)
+```
+
+#### Special Vendor Access
+
+Higher reputation unlocks exclusive vendor inventories:
+- Honored: Special items and recipes
+- Revered: Rare equipment and materials
+- Exalted: Legendary items and unique collectibles
+
+#### Market Fee Adjustments
+
+Trust score affects marketplace fees:
+
+```
+Listing Fee = Base Fee × Trust Modifier
+Transaction Fee = 5% × Trust Modifier
+
+Trust Modifiers:
+- Untrusted: 1.05× (5% increase)
+- Neutral: 1.0× (standard)
+- Reliable: 0.95× (5% reduction)
+- Trusted: 0.90× (10% reduction)
+- Exemplary: 0.80× (20% reduction)
+```
+
 ## Monitoring and Analytics
 
 ### Economic Metrics

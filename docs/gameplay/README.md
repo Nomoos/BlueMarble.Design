@@ -4,12 +4,22 @@ This directory contains all documentation related to gameplay mechanics, systems
 
 ## Document Categories
 
+### Design Organization and Process
+
+- [Game Design Roles Guidelines](game-design-roles-guidelines.md) - Comprehensive guidelines for design team structure, responsibilities, workflows, and collaboration patterns
+- [Core Game Design Document](gdd-core-game-design.md) - Overall game design vision and principles
+### Design Guidelines
+
+- [Content Rating and Maturity Guidelines](content-rating-guidelines.md) - Content standards and acceptable content boundaries
+
 ### Core Mechanics
 
 - Combat systems
 - Movement and navigation
 - Interaction systems
 - Resource management ([Player Resource Dashboard Specification](spec-player-resource-dashboard.md))
+- Player protection ([Player Protection Systems](spec-player-protection-systems.md))
+- Player freedom ([Player Freedom Mechanics](spec-player-freedom-mechanics.md))
 
 ### Player Progression
 
