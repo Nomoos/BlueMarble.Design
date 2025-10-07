@@ -1564,3 +1564,163 @@ TUNING_CONFIG = {
 - [ ] Database Architect
 
 **Approval Date**: TBD
+
+---
+
+## Research Source Analysis
+
+This section tracks the analysis of research sources that informed this Game Design Document.
+
+### SOURCES Checklist
+
+- [x] S1: Game Economy Design: Auctions, Transport, Fees, Spoilage, Seasonality (processed in batch 1)
+- [x] S2: Fruit Conservation and Decay Research (processed in batch 1)
+- [x] S3: Eco Global Survival Material System Research (processed in batch 1)
+- [x] S4: Vintage Story Material System Research (processed in batch 1)
+- [ ] S5: Life is Feudal Material System Analysis
+- [ ] S6: Mortal Online 2 Material System Research
+- [ ] S7: Wurm Online Material System Research
+- [ ] S8: Novus Inceptio Material System Research
+- [ ] S9: Advanced Crafting System Research
+- [ ] S10: Base Crafting Workflows Research
+
+---
+
+### Batch 1: Source Briefs (S1-S4)
+
+#### S1: Game Economy Design - Auctions, Transport, Fees, Spoilage, Seasonality
+
+**Key Facts:**
+
+- Defines tiered auction system (Local 1.5%, Regional 3%, Global 7% fees)
+- Implements geographic auction nodes requiring physical transport between markets
+- Transport mechanics include distance-based costs, risk calculations, and guard tiers
+- Seasonal cycles modulate supply/demand (e.g., summer harvest +80% grain supply, -40% prices)
+- Spoilage system uses exponential decay with environmental modifiers
+- Natural cold storage in winter (0.5x decay multiplier vs 1.3x in summer)
+
+**Implications/Risks:**
+
+- Physical transport requirement creates meaningful trade professions but may frustrate solo players
+- Seasonal price fluctuations require careful balancing to avoid market manipulation
+- High-tier auction fees (7% global) may discourage legitimate trading in favor of direct player trades
+- Environmental decay factors increase system complexity significantly
+- Multi-node market system requires robust infrastructure and UI/UX design
+
+**Action Items:**
+
+- Integrate seasonal supply/demand modifiers into the Dynamic Economy section
+- Add contribution point system for trade route establishment
+- Consider reducing global auction fees from 7% to 5-6% for better balance
+- Implement temperature/humidity tracking for spoilage calculations
+- Design UI indicators for seasonal trade opportunities
+
+#### S2: Fruit Conservation and Decay Research
+
+**Key Facts:**
+
+- Scientific decay rates: Fish (12-18 hrs), fresh fruit (1-5 days), apples (7-21 days ambient, 3-12 months cold)
+- Climacteric fruits (apples, pears) continue ripening post-harvest with 5-10x respiration increase
+- Non-climacteric fruits (cherries, berries) have more stable but shorter shelf lives
+- Q10 factor: Respiration doubles for every 10°C temperature increase
+- Preservation effectiveness: Drying (95% reduction), cold storage (70-90%), fermentation (85-95%)
+- Weight loss >10% renders produce unmarketable (3-5% noticeable quality reduction)
+
+**Implications/Risks:**
+
+- Real-world decay rates may be too aggressive for gameplay (fish spoiling in 12 hours)
+- Temperature-dependent respiration requires continuous environmental tracking
+- Climacteric vs non-climacteric distinction adds complexity but increases realism
+- Preservation method effectiveness must balance realism with gameplay accessibility
+- Moisture loss mechanics could create excessive micromanagement
+
+**Action Items:**
+
+- Scale real-world decay rates by 2-3x for gameplay balance (e.g., fish 24-36 hours)
+- Implement simplified Q10 temperature model in spoilage calculations
+- Add fruit type categorization (climacteric/non-climacteric) to item properties
+- Create visual quality degradation states (fresh → good → fair → poor → spoiled)
+- Limit moisture loss to atmospheric effects rather than per-item tracking
+
+#### S3: Eco Global Survival Material System Research
+
+**Key Facts:**
+
+- Material system emphasizes environmental cost tracking (pollution, resource depletion, ecosystem damage)
+- Mandatory collaborative specialization—no single player can master all professions
+- Quality tiers represent technological progression (Basic → Advanced → Modern → Future)
+- Skill books and research create knowledge-based progression encouraging teaching
+- Calorie economy and housing requirements drive meaningful resource consumption
+- Real-time ecosystem simulation where over-harvesting causes species extinction
+- Government systems allow player-set environmental regulations
+
+**Implications/Risks:**
+
+- Environmental impact mechanics align with BlueMarble's geological focus but add complexity
+- Mandatory specialization works in Eco's small-server model but may need adjustment for MMO scale
+- Knowledge-based progression creates knowledge gaps that could frustrate new players
+- Real-time ecosystem simulation is computationally expensive at MMO scale
+- Player-driven regulations could be abused without careful governance design
+- Calorie economy may feel tedious if not balanced with engaging activities
+
+**Action Items:**
+
+- Add optional environmental impact tracking for advanced players/servers
+- Implement soft specialization (diminishing returns) rather than hard profession locks
+- Create knowledge discovery system with teaching mechanics and shared research
+- Design simplified ecosystem health indicators for resource nodes
+- Consider pollution/sustainability metrics as optional server ruleset
+- Balance calorie consumption with automatic food consumption from inventory
+
+#### S4: Vintage Story Material System Research
+
+**Key Facts:**
+
+- Material quality varies by geological source (rich/medium/poor ore deposits)
+- Tool quality directly impacts gathering success and material preservation
+- Deposit depth affects purity (deep veins = higher purity, harder access)
+- Stone quality grades (Pristine → Good → Flawed → Crumbling) affect construction suitability
+- Organic materials vary by climate zone, soil quality, and growing conditions
+- Extraction method and player skill affect final material quality
+- Knowledge discovery system rewards exploration and geological understanding
+
+**Implications/Risks:**
+
+- Geological realism aligns perfectly with BlueMarble's educational goals
+- Multiple quality factors (source, depth, tool, skill) create complex but rewarding systems
+- Deposit quality variance encourages exploration but may create "meta" optimal locations
+- Tool quality dependency creates gear treadmill for gatherers
+- Stone quality system adds depth to construction but increases material inventory complexity
+- Climate-dependent organic quality may frustrate players in suboptimal biomes
+
+**Action Items:**
+
+- Implement 3-tier deposit quality system (Rich 100%, Medium 60%, Poor 30%)
+- Add tool quality modifier to gathering success rates (0.5x to 1.5x multiplier)
+- Create geological survey mechanic for discovering high-quality deposit locations
+- Design material quality display in UI with clear visual indicators
+- Balance climate quality modifiers so all zones have viable materials
+- Add quality preservation bonuses for skilled extraction (gathering skill ≥ 50)
+
+---
+
+### Batch 1 Summary
+
+The first four sources provide complementary foundations for BlueMarble's item ecosystem. S1 establishes the economic framework with tiered markets and seasonal dynamics. S2 grounds food spoilage in real-world science while identifying necessary gameplay abstractions. S3 demonstrates how environmental systems can enhance rather than constrain gameplay through collaborative mechanics. S4 shows how geological realism can drive engaging exploration and specialization systems.
+
+**Key Cross-Source Insights:**
+
+- All sources emphasize environmental factors (temperature, seasons, geology) as core gameplay drivers
+- Quality/tier systems should represent both technological progression (S3) and skill mastery (S4)
+- Trade and specialization work best when they create interdependence without forcing it (S1, S3)
+- Scientific accuracy must be balanced against gameplay pacing (S2's decay rates need 2-3x adjustment)
+- Knowledge discovery and teaching mechanics appear consistently as engagement drivers (S3, S4)
+
+**Next Steps for Integration:**
+
+1. Scale spoilage rates from scientific to gameplay-appropriate values
+2. Implement 3-tier material quality system based on geological sources
+3. Add seasonal supply/demand modifiers to dynamic economy calculations  
+4. Design knowledge discovery system for recipes and optimal resource locations
+5. Create collaborative progression mechanics (teaching, shared research)
+6. Balance environmental complexity against accessibility for casual players
