@@ -389,9 +389,9 @@ After each batch completion, create a summary document that includes:
 ## Progress Tracking
 
 ### Batch 1 (Sources 1-4)
-- [ ] Source 1: Quest Generation Systems reviewed and documented
-- [ ] Source 2: Loot Tables and Drop Rates reviewed and documented
-- [ ] Source 3: Social Dynamics in MMORPGs reviewed and documented
+- [x] Source 1: Quest Generation Systems reviewed and documented
+- [x] Source 2: Loot Tables and Drop Rates reviewed and documented
+- [x] Source 3: Social Dynamics in MMORPGs reviewed and documented
 - [ ] Source 4: Rules of Play Fundamentals reviewed and documented
 - [ ] Batch 1 summary written
 - [ ] Waiting for "next" comment
