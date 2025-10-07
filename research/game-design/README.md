@@ -18,7 +18,8 @@ This research is organized in a step-by-step structure with recursive sub-steps 
    - [Step 2.4: Historical Research](step-2-system-research/step-2.4-historical-research/) - Authentic medieval professions
 3. **[Step 3: Integration Design](step-3-integration-design/)** - Designing integration with BlueMarble's geological simulation
 4. **[Step 4: Implementation Planning](step-4-implementation-planning/)** - Phased development roadmap (16-20 months)
-5. **[Step 8: MMORPG GIS Key Takeaways](step-8-mmorpg-gis-key-takeaways.md)** - Comprehensive guide to planet-scale architecture principles
+5. **[Step 5: Coordinate Systems & Engine Choice](step-5-coordinate-systems-engine-choice.md)** - 64-bit precision, floating origin, and engine selection
+6. **[Step 8: MMORPG GIS Key Takeaways](step-8-mmorpg-gis-key-takeaways.md)** - Comprehensive guide to planet-scale architecture principles
 
 Each step contains detailed research documents and can be explored independently or sequentially.
 
@@ -38,6 +39,80 @@ Comprehensive consolidation of all game world parameters, mechanics design, and 
 - Complete reference links to detailed research documents
 
 **Start here for a complete overview before diving into detailed research.**
+
+### [Step 5: Coordinate Systems & Engine Choice](step-5-coordinate-systems-engine-choice.md) ⭐ **TECHNICAL FOUNDATION**
+Comprehensive technical guide on coordinate systems and game engine selection for planet-scale MMORPG development. Essential for understanding precision requirements and engine capabilities.
+
+**Key Topics**:
+
+1. **64-bit Coordinate Systems** - Mandatory precision at planetary scale
+   - Precision problem analysis (32-bit float failures at 40M meters)
+   - Solution 1: 64-bit integer coordinates (BlueMarble approach)
+   - Solution 2: 64-bit double coordinates (Unreal Engine 5 LWC)
+   - Hybrid approach combining integer meters with float sub-meters
+   - Precision comparison table across all distances
+
+2. **Floating Origin Shifting** - Maintaining precision everywhere
+   - When and how to shift origin (5km threshold)
+   - Entity position management (world vs local coordinates)
+   - Multi-player origin shifting for distributed players
+   - Implementation examples with complete code
+
+3. **Coordinate Transforms: EPSG:4087** - World projection system
+   - Equidistant Cylindrical projection explained
+   - Geodetic to world coordinate conversion
+   - Great circle distance calculations
+   - Why EPSG:4087 for game worlds (advantages and trade-offs)
+
+4. **Game Engine Selection** - Detailed comparison
+   - **Unreal Engine 5**: Native 64-bit LWC, automatic origin shifting, AAA graphics
+   - **Flax Engine**: Lightweight alternative with C# scripting
+   - **Godot 4**: Open-source with experimental double precision
+   - **Unity**: Requires custom implementation, manual origin shifting
+   - **Custom Engine**: Maximum control with C++/Rust
+
+5. **Physics Engine Considerations** - 32-bit limitations
+   - Manual origin shifting for physics worlds
+   - Multiple regional physics worlds approach
+   - Integration with PhysX, Bullet, Jolt
+
+6. **Engine Comparison Matrix** - Feature-by-feature analysis
+   - 64-bit support, origin shifting, graphics quality
+   - Learning curve, performance, cost
+   - Community size, MMO features, development time
+
+7. **Recommendations by Project Type**
+   - AAA MMORPG → Unreal Engine 5
+   - Indie MMORPG → Flax Engine
+   - Prototype/Small-Scale → Godot 4
+   - Maximum Control → Custom Engine
+
+8. **Implementation Checklist** - 10-week roadmap
+   - Phase 1: Coordinate system (Week 1-2)
+   - Phase 2: Origin shifting (Week 3-4)
+   - Phase 3: Engine integration (Week 5-8)
+   - Phase 4: Validation (Week 9-10)
+
+**Code Examples**:
+- Complete WorldPosition struct (C#)
+- FloatingOriginManager implementation
+- Physics origin shifting (C++)
+- Coordinate conversion functions
+- Engine-specific examples (UE5, Flax, Godot, Unity, Rust)
+
+**Engine Comparison**:
+- Unreal Engine 5 LWC system (native 64-bit, automatic rebasing)
+- Flax Engine double precision mode
+- Godot 4 experimental builds
+- Unity DOTS with manual implementation
+- Custom Rust ECS example
+
+**Relevance to BlueMarble**:
+- Foundation for all spatial calculations
+- Critical for planet-scale precision (40M × 20M × 20M meters)
+- Enables seamless exploration without precision loss
+- Supports scientific accuracy in geological simulation
+- Performance optimization through origin shifting
 
 ### [Step 8: MMORPG GIS Key Takeaways](step-8-mmorpg-gis-key-takeaways.md) ⭐ **ARCHITECTURE GUIDE**
 Comprehensive guide expanding on the six critical principles for building planet-scale MMORPG systems with GIS integration. Essential reading for understanding BlueMarble's technical architecture.

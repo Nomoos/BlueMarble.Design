@@ -24,6 +24,8 @@ Designing an Earth-sized MMO world (40,075,020 m × 20,037,510 m in EPSG:4087) a
   - Custom ECS engines (Unity DOTS, Rust/C++).  
   - For physics engines stuck at 32-bit (e.g. PhysX), shift origin dynamically.
 
+**📖 For detailed coordinate system design, engine comparisons, and implementation guides, see [Step 5: Coordinate Systems & Engine Choice](research/game-design/step-5-coordinate-systems-engine-choice.md).**
+
 ---
 
 ## Rendering & LOD Strategy
