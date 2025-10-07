@@ -83,17 +83,23 @@ export class SwapRouter {
 
     /**
      * Calculate the cost of exchanging one commodity for another
-     * Includes transaction fees, slippage, and market inefficiency
+     * Includes transaction fees, slippage, market inefficiency, auctioneer fees,
+     * transport costs, guard fees, and deterioration
      */
-    calculateExchangeCost(fromCommodity, toCommodity, market) {
+    calculateExchangeCost(fromCommodity, toCommodity, market, options = {}) {
         const buyPrice = market.getPrice(fromCommodity);
         const sellPrice = market.getPrice(toCommodity);
         
         // Exchange rate (how much of 'to' you get per unit of 'from')
         const exchangeRate = buyPrice / sellPrice;
         
-        // Transaction fee (2.5% of transaction value)
-        const feeRate = 0.025;
+        // Base transaction fee (2.5% of transaction value)
+        const baseFeeRate = 0.025;
+        
+        // Auctioneer fee (ALWAYS applied) - varies by market tier
+        const marketTier = options.marketTier || 'regional';
+        const playerRace = options.playerRace || 'native-inhabitants';
+        const auctioneerFeeRate = this.getAuctioneerFeeRate(marketTier, playerRace);
         
         // Slippage based on market liquidity (simulated)
         const fromData = market.commodityData.get(fromCommodity);
@@ -101,11 +107,110 @@ export class SwapRouter {
         const avgLiquidity = (fromData.supply + toData.supply) / 2;
         const slippage = Math.max(0.01, Math.min(0.05, 100 / avgLiquidity)); // 1-5%
         
+        // Transport fee (for inter-market trades)
+        const transportFeeRate = options.includeTransport ? 0.01 : 0;
+        
+        // Guard fee (for security during transport)
+        const guardTier = options.guardTier || 'none';
+        const guardFeeRate = this.getGuardFeeRate(guardTier);
+        
+        // Deterioration/spoilage factor (for perishable goods)
+        const season = options.season || 'summer';
+        const preservation = options.preservation || 'none';
+        const deteriorationRate = this.getDeteriorationRate(fromCommodity, season, preservation);
+        
         // Total cost factor (lower is better)
-        // Cost = 1 / (rate after fees and slippage)
-        const effectiveRate = exchangeRate * (1 - feeRate) * (1 - slippage);
+        // Cost = 1 / (rate after all fees, slippage, and deterioration)
+        const effectiveRate = exchangeRate * 
+                             (1 - baseFeeRate) * 
+                             (1 - auctioneerFeeRate) * 
+                             (1 - slippage) * 
+                             (1 - transportFeeRate) *
+                             (1 - guardFeeRate) *
+                             (1 - deteriorationRate);
         
         return 1 / effectiveRate;
+    }
+    
+    /**
+     * Get auctioneer fee rate based on market tier and player race
+     */
+    getAuctioneerFeeRate(marketTier, playerRace) {
+        const baseFees = {
+            'local': 0.015,      // 1.5%
+            'regional': 0.03,    // 3%
+            'global': 0.07       // 7%
+        };
+        
+        const raceFeeMultipliers = {
+            'native-inhabitants': 1.0,
+            'established-settlers': 1.2,
+            'experimental-race-1': 1.5,
+            'experimental-race-2': 2.0  // Higher fees for races experimenting with this world
+        };
+        
+        const baseFee = baseFees[marketTier] || 0.03;
+        const raceMultiplier = raceFeeMultipliers[playerRace] || 1.0;
+        
+        return baseFee * raceMultiplier;
+    }
+    
+    /**
+     * Get guard fee rate based on security tier
+     */
+    getGuardFeeRate(guardTier) {
+        const guardFees = {
+            'none': 0,
+            'basic': 0.005,      // 0.5% - basic guards
+            'standard': 0.01,    // 1% - professional guards
+            'premium': 0.02      // 2% - military escort
+        };
+        
+        return guardFees[guardTier] || 0;
+    }
+    
+    /**
+     * Get deterioration rate for commodity based on season and preservation
+     */
+    getDeteriorationRate(commodityId, season, preservation) {
+        // Simplified deterioration model
+        const commodityTypes = {
+            'wood': { baseRate: 0.001, perishable: false },
+            'cherry': { baseRate: 0.05, perishable: true },
+            'iron': { baseRate: 0, perishable: false },
+            'strawberry': { baseRate: 0.04, perishable: true },
+            'carrot': { baseRate: 0.03, perishable: true },
+            'blueberry': { baseRate: 0.045, perishable: true },
+            'game-currency': { baseRate: 0, perishable: false }
+        };
+        
+        const commodity = commodityTypes[commodityId] || { baseRate: 0, perishable: false };
+        
+        if (!commodity.perishable) {
+            return 0;
+        }
+        
+        // Seasonal multipliers
+        const seasonMultipliers = {
+            'spring': 0.8,
+            'summer': 1.3,  // Faster decay in heat
+            'autumn': 0.9,
+            'winter': 0.5   // Slower in cold
+        };
+        
+        // Preservation multipliers
+        const preservationMultipliers = {
+            'none': 1.0,
+            'drying': 0.2,
+            'salting': 0.3,
+            'smoking': 0.25,
+            'canning': 0.05
+        };
+        
+        const seasonMult = seasonMultipliers[season] || 1.0;
+        const preservationMult = preservationMultipliers[preservation] || 1.0;
+        
+        return commodity.baseRate * seasonMult * preservationMult;
     }
 
     /**

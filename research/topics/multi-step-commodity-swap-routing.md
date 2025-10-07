@@ -125,24 +125,46 @@ Commodities are represented as nodes in a weighted directed graph:
 Each edge has a **cost** calculated from:
 1. Exchange rate (price ratio)
 2. Transaction fee (2.5%)
-3. Slippage based on liquidity (1-5%)
+3. **Auctioneer fee (ALWAYS applied)** - varies by market tier (1.5-7%) and race multiplier
+4. Slippage based on liquidity (1-5%)
+5. **Transport fee** - for inter-market trades
+6. **Guard fee** - for security during transport
+7. **Deterioration/spoilage** - for perishable goods, varies by season and preservation method
 
 ### Cost Calculation
 
 ```javascript
-calculateExchangeCost(fromCommodity, toCommodity, market) {
+calculateExchangeCost(fromCommodity, toCommodity, market, options) {
     // Base exchange rate
     exchangeRate = buyPrice / sellPrice;
     
     // Transaction fee
-    feeRate = 0.025; // 2.5%
+    baseFeeRate = 0.025; // 2.5%
+    
+    // Auctioneer fee (ALWAYS applied) - varies by market tier and race
+    auctioneerFeeRate = getAuctioneerFeeRate(marketTier, playerRace);
+    // Local: 1.5%, Regional: 3%, Global: 7%
+    // Race multipliers: native 1.0x, experimental races up to 2.0x
     
     // Slippage (inversely proportional to liquidity)
     avgLiquidity = (fromSupply + toSupply) / 2;
     slippage = clamp(100 / avgLiquidity, 0.01, 0.05); // 1-5%
     
-    // Effective rate after costs
-    effectiveRate = exchangeRate × (1 - feeRate) × (1 - slippage);
+    // Transport fee (for inter-market trades)
+    transportFeeRate = includeTransport ? 0.01 : 0;
+    
+    // Guard fee (for security during transport)
+    guardFeeRate = getGuardFeeRate(guardTier);
+    // None: 0%, Basic: 0.5%, Standard: 1%, Premium: 2%
+    
+    // Deterioration/spoilage (for perishable goods)
+    deteriorationRate = getDeteriorationRate(commodity, season, preservation);
+    
+    // Effective rate after all costs
+    effectiveRate = exchangeRate × (1 - baseFeeRate) × 
+                   (1 - auctioneerFeeRate) × (1 - slippage) ×
+                   (1 - transportFeeRate) × (1 - guardFeeRate) ×
+                   (1 - deteriorationRate);
     
     // Cost = inverse of effective rate (lower is better)
     return 1 / effectiveRate;
