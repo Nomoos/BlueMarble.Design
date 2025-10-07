@@ -3,7 +3,7 @@
 This directory contains bibliography, reading lists, and source documentation for BlueMarble research.
 
 **Last Updated:** 2025-01-17  
-**Total Sources Tracked:** 73+ (60 books + 13 survival collections + 20+ online)  
+**Total Sources Tracked:** 115+ (60 books + 13 survival collections + 20+ online + 21 scientific references)  
 **Status:** Active - Comprehensive source tracking system
 
 ---
@@ -19,13 +19,13 @@ This directory contains bibliography, reading lists, and source documentation fo
   - Next steps and priorities
   
 - **sources.bib**: Complete bibliography in BibTeX format
-  - 43 BibTeX entries covering all major sources
-  - Categorized by topic (game programming, design theory, multiplayer, performance optimization, etc.)
+  - 64+ BibTeX entries covering all major sources
+  - Categorized by topic (game programming, design theory, multiplayer, performance optimization, scientific references, etc.)
   - Includes survival knowledge collections and C# vs C++ performance books
-  - Online resources and open source projects
+  - Online resources, open source projects, and scientific reference materials
   
 - **reading-list.md**: Curated reading list with priorities and status tracking
-  - 94 tracked items across all source types
+  - 112+ tracked items across all source types
   - Organized by priority (Critical, High, Medium, Low)
   - Tracks completion status (✓ completed, 🔍 in progress, ⏳ pending)
   - Cross-referenced with analysis documents
@@ -98,6 +98,14 @@ This directory contains bibliography, reading lists, and source documentation fo
 - Community forums
 - Industry resources (Gamasutra, GDC)
 
+### Scientific Reference Sources (21 sources)
+- **Biology and Organic Systems (5 sources)** - Decomposition, bacteria, organs, scavenger ecology
+- **Engineering and Materials Science (5 sources)** - Structural mechanics, cast iron, iron-cementite diagrams
+- **Physics and Chemistry (6 sources)** - Surface tension, redox, viscosity, fluid dynamics, gas laws
+- **Atmospheric Science (5 sources)** - Atmosphere, magnetosphere, solar wind, weather systems, thermochemistry
+
+**Application:** Foundational knowledge for realistic simulation systems including crafting, metallurgy, atmospheric simulation, structural engineering, and survival mechanics.
+
 ---
 
 ## Guidelines
@@ -133,6 +141,7 @@ Maintain a BibTeX file with all research sources using standard BibTeX format:
 - Open Source Projects
 - Survival and Technology Resources
 - Geographic and Map Data
+- Scientific Reference Sources (Biology, Engineering, Physics, Atmospheric Science)
 
 ### Reading List (reading-list.md)
 
@@ -314,6 +323,14 @@ Link sources to relevant documentation:
 - Open Source Projects: 10
 - Communities: 5
 - Video Courses: 5
+
+**Scientific Reference Sources:**
+- Total: 21
+- Biology and Organic Systems: 5
+- Engineering and Materials Science: 5
+- Physics and Chemistry: 6
+- Atmospheric Science: 5
+- Status: Catalogued, pending integration into game systems
 
 ---
 

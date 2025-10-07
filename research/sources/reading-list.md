@@ -3,7 +3,7 @@
 Curated reading list for BlueMarble research and development.
 
 **Last Updated:** 2024  
-**Total Sources:** 91 (73 books + 13 survival collections + 5 online resources)  
+**Total Sources:** 112 (73 books + 13 survival collections + 5 online resources + 21 scientific references)  
 **Completed Analysis:** 20 sources (includes 8 fantasy literature sources)  
 **Status:** Active - Tracking all research literature sources
 
@@ -188,6 +188,40 @@ Curated reading list for BlueMarble research and development.
 - [ ] **World of Warcraft** - Traditional MMORPG architecture
 - [ ] **Ultima Online** - Historical MMORPG design
 - [ ] **RuneScape (Old School)** - Browser-based MMORPG patterns
+
+### Scientific Reference Sources (Wikipedia)
+
+**Biology and Organic Systems:**
+- [ ] **Decomposition** - Biological decomposition processes for crafting and survival systems
+- [ ] **Corpse decomposition** - Decomposition stages and factors for realistic survival mechanics
+- [ ] **Organ (biology)** - Biological organ systems for medical and survival systems
+- [ ] **Bacteria** - Bacterial processes for decomposition and fermentation systems
+- [ ] **Scavenger** - Scavenger ecology for wildlife and food chain simulation
+
+**Engineering and Materials Science:**
+- [ ] **Structural integrity and failure** - Structural mechanics for building and crafting systems
+- [ ] **Structural load** - Load calculations for construction and building systems
+- [ ] **Engineering** - General engineering principles for technology progression
+- [ ] **Cast iron** - Cast iron properties for metalworking and crafting systems
+- [ ] **Iron-cementite meta-stable diagram** (Research online) - Phase diagrams for advanced metallurgy
+
+**Physics and Chemistry:**
+- [ ] **Surface tension** - Surface tension physics for liquid behavior simulation
+- [ ] **Redox** - Oxidation-reduction chemistry for crafting and metallurgy
+- [ ] **Viscosity** - Viscosity properties for fluid simulation and crafting
+- [ ] **Navier–Stokes equations** - Fluid dynamics equations for atmospheric and water simulation
+- [ ] **Gay-Lussac's law** - Gas law for pressure-temperature relationships in crafting
+- [ ] **Boyle's law** - Gas law for pressure-volume relationships in systems
+
+**Atmospheric Science:**
+- [ ] **Atmosphere** - Atmospheric composition and structure for planetary simulation
+- [ ] **Magnetosphere** - Planetary magnetosphere for space weather simulation
+- [ ] **Solar wind** - Solar wind effects for space weather and radiation systems
+- [ ] **Inversion (meteorology)** - Temperature inversion for weather and climate simulation
+- [ ] **Reducing atmosphere** - Atmospheric chemistry for planetary atmosphere variation
+- [ ] **Thermochemistry** - Chemical thermodynamics for crafting and smelting systems
+
+**Application to BlueMarble:** These scientific resources provide foundational knowledge for realistic simulation systems including: crafting and metallurgy (iron-cementite diagrams, thermochemistry), atmospheric simulation (gas laws, atmospheric science), structural engineering (building systems), and survival mechanics (decomposition, biological systems).
 
 ---
 
