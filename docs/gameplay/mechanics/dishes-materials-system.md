@@ -1581,8 +1581,8 @@ This section tracks the analysis of research sources that informed this Game Des
 - [x] S6: Mortal Online 2 Material System Research (processed in batch 2)
 - [x] S7: Wurm Online Material System Research (processed in batch 2)
 - [x] S8: Novus Inceptio Material System Research (processed in batch 2)
-- [ ] S9: Advanced Crafting System Research
-- [ ] S10: Base Crafting Workflows Research
+- [x] S9: Advanced Crafting System Research (processed in batch 3 - final)
+- [x] S10: Base Crafting Workflows Research (processed in batch 3 - final)
 
 ---
 
@@ -1882,3 +1882,121 @@ The second batch reveals sophisticated quality and material systems from hardcor
 6. Implement quality degradation at gameplay-friendly rates (slower than Wurm)
 7. Create 3-tier market segmentation (Basic/Quality/Premium)
 8. Balance geological authenticity with accessibility through difficulty modes
+
+---
+
+### Batch 3: Final Source Briefs (S9-S10)
+
+#### S9: Advanced Crafting System Research
+
+**Key Facts:**
+
+- Flexible material selection through property-based requirements (Hardness ≥70, Ductility ≥40)
+- Multiple valid material options per recipe slot enabling player creativity and experimentation
+- Risk/reward mechanics including failure chances, material loss, tool degradation, and crafting injuries
+- Multi-stage interactive crafting processes engage players beyond simple click-to-craft
+- Player-controlled quality through material bonuses, skill application, and strategic tool selection
+- Specialization depth supports unique advantages and economic niches
+- Open-ended material slots define requirements by properties rather than specific items
+- Economic diversity as multiple materials maintain value and reduce bottlenecks
+
+**Implications/Risks:**
+
+- Flexible material selection adds depth but increases recipe complexity and UI demands
+- Risk/reward mechanics create meaningful stakes but may frustrate players with material loss
+- Multi-stage processes enhance engagement but require more development resources
+- Property-based requirements need clear communication to avoid player confusion
+- Failure mechanics must be balanced to maintain player retention while creating challenge
+- Specialization systems could create imbalanced economic advantages if not carefully tuned
+- Open-ended slots encourage experimentation but complicate recipe balancing
+
+**Action Items:**
+
+- Implement property-based material requirements (e.g., "Metal with Hardness ≥70")
+- Create 2-4 valid material options per critical recipe slot for strategic choice
+- Design risk mitigation systems (quality tools reduce failure, skill reduces loss)
+- Add multi-stage crafting for complex items (prepare → assemble → finish)
+- Implement material bonus system where better materials improve final quality
+- Create failure recovery mechanics (partial material salvage, learning bonuses)
+- Design UI that clearly shows property requirements and material trade-offs
+- Balance failure rates to create tension without excessive punishment (5-15% base failure)
+
+#### S10: Base Crafting Workflows Research
+
+**Key Facts:**
+
+- Streamlined workflows minimize clicks and present clear paths from raw to finished items
+- Tool selection impacts crafting speed, quality output, and success rates without excessive complexity
+- Workstation proximity creates spatial gameplay while accessibility features prevent frustration
+- Progressive disclosure reveals complexity gradually (simple UI for beginners, advanced for experts)
+- Visual feedback for material availability, tool status, and progress improves confidence
+- Resource management interfaces help players understand craftable items without external calculators
+- Essential workflow: Discover Recipe → Check Requirements → Gather Materials → Select Tools → Craft → Receive Feedback
+- Physical location affects crafting availability through workstation requirements
+
+**Implications/Risks:**
+
+- Streamlined workflows improve accessibility but may reduce engagement depth
+- Tool requirements add realism but could gate progression for new players
+- Workstation proximity creates spatial gameplay but may frustrate mobile playstyles
+- Progressive disclosure works well but requires sophisticated UI system design
+- Visual feedback essential but complex to implement across all crafting interactions
+- Resource management features helpful but add development complexity
+- Physical location requirements create world immersion but limit crafting flexibility
+
+**Action Items:**
+
+- Design 3-click crafting workflow: Open Menu → Select Recipe → Confirm Craft
+- Implement tool quality tiers (Basic/Quality/Masterwork) with clear benefit differences
+- Create workstation system with 3 proximity tiers (At Station/Nearby/Portable)
+- Add progressive UI disclosure system showing simple mode by default
+- Implement real-time material availability highlighting in recipe lists
+- Create "What Can I Craft" filter showing craftable items with current inventory
+- Design clear visual feedback: Progress bar, success/failure animations, quality indicators
+- Add workstation portability options for basic crafting (portable workbench, traveling tools)
+
+---
+
+### Batch 3 Summary
+
+The final batch focuses on crafting system implementation patterns. S9 (Advanced Crafting) emphasizes player agency through flexible material selection, property-based requirements, and risk/reward mechanics that create meaningful stakes. S10 (Base Crafting Workflows) provides accessibility foundations with streamlined workflows, progressive disclosure, and clear visual feedback. Together, they establish a complete framework from beginner-friendly basic crafting to deep advanced systems.
+
+**Key Cross-Source Insights:**
+
+- Flexibility balanced with clarity (S9's material options need S10's clear communication)
+- Risk systems (S9) require accessibility features (S10) to maintain player retention
+- Property-based requirements (S9) align with geological simulation (S8) and multi-property systems (S6)
+- Progressive disclosure (S10) allows basic crafters simple access while experts use advanced features
+- Tool and workstation mechanics (S10) integrate with quality systems (S5, S7) and material properties (S6)
+
+**Final Integration Framework:**
+
+1. Base layer (S10): Streamlined 3-click workflow with clear visual feedback
+2. Property system (S9): Materials defined by 4-6 core properties enabling flexible selection
+3. Quality calculation (S5, S7): Multiplicative formula (Skill × Material × Tool) with 0-100 scale
+4. Risk/reward (S9): Balanced failure rates (5-15%) with mitigation through skill and tools
+5. Specialization (S5, S9): Soft caps with diminishing returns creating economic niches
+6. Geological integration (S8): Knowledge-based discovery and authentic material sources
+
+---
+
+## FINAL SUMMARY
+
+This comprehensive research analysis processed 10 sources spanning economy design, scientific spoilage data, material quality systems from leading sandbox MMORPGs, and crafting workflow patterns. The analysis reveals consistent design principles across successful systems: continuous quality scales over discrete tiers, multi-dimensional material properties creating authentic choices, knowledge-based discovery rewarding exploration, and balanced specialization driving player economy.
+
+**Core Design Recommendations for BlueMarble:**
+
+1. **Quality System**: Adopt 0-100 continuous scale with multiplicative formula (Skill × Material × Tool) and milestone labels at 30/60/90 for clarity
+2. **Material Properties**: Implement 4-6 core properties (durability, weight, hardness, flexibility, conductivity, rarity) enabling property-based recipe requirements
+3. **Specialization**: Soft skill caps with diminishing returns after 600 points, creating economic interdependence without frustrating player flexibility
+4. **Crafting Workflows**: Streamlined 3-click base system with progressive disclosure revealing advanced options for experienced crafters
+5. **Risk/Reward**: Balanced failure rates (5-15% base) with mitigation through skill, tools, and material quality
+6. **Geological Integration**: Knowledge discovery system for resource identification tied directly to geological formation characteristics
+7. **Economic Depth**: 3-tier market segmentation (Basic 0-40, Quality 40-70, Premium 70-100) with quality inheritance through crafting chains
+8. **Accessibility**: Multiple difficulty modes balancing geological authenticity with mainstream appeal
+
+The Dishes & Materials System now has a solid research foundation integrating scientific accuracy (spoilage data, geological principles) with proven gameplay mechanics (quality systems, crafting workflows, economic models) from successful MMORPGs. This framework supports BlueMarble's dual goals of educational geological simulation and engaging multiplayer gameplay.
+
+**Implementation Priority**: Begin with base workflows and quality systems (Phase 1-2), add property-based flexibility and risk mechanics (Phase 3), integrate geological knowledge discovery (Phase 4), creating a cohesive progression from accessible basics to deep mastery.
+
+COMPLETED
