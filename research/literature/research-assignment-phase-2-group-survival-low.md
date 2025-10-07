@@ -633,12 +633,12 @@ Balancing historical accuracy with engaging gameplay is an ongoing challenge in 
 
 ### Batch 1 (Sources 1-4)
 
-- [ ] Source 1 reviewed and documented
-- [ ] Source 2 reviewed and documented
-- [ ] Source 3 reviewed and documented
-- [ ] Source 4 reviewed and documented
-- [ ] Batch 1 summary written
-- [ ] Waiting for "next" comment
+- [x] Source 1 reviewed and documented - `survival-analysis-resource-distribution-algorithms.md` (1,061 lines)
+- [x] Source 2 reviewed and documented - `survival-analysis-day-night-cycle-implementation.md` (999 lines)
+- [x] Source 3 reviewed and documented - `survival-analysis-historical-building-techniques.md` (1,043 lines)
+- [x] Source 4 reviewed and documented - `survival-analysis-primitive-tools-technology.md` (891 lines)
+- [x] Batch 1 summary written - `phase-2-group-05-batch-1-summary.md` (392 lines)
+- [x] Waiting for "next" comment
 
 ### Batch 2 (Sources 5-8)
 
