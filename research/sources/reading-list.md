@@ -214,10 +214,10 @@ Curated reading list for BlueMarble research and development.
 - [x] **Boyle's law** - Gas law for pressure-volume relationships in systems (Processed in Batch 4)
 
 **Atmospheric Science:**
-- [ ] **Atmosphere** - Atmospheric composition and structure for planetary simulation
-- [ ] **Magnetosphere** - Planetary magnetosphere for space weather simulation
-- [ ] **Solar wind** - Solar wind effects for space weather and radiation systems
-- [ ] **Inversion (meteorology)** - Temperature inversion for weather and climate simulation
+- [x] **Atmosphere** - Atmospheric composition and structure for planetary simulation (Processed in Batch 5)
+- [x] **Magnetosphere** - Planetary magnetosphere for space weather simulation (Processed in Batch 5)
+- [x] **Solar wind** - Solar wind effects for space weather and radiation systems (Processed in Batch 5)
+- [x] **Inversion (meteorology)** - Temperature inversion for weather and climate simulation (Processed in Batch 5)
 - [ ] **Reducing atmosphere** - Atmospheric chemistry for planetary atmosphere variation
 - [ ] **Thermochemistry** - Chemical thermodynamics for crafting and smelting systems
 
