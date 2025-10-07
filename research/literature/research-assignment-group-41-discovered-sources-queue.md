@@ -50,7 +50,7 @@ This document tracks discovered sources from Assignment Group 41 (Critical Econo
    - Key Topics: Economic models, material flow analysis, supply/demand modeling, virtual currency design
    - Note: Same source material, reused from Group 35 analysis
 
-**Discovered Sources (2/10):**
+**Discovered Sources (4/10):**
 
 4. **Virtual Currency Design Patterns** (High, 6-8h)
    - Status: ✅ Complete
@@ -67,6 +67,22 @@ This document tracks discovered sources from Assignment Group 41 (Critical Econo
    - Completed: 2025-01-17
    - Key Topics: First MMORPG economy, duplication exploits, housing systems, PvP economics, inflation crisis
    - Discovered Sources: 2 sources logged
+
+6. **CCP Quarterly Economic Reports Archive** (High, 8-10h)
+   - Status: ✅ Complete
+   - Document: [game-dev-analysis-ccp-quarterly-reports.md](./game-dev-analysis-ccp-quarterly-reports.md)
+   - Lines: 913
+   - Completed: 2025-01-17
+   - Key Topics: 17 years of economic data, MER structure, intervention strategies, transparency
+   - Discovered Sources: 1 source logged
+
+7. **Dr. Eyjólfur Guðmundsson Presentations** (High, 4-6h)
+   - Status: ✅ Complete
+   - Document: [game-dev-analysis-dr-eyjolfur-presentations.md](./game-dev-analysis-dr-eyjolfur-presentations.md)
+   - Lines: 814
+   - Completed: 2025-01-17
+   - Key Topics: Chief economist role, crisis management, economic warfare, inflation targeting, team building
+   - Discovered Sources: 1 source logged
 
 ---
 
@@ -215,7 +231,8 @@ This document tracks discovered sources from Assignment Group 41 (Critical Econo
 **Priority:** High  
 **Category:** GameDev-Design, Economy  
 **Rationale:** Historical economic data for trend analysis  
-**Estimated Effort:** 8-10 hours
+**Estimated Effort:** 8-10 hours  
+**Status:** ✅ Complete
 
 ---
 
@@ -224,7 +241,8 @@ This document tracks discovered sources from Assignment Group 41 (Critical Econo
 **Priority:** High  
 **Category:** GameDev-Design, Economy  
 **Rationale:** CCP's chief economist's insights on managing virtual economies  
-**Estimated Effort:** 4-6 hours
+**Estimated Effort:** 4-6 hours  
+**Status:** ✅ Complete
 
 ---
 
