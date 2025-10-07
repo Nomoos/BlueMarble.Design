@@ -218,8 +218,8 @@ Curated reading list for BlueMarble research and development.
 - [x] **Magnetosphere** - Planetary magnetosphere for space weather simulation (Processed in Batch 5)
 - [x] **Solar wind** - Solar wind effects for space weather and radiation systems (Processed in Batch 5)
 - [x] **Inversion (meteorology)** - Temperature inversion for weather and climate simulation (Processed in Batch 5)
-- [ ] **Reducing atmosphere** - Atmospheric chemistry for planetary atmosphere variation
-- [ ] **Thermochemistry** - Chemical thermodynamics for crafting and smelting systems
+- [x] **Reducing atmosphere** - Atmospheric chemistry for planetary atmosphere variation (Processed in Batch 6)
+- [x] **Thermochemistry** - Chemical thermodynamics for crafting and smelting systems (Processed in Batch 6)
 
 **Application to BlueMarble:** These scientific resources provide foundational knowledge for realistic simulation systems including: crafting and metallurgy (iron-cementite diagrams, thermochemistry), atmospheric simulation (gas laws, atmospheric science), structural engineering (building systems), and survival mechanics (decomposition, biological systems).
 
