@@ -2,7 +2,7 @@
 
 Curated reading list for BlueMarble research and development.
 
-**Last Updated:** 2025-10-06  
+**Last Updated:** 2024  
 **Total Sources:** 91 (73 books + 13 survival collections + 5 online resources)  
 **Completed Analysis:** 20 sources (includes 8 fantasy literature sources)  
 **Status:** Active - Tracking all research literature sources
@@ -200,7 +200,7 @@ Curated reading list for BlueMarble research and development.
 - [x] **Tabletop RPG Mechanics Overview** - 9 RPGs analyzed (game-design-mechanics-analysis.md, 1,263 lines)
 - [x] **Game Development Resources Overview** - 20+ books organized (game-development-resources-analysis.md, 702 lines)
 - [x] **Online Game Development Resources Catalog** - Active auto-growing list (online-game-dev-resources.md, 880+ lines)
-- [x] **Fantasy Literature Sources** - 8 major fantasy series analyzed for game design application (fantasy-literature-sources.md, 780+ lines)
+- [x] **Fantasy Literature Sources** - 8 major fantasy series analyzed for game design application (fantasy-literature-sources.md, 703 lines)
 
 ### Survival Content Extraction (10 completed)
 

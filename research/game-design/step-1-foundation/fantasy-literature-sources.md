@@ -3,12 +3,14 @@
 **Document Type:** Research Sources Tracking  
 **Version:** 1.0  
 **Author:** BlueMarble Design Team  
-**Date:** 2025-10-06  
+**Date:** 2024  
 **Status:** In Progress
 
 ## Overview
 
-This document tracks fantasy literature sources that can inform BlueMarble's game design, world-building, narrative structure, and character development. While BlueMarble has a unique sci-fi/geological setting, classic and contemporary fantasy literature offers valuable insights into:
+This document tracks fantasy literature sources that can inform BlueMarble's game design, world-building,
+narrative structure, and character development. While BlueMarble has a unique sci-fi/geological setting,
+classic and contemporary fantasy literature offers valuable insights into:
 
 - Character progression and skill development systems
 - Quest design and narrative structure
@@ -505,7 +507,8 @@ This document tracks fantasy literature sources that can inform BlueMarble's gam
 - Parent seeking lost child across apocalypse
 - The Stillness as supercontinent
 
-**MOST RELEVANT TO BLUEMARBLE:** This series directly addresses geological manipulation, regular catastrophic events, and survival in hostile environments—core themes for BlueMarble's setting.
+**MOST RELEVANT TO BLUEMARBLE:** This series directly addresses geological manipulation, regular
+catastrophic events, and survival in hostile environments—core themes for BlueMarble's setting.
 
 ---
 
@@ -687,7 +690,7 @@ Continue exploring:
 **Total Sources Documented:** 8  
 **Status:** ✅ All primary sources processed  
 **Priority Sources Remaining:** 10 queued  
-**Last Updated:** 2025-10-06
+**Last Updated:** 2024
 
 **Next Actions:**
 1. Cross-reference with narrative design guidelines
