@@ -192,10 +192,10 @@ Curated reading list for BlueMarble research and development.
 ### Scientific Reference Sources (Wikipedia)
 
 **Biology and Organic Systems:**
-- [ ] **Decomposition** - Biological decomposition processes for crafting and survival systems
-- [ ] **Corpse decomposition** - Decomposition stages and factors for realistic survival mechanics
-- [ ] **Organ (biology)** - Biological organ systems for medical and survival systems
-- [ ] **Bacteria** - Bacterial processes for decomposition and fermentation systems
+- [x] **Decomposition** - Biological decomposition processes for crafting and survival systems (Processed in Batch 1)
+- [x] **Corpse decomposition** - Decomposition stages and factors for realistic survival mechanics (Processed in Batch 1)
+- [x] **Organ (biology)** - Biological organ systems for medical and survival systems (Processed in Batch 1)
+- [x] **Bacteria** - Bacterial processes for decomposition and fermentation systems (Processed in Batch 1)
 - [ ] **Scavenger** - Scavenger ecology for wildlife and food chain simulation
 
 **Engineering and Materials Science:**
