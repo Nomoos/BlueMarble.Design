@@ -28,7 +28,8 @@ market** where regional auctions create meaningful trade opportunities while req
 
 ### Auction Tier System
 
-The auction system is organized into three tiers, each with distinct characteristics, fees, and reach:
+The auction system is organized into three tiers, each with distinct characteristics, fees, and reach. See the
+[Auction Tier System Diagram](../assets/diagrams/marketplace/auction-tier-system.md) for a visual representation.
 
 #### Local Auction Houses
 
