@@ -2,8 +2,8 @@
 
 This directory contains bibliography, reading lists, and source documentation for BlueMarble research.
 
-**Last Updated:** 2025-01-17  
-**Total Sources Tracked:** 73+ (60 books + 13 survival collections + 20+ online)  
+**Last Updated:** 2025-01-18  
+**Total Sources Tracked:** 75+ (60 books + 13 survival collections + 20+ online + 2 game economy external)  
 **Status:** Active - Comprehensive source tracking system
 
 ---
@@ -38,6 +38,21 @@ This directory contains bibliography, reading lists, and source documentation fo
   - Size and format information (~440-450 GB total)
   - Extraction pipeline status
   - Legal and licensing considerations
+
+- **game-economy-design-external.md**: 🆕 **External game economy design document**
+  - Auction tiers (local to global) with fee structures
+  - Transport mechanics with multiple vehicle types
+  - Goods spoilage and preservation systems
+  - Seasonal supply/demand cycles
+  - Regional market specialization
+  - Processed from external source (provided by @Nomoos)
+  
+- **discovery-sources-game-economy.md**: 🆕 **Catalogued source references**
+  - 7 identified source documents (Sources 39, 58-63)
+  - Priority ratings for investigation
+  - Line-by-line reference tracking
+  - Integration status with current implementation
+  - Formulas and key data extracted
   
 - **quotes.md**: Notable quotes and excerpts from sources
 
@@ -97,6 +112,23 @@ This directory contains bibliography, reading lists, and source documentation fo
 - Video tutorials and courses
 - Community forums
 - Industry resources (Gamasutra, GDC)
+
+### External Game Design Documents (2 sources)
+
+#### Processed Documents (2)
+1. **Game Economy Design** - Auctions, transport, fees, spoilage, seasonality
+   - Status: ✅ Processed and integrated
+   - File: `game-economy-design-external.md`
+   - Provider: @Nomoos (2025-01-18)
+   - Topics: Auction tiers, transport mechanics, seasonal effects, spoilage
+   - Integration: Aligned with extended auction system implementation
+
+2. **Discovery Sources Catalog** - Referenced source materials
+   - Status: ✅ Catalogued
+   - File: `discovery-sources-game-economy.md`
+   - Sources Identified: 7 (Sources 39, 58-63)
+   - Priority: HIGH for Sources 58, 60, 39 (transport, seasons, tiers)
+   - Next Step: Request access to referenced source documents
 
 ---
 
