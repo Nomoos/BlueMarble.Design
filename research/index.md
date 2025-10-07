@@ -11,8 +11,21 @@ and typically 200-400 lines.
 
 ### Available Topics
 
+- [Game Design Roles and Types](topics/game-design-roles-and-types.md) - 
+  Comprehensive overview of game design specializations (Systems, Combat, Economy, Level, Narrative, UX, Progression, 
+  Meta-Game designers), their responsibilities, tools, and methodological approaches for modern game development
+
 - [World of Warcraft Emulators – Architecture & Communication](topics/wow-emulator-architecture-networking.md) -
   MMO server architecture, authentication systems, and networking protocols from open-source WoW emulators
+  
+- [Why Don't Women Play Games? - Gender Barriers in Gaming](topics/why-dont-women-play-games.md) -
+  Analysis of historical and cultural barriers preventing women's full participation in gaming, with actionable insights for inclusive game design
+
+- [Board Games in Video Games and Regulatory Considerations](topics/board-games-in-video-games-and-regulatory-considerations.md) -
+  Research on implementing traditional board games (Chess, Shogi, Go, Mancala) as mini-games in MMORPGs, with comprehensive analysis of cryptocurrency integration and gambling regulations
+
+- [Spire: The City Must Fall - Universe Knowledge Base](topics/spire-the-city-must-fall-universe-knowledge-base.md) -
+  Comprehensive reference document covering Spire's dark fantasy setting, resistance mechanics, stress/fallout system, character classes, factions, themes, and design lessons applicable to BlueMarble
 
 ## Notes
 
@@ -92,6 +105,21 @@ Bibliography, reading lists, and raw notes from external sources.
   [Content Design Index](game-design/step-1-foundation/content-design/README.md) for navigation.
 - [Game Design Sources](game-design/game-sources.md) - Curated collection of game design, research, theory,
   and gamification sources
+- [From Inspiration to Design Document](game-design/step-1-foundation/from-inspiration-to-design-document.md) - 
+  Comprehensive guide on the game design process from inspiration to formal documentation, covering concept development,
+  building game building blocks, and creating effective design documents
+- [Narrative Inspiration: Sci-Fi Mining World](game-design/step-1-foundation/narrative-inspiration-sci-fi-mining-world.md) - 
+  Science fiction narrative framework without magic, featuring multi-species mining colony, clone generation, controlled
+  reproduction, and resource extraction under superior race oversight
+
+## Market Research
+
+Market analysis, competitive research, and industry trends.
+
+- [Market Research](market-research/) - Market analysis and competitive landscape
+- [Market Research Overview](market-research/market-research.md) - Competitive analysis and market positioning
+- [Game Development Repositories](market-research/game_dev_repos.md) - Analysis of game development repositories and resources
+- [Voxel Games Sources](market-research/voxel_games_sources.md) - Research on voxel-based games and technologies
 
 ## Existing Research Areas
 
@@ -100,6 +128,7 @@ For comprehensive research areas, see:
 - [Spatial Data Storage](spatial-data-storage/) - Spatial data storage strategies
 - [Game Design](game-design/) - Game design research and analysis
 - [GPT Research](gpt-research/) - Research from AI conversations
+- [Market Research](market-research/) - Market analysis and competitive landscape
 
 ## Contributing
 
