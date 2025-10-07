@@ -53,32 +53,39 @@ Individual deep-dive analyses of Lovecraft's most influential works:
    - Great Race of Yith, time travel through mind projection
    - Identity loss and temporal horror
 
-9. **[Secondary Works Collection](lovecraft-secondary-works.md)**
-   - The Rats in the Walls, The Music of Erich Zann, Pickman's Model
-   - The Thing on the Doorstep, Herbert West–Reanimator
-   - Brief analyses of important supporting works
+9. **[The Whisperer in Darkness](lovecraft-whisperer-in-darkness.md)** (1931)
+   - Mi-Go (Fungi from Yuggoth), brain cylinders, Vermont wilderness
+   - Epistolary format, extraterrestrial horror, body horror
+
+10. **[The Dreams in the Witch House](lovecraft-dreams-witch-house.md)** (1933)
+    - Non-Euclidean geometry, Nyarlathotep, mathematics and witchcraft
+    - Dream reality, dimensional travel, Brown Jenkin
+
+11. **[The Shadow Out of Time](lovecraft-shadow-out-of-time.md)** (1936)
+    - Great Race of Yith, time travel through mind projection
+    - Identity loss, temporal horror, Australian desert ruins
 
 ### Thematic and Analytical Documents
 
-10. **[Core Themes and Philosophy](lovecraft-themes-philosophy.md)**
+12. **[Core Themes and Philosophy](lovecraft-themes-philosophy.md)**
     - Cosmic horror (cosmicism) and humanity's insignificance
     - Forbidden knowledge as narrative driver
     - Madness, isolation, hereditary taint
     - Time, antiquity, and reality distortion
 
-11. **[Mythos Entities and Creatures](lovecraft-entities-creatures.md)**
+13. **[Mythos Entities and Creatures](lovecraft-entities-creatures.md)**
     - Great Old Ones (Cthulhu, Yog-Sothoth, Nyarlathotep, Shub-Niggurath)
     - Outer Gods (Azathoth)
     - Alien races (Deep Ones, Elder Things, Mi-Go, Great Race of Yith, Shoggoths)
     - Lesser entities (ghouls, night-gaunts)
 
-12. **[Iconic Locations and Forbidden Texts](lovecraft-locations-texts.md)**
+14. **[Iconic Locations and Forbidden Texts](lovecraft-locations-texts.md)**
     - Arkham, Innsmouth, Dunwich, Miskatonic University
     - R'lyeh, the Dreamlands
     - Necronomicon, Pnakotic Manuscripts, Book of Eibon
     - Other grimoires and artifacts
 
-13. **[Stylistic Techniques and Writing Methods](lovecraft-writing-techniques.md)**
+15. **[Stylistic Techniques and Writing Methods](lovecraft-writing-techniques.md)**
     - Unreliable narration and frame stories
     - Vague and suggestive descriptions
     - Mythological layering and worldbuilding
@@ -87,19 +94,19 @@ Individual deep-dive analyses of Lovecraft's most influential works:
 
 ### Modern Context and Applications
 
-14. **[Modern Interpretations and Adaptations](lovecraft-modern-interpretations.md)**
+16. **[Modern Interpretations and Adaptations](lovecraft-modern-interpretations.md)**
     - Contemporary reinterpretations (Lovecraft Country, The Ballad of Black Tom)
     - Gaming adaptations (Call of Cthulhu RPG, Bloodborne, Arkham Horror)
     - Film, television, and graphic novel treatments
     - Modern mythos creators and critical analysis
 
-15. **[Public Domain Status and Licensing](lovecraft-public-domain-licensing.md)**
+17. **[Public Domain Status and Licensing](lovecraft-public-domain-licensing.md)**
     - Comprehensive public domain analysis (pre-1928 vs. 1928-1937)
     - Safe use recommendations for game development
     - Copyright considerations and best practices
     - International status overview
 
-16. **[Game Design Applications](lovecraft-game-design-applications.md)**
+18. **[Game Design Applications](lovecraft-game-design-applications.md)**
     - Worldbuilding techniques using Lovecraftian elements
     - Game mechanics inspiration (sanity, investigation, horror escalation)
     - Quest and story design patterns
