@@ -750,11 +750,11 @@ systems that can handle many simultaneous effects in an MMORPG environment.
 
 ### Batch 1 (Sources 1-4)
 
-- [ ] Source 1 (Procedural Generation Book) - 8-12h
-- [ ] Source 2 (Developing Online Games) - 10-12h
-- [ ] Source 3 (Microservices) - 7-9h
-- [ ] Source 4 (Kubernetes) - 6-8h
-- [ ] Batch 1 summary written
+- [x] Source 1 (Procedural Generation Book) - EXISTING: `game-dev-analysis-procedural-generation-in-game-design.md` (1444 lines)
+- [x] Source 2 (Developing Online Games) - EXISTING: `game-dev-analysis-developing-online-games-an-insiders-guide.md` (886 lines)
+- [x] Source 3 (Microservices) - NEW: `game-dev-analysis-microservices-game-backends.md` (1056 lines)
+- [x] Source 4 (Kubernetes) - NEW: `game-dev-analysis-kubernetes-game-servers.md` (1177 lines)
+- [x] Batch 1 summary written: `research-assignment-phase-2-group-02-batch-1-summary.md`
 - [ ] Waiting for "next" comment
 
 ### Batch 2 (Sources 5-8)
