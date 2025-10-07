@@ -16,6 +16,10 @@ This directory contains formal references, summaries, and literature reviews for
 ## Research Management
 
 1. [master-research-queue.md](master-research-queue.md) - Master tracking document for all research sources and priorities
+2. [phase-1-research-note.md](phase-1-research-note.md) - Phase 1 organization: 68 topics across 40 parallel groups
+3. [research-assignment-groups-overview.md](research-assignment-groups-overview.md) - Overview of all 40 assignment groups
+4. [copilot-research-instructions.md](copilot-research-instructions.md) - Universal instructions for Copilot workers processing research assignments
+5. [research-compliance-validation-guide.md](research-compliance-validation-guide.md) - Validation guide for ensuring sub-issues and PRs respect assignment file requirements
 
 ## Content Extraction Guides
 
@@ -29,10 +33,6 @@ Step-by-step guides for extracting actionable content from prioritized survival 
 6. [survival-content-extraction-06-medical-textbooks.md](survival-content-extraction-06-medical-textbooks.md) - Medical Textbooks for healthcare systems and pharmaceutical production
 7. [survival-content-extraction-07-encyclopedia-collections.md](survival-content-extraction-07-encyclopedia-collections.md) - Encyclopedia Collections for knowledge validation and gap filling
 9. [survival-content-extraction-09-cd3wd-collection.md](survival-content-extraction-09-cd3wd-collection.md) - CD3WD Collection for civilization rebuilding mechanics
-
-## Research Management
-
-1. [master-research-queue.md](master-research-queue.md) - Master tracking document for all research sources and priorities
 
 ## Game Design Analysis
 
@@ -51,6 +51,9 @@ Analysis documents examining game design patterns and development resources:
 11. [game-dev-analysis-the-sims-and-gaming-women-phenomenon.md](game-dev-analysis-the-sims-and-gaming-women-phenomenon.md) - The Sims franchise and the gaming woman phenomenon: gender, casual gaming, social simulation, and player demographics
 12. [game-dev-research-gender-spatial-planning-vs-combat-preferences.md](game-dev-research-gender-spatial-planning-vs-combat-preferences.md) - Research on gender differences in spatial planning (settlement building, city layout) versus combat aiming preferences in gaming
 13. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
+12. [game-dev-analysis-genre-appeal-women-players.md](game-dev-analysis-genre-appeal-women-players.md) - Comparative analysis of Women Players across RPG, MMORPG, and Life Simulation genres with BlueMarble design recommendations
+13. [game-design-analysis-larp-combat-systems.md](game-design-analysis-larp-combat-systems.md) - LARP Combat Systems analysis covering hit point systems, location-based damage, call-based mechanics, stamina resources, and combat routines applicable to BlueMarble
+14. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
 
 ## Guidelines
 

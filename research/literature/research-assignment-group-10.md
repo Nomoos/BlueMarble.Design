@@ -125,8 +125,8 @@ Each analysis document should include:
 
 Track progress using this checklist:
 
-- [ ] Specialized Collections (Deep Web Sources) (Medium)
-- [ ] A Game Design Vocabulary (Medium)
+- [x] Specialized Collections (Deep Web Sources) (Medium) - ✅ Complete (2025-01-15)
+- [x] A Game Design Vocabulary (Medium) - ✅ Complete (2025-01-15)
 
 ---
 
@@ -154,6 +154,171 @@ Add discovered sources below this line:
 ---
 
 <!-- Discovery entries go here -->
+
+**Source Name:** "I Have No Words & I Must Design" by Greg Costikyan (2002)  
+**Discovered From:** A Game Design Vocabulary research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Seminal paper on the need for critical vocabulary in game design discourse. Directly addresses the challenges of communicating design concepts without standardized terminology. Highly relevant for establishing design communication standards in BlueMarble.  
+**Estimated Effort:** 2-3 hours  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-costikyan-vocabulary.md`
+
+**Source Name:** Game Design Patterns Project (gamedesignpatterns.org)  
+**Discovered From:** A Game Design Vocabulary research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Community-driven effort to catalog and standardize game design patterns with consistent vocabulary. Valuable for developing pattern language for BlueMarble's geological and survival systems.  
+**Estimated Effort:** 4-5 hours  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-design-patterns-project.md`
+
+**Source Name:** Designer Notes Podcast by Soren Johnson  
+**Discovered From:** A Game Design Vocabulary research  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Industry interviews discussing design vocabulary in practice. Provides real-world examples of how professional designers communicate complex concepts. Useful for understanding practical application of design terminology.  
+**Estimated Effort:** 6-8 hours (selective episodes)
+
+**Source Name:** "Games without Frontiers: Theories and Methods for Game Studies and Design" by Aki Järvinen (2008)  
+**Discovered From:** A Game Design Vocabulary research  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Academic perspective on game design vocabulary and methodology. Bridges academic research with practical design communication, valuable for establishing theoretical foundation.  
+**Estimated Effort:** 5-6 hours  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-jarvinen-games-without-frontiers.md`
+
+**Source Name:** IGDA Game Design SIG Curriculum Framework  
+**Discovered From:** A Game Design Vocabulary research  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Educational standards for game design vocabulary. Useful for establishing baseline terminology for team onboarding and documentation standards in BlueMarble project.  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** "Uncertainty in Games" by Greg Costikyan (2013)  
+**Discovered From:** Costikyan "I Have No Words & I Must Design" analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Book-length expansion of design vocabulary concepts, specifically focusing on information states and decision-making. Directly relevant to BlueMarble's geological prediction systems where players make decisions under uncertainty.  
+**Estimated Effort:** 8-10 hours  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-costikyan-uncertainty.md`
+
+**Source Name:** "Cybertext: Perspectives on Ergodic Literature" by Espen Aarseth (1997)  
+**Discovered From:** Costikyan "I Have No Words & I Must Design" analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Academic foundation for interactive narrative vocabulary. Relevant for understanding player agency in BlueMarble's discovery-driven narrative where players uncover geological history through exploration.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** "Patterns in Game Design" by Staffan Björk & Jussi Holopainen (2005)  
+**Discovered From:** Game Design Patterns Project analysis  
+**Priority:** High  
+**Category:** GameDev-Design  
+**Rationale:** Comprehensive academic treatment of game design patterns with extensive catalog and cross-referencing. Direct predecessor and complement to Game Design Patterns Project. Highly relevant for establishing BlueMarble pattern library with rigorous theoretical foundation.  
+**Estimated Effort:** 10-12 hours  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-bjork-holopainen-patterns.md`
+
+**Source Name:** "Design Patterns in FPS Levels" by Hullett & Whitehead (2010)  
+**Discovered From:** Game Design Patterns Project analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Empirical pattern identification methodology applicable to geological environment design. While FPS-focused, the spatial pattern analysis approach could inform BlueMarble terrain and exploration space design patterns.  
+**Estimated Effort:** 3-4 hours
+
+**Source Name:** "Game Design Reader: A Rules of Play Anthology" edited by Katie Salen & Eric Zimmerman (2007)  
+**Discovered From:** Björk & Holopainen "Patterns in Game Design" analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Anthology includes Björk's overview of game design patterns along with other foundational game design texts. Comprehensive resource for design theory education relevant for establishing theoretical foundation for BlueMarble design discussions.  
+**Estimated Effort:** 12-15 hours (selective reading)  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-game-design-reader.md`
+
+**Source Name:** "The Encyclopedia of Mineralogy" edited by Keith Frye (1981)  
+**Discovered From:** Specialized Collections research  
+**Priority:** Medium  
+**Category:** Survival-Technical  
+**Rationale:** Comprehensive reference on mineral properties, identification, and occurrence. Essential for creating accurate mineral simulation systems with detailed technical specifications for hundreds of minerals.  
+**Estimated Effort:** 8-10 hours (selective reading)  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `survival-content-extraction-encyclopedia-mineralogy.md`
+
+**Source Name:** Mindat.org Mineral Database  
+**Discovered From:** Specialized Collections research  
+**Priority:** High  
+**Category:** Survival-Technical  
+**Rationale:** Most comprehensive online mineral database with 50,000+ minerals documented. Includes locality data, specimen photos, and technical specifications. Essential reference for realistic mineral distribution and properties in BlueMarble.  
+**Estimated Effort:** 5-6 hours (systematic review)  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `survival-content-extraction-mindat-database.md`
+
+**Source Name:** "Thinking, Fast and Slow" by Daniel Kahneman (2011)  
+**Discovered From:** Costikyan "Uncertainty in Games" analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Nobel Prize-winning research on decision-making under uncertainty. Highly relevant for understanding how players actually make decisions in BlueMarble's uncertain geological systems. Covers systematic biases, heuristics, and probability judgment that should inform UI design.  
+**Estimated Effort:** 10-12 hours (selective reading)  
+**Status:** ✅ Complete (2025-01-15)  
+**Document:** `game-dev-analysis-kahneman-thinking-fast-slow.md`
+
+**Source Name:** "The Signal and the Noise" by Nate Silver (2012)  
+**Discovered From:** Costikyan "Uncertainty in Games" analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Practical guide to prediction and managing uncertainty in complex systems. Relevant for implementing player prediction systems and statistical literacy features in BlueMarble. Accessible treatment of Bayesian thinking.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** "Homo Ludens" by Johan Huizinga (1938) - Full text  
+**Discovered From:** Game Design Reader anthology analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Foundational play theory (anthology includes excerpt only). Establishes magic circle concept and play as separate from ordinary life. Relevant to BlueMarble's "playful science" approach where geological investigation becomes engaging play activity.  
+**Estimated Effort:** 8-10 hours (selective reading, classic dense philosophical text)
+
+**Source Name:** "Man, Play, and Games" by Roger Caillois (1961) - Full text  
+**Discovered From:** Game Design Reader anthology analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Full exploration of game classification (anthology includes classification chapter only). Four categories (agon/competition, alea/chance, mimicry/simulation, ilinx/vertigo) directly applicable to BlueMarble's simulation and chance elements.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** "The Grasshopper: Games, Life and Utopia" by Bernard Suits (1978) - Full text  
+**Discovered From:** Game Design Reader anthology analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Philosophical exploration of game definition beyond anthology excerpt. "Voluntary attempt to overcome unnecessary obstacles" concept validates BlueMarble's use of constraints to create interesting problems. Less practically applicable than other sources.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** "Half-Real" by Jesper Juul (2005) - Full book  
+**Discovered From:** Game Design Reader anthology analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Contemporary game theory exploring fiction/rules interaction beyond anthology excerpt. Relevant for BlueMarble's narrative-simulation balance where geological history discovery emerges from simulation interaction.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** "Judgment Under Uncertainty: Heuristics and Biases" (1982)  
+**Discovered From:** Kahneman "Thinking, Fast and Slow" analysis  
+**Priority:** Medium  
+**Category:** GameDev-Design  
+**Rationale:** Anthology of foundational research papers on cognitive biases. Original publications that Kahneman's book summarizes. More technical and detailed treatment of specific biases relevant to BlueMarble's decision-making systems.  
+**Estimated Effort:** 8-10 hours
+
+**Source Name:** "Nudge: Improving Decisions About Health, Wealth, and Happiness" by Thaler & Sunstein (2008)  
+**Discovered From:** Kahneman "Thinking, Fast and Slow" analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Application of behavioral economics to "choice architecture" - how presentation of options influences decisions. Relevant for designing BlueMarble interfaces that guide players toward better decisions while preserving agency.  
+**Estimated Effort:** 6-8 hours
+
+**Source Name:** "Predictably Irrational" by Dan Ariely (2008)  
+**Discovered From:** Kahneman "Thinking, Fast and Slow" analysis  
+**Priority:** Low  
+**Category:** GameDev-Design  
+**Rationale:** Accessible treatment of behavioral economics focused on consumer decisions and market psychology. Relevant for BlueMarble's economic simulation (mineral trading, resource valuation).  
+**Estimated Effort:** 5-6 hours
 
 ---
 

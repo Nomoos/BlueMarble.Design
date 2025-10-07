@@ -364,5 +364,5 @@ This document follows academic citation practices while maintaining accessibilit
 - ✅ 20 technical sources collected (exceeds 10 minimum)
 - ✅ Each source includes title, author, year, summary, and link
 - ✅ Organized into 4 required categories
-- ✅ Saved in `docs/research/voxel_games_sources.md`
+- ✅ Saved in `research/market-research/voxel_games_sources.md`
 - ✅ Includes actionable takeaways for BlueMarble implementation
