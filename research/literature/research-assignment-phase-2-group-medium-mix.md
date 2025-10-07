@@ -396,8 +396,8 @@ After each batch completion, create a summary document that includes:
 - [x] Batch 1 summary written
 - [x] Waiting for "next" comment
 
-### Batch 2 (Sources 5-8)
-- [ ] Source 5: Advanced Survival Mechanics reviewed and documented
+### Batch 2 (Sources 5-8) - In Progress
+- [x] Source 5: Advanced Survival Mechanics reviewed and documented
 - [ ] Source 6: Realistic Weather Simulation reviewed and documented
 - [ ] Source 7: Agriculture and Farming Systems reviewed and documented
 - [ ] Source 8: Crafting System Design reviewed and documented
