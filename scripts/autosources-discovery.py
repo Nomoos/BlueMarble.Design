@@ -129,19 +129,28 @@ class SourceDiscovery:
         for match in re.finditer(section_pattern, content, re.DOTALL | re.IGNORECASE):
             section_content = match.group(1)
             
-            # Extract source entries
-            source_pattern = r'[-\*]\s+\*\*(.+?)\*\*\s*[:\-]?\s*(.+?)(?=\n[-\*]|\n\n|\Z)'
-            for source_match in re.finditer(source_pattern, section_content, re.DOTALL):
-                title = source_match.group(1).strip()
-                description = source_match.group(2).strip()
-                
-                self._add_discovered_source(
-                    title=title,
-                    description=description,
-                    source_document=doc_name,
-                    priority=self._infer_priority(description),
-                    category=self._infer_category(description)
-                )
+            # Split section content into lines and process each source entry
+            # Source entries are expected to start with '-' or '*'
+            entry_pattern = re.compile(r'^\s*[-\*]\s+(.*)', re.MULTILINE)
+            for entry_match in entry_pattern.finditer(section_content):
+                entry_line = entry_match.group(1).strip()
+                # Extract title and description from the entry line
+                # Expected format: **Title**: Description
+                title_desc_pattern = re.compile(r'\*\*(.+?)\*\*\s*[:\-]?\s*(.*)')
+                td_match = title_desc_pattern.match(entry_line)
+                if td_match:
+                    title = td_match.group(1).strip()
+                    description = td_match.group(2).strip()
+                    self._add_discovered_source(
+                        title=title,
+                        description=description,
+                        source_document=doc_name,
+                        priority=self._infer_priority(description),
+                        category=self._infer_category(description)
+                    )
+                else:
+                    # If the entry doesn't match the expected format, skip or log
+                    # print(f"Unrecognized source entry format in {doc_name}: {entry_line}")
     
     def _add_source_reference(self, doc_name: str, reference: str, pattern_type: str):
         """Add a source reference to the tracking system"""
