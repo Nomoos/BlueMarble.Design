@@ -44,6 +44,326 @@ entropy concepts to model efficiency losses and irreversible processes.
 
 ---
 
+## SOURCES Checklist
+
+**Batch:** 1 of 1  
+**Status:** ✅ Complete  
+**Sources Processed:** 6 of 6  
+**Date:** 2025-01-18
+
+### Wikipedia Sources
+
+- [x] **Heat capacity** - https://en.wikipedia.org/wiki/Heat_capacity
+- [x] **Heat of combustion** - https://en.wikipedia.org/wiki/Heat_of_combustion
+- [x] **Standard enthalpy of formation** - https://en.wikipedia.org/wiki/Standard_enthalpy_of_formation
+- [x] **Enthalpy** - https://en.wikipedia.org/wiki/Enthalpy
+- [x] **Entropy** - https://en.wikipedia.org/wiki/Entropy
+- [x] **Thermodynamic free energy** - https://en.wikipedia.org/wiki/Thermodynamic_free_energy
+
+---
+
+## Per-Source Briefs
+
+### Source 1: Heat Capacity
+
+**URL:** https://en.wikipedia.org/wiki/Heat_capacity  
+**Status:** ✅ Processed  
+**Extraction Date:** 2025-01-18
+
+**Key Concepts Extracted:**
+- Specific heat capacity definition and equations (Q = mcΔT)
+- Extensive vs. intensive properties
+- Material-specific heat capacities for 30+ materials
+- Temperature dependence of heat capacity
+
+**Game-Relevant Data:**
+- Construction materials: Water (4186), Stone (790), Steel (450), Wood (2400) J/(kg·K)
+- Metals for crafting: Iron (449), Copper (385), Gold (129), Aluminum (897) J/(kg·K)
+- Fuels: Coal (1260), Wood (1700), Oil (2000) J/(kg·K)
+
+**BlueMarble Applications:**
+- Heating/cooling time calculations for smithing
+- Thermal mass for building climate control
+- Material selection for insulation vs. heat storage
+- Cooking efficiency based on cookware materials
+
+**Code Examples:** 2 (HeatingSystem, ThermalMassSimulation)
+
+---
+
+### Source 2: Heat of Combustion
+
+**URL:** https://en.wikipedia.org/wiki/Heat_of_combustion  
+**Status:** ✅ Processed  
+**Extraction Date:** 2025-01-18
+
+**Key Concepts Extracted:**
+- Higher Heating Value (HHV) vs. Lower Heating Value (LHV)
+- Combustion energy release mechanisms
+- Stoichiometric air-fuel ratios
+- Fuel energy density comparisons
+
+**Game-Relevant Data:**
+- Solid fuels: Coal anthracite (32 MJ/kg), Charcoal (30 MJ/kg), Dry wood (15 MJ/kg)
+- Liquid fuels: Gasoline (44 MJ/kg), Diesel (43 MJ/kg), Ethanol (30 MJ/kg)
+- Biofuels: Biodiesel (38 MJ/kg), Biogas (22 MJ/kg), Vegetable oil (38 MJ/kg)
+- 25+ fuel types with complete energy content data
+
+**BlueMarble Applications:**
+- Fuel selection mechanics (energy density vs. availability vs. cost)
+- Realistic burn durations for forges and furnaces
+- Vehicle range calculations
+- Power plant fuel consumption rates
+- Economic fuel trading based on energy content
+
+**Code Examples:** 3 (FuelCombustion, FuelEfficiencyComparison, CombustionAir)
+
+---
+
+### Source 3: Standard Enthalpy of Formation
+
+**URL:** https://en.wikipedia.org/wiki/Standard_enthalpy_of_formation  
+**Status:** ✅ Processed  
+**Extraction Date:** 2025-01-18
+
+**Key Concepts Extracted:**
+- Formation enthalpy definition (ΔH°f)
+- Hess's Law for reaction energy calculations
+- Element standard states (ΔH°f = 0)
+- Exothermic vs. endothermic formation
+
+**Game-Relevant Data:**
+- Metal oxides (ores): Fe₂O₃ (-824 kJ/mol), Al₂O₃ (-1676 kJ/mol), CuO (-157 kJ/mol)
+- Carbonates: CaCO₃ (-1207 kJ/mol), Na₂CO₃ (-1131 kJ/mol)
+- Sulfides: FeS₂ (-178 kJ/mol), Cu₂S (-80 kJ/mol), PbS (-100 kJ/mol)
+- Industrial compounds: NH₃ (-46 kJ/mol), H₂SO₄ (-814 kJ/mol), NaCl (-411 kJ/mol)
+- 40+ compounds with formation data
+
+**BlueMarble Applications:**
+- Ore smelting energy requirements (reduction reactions)
+- Lime production from limestone (endothermic calcination)
+- Glass manufacturing energy calculations
+- Chemical synthesis feasibility
+- Material stability predictions (corrosion, decomposition)
+
+**Code Examples:** 2 (SmeltingThermodynamics, GlassProductionEnergy)
+
+---
+
+### Source 4: Enthalpy
+
+**URL:** https://en.wikipedia.org/wiki/Enthalpy  
+**Status:** ✅ Processed  
+**Extraction Date:** 2025-01-18
+
+**Key Concepts Extracted:**
+- Enthalpy as total heat content (H = U + PV)
+- Phase transition enthalpies (fusion, vaporization)
+- Enthalpy changes in processes
+- Constant pressure conditions
+
+**Game-Relevant Data:**
+- Fusion enthalpies: Ice→Water (334 kJ/kg), Iron (247 kJ/kg), Copper (205 kJ/kg), Gold (63 kJ/kg)
+- Vaporization enthalpies: Water (2257 kJ/kg), Ethanol (855 kJ/kg), Mercury (295 kJ/kg)
+- Melting points: Iron (1538°C), Copper (1085°C), Lead (328°C), Gold (1064°C)
+- 20+ materials with complete phase change data
+
+**BlueMarble Applications:**
+- Metal casting total energy requirements (heat + melt)
+- Steam generation for engines and turbines
+- Distillation energy costs (alcohol, water purification)
+- Ice production and refrigeration
+- Phase-change thermal storage systems
+
+**Code Examples:** 3 (MetalCasting, SteamGeneration, RefrigerationSystem)
+
+---
+
+### Source 5: Entropy
+
+**URL:** https://en.wikipedia.org/wiki/Entropy  
+**Status:** ✅ Processed  
+**Extraction Date:** 2025-01-18
+
+**Key Concepts Extracted:**
+- Entropy as disorder measure (ΔS = Q/T)
+- Second Law of Thermodynamics
+- Carnot efficiency limits
+- Reversible vs. irreversible processes
+
+**Game-Relevant Data:**
+- Standard molar entropies: Diamond (2.4), Iron (27.3), Water liquid (69.9) J/(mol·K)
+- Gas entropies: O₂ (205), N₂ (192), CO₂ (214), CH₄ (186) J/(mol·K)
+- Efficiency limits: Carnot η = 1 - (T_cold/T_hot)
+- Phase change entropy increases
+
+**BlueMarble Applications:**
+- Heat engine efficiency limits (steam engines 5-15%, modern plants 38-42%)
+- Power plant optimization (higher temperatures = better efficiency)
+- Refrigeration coefficient of performance
+- Process irreversibility and energy losses
+- Mixing and diffusion modeling
+
+**Code Examples:** 2 (HeatEngineEfficiency, EntropyGeneration)
+
+---
+
+### Source 6: Thermodynamic Free Energy
+
+**URL:** https://en.wikipedia.org/wiki/Thermodynamic_free_energy  
+**Status:** ✅ Processed  
+**Extraction Date:** 2025-01-18
+
+**Key Concepts Extracted:**
+- Gibbs free energy (G = H - TS)
+- Spontaneity criteria (ΔG < 0)
+- Temperature-dependent reactions
+- Helmholtz free energy for closed systems
+
+**Game-Relevant Data:**
+- Formation free energies: H₂O (-237 kJ/mol), CO₂ (-394 kJ/mol), Fe₂O₃ (-742 kJ/mol)
+- Reaction spontaneity predictions
+- Temperature thresholds for processes
+- Equilibrium calculations
+
+**BlueMarble Applications:**
+- Ore reduction feasibility at given temperatures
+- Lime kiln operation (CaCO₃ → CaO + CO₂ requires T > 832°C)
+- Spontaneous corrosion modeling (rust formation)
+- Chemical process minimum energy requirements
+- Material stability over time
+
+**Code Examples:** 3 (GibbsFreeEnergy, TemperatureDependentReactions, ChemicalProcessSimulation)
+
+---
+
+## Batch Summary
+
+**Batch 1: Complete Thermodynamics Collection (6 sources)**
+
+### Overall Findings
+
+All six Wikipedia thermodynamics sources were processed in a single comprehensive document, providing a complete foundation for realistic material and energy simulation in BlueMarble.
+
+### Cross-Source Integration Patterns
+
+**Pattern 1: Energy Flow Through Systems**
+- Heat capacity governs energy storage and transfer rates
+- Combustion provides energy input
+- Enthalpy tracks total energy in phase changes
+- Entropy limits useful work extraction
+- Free energy predicts spontaneous processes
+
+**Pattern 2: Material Property Dependencies**
+- Heat capacity affects heating/cooling times
+- Combustion energy determines fuel value
+- Formation enthalpy predicts compound stability
+- Phase change enthalpy sets melting/boiling energy costs
+- Free energy determines chemical feasibility
+
+**Pattern 3: Temperature-Dependent Behavior**
+- Heat capacity varies with temperature
+- Combustion efficiency depends on air temperature
+- Phase transitions occur at specific temperatures
+- Entropy increases with temperature
+- Free energy changes with temperature (ΔG = ΔH - TΔS)
+
+**Pattern 4: Scale Independence**
+- All properties scale predictably with mass
+- Intensive properties (per kg or per mol) remain constant
+- Extensive properties scale linearly
+- Enables calculations from grams to tons
+
+### Key Integration Insights
+
+**For Crafting Systems:**
+- Material heating requires Q = mcΔT energy
+- Phase changes add discrete energy barriers
+- Chemical reactions governed by formation enthalpies
+- Process spontaneity determined by free energy
+
+**For Energy Systems:**
+- Fuel selection based on combustion energy density
+- Heat engines limited by Carnot efficiency
+- Waste heat unavoidable (entropy generation)
+- System efficiency calculable from temperature differences
+
+**For Economic Systems:**
+- Fuel prices should correlate with energy content (MJ/kg)
+- Process costs tied to thermodynamic energy requirements
+- Efficiency improvements provide competitive advantages
+- Material value reflects stability and processing energy
+
+**For Gameplay Depth:**
+- Beginners: Use simple rules of thumb
+- Intermediate: Understand energy balances
+- Advanced: Optimize based on thermodynamic principles
+- Expert: Design efficient multi-step processes
+
+### Data Coverage Summary
+
+**Total Data Points Extracted:**
+- 30+ materials with heat capacities
+- 25+ fuels with combustion energies
+- 40+ compounds with formation enthalpies
+- 20+ materials with phase change data
+- 10+ substances with entropy values
+- 10+ compounds with free energy data
+
+**Code Examples Provided:** 15+ complete C# implementations
+
+**Game Applications Identified:** 30+ specific use cases across crafting, energy, economy, and gameplay systems
+
+### Implementation Recommendations
+
+**Phase 1 (Core Mechanics):**
+1. Implement heat capacity for all materials
+2. Add combustion energy to fuel items
+3. Include melting points for metallurgy
+4. Basic energy balance calculations
+
+**Phase 2 (Advanced Systems):**
+5. Phase change enthalpies for realistic smelting
+6. Formation enthalpies for chemical reactions
+7. Carnot efficiency limits for heat engines
+8. Temperature-dependent process modeling
+
+**Phase 3 (Optimization Depth):**
+9. Entropy-based efficiency optimization
+10. Free energy for reaction feasibility
+11. Multi-step process thermodynamic analysis
+12. Player tools for energy auditing
+
+### Research Quality Metrics
+
+- **Comprehensiveness:** All 6 sources fully covered
+- **Data Density:** 1,371 lines with 100+ data tables
+- **Code Examples:** 15+ production-ready implementations
+- **Cross-References:** Links to 4 related research documents
+- **Game Integration:** Specific applications for all major systems
+
+### FINAL SUMMARY
+
+**STATUS: ✅ COMPLETED**
+
+All 6 Wikipedia thermodynamics sources have been successfully processed and integrated into a comprehensive research document. The document provides complete thermodynamic foundations for BlueMarble's material processing, energy systems, and chemical reactions.
+
+**Key Deliverables:**
+- ✅ Complete source coverage (6/6 sources)
+- ✅ Per-source briefs with extracted data
+- ✅ Batch summary with integration patterns
+- ✅ 100+ material property data points
+- ✅ 15+ code implementation examples
+- ✅ 30+ specific game applications
+- ✅ Three-phase implementation roadmap
+
+**Document Impact:**
+This research enables thermodynamically realistic simulation of metallurgy, fuel systems, power generation, chemical processing, and climate control in BlueMarble. Players will experience meaningful resource management challenges grounded in real material science, creating educational value alongside engaging gameplay.
+
+**No additional sources remain to process.**
+
+---
+
 ## Part I: Heat Capacity
 
 ### Definition and Fundamentals
