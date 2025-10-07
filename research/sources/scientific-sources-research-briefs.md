@@ -4,8 +4,8 @@ Processing scientific reference sources for BlueMarble game systems integration.
 
 **Status:** Processing in batches of 4  
 **Total Sources:** 21  
-**Processed:** 12  
-**Remaining:** 9
+**Processed:** 16  
+**Remaining:** 5
 
 ---
 
@@ -444,13 +444,158 @@ Batch 3 completes the engineering materials focus and begins chemistry fundament
 
 ---
 
-## Batch 4: [To be processed]
+## Batch 4: Fluid Dynamics and Gas Laws (Sources 13-16)
 
-**Remaining Sources (9):**
-- Viscosity (Physics)
-- Navier–Stokes equations (Physics)
-- Gay-Lussac's law (Physics)
-- Boyle's law (Physics)
+### Source 13: Viscosity
+**URL:** https://en.wikipedia.org/wiki/Viscosity
+
+**Key Facts:**
+- Viscosity: measure of fluid's resistance to flow (internal friction between fluid layers)
+- Units: Pa·s (Pascal-seconds) or poise; water at 20°C ≈ 1 mPa·s, honey ≈ 2000-10000 mPa·s
+- Temperature dependent: liquids become less viscous when heated, gases become more viscous
+- Dynamic viscosity (absolute) vs. kinematic viscosity (dynamic/density)
+- Newtonian fluids: constant viscosity (water, air); Non-Newtonian: variable viscosity (paint, blood, ketchup)
+- Critical for: fluid flow rates, mixing, lubrication, pouring behavior
+
+**Implications/Risks:**
+- Essential for realistic liquid behavior: pouring, mixing, flowing through pipes
+- Oil/lubrication mechanics: viscosity determines effectiveness
+- Cooking/brewing: viscosity affects mixing, heating, and timing
+- Performance trade-off: accurate viscosity simulation is computationally expensive
+- Player perception: may not notice subtle viscosity differences
+
+**Action Items:**
+- Implement fluid viscosity categories: thin (water), medium (oil), thick (honey), very thick (tar)
+- Add temperature effects: heating reduces viscosity for liquids
+- Create pouring mechanics: viscosity affects pour rate and droplet behavior
+- Design lubrication system: oils reduce friction in machines/tools
+- Implement mixing mechanics: high viscosity liquids mix slower
+- Add flow rate calculations: viscosity affects pipe throughput, pump efficiency
+- Create non-Newtonian fluids: special materials with unusual flow properties
+- Balance visual feedback: color-coded viscosity indicators, flow animations
+
+---
+
+### Source 14: Navier-Stokes Equations
+**URL:** https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations
+
+**Key Facts:**
+- Fundamental equations describing fluid motion: momentum conservation with viscosity
+- Governs: air flow, water currents, weather patterns, aerodynamics, hydraulics
+- Complexity: nonlinear partial differential equations, one of Millennium Prize Problems (unsolved in general case)
+- Simplified approximations used in practice: Euler equations (inviscid), Stokes flow (low Reynolds number)
+- Reynolds number: ratio of inertial to viscous forces, determines turbulent vs. laminar flow
+- Applications: weather forecasting, aircraft design, river modeling, blood flow
+
+**Implications/Risks:**
+- Extremely complex - full simulation impractical for games
+- Enables realistic atmospheric and water physics if simplified appropriately
+- Risk of over-engineering: simplified models provide sufficient realism
+- Opportunity for emergent behavior: wind patterns, currents, turbulence
+- Educational barrier: most players won't understand the underlying math
+
+**Action Items:**
+- Use simplified fluid approximations, NOT full Navier-Stokes solutions
+- Implement atmospheric circulation: wind patterns based on pressure gradients and Coriolis effect
+- Create ocean/river currents: flow based on terrain, temperature differences
+- Add Reynolds number categories: laminar flow (smooth), turbulent flow (chaotic)
+- Design aerodynamics basics: drag forces, lift for flying machines
+- Implement smoke/gas dispersion: realistic plume behavior for fires, pollution
+- Create weather system foundation: pressure systems drive wind and precipitation
+- Balance accuracy with performance: use grid-based approximations, not particle simulations
+- Add visual feedback: wind arrows, current indicators, smoke trails
+
+---
+
+### Source 15: Gay-Lussac's Law
+**URL:** https://en.wikipedia.org/wiki/Gay-Lussac%27s_law
+
+**Key Facts:**
+- Gas law: pressure of gas proportional to absolute temperature at constant volume (P ∝ T)
+- Formula: P₁/T₁ = P₂/T₂ (pressure and temperature ratios constant)
+- Practical meaning: heating sealed container increases pressure, cooling decreases pressure
+- Related to ideal gas law: PV = nRT (combines Boyle's, Charles's, and Gay-Lussac's laws)
+- Real-world applications: pressure cookers, steam engines, tire pressure changes, aerosol cans
+- Absolute temperature required: Kelvin scale (0 K = -273.15°C)
+
+**Implications/Risks:**
+- Foundation for pressure vessel mechanics: boilers, steam engines, pressure cookers
+- Explosion risk from overpressure: sealed heated containers can burst
+- Simple and intuitive: heating increases pressure, easily understood by players
+- Enables realistic industrial processes: steam power, pressure storage
+- Educational opportunity: teaches real physics through gameplay
+
+**Action Items:**
+- Implement pressure-temperature relationship for sealed containers
+- Create pressure vessel mechanics: boilers, pressure cookers, steam engines
+- Add safety mechanics: pressure relief valves, burst thresholds
+- Design explosion system: overpressure causes container failure
+- Implement temperature control challenges: maintain safe pressure ranges
+- Create steam power systems: boiler heats water → steam pressure → mechanical work
+- Add tire/wheel pressure: temperature affects vehicle performance
+- Design pressure-based crafting: autoclaves for sterilization, pressure sintering
+- Implement warning systems: visual indicators for dangerous pressure levels
+
+---
+
+### Source 16: Boyle's Law
+**URL:** https://en.wikipedia.org/wiki/Boyle%27s_law
+
+**Key Facts:**
+- Gas law: pressure inversely proportional to volume at constant temperature (P ∝ 1/V)
+- Formula: P₁V₁ = P₂V₂ (pressure-volume product constant)
+- Practical meaning: compressing gas increases pressure, expanding decreases pressure
+- Foundation for: pneumatics, hydraulics, pumps, syringes, diving physics
+- Combined with Gay-Lussac's law forms ideal gas law
+- Real gases deviate from ideal behavior at high pressure or low temperature
+
+**Implications/Risks:**
+- Essential for pneumatic and hydraulic systems
+- Diving mechanics: pressure increases with depth, affects air consumption
+- Pump and compressor design: volume changes create pressure
+- Balloon/bladder physics: expansion and contraction
+- Simple concept: compression increases pressure, intuitive for players
+
+**Action Items:**
+- Implement gas compression mechanics: pumps, compressors, bellows
+- Create pneumatic systems: air-powered tools and machines
+- Design diving mechanics: pressure increases with water depth, affects breath duration
+- Add balloon/bladder physics: inflation, expansion, popping thresholds
+- Implement vacuum systems: reducing pressure by expanding volume
+- Create pressure storage: compressed air tanks, pneumatic accumulators
+- Design piston engines: compression-expansion cycles for mechanical work
+- Add breathing mechanics: lung capacity, pressure differentials
+- Implement altitude effects: lower air pressure at high elevation
+
+---
+
+## Batch 4 Summary
+
+Batch 4 completes the physics/chemistry sources with comprehensive fluid dynamics and gas laws. **Viscosity** and **Navier-Stokes equations** provide the foundation for realistic liquid and atmospheric behavior, while **Gay-Lussac's law** and **Boyle's law** enable pressure-based mechanics for steam engines, pneumatics, and diving systems.
+
+**Cross-Source Insights:**
+- Viscosity and Navier-Stokes work together: viscosity is a parameter in the fluid equations
+- Gas laws (Gay-Lussac and Boyle) combine to form the ideal gas law: PV = nRT
+- All four sources enable industrial-age technology: steam power, hydraulics, pneumatics
+- Fluid dynamics connects to atmospheric science (next batch): weather, wind, currents
+- Simplified approximations sufficient: full Navier-Stokes not needed for game realism
+
+**Implementation Priority:**
+1. Gas laws for pressure systems (immediate: enables steam power and pneumatics)
+2. Basic viscosity categories (medium: enhances liquid realism)
+3. Simplified fluid flow (medium: wind and water currents)
+4. Advanced fluid dynamics (low: polish for dedicated realism enthusiasts)
+
+**Next Steps:**
+- Process Batch 5: Begin atmospheric science (6 remaining sources)
+- Complete all sources and create final summary
+- Integrate gas laws into crafting and industrial systems prototypes
+
+---
+
+## Batch 5: [To be processed]
+
+**Remaining Sources (5):**
 - Atmosphere (Atmospheric)
 - Magnetosphere (Atmospheric)
 - Solar wind (Atmospheric)

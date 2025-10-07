@@ -208,10 +208,10 @@ Curated reading list for BlueMarble research and development.
 **Physics and Chemistry:**
 - [x] **Surface tension** - Surface tension physics for liquid behavior simulation (Processed in Batch 3)
 - [x] **Redox** - Oxidation-reduction chemistry for crafting and metallurgy (Processed in Batch 3)
-- [ ] **Viscosity** - Viscosity properties for fluid simulation and crafting
-- [ ] **Navier–Stokes equations** - Fluid dynamics equations for atmospheric and water simulation
-- [ ] **Gay-Lussac's law** - Gas law for pressure-temperature relationships in crafting
-- [ ] **Boyle's law** - Gas law for pressure-volume relationships in systems
+- [x] **Viscosity** - Viscosity properties for fluid simulation and crafting (Processed in Batch 4)
+- [x] **Navier–Stokes equations** - Fluid dynamics equations for atmospheric and water simulation (Processed in Batch 4)
+- [x] **Gay-Lussac's law** - Gas law for pressure-temperature relationships in crafting (Processed in Batch 4)
+- [x] **Boyle's law** - Gas law for pressure-volume relationships in systems (Processed in Batch 4)
 
 **Atmospheric Science:**
 - [ ] **Atmosphere** - Atmospheric composition and structure for planetary simulation
