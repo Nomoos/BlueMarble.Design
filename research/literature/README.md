@@ -49,6 +49,8 @@ Analysis documents examining game design patterns and development resources:
 9. [game-dev-analysis-07-shadertoy.md](game-dev-analysis-07-shadertoy.md) - ShaderToy Platform shader prototyping and procedural generation techniques
 10. [game-dev-analysis-vfx-compositing.md](game-dev-analysis-vfx-compositing.md) - Visual Effects and Compositing techniques for MMORPG development
 11. [game-dev-analysis-the-sims-and-gaming-women-phenomenon.md](game-dev-analysis-the-sims-and-gaming-women-phenomenon.md) - The Sims franchise and the gaming woman phenomenon: gender, casual gaming, social simulation, and player demographics
+12. [game-dev-research-gender-spatial-planning-vs-combat-preferences.md](game-dev-research-gender-spatial-planning-vs-combat-preferences.md) - Research on gender differences in spatial planning (settlement building, city layout) versus combat aiming preferences in gaming
+13. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)
 12. [game-dev-analysis-genre-appeal-women-players.md](game-dev-analysis-genre-appeal-women-players.md) - Comparative analysis of Women Players across RPG, MMORPG, and Life Simulation genres with BlueMarble design recommendations
 13. [game-design-analysis-larp-combat-systems.md](game-design-analysis-larp-combat-systems.md) - LARP Combat Systems analysis covering hit point systems, location-based damage, call-based mechanics, stamina resources, and combat routines applicable to BlueMarble
 14. [online-game-dev-resources.md](online-game-dev-resources.md) - Comprehensive online resources catalog for RPG, MMORPG, and Top-Down game development (50+ sources, auto-growing)

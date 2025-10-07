@@ -92,6 +92,15 @@ Formal references, summaries, and literature reviews from external sources.
   Organized guide to 20+ game development books covering programming, design theory, multiplayer systems, 
   content creation, and development process with prioritized reading list and application strategies
 
+- [The Sims and Gaming Women Phenomenon](literature/game-dev-analysis-the-sims-and-gaming-women-phenomenon.md) - 
+  Analysis of The Sims franchise's revolutionary impact on gender demographics in gaming, examining why the game 
+  attracted 60-70% women players and lessons for inclusive game design
+
+- [Gender Differences in Spatial Planning vs Combat Preferences](literature/game-dev-research-gender-spatial-planning-vs-combat-preferences.md) - 
+  Comprehensive research examining whether women show stronger preferences for spatial planning mechanics (settlement 
+  building, city layout, resource arrangement) versus combat aiming, with academic research synthesis, cognitive 
+  studies analysis, and actionable design recommendations for BlueMarble MMORPG
+
 ## Sources
 
 Bibliography, reading lists, and raw notes from external sources.
