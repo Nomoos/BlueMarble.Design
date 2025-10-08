@@ -75,4 +75,5 @@ package/
 # Runner and CI/CD artifacts
 .runner/
 runner-*
-*.tar.gz
+*.tar.gzscripts/__pycache__/
+__pycache__/

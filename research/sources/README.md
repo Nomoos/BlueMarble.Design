@@ -411,6 +411,8 @@ Link sources to relevant documentation:
 - `research/literature/README.md` - Literature directory overview
 - `research/literature/*-analysis.md` - Individual source analyses
 - `research/literature/survival-content-extraction-*.md` - Extraction guides
+- `docs/source-attribution-guide.md` - **Source attribution standards and best practices**
+- `scripts/autosources-discovery-guide.md` - Source discovery tool documentation
 
 ---
 

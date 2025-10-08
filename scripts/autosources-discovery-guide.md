@@ -20,6 +20,8 @@ The **Automated Source Discovery Tool** (`autosources-discovery.py`) automatical
 - **Effort Estimation**: Estimates research effort based on content type
 - **Multiple Formats**: Outputs to Markdown, JSON, or YAML
 - **Deduplication**: Tracks sources mentioned in multiple documents
+- **Source Attribution Tracking**: Validates proper source attribution in research documents
+- **Compliance Reporting**: Identifies documents missing proper attribution
 
 ## Installation
 
@@ -239,6 +241,88 @@ categories = {
 4. **Track Sources**: Use the generated processing queue to track completion
 5. **Update Patterns**: Add new pattern recognitions as you discover common citation formats
 6. **Version Control**: Commit both the tool and generated discovery reports
+7. **Source Attribution**: Ensure all research documents have proper source attribution (see below)
+
+## Source Attribution Tracking
+
+The tool now includes **source attribution validation** to ensure all research documents properly credit their sources.
+
+### What is Checked
+
+For each document, the tool validates:
+- Presence of YAML frontmatter
+- `source:` field in frontmatter
+- `**Source:**` line in document body
+- `parent-research:` field for derived documents
+
+### Attribution Report
+
+The generated report includes a **Source Attribution Report** section with:
+- Total documents scanned
+- Documents with proper attribution
+- Documents missing attribution
+- Compliance rate percentage
+- Breakdown by attribution type (frontmatter, body, parent)
+
+### Example Attribution Report
+
+```markdown
+## Source Attribution Report
+
+**Documents Scanned:** 403
+**Properly Attributed:** 233
+**Missing Attribution:** 170
+
+### ⚠️ Documents Missing Source Attribution
+
+The following documents do not have proper source attribution:
+- document-name-1.md
+- document-name-2.md
+...
+
+### ✅ Attribution Compliance Summary
+
+- Compliance Rate: 57.8%
+- Documents with frontmatter source: 6
+- Documents with body source: 224
+- Documents with parent research: 8
+```
+
+### Fixing Missing Attributions
+
+For documents flagged as missing attribution:
+
+1. **Add to frontmatter:**
+   ```yaml
+   ---
+   source: Book Title by Author Name
+   ---
+   ```
+
+2. **Or add to document body:**
+   ```markdown
+   **Source:** Book Title by Author Name  
+   **Category:** Category  
+   ```
+
+3. **For derived documents:**
+   ```yaml
+   ---
+   parent-research: parent-document.md
+   ---
+   ```
+
+### Compliance Standards
+
+**Target Compliance Rate:** 90% or higher
+
+Documents requiring attribution:
+- All `game-dev-analysis-*.md` files
+- All `survival-content-extraction-*.md` files
+- All `discovered-source-*.md` files
+- Individual research analyses
+
+See the **[Source Attribution Guide](../docs/source-attribution-guide.md)** for complete documentation on proper source attribution standards and best practices.
 
 ## Workflow Integration
 
