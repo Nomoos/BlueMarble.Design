@@ -59,6 +59,11 @@ This directory contains comprehensive **technical implementation documentation**
 - [QA Test Plan Template](../templates/qa-test-plan.md) - Reusable template for feature testing
 - [Example: Spherical Planet QA Test Plan](./systems/qa-test-plan-spherical-planet.md) - Complete test plan with 242+ test cases
 
+### Research & Source Attribution
+- [Source Attribution Guide](./source-attribution-guide.md) - **Comprehensive guide** for proper source attribution in research
+- [Source Attribution Quick Reference](./source-attribution-quick-reference.md) - Quick commands and common use cases
+- [Example: Proper Attribution](./example-proper-attribution.md) - Template showing correct attribution format
+
 ## Documentation Standards
 
 All documents should follow these standards:
@@ -67,3 +72,4 @@ All documents should follow these standards:
 - Reference related documents and dependencies
 - Maintain version history and change logs
 - Include implementation guidelines where relevant
+- **Research documents must include proper source attribution** (see [Source Attribution Guide](./source-attribution-guide.md))
