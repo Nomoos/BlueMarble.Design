@@ -8,6 +8,56 @@ This directory contains utility scripts for maintaining documentation quality in
 
 ## Available Scripts
 
+### reddit-story-scraper.py
+
+**Reddit Story Mining and Collection Tool** - Mines player experiences, design insights, and community feedback from Reddit to support BlueMarble MMORPG research.
+
+**Quick Start:**
+```bash
+# Basic collection from r/MMORPG
+python3 scripts/reddit-story-scraper.py
+
+# Test mode (no network required)
+python3 scripts/reddit-story-scraper.py --test-mode --limit 10
+```
+
+**Features:**
+- Collect stories and discussions from any public subreddit
+- Filter by keywords, score, and timeframe
+- Multiple sorting options (hot, new, top, rising)
+- Automatic post categorization (game design, player experience, feedback, etc.)
+- Optional comment collection for deeper insights
+- Output in JSON or Markdown format
+- Test mode for offline development and testing
+
+**Usage Examples:**
+```bash
+# Collect top posts with specific keywords
+python3 scripts/reddit-story-scraper.py --keywords "economy,crafting,trading"
+
+# Get recent discussions with comments
+python3 scripts/reddit-story-scraper.py --sort hot --timeframe day --include-comments
+
+# Markdown report for manual analysis
+python3 scripts/reddit-story-scraper.py --format markdown --output research/reddit-insights.md
+
+# Multiple subreddits (run separately)
+python3 scripts/reddit-story-scraper.py --subreddit gamedesign --limit 50
+python3 scripts/reddit-story-scraper.py --subreddit truegaming --limit 50
+```
+
+**Output:** Auto-generated filename or custom path
+
+**Requirements:**
+- Python 3.7+
+- requests: `pip install requests` (included)
+
+**Documentation:** See `REDDIT_SCRAPER_README.md` for complete usage guide
+
+**Use Case:** Automate collection of player experiences and design insights from Reddit for research analysis
+
+---
+
 ### autosources-discovery.py
 
 **Automated Source Discovery Tool** - Automatically discovers research sources from existing research documents by scanning for citations, references, and "future research" sections.
