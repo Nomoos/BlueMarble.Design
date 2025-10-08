@@ -44,30 +44,7 @@ namespace BlueMarble.World
         /// <returns>The accessibility zone classification</returns>
         public static AccessibilityZone DetermineAccessibilityZone(long z)
         {
-            long altitude = z - Enhanced3DWorldDetail.SeaLevelZ;
-            
-            // Beyond ±100km from sea level
-            if (altitude > 100000 || altitude < -100000)
-                return AccessibilityZone.Inaccessible;
-            
-            // High atmospheric zone: +50km to +100km
-            if (altitude >= 50000 && altitude <= 100000)
-                return AccessibilityZone.AtmosphericHigh;
-            
-            // Extreme depth: -50km to -100km
-            if (altitude <= -50000 && altitude >= -100000)
-                return AccessibilityZone.ExtremeDepth;
-            
-            // High altitude: +10km to +50km
-            if (altitude >= 10000 && altitude < 50000)
-                return AccessibilityZone.HighAltitude;
-            
-            // Deep mining: -1km to -50km
-            if (altitude <= -1000 && altitude > -50000)
-                return AccessibilityZone.DeepMining;
-            
-            // Surface: -1km to +10km
-            return AccessibilityZone.Surface;
+            return AccessibilityZoneClassifier.DetermineAccessibilityZone(z);
         }
         
         /// <summary>
