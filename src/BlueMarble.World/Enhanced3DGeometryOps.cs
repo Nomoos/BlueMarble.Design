@@ -49,7 +49,7 @@ namespace BlueMarble.World
         /// <returns>Altitude in meters (positive = above sea level, negative = below)</returns>
         public static long GetAltitudeFromSeaLevel(long z)
         {
-            return z - Enhanced3DWorldDetail.SeaLevelZ;
+            return AltitudeConverter.GetAltitudeFromSeaLevel(z);
         }
         
         /// <summary>
@@ -59,7 +59,7 @@ namespace BlueMarble.World
         /// <returns>Absolute Z coordinate</returns>
         public static long GetZCoordinateFromAltitude(long altitude)
         {
-            return Enhanced3DWorldDetail.SeaLevelZ + altitude;
+            return AltitudeConverter.GetZCoordinateFromAltitude(altitude);
         }
         
         /// <summary>
@@ -69,7 +69,7 @@ namespace BlueMarble.World
         /// <returns>True if above sea level, false otherwise</returns>
         public static bool IsAboveSeaLevel(long z)
         {
-            return z > Enhanced3DWorldDetail.SeaLevelZ;
+            return AltitudeConverter.IsAboveSeaLevel(z);
         }
         
         /// <summary>
@@ -79,7 +79,7 @@ namespace BlueMarble.World
         /// <returns>True if below sea level, false otherwise</returns>
         public static bool IsBelowSeaLevel(long z)
         {
-            return z < Enhanced3DWorldDetail.SeaLevelZ;
+            return AltitudeConverter.IsBelowSeaLevel(z);
         }
         
         /// <summary>
@@ -89,11 +89,7 @@ namespace BlueMarble.World
         /// <returns>Clamped Z coordinate within player accessible range</returns>
         public static long ClampToGameplayBounds(long z)
         {
-            if (z < Enhanced3DWorldDetail.MaxPlayerDepth)
-                return Enhanced3DWorldDetail.MaxPlayerDepth;
-            if (z > Enhanced3DWorldDetail.MaxPlayerHeight)
-                return Enhanced3DWorldDetail.MaxPlayerHeight;
-            return z;
+            return AltitudeConverter.ClampToGameplayBounds(z);
         }
     }
 }
