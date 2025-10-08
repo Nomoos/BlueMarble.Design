@@ -483,14 +483,14 @@ Track progress using this checklist:
 
 ### Batch 3 (Sources 9-10)
 - [x] Guild System Design (High) - ✅ Complete (2025-01-20)
-- [ ] Faction and Conflict Systems (High)
+- [x] Faction and Conflict Systems (High) - ✅ Complete (2025-01-20)
 - [ ] Batch 3 summary completed
 - [ ] Batch 3 feedback received
 
 ### Completion
-- [ ] All 10 sources completed
-- [ ] Discovery logging completed
-- [ ] All documents submitted to `research/literature/`
+- [x] All 10 sources completed - ✅ Complete (2025-01-20)
+- [x] Discovery logging completed - No new sources discovered
+- [x] All documents submitted to `research/literature/`
 - [ ] Master research queue updated
 - [ ] Final completion summary written
 
