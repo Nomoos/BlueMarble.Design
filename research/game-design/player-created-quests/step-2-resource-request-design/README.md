@@ -923,6 +923,7 @@ For BlueMarble specifically:
 
 - **[Story Quality Assessment Framework](story-quality-assessment-framework.md)** - Comprehensive quality scoring system for player-created content, including automated validation, multi-dimensional scoring, and community feedback integration
 - **[Story Quality Scorer Implementation Guide](story-quality-scorer-implementation-guide.md)** - Technical implementation guide with C# code examples, API design, database schemas, and testing strategies for developers
+- **[Story Quality Scorer Quick Reference](story-quality-scorer-quick-reference.md)** - Quick reference guide with scoring formulas, tier definitions, API endpoints, and common issue resolutions
 
 ## Related Steps
 
