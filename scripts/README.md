@@ -130,6 +130,110 @@ cd scripts
 
 ---
 
+### story_viral_ranking.py
+
+**Content Viral Ranking System** - Ranks player-generated stories, quest narratives, and content by their viral potential based on engagement metrics, social factors, and content quality.
+
+**Quick Start:**
+```bash
+# Run example demonstration
+python3 scripts/example_viral_ranking.py
+
+# Import and use in your code
+python3 -c "from scripts.story_viral_ranking import StoryRanker; print('Module imported successfully')"
+```
+
+**Features:**
+- Ranks stories based on 4 weighted factors:
+  - Engagement (40%): views, shares, reactions, comments, saves
+  - Social reach (30%): author influence, cross-guild sharing
+  - Content quality (20%): uniqueness, emotional impact, narrative quality  
+  - Recency (10%): temporal decay with 3-day half-life
+- Supports 5 story types: player_experience, quest_narrative, settlement_story, achievement_story, discovery_story
+- Get trending stories (last 24 hours)
+- Filter by story type
+- Top N stories ranking
+
+**Usage Examples:**
+```python
+from scripts.story_viral_ranking import (
+    Story, StoryType, EngagementMetrics, 
+    SocialMetrics, ContentQuality, StoryRanker
+)
+import time
+
+ranker = StoryRanker()
+
+# Create a story
+story = Story(
+    story_id="story123",
+    title="Epic Mining Discovery",
+    story_type=StoryType.DISCOVERY_STORY,
+    engagement=EngagementMetrics(
+        views=5000, shares=250, comments=120,
+        reactions=800, saves=150,
+        time_spent_seconds=180, completion_rate=0.85
+    ),
+    social=SocialMetrics(
+        author_followers=500, author_reputation=75.0,
+        guild_size=50, alliance_reach=200,
+        cross_guild_shares=80
+    ),
+    quality=ContentQuality(
+        word_count=450, has_images=True, has_video=False,
+        uniqueness_score=0.9, emotional_impact=0.8,
+        narrative_quality=0.85
+    ),
+    created_timestamp=time.time() - 3600
+)
+
+# Rank stories
+ranked = ranker.rank_stories([story], time.time())
+print(f"Viral Score: {ranked[0].viral_score:.2f}")
+
+# Get top stories
+top_stories = ranker.get_top_stories(stories, time.time(), top_n=10)
+
+# Get trending (last 24 hours)
+trending = ranker.get_trending_stories(
+    stories, time.time(), recency_hours=24, top_n=10
+)
+```
+
+**Output:** Story objects with viral_score (0-100) and viral_rank attributes
+
+**Requirements:**
+- Python 3.7+
+- No external dependencies (uses standard library only)
+
+**Documentation:** See `docs/systems/content-viral-ranking-system.md` for complete system documentation
+
+**Tests:** Run `python3 tests/test_story_viral_ranking.py` to verify functionality
+
+**Use Case:** Rank and surface engaging player-generated content for community feeds, discovery UI, and trending sections
+
+---
+
+### example_viral_ranking.py
+
+**Example demonstration** of the Story Viral Ranking System showing practical usage.
+
+**Usage:**
+```bash
+python3 scripts/example_viral_ranking.py
+```
+
+**Output:** Demonstrates:
+1. Ranking all stories by viral potential
+2. Getting top N stories
+3. Finding trending stories (last 24 hours)
+4. Filtering by story type
+5. Analyzing viral factors for top story
+
+**Use Case:** Learning how to integrate the viral ranking system into your game systems
+
+---
+
 ### check-documentation-quality.sh
 
 A comprehensive script that validates documentation quality before committing.
