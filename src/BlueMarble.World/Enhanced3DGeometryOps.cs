@@ -3,9 +3,20 @@ namespace BlueMarble.World
     using BlueMarble.World.Constants;
     
     /// <summary>
-    /// Utility methods for working with 3D world coordinates and bounds checking.
-    /// Provides validation and zone classification for gameplay mechanics.
+    /// Facade for 3D world coordinate operations.
+    /// Provides a unified interface to coordinate validation, altitude conversion, and zone classification.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// This class follows the Facade pattern, delegating to specialized classes:
+    /// - <see cref="CoordinateValidator"/> for bounds checking
+    /// - <see cref="AltitudeConverter"/> for altitude calculations
+    /// - <see cref="AccessibilityZoneClassifier"/> for zone determination
+    /// </para>
+    /// <para>
+    /// Maintains backward compatibility while following Single Responsibility Principle.
+    /// </para>
+    /// </remarks>
     public static class Enhanced3DGeometryOps
     {
         /// <summary>
@@ -17,10 +28,7 @@ namespace BlueMarble.World
         /// <returns>True if within gameplay bounds, false otherwise</returns>
         public static bool IsWithinGameplayBounds(long x, long y, long z)
         {
-            return z >= Enhanced3DWorldDetail.MaxPlayerDepth && 
-                   z <= Enhanced3DWorldDetail.MaxPlayerHeight &&
-                   x >= 0 && x < Enhanced3DWorldDetail.WorldSizeX &&
-                   y >= 0 && y < Enhanced3DWorldDetail.WorldSizeY;
+            return CoordinateValidator.IsWithinGameplayBounds(x, y, z);
         }
         
         /// <summary>
@@ -32,9 +40,7 @@ namespace BlueMarble.World
         /// <returns>True if within world bounds, false otherwise</returns>
         public static bool IsWithinWorldBounds(long x, long y, long z)
         {
-            return x >= 0 && x < Enhanced3DWorldDetail.WorldSizeX &&
-                   y >= 0 && y < Enhanced3DWorldDetail.WorldSizeY &&
-                   z >= 0 && z < Enhanced3DWorldDetail.WorldSizeZ;
+            return CoordinateValidator.IsWithinWorldBounds(x, y, z);
         }
         
         /// <summary>
@@ -44,30 +50,7 @@ namespace BlueMarble.World
         /// <returns>The accessibility zone classification</returns>
         public static AccessibilityZone DetermineAccessibilityZone(long z)
         {
-            long altitude = z - Enhanced3DWorldDetail.SeaLevelZ;
-            
-            // Beyond ±100km from sea level
-            if (altitude > 100000 || altitude < -100000)
-                return AccessibilityZone.Inaccessible;
-            
-            // High atmospheric zone: +50km to +100km
-            if (altitude >= 50000 && altitude <= 100000)
-                return AccessibilityZone.AtmosphericHigh;
-            
-            // Extreme depth: -50km to -100km
-            if (altitude <= -50000 && altitude >= -100000)
-                return AccessibilityZone.ExtremeDepth;
-            
-            // High altitude: +10km to +50km
-            if (altitude >= 10000 && altitude < 50000)
-                return AccessibilityZone.HighAltitude;
-            
-            // Deep mining: -1km to -50km
-            if (altitude <= -1000 && altitude > -50000)
-                return AccessibilityZone.DeepMining;
-            
-            // Surface: -1km to +10km
-            return AccessibilityZone.Surface;
+            return AccessibilityZoneClassifier.DetermineAccessibilityZone(z);
         }
         
         /// <summary>
@@ -77,7 +60,7 @@ namespace BlueMarble.World
         /// <returns>Altitude in meters (positive = above sea level, negative = below)</returns>
         public static long GetAltitudeFromSeaLevel(long z)
         {
-            return z - Enhanced3DWorldDetail.SeaLevelZ;
+            return AltitudeConverter.GetAltitudeFromSeaLevel(z);
         }
         
         /// <summary>
@@ -87,7 +70,7 @@ namespace BlueMarble.World
         /// <returns>Absolute Z coordinate</returns>
         public static long GetZCoordinateFromAltitude(long altitude)
         {
-            return Enhanced3DWorldDetail.SeaLevelZ + altitude;
+            return AltitudeConverter.GetZCoordinateFromAltitude(altitude);
         }
         
         /// <summary>
@@ -97,7 +80,7 @@ namespace BlueMarble.World
         /// <returns>True if above sea level, false otherwise</returns>
         public static bool IsAboveSeaLevel(long z)
         {
-            return z > Enhanced3DWorldDetail.SeaLevelZ;
+            return AltitudeConverter.IsAboveSeaLevel(z);
         }
         
         /// <summary>
@@ -107,7 +90,7 @@ namespace BlueMarble.World
         /// <returns>True if below sea level, false otherwise</returns>
         public static bool IsBelowSeaLevel(long z)
         {
-            return z < Enhanced3DWorldDetail.SeaLevelZ;
+            return AltitudeConverter.IsBelowSeaLevel(z);
         }
         
         /// <summary>
@@ -117,11 +100,7 @@ namespace BlueMarble.World
         /// <returns>Clamped Z coordinate within player accessible range</returns>
         public static long ClampToGameplayBounds(long z)
         {
-            if (z < Enhanced3DWorldDetail.MaxPlayerDepth)
-                return Enhanced3DWorldDetail.MaxPlayerDepth;
-            if (z > Enhanced3DWorldDetail.MaxPlayerHeight)
-                return Enhanced3DWorldDetail.MaxPlayerHeight;
-            return z;
+            return AltitudeConverter.ClampToGameplayBounds(z);
         }
     }
 }
