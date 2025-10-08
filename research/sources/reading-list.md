@@ -64,6 +64,7 @@ Curated reading list for BlueMarble research and development.
 ### Geographic and Cartographic Research
 
 - [ ] **PhD Dissertation in Geoinformatics** (Pohánková, 2025) - Academic research from Palacký University Olomouc on geodesy, cartography, spatial analysis, or remote sensing - potentially relevant for BlueMarble's spherical planet generation, map projections, and spatial data systems
+- [ ] **Isotope-Enabled Hydrologic Modeling for Large-Scale Watersheds** (Tegan Holmes) - isoWATFLOOD model development for distributed hydrologic modeling with isotope tracing, parameter sensitivity analysis, and calibration methods for large-scale watershed simulation - directly applicable to BlueMarble's water flow, geological processes, and terrain hydrology systems
 
 ### Development Process
 
