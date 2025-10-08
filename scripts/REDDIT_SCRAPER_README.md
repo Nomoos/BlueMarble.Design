@@ -378,7 +378,8 @@ python3 scripts/reddit-story-scraper.py \
 For issues or questions:
 1. Check this README for common solutions
 2. Review the script's help: `python3 scripts/reddit-story-scraper.py --help`
-3. Check related documentation in `scripts/README.md`
+3. Check the examples guide: `REDDIT_SCRAPER_EXAMPLES.md`
+4. Check related documentation in `scripts/README.md`
 
 ## Version History
 

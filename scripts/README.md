@@ -4,6 +4,7 @@ This directory contains utility scripts for maintaining documentation quality in
 
 **Quick Links:**
 - [Usage Examples](USAGE_EXAMPLES.md) - Platform-specific examples for all scripts
+- [Reddit Scraper Examples](REDDIT_SCRAPER_EXAMPLES.md) - Practical Reddit scraping scenarios
 - [Platform Compatibility](#platform-compatibility) - OS-specific requirements
 
 ## Available Scripts
@@ -52,7 +53,7 @@ python3 scripts/reddit-story-scraper.py --subreddit truegaming --limit 50
 - Python 3.7+
 - requests: `pip install requests` (included)
 
-**Documentation:** See `REDDIT_SCRAPER_README.md` for complete usage guide
+**Documentation:** See `REDDIT_SCRAPER_README.md` for complete usage guide and `REDDIT_SCRAPER_EXAMPLES.md` for practical examples
 
 **Use Case:** Automate collection of player experiences and design insights from Reddit for research analysis
 
