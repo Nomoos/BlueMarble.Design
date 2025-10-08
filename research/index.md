@@ -27,6 +27,21 @@ and typically 200-400 lines.
 - [Spire: The City Must Fall - Universe Knowledge Base](topics/spire-the-city-must-fall-universe-knowledge-base.md) -
   Comprehensive reference document covering Spire's dark fantasy setting, resistance mechanics, stress/fallout system, character classes, factions, themes, and design lessons applicable to BlueMarble
 
+- [Spatial Analysis: Hydrology Tools](topics/spatial-analysis-hydrology-tools.md) -
+  Research on flow direction, basin delineation, and drainage analysis from ArcGIS Spatial Analyst for realistic water flow simulation and terrain watershed modeling in BlueMarble's geological MMORPG
+
+- [Spatial Analysis: Groundwater Tools](topics/spatial-analysis-groundwater-tools.md) -
+  Analysis of Darcy flow and subsurface water movement for implementing realistic aquifer systems, mining water management, and underground fluid dynamics in BlueMarble's deep mining mechanics
+
+- [Spatial Analysis: Interpolation Tools](topics/spatial-analysis-interpolation-tools.md) -
+  Examination of IDW, Kriging, Spline, and Natural Neighbor interpolation methods for procedural terrain generation, multi-scale detail, and smooth transitions in BlueMarble's planetary-scale world
+
+- [Spatial Analysis: Generalization Tools](topics/spatial-analysis-generalization-tools.md) -
+  Study of aggregation, boundary cleaning, and filtering techniques for level-of-detail systems, data simplification, and multi-resolution terrain representation in BlueMarble
+
+- [Spatial Analysis: Map Algebra](topics/spatial-analysis-map-algebra.md) -
+  Research on local, focal, zonal, and global raster operations for terrain analysis, resource distribution, and spatial calculations in BlueMarble's simulation systems
+
 ## Notes
 
 Informal research notes and brainstorming for ideas in development.
