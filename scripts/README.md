@@ -10,7 +10,7 @@ This directory contains utility scripts for maintaining documentation quality in
 
 ### autosources-discovery.py
 
-**Automated Source Discovery Tool** - Automatically discovers research sources from existing research documents by scanning for citations, references, and "future research" sections.
+**Automated Source Discovery Tool** - Automatically discovers research sources from existing research documents by scanning for citations, references, and "future research" sections. Now includes support for alternative content sources like Twitter, Reddit, forums, and Discord.
 
 **Quick Start:**
 ```bash
@@ -19,11 +19,21 @@ python3 scripts/autosources-discovery.py --scan-all
 
 **Features:**
 - Scans all research documents for source references
+- **NEW:** Detects alternative content sources (Twitter/X, Reddit, Discord, forums, Stack Exchange)
+- **NEW:** Identifies 13+ different source types with appropriate effort estimates
 - Automatically classifies by priority and category
+- **NEW:** Includes community and social-media categories
 - Generates processing queues
 - Outputs to Markdown or JSON
 - Tracks sources across multiple documents
 - Deduplicates sources mentioned in multiple places
+
+**Supported Source Types:**
+- Social Media: Twitter/X (0.5-1h), Reddit (0.5-1h)
+- Community: Forums (1-2h), Discord (1-2h), Stack Exchange (1-2h)
+- Content: Blogs (1-2h), Videos (1-3h), Documentation (2-4h)
+- Academic: Papers (4-8h), Books (8-16h)
+- Technical: Code repositories (3-6h), Industry resources (3-6h)
 
 **Usage Examples:**
 ```bash
@@ -48,7 +58,7 @@ python3 scripts/autosources-discovery.py --scan-all --output my-discoveries.md
 
 **Documentation:** See `autosources-discovery-guide.md` for complete usage guide
 
-**Use Case:** Run at the end of each research phase to discover new sources for the next phase
+**Use Case:** Run at the end of each research phase to discover new sources for the next phase, including valuable community discussions and social media threads
 
 ---
 
