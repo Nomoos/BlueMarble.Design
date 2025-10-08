@@ -15,9 +15,11 @@ The **Automated Source Discovery Tool** (`autosources-discovery.py`) automatical
 
 - **Automatic Scanning**: Scans all research documents for source references
 - **Pattern Recognition**: Identifies citations, URLs, ISBNs, and explicit source mentions
+- **Alternative Source Support**: Detects Twitter/X, Reddit, Discord, forums, and other social platforms
+- **Source Type Classification**: Identifies source types (book, video, forum, social media, etc.)
 - **Priority Classification**: Automatically infers priority levels (critical, high, medium, low)
-- **Category Detection**: Classifies sources into categories (gamedev-tech, gamedev-design, etc.)
-- **Effort Estimation**: Estimates research effort based on content type
+- **Category Detection**: Classifies sources into categories (gamedev-tech, gamedev-design, community, social-media, etc.)
+- **Effort Estimation**: Estimates research effort based on content type and source type
 - **Multiple Formats**: Outputs to Markdown, JSON, or YAML
 - **Deduplication**: Tracks sources mentioned in multiple documents
 
@@ -101,6 +103,7 @@ The generated markdown report includes:
 3. **For Each Source:**
    - Title and description
    - Priority and category
+   - Source type (book, video, forum, social-media-twitter, etc.)
    - Estimated research effort
    - List of documents that reference this source
 
@@ -195,6 +198,49 @@ The tool automatically extracts sources from sections titled:
 - "Next Sources"
 - "Future Research"
 - "Additional Sources"
+
+## Source Types and Categories
+
+The tool automatically identifies source types to provide better effort estimates and categorization.
+
+### Supported Source Types
+
+**Social Media Sources:**
+- `social-media-twitter`: Twitter/X threads and posts (0.5-1 hour)
+- `social-media-reddit`: Reddit discussions and posts (0.5-1 hour)
+
+**Community Sources:**
+- `community-forum`: Forum threads and discussions (1-2 hours)
+- `community-discord`: Discord server discussions (1-2 hours)
+- `community-stackexchange`: Stack Overflow/Stack Exchange Q&A (1-2 hours)
+
+**Content Sources:**
+- `blog`: Blog posts and articles (1-2 hours)
+- `video`: YouTube videos, presentations, talks (1-3 hours)
+- `documentation`: Official documentation and guides (2-4 hours)
+
+**Academic and Industry:**
+- `academic`: Research papers and academic publications (4-8 hours)
+- `book`: Books and comprehensive guides (8-16 hours)
+- `industry-resource`: GDC talks, industry publications (3-6 hours)
+
+**Technical:**
+- `code-repository`: GitHub repositories and source code (3-6 hours)
+- `general`: Unclassified sources (4-6 hours)
+
+### Categories
+
+The tool classifies sources into the following categories:
+
+- `gamedev-tech`: Technical game development topics
+- `gamedev-design`: Game design and mechanics
+- `gamedev-art`: Art, graphics, and rendering
+- `survival`: Survival game mechanics and systems
+- `architecture`: Software architecture and infrastructure
+- `networking`: Multiplayer and networking systems
+- `community`: Forum and community discussions
+- `social-media`: Social media content and discussions
+- `general`: Unclassified sources
 
 ## Customization
 

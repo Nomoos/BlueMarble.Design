@@ -7,7 +7,8 @@ This tool automatically discovers and catalogs research sources from:
 1. Existing research documents (citations and references)
 2. Related source recommendations
 3. Cross-references within completed research
-4. (Planned) Academic and industry databases (future enhancement; not yet implemented)
+4. Alternative content sources (Twitter/X, Reddit, forums, social media)
+5. (Planned) Academic and industry databases (future enhancement; not yet implemented)
 
 Usage:
     python autosources-discovery.py [options]
@@ -51,6 +52,13 @@ class SourceDiscovery:
             r'\*\*Publisher:\*\*\s+(.+)',
             r'ISBN:\s*(\d{3}-\d{10}|\d{13})',
             r'URL:\s*(https?://[^\s\)]+)',
+            
+            # Alternative source patterns
+            r'Twitter:\s*(https?://(?:twitter\.com|x\.com)/[^\s\)]+)',
+            r'Reddit:\s*(https?://(?:www\.)?reddit\.com/[^\s\)]+)',
+            r'Discord:\s*(https?://discord\.(?:gg|com)/[^\s\)]+)',
+            r'Forum:\s*(https?://[^\s\)]+)',
+            r'Discussion:\s*(https?://[^\s\)]+)',
             
             # Discovered from patterns
             r'Discovered From:\s*(.+)',
@@ -123,8 +131,8 @@ class SourceDiscovery:
     
     def _extract_discovered_sections(self, doc_name: str, content: str):
         """Extract sources from 'Discovered Sources' sections"""
-        # Pattern for discovered sources sections
-        section_pattern = r'##\s+(?:Discovered|Next|Future|Additional)\s+Sources.*?\n(.*?)(?=\n##|\Z)'
+        # Pattern for discovered sources sections - stops at next ## heading (not ###)
+        section_pattern = r'##\s+(?:Discovered|Next|Future|Additional)\s+Sources.*?\n(.*?)(?=\n##\s|\Z)'
         
         for match in re.finditer(section_pattern, content, re.DOTALL | re.IGNORECASE):
             section_content = match.group(1)
@@ -150,7 +158,7 @@ class SourceDiscovery:
                     )
                 else:
                     # If the entry doesn't match the expected format, skip or log
-                    # print(f"Unrecognized source entry format in {doc_name}: {entry_line}")
+                    pass
     
     def _add_source_reference(self, doc_name: str, reference: str, pattern_type: str):
         """Add a source reference to the tracking system"""
@@ -158,6 +166,38 @@ class SourceDiscovery:
             'document': doc_name,
             'pattern': pattern_type
         })
+    
+    def _identify_source_type(self, text: str) -> str:
+        """Identify the type of source from URL or description"""
+        text_lower = text.lower()
+        
+        # Check for URLs and platform-specific patterns
+        if any(pattern in text_lower for pattern in ['twitter.com', 'x.com', '@', 'twitter thread', 'tweet']):
+            return 'social-media-twitter'
+        elif 'reddit' in text_lower or '/r/' in text_lower:
+            return 'social-media-reddit'
+        elif any(pattern in text_lower for pattern in ['discord.gg', 'discord.com', 'discord']):
+            return 'community-discord'
+        elif any(pattern in text_lower for pattern in ['stackoverflow.com', 'stackexchange.com', 'gamedev.stackexchange.com', 'stack exchange', 'stack overflow']):
+            return 'community-stackexchange'
+        elif any(pattern in text_lower for pattern in ['forum.', 'forums.', 'community.', 'forum thread', 'forum discussion']):
+            return 'community-forum'
+        elif any(pattern in text_lower for pattern in ['youtube.com', 'youtu.be', 'video', 'talk', 'presentation', 'gdc']):
+            return 'video'
+        elif any(pattern in text_lower for pattern in ['medium.com', 'blog', 'post', 'article']):
+            return 'blog'
+        elif any(pattern in text_lower for pattern in ['github.com', 'gitlab.com', 'bitbucket.org', 'github', 'source code', 'repository']):
+            return 'code-repository'
+        elif any(pattern in text_lower for pattern in ['gamasutra', 'gamedeveloper.com', 'gamesindustry', 'industry']):
+            return 'industry-resource'
+        elif any(pattern in text_lower for pattern in ['book', 'isbn', 'publisher', 'edition']):
+            return 'book'
+        elif any(pattern in text_lower for pattern in ['paper', 'journal', 'doi', 'arxiv', 'academic', 'thesis']):
+            return 'academic'
+        elif any(pattern in text_lower for pattern in ['wiki', 'documentation', 'docs', 'manual', 'guide']):
+            return 'documentation'
+        else:
+            return 'general'
     
     def _add_discovered_source(self, title: str, description: str, source_document: str,
                                 priority: str = 'medium', category: str = 'general'):
@@ -168,16 +208,20 @@ class SourceDiscovery:
                 source['references'].append(source_document)
                 return
         
+        # Identify source type
+        source_type = self._identify_source_type(title + ' ' + description)
+        
         # Add new source
         self.discovered_sources.append({
             'title': title,
             'description': description,
             'priority': priority,
             'category': category,
+            'source_type': source_type,
             'references': [source_document],
             'discovered_date': datetime.now().isoformat(),
             'status': 'discovered',
-            'estimated_effort': self._estimate_effort(description)
+            'estimated_effort': self._estimate_effort(description, source_type)
         })
         
         self.priorities.add(priority)
@@ -207,6 +251,8 @@ class SourceDiscovery:
             'survival': ['survival', 'crafting', 'resource', 'gathering'],
             'architecture': ['distributed', 'scalable', 'infrastructure', 'backend'],
             'networking': ['network', 'multiplayer', 'synchronization', 'latency'],
+            'community': ['forum', 'discussion', 'community', 'reddit', 'stackexchange'],
+            'social-media': ['twitter', 'x.com', 'social', 'discord'],
         }
         
         for category, keywords in categories.items():
@@ -215,8 +261,8 @@ class SourceDiscovery:
         
         return 'general'
     
-    def _estimate_effort(self, description: str) -> str:
-        """Estimate research effort based on description"""
+    def _estimate_effort(self, description: str, source_type: str = 'general') -> str:
+        """Estimate research effort based on description and source type"""
         text_lower = description.lower()
         
         # Check for explicit hour estimates
@@ -224,12 +270,30 @@ class SourceDiscovery:
         if hour_match:
             return hour_match.group(0)
         
-        # Infer from content type
+        # Estimate based on source type
+        if source_type in ['social-media-twitter', 'social-media-reddit']:
+            return '0.5-1 hour'  # Quick reads
+        elif source_type in ['community-forum', 'community-stackexchange', 'community-discord']:
+            return '1-2 hours'  # Forum threads can be extensive
+        elif source_type == 'blog':
+            return '1-2 hours'
+        elif source_type == 'video':
+            return '1-3 hours'  # Depends on length + notes
+        elif source_type == 'documentation':
+            return '2-4 hours'
+        elif source_type in ['code-repository', 'industry-resource']:
+            return '3-6 hours'
+        elif source_type == 'book':
+            return '8-16 hours'
+        elif source_type == 'academic':
+            return '4-8 hours'
+        
+        # Fallback to content type inference from description
         if any(word in text_lower for word in ['book', 'comprehensive', 'extensive']):
             return '8-12 hours'
         elif any(word in text_lower for word in ['talk', 'presentation', 'video']):
             return '2-4 hours'
-        elif any(word in text_lower for word in ['article', 'blog', 'post']):
+        elif any(word in text_lower for word in ['article', 'blog', 'post', 'thread']):
             return '1-3 hours'
         else:
             return '4-6 hours'
@@ -310,6 +374,7 @@ class SourceDiscovery:
                     "",
                     f"**Priority:** {source['priority'].capitalize()}",
                     f"**Category:** {source['category']}",
+                    f"**Source Type:** {source.get('source_type', 'general')}",
                     f"**Estimated Effort:** {source['estimated_effort']}",
                     "",
                     f"**Description:**",
