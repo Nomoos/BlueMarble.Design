@@ -20,6 +20,15 @@ Thumbs.db
 .tmp/
 .temp/
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
 # Build Artifacts (if any build process is added later)
 dist/
 build/
