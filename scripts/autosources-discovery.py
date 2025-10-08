@@ -39,6 +39,8 @@ class SourceDiscovery:
         self.source_references = defaultdict(list)
         self.categories = set()
         self.priorities = set()
+        self.source_attributions = []  # Track source attribution from documents
+        self.missing_attributions = []  # Track documents missing proper attribution
         
     def scan_research_documents(self, phase_filter: Optional[int] = None) -> List[Dict]:
         """Scan all research documents for source references"""
@@ -99,6 +101,9 @@ class SourceDiscovery:
             # Extract YAML frontmatter
             frontmatter = self._extract_frontmatter(content)
             
+            # Track source attribution from frontmatter and document body
+            self._track_source_attribution(doc_path.name, frontmatter, content)
+            
             # Scan for source patterns
             for pattern in patterns:
                 matches = re.finditer(pattern, content, re.MULTILINE | re.IGNORECASE)
@@ -120,6 +125,38 @@ class SourceDiscovery:
             except:
                 return {}
         return {}
+    
+    def _track_source_attribution(self, doc_name: str, frontmatter: Dict, content: str):
+        """Track source attribution from document frontmatter and body"""
+        attribution = {
+            'document': doc_name,
+            'has_frontmatter': bool(frontmatter),
+            'frontmatter_source': frontmatter.get('source') if frontmatter else None,
+            'parent_research': frontmatter.get('parent-research') if frontmatter else None,
+            'body_sources': []
+        }
+        
+        # Extract **Source:** from document body (typically near the top)
+        source_pattern = r'^\*\*Source:\*\*\s+(.+?)$'
+        source_matches = re.finditer(source_pattern, content, re.MULTILINE)
+        for match in source_matches:
+            attribution['body_sources'].append(match.group(1).strip())
+        
+        # Check if document has proper attribution
+        has_proper_attribution = (
+            attribution['frontmatter_source'] or 
+            attribution['body_sources'] or
+            attribution['parent_research']
+        )
+        
+        if has_proper_attribution:
+            self.source_attributions.append(attribution)
+        else:
+            # Document is missing source attribution
+            self.missing_attributions.append({
+                'document': doc_name,
+                'reason': 'No source attribution found in frontmatter or body'
+            })
     
     def _extract_discovered_sections(self, doc_name: str, content: str):
         """Extract sources from 'Discovered Sources' sections"""
@@ -151,6 +188,7 @@ class SourceDiscovery:
                 else:
                     # If the entry doesn't match the expected format, skip or log
                     # print(f"Unrecognized source entry format in {doc_name}: {entry_line}")
+                    pass
     
     def _add_source_reference(self, doc_name: str, reference: str, pattern_type: str):
         """Add a source reference to the tracking system"""
@@ -360,6 +398,43 @@ class SourceDiscovery:
             "",
             "---",
             "",
+            "## Source Attribution Report",
+            "",
+            f"**Documents Scanned:** {len(self.source_attributions) + len(self.missing_attributions)}",
+            f"**Properly Attributed:** {len(self.source_attributions)}",
+            f"**Missing Attribution:** {len(self.missing_attributions)}",
+            "",
+        ])
+        
+        if self.missing_attributions:
+            content.extend([
+                "### ⚠️ Documents Missing Source Attribution",
+                "",
+                "The following documents do not have proper source attribution in their frontmatter or body:",
+                "",
+            ])
+            for item in self.missing_attributions[:20]:  # Limit to first 20
+                content.append(f"- {item['document']}")
+            
+            if len(self.missing_attributions) > 20:
+                content.append(f"- ... and {len(self.missing_attributions) - 20} more")
+            
+            content.extend([
+                "",
+                "**Action Required:** Add `source:` field to YAML frontmatter or **Source:** line in document body.",
+                "",
+            ])
+        
+        content.extend([
+            "### ✅ Attribution Compliance Summary",
+            "",
+            f"- Compliance Rate: {len(self.source_attributions) / max(len(self.source_attributions) + len(self.missing_attributions), 1) * 100:.1f}%",
+            f"- Documents with frontmatter source: {sum(1 for a in self.source_attributions if a['frontmatter_source'])}",
+            f"- Documents with body source: {sum(1 for a in self.source_attributions if a['body_sources'])}",
+            f"- Documents with parent research: {sum(1 for a in self.source_attributions if a['parent_research'])}",
+            "",
+            "---",
+            "",
             "## Statistics",
             "",
             f"**Total Sources:** {len(self.discovered_sources)}",
@@ -376,6 +451,12 @@ class SourceDiscovery:
             "3. Assign sources to appropriate research phases",
             "4. Create assignment groups for critical and high-priority sources",
             "5. Begin systematic processing following batch workflow",
+        ])
+        
+        if self.missing_attributions:
+            content.append("6. **Fix missing source attributions in documents**")
+        
+        content.extend([
             "",
             "---",
             "",
