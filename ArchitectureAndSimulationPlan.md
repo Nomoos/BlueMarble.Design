@@ -24,6 +24,8 @@ Designing an Earth-sized MMO world (40,075,020 m × 20,037,510 m in EPSG:4087) a
   - Custom ECS engines (Unity DOTS, Rust/C++).  
   - For physics engines stuck at 32-bit (e.g. PhysX), shift origin dynamically.
 
+**📖 For detailed coordinate system design, engine comparisons, and implementation guides, see [Step 5: Coordinate Systems & Engine Choice](research/game-design/step-5-coordinate-systems-engine-choice.md).**
+
 ---
 
 ## Rendering & LOD Strategy
@@ -42,7 +44,9 @@ Designing an Earth-sized MMO world (40,075,020 m × 20,037,510 m in EPSG:4087) a
 
 - **Atmosphere & Skydome**  
   - Use skydome/sky-sphere shaders following camera.  
-  - Weather/day-night at coarse resolution.  
+  - Weather/day-night at coarse resolution.
+
+**📖 For detailed LOD algorithms, culling techniques, and rendering optimization, see [Step 7: Rendering & LOD Strategy](research/game-design/step-7-rendering-lod-strategy.md).**
 
 ---
 
@@ -90,7 +94,9 @@ Designing an Earth-sized MMO world (40,075,020 m × 20,037,510 m in EPSG:4087) a
   - Load high-res voxels around player.  
   - Medium resolution at mid-distance.  
   - Low-res background.  
-  - Unload distant chunks, use LRU caches.  
+  - Unload distant chunks, use LRU caches.
+
+**📖 For detailed storage architecture, compression strategies, and streaming implementation, see [Step 6: Voxel Data Storage & Streaming](research/game-design/step-6-voxel-data-storage-streaming.md).**
 
 ---
 
@@ -170,5 +176,7 @@ Designing an Earth-sized MMO world (40,075,020 m × 20,037,510 m in EPSG:4087) a
 - **Cloud-native storage**: Zarr/COG/PMTiles for planet-scale voxel/terrain data.  
 - **Sharding + AOI networking**: only send what matters.  
 - **Async + GPU acceleration**: keep performance viable.
+
+**📖 For detailed explanations, code examples, and implementation guides for each principle, see [Step 8: MMORPG GIS Key Takeaways](research/game-design/step-8-mmorpg-gis-key-takeaways.md).**
 
 ---
