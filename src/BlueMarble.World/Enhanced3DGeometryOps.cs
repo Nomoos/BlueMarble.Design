@@ -3,9 +3,20 @@ namespace BlueMarble.World
     using BlueMarble.World.Constants;
     
     /// <summary>
-    /// Utility methods for working with 3D world coordinates and bounds checking.
-    /// Provides validation and zone classification for gameplay mechanics.
+    /// Facade for 3D world coordinate operations.
+    /// Provides a unified interface to coordinate validation, altitude conversion, and zone classification.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// This class follows the Facade pattern, delegating to specialized classes:
+    /// - <see cref="CoordinateValidator"/> for bounds checking
+    /// - <see cref="AltitudeConverter"/> for altitude calculations
+    /// - <see cref="AccessibilityZoneClassifier"/> for zone determination
+    /// </para>
+    /// <para>
+    /// Maintains backward compatibility while following Single Responsibility Principle.
+    /// </para>
+    /// </remarks>
     public static class Enhanced3DGeometryOps
     {
         /// <summary>
