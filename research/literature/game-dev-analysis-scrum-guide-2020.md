@@ -347,20 +347,16 @@ This provides direction for all backlog items
 ```
 
 **Product Backlog Structure:**
-```
-Epic: Crafting System
-├─ User Story: Gather wood from trees
-├─ User Story: Gather stone from rocks
-├─ User Story: Access crafting menu
-├─ User Story: Craft basic tools
-└─ User Story: See crafting progression
 
-Each has:
+The Product Backlog contains ordered items (typically User Stories) that deliver value toward the Product Goal.
+
+For detailed examples of Product Backlog structure including Epics, Features, User Stories, and Tasks for BlueMarble's crafting system, see the [Backlog Creation section](game-dev-analysis-agile-development.md#1-backlog-creation-and-prioritization) in the parent Agile Game Development document.
+
+Each backlog item includes:
 - Description
 - Acceptance criteria
 - Estimate (story points)
 - Priority (MoSCoW)
-```
 
 ### 2. Sprint Backlog (+ Sprint Goal)
 
