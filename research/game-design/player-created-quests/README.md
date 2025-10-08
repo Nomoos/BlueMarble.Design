@@ -54,6 +54,7 @@ How players structure resource gathering requests:
 - Delivery conditions and timeframes
 - Partial completion and batch processing
 - Quality control and acceptance criteria
+- **Story Quality Assessment Framework** - Comprehensive quality scoring system for content validation
 
 ### Step 3: Incentive Structures
 Reward systems that drive quest completion:

@@ -919,6 +919,10 @@ For BlueMarble specifically:
 - Support collaborative large-scale projects
 - Maintain scientific authenticity in requirements
 
+## Documents in This Step
+
+- **[Story Quality Assessment Framework](story-quality-assessment-framework.md)** - Comprehensive quality scoring system for player-created content, including automated validation, multi-dimensional scoring, and community feedback integration
+
 ## Related Steps
 
 - Previous: [Step 1: Quest System Patterns](../step-1-quest-system-patterns/) - Quest creation mechanisms
