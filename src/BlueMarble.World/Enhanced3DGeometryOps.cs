@@ -17,10 +17,7 @@ namespace BlueMarble.World
         /// <returns>True if within gameplay bounds, false otherwise</returns>
         public static bool IsWithinGameplayBounds(long x, long y, long z)
         {
-            return z >= Enhanced3DWorldDetail.MaxPlayerDepth && 
-                   z <= Enhanced3DWorldDetail.MaxPlayerHeight &&
-                   x >= 0 && x < Enhanced3DWorldDetail.WorldSizeX &&
-                   y >= 0 && y < Enhanced3DWorldDetail.WorldSizeY;
+            return CoordinateValidator.IsWithinGameplayBounds(x, y, z);
         }
         
         /// <summary>
@@ -32,9 +29,7 @@ namespace BlueMarble.World
         /// <returns>True if within world bounds, false otherwise</returns>
         public static bool IsWithinWorldBounds(long x, long y, long z)
         {
-            return x >= 0 && x < Enhanced3DWorldDetail.WorldSizeX &&
-                   y >= 0 && y < Enhanced3DWorldDetail.WorldSizeY &&
-                   z >= 0 && z < Enhanced3DWorldDetail.WorldSizeZ;
+            return CoordinateValidator.IsWithinWorldBounds(x, y, z);
         }
         
         /// <summary>
