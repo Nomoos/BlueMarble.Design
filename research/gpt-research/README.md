@@ -113,6 +113,11 @@ Create the following files:
    - Topic: Comprehensive analysis of all open PRs in the repository
    - Key Focus: PR status, themes, recommendations, merge coordination, impact assessment
 
+8. **AI Model Comparison for Game Design** - [ai-model-comparison-for-game-design.md](ai-model-comparison-for-game-design.md)
+   - Status: ✅ Completed (2025-01-08)
+   - Topic: Comprehensive comparison of AI models for game design research
+   - Key Focus: Local vs cloud models, PC requirements, cost analysis, workflow optimization, model selection
+
 ### Pending Import
 
 *All pending conversations have been imported.*
