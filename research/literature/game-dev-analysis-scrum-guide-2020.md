@@ -350,7 +350,7 @@ This provides direction for all backlog items
 
 The Product Backlog contains ordered items (typically User Stories) that deliver value toward the Product Goal.
 
-For detailed examples of Product Backlog structure including Epics, Features, User Stories, and Tasks for BlueMarble's crafting system, see the [Backlog Creation section](game-dev-analysis-agile-development.md#1-backlog-creation-and-prioritization) in the parent Agile Game Development document.
+For detailed examples of Product Backlog structure including Epics, Features, User Stories, and Tasks for BlueMarble's crafting system, see the "Backlog Creation and Prioritization" section in the parent [Agile Game Development](game-dev-analysis-agile-development.md) document.
 
 Each backlog item includes:
 - Description
