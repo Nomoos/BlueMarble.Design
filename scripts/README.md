@@ -52,6 +52,63 @@ python3 scripts/autosources-discovery.py --scan-all --output my-discoveries.md
 
 ---
 
+### youtube-channel-analyzer.py
+
+**YouTube Channel Analyzer** - Analyzes YouTube channels with focus on story videos (regular content), excluding Shorts, live streams, and other content types.
+
+**Quick Start:**
+```bash
+# Basic analysis (no API key required)
+python3 scripts/youtube-channel-analyzer.py --channel @SebastianLague
+
+# Analyze all channels from document
+python3 scripts/youtube-channel-analyzer.py \
+  --analyze-all-from-doc research/literature/online-game-dev-resources.md \
+  --output youtube-analysis.md
+```
+
+**Features:**
+- Extracts channels from markdown documents
+- Filters for story videos only (duration > 60 seconds)
+- Excludes YouTube Shorts, live streams, and premieres
+- Dual operation modes: basic scraping or detailed API analysis
+- Generates comprehensive markdown or JSON reports
+- Analyzes video statistics and engagement metrics
+
+**Usage Examples:**
+```bash
+# Analyze single channel (basic mode)
+python3 scripts/youtube-channel-analyzer.py --channel @CodeMonkeyUnity
+
+# Analyze with YouTube Data API for detailed stats
+python3 scripts/youtube-channel-analyzer.py \
+  --channel @SebastianLague \
+  --api-key YOUR_YOUTUBE_API_KEY \
+  --output analysis.json
+
+# Batch analyze all channels from document
+python3 scripts/youtube-channel-analyzer.py \
+  --analyze-all-from-doc research/literature/online-game-dev-resources.md \
+  --api-key YOUR_API_KEY \
+  --output research/literature/youtube-channels-analysis.md
+```
+
+**Output:** Markdown report or JSON file with channel statistics
+
+**Requirements:**
+- Python 3.7+
+- Basic mode: `pip install requests beautifulsoup4`
+- API mode: `pip install requests beautifulsoup4 google-api-python-client`
+- YouTube Data API v3 key (optional, for detailed analysis)
+
+**Documentation:** See `YOUTUBE_ANALYZER_README.md` for complete guide
+
+**Use Case:** Analyze YouTube channels for research quality, identify story videos vs shorts, track channel activity
+
+**Sample Output:** See `docs/youtube-channel-analysis-sample.md` for example report
+
+---
+
 ### generate-research-issues.py
 
 Generates GitHub issue content for all 40 research assignment groups plus parent and Phase 2 planning issues.
