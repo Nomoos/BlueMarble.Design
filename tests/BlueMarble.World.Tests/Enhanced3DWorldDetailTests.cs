@@ -44,72 +44,72 @@ namespace BlueMarble.World.Tests
         public void AtmosphereTop_ShouldBe100KmAboveSeaLevel()
         {
             long expectedAltitude = Enhanced3DWorldDetail.SeaLevelZ + 100000;
-            Assert.Equal(expectedAltitude, Enhanced3DWorldDetail.AtmosphereTop);
-            Assert.Equal(10100000L, Enhanced3DWorldDetail.AtmosphereTop);
+            Assert.Equal(Enhanced3DWorldDetail.AtmosphereTop, expectedAltitude);
+            Assert.Equal(Enhanced3DWorldDetail.AtmosphereTop, 10100000L);
         }
         
         [Fact]
         public void CrustBottom_ShouldBe100KmBelowSeaLevel()
         {
             long expectedDepth = Enhanced3DWorldDetail.SeaLevelZ - 100000;
-            Assert.Equal(expectedDepth, Enhanced3DWorldDetail.CrustBottom);
-            Assert.Equal(9900000L, Enhanced3DWorldDetail.CrustBottom);
+            Assert.Equal(Enhanced3DWorldDetail.CrustBottom, expectedDepth);
+            Assert.Equal(Enhanced3DWorldDetail.CrustBottom, 9900000L);
         }
         
         [Fact]
         public void MantleBottom_ShouldBe2900KmBelowSeaLevel()
         {
             long expectedDepth = Enhanced3DWorldDetail.SeaLevelZ - 2900000;
-            Assert.Equal(expectedDepth, Enhanced3DWorldDetail.MantleBottom);
-            Assert.Equal(7100000L, Enhanced3DWorldDetail.MantleBottom);
+            Assert.Equal(Enhanced3DWorldDetail.MantleBottom, expectedDepth);
+            Assert.Equal(Enhanced3DWorldDetail.MantleBottom, 7100000L);
         }
         
         [Fact]
         public void CoreBoundary_ShouldBe5150KmBelowSeaLevel()
         {
             long expectedDepth = Enhanced3DWorldDetail.SeaLevelZ - 5150000;
-            Assert.Equal(expectedDepth, Enhanced3DWorldDetail.CoreBoundary);
-            Assert.Equal(4850000L, Enhanced3DWorldDetail.CoreBoundary);
+            Assert.Equal(Enhanced3DWorldDetail.CoreBoundary, expectedDepth);
+            Assert.Equal(Enhanced3DWorldDetail.CoreBoundary, 4850000L);
         }
         
         [Fact]
         public void CoreCenter_ShouldBe6371KmBelowSeaLevel()
         {
             long expectedDepth = Enhanced3DWorldDetail.SeaLevelZ - 6371000;
-            Assert.Equal(expectedDepth, Enhanced3DWorldDetail.CoreCenter);
-            Assert.Equal(3629000L, Enhanced3DWorldDetail.CoreCenter);
+            Assert.Equal(Enhanced3DWorldDetail.CoreCenter, expectedDepth);
+            Assert.Equal(Enhanced3DWorldDetail.CoreCenter, 3629000L);
         }
         
         [Fact]
         public void MaxTerrainHeight_ShouldMatchMountEverest()
         {
             long expectedHeight = Enhanced3DWorldDetail.SeaLevelZ + 8849;
-            Assert.Equal(expectedHeight, Enhanced3DWorldDetail.MaxTerrainHeight);
-            Assert.Equal(10008849L, Enhanced3DWorldDetail.MaxTerrainHeight);
+            Assert.Equal(Enhanced3DWorldDetail.MaxTerrainHeight, expectedHeight);
+            Assert.Equal(Enhanced3DWorldDetail.MaxTerrainHeight, 10008849L);
         }
         
         [Fact]
         public void DeepestOcean_ShouldMatchMarianaTrench()
         {
             long expectedDepth = Enhanced3DWorldDetail.SeaLevelZ - 11034;
-            Assert.Equal(expectedDepth, Enhanced3DWorldDetail.DeepestOcean);
-            Assert.Equal(9988966L, Enhanced3DWorldDetail.DeepestOcean);
+            Assert.Equal(Enhanced3DWorldDetail.DeepestOcean, expectedDepth);
+            Assert.Equal(Enhanced3DWorldDetail.DeepestOcean, 9988966L);
         }
         
         [Fact]
         public void MaxPlayerDepth_ShouldBe50KmBelowSeaLevel()
         {
             long expectedDepth = Enhanced3DWorldDetail.SeaLevelZ - 50000;
-            Assert.Equal(expectedDepth, Enhanced3DWorldDetail.MaxPlayerDepth);
-            Assert.Equal(9950000L, Enhanced3DWorldDetail.MaxPlayerDepth);
+            Assert.Equal(Enhanced3DWorldDetail.MaxPlayerDepth, expectedDepth);
+            Assert.Equal(Enhanced3DWorldDetail.MaxPlayerDepth, 9950000L);
         }
         
         [Fact]
         public void MaxPlayerHeight_ShouldBe50KmAboveSeaLevel()
         {
             long expectedHeight = Enhanced3DWorldDetail.SeaLevelZ + 50000;
-            Assert.Equal(expectedHeight, Enhanced3DWorldDetail.MaxPlayerHeight);
-            Assert.Equal(10050000L, Enhanced3DWorldDetail.MaxPlayerHeight);
+            Assert.Equal(Enhanced3DWorldDetail.MaxPlayerHeight, expectedHeight);
+            Assert.Equal(Enhanced3DWorldDetail.MaxPlayerHeight, 10050000L);
         }
         
         [Fact]
@@ -137,7 +137,7 @@ namespace BlueMarble.World.Tests
             decimal expectedVolume = (decimal)Enhanced3DWorldDetail.WorldSizeX * 
                                     Enhanced3DWorldDetail.WorldSizeY * 
                                     Enhanced3DWorldDetail.WorldSizeZ;
-            Assert.Equal(expectedVolume, Enhanced3DWorldDetail.TotalWorldVolume);
+            Assert.Equal(Enhanced3DWorldDetail.TotalWorldVolume, expectedVolume);
         }
         
         [Fact]
