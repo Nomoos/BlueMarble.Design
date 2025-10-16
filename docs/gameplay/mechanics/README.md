@@ -16,6 +16,7 @@ Mechanics documents provide formal specifications including:
 
 ### Core Game Systems
 
+- **[Material Economy System](./material-economy-system.md)** - Complete material flow, sources, sinks, and economic balance
 - **[Mining and Resource Extraction](./mining-resource-extraction.md)** - Comprehensive resource discovery and extraction mechanics
 - **[Building and Construction](./building-construction.md)** - Complete construction and building systems
 - **[Terraforming](./terraforming.md)** - Landscape modification and environmental engineering
