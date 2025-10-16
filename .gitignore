@@ -76,3 +76,16 @@ package/
 .runner/
 runner-*
 *.tar.gz
+
+# .NET Build Artifacts
+bin/
+obj/
+*.user
+*.suo
+*.cache
+TestResults/
+*.trx
+*.coverage
+*.nupkg
+*.snupkg
+packages/
