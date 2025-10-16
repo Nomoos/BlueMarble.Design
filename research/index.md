@@ -21,6 +21,27 @@ and typically 200-400 lines.
 - [Why Don't Women Play Games? - Gender Barriers in Gaming](topics/why-dont-women-play-games.md) -
   Analysis of historical and cultural barriers preventing women's full participation in gaming, with actionable insights for inclusive game design
 
+- [Board Games in Video Games and Regulatory Considerations](topics/board-games-in-video-games-and-regulatory-considerations.md) -
+  Research on implementing traditional board games (Chess, Shogi, Go, Mancala) as mini-games in MMORPGs, with comprehensive analysis of cryptocurrency integration and gambling regulations
+
+- [Spire: The City Must Fall - Universe Knowledge Base](topics/spire-the-city-must-fall-universe-knowledge-base.md) -
+  Comprehensive reference document covering Spire's dark fantasy setting, resistance mechanics, stress/fallout system, character classes, factions, themes, and design lessons applicable to BlueMarble
+
+- [Spatial Analysis: Hydrology Tools](topics/spatial-analysis-hydrology-tools.md) -
+  Research on flow direction, basin delineation, and drainage analysis from ArcGIS Spatial Analyst for realistic water flow simulation and terrain watershed modeling in BlueMarble's geological MMORPG
+
+- [Spatial Analysis: Groundwater Tools](topics/spatial-analysis-groundwater-tools.md) -
+  Analysis of Darcy flow and subsurface water movement for implementing realistic aquifer systems, mining water management, and underground fluid dynamics in BlueMarble's deep mining mechanics
+
+- [Spatial Analysis: Interpolation Tools](topics/spatial-analysis-interpolation-tools.md) -
+  Examination of IDW, Kriging, Spline, and Natural Neighbor interpolation methods for procedural terrain generation, multi-scale detail, and smooth transitions in BlueMarble's planetary-scale world
+
+- [Spatial Analysis: Generalization Tools](topics/spatial-analysis-generalization-tools.md) -
+  Study of aggregation, boundary cleaning, and filtering techniques for level-of-detail systems, data simplification, and multi-resolution terrain representation in BlueMarble
+
+- [Spatial Analysis: Map Algebra](topics/spatial-analysis-map-algebra.md) -
+  Research on local, focal, zonal, and global raster operations for terrain analysis, resource distribution, and spatial calculations in BlueMarble's simulation systems
+
 ## Notes
 
 Informal research notes and brainstorming for ideas in development.
@@ -85,6 +106,15 @@ Formal references, summaries, and literature reviews from external sources.
 - [Game Development Resources Analysis](literature/game-development-resources-analysis.md) - 
   Organized guide to 20+ game development books covering programming, design theory, multiplayer systems, 
   content creation, and development process with prioritized reading list and application strategies
+
+- [The Sims and Gaming Women Phenomenon](literature/game-dev-analysis-the-sims-and-gaming-women-phenomenon.md) - 
+  Analysis of The Sims franchise's revolutionary impact on gender demographics in gaming, examining why the game 
+  attracted 60-70% women players and lessons for inclusive game design
+
+- [Gender Differences in Spatial Planning vs Combat Preferences](literature/game-dev-research-gender-spatial-planning-vs-combat-preferences.md) - 
+  Comprehensive research examining whether women show stronger preferences for spatial planning mechanics (settlement 
+  building, city layout, resource arrangement) versus combat aiming, with academic research synthesis, cognitive 
+  studies analysis, and actionable design recommendations for BlueMarble MMORPG
 
 ## Sources
 

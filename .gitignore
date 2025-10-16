@@ -26,6 +26,20 @@ build/
 node_modules/
 *.log
 
+# .NET Build Artifacts
+bin/
+obj/
+*.dll
+*.pdb
+*.cache
+*.suo
+*.user
+*.userprefs
+*.suo
+TestResults/
+[Bb]in/
+[Oo]bj/
+
 # Large Asset Files (use Git LFS instead)
 *.psd
 *.ai
