@@ -839,7 +839,7 @@ The system is production-ready for integration into BlueMarble's auction/marketp
 
 ## References
 
-- **1inch Network**: [1inch.io](https://1inch.io) - DEX aggregation protocol
+- **1inch Network**: [1inch.io](https://1inch.io/cross-chain-swap/) - DEX aggregation protocol
 - **Dijkstra's Algorithm**: Classic shortest path algorithm
 - **DEX Routing Papers**: Research on decentralized exchange routing
 - **Game Economy Design**: Lessons from EVE Online, WoW, Path of Exile
