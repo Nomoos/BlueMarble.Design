@@ -1,0 +1,24 @@
+# Build artifacts
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+.DS_Store
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*~
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
