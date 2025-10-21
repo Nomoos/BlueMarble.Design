@@ -17,6 +17,8 @@ and typically 200-400 lines.
 
 - [World of Warcraft Emulators – Architecture & Communication](topics/wow-emulator-architecture-networking.md) -
   MMO server architecture, authentication systems, and networking protocols from open-source WoW emulators
+- [Gender Influence on Macro vs. Micro-Level Aiming Preferences](topics/gender-macro-micro-aiming-preferences.md) -
+  Research examining whether gender influences preference for strategic planning (macro) vs. tactical control (micro) in gameplay
   
 - [Why Don't Women Play Games? - Gender Barriers in Gaming](topics/why-dont-women-play-games.md) -
   Analysis of historical and cultural barriers preventing women's full participation in gaming, with actionable insights for inclusive game design
@@ -65,6 +67,11 @@ Formal references, summaries, and literature reviews from external sources.
 - [Survival Guides Knowledge Domains Research](literature/survival-guides-knowledge-domains-research.md) - 
   Analysis of survival knowledge systems from the awesome-survival repository, identifying skill hierarchies, 
   material processing chains, and knowledge preservation mechanics applicable to BlueMarble game design
+
+- [Daily Routine Frustration and Cursor Accuracy Research](literature/game-dev-research-cursor-accuracy-gender-accessibility.md) - 
+  Research on gender differences in motor skills, cursor accuracy requirements in games, and accessibility design 
+  for routine-based systems. Analysis of The Sims' success and recommendations for BlueMarble's routine-based 
+  progression system to attract underserved demographics (women, older players, disabled players)
 
 ### Content Extraction Guides (Priority Order)
 
