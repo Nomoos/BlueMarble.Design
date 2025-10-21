@@ -15,6 +15,7 @@ Comprehensive research on skill progression systems from leading MMORPGs, focusi
 ### Advanced Mechanics
 - [Skill Caps and Decay Research](skill-caps-and-decay-research.md) - Specialization through skill limits and maintenance
 - [Skill Relationships and Compatibility Research](skill-relationships-compatibility-research.md) - Parent-child skill bonuses and synergies
+- [Quest-Based Mentorship Research](quest-based-mentorship-research.md) - Teaching tools, community-driven mentorship, and fair reward structures
 - [Skill System Child Research Issues](skill-system-child-research-issues.md) - Implementation considerations
 - [Cursor Precision vs. Action Queueing Research](cursor-precision-vs-action-queueing-research.md) - UI/UX interaction paradigms and planning efficiency
 
@@ -47,6 +48,8 @@ Comprehensive research on skill progression systems from leading MMORPGs, focusi
 - Skill books and teaching economy (Eco)
 - Handbook systems as learning tools (Vintage Story)
 - Guild knowledge sharing and collaboration
+- Quest-based mentorship and teaching systems
+- Community-driven knowledge transfer
 
 ## BlueMarble Recommendations
 

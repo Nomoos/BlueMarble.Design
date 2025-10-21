@@ -17,6 +17,8 @@ and typically 200-400 lines.
 
 - [World of Warcraft Emulators – Architecture & Communication](topics/wow-emulator-architecture-networking.md) -
   MMO server architecture, authentication systems, and networking protocols from open-source WoW emulators
+- [Gender Influence on Macro vs. Micro-Level Aiming Preferences](topics/gender-macro-micro-aiming-preferences.md) -
+  Research examining whether gender influences preference for strategic planning (macro) vs. tactical control (micro) in gameplay
   
 - [Why Don't Women Play Games? - Gender Barriers in Gaming](topics/why-dont-women-play-games.md) -
   Analysis of historical and cultural barriers preventing women's full participation in gaming, with actionable insights for inclusive game design
@@ -26,6 +28,21 @@ and typically 200-400 lines.
 
 - [Spire: The City Must Fall - Universe Knowledge Base](topics/spire-the-city-must-fall-universe-knowledge-base.md) -
   Comprehensive reference document covering Spire's dark fantasy setting, resistance mechanics, stress/fallout system, character classes, factions, themes, and design lessons applicable to BlueMarble
+
+- [Spatial Analysis: Hydrology Tools](topics/spatial-analysis-hydrology-tools.md) -
+  Research on flow direction, basin delineation, and drainage analysis from ArcGIS Spatial Analyst for realistic water flow simulation and terrain watershed modeling in BlueMarble's geological MMORPG
+
+- [Spatial Analysis: Groundwater Tools](topics/spatial-analysis-groundwater-tools.md) -
+  Analysis of Darcy flow and subsurface water movement for implementing realistic aquifer systems, mining water management, and underground fluid dynamics in BlueMarble's deep mining mechanics
+
+- [Spatial Analysis: Interpolation Tools](topics/spatial-analysis-interpolation-tools.md) -
+  Examination of IDW, Kriging, Spline, and Natural Neighbor interpolation methods for procedural terrain generation, multi-scale detail, and smooth transitions in BlueMarble's planetary-scale world
+
+- [Spatial Analysis: Generalization Tools](topics/spatial-analysis-generalization-tools.md) -
+  Study of aggregation, boundary cleaning, and filtering techniques for level-of-detail systems, data simplification, and multi-resolution terrain representation in BlueMarble
+
+- [Spatial Analysis: Map Algebra](topics/spatial-analysis-map-algebra.md) -
+  Research on local, focal, zonal, and global raster operations for terrain analysis, resource distribution, and spatial calculations in BlueMarble's simulation systems
 
 ## Notes
 
@@ -50,6 +67,11 @@ Formal references, summaries, and literature reviews from external sources.
 - [Survival Guides Knowledge Domains Research](literature/survival-guides-knowledge-domains-research.md) - 
   Analysis of survival knowledge systems from the awesome-survival repository, identifying skill hierarchies, 
   material processing chains, and knowledge preservation mechanics applicable to BlueMarble game design
+
+- [Daily Routine Frustration and Cursor Accuracy Research](literature/game-dev-research-cursor-accuracy-gender-accessibility.md) - 
+  Research on gender differences in motor skills, cursor accuracy requirements in games, and accessibility design 
+  for routine-based systems. Analysis of The Sims' success and recommendations for BlueMarble's routine-based 
+  progression system to attract underserved demographics (women, older players, disabled players)
 
 ### Content Extraction Guides (Priority Order)
 
