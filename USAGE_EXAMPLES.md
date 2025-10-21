@@ -36,9 +36,9 @@ This document demonstrates how to effectively use the BlueMarble.Design reposito
 
 ### Step 2: Research Phase
 
-1. Check existing documentation in `/docs/research/` for relevant studies
-2. If needed, create new research document using `/templates/research-report.md`
-3. Example: `docs/research/research-player-crafting-preferences.md`
+1. Check existing documentation in `/research/` for relevant studies
+2. If needed, create new research document using `/templates/research-note.md` or `/templates/research-report.md`
+3. Example: `research/topics/player-crafting-preferences.md`
 4. Link research findings back to requirements document
 
 ### Step 3: Design Phase
@@ -79,8 +79,8 @@ This document demonstrates how to effectively use the BlueMarble.Design reposito
 ### Step 1: Research Requirements
 
 1. Review gameplay and world requirements that drive technical needs
-2. Research technical approaches in `/docs/research/`
-3. Document findings: `docs/research/research-technical-networking-solutions.md`
+2. Research technical approaches in `/research/`
+3. Document findings: `research/topics/networking-solutions.md`
 
 ### Step 2: System Design
 
@@ -125,10 +125,11 @@ This feature touches multiple categories and demonstrates the interconnected nat
 - `audio-guild-feedback.md` - Audio cues for guild activities
 - `music-guild-halls.md` - Music design for guild spaces
 
-#### Supporting Research (`docs/research/`)
+#### Supporting Research (`research/`)
 
-- `research-player-guild-behavior.md` - Player research informing design
-- `research-competitive-guild-systems.md` - Analysis of existing solutions
+- `research/market-research/mmorpg-monetization-2024.md` - Market analysis informing monetization design
+- `research/topics/player-guild-behavior.md` - Player research informing design
+- `research/topics/competitive-guild-systems.md` - Analysis of existing solutions
 
 ## Document Linking and Cross-References
 
@@ -139,7 +140,7 @@ This feature touches multiple categories and demonstrates the interconnected nat
 See also: [Player Progression System](../gameplay/spec-player-progression-system.md)
 
 <!-- Link to research that informed this design -->
-Based on: [MMORPG Market Analysis 2024](../research/research-market-mmorpg-analysis-2024.md)
+Based on: [MMORPG Market Analysis 2024](../research/market-research/mmorpg-analysis-2024.md)
 
 <!-- Link to technical requirements -->
 Technical requirements: [Guild Infrastructure](../systems/tdd-guild-infrastructure.md)
@@ -228,7 +229,7 @@ Issue completed and ready for review.
 @ProjectManager 
 
 ### Changes Made
-- Completed comprehensive market analysis in `docs/research/mmorpg-monetization-2024.md`
+- Completed comprehensive market analysis in `research/market-research/mmorpg-monetization-2024.md`
 - Added competitive pricing analysis section
 - Updated research summary with key recommendations
 

@@ -26,6 +26,20 @@ build/
 node_modules/
 *.log
 
+# .NET Build Artifacts
+bin/
+obj/
+*.dll
+*.pdb
+*.cache
+*.suo
+*.user
+*.userprefs
+*.suo
+TestResults/
+[Bb]in/
+[Oo]bj/
+
 # Large Asset Files (use Git LFS instead)
 *.psd
 *.ai
@@ -62,3 +76,16 @@ package/
 .runner/
 runner-*
 *.tar.gz
+
+# .NET Build Artifacts
+bin/
+obj/
+*.user
+*.suo
+*.cache
+TestResults/
+*.trx
+*.coverage
+*.nupkg
+*.snupkg
+packages/

@@ -695,4 +695,490 @@ biomes = planet.biomes.get_statistics()
 print(f"Ocean coverage: {biomes['Ocean']['coverage']:.1%}")
 ```
 
+### C# SDK Usage
+
+```csharp
+using BlueMarble.Planet.SDK;
+
+var client = new PlanetAPIClient(new PlanetAPIConfig
+{
+    BaseUrl = "https://api.bluemarble.design/v1",
+    ApiKey = "your-api-key"
+});
+
+// Generate a planet
+var request = new PlanetGenerationRequest
+{
+    Config = new PlanetaryConfig
+    {
+        RadiusMeters = 6371000,
+        PlateCount = 12,
+        OceanCoverage = 0.71,
+        Seed = 12345,
+        Climate = new ClimateParameters
+        {
+            GlobalTemperature = 15.0,
+            TemperatureVariation = 40.0,
+            PrecipitationBase = 1000.0
+        }
+    },
+    Options = new GenerationOptions
+    {
+        GenerateBiomes = true,
+        ApplyProjection = ProjectionType.Equirectangular
+    }
+};
+
+var task = await client.Planet.GenerateAsync(request);
+
+// Poll for completion
+PlanetGenerationResult result;
+do
+{
+    await Task.Delay(TimeSpan.FromSeconds(30));
+    result = await client.Planet.GetGenerationStatusAsync(task.TaskId);
+    Console.WriteLine($"Progress: {result.Progress.Percentage}%");
+} while (result.Status != GenerationStatus.Completed);
+
+// Download planet data
+var geoPackage = await client.Planet.DownloadAsync(
+    result.PlanetId, 
+    DownloadFormat.GeoPackage
+);
+
+await File.WriteAllBytesAsync("planet.gpkg", geoPackage);
+
+// Query specific biomes
+var tropicalForests = await client.Planet.GetPolygonsAsync(
+    result.PlanetId,
+    new PolygonQueryOptions
+    {
+        BiomeType = BiomeType.TropicalRainforest,
+        Projection = ProjectionType.Robinson,
+        SimplificationTolerance = 100 // meters
+    }
+);
+```
+
+### cURL Examples
+
+#### Generate a Planet
+
+```bash
+curl -X POST https://api.bluemarble.design/v1/planet/generate \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "config": {
+      "name": "Test Planet",
+      "radiusMeters": 6371000,
+      "plateCount": 12,
+      "oceanCoverage": 0.71,
+      "seed": 12345
+    },
+    "options": {
+      "generateBiomes": true,
+      "applyProjection": "equirectangular"
+    }
+  }'
+```
+
+#### Check Generation Status
+
+```bash
+curl https://api.bluemarble.design/v1/planet/generate/status/planet-gen-8f4a2c1d \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+#### Get Planet Data with Specific Projection
+
+```bash
+curl https://api.bluemarble.design/v1/planet/planet-12345-abcdef/polygons?projection=mercator&format=geojson \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -o planet_data.json
+```
+
+#### Apply Different Projection
+
+```bash
+curl -X POST https://api.bluemarble.design/v1/planet/planet-12345-abcdef/projection/robinson \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "parameters": {
+      "centralMeridian": -90.0
+    }
+  }'
+```
+
+#### Download Planet GeoPackage
+
+```bash
+curl https://api.bluemarble.design/v1/planet/planet-12345-abcdef/download?format=geopackage \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -o my_planet.gpkg
+```
+
+## Common Integration Patterns
+
+### Pattern 1: Generate and Monitor
+
+```javascript
+async function generatePlanetWithMonitoring(config) {
+    const api = new BlueMarblePlanetAPI({ apiKey: 'your-key' });
+    
+    // Start generation
+    const task = await api.planet.generate({ config });
+    console.log(`Generation started: ${task.taskId}`);
+    
+    // Set up progress monitoring
+    const progressInterval = setInterval(async () => {
+        const status = await api.planet.getGenerationStatus(task.taskId);
+        
+        console.log(`Stage: ${status.progress.currentStage}`);
+        console.log(`Progress: ${status.progress.percentage}%`);
+        
+        if (status.status === 'completed') {
+            clearInterval(progressInterval);
+            console.log(`Planet ready: ${status.result.planetId}`);
+            return status.result;
+        } else if (status.status === 'failed') {
+            clearInterval(progressInterval);
+            throw new Error(`Generation failed: ${status.error.message}`);
+        }
+    }, 30000); // Check every 30 seconds
+}
+```
+
+### Pattern 2: Batch Planet Generation
+
+```python
+import asyncio
+from bluemarble_planet import PlanetAPI
+
+async def generate_multiple_planets(configurations):
+    api = PlanetAPI(api_key='your-key')
+    
+    # Start all generations in parallel
+    tasks = []
+    for config in configurations:
+        task = await api.planet.generate(config=config)
+        tasks.append(task)
+    
+    # Wait for all to complete
+    results = []
+    for task in tasks:
+        while not task.is_complete():
+            await asyncio.sleep(30)
+        results.append(task.result())
+    
+    return results
+
+# Usage
+configs = [
+    {'radius_meters': 3000000, 'plate_count': 8, 'seed': 1},
+    {'radius_meters': 6371000, 'plate_count': 12, 'seed': 2},
+    {'radius_meters': 10000000, 'plate_count': 20, 'seed': 3}
+]
+
+planets = asyncio.run(generate_multiple_planets(configs))
+```
+
+### Pattern 3: Compare Different Projections
+
+```csharp
+public async Task<ProjectionComparison> CompareProjections(
+    string planetId, 
+    params ProjectionType[] projections)
+{
+    var client = new PlanetAPIClient(config);
+    var results = new List<ProjectionData>();
+    
+    foreach (var projection in projections)
+    {
+        var data = await client.Planet.GetPolygonsAsync(planetId, new PolygonQueryOptions
+        {
+            Projection = projection,
+            Format = DataFormat.GeoJSON
+        });
+        
+        results.Add(new ProjectionData
+        {
+            Type = projection,
+            Data = data,
+            Metadata = await client.Projections.GetPropertiesAsync(projection)
+        });
+    }
+    
+    return new ProjectionComparison
+    {
+        PlanetId = planetId,
+        Projections = results,
+        Comparison = AnalyzeDistortionPatterns(results)
+    };
+}
+```
+
+## Error Handling Best Practices
+
+### Common Error Responses
+
+#### 400 Bad Request - Invalid Configuration
+```json
+{
+  "error": {
+    "code": "INVALID_CONFIG",
+    "message": "Invalid planet configuration",
+    "details": {
+      "field": "plateCount",
+      "value": 2,
+      "constraint": "Must be between 3 and 50"
+    }
+  }
+}
+```
+
+#### 429 Too Many Requests
+```json
+{
+  "error": {
+    "code": "RATE_LIMIT_EXCEEDED",
+    "message": "Too many generation requests",
+    "retryAfter": 300,
+    "limit": {
+      "maxConcurrent": 5,
+      "currentActive": 5
+    }
+  }
+}
+```
+
+#### 500 Internal Server Error - Generation Failure
+```json
+{
+  "error": {
+    "code": "GENERATION_FAILED",
+    "message": "Planet generation encountered an error",
+    "details": {
+      "stage": "classifying_biomes",
+      "reason": "Out of memory during biome classification",
+      "suggestion": "Try reducing plate count or planet radius"
+    },
+    "supportId": "err-12345-abc"
+  }
+}
+```
+
+### Error Handling Example
+
+```javascript
+async function generatePlanetWithRetry(config, maxRetries = 3) {
+    const api = new BlueMarblePlanetAPI({ apiKey: 'your-key' });
+    let attempt = 0;
+    
+    while (attempt < maxRetries) {
+        try {
+            const task = await api.planet.generate({ config });
+            const result = await task.waitForCompletion();
+            return result;
+        } catch (error) {
+            attempt++;
+            
+            if (error.code === 'RATE_LIMIT_EXCEEDED') {
+                const waitTime = error.retryAfter || 60;
+                console.log(`Rate limited. Waiting ${waitTime}s...`);
+                await sleep(waitTime * 1000);
+                continue;
+            }
+            
+            if (error.code === 'GENERATION_FAILED') {
+                if (error.details.reason === 'Out of memory') {
+                    // Reduce complexity for next attempt
+                    config.plateCount = Math.max(3, config.plateCount - 2);
+                    console.log(`Reducing plate count to ${config.plateCount}`);
+                    continue;
+                }
+            }
+            
+            // Unrecoverable error
+            throw error;
+        }
+    }
+    
+    throw new Error(`Failed after ${maxRetries} attempts`);
+}
+```
+
+## Performance Optimization Tips
+
+### 1. Use Appropriate Projection for Your Use Case
+
+```javascript
+// For web mapping - use Mercator
+const webData = await api.planet.getPolygons(planetId, {
+    projection: 'mercator',
+    simplification: 100 // 100m tolerance
+});
+
+// For statistical analysis - use equal-area projection
+const analysisData = await api.planet.getPolygons(planetId, {
+    projection: 'mollweide',
+    simplification: 1000 // Coarser for faster processing
+});
+```
+
+### 2. Request Only Needed Biomes
+
+```python
+# Don't request all data if you only need specific biomes
+oceans = await api.planet.get_polygons(
+    planet_id,
+    biome='Ocean',
+    simplification=500
+)
+
+forests = await api.planet.get_polygons(
+    planet_id,
+    biome=['TropicalRainforest', 'TemperateForest', 'BorealForest'],
+    simplification=200
+)
+```
+
+### 3. Cache Planet Data Locally
+
+```csharp
+public class CachedPlanetClient
+{
+    private readonly IMemoryCache _cache;
+    private readonly PlanetAPIClient _client;
+    
+    public async Task<PlanetData> GetPlanetDataAsync(
+        string planetId, 
+        ProjectionType projection)
+    {
+        var cacheKey = $"planet:{planetId}:{projection}";
+        
+        if (_cache.TryGetValue(cacheKey, out PlanetData cached))
+        {
+            return cached;
+        }
+        
+        var data = await _client.Planet.GetPolygonsAsync(planetId, 
+            new PolygonQueryOptions { Projection = projection });
+        
+        _cache.Set(cacheKey, data, TimeSpan.FromHours(24));
+        return data;
+    }
+}
+```
+
+## Troubleshooting Guide
+
+### Issue: Generation Takes Too Long
+
+**Symptoms:** Planet generation exceeds 15 minutes
+
+**Solutions:**
+1. Reduce `plateCount` (try 8-12 instead of 20+)
+2. Use simpler climate models
+3. Check server load via status endpoint
+4. Consider generating smaller planet for testing
+
+**Example:**
+```bash
+# Check current server load
+curl https://api.bluemarble.design/v1/status \
+  -H "Authorization: Bearer YOUR_API_KEY"
+
+# Response shows active generations
+{
+  "activeGenerations": 4,
+  "queuedGenerations": 2,
+  "averageCompletionTime": "00:06:30"
+}
+```
+
+### Issue: Invalid Polygon Topology Errors
+
+**Symptoms:** API returns polygons with `isValid: false`
+
+**Solutions:**
+1. Request simplified geometry
+2. Use appropriate projection for your region
+3. Check for date line crossing issues
+
+**Example:**
+```javascript
+// Request with topology validation
+const data = await api.planet.getPolygons(planetId, {
+    projection: 'robinson',
+    validateTopology: true,  // Server will fix invalid geometries
+    simplification: 100
+});
+```
+
+### Issue: Biome Distribution Unrealistic
+
+**Symptoms:** Ocean coverage significantly differs from configured value
+
+**Solutions:**
+1. Verify climate parameters are within reasonable ranges
+2. Check seed value (some seeds may produce unusual distributions)
+3. Increase plate count for more realistic distribution
+
+**Example:**
+```python
+# Generate with validated climate
+config = {
+    'radius_meters': 6371000,
+    'plate_count': 12,
+    'ocean_coverage': 0.71,
+    'seed': 42,
+    'climate': {
+        'global_temperature': 15.0,  # 10-20°C recommended
+        'temperature_variation': 40.0,  # 30-50°C recommended
+        'precipitation_base': 1000.0,  # 800-1200mm recommended
+        'seasonal_variation': 0.2  # 0.1-0.3 recommended
+    }
+}
+```
+
+## Rate Limits and Quotas
+
+| Tier | Concurrent Generations | Daily Generations | Max Planet Size | API Calls/min |
+|------|----------------------|-------------------|----------------|---------------|
+| Free | 1 | 5 | 3000 km radius | 60 |
+| Developer | 3 | 50 | 6371 km radius | 300 |
+| Professional | 10 | 500 | 10000 km radius | 1000 |
+| Enterprise | 50 | Unlimited | Unlimited | 5000 |
+
+## Webhooks
+
+Configure webhooks to receive notifications about generation events:
+
+```bash
+curl -X POST https://api.bluemarble.design/v1/webhooks \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "url": "https://your-domain.com/webhook/planet-events",
+    "events": [
+      "planet.generation.started",
+      "planet.generation.completed",
+      "planet.generation.failed"
+    ],
+    "secret": "your-webhook-secret"
+  }'
+```
+
+## Related Documentation
+
+- [Feature Specification](spec-spherical-planet-generation.md) - Complete requirements
+- [Technical Implementation](tech-spherical-planet-implementation.md) - Implementation details
+- [Quick Reference](quick-reference-spherical-planet.md) - Fast lookup guide
+- [Visual Guide](visual-guide-map-projections.md) - Projection visualizations
+- [Developer Guide](developer-guide-spherical-planet-generation.md) - Step-by-step tutorials
+
+---
+
 This API specification provides comprehensive coverage of all spherical planet generation capabilities while maintaining RESTful design principles and integration with BlueMarble's existing infrastructure.
