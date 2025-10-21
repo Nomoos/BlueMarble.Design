@@ -17,6 +17,7 @@ This step provides detailed implementation guides, integration strategies, and d
 ### Core Implementation Guides
 - [Implementation Guide](implementation-guide.md) - Step-by-step deployment guide for compression systems
 - [Octree + Grid Hybrid Phase 1 Implementation](octree-grid-hybrid-phase1-implementation.md) - Foundation phase for hybrid architecture
+- [Octree + Grid Hybrid Phase 2 Implementation](octree-grid-hybrid-phase2-implementation.md) - Core functionality with automatic routing
 - [Delta Overlay Implementation](delta-overlay-implementation.md) - Change tracking and overlay systems
 - [Multi-Resolution Blending Implementation](multi-resolution-blending-implementation.md) - Technical implementation specifications
 - [Material Inheritance Implementation](material-inheritance-implementation.md) - Quality inheritance through processing chains

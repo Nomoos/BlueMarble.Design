@@ -1031,6 +1031,7 @@ Phase 2 will build on this foundation by:
 
 - [Octree + Grid Hybrid Architecture](../step-3-architecture-design/octree-grid-hybrid-architecture.md) - Complete architecture design
 - [Octree Optimization Guide](../step-3-architecture-design/octree-optimization-guide.md) - Foundation research
+- [Phase 2 Implementation](octree-grid-hybrid-phase2-implementation.md) - Core functionality building on Phase 1
 - [Material Inheritance Implementation](material-inheritance-implementation.md) - Related implementation pattern
 
 ## Conclusion
