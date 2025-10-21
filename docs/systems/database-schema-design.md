@@ -435,6 +435,9 @@ CREATE INDEX idx_friendships_character2 ON friendships(character_id_2, status);
 
 ### 6. Quests and Achievements
 
+> **Comprehensive Documentation:** See [Achievement and Reputation System Design](achievement-reputation-system.md)
+> for complete system architecture, integration patterns, and reward mechanics.
+
 #### Quests Master Table
 
 ```sql
@@ -449,11 +452,14 @@ CREATE TABLE quests_master (
     objectives JSONB NOT NULL,
     is_repeatable BOOLEAN DEFAULT FALSE,
     cooldown_seconds INT,
-    CONSTRAINT valid_quest_type CHECK (quest_type IN ('main', 'side', 'daily', 'weekly', 'event'))
+    faction_id INT,  -- Optional faction association
+    reputation_reward INT DEFAULT 0,  -- Reputation gained on completion
+    CONSTRAINT valid_quest_type CHECK (quest_type IN ('main', 'side', 'daily', 'weekly', 'event', 'faction'))
 );
 
 CREATE INDEX idx_quests_type ON quests_master(quest_type);
 CREATE INDEX idx_quests_level ON quests_master(required_level);
+CREATE INDEX idx_quests_faction ON quests_master(faction_id);
 ```
 
 #### Character Quests Table
@@ -481,18 +487,57 @@ CREATE INDEX idx_character_quests_quest ON character_quests(quest_id);
 
 ```sql
 CREATE TABLE achievements_master (
-    achievement_id INT PRIMARY KEY,
+    achievement_id VARCHAR(64) PRIMARY KEY,
     achievement_name VARCHAR(200) NOT NULL,
     description TEXT,
     category VARCHAR(50) NOT NULL,
+    tier INT NOT NULL DEFAULT 1,
     points INT NOT NULL DEFAULT 10,
     icon_url VARCHAR(500),
     criteria JSONB NOT NULL,
+    target_progress INT NOT NULL DEFAULT 1,
     is_hidden BOOLEAN DEFAULT FALSE,
-    CONSTRAINT positive_points CHECK (points > 0)
+    is_repeatable BOOLEAN DEFAULT FALSE,
+    cooldown_days INT,
+    rarity VARCHAR(32) DEFAULT 'COMMON',
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    CONSTRAINT positive_points CHECK (points > 0),
+    CONSTRAINT valid_tier CHECK (tier BETWEEN 1 AND 5),
+    CONSTRAINT valid_category CHECK (category IN ('combat', 'exploration', 'social', 'crafting', 'collection', 'economic', 'event')),
+    CONSTRAINT valid_rarity CHECK (rarity IN ('COMMON', 'UNCOMMON', 'RARE', 'EPIC', 'LEGENDARY'))
 );
 
 CREATE INDEX idx_achievements_category ON achievements_master(category);
+CREATE INDEX idx_achievements_tier ON achievements_master(tier);
+CREATE INDEX idx_achievements_rarity ON achievements_master(rarity);
+```
+
+#### Achievement Prerequisites Table
+
+```sql
+CREATE TABLE achievement_prerequisites (
+    achievement_id VARCHAR(64) NOT NULL REFERENCES achievements_master(achievement_id) ON DELETE CASCADE,
+    prerequisite_id VARCHAR(64) NOT NULL REFERENCES achievements_master(achievement_id) ON DELETE CASCADE,
+    PRIMARY KEY (achievement_id, prerequisite_id)
+);
+
+CREATE INDEX idx_achievement_prereqs_achievement ON achievement_prerequisites(achievement_id);
+```
+
+#### Achievement Rewards Table
+
+```sql
+CREATE TABLE achievement_rewards (
+    reward_id BIGSERIAL PRIMARY KEY,
+    achievement_id VARCHAR(64) NOT NULL REFERENCES achievements_master(achievement_id) ON DELETE CASCADE,
+    reward_type VARCHAR(32) NOT NULL,
+    reward_amount INT,
+    reward_item_id INT,
+    reward_unlock_id VARCHAR(64),
+    CONSTRAINT valid_reward_type CHECK (reward_type IN ('xp', 'currency', 'item', 'title', 'cosmetic', 'stat_bonus', 'access', 'reputation', 'skill_point'))
+);
+
+CREATE INDEX idx_achievement_rewards_achievement ON achievement_rewards(achievement_id);
 ```
 
 #### Character Achievements Table
@@ -500,13 +545,151 @@ CREATE INDEX idx_achievements_category ON achievements_master(category);
 ```sql
 CREATE TABLE character_achievements (
     character_id BIGINT NOT NULL REFERENCES characters(character_id) ON DELETE CASCADE,
-    achievement_id INT NOT NULL REFERENCES achievements_master(achievement_id),
-    unlocked_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    progress JSONB DEFAULT '{}'::jsonb,
+    achievement_id VARCHAR(64) NOT NULL REFERENCES achievements_master(achievement_id),
+    current_progress INT DEFAULT 0,
+    completed BOOLEAN DEFAULT FALSE,
+    unlocked_at TIMESTAMP WITH TIME ZONE,
+    progress_data JSONB DEFAULT '{}'::jsonb,
+    completion_count INT DEFAULT 0,  -- For repeatable achievements
+    last_completed_at TIMESTAMP WITH TIME ZONE,
     PRIMARY KEY (character_id, achievement_id)
 );
 
+CREATE INDEX idx_character_achievements_character ON character_achievements(character_id, completed);
 CREATE INDEX idx_character_achievements_unlocked ON character_achievements(unlocked_at DESC);
+CREATE INDEX idx_character_achievements_category ON character_achievements(achievement_id) 
+    WHERE completed = TRUE;
+```
+
+### 6.1. Reputation Systems
+
+> **Note:** The faction system is being migrated to use the [Taxonomy Classification System](taxonomy-classification-system.md) for more flexible hierarchical organization. The schema below represents the legacy implementation and will be updated to use taxa.
+
+#### Factions Table
+
+```sql
+CREATE TABLE factions (
+    faction_id INT PRIMARY KEY,
+    faction_name VARCHAR(200) NOT NULL,
+    description TEXT,
+    icon_url VARCHAR(500),
+    faction_type VARCHAR(50) NOT NULL,
+    parent_faction_id INT REFERENCES factions(faction_id),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    CONSTRAINT valid_faction_type CHECK (faction_type IN ('major', 'minor', 'guild', 'organization'))
+);
+
+CREATE INDEX idx_factions_type ON factions(faction_type);
+CREATE INDEX idx_factions_parent ON factions(parent_faction_id);
+```
+
+#### Faction Relationships Table
+
+```sql
+CREATE TABLE faction_relationships (
+    faction_id INT NOT NULL REFERENCES factions(faction_id) ON DELETE CASCADE,
+    related_faction_id INT NOT NULL REFERENCES factions(faction_id) ON DELETE CASCADE,
+    relationship_type VARCHAR(32) NOT NULL,
+    influence_factor DECIMAL(3,2) DEFAULT 0.5,
+    PRIMARY KEY (faction_id, related_faction_id),
+    CONSTRAINT valid_relationship CHECK (relationship_type IN ('ALLIED', 'HOSTILE', 'NEUTRAL')),
+    CONSTRAINT valid_influence CHECK (influence_factor BETWEEN 0 AND 1),
+    CONSTRAINT no_self_relationship CHECK (faction_id != related_faction_id)
+);
+
+CREATE INDEX idx_faction_relationships_faction ON faction_relationships(faction_id);
+```
+
+#### Character Faction Reputation Table
+
+```sql
+CREATE TABLE character_faction_reputation (
+    character_id BIGINT NOT NULL REFERENCES characters(character_id) ON DELETE CASCADE,
+    faction_id INT NOT NULL REFERENCES factions(faction_id) ON DELETE CASCADE,
+    reputation INT DEFAULT 0,
+    last_updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    PRIMARY KEY (character_id, faction_id),
+    CONSTRAINT reputation_range CHECK (reputation BETWEEN -10000 AND 10000)
+);
+
+CREATE INDEX idx_character_faction_rep_character ON character_faction_reputation(character_id);
+CREATE INDEX idx_character_faction_rep_faction ON character_faction_reputation(faction_id);
+CREATE INDEX idx_character_faction_rep_value ON character_faction_reputation(reputation DESC);
+```
+
+#### Reputation History Table
+
+```sql
+CREATE TABLE reputation_history (
+    history_id BIGSERIAL PRIMARY KEY,
+    character_id BIGINT NOT NULL REFERENCES characters(character_id) ON DELETE CASCADE,
+    faction_id INT NOT NULL REFERENCES factions(faction_id) ON DELETE CASCADE,
+    change_amount INT NOT NULL,
+    reason VARCHAR(512),
+    event_type VARCHAR(50),
+    timestamp TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    CONSTRAINT valid_event_type CHECK (event_type IN ('quest', 'trade', 'combat', 'donation', 'event', 'admin', 'spread'))
+);
+
+CREATE INDEX idx_reputation_history_character ON reputation_history(character_id, faction_id);
+CREATE INDEX idx_reputation_history_timestamp ON reputation_history(timestamp DESC);
+CREATE INDEX idx_reputation_history_faction ON reputation_history(faction_id);
+
+-- Partitioning by timestamp for efficient historical queries
+-- ALTER TABLE reputation_history PARTITION BY RANGE (timestamp);
+```
+
+#### Player Trust Scores Table
+
+```sql
+CREATE TABLE player_trust_scores (
+    character_id BIGINT PRIMARY KEY REFERENCES characters(character_id) ON DELETE CASCADE,
+    overall_score INT DEFAULT 0,
+    trading_reputation INT DEFAULT 100,
+    quest_completion_rate INT DEFAULT 100,
+    guild_contribution INT DEFAULT 100,
+    community_reports INT DEFAULT 200,
+    helpfulness INT DEFAULT 0,
+    total_trades INT DEFAULT 0,
+    successful_trades INT DEFAULT 0,
+    total_reports INT DEFAULT 0,
+    verified_reports INT DEFAULT 0,
+    trust_tier VARCHAR(32) DEFAULT 'NEUTRAL',
+    account_age_days INT DEFAULT 0,
+    last_calculated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    CONSTRAINT valid_trust_tier CHECK (trust_tier IN ('UNTRUSTED', 'NEUTRAL', 'RELIABLE', 'TRUSTED', 'EXEMPLARY')),
+    CONSTRAINT valid_overall_score CHECK (overall_score BETWEEN 0 AND 1000),
+    CONSTRAINT valid_component_scores CHECK (
+        trading_reputation BETWEEN 0 AND 200 AND
+        quest_completion_rate BETWEEN 0 AND 200 AND
+        guild_contribution BETWEEN 0 AND 200 AND
+        community_reports BETWEEN 0 AND 200 AND
+        helpfulness BETWEEN 0 AND 200
+    )
+);
+
+CREATE INDEX idx_trust_scores_overall ON player_trust_scores(overall_score DESC);
+CREATE INDEX idx_trust_scores_tier ON player_trust_scores(trust_tier);
+CREATE INDEX idx_trust_scores_trading ON player_trust_scores(trading_reputation DESC);
+```
+
+#### Guild Reputation Table
+
+```sql
+CREATE TABLE guild_reputation (
+    guild_id BIGINT PRIMARY KEY REFERENCES guilds(guild_id) ON DELETE CASCADE,
+    reputation_score INT DEFAULT 0,
+    quest_completion_rate DECIMAL(5,2) DEFAULT 0.00,
+    event_participation INT DEFAULT 0,
+    community_contribution INT DEFAULT 0,
+    pvp_ranking INT DEFAULT 0,
+    crafting_reputation INT DEFAULT 0,
+    total_achievements INT DEFAULT 0,
+    last_updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    CONSTRAINT valid_completion_rate CHECK (quest_completion_rate BETWEEN 0 AND 100)
+);
+
+CREATE INDEX idx_guild_reputation_score ON guild_reputation(reputation_score DESC);
 ```
 
 ### 7. Game Events and Logs
