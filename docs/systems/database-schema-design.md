@@ -563,6 +563,8 @@ CREATE INDEX idx_character_achievements_category ON character_achievements(achie
 
 ### 6.1. Reputation Systems
 
+> **Note:** The faction system is being migrated to use the [Taxonomy Classification System](taxonomy-classification-system.md) for more flexible hierarchical organization. The schema below represents the legacy implementation and will be updated to use taxa.
+
 #### Factions Table
 
 ```sql
