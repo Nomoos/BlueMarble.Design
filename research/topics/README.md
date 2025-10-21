@@ -39,6 +39,7 @@ Good topic files:
 - `procedural-generation-trees.md` - Specific technique
 - `player-motivation-self-determination.md` - Focused concept
 - `combat-pacing-analysis.md` - Single system analysis
+- `gender-macro-micro-aiming-preferences.md` - Research on gameplay control preferences across demographics
 
 Too broad (should be split):
 
