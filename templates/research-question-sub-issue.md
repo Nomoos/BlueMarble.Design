@@ -82,9 +82,9 @@
 ## Expected Deliverables
 
 ### Research Outputs
-- [ ] **Research Report**: `docs/research/[research-area-name]-analysis.md`
+- [ ] **Research Report**: `research/topics/[research-area-name]-analysis.md` or `research/[research-area]/[report-name].md`
 - [ ] **Technical Specification**: `docs/systems/spec-[feature-name].md`
-- [ ] **Implementation Guide**: `research/spatial-data-storage/[area]-implementation-guide.md`
+- [ ] **Implementation Guide**: `research/[research-area]/[area]-implementation-guide.md`
 - [ ] **Performance Analysis**: Benchmark results and optimization recommendations
 
 ### Code Artifacts

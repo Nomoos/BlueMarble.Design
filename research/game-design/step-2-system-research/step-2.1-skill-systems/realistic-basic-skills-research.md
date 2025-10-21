@@ -10,6 +10,7 @@
 - [Assembly Skills System Research](assembly-skills-system-research.md)
 - [Crafting Interface Mockups](assets/crafting-interface-mockups.md)
 - [Skill Caps and Decay Research](skill-caps-and-decay-research.md)
+- [Cursor Precision vs. Action Queueing Research](cursor-precision-vs-action-queueing-research.md)
 
 ## Executive Summary
 

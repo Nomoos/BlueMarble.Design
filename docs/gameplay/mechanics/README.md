@@ -14,6 +14,18 @@ Mechanics documents provide formal specifications including:
 
 ## Available Documents
 
+### Core Game Systems
+
+- **[Material Economy System](./material-economy-system.md)** - Complete material flow, sources, sinks, and economic balance
+- **[Mining and Resource Extraction](./mining-resource-extraction.md)** - Comprehensive resource discovery and extraction mechanics
+- **[Building and Construction](./building-construction.md)** - Complete construction and building systems
+- **[Terraforming](./terraforming.md)** - Landscape modification and environmental engineering
+- **[Trade System](./trade-system.md)** - Player-to-player and NPC trading mechanics
+- **[Anti-Exploitation](./anti-exploitation.md)** - Protection systems and security mechanisms
+### Social Interaction Systems
+
+- **[Social Interaction Mechanics](./social-interaction-mechanics.md)** - Player-facing mechanics for settlements, diplomacy, and federations
+
 ### Crafting System
 
 - **[Crafting Mechanics Overview](./crafting-mechanics-overview.md)** - Complete system overview
