@@ -161,6 +161,197 @@ The suitability evaluation process considers:
 
 ## Terrain Modification Systems
 
+### Real-Time Terrain Modification
+
+**Interactive Terrain Alteration**: Players can modify terrain in real-time through digging, excavation, and construction activities with immediate visual feedback and gradual environmental consequences.
+
+#### Basic Terrain Operations
+
+**Digging and Excavation**: Small to medium-scale terrain modifications for practical purposes.
+
+**Operation Types**:
+
+1. **Surface Excavation**: Removal of topsoil and surface materials
+
+   - **Use Cases**: Building foundations, road construction, canal digging
+   - **Tool Requirements**: Hand tools (slow) to heavy machinery (fast)
+   - **Volume Capacity**: Limited by equipment capability and terrain hardness
+   - **Time Scale**: Minutes to hours for basic operations
+
+2. **Underground Excavation**: Creating tunnels, basements, and mining shafts
+
+   - **Use Cases**: Mine tunnels, underground storage, subway systems
+   - **Structural Concerns**: Requires support systems based on soil/rock stability
+   - **Safety Requirements**: Ventilation, drainage, and collapse prevention
+   - **Time Scale**: Hours to days depending on depth and volume
+
+3. **Land Clearing**: Removing vegetation and preparing surfaces
+
+   - **Use Cases**: Agricultural land, construction sites, infrastructure
+   - **Environmental Impact**: Immediate ecosystem disruption, erosion risk
+   - **Resource Generation**: Wood, organic materials, topsoil
+   - **Time Scale**: Hours to days depending on area
+
+4. **Terrain Leveling**: Smoothing and grading land surfaces
+
+   - **Use Cases**: Construction sites, farming fields, transportation routes
+   - **Technical Requirements**: Surveying equipment, grading machinery
+   - **Material Movement**: Cut and fill operations with material balance
+   - **Time Scale**: Days to weeks for large areas
+
+#### Terrain Modification Algorithms
+
+**Spatial Propagation System**: Changes to terrain propagate to adjacent areas based on physical principles.
+
+**Core Algorithm Components**:
+
+```python
+class TerrainModificationEngine:
+    def modify_terrain(self, location, operation_type, volume, depth):
+        # 1. Validate modification feasibility
+        if not self.check_geological_feasibility(location, depth):
+            return ModificationResult.BLOCKED
+        
+        # 2. Calculate immediate changes
+        immediate_changes = self.calculate_direct_modification(
+            location, operation_type, volume, depth
+        )
+        
+        # 3. Propagate changes to neighboring areas
+        neighboring_effects = self.propagate_terrain_changes(
+            location, immediate_changes
+        )
+        
+        # 4. Calculate environmental impacts
+        ecosystem_impact = self.assess_ecosystem_impact(
+            location, immediate_changes, neighboring_effects
+        )
+        
+        # 5. Update economic factors
+        economic_effects = self.calculate_economic_impact(
+            location, operation_type, ecosystem_impact
+        )
+        
+        # 6. Apply all changes
+        self.apply_terrain_changes(immediate_changes, neighboring_effects)
+        self.schedule_delayed_effects(location, ecosystem_impact)
+        
+        return ModificationResult(
+            immediate_changes,
+            neighboring_effects,
+            ecosystem_impact,
+            economic_effects
+        )
+```
+
+**Propagation Mechanics**:
+
+1. **Slope Stability Analysis**: Modifications affecting slope angles trigger stability recalculation
+
+   - **Critical Angle**: Excavations creating slopes steeper than material's angle of repose
+   - **Cascade Effects**: Unstable slopes trigger gradual material movement
+   - **Time Delay**: Natural settling occurs over hours to months
+
+2. **Hydrological Adjustments**: Changes affecting water flow patterns
+
+   - **Drainage Patterns**: Water follows modified topography
+   - **Erosion Calculations**: Exposed soil subject to water and wind erosion
+   - **Groundwater Impact**: Excavations below water table require drainage
+
+3. **Structural Stress Distribution**: Underground modifications affect surrounding geology
+
+   - **Load Redistribution**: Removed material shifts stress to adjacent areas
+   - **Settlement Risk**: Nearby structures may experience foundation shifting
+   - **Radius of Influence**: Based on excavation depth and material properties
+
+#### Impact Propagation Systems
+
+**Ecosystem Impact Assessment**:
+
+**Immediate Effects** (0-24 hours):
+
+- **Habitat Destruction**: Direct removal of flora and fauna habitats
+- **Noise and Disturbance**: Wildlife displacement from operation area
+- **Dust and Particulates**: Air quality impact in immediate vicinity
+- **Soil Exposure**: Increased erosion vulnerability
+
+**Short-Term Effects** (Days to weeks):
+
+- **Species Migration**: Local fauna relocate to adjacent areas
+- **Erosion Establishment**: Rain and wind begin moving exposed soil
+- **Vegetation Die-Off**: Plants affected by changed drainage or sunlight
+- **Water Quality Changes**: Sediment runoff affects nearby water bodies
+
+**Long-Term Effects** (Months to years):
+
+- **Ecosystem Adaptation**: New species colonize modified terrain
+- **Drainage Pattern Stabilization**: New water flow patterns establish
+- **Soil Recovery**: Erosion control and natural revegetation
+- **Climate Microchanges**: Large modifications affect local weather patterns
+
+**Economic Impact Propagation**:
+
+**Resource Availability Changes**:
+
+```python
+def calculate_resource_impact(location, modification_type):
+    impacts = {
+        "construction_materials": 0,
+        "agricultural_land": 0,
+        "mining_access": 0,
+        "property_values": 0
+    }
+    
+    # Excavation generates materials
+    if modification_type == "excavation":
+        extracted_volume = calculate_extracted_volume(location)
+        material_type = get_material_composition(location)
+        impacts["construction_materials"] = extracted_volume * material_value(material_type)
+    
+    # Land clearing enables agriculture
+    if modification_type == "land_clearing":
+        cleared_area = calculate_cleared_area(location)
+        soil_quality = assess_soil_fertility(location)
+        impacts["agricultural_land"] = cleared_area * soil_quality
+    
+    # Deep excavation may expose resources
+    if modification_type == "deep_excavation":
+        exposed_deposits = scan_for_mineral_deposits(location)
+        impacts["mining_access"] = evaluate_deposit_value(exposed_deposits)
+    
+    # Property value changes affect neighboring areas
+    neighbor_locations = get_neighboring_parcels(location)
+    for neighbor in neighbor_locations:
+        impacts["property_values"] += calculate_proximity_effect(
+            neighbor, modification_type, distance_from(location, neighbor)
+        )
+    
+    return impacts
+```
+
+**Neighboring Area Effects**:
+
+1. **Adjacent Property Impact**:
+
+   - **Visual Changes**: Altered landscapes affect neighboring aesthetics
+   - **Noise Pollution**: Construction operations disrupt nearby activities
+   - **Accessibility Changes**: New roads or obstacles affect transportation
+   - **Property Value Shifts**: Positive or negative depending on modification type
+
+2. **Regional Market Effects**:
+
+   - **Material Availability**: Extracted materials enter local market
+   - **Labor Demand**: Operations create employment opportunities
+   - **Transportation Load**: Increased traffic affects infrastructure
+   - **Service Requirements**: Need for support services (fuel, maintenance, supplies)
+
+3. **Infrastructure Stress**:
+
+   - **Road Wear**: Heavy equipment damages transportation routes
+   - **Utility Demands**: Increased power and water consumption
+   - **Waste Generation**: Disposal requirements for excavated materials
+   - **Service Capacity**: Strain on local facilities and services
+
 ### Ecosystem Engineering
 
 **Large-Scale Terraforming**: Players can deliberately modify entire ecosystems at geological timescales.
@@ -213,13 +404,153 @@ Large-scale environmental modification projects with the following characteristi
 - **Landslide Risk**: Changed slope stability over 1-2 years
 - **Hydrological Changes**: Groundwater flow modifications over 5+ years
 
+### Building-Integrated Terrain Modification
+
+**Construction-Driven Terrain Changes**: Building placement automatically triggers necessary terrain modifications with realistic preparation sequences.
+
+#### Site Preparation Workflow
+
+**Automated Foundation Systems**:
+
+1. **Site Survey and Analysis**:
+
+   - Topographical scan identifies slope, soil type, and existing features
+   - Geological assessment determines foundation requirements
+   - Drainage analysis evaluates water management needs
+   - Cost estimation for required terrain modification
+
+2. **Preparation Sequence**:
+
+   - **Land Clearing**: Remove vegetation and surface obstacles
+   - **Excavation**: Dig foundations to required depth based on soil bearing capacity
+   - **Grading**: Level site to appropriate slope for drainage
+   - **Soil Stabilization**: Compact and reinforce foundation area if needed
+   - **Drainage Installation**: Create water management infrastructure
+
+3. **Material Management**:
+
+   - Excavated soil tracked for disposal or reuse
+   - Topsoil preservation for landscaping or agriculture
+   - Rock and debris classified for construction or waste
+   - Material transport affects local economy and infrastructure
+
+**Building Type Requirements**:
+
+```python
+BUILDING_TERRAIN_REQUIREMENTS = {
+    "small_house": {
+        "excavation_depth": 0.5,  # meters
+        "site_area": 100,  # square meters
+        "preparation_time": 2,  # days
+        "material_generated": 50  # cubic meters
+    },
+    "warehouse": {
+        "excavation_depth": 1.0,
+        "site_area": 500,
+        "preparation_time": 5,
+        "material_generated": 500
+    },
+    "mine_entrance": {
+        "excavation_depth": 10.0,
+        "site_area": 200,
+        "preparation_time": 15,
+        "material_generated": 2000,
+        "special_requirements": ["rock_stabilization", "drainage_system"]
+    },
+    "bridge": {
+        "excavation_depth": 5.0,
+        "site_area": 150,
+        "preparation_time": 20,
+        "material_generated": 750,
+        "special_requirements": ["bedrock_anchors", "water_management"]
+    }
+}
+```
+
+#### Terrain Restoration and Landscaping
+
+**Post-Construction Management**: Players can restore or enhance modified terrain.
+
+**Restoration Operations**:
+
+1. **Backfilling**: Replace excavated material to original elevation
+
+   - **Compaction Requirements**: Proper settling prevents future subsidence
+   - **Material Selection**: Use appropriate fill materials for intended use
+   - **Time Delay**: Settlement occurs over weeks to months
+
+2. **Revegetation**: Replanting to restore ecosystem
+
+   - **Soil Preparation**: Topsoil replacement and fertilization
+   - **Species Selection**: Native plants for ecosystem compatibility
+   - **Growth Timeline**: Months to years for mature vegetation
+   - **Maintenance Requirements**: Watering and care during establishment
+
+3. **Erosion Control**: Prevent soil loss on modified terrain
+
+   - **Vegetation Establishment**: Ground cover prevents erosion
+   - **Physical Barriers**: Retaining walls, terracing, or riprap
+   - **Drainage Management**: Control water flow to reduce erosion
+   - **Monitoring**: Track effectiveness and adjust as needed
+
 ### Terrain Modification Constraints
 
+**Realistic Limitations**: Physical, environmental, and social factors constrain modification activities.
+
+#### Physical Constraints
+
 1. **Geological Feasibility**: Modifications must be physically realistic
-2. **Environmental Impact**: Long-term consequences affect ecosystem stability
-3. **Technical Requirements**: Advanced modifications require specialized expertise
-4. **Collaborative Effort**: Large projects require multiple players or organizations
-5. **Resource Investment**: Significant material and time commitments
+
+   - **Material Hardness**: Rock types determine excavation difficulty and methods
+   - **Structural Stability**: Underground excavations require support systems
+   - **Water Table**: Excavations below groundwater level require pumping
+   - **Seismic Risks**: Fault zones restrict certain modification types
+
+2. **Equipment Limitations**: Available tools constrain modification scale
+
+   - **Tool Capability**: Hand tools vs. heavy machinery affects speed and volume
+   - **Access Requirements**: Large equipment needs transportation routes
+   - **Power Availability**: Electric or fuel-powered equipment requirements
+   - **Operator Skill**: Expertise affects efficiency and safety
+
+#### Environmental Constraints
+
+1. **Environmental Impact**: Long-term consequences affect ecosystem stability
+
+   - **Habitat Protection**: Endangered species areas restrict modifications
+   - **Erosion Risk**: Steep slopes and erodible soils limit excavation
+   - **Water Quality**: Sediment control required near water bodies
+   - **Air Quality**: Dust suppression in populated or sensitive areas
+
+2. **Seasonal Limitations**: Weather and climate affect operations
+
+   - **Freeze-Thaw Cycles**: Winter excavation challenging in cold regions
+   - **Wet Seasons**: Rain makes excavation difficult and increases erosion
+   - **Extreme Heat**: Equipment and worker limitations in high temperatures
+   - **Growing Seasons**: Agricultural timing affects land clearing schedules
+
+#### Social and Economic Constraints
+
+1. **Technical Requirements**: Advanced modifications require specialized expertise
+
+   - **Engineering Knowledge**: Complex projects need trained professionals
+   - **Safety Certifications**: Underground work requires special qualifications
+   - **Regulatory Compliance**: Permits and inspections for major modifications
+   - **Quality Standards**: Construction must meet safety and performance requirements
+
+2. **Collaborative Effort**: Large projects require multiple players or organizations
+
+   - **Labor Requirements**: Significant workforce for major operations
+   - **Coordination Complexity**: Multiple teams must synchronize activities
+   - **Resource Pooling**: Shared equipment and materials reduce individual cost
+   - **Skill Diversity**: Different specializations contribute to project success
+
+3. **Resource Investment**: Significant material and time commitments
+
+   - **Capital Requirements**: Equipment purchase or rental costs
+   - **Material Costs**: Explosives, support structures, drainage systems
+   - **Operating Expenses**: Fuel, maintenance, labor payments
+   - **Opportunity Costs**: Resources committed to modification unavailable for other uses
 
 ## Economic Impact Systems
 
@@ -322,6 +653,17 @@ Economic systems continuously process:
 - **Level of Detail Management**: Mining networks and terrain modifications simplified based on scale and zoom
 - **Efficient Caching**: Frequently accessed geological data cached for optimal performance
 - **Data Compression**: Advanced compression techniques for large-scale terrain modification data
+- **Spatial Propagation Optimization**: Impact calculations use radius-based culling to limit computational scope
+- **Deferred Effect Processing**: Long-term environmental changes calculated asynchronously in background
+- **Modification Delta Storage**: Only changes from procedural baseline stored to minimize data requirements
+
+**Terrain Modification Algorithm Requirements**:
+- **Voxel-based terrain representation**: Support for precise volume calculations and material tracking
+- **Neighbor influence graphs**: Efficient data structures for propagating changes to adjacent areas
+- **Physics simulation integration**: Slope stability, erosion, and drainage calculations
+- **Multi-threaded processing**: Parallel computation of independent terrain modification operations
+- **Undo/rollback systems**: Transaction-based modifications with ability to revert changes
+- **Collision detection**: Prevent modifications that conflict with existing structures or operations
 
 ## Implementation Roadmap
 
@@ -362,10 +704,17 @@ Economic systems continuously process:
 ### Phase 3: Advanced Gameplay Features (3-4 months)
 
 #### Terrain Modification Systems
-- Large-scale terraforming project planning and execution systems
-- Controlled geological process trigger mechanisms
-- Environmental impact assessment and mitigation planning tools
-- Collaborative mega-project coordination and management systems
+- **Real-time modification engine**: Basic digging, excavation, and land clearing operations
+- **Terrain propagation algorithms**: Spatial impact calculation for neighboring areas
+- **Building-integrated site preparation**: Automated foundation excavation and grading systems
+- **Material tracking systems**: Excavated material management and economic integration
+- **Environmental impact propagation**: Ecosystem and economic effect calculation and visualization
+- **Erosion and drainage simulation**: Dynamic water and soil movement systems
+- **Terrain restoration tools**: Backfilling, revegetation, and landscaping mechanics
+- **Large-scale terraforming project planning**: Continental-scale modification systems
+- **Controlled geological process triggers**: Seismic engineering and fault manipulation
+- **Environmental impact assessment tools**: Comprehensive ecological analysis and mitigation planning
+- **Collaborative mega-project coordination**: Multi-player large-scale project management systems
 
 #### Dynasty Progression Systems
 - Multi-generational character development and specialization
@@ -448,6 +797,7 @@ Each detailed mechanics document provides:
 
 This game mechanics design successfully demonstrates how geological simulation platforms can be transformed into engaging interactive economic experiences while maintaining scientific integrity. By drawing inspiration from proven economic simulation games like Port Royale 1 and The Guild 1400, and grounding all mechanics in authentic geological processes, this design creates a unique gaming framework that educates while entertaining.
 
+The emphasis on player freedom through understanding, realistic constraints, and authentic processes ensures that geological simulation games can remain scientifically valuable while providing unprecedented gameplay depth and originality. The phased implementation approach minimizes development risk while delivering incremental value, positioning geological simulation gaming as a revolutionary entry in both the educational simulation and economic strategy gaming markets.
 The comprehensive mechanics documentation provides detailed technical specifications for implementing these systems, ensuring that the vision of a geologically-authentic, economically-sophisticated MMORPG can be realized with precision and depth.
 
 The emphasis on player freedom through understanding, realistic constraints, and authentic processes ensures that geological simulation games can remain scientifically valuable while providing unprecedented gameplay depth and originality. The phased implementation approach minimizes development risk while delivering incremental value, positioning geological simulation gaming as a revolutionary entry in both the educational simulation and economic strategy gaming markets.
