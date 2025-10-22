@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlueMarble.Utils.Spatial.DistributedStorage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74098e4ebf3676bbd5699f8a397b9471d0fbff30")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae194b7c9b8823359d4f215745bc9e2935743e5f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlueMarble.Utils.Spatial.DistributedStorage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlueMarble.Utils.Spatial.DistributedStorage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

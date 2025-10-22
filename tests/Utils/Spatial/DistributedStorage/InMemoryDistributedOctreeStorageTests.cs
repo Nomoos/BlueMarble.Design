@@ -100,9 +100,10 @@ namespace BlueMarble.Utils.Spatial.DistributedStorage.Tests
             var node = CreateTestNode("node1", 5, 12345, 1);
             await _storage.WriteNodeAsync(node);
 
-            // Try to write with old version
-            node.Version = 0;
-            var result = await _storage.WriteNodeAsync(node);
+            // Create a new node object with same ID but old version (simulates concurrent update)
+            var conflictingNode = CreateTestNode("node1", 5, 12345, 1);
+            conflictingNode.Version = 0;  // Old version
+            var result = await _storage.WriteNodeAsync(conflictingNode);
 
             Assert.False(result.Success);
             Assert.Contains("Version conflict", result.ErrorMessage);
