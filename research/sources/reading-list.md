@@ -2,9 +2,12 @@
 
 Curated reading list for BlueMarble research and development.
 
-**Last Updated:** 2025-01-17  
-**Total Sources:** 78 (60 books + 13 survival collections + 5 online resources)  
+**Last Updated:** 2025-01-24  
+**Total Sources:** 117 (60 books + 13 survival collections + 23 academic theses + 21 online resources)  
 **Completed Analysis:** 12 sources  
+**Last Updated:** 2024  
+**Total Sources:** 112 (73 books + 13 survival collections + 5 online resources + 21 scientific references)  
+**Completed Analysis:** 20 sources (includes 8 fantasy literature sources)  
 **Status:** Active - Tracking all research literature sources
 
 ---
@@ -45,6 +48,26 @@ Curated reading list for BlueMarble research and development.
 - [ ] **Fundamentals of Game Design** - Genre conventions, player types, core mechanics
 - [ ] **Games, Design and Play** - Iterative design, playtesting, prototyping
 
+### Fantasy Literature for World-Building and Narrative Design
+
+**Reference Document:** [Fantasy Literature Sources](../game-design/step-1-foundation/fantasy-literature-sources.md)
+
+- [x] **"The Lord of the Rings"** by J.R.R. Tolkien - World-building, faction systems, environmental storytelling (analyzed in fantasy-literature-sources.md)
+- [x] **"Ranger's Apprentice"** series by John Flanagan - Apprenticeship system, skill progression, stealth mechanics (analyzed in fantasy-literature-sources.md)
+- [x] **"The Wheel of Time"** by Robert Jordan - Structured magic system, factional warfare, political simulation (analyzed in fantasy-literature-sources.md)
+- [x] **"Mistborn"** trilogy by Brandon Sanderson - Resource-based powers, heist mechanics, class revolution (analyzed in fantasy-literature-sources.md)
+- [x] **"The Name of the Wind"** by Patrick Rothfuss - Academic progression, economic survival, multiple skill trees (analyzed in fantasy-literature-sources.md)
+- [x] **"The Stormlight Archive"** by Brandon Sanderson - Environmental events, bond mechanics, oath-based progression (analyzed in fantasy-literature-sources.md)
+- [x] **"The First Law"** trilogy by Joe Abercrombie - Moral ambiguity, realistic combat consequences, political intrigue (analyzed in fantasy-literature-sources.md)
+- [x] **"The Broken Earth"** trilogy by N.K. Jemisin - **HIGHLY RELEVANT** - Geological powers, apocalyptic events, class oppression (analyzed in fantasy-literature-sources.md)
+- [ ] **"The Earthsea Cycle"** by Ursula K. Le Guin - True names as power, wizard training, environmental balance
+- [ ] **"The Farseer Trilogy"** by Robin Hobb - Assassination gameplay, animal bonding, character growth
+- [ ] **"Discworld"** series by Terry Pratchett - Guild systems, city management, satirical world-building
+- [ ] **"The Goblin Emperor"** by Katherine Addison - Court politics, cultural differences, outsider perspective
+- [ ] **"The Poppy War"** by R.F. Kuang - Military academy, drug-based magic, war consequences
+
+**Application to BlueMarble:** These fantasy sources provide insights for apprenticeship systems, geological power mechanics (especially Jemisin), faction dynamics, skill progression, quest design, and environmental storytelling that can be adapted to BlueMarble's sci-fi geological setting.
+
 ### Survival Knowledge Collections
 
 - [x] **awesome-survival Repository Overview** - Comprehensive analysis completed (survival-guides-knowledge-domains-research.md)
@@ -60,6 +83,11 @@ Curated reading list for BlueMarble research and development.
 - [ ] **Energy Systems Collection** - Solar, wind, hydroelectric, biofuel systems
 - [ ] **Historical Maps and Navigation Resources** - Cartography, celestial navigation, surveying
 - [ ] **Specialized Collections (Deep Web Sources)** - Niche technical resources
+
+### Geographic and Cartographic Research
+
+- [ ] **PhD Dissertation in Geoinformatics** (Pohánková, 2025) - Academic research from Palacký University Olomouc on geodesy, cartography, spatial analysis, or remote sensing - potentially relevant for BlueMarble's spherical planet generation, map projections, and spatial data systems
+- [ ] **Isotope-Enabled Hydrologic Modeling for Large-Scale Watersheds** (Tegan Holmes) - isoWATFLOOD model development for distributed hydrologic modeling with isotope tracing, parameter sensitivity analysis, and calibration methods for large-scale watershed simulation - directly applicable to BlueMarble's water flow, geological processes, and terrain hydrology systems
 
 ### Development Process
 
@@ -117,6 +145,46 @@ Curated reading list for BlueMarble research and development.
 
 ---
 
+## High Priority (Academic Theses - Geoinformatics and GIS)
+
+### Highly Relevant to BlueMarble
+
+These master's theses from Palacký University Olomouc (2022) contain relevant research for game development, GIS integration, and spatial visualization.
+
+- [ ] **Digital twins in the context of disaster preparedness: fusion of GIS and game engines** by Deligant Anatole - **Critical**: Directly relevant to GIS-game engine integration for planetary simulation
+- [ ] **Portál pro simulační hru Spationomy** by Roller Jan - **High**: Portal for simulation game, geospatial game design patterns
+- [ ] **GeoVisualization of Football Players Movement** by Liu Nianhua - Player movement tracking and visualization techniques applicable to MMORPG player systems
+
+### Supporting Research (Medium Priority)
+
+- [ ] **Aplikace metody geodesignu v prostředí ArcGIS GeoPlanner** by Bittner Oldřich - Geodesign method application, spatial planning
+- [ ] **VYUŽITÍ ARCGIS CITYENGINE PRO BEZPEČNOSTNÍ PLÁNOVÁNÍ** by Čáp Daniel - 3D city modeling for security planning
+- [ ] **Hodnocení míry abstrakce u 3D modelů pro osoby se zrakovým postižením** by Forgáč Jakub - 3D model abstraction and accessibility design
+- [ ] **Pokročilá analýza a vizualizace dat z dotazníkového šetření** by Fryčák Filip - Advanced data analysis and visualization
+- [ ] **Webové řešení pro vizualizaci nejistoty dat z monitoringu zimování včelstev** by Kuchejdová Magdalena - Web-based data uncertainty visualization
+- [ ] **IMPROVING SEN2CUBE.AT WEB APPLICATION VISUALIZATION CAPABILITIES** by Nurul Fatma - Web application visualization improvements
+- [ ] **User Evaluation of COVID-19 Dashboards** by Porti Suarez Anna - Dashboard design and user evaluation
+- [ ] **Podobnost evropských měst a jejich funkčních území** by Urbančík Filip - City similarity analysis and functional areas
+- [ ] **Využití metody think-aloud v kartografickém výzkumu** by Vaníček Tomáš - Think-aloud methodology for UX research
+- [ ] **Testování možností záznamu pohybu očí pomocí web kamery** by Jílková Monika - Eye tracking using web camera
+
+### Reference Materials (Low Priority)
+
+- [ ] **Aplikace vyhledávání kolokačních vzorů na prostorová data** by Bučková Simona - Collocation pattern search on spatial data
+- [ ] **Termální mapování vybraných ploch města Olomouce** by Ďuriančíková Petra - Thermal mapping of urban areas
+- [ ] **Hodnocení změn v intenzitách dopravy ve vybraných regionech Česka** by Hubáček Ondřej - Traffic intensity analysis
+- [ ] **ANALYSIS AND GEOVISUALISATION OF BIODIVERSITY MONITORING DATA** by Christie Ella - Biodiversity data geovisualization
+- [ ] **Důsledky pandemie COVID-19 na mezinárodní mobilitu v Evropě** by Kačírková Tereza - COVID-19 impact on mobility
+- [ ] **Stanovení metrik sněhové pokrývky pomocí metod fotogrammetrie** by Pajdová Marie - Snow cover metrics using remote sensing
+- [ ] **Klasifikace a časová analýza osobní a nákladní vlakové dopravy** by Pospíšil Lukáš - Rail transport temporal analysis
+- [ ] **VZTAH KVALITY ŽIVOTA K PŘÍSLUŠNOSTI K RURÁLNÍMU A URBÁNNÍMU PROSTORU** by Rypl Oldřich - Quality of life in rural vs urban spaces
+- [ ] **PORTRAYAL OF LIKELY CLIMATE CHANGE IMPACTS ON BEEKEEPING** by Wang Yuan - Climate change visualization
+- [ ] **Tyfloprůvodce po vybraných památkách Česka** by Žejdlík Jakub - Tactile guide design for accessibility
+
+**Note:** All theses available online at https://www.geoinformatics.upol.cz/dprace/magisterske/
+
+---
+
 ## Low Priority (Specialized Topics)
 
 ### Platform-Specific
@@ -169,6 +237,40 @@ Curated reading list for BlueMarble research and development.
 - [ ] **Ultima Online** - Historical MMORPG design
 - [ ] **RuneScape (Old School)** - Browser-based MMORPG patterns
 
+### Scientific Reference Sources (Wikipedia)
+
+**Biology and Organic Systems:**
+- [x] **Decomposition** - Biological decomposition processes for crafting and survival systems (Processed in Batch 1)
+- [x] **Corpse decomposition** - Decomposition stages and factors for realistic survival mechanics (Processed in Batch 1)
+- [x] **Organ (biology)** - Biological organ systems for medical and survival systems (Processed in Batch 1)
+- [x] **Bacteria** - Bacterial processes for decomposition and fermentation systems (Processed in Batch 1)
+- [x] **Scavenger** - Scavenger ecology for wildlife and food chain simulation (Processed in Batch 2)
+
+**Engineering and Materials Science:**
+- [x] **Structural integrity and failure** - Structural mechanics for building and crafting systems (Processed in Batch 2)
+- [x] **Structural load** - Load calculations for construction and building systems (Processed in Batch 2)
+- [x] **Engineering** - General engineering principles for technology progression (Processed in Batch 2)
+- [x] **Cast iron** - Cast iron properties for metalworking and crafting systems (Processed in Batch 3)
+- [x] **Iron-cementite meta-stable diagram** (Research online) - Phase diagrams for advanced metallurgy (Processed in Batch 3)
+
+**Physics and Chemistry:**
+- [x] **Surface tension** - Surface tension physics for liquid behavior simulation (Processed in Batch 3)
+- [x] **Redox** - Oxidation-reduction chemistry for crafting and metallurgy (Processed in Batch 3)
+- [x] **Viscosity** - Viscosity properties for fluid simulation and crafting (Processed in Batch 4)
+- [x] **Navier–Stokes equations** - Fluid dynamics equations for atmospheric and water simulation (Processed in Batch 4)
+- [x] **Gay-Lussac's law** - Gas law for pressure-temperature relationships in crafting (Processed in Batch 4)
+- [x] **Boyle's law** - Gas law for pressure-volume relationships in systems (Processed in Batch 4)
+
+**Atmospheric Science:**
+- [x] **Atmosphere** - Atmospheric composition and structure for planetary simulation (Processed in Batch 5)
+- [x] **Magnetosphere** - Planetary magnetosphere for space weather simulation (Processed in Batch 5)
+- [x] **Solar wind** - Solar wind effects for space weather and radiation systems (Processed in Batch 5)
+- [x] **Inversion (meteorology)** - Temperature inversion for weather and climate simulation (Processed in Batch 5)
+- [x] **Reducing atmosphere** - Atmospheric chemistry for planetary atmosphere variation (Processed in Batch 6)
+- [x] **Thermochemistry** - Chemical thermodynamics for crafting and smelting systems (Processed in Batch 6)
+
+**Application to BlueMarble:** These scientific resources provide foundational knowledge for realistic simulation systems including: crafting and metallurgy (iron-cementite diagrams, thermochemistry), atmospheric simulation (gas laws, atmospheric science), structural engineering (building systems), and survival mechanics (decomposition, biological systems).
+
 ---
 
 ## Completed Analysis Documents
@@ -180,6 +282,7 @@ Curated reading list for BlueMarble research and development.
 - [x] **Tabletop RPG Mechanics Overview** - 9 RPGs analyzed (game-design-mechanics-analysis.md, 1,263 lines)
 - [x] **Game Development Resources Overview** - 20+ books organized (game-development-resources-analysis.md, 702 lines)
 - [x] **Online Game Development Resources Catalog** - Active auto-growing list (online-game-dev-resources.md, 880+ lines)
+- [x] **Fantasy Literature Sources** - 8 major fantasy series analyzed for game design application (fantasy-literature-sources.md, 703 lines)
 
 ### Survival Content Extraction (10 completed)
 

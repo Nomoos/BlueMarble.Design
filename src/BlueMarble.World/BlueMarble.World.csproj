@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>BlueMarble.World</RootNamespace>
+    <AssemblyName>BlueMarble.World</AssemblyName>
+    <Version>1.0.0</Version>
+    <Description>Core world parameters and constants for BlueMarble 3D geological simulation game</Description>
+    <Authors>BlueMarble Game Design Team</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+</Project>
