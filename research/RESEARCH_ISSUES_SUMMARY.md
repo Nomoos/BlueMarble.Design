@@ -95,7 +95,7 @@ Based on the detailed research in `research/spatial-data-storage/octree-optimiza
 - **Effort**: 6-7 weeks
 - **Status**: COMPLETED - Comprehensive research with algorithms, benchmarks, and implementation guidelines
 - **Key Results**: 95.7% accuracy, 92% storage reduction, 0.8ms query time
-- **Documentation**: [octree-vector-boundary-integration.md](spatial-data-storage/octree-vector-boundary-integration.md)
+- **Documentation**: [octree-vector-boundary-integration.md](spatial-data-storage/step-3-architecture-design/octree-vector-boundary-integration.md)
 
 #### 10. [Research] ✅ Grid + Vector Combination for Dense Simulation Areas
 - **Focus**: Raster grids for bulk operations with vector boundaries
