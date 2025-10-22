@@ -28,6 +28,15 @@ See [Database Architecture Approval Document](step-5-validation/database-archite
 - **[Octree Compression Benefits Research](octree-compression-benefits-research.md)** - **NEW**: Comprehensive research documentation on octree compression benefits for world material storage with 50+ academic/industry references, detailed algorithms, case studies, and 12-month implementation roadmap
 - **[Current Implementation Analysis](current-implementation.md)** - Analysis of BlueMarble's existing spatial data architecture
 - **[Comparison Analysis](comparison-analysis.md)** - Detailed comparison of spatial storage approaches
+
+#### Coordinate System (Int32 Centimeters)
+- **[Coordinate Data Type Optimization](../topics/coordinate-data-type-optimization.md)** - **UPDATED**: Analysis of Int32 (centimeters) for 20,000 km world scale with focus on geological simulation precision, performance, and 50% memory savings
+- **[ADR-001: Coordinate Data Type Selection](../topics/adr-001-coordinate-data-type-selection.md)** - **UPDATED**: Architectural Decision Record proposing Int32 (centimeters) for world coordinates optimized for geological simulations
+- **[Int32 Implementation Specification](../topics/int32-coordinate-implementation-specification.md)** - **NEW**: Complete implementation guide for BlueMarble.Core with C# code examples, data structures, and 2-week phased rollout
+- **[Int32 Database Schema](../topics/int32-coordinate-database-schema.md)** - **NEW**: PostgreSQL and Cassandra schema design with spatial indexing, Morton encoding, and query optimization
+- **[Int32 Network Protocol](../topics/int32-coordinate-network-protocol.md)** - **NEW**: Binary protocol with delta encoding achieving 50-70% bandwidth reduction for efficient coordinate transmission
+
+#### Octree and Spatial Indexing
 - **[Octree Optimization Guide](octree-optimization-guide.md)** - Advanced octree optimization strategies
 - **[Hybrid Array + Octree Storage Strategy](hybrid-array-octree-storage-strategy.md)** - **NEW**: Comprehensive strategy for using flat chunked arrays as primary storage with octree/R-tree as secondary acceleration indices. Addresses sparse updates, asynchronous rebuild, and optimal query performance.
 - **[Octree + Vector Boundary Integration](step-3-architecture-design/octree-vector-boundary-integration.md)** - **COMPLETED**: Comprehensive research on hybrid octree/vector systems for precise features

@@ -11,6 +11,35 @@ and typically 200-400 lines.
 
 ### Available Topics
 
+#### Coordinate System Research (Int32 Centimeters)
+
+- **[Data Type Optimization - Executive Summary](topics/data-type-optimization-executive-summary.md)** - 
+  Quick reference guide comparing float, double, and Int32 for 20,000 km world. Includes decision matrix, 
+  performance benchmarks, and implementation timeline. **Start here for overview.**
+
+- **[ADR-001: Coordinate Data Type Selection](topics/adr-001-coordinate-data-type-selection.md)** - 
+  Architectural Decision Record proposing Int32 (centimeters) for world coordinates optimized for geological simulations. 
+  Documents decision rationale, consequences, 2-week implementation timeline, and review criteria
+
+- [Coordinate Data Type Optimization](topics/coordinate-data-type-optimization.md) - 
+  Comprehensive analysis of float, double, and Int32 data types for storing world dimensions and height up to 
+  20,000 km. Includes precision calculations, performance benchmarks, memory implications, and recommendations for 
+  BlueMarble engine implementation with emphasis on geological simulation accuracy
+
+- **[Int32 Coordinate Implementation Specification](topics/int32-coordinate-implementation-specification.md)** - 
+  Detailed implementation guide for BlueMarble.Core with complete C# code examples, data structures, API design, 
+  octree integration, rendering pipeline, and 2-week phased implementation plan
+
+- [Int32 Coordinate Database Schema](topics/int32-coordinate-database-schema.md) - 
+  Complete database schema design for PostgreSQL and Cassandra with Int32 coordinates, including indexing strategies, 
+  query patterns, partitioning, Morton encoding, and performance optimization techniques
+
+- [Int32 Coordinate Network Protocol](topics/int32-coordinate-network-protocol.md) - 
+  Binary network protocol with delta encoding for efficient transmission of Int32 coordinates. Includes bandwidth 
+  analysis, compression strategies, adaptive update rates, and client-side interpolation
+
+#### Game Design Topics
+
 - [Game Design Roles and Types](topics/game-design-roles-and-types.md) - 
   Comprehensive overview of game design specializations (Systems, Combat, Economy, Level, Narrative, UX, Progression, 
   Meta-Game designers), their responsibilities, tools, and methodological approaches for modern game development
