@@ -10,6 +10,7 @@
 - [Assembly Skills System Research](assembly-skills-system-research.md)
 - [Crafting Interface Mockups](assets/crafting-interface-mockups.md)
 - [Skill Caps and Decay Research](skill-caps-and-decay-research.md)
+- [Cursor Precision vs. Action Queueing Research](cursor-precision-vs-action-queueing-research.md)
 
 ## Executive Summary
 
@@ -2717,6 +2718,10 @@ meaningful choices, and deep integration with BlueMarble's geological simulation
 8. Test progression curves with player feedback
 9. Iterate on balance and timing based on real gameplay data
 10. Create community tools for player-defined religions and governance
+
+**Related Research:**
+- [Cursor Accuracy and Gender Accessibility Research](../../../literature/game-dev-research-cursor-accuracy-gender-accessibility.md) - Analysis of routine-based systems and accessibility design for underserved demographics
+- [The Sims and Gaming Woman Phenomenon](../../../literature/game-dev-analysis-the-sims-and-gaming-women-phenomenon.md) - Case study on accessible simulation design
 
 ---
 

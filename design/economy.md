@@ -17,6 +17,11 @@ tags: [economy, progression, balance]
 
 This document describes the economic systems including currencies, progression, resource management, sinks, and sources.
 
+**Related Design Documents:**
+
+- [Auction Economy](auction-economy.md) - Detailed design for auction-based trading, transport logistics, fees,
+  spoilage, and seasonal effects
+
 ## Currencies
 
 ### Primary Currency: [Name]

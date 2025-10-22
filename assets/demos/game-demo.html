@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueMarble - Player Protection Systems Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #ffffff;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        
+        .card h2 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2a5298;
+        }
+        
+        .input-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            margin: 5px 0;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+        
+        .stat-label {
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .stat-value {
+            color: #1e3c72;
+            font-weight: bold;
+        }
+        
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #28a745;
+        }
+        
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #17a2b8;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .list-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 3px solid #2a5298;
+        }
+        
+        .list-item:hover {
+            background: #e9ecef;
+        }
+        
+        .effectiveness-bar {
+            height: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        
+        .effectiveness-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .patrol-canvas {
+            width: 100%;
+            height: 300px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            margin: 10px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .player-marker {
+            width: 20px;
+            height: 20px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            position: absolute;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            transition: all 0.5s ease;
+        }
+        
+        .threat-marker {
+            width: 16px;
+            height: 16px;
+            background: #ffc107;
+            border-radius: 50%;
+            position: absolute;
+            border: 2px solid #fff;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+        }
+        
+        .npc-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .npc-item {
+            padding: 12px;
+            margin: 8px 0;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #6c757d;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .npc-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .npc-item.available {
+            border-left-color: #28a745;
+        }
+        
+        .npc-item.hired {
+            border-left-color: #17a2b8;
+            opacity: 0.6;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+        
+        .badge-guard { background: #28a745; color: white; }
+        .badge-trader { background: #ffc107; color: #333; }
+        .badge-builder { background: #007bff; color: white; }
+        .badge-explorer { background: #6f42c1; color: white; }
+        .badge-miner { background: #fd7e14; color: white; }
+        .badge-transporter { background: #20c997; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ BlueMarble - Player Protection Systems</h1>
+            <p class="subtitle">Interactive Demonstration of Asset Protection Mechanics</p>
+        </header>
+        
+        <div class="grid">
+            <!-- Player Creation -->
+            <div class="card">
+                <h2>👤 Player Creation</h2>
+                <div class="input-group">
+                    <label>Player Name</label>
+                    <input type="text" id="playerName" placeholder="Enter your name" value="Guardian">
+                </div>
+                <div class="input-group">
+                    <label>Starting Location</label>
+                    <input type="text" id="startLocation" placeholder="X, Y coordinates" value="100, 100" readonly>
+                </div>
+                <button onclick="createPlayer()">Create Player</button>
+                <div id="playerStatus"></div>
+            </div>
+            
+            <!-- Asset Management -->
+            <div class="card">
+                <h2>🏗️ Asset Management</h2>
+                <div class="input-group">
+                    <label>Asset Type</label>
+                    <select id="assetType">
+                        <option value="mine">Mine</option>
+                        <option value="factory">Factory</option>
+                        <option value="storage">Storage Facility</option>
+                        <option value="tower">Defense Tower</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Asset Location</label>
+                    <input type="text" id="assetLocation" placeholder="X, Y coordinates" value="150, 150">
+                </div>
+                <button onclick="createAsset()">Create Asset</button>
+                <div id="assetList"></div>
+            </div>
+            
+            <!-- Personal Patrol System -->
+            <div class="card">
+                <h2>🚶 Personal Patrol System</h2>
+                <div class="input-group">
+                    <label>Patrol Type</label>
+                    <select id="patrolType">
+                        <option value="zone">Zone Patrol</option>
+                        <option value="path">Path Patrol</option>
+                    </select>
+                </div>
+                <div id="zonePatrolOptions">
+                    <div class="input-group">
+                        <label>Zone Shape</label>
+                        <select id="zoneShape">
+                            <option value="circular">Circular</option>
+                            <option value="rectangular">Rectangular</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Patrol Pattern</label>
+                        <select id="patrolPattern">
+                            <option value="perimeter">Perimeter</option>
+                            <option value="random">Random</option>
+                            <option value="spiral">Spiral</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Radius (meters)</label>
+                        <input type="number" id="patrolRadius" value="100" min="10" max="500">
+                    </div>
+                </div>
+                <button onclick="startPersonalPatrol()">Start Patrol</button>
+                <button onclick="stopPatrol()">Stop Patrol</button>
+                <div id="patrolStats"></div>
+                <div class="patrol-canvas" id="patrolCanvas"></div>
+            </div>
+            
+            <!-- NPC Guard Hiring -->
+            <div class="card">
+                <h2>🤖 NPC Guard Hiring</h2>
+                <div class="input-group">
+                    <label>Payment (currency/hour)</label>
+                    <input type="number" id="guardPayment" value="12" min="10" max="50">
+                </div>
+                <div class="input-group">
+                    <label>Duration (hours)</label>
+                    <input type="number" id="guardDuration" value="8" min="1" max="24">
+                </div>
+                <button onclick="findAvailableNPCs()">Find Available NPCs</button>
+                <div class="npc-list" id="npcList"></div>
+            </div>
+            
+            <!-- Protection System Status -->
+            <div class="card">
+                <h2>🛡️ Protection Status</h2>
+                <div id="protectionStatus">
+                    <div class="stat">
+                        <span class="stat-label">Active Protections:</span>
+                        <span class="stat-value" id="activeProtections">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Total Effectiveness:</span>
+                        <span class="stat-value" id="totalEffectiveness">0%</span>
+                    </div>
+                    <div class="effectiveness-bar">
+                        <div class="effectiveness-fill" id="effectivenessBar" style="width: 0%">0%</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Hired Guards:</span>
+                        <span class="stat-value" id="hiredGuards">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Total Cost/Hour:</span>
+                        <span class="stat-value" id="totalCost">0 currency</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contract Management -->
+            <div class="card">
+                <h2>📋 Active Contracts</h2>
+                <div id="contractList"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Game State
+        const gameState = {
+            player: null,
+            assets: [],
+            patrol: null,
+            guards: [],
+            npcs: [],
+            contracts: [],
+            patrolInterval: null,
+            patrolPosition: { x: 100, y: 100 },
+            threats: []
+        };
+        
+        // NPC Behavior Types
+        const NPC_TYPES = {
+            GUARD: { name: 'Guard', basePayRequirement: 10, color: '#28a745' },
+            TRADER: { name: 'Trader', basePayRequirement: 15, color: '#ffc107' },
+            BUILDER: { name: 'Builder', basePayRequirement: 12, color: '#007bff' },
+            EXPLORER: { name: 'Explorer', basePayRequirement: 14, color: '#6f42c1' },
+            MINER: { name: 'Miner', basePayRequirement: 11, color: '#fd7e14' },
+            TRANSPORTER: { name: 'Transporter', basePayRequirement: 13, color: '#20c997' }
+        };
+        
+        // Initialize NPCs
+        function initializeNPCs() {
+            const types = Object.keys(NPC_TYPES);
+            gameState.npcs = [];
+            
+            for (let i = 0; i < 20; i++) {
+                const type = types[Math.floor(Math.random() * types.length)];
+                gameState.npcs.push({
+                    id: `npc_${i}`,
+                    name: `${type} #${i + 1}`,
+                    type: type,
+                    position: {
+                        x: Math.random() * 1000,
+                        y: Math.random() * 1000
+                    },
+                    hired: false,
+                    basePayRequirement: NPC_TYPES[type].basePayRequirement
+                });
+            }
+        }
+        
+        // Create Player
+        function createPlayer() {
+            const name = document.getElementById('playerName').value;
+            const location = document.getElementById('startLocation').value.split(',');
+            
+            gameState.player = {
+                name: name,
+                position: { x: parseFloat(location[0]), y: parseFloat(location[1]) },
+                currency: 1000,
+                assets: []
+            };
+            
+            document.getElementById('playerStatus').innerHTML = `
+                <div class="success">
+                    <strong>Player Created!</strong><br>
+                    Name: ${name}<br>
+                    Currency: ${gameState.player.currency}
+                </div>
+            `;
+            
+            updateProtectionStatus();
+        }
+        
+        // Create Asset
+        function createAsset() {
+            if (!gameState.player) {
+                alert('Please create a player first!');
+                return;
+            }
+            
+            const type = document.getElementById('assetType').value;
+            const location = document.getElementById('assetLocation').value.split(',');
+            
+            const asset = {
+                id: `asset_${gameState.assets.length}`,
+                type: type,
+                position: { x: parseFloat(location[0]), y: parseFloat(location[1]) },
+                protected: false
+            };
+            
+            gameState.assets.push(asset);
+            
+            updateAssetList();
+        }
+        
+        function updateAssetList() {
+            const list = document.getElementById('assetList');
+            list.innerHTML = '<h3 style="margin-top: 15px;">Your Assets:</h3>';
+            
+            gameState.assets.forEach(asset => {
+                list.innerHTML += `
+                    <div class="list-item">
+                        <strong>${asset.type.toUpperCase()}</strong><br>
+                        Location: (${asset.position.x.toFixed(0)}, ${asset.position.y.toFixed(0)})<br>
+                        Protected: ${asset.protected ? '✅ Yes' : '❌ No'}
+                    </div>
+                `;
+            });
+        }
+        
+        // Personal Patrol System
+        function startPersonalPatrol() {
+            if (!gameState.player) {
+                alert('Please create a player first!');
+                return;
+            }
+            
+            const patrolType = document.getElementById('patrolType').value;
+            const pattern = document.getElementById('patrolPattern').value;
+            const radius = parseInt(document.getElementById('patrolRadius').value);
+            
+            gameState.patrol = {
+                active: true,
+                type: patrolType,
+                pattern: pattern,
+                radius: radius,
+                startTime: Date.now(),
+                distance: 0,
+                threatsDetected: 0,
+                effectiveness: 0.90
+            };
+            
+            // Initialize patrol position
+            gameState.patrolPosition = { ...gameState.player.position };
+            
+            // Generate some random threats
+            gameState.threats = [];
+            for (let i = 0; i < 3; i++) {
+                gameState.threats.push({
+                    x: gameState.player.position.x + (Math.random() - 0.5) * radius * 2,
+                    y: gameState.player.position.y + (Math.random() - 0.5) * radius * 2
+                });
+            }
+            
+            // Start patrol animation
+            if (gameState.patrolInterval) clearInterval(gameState.patrolInterval);
+            gameState.patrolInterval = setInterval(updatePatrolPosition, 500);
+            
+            updatePatrolStats();
+            updateProtectionStatus();
+        }
+        
+        function stopPatrol() {
+            if (gameState.patrolInterval) {
+                clearInterval(gameState.patrolInterval);
+                gameState.patrolInterval = null;
+            }
+            
+            if (gameState.patrol) {
+                gameState.patrol.active = false;
+            }
+            
+            updatePatrolStats();
+            updateProtectionStatus();
+        }
+        
+        function updatePatrolPosition() {
+            if (!gameState.patrol || !gameState.patrol.active) return;
+            
+            const pattern = gameState.patrol.pattern;
+            const radius = gameState.patrol.radius;
+            const centerX = gameState.player.position.x;
+            const centerY = gameState.player.position.y;
+            
+            let newX, newY;
+            
+            if (pattern === 'perimeter') {
+                const angle = (Date.now() / 1000) % (2 * Math.PI);
+                newX = centerX + Math.cos(angle) * radius;
+                newY = centerY + Math.sin(angle) * radius;
+            } else if (pattern === 'random') {
+                newX = centerX + (Math.random() - 0.5) * radius * 2;
+                newY = centerY + (Math.random() - 0.5) * radius * 2;
+            } else if (pattern === 'spiral') {
+                const t = (Date.now() / 2000) % (2 * Math.PI);
+                const r = (radius / 2) + (radius / 2) * (t / (2 * Math.PI));
+                newX = centerX + Math.cos(t) * r;
+                newY = centerY + Math.sin(t) * r;
+            }
+            
+            const distance = Math.sqrt(
+                Math.pow(newX - gameState.patrolPosition.x, 2) +
+                Math.pow(newY - gameState.patrolPosition.y, 2)
+            );
+            
+            gameState.patrol.distance += distance;
+            gameState.patrolPosition = { x: newX, y: newY };
+            
+            // Check for threat detection
+            gameState.threats.forEach(threat => {
+                const dist = Math.sqrt(
+                    Math.pow(threat.x - newX, 2) +
+                    Math.pow(threat.y - newY, 2)
+                );
+                if (dist < 50 && !threat.detected) {
+                    threat.detected = true;
+                    gameState.patrol.threatsDetected++;
+                }
+            });
+            
+            updatePatrolStats();
+            renderPatrolCanvas();
+        }
+        
+        function updatePatrolStats() {
+            const stats = document.getElementById('patrolStats');
+            
+            if (!gameState.patrol) {
+                stats.innerHTML = '<div class="info">No active patrol</div>';
+                return;
+            }
+            
+            const duration = Math.floor((Date.now() - gameState.patrol.startTime) / 1000);
+            const status = gameState.patrol.active ? 'Active' : 'Stopped';
+            
+            stats.innerHTML = `
+                <h3 style="margin-top: 15px;">Patrol Statistics:</h3>
+                <div class="stat">
+                    <span class="stat-label">Status:</span>
+                    <span class="stat-value">${status}</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Duration:</span>
+                    <span class="stat-value">${duration}s</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Distance:</span>
+                    <span class="stat-value">${gameState.patrol.distance.toFixed(1)}m</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Threats Detected:</span>
+                    <span class="stat-value">${gameState.patrol.threatsDetected}</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Effectiveness:</span>
+                    <span class="stat-value">90%</span>
+                </div>
+            `;
+        }
+        
+        function renderPatrolCanvas() {
+            const canvas = document.getElementById('patrolCanvas');
+            canvas.innerHTML = '';
+            
+            if (!gameState.patrol) return;
+            
+            const centerX = gameState.player.position.x;
+            const centerY = gameState.player.position.y;
+            const radius = gameState.patrol.radius;
+            
+            // Draw patrol zone (simplified representation)
+            const zone = document.createElement('div');
+            zone.style.position = 'absolute';
+            zone.style.left = '50%';
+            zone.style.top = '50%';
+            zone.style.transform = 'translate(-50%, -50%)';
+            zone.style.width = '200px';
+            zone.style.height = '200px';
+            zone.style.border = '2px dashed #2a5298';
+            zone.style.borderRadius = '50%';
+            canvas.appendChild(zone);
+            
+            // Draw player position
+            const player = document.createElement('div');
+            player.className = 'player-marker';
+            const scale = 200 / (radius * 2);
+            const offsetX = (gameState.patrolPosition.x - centerX) * scale;
+            const offsetY = (gameState.patrolPosition.y - centerY) * scale;
+            player.style.left = `calc(50% + ${offsetX}px - 10px)`;
+            player.style.top = `calc(50% + ${offsetY}px - 10px)`;
+            canvas.appendChild(player);
+            
+            // Draw threats
+            gameState.threats.forEach(threat => {
+                const threatEl = document.createElement('div');
+                threatEl.className = 'threat-marker';
+                const tOffsetX = (threat.x - centerX) * scale;
+                const tOffsetY = (threat.y - centerY) * scale;
+                threatEl.style.left = `calc(50% + ${tOffsetX}px - 8px)`;
+                threatEl.style.top = `calc(50% + ${tOffsetY}px - 8px)`;
+                if (threat.detected) {
+                    threatEl.style.background = '#dc3545';
+                }
+                canvas.appendChild(threatEl);
+            });
+        }
+        
+        // NPC Hiring System
+        function findAvailableNPCs() {
+            if (!gameState.player) {
+                alert('Please create a player first!');
+                return;
+            }
+            
+            const payment = parseFloat(document.getElementById('guardPayment').value);
+            const duration = parseFloat(document.getElementById('guardDuration').value);
+            
+            const available = gameState.npcs.filter(npc => !npc.hired).map(npc => {
+                const distance = Math.sqrt(
+                    Math.pow(npc.position.x - gameState.player.position.x, 2) +
+                    Math.pow(npc.position.y - gameState.player.position.y, 2)
+                );
+                
+                const walkingSpeed = 1.4; // m/s
+                const travelTime = distance / walkingSpeed;
+                const maxDistance = 24 * 3600 * walkingSpeed; // 24h walking
+                
+                if (distance > maxDistance) return null;
+                
+                const travelHours = travelTime / 3600;
+                const totalHours = travelHours + duration;
+                const effectivePayRate = payment / totalHours;
+                
+                return {
+                    ...npc,
+                    distance: distance,
+                    travelTime: travelTime,
+                    effectivePayRate: effectivePayRate,
+                    score: effectivePayRate,
+                    acceptable: payment >= npc.basePayRequirement
+                };
+            }).filter(x => x !== null);
+            
+            available.sort((a, b) => b.score - a.score);
+            
+            const list = document.getElementById('npcList');
+            list.innerHTML = '<h3 style="margin-top: 10px;">Available NPCs:</h3>';
+            
+            if (available.length === 0) {
+                list.innerHTML += '<div class="info">No NPCs available within range</div>';
+                return;
+            }
+            
+            available.slice(0, 10).forEach(npc => {
+                const badgeClass = `badge-${npc.type.toLowerCase()}`;
+                const statusClass = npc.acceptable ? 'available' : '';
+                
+                list.innerHTML += `
+                    <div class="npc-item ${statusClass}" onclick="hireNPC('${npc.id}')">
+                        <strong>${npc.name}</strong>
+                        <span class="badge ${badgeClass}">${npc.type}</span>
+                        <br>
+                        Distance: ${(npc.distance / 1000).toFixed(1)}km
+                        (${(npc.travelTime / 3600).toFixed(1)}h travel)<br>
+                        Base Rate: ${npc.basePayRequirement} currency/hour<br>
+                        Effective Rate: ${npc.effectivePayRate.toFixed(2)} currency/hour<br>
+                        ${npc.acceptable ? 
+                            '<span style="color: #28a745;">✓ Acceptable Payment</span>' : 
+                            '<span style="color: #dc3545;">✗ Payment too low</span>'}
+                    </div>
+                `;
+            });
+        }
+        
+        function hireNPC(npcId) {
+            const npc = gameState.npcs.find(n => n.id === npcId);
+            if (!npc || npc.hired) return;
+            
+            const payment = parseFloat(document.getElementById('guardPayment').value);
+            const duration = parseFloat(document.getElementById('guardDuration').value);
+            
+            if (payment < npc.basePayRequirement) {
+                alert(`Payment too low! Minimum: ${npc.basePayRequirement} currency/hour`);
+                return;
+            }
+            
+            npc.hired = true;
+            
+            const contract = {
+                id: `contract_${gameState.contracts.length}`,
+                npcId: npc.id,
+                npcName: npc.name,
+                npcType: npc.type,
+                payment: payment,
+                duration: duration,
+                startTime: Date.now(),
+                effectiveness: 0.75
+            };
+            
+            gameState.contracts.push(contract);
+            gameState.guards.push(npc);
+            
+            updateContractList();
+            updateProtectionStatus();
+            findAvailableNPCs();
+        }
+        
+        function updateContractList() {
+            const list = document.getElementById('contractList');
+            
+            if (gameState.contracts.length === 0) {
+                list.innerHTML = '<div class="info">No active contracts</div>';
+                return;
+            }
+            
+            list.innerHTML = '';
+            gameState.contracts.forEach(contract => {
+                const elapsed = Math.floor((Date.now() - contract.startTime) / 1000 / 3600);
+                const remaining = contract.duration - elapsed;
+                
+                list.innerHTML += `
+                    <div class="list-item">
+                        <strong>${contract.npcName}</strong> (${contract.npcType})<br>
+                        Payment: ${contract.payment} currency/hour<br>
+                        Duration: ${contract.duration}h (${remaining.toFixed(1)}h remaining)<br>
+                        Effectiveness: ${(contract.effectiveness * 100)}%
+                    </div>
+                `;
+            });
+        }
+        
+        function updateProtectionStatus() {
+            let activeProtections = 0;
+            let totalEffectiveness = 0;
+            let totalCost = 0;
+            
+            if (gameState.patrol && gameState.patrol.active) {
+                activeProtections++;
+                totalEffectiveness += gameState.patrol.effectiveness;
+            }
+            
+            gameState.contracts.forEach(contract => {
+                activeProtections++;
+                totalEffectiveness += contract.effectiveness;
+                totalCost += contract.payment;
+            });
+            
+            // Cap effectiveness at 100%
+            totalEffectiveness = Math.min(totalEffectiveness * 100, 100);
+            
+            document.getElementById('activeProtections').textContent = activeProtections;
+            document.getElementById('totalEffectiveness').textContent = totalEffectiveness.toFixed(0) + '%';
+            document.getElementById('hiredGuards').textContent = gameState.guards.length;
+            document.getElementById('totalCost').textContent = totalCost.toFixed(0) + ' currency';
+            
+            const bar = document.getElementById('effectivenessBar');
+            bar.style.width = totalEffectiveness + '%';
+            bar.textContent = totalEffectiveness.toFixed(0) + '%';
+        }
+        
+        // Initialize
+        initializeNPCs();
+        
+        // Auto-update protection status every 5 seconds
+        setInterval(() => {
+            if (gameState.contracts.length > 0 || (gameState.patrol && gameState.patrol.active)) {
+                updateProtectionStatus();
+                updateContractList();
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

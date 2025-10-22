@@ -1013,6 +1013,7 @@ Link: <https://docs.api.bluemarble.design/migrations/v1-to-v2>; rel="deprecation
 
 See related documentation:
 
+- [Achievement and Reputation API](./api-achievement-reputation.md) - Complete achievement tracking and reputation management
 - [Spherical Planet Generation API](./api-spherical-planet-generation.md)
 - [Player Progression API](../gameplay/spec-player-progression-system.md)
 - [Combat System API](./gameplay-systems.md)

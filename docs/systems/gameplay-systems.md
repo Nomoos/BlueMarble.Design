@@ -124,6 +124,8 @@ This document details the core gameplay systems that drive player engagement and
 - **Optional PvP:** Players can flag for PvP combat
 - **Open PvP:** Always-on player combat in designated areas
 - **Structured PvP:** Battlegrounds and arena matches
+  > **Tournament System Research:** See [Anime Tournament and Progression Systems Analysis](../../research/literature/media-analysis-anime-tournament-progression-systems.md)
+  > for detailed tournament mechanics, ranking systems, and competitive progression design.
 
 #### PvP Mechanics
 - **Honor System:** Reputation based on PvP behavior
@@ -172,18 +174,67 @@ This document details the core gameplay systems that drive player engagement and
 
 ### Achievement System
 
+> **Comprehensive Documentation:** See [Achievement and Reputation System Design](achievement-reputation-system.md)
+> for complete technical specifications, database schemas, API endpoints, and integration details.
+
 #### Achievement Categories
 - **Combat:** Defeat specific enemies or reach milestones
+  - Enemy type-specific achievements (dragons, undead, elementals)
+  - Boss encounter achievements with scaling difficulty
+  - Combat style achievements (perfect victories, speedruns)
 - **Exploration:** Discover locations and complete areas
+  - Geographic discovery (cities, landmarks, secret areas)
+  - Cartography achievements with map completion tracking
+  - Environmental challenges (peak climbing, deep diving)
 - **Social:** Participate in guilds and community events
+  - Friend network building
+  - Guild participation and leadership
+  - Community helping and mentorship
+  - Event participation tracking
 - **Crafting:** Master skills and create rare items
+  - Profession-specific achievement tracks
+  - Quality-based crafting milestones
+  - Recipe discovery and innovation
+  - Production volume achievements
 - **Collection:** Gather sets of items or resources
+  - Resource gathering milestones
+  - Rare item collection
+  - Equipment set completion
+  - Bestiary and catalog completion
+- **Economic:** Trading and wealth accumulation
+  - Trade volume achievements
+  - Wealth milestones
+  - Market participation
+  - Reputation as trader
 
 #### Achievement Rewards
 - **Titles:** Cosmetic recognition for accomplishments
+  - Display format customization
+  - Rarity-based title effects
+  - Stackable title bonuses
 - **Cosmetics:** Unique visual items and effects
+  - Exclusive armor appearances
+  - Particle effects and auras
+  - Mount and pet skins
 - **Stats:** Permanent character improvements
+  - Attribute bonuses
+  - Skill point rewards
+  - Ability unlocks
 - **Access:** Unlock new areas or features
+  - Special zones and dungeons
+  - Advanced vendor tiers
+  - Exclusive content access
+- **Currency:** Gold, honor points, and special currencies
+  - Tier-based reward scaling
+  - Category-specific currency types
+- **Reputation:** Faction standing and trust score improvements
+
+#### Achievement Progression
+- **Tiered System:** Bronze → Silver → Gold → Platinum → Legendary
+- **Hidden Achievements:** Secret discoveries and rare accomplishments
+- **Repeatable Achievements:** Daily and weekly recurring objectives
+- **Achievement Chains:** Progressive unlocking of related achievements
+- **Prerequisites:** Gated content requiring prior completions
 
 ## Economy System
 
@@ -207,6 +258,14 @@ This document details the core gameplay systems that drive player engagement and
 - **Secure Trading:** System-mediated safe trading
 - **Trade Chat:** Communication channel for commerce
 - **Reputation System:** Track reliable trading partners
+  - Trust score calculation based on trading history
+  - Success rate tracking and display
+  - Community feedback integration
+  - Trading badge and tier system
+  - Benefits: reduced fees, increased limits, priority listings
+
+> **Reputation Details:** See [Achievement and Reputation System Design](achievement-reputation-system.md)
+> for comprehensive player trust scoring, anti-exploit mechanisms, and market access tiers.
 
 #### Auction House
 - **Listing System:** Players post items for sale
@@ -277,6 +336,8 @@ This document details the core gameplay systems that drive player engagement and
 
 #### Player-Driven Events
 - **Tournaments:** Player-organized competitions
+  > **Detailed Research:** See [Anime Tournament and Progression Systems Analysis](../../research/literature/media-analysis-anime-tournament-progression-systems.md)
+  > for comprehensive tournament system design inspired by Hunter x Hunter and Tower of God.
 - **Market Events:** Economic opportunities and challenges
 - **Exploration Expeditions:** Group discovery missions
 - **Cultural Events:** Role-playing and social gatherings
