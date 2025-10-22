@@ -17,6 +17,19 @@ Comprehensive analysis of weather modeling and climate simulation for BlueMarble
 - **Ecosystem Integration**: Wildlife behavior, plant ecosystems, and hydrological cycles
 - **Technical Implementation**: VFX rendering, optimization, and network synchronization
 
+### [MODFLOW Groundwater Research](modflow-groundwater-research.md)
+
+Scientific groundwater modeling based on USGS MODFLOW principles for realistic subsurface hydrology:
+
+- **MODFLOW Fundamentals**: Aquifer types, hydraulic properties, groundwater flow simulation
+- **Material Hydraulic Properties**: Conductivity, porosity, and specific yield for different geologies
+- **Groundwater Flow Modeling**: Finite-difference solver, Darcy's Law, flow equations
+- **Geothermal Systems**: Hot springs, geysers, and thermal circulation (Yellowstone-based)
+- **Water Table Dynamics**: Seasonal variations, drought impacts, well productivity
+- **Coastal Hydrology**: Saltwater intrusion, tidal influences, sea-level rise scenarios
+- **Bay Restoration**: San Francisco Bay-based wetland restoration and extreme water levels
+- **Gameplay Integration**: Wells, irrigation, mine dewatering, geothermal power, environmental impact
+
 ## Key Concepts
 
 ### Weather Types
@@ -51,11 +64,13 @@ Long-term climate patterns affected by:
 
 Weather and climate meaningfully impact:
 
-- **Mining**: Rain causes flooding, snow blocks access, storms halt operations
+- **Mining**: Rain causes flooding, snow blocks access, storms halt operations, groundwater inflow
 - **Construction**: Weather determines material setting, ground workability, efficiency
 - **Economy**: Seasonal supply/demand shifts, trade route viability, price fluctuations
-- **Agriculture**: Growing seasons, crop yields, irrigation needs, frost damage
+- **Agriculture**: Growing seasons, crop yields, irrigation needs, frost damage, groundwater availability
 - **Travel**: Road conditions, mountain pass accessibility, river navigation
+- **Water Resources**: Well productivity, aquifer recharge, geothermal energy, coastal saltwater intrusion
+- **Environmental Management**: Water table sustainability, spring flow protection, wetland conservation
 
 ## Design Philosophy
 
@@ -63,11 +78,13 @@ Weather and climate meaningfully impact:
 
 ## Related Systems
 
-- **Geological Systems**: Terrain affects local weather patterns (rain shadows, elevation)
-- **Hydrological Cycle**: Precipitation, snow melt, water table, river flow
-- **Ecosystem**: Wildlife behavior, plant growth, forest fires
-- **Economic Systems**: Supply chains, trade routes, market prices
-- **Building Systems**: Structural requirements, heating, weather protection
+- **Geological Systems**: Terrain affects local weather patterns (rain shadows, elevation), aquifer formation
+- **Hydrological Cycle**: Precipitation, snow melt, water table, river flow, groundwater recharge
+- **Groundwater Systems**: MODFLOW-based subsurface flow, well mechanics, geothermal features
+- **Ecosystem**: Wildlife behavior, plant growth, forest fires, wetland hydrology
+- **Economic Systems**: Supply chains, trade routes, market prices, water resource economics
+- **Building Systems**: Structural requirements, heating, weather protection, geothermal energy
+- **Mining Systems**: Mine dewatering, groundwater inflow, aquifer interaction
 
 ## Implementation Considerations
 

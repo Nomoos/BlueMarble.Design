@@ -815,6 +815,8 @@ No additional sources discovered during extraction of map projection mathematics
 
 - [survival-content-extraction-historical-navigation.md](./survival-content-extraction-historical-navigation.md) - Parent research that discovered this topic
 - [survival-content-extraction-geodetic-survey-manuals.md](./survival-content-extraction-geodetic-survey-manuals.md) - Datum and coordinate systems
+- [academic-thesis-pohankova-geoinformatics.md](./academic-thesis-pohankova-geoinformatics.md) - PhD research in geoinformatics (pending analysis)
+- [academic-thesis-holmes-isotope-hydrology.md](./academic-thesis-holmes-isotope-hydrology.md) - Water flow and watershed modeling
 - [../spatial-data-storage/](../spatial-data-storage/) - Spatial database with projection support
 
 ### External Resources
@@ -823,6 +825,9 @@ No additional sources discovered during extraction of map projection mathematics
 2. **GDAL/OGR** - Geospatial data transformation
 3. **PostGIS** - Spatial database with projection support
 4. **Cartography research journals** - Modern developments
+5. **Koníček PhD Thesis (2024)** - Palacký University Olomouc, Department of Geoinformatics
+   - URL: https://www.geoinformatics.upol.cz/dprace/phd/konicek24/
+   - Research on cartographic projections and geoinformatics applications
 
 ---
 

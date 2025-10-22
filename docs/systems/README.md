@@ -33,6 +33,8 @@ guidelines for BlueMarble.
 
 ### Gameplay Systems
 
+- **[Taxonomy Classification System](taxonomy-classification-system.md)** - General-purpose hierarchical classification framework for factions, species, items, and more
+- **[Taxonomy API](api-taxonomy-system.md)** - RESTful API for managing hierarchical classification systems
 - **[Social Interaction and Settlement Management System](social-interaction-settlement-system.md)** - Comprehensive system for influence-based territorial control, diplomacy, and federations
 - **[Social Interaction API](api-social-interaction.md)** - RESTful API for settlements, diplomacy, and federations
 - **[Economy Systems](economy-systems.md)** - Economic balance and trading mechanics
@@ -41,6 +43,7 @@ guidelines for BlueMarble.
 - **[Marketplace API](api-marketplace.md)** - Player trading marketplace API specification
 - **[Marketplace Developer Guide](marketplace-developer-guide.md)** - Integration guide for marketplace systems
 - **[Gameplay Systems](gameplay-systems.md)** - Core game mechanics and systems
+- **[Settlement Control System](settlement-control-system.md)** - Influence-based territorial control and diplomacy
 - Physics and collision systems
 - AI and NPC behavior systems
 - Networking and multiplayer architecture
