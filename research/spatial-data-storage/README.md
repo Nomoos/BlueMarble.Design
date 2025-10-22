@@ -17,6 +17,8 @@ Each step contains detailed research documents and can be explored independently
 ## Contents
 
 ### Core Research Documents
+- **[Height Raster Surface Representation](height-raster-surface-representation.md)** - **NEW**: Comprehensive research on 2.5D height raster terrain representation with material layers, addressing cliffs, user-placed blocks, and visibility tracking for 95% storage reduction vs 3D voxels
+  - **📖 Implementation Prototype**: See [height-raster-implementation](height-raster-implementation/) for working C# prototype
 - **[Octree Compression Benefits Research](octree-compression-benefits-research.md)** - **NEW**: Comprehensive research documentation on octree compression benefits for world material storage with 50+ academic/industry references, detailed algorithms, case studies, and 12-month implementation roadmap
 - **[Current Implementation Analysis](current-implementation.md)** - Analysis of BlueMarble's existing spatial data architecture
 - **[Comparison Analysis](comparison-analysis.md)** - Detailed comparison of spatial storage approaches
@@ -155,6 +157,35 @@ octree/R-tree as secondary indices?
 | **Climate** | 10-1000km | Global | Octree Levels 1-5 |
 | **Erosion** | 0.25-10m | Local to Regional | Octree Levels 15-26 |
 | **Sedimentation** | 0.25-100m | Local to Regional | Octree Levels 10-26 |
+
+### Height Raster Surface Representation Results
+
+**Research Question**: Can height rasters efficiently represent planetary surfaces with material layers while handling cliffs and user-placed blocks?
+
+**Answer**: YES - Height rasters provide optimal storage for terrain surfaces:
+
+| Aspect | Full 3D Voxels | Height Raster | Height + Hybrid Voxels | Improvement |
+|--------|----------------|---------------|------------------------|-------------|
+| **Storage per km²** | 1.6 GB | 24 MB | 74-430 MB | **95-98% reduction** |
+| **Surface Query** | 0.8ms | 0.05ms | 0.18ms | **16x faster** |
+| **Memory Usage** | 16 GB/10km² | 240 MB/10km² | 2 GB/10km² | **8-66x less** |
+| **Cliff Handling** | Native | Limited | Automatic fallback | **Graceful degradation** |
+
+**Key Innovations**:
+
+- **Surface-Focused Material Layers**: 8 layers (0-20m depth) with procedural deep generation
+- **Automatic Cliff Detection**: Seamless transition to voxel storage at 70° slopes
+- **Delta Overlay System**: Efficient tracking of user modifications (tiered storage)
+- **Smart Visibility Tracking**: Only 5% of blocks need persistent storage
+
+**Terrain Coverage Performance:**
+
+| Terrain Type | Height Raster | Voxel Regions | Total Storage | Overhead |
+|--------------|---------------|---------------|---------------|----------|
+| **Flat Plains** | 24 MB/km² | 0 MB | 24 MB | 0% |
+| **Rolling Hills** | 24 MB/km² | 2 MB | 26 MB | 8% |
+| **Mountains** | 24 MB/km² | 50 MB | 74 MB | 208% |
+| **Steep Cliffs** | 24 MB/km² | 180 MB | 204 MB | 750% |
 
 ### Octree + Grid Hybrid Architecture Results
 
