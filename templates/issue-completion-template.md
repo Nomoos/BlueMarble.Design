@@ -82,7 +82,7 @@ Issue completed and ready for review.
 
 ### Changes Made
 - Completed market analysis of top 5 MMORPG monetization models
-- Created research report in `/docs/research/mmorpg-monetization-analysis.md`
+- Created research report in `/research/market-research/mmorpg-monetization-analysis.md`
 - Updated market research document with new competitive insights
 
 ### Reasoning & Context

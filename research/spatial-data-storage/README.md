@@ -17,11 +17,21 @@ Each step contains detailed research documents and can be explored independently
 ## Contents
 
 ### Core Research Documents
+- **[Octree Compression Benefits Research](octree-compression-benefits-research.md)** - **NEW**: Comprehensive research documentation on octree compression benefits for world material storage with 50+ academic/industry references, detailed algorithms, case studies, and 12-month implementation roadmap
 - **[Current Implementation Analysis](current-implementation.md)** - Analysis of BlueMarble's existing spatial data architecture
 - **[Comparison Analysis](comparison-analysis.md)** - Detailed comparison of spatial storage approaches
+
+#### Coordinate System (Int32 Centimeters)
+- **[Coordinate Data Type Optimization](../topics/coordinate-data-type-optimization.md)** - **UPDATED**: Analysis of Int32 (centimeters) for 20,000 km world scale with focus on geological simulation precision, performance, and 50% memory savings
+- **[ADR-001: Coordinate Data Type Selection](../topics/adr-001-coordinate-data-type-selection.md)** - **UPDATED**: Architectural Decision Record proposing Int32 (centimeters) for world coordinates optimized for geological simulations
+- **[Int32 Implementation Specification](../topics/int32-coordinate-implementation-specification.md)** - **NEW**: Complete implementation guide for BlueMarble.Core with C# code examples, data structures, and 2-week phased rollout
+- **[Int32 Database Schema](../topics/int32-coordinate-database-schema.md)** - **NEW**: PostgreSQL and Cassandra schema design with spatial indexing, Morton encoding, and query optimization
+- **[Int32 Network Protocol](../topics/int32-coordinate-network-protocol.md)** - **NEW**: Binary protocol with delta encoding achieving 50-70% bandwidth reduction for efficient coordinate transmission
+
+#### Octree and Spatial Indexing
 - **[Octree Optimization Guide](octree-optimization-guide.md)** - Advanced octree optimization strategies
 - **[Hybrid Array + Octree Storage Strategy](hybrid-array-octree-storage-strategy.md)** - **NEW**: Comprehensive strategy for using flat chunked arrays as primary storage with octree/R-tree as secondary acceleration indices. Addresses sparse updates, asynchronous rebuild, and optimal query performance.
-- **[Octree + Vector Boundary Integration](octree-vector-boundary-integration.md)** - **COMPLETED**: Comprehensive research on hybrid octree/vector systems for precise features
+- **[Octree + Vector Boundary Integration](step-3-architecture-design/octree-vector-boundary-integration.md)** - **COMPLETED**: Comprehensive research on hybrid octree/vector systems for precise features
 - **[Distributed Octree Architecture with Spatial Hash Distribution](distributed-octree-spatial-hash-architecture.md)** - **COMPLETED**: Comprehensive design for scalable cluster storage with spatial hash distribution
 - **[Recommendations](recommendations.md)** - Strategic recommendations for hybrid spatial storage
 - **[3D Octree Storage Architecture Integration](3d-octree-storage-architecture-integration.md)** - **NEW**: Comprehensive integration research and migration pathway for 3D octree material storage system
@@ -48,8 +58,14 @@ Each step contains detailed research documents and can be explored independently
 
 
 ### Hybrid Architecture Research
-- **[Grid + Vector Combination Research](grid-vector-combination-research.md)** - **NEW**: Dense simulation areas using raster grids with vector boundaries
-- **[Octree + Grid Hybrid Architecture](octree-grid-hybrid-architecture.md)** - **NEW**: Multi-scale storage combining octree global indexing with raster grid tiles for high-resolution areas
+- **[Grid + Vector Combination Research](step-3-architecture-design/grid-vector-combination-research.md)** - **NEW**: Dense simulation areas using raster grids with vector boundaries
+  - **📖 Complete Implementation Suite**: See [step-4-implementation](step-4-implementation/) for production-ready guides
+  - [Grid + Vector Hybrid Implementation](step-4-implementation/grid-vector-hybrid-implementation.md) - Core implementation with phase-by-phase guide
+  - [Geomorphology Integration](step-4-implementation/grid-vector-geomorphology-integration.md) - Erosion, tectonics, and coastal processes
+  - [API Integration Examples](step-4-implementation/grid-vector-api-integration.md) - RESTful, WebSocket, and client SDKs
+  - [Test Specifications](step-4-implementation/grid-vector-test-specifications.md) - Comprehensive test strategy
+  - [Performance Benchmarks](step-4-implementation/grid-vector-performance-benchmarks.md) - Benchmark suite and targets
+- **[Octree + Grid Hybrid Architecture](step-3-architecture-design/octree-grid-hybrid-architecture.md)** - **NEW**: Multi-scale storage combining octree global indexing with raster grid tiles for high-resolution areas
 ## Research Focus
 
 The research addresses multiple challenges in planetary-scale geological simulation:
