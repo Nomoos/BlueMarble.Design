@@ -16,6 +16,8 @@ This step provides detailed implementation guides, integration strategies, and d
 
 ### Core Implementation Guides
 - [Implementation Guide](implementation-guide.md) - Step-by-step deployment guide for compression systems
+- [Octree + Grid Hybrid Phase 1 Implementation](octree-grid-hybrid-phase1-implementation.md) - Foundation phase for hybrid architecture
+- [Octree + Grid Hybrid Phase 2 Implementation](octree-grid-hybrid-phase2-implementation.md) - Core functionality with automatic routing
 - [Grid + Vector Hybrid Implementation](grid-vector-hybrid-implementation.md) - **Complete implementation guide for dense simulation hybrid storage** ⭐
 - [Delta Overlay Implementation](delta-overlay-implementation.md) - Change tracking and overlay systems
 - [Multi-Resolution Blending Implementation](multi-resolution-blending-implementation.md) - Technical implementation specifications
