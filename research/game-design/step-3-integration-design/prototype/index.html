@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueMarble Economic System Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BlueMarble Economic System Prototype</h1>
+            <p class="subtitle">Dynamic Markets • Production Chains • Ship-Based Trading</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Market Dashboard -->
+            <section class="market-dashboard">
+                <h2>Global Markets</h2>
+                <div class="time-display">
+                    <span class="label">Game Time:</span>
+                    <span id="gameTime" class="value">Day 1, 00:00</span>
+                    <button id="pauseBtn" class="control-btn">⏸ Pause</button>
+                    <button id="speedBtn" class="control-btn">⏩ 2x Speed</button>
+                </div>
+                <div id="marketGrid" class="market-grid"></div>
+            </section>
+
+            <!-- Regional Markets -->
+            <section class="regional-markets">
+                <h2>Regional Price Comparison</h2>
+                <div class="region-selector">
+                    <button class="region-btn active" data-region="north-america">North America</button>
+                    <button class="region-btn" data-region="europe">Europe</button>
+                    <button class="region-btn" data-region="asia">Asia</button>
+                    <button class="region-btn" data-region="south-america">South America</button>
+                    <button class="region-btn" data-region="africa">Africa</button>
+                    <button class="region-btn" data-region="oceania">Oceania</button>
+                </div>
+                <div id="priceComparison" class="price-comparison"></div>
+            </section>
+
+            <!-- Trade Route Calculator -->
+            <section class="trade-calculator">
+                <h2>Trade Route Optimizer</h2>
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="shipType">Ship Type:</label>
+                        <select id="shipType">
+                            <option value="coastal">Coastal Trader (50t, Fast)</option>
+                            <option value="brig" selected>Merchant Brig (150t, Medium)</option>
+                            <option value="galleon">Heavy Cargo (400t, Slow)</option>
+                            <option value="clipper">Fast Clipper (100t, Very Fast)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="originRegion">From:</label>
+                        <select id="originRegion">
+                            <option value="north-america">North America</option>
+                            <option value="europe">Europe</option>
+                            <option value="asia">Asia</option>
+                            <option value="south-america">South America</option>
+                            <option value="africa">Africa</option>
+                            <option value="oceania">Oceania</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="destRegion">To:</label>
+                        <select id="destRegion">
+                            <option value="europe">Europe</option>
+                            <option value="north-america">North America</option>
+                            <option value="asia">Asia</option>
+                            <option value="south-america">South America</option>
+                            <option value="africa">Africa</option>
+                            <option value="oceania">Oceania</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="commodity">Commodity:</label>
+                        <select id="commodity">
+                            <option value="iron-ore">Iron Ore</option>
+                            <option value="coal">Coal</option>
+                            <option value="timber">Timber</option>
+                            <option value="steel">Steel</option>
+                            <option value="planks">Planks</option>
+                            <option value="cloth">Cloth</option>
+                            <option value="tools">Tools</option>
+                            <option value="ship-components">Ship Components</option>
+                            <option value="furniture">Furniture</option>
+                            <option value="spices">Spices</option>
+                            <option value="fine-art">Fine Art</option>
+                        </select>
+                    </div>
+                    <button id="calculateBtn" class="calculate-btn">Calculate Profit</button>
+                </div>
+                <div id="routeResults" class="route-results"></div>
+            </section>
+
+            <!-- Production Chains -->
+            <section class="production-chains">
+                <h2>Production Chains</h2>
+                <div id="productionViz" class="production-viz">
+                    <div class="chain">
+                        <div class="node raw">Iron Ore</div>
+                        <div class="arrow">+</div>
+                        <div class="node raw">Coal</div>
+                        <div class="arrow">→</div>
+                        <div class="node processed">Steel</div>
+                        <div class="arrow">+</div>
+                        <div class="node raw">Timber</div>
+                        <div class="arrow">→</div>
+                        <div class="node manufactured">Tools</div>
+                    </div>
+                    <div class="chain">
+                        <div class="node raw">Timber</div>
+                        <div class="arrow">→</div>
+                        <div class="node processed">Planks</div>
+                        <div class="arrow">+</div>
+                        <div class="node manufactured">Tools</div>
+                        <div class="arrow">→</div>
+                        <div class="node manufactured">Furniture</div>
+                    </div>
+                    <div class="chain">
+                        <div class="node processed">Steel</div>
+                        <div class="arrow">+</div>
+                        <div class="node processed">Planks</div>
+                        <div class="arrow">+</div>
+                        <div class="node processed">Cloth</div>
+                        <div class="arrow">→</div>
+                        <div class="node manufactured">Ship Components</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Map Visualization -->
+            <section class="map-section">
+                <h2>Trade Route Visualization</h2>
+                <div id="mapCanvas" class="map-canvas">
+                    <svg id="tradeSvg" width="100%" height="400" viewBox="0 0 800 400">
+                        <!-- Regions -->
+                        <circle cx="150" cy="150" r="40" class="region" data-region="north-america"/>
+                        <text x="150" y="155" text-anchor="middle" class="region-label">N. America</text>
+                        
+                        <circle cx="350" cy="120" r="40" class="region" data-region="europe"/>
+                        <text x="350" y="125" text-anchor="middle" class="region-label">Europe</text>
+                        
+                        <circle cx="550" cy="180" r="40" class="region" data-region="asia"/>
+                        <text x="550" y="185" text-anchor="middle" class="region-label">Asia</text>
+                        
+                        <circle cx="200" cy="300" r="40" class="region" data-region="south-america"/>
+                        <text x="200" y="305" text-anchor="middle" class="region-label">S. America</text>
+                        
+                        <circle cx="400" cy="280" r="40" class="region" data-region="africa"/>
+                        <text x="400" y="285" text-anchor="middle" class="region-label">Africa</text>
+                        
+                        <circle cx="650" cy="320" r="40" class="region" data-region="oceania"/>
+                        <text x="650" y="325" text-anchor="middle" class="region-label">Oceania</text>
+                        
+                        <!-- Trade routes will be dynamically added -->
+                        <g id="tradeRoutes"></g>
+                        <g id="ships"></g>
+                    </svg>
+                </div>
+                <div class="map-legend">
+                    <div class="legend-item"><span class="dot profitable"></span> Profitable Route</div>
+                    <div class="legend-item"><span class="dot unprofitable"></span> Unprofitable Route</div>
+                    <div class="legend-item"><span class="dot ship"></span> Active Ship</div>
+                </div>
+            </section>
+
+            <!-- Statistics -->
+            <section class="statistics">
+                <h2>Market Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalTrades">0</div>
+                        <div class="stat-label">Total Trades</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalVolume">0</div>
+                        <div class="stat-label">Trade Volume (credits)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="activeShips">0</div>
+                        <div class="stat-label">Active Ships</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="avgPrice">0</div>
+                        <div class="stat-label">Avg Price Change</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>BlueMarble Economic System Prototype v1.0 | Research Validation</p>
+        </footer>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

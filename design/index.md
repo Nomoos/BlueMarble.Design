@@ -9,6 +9,7 @@ Entry point for all BlueMarble design documentation.
 - [Design Pillars](pillars.md) - Core design pillars and vision
 - [Core Mechanics](mechanics.md) - Core gameplay loops and systems
 - [Economy](economy.md) - Progression, currencies, and economic balance
+- [Auction Economy](auction-economy.md) - Auction-based trading, transport, fees, spoilage, and seasonality
 - [Narrative](narrative.md) - Story, world, and characters
 
 ### User Experience

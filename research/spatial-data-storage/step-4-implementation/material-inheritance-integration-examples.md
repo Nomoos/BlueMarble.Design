@@ -268,6 +268,114 @@ map.on('click', async (event) => {
 
 ### 4. Backend API Controllers
 
+#### Extended Swap Calculation with All Fees
+
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public class ExtendedSwapController : ControllerBase
+{
+    [HttpPost("calculate-extended")]
+    public ActionResult<ExtendedSwapResult> CalculateExtendedSwap(
+        [FromBody] ExtendedSwapRequest request)
+    {
+        // Calculate base route
+        var baseRoute = _swapRouter.FindOptimalRoute(
+            request.FromCommodity, 
+            request.ToCommodity, 
+            request.Amount
+        );
+        
+        // Apply extended costs
+        var auctioneerFee = CalculateAuctioneerFee(
+            request.MarketTier, 
+            request.PlayerRace, 
+            baseRoute.OutputAmount
+        );
+        
+        var transportFee = request.IncludeTransport 
+            ? CalculateTransportFee(request.FromMarket, request.ToMarket, request.Season)
+            : 0;
+        
+        var guardFee = request.GuardTier != "none"
+            ? CalculateGuardFee(request.GuardTier, baseRoute.OutputAmount, transportFee)
+            : 0;
+        
+        var deterioration = CalculateDeteriorationLoss(
+            request.FromCommodity,
+            request.Amount,
+            request.Season,
+            request.Preservation
+        );
+        
+        return Ok(new ExtendedSwapResult
+        {
+            OptimalRoute = baseRoute,
+            Costs = new CostBreakdown
+            {
+                AuctioneerFee = auctioneerFee,
+                TransportFee = transportFee,
+                GuardFee = guardFee,
+                DeteriorationLoss = deterioration,
+                TotalMonetaryCost = auctioneerFee + transportFee + guardFee,
+                EffectiveAmount = request.Amount - deterioration.LossAmount
+            }
+        });
+    }
+    
+    private decimal CalculateAuctioneerFee(string marketTier, string playerRace, decimal value)
+    {
+        var baseFees = new Dictionary<string, decimal>
+        {
+            ["local"] = 0.015m,      // 1.5%
+            ["regional"] = 0.03m,    // 3%
+            ["global"] = 0.07m       // 7%
+        };
+        
+        var raceFeeMultipliers = new Dictionary<string, decimal>
+        {
+            ["native-inhabitants"] = 1.0m,
+            ["established-settlers"] = 1.2m,
+            ["experimental-race-1"] = 1.5m,
+            ["experimental-race-2"] = 2.0m  // Higher fees for experimenting races
+        };
+        
+        var baseFee = baseFees.GetValueOrDefault(marketTier, 0.03m);
+        var raceMultiplier = raceFeeMultipliers.GetValueOrDefault(playerRace, 1.0m);
+        
+        return value * baseFee * raceMultiplier;
+    }
+}
+
+// Request/Response DTOs
+public class ExtendedSwapRequest
+{
+    public string FromCommodity { get; set; }
+    public string ToCommodity { get; set; }
+    public decimal Amount { get; set; }
+    public string FromMarket { get; set; }
+    public string ToMarket { get; set; }
+    public string MarketTier { get; set; }  // "local", "regional", "global"
+    public string PlayerRace { get; set; }
+    public string Season { get; set; }
+    public string Preservation { get; set; }
+    public string GuardTier { get; set; }
+    public bool IncludeTransport { get; set; }
+}
+
+public class CostBreakdown
+{
+    public decimal AuctioneerFee { get; set; }
+    public decimal TransportFee { get; set; }
+    public decimal GuardFee { get; set; }
+    public DeteriorationInfo DeteriorationLoss { get; set; }
+    public decimal TotalMonetaryCost { get; set; }
+    public decimal EffectiveAmount { get; set; }
+}
+```
+
+### 4. Backend API Controllers (Original)
+
 ```csharp
 [ApiController]
 [Route("api/[controller]")]
