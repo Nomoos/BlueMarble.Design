@@ -1,0 +1,490 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Main Content */
+.main-content {
+    padding: 30px 40px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #f7fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+section h2 {
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+/* Time Display */
+.time-display {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time-display .label {
+    font-weight: bold;
+    color: #4a5568;
+}
+
+.time-display .value {
+    color: #667eea;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.control-btn {
+    padding: 8px 16px;
+    border: none;
+    background: #667eea;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background 0.3s;
+}
+
+.control-btn:hover {
+    background: #5568d3;
+}
+
+/* Market Grid */
+.market-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.commodity-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.commodity-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.commodity-card .name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.commodity-card .category {
+    font-size: 0.85em;
+    color: #718096;
+    margin-bottom: 10px;
+}
+
+.commodity-card .price {
+    font-size: 1.5em;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.commodity-card .change {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.change.up {
+    color: #48bb78;
+}
+
+.change.down {
+    color: #f56565;
+}
+
+/* Region Selector */
+.region-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.region-btn {
+    padding: 10px 20px;
+    border: 2px solid #cbd5e0;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.region-btn:hover {
+    border-color: #667eea;
+    background: #f7fafc;
+}
+
+.region-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+/* Price Comparison */
+.price-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.price-item {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #667eea;
+}
+
+.price-item .commodity-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #2d3748;
+}
+
+.price-item .price-value {
+    font-size: 1.3em;
+    color: #667eea;
+}
+
+.price-item .vs-global {
+    font-size: 0.85em;
+    color: #718096;
+    margin-top: 5px;
+}
+
+/* Trade Calculator */
+.calculator-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #4a5568;
+}
+
+.form-group select {
+    padding: 10px;
+    border: 2px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.calculate-btn {
+    grid-column: 1 / -1;
+    padding: 12px 30px;
+    background: #48bb78;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.calculate-btn:hover {
+    background: #38a169;
+}
+
+.route-results {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+.route-results.show {
+    display: block;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.result-row:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.result-value {
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.profit-positive {
+    color: #48bb78;
+    font-size: 1.3em;
+}
+
+.profit-negative {
+    color: #f56565;
+    font-size: 1.3em;
+}
+
+/* Production Chains */
+.production-viz {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.node {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.node.raw {
+    background: #f6ad55;
+}
+
+.node.processed {
+    background: #4299e1;
+}
+
+.node.manufactured {
+    background: #9f7aea;
+}
+
+.arrow {
+    font-size: 1.5em;
+    color: #718096;
+    font-weight: bold;
+}
+
+/* Map Visualization */
+.map-canvas {
+    background: #e6f2ff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+#tradeSvg {
+    display: block;
+}
+
+.region {
+    fill: #667eea;
+    stroke: #2d3748;
+    stroke-width: 2;
+    cursor: pointer;
+    transition: fill 0.3s;
+}
+
+.region:hover {
+    fill: #5568d3;
+}
+
+.region-label {
+    fill: white;
+    font-size: 12px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.trade-route {
+    stroke: #48bb78;
+    stroke-width: 3;
+    fill: none;
+    stroke-dasharray: 5, 5;
+    animation: dash 20s linear infinite;
+}
+
+.trade-route.unprofitable {
+    stroke: #f56565;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -1000;
+    }
+}
+
+.map-legend {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.profitable {
+    background: #48bb78;
+}
+
+.dot.unprofitable {
+    background: #f56565;
+}
+
+.dot.ship {
+    background: #667eea;
+}
+
+/* Statistics */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: #718096;
+    font-size: 0.95em;
+}
+
+/* Footer */
+footer {
+    background: #2d3748;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .time-display {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .calculator-form {
+        grid-template-columns: 1fr;
+    }
+}

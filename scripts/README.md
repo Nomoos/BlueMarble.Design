@@ -8,6 +8,50 @@ This directory contains utility scripts for maintaining documentation quality in
 
 ## Available Scripts
 
+### autosources-discovery.py
+
+**Automated Source Discovery Tool** - Automatically discovers research sources from existing research documents by scanning for citations, references, and "future research" sections.
+
+**Quick Start:**
+```bash
+python3 scripts/autosources-discovery.py --scan-all
+```
+
+**Features:**
+- Scans all research documents for source references
+- Automatically classifies by priority and category
+- Generates processing queues
+- Outputs to Markdown or JSON
+- Tracks sources across multiple documents
+- Deduplicates sources mentioned in multiple places
+
+**Usage Examples:**
+```bash
+# Scan all documents
+python3 scripts/autosources-discovery.py --scan-all
+
+# Scan specific phase
+python3 scripts/autosources-discovery.py --phase 3
+
+# Generate JSON output
+python3 scripts/autosources-discovery.py --scan-all --format json
+
+# Custom output file
+python3 scripts/autosources-discovery.py --scan-all --output my-discoveries.md
+```
+
+**Output:** `research/literature/auto-discovered-sources.md`
+
+**Requirements:**
+- Python 3.7+
+- PyYAML: `pip install pyyaml`
+
+**Documentation:** See `autosources-discovery-guide.md` for complete usage guide
+
+**Use Case:** Run at the end of each research phase to discover new sources for the next phase
+
+---
+
 ### generate-research-issues.py
 
 Generates GitHub issue content for all 40 research assignment groups plus parent and Phase 2 planning issues.
@@ -203,5 +247,28 @@ If you encounter issues with any script:
 
 ---
 
-**Last Updated:** 2025-01-03  
+## Research Automation Workflow
+
+The scripts support an automated research workflow:
+
+1. **Discovery Phase** (`autosources-discovery.py`)
+   - Scan completed research for new sources
+   - Generate prioritized discovery report
+   - Create processing queue
+
+2. **Planning Phase** (`generate-research-issues.py`)
+   - Convert discoveries into assignment groups
+   - Generate GitHub issues for tracking
+
+3. **Issue Creation** (`create-research-issues.ps1`)
+   - Automate GitHub issue creation
+   - Track research progress
+
+4. **Quality Assurance** (`check-documentation-quality.sh`)
+   - Validate documentation quality
+   - Ensure consistency
+
+---
+
+**Last Updated:** 2025-01-17  
 **Maintainers:** BlueMarble.Design Documentation Team
