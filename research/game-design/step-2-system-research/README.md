@@ -10,6 +10,7 @@ This step contains comprehensive research on game systems from leading MMORPGs a
 2. **[Step 2.2: Material Systems](step-2.2-material-systems/)** - Material quality, geological integration, and property systems
 3. **[Step 2.3: Crafting Systems](step-2.3-crafting-systems/)** - Advanced crafting mechanics and workflow design
 4. **[Step 2.4: Historical Research](step-2.4-historical-research/)** - Authentic historical professions and guild systems
+5. **[Step 2.5: Economy Systems](step-2.5-economy-systems/)** - Player-driven economies, quest contracts, and market mechanics
 5. **[Step 2.5: Player Experience](step-2.5-player-experience/)** - Player psychology, demographics, and gameplay preferences
 5. **[Step 2.5: Economy Systems](step-2.5-economy-systems/)** - Player-driven markets, quest contracts, and trading mechanisms
 5. **[Step 2.5: Player Economy Behavior](step-2.5-player-economy-behavior/)** - Player pricing behavior, time valuation, and market dynamics
@@ -35,6 +36,11 @@ Each sub-step contains detailed analysis of multiple reference games and actiona
 - Vintage Story (knowledge discovery)
 - Eco Global Survival (collaborative specialization)
 - Port Royale 1 & The Guild 1400 (economic simulation)
+- EVE Online (contract-based economy)
+- Star Wars Galaxies (player-created missions)
+- Albion Online (crafting orders and auctions)
+- Guild Wars 2 (dynamic events)
+- Path of Exile (contract risk-reward systems)
 - Old School RuneScape (Grand Exchange market system)
 - EVE Online (contract systems)
 - EVE Online (player-driven economy and market behavior)
@@ -68,6 +74,11 @@ Each sub-step contains detailed analysis of multiple reference games and actiona
 - Economic interdependence
 - Realistic specialization pathways
 
+### Economic Systems
+- Contract-based quest mechanics
+- Player-driven markets and auctions
+- Reputation and trust systems
+- Service-based economies
 ### Player Psychology and Demographics
 - Gender differences in gaming preferences
 - Indirect control vs. direct execution appeal
