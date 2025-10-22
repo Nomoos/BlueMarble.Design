@@ -12,6 +12,10 @@ This directory contains formal references, summaries, and literature reviews for
 
 - [example-topic.md](example-topic.md) - Example literature review format
 - [survival-guides-knowledge-domains-research.md](survival-guides-knowledge-domains-research.md) - Analysis of survival knowledge systems from awesome-survival repository
+- [academic-analysis-geoinformatics-phd-kucera-2024.md](academic-analysis-geoinformatics-phd-kucera-2024.md) - PhD dissertation analysis from Palacký University Olomouc on geoinformatics and cartography
+- [discovered-sources-geoinformatics-academic-2024.md](discovered-sources-geoinformatics-academic-2024.md) - Catalog of 50+ discovered academic sources related to geoinformatics research
+- [priority-sources-analysis-geoinformatics-2024.md](priority-sources-analysis-geoinformatics-2024.md) - Detailed analysis of 20 priority sources (8 critical + 12 high) with implementation roadmaps
+- [source-acquisition-plan-geoinformatics-2024.md](source-acquisition-plan-geoinformatics-2024.md) - Comprehensive acquisition plan and tracking for 20 priority sources
 
 ## Algorithm Analysis
 
