@@ -17,6 +17,17 @@ This directory contains formal references, summaries, and literature reviews for
 - [priority-sources-analysis-geoinformatics-2024.md](priority-sources-analysis-geoinformatics-2024.md) - Detailed analysis of 20 priority sources (8 critical + 12 high) with implementation roadmaps
 - [source-acquisition-plan-geoinformatics-2024.md](source-acquisition-plan-geoinformatics-2024.md) - Comprehensive acquisition plan and tracking for 20 priority sources
 
+## Algorithm Analysis
+
+Comprehensive analysis of algorithms relevant to BlueMarble development:
+
+1. [algorithm-analysis-fast-poisson-disk-sampling.md](algorithm-analysis-fast-poisson-disk-sampling.md) - Fast Poisson Disk Sampling for spatial distribution
+2. [algorithm-analysis-jump-point-search.md](algorithm-analysis-jump-point-search.md) - Jump Point Search pathfinding optimization
+3. [algorithm-analysis-marching-cubes.md](algorithm-analysis-marching-cubes.md) - Marching Cubes for 3D surface extraction
+4. [algorithm-analysis-multi-flow-direction.md](algorithm-analysis-multi-flow-direction.md) - Multi-Flow Direction algorithms for hydrological modeling (Freeman 1991, Quinn 1991/1995)
+5. [algorithm-analysis-d-infinity-flow-direction.md](algorithm-analysis-d-infinity-flow-direction.md) - D-Infinity continuous flow direction method (Tarboton 1997)
+6. [algorithm-analysis-priority-flood-depression-filling.md](algorithm-analysis-priority-flood-depression-filling.md) - Priority-Flood optimal depression filling algorithm (Barnes et al. 2014)
+
 ## Research Management
 
 1. [master-research-queue.md](master-research-queue.md) - Master tracking document for all research sources and priorities
