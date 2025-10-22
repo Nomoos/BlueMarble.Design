@@ -48,8 +48,14 @@ Each step contains detailed research documents and can be explored independently
 
 
 ### Hybrid Architecture Research
-- **[Grid + Vector Combination Research](grid-vector-combination-research.md)** - **NEW**: Dense simulation areas using raster grids with vector boundaries
-- **[Octree + Grid Hybrid Architecture](octree-grid-hybrid-architecture.md)** - **NEW**: Multi-scale storage combining octree global indexing with raster grid tiles for high-resolution areas
+- **[Grid + Vector Combination Research](step-3-architecture-design/grid-vector-combination-research.md)** - **NEW**: Dense simulation areas using raster grids with vector boundaries
+  - **📖 Complete Implementation Suite**: See [step-4-implementation](step-4-implementation/) for production-ready guides
+  - [Grid + Vector Hybrid Implementation](step-4-implementation/grid-vector-hybrid-implementation.md) - Core implementation with phase-by-phase guide
+  - [Geomorphology Integration](step-4-implementation/grid-vector-geomorphology-integration.md) - Erosion, tectonics, and coastal processes
+  - [API Integration Examples](step-4-implementation/grid-vector-api-integration.md) - RESTful, WebSocket, and client SDKs
+  - [Test Specifications](step-4-implementation/grid-vector-test-specifications.md) - Comprehensive test strategy
+  - [Performance Benchmarks](step-4-implementation/grid-vector-performance-benchmarks.md) - Benchmark suite and targets
+- **[Octree + Grid Hybrid Architecture](step-3-architecture-design/octree-grid-hybrid-architecture.md)** - **NEW**: Multi-scale storage combining octree global indexing with raster grid tiles for high-resolution areas
 ## Research Focus
 
 The research addresses multiple challenges in planetary-scale geological simulation:
