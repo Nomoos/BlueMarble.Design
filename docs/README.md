@@ -1,6 +1,8 @@
 # BlueMarble Design Documentation
 
-This directory contains comprehensive design documentation for BlueMarble, a top-down MMORPG.
+This directory contains comprehensive **technical implementation documentation** for BlueMarble, a top-down MMORPG.
+
+> **Note**: For research and exploratory work, see the [/research](../research/) directory. For high-level design vision and concepts, see the [/design](../design/) directory. This `/docs` directory focuses on technical specifications and implementation details.
 
 ## Document Structure
 
@@ -21,6 +23,9 @@ This directory contains comprehensive design documentation for BlueMarble, a top
 - [Economy Systems](./systems/economy-systems.md) - Trading, crafting, and resource management
 
 ### Gameplay Specifications
+- **[Game Design Roles Guidelines](./gameplay/game-design-roles-guidelines.md) - Team structure, responsibilities, and collaboration patterns**
+- [Core Game Design Document](./gameplay/gdd-core-game-design.md) - Core design vision and mechanics
+- [Content Rating Guidelines](./gameplay/content-rating-guidelines.md) - Content standards and maturity boundaries
 - [Player Progression System](./gameplay/spec-player-progression-system.md) - Character advancement and skill systems
 - [Player Resource Dashboard](./gameplay/spec-player-resource-dashboard.md) - Resource management interface
 - [Marketplace Usage Guide](./gameplay/marketplace-usage-guide.md) - Player trading and economy
@@ -40,11 +45,6 @@ This directory contains comprehensive design documentation for BlueMarble, a top
 - [Audio Guidelines](./audio/audio-guidelines.md) - Sound design principles
 - [Music Design](./audio/music-design.md) - Musical themes and composition
 - [Sound Effects](./audio/sound-effects.md) - SFX catalog and implementation
-
-### Research
-- [Market Research](./research/market-research.md) - Competitive analysis and market trends
-- [Player Research](./research/player-research.md) - Target audience and player behavior
-- [Technology Research](./research/technology-research.md) - Technical feasibility and tools
 
 ### Infrastructure & Project Management
 - [Technical Foundation Overview](./TECHNICAL_FOUNDATION.md) - Core system architecture documentation hub

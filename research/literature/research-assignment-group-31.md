@@ -76,13 +76,13 @@ This assignment group focuses on analyzing game development resources from the o
 
 ## Progress Tracking
 
-- [ ] GameDev.tv
-- [ ] ENet (Networking Library)
-- [ ] All documents created and placed in `research/literature/`
-- [ ] All documents have proper front matter
-- [ ] All documents meet minimum length requirements
-- [ ] Cross-references added
-- [ ] Discovered sources logged below
+- [x] GameDev.tv
+- [x] ENet (Networking Library)
+- [x] All documents created and placed in `research/literature/`
+- [x] All documents have proper front matter
+- [x] All documents meet minimum length requirements
+- [x] Cross-references added
+- [x] Discovered sources logged below
 
 ## New Sources Discovery
 
@@ -110,7 +110,77 @@ During your research, if you discover additional valuable sources, log them here
 
 ### Discoveries Log
 
-_(Log your discoveries here as you find them)_
+**Source Name:** Mirror Networking ✅ **COMPLETED**  
+**Discovered From:** GameDev.tv (Unity Multiplayer Course references)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Open-source Unity networking solution that provides more control than built-in networking, essential for MMORPG-scale multiplayer with custom protocols and optimizations  
+**Estimated Effort:** 6-8 hours  
+**Analysis Document:** `game-dev-analysis-mirror-networking.md` (850+ lines)  
+**Completion Date:** 2025-01-17
+
+**Source Name:** Fish-Networking (FishNet) ✅ **COMPLETED**  
+**Discovered From:** GameDev.tv (Modern Unity networking alternatives)  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Modern Unity networking solution with better performance characteristics than Mirror, supports client-side prediction and server reconciliation out-of-the-box for smooth MMORPG gameplay  
+**Estimated Effort:** 6-8 hours  
+**Analysis Document:** `game-dev-analysis-fish-networking.md` (1,213 lines)  
+**Completion Date:** 2025-01-17
+
+**Source Name:** Unity DOTS (Data-Oriented Tech Stack) ✅ **COMPLETED**  
+**Discovered From:** GameDev.tv (Performance optimization references)  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Future scalability option for handling massive entity counts (geological features, resources, players) through ECS architecture and job system for multi-threaded performance  
+**Estimated Effort:** 10-12 hours  
+**Analysis Document:** `game-dev-analysis-unity-dots.md` (709 lines)  
+**Completion Date:** 2025-01-17
+
+**Source Name:** Mike Acton's "Data-Oriented Design" Talk ✅ **COMPLETED**  
+**Discovered From:** Unity DOTS - Foundational inspiration  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** CppCon talk that inspired Unity DOTS. Essential for understanding data-oriented design principles beyond just Unity  
+**Estimated Effort:** 2-3 hours (video + notes)  
+**Analysis Document:** `game-dev-analysis-mike-acton-dod.md` (650 lines)  
+**Completion Date:** 2025-01-17
+
+**Source Name:** KCP Protocol ✅ **COMPLETED**  
+**Discovered From:** ENet (Networking Library) - Alternative UDP library  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Claims 30%-40% faster than TCP for game networking. Could be compared against ENet for BlueMarble's specific use case with lower latency requirements  
+**Estimated Effort:** 6-8 hours  
+**Analysis Document:** `game-dev-analysis-kcp-protocol.md` (692 lines)  
+**Completion Date:** 2025-01-17
+
+**Source Name:** Gaffer On Games (Networking Articles) ✅ **COMPLETED**  
+**Discovered From:** ENet (Networking Library) - Referenced networking resource  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Authoritative resource on game networking fundamentals, client-side prediction, lag compensation, and networked physics. Essential reading for implementing robust MMORPG networking  
+**Estimated Effort:** 8-10 hours  
+**Analysis Document:** `game-dev-analysis-gaffer-on-games.md` (1,018 lines)  
+**Completion Date:** 2025-01-17
+
+**Source Name:** Gabriel Gambetta's Client-Server Architecture ✅ **COMPLETED**  
+**Discovered From:** Gaffer On Games - Complementary networking articles  
+**Priority:** High  
+**Category:** GameDev-Tech  
+**Rationale:** Complementary to Gaffer's articles, focuses on fast-paced multiplayer with excellent visualizations. Written by author of "Computer Graphics from Scratch"  
+**Estimated Effort:** 6-8 hours  
+**Analysis Document:** `game-dev-analysis-gabriel-gambetta.md` (818 lines)  
+**Completion Date:** 2025-01-17
+
+**Source Name:** Valve Source Engine Networking Documentation ✅ **COMPLETED**  
+**Discovered From:** Gaffer On Games - Real-world AAA implementation  
+**Priority:** Medium  
+**Category:** GameDev-Tech  
+**Rationale:** Real-world implementation details from Half-Life 2, Counter-Strike Source. Shows how AAA studio applied networking concepts  
+**Estimated Effort:** 4-6 hours  
+**Analysis Document:** `game-dev-analysis-valve-source-engine.md` (664 lines)  
+**Completion Date:** 2025-01-17
 
 ---
 
