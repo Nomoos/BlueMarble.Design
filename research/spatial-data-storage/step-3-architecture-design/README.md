@@ -18,7 +18,13 @@ This step presents comprehensive architectural designs for spatial data storage,
 - [Hybrid Array + Octree Storage Strategy](hybrid-array-octree-storage-strategy.md) - Flat chunked arrays with octree indices for 100x faster updates
 - [Octree + Grid Hybrid Architecture](octree-grid-hybrid-architecture.md) - Multi-scale storage combining global octree with local raster grids
 - [Octree + Vector Boundary Integration](octree-vector-boundary-integration.md) - Hybrid octree/vector systems for precise geological features
-- [Grid + Vector Combination Research](grid-vector-combination-research.md) - Dense simulation with raster grids and vector boundaries
+- [Grid + Vector Combination Research](grid-vector-combination-research.md) - **Dense simulation with raster grids and vector boundaries** ⭐
+  - **📖 Implementation**: See [step-4-implementation](../step-4-implementation/) for complete implementation guides
+  - [Grid + Vector Hybrid Implementation](../step-4-implementation/grid-vector-hybrid-implementation.md)
+  - [Geomorphology Integration](../step-4-implementation/grid-vector-geomorphology-integration.md)
+  - [API Integration Examples](../step-4-implementation/grid-vector-api-integration.md)
+  - [Test Specifications](../step-4-implementation/grid-vector-test-specifications.md)
+  - [Performance Benchmarks](../step-4-implementation/grid-vector-performance-benchmarks.md)
 
 ### Distributed and 3D Systems
 - [Distributed Octree Spatial Hash Architecture](distributed-octree-spatial-hash-architecture.md) - Scalable cluster storage with 820x throughput improvement
@@ -44,6 +50,13 @@ This step presents comprehensive architectural designs for spatial data storage,
 - **Z-Dimension**: 20,000 km height range (±10,000km from sea level)
 - **Precision**: 64-bit integer for meter-level accuracy
 - **Compatibility**: Backward compatible with existing BlueMarble systems
+
+### Grid + Vector Hybrid (New)
+- **Grid Storage**: Regular raster grids for dense simulation areas
+- **Vector Boundaries**: R-tree indexed precise boundaries
+- **Synchronization**: Automated grid-vector consistency
+- **Performance**: 5-10x faster geological simulations
+- **Memory**: 60-80% reduction vs pure vector approaches
 
 ## Related Steps
 
