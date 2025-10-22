@@ -240,7 +240,7 @@ The technical foundation is supported by ongoing infrastructure research focused
 - [Recommendations](../research/spatial-data-storage/recommendations.md)
 - [Material Inheritance Implementation](../research/spatial-data-storage/material-inheritance-implementation.md)
 - [Delta Overlay Implementation](../research/spatial-data-storage/delta-overlay-implementation.md)
-- [Octree-Vector Boundary Integration](../research/spatial-data-storage/octree-vector-boundary-integration.md)
+- [Octree-Vector Boundary Integration](../research/spatial-data-storage/step-3-architecture-design/octree-vector-boundary-integration.md)
 - [Grid-Vector Combination Research](../research/spatial-data-storage/grid-vector-combination-research.md)
 
 **Database Architecture Research:**
