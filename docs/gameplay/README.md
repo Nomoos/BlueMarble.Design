@@ -18,6 +18,8 @@ This directory contains all documentation related to gameplay mechanics, systems
 - Movement and navigation
 - Interaction systems
 - Resource management ([Player Resource Dashboard Specification](spec-player-resource-dashboard.md))
+- Player protection ([Player Protection Systems](spec-player-protection-systems.md))
+- Player freedom ([Player Freedom Mechanics](spec-player-freedom-mechanics.md))
 
 ### Player Progression
 
