@@ -2,6 +2,9 @@
 
 Curated reading list for BlueMarble research and development.
 
+**Last Updated:** 2025-01-24  
+**Total Sources:** 117 (60 books + 13 survival collections + 23 academic theses + 21 online resources)  
+**Completed Analysis:** 12 sources  
 **Last Updated:** 2024  
 **Total Sources:** 112 (73 books + 13 survival collections + 5 online resources + 21 scientific references)  
 **Completed Analysis:** 20 sources (includes 8 fantasy literature sources)  
@@ -139,6 +142,46 @@ Curated reading list for BlueMarble research and development.
 - [x] **Recast & Detour** - Navigation mesh toolset (referenced in game_dev_repos.md)
 - [ ] **ENet** - Lightweight networking library
 - [ ] **RakNet** - Open source networking middleware
+
+---
+
+## High Priority (Academic Theses - Geoinformatics and GIS)
+
+### Highly Relevant to BlueMarble
+
+These master's theses from Palacký University Olomouc (2022) contain relevant research for game development, GIS integration, and spatial visualization.
+
+- [ ] **Digital twins in the context of disaster preparedness: fusion of GIS and game engines** by Deligant Anatole - **Critical**: Directly relevant to GIS-game engine integration for planetary simulation
+- [ ] **Portál pro simulační hru Spationomy** by Roller Jan - **High**: Portal for simulation game, geospatial game design patterns
+- [ ] **GeoVisualization of Football Players Movement** by Liu Nianhua - Player movement tracking and visualization techniques applicable to MMORPG player systems
+
+### Supporting Research (Medium Priority)
+
+- [ ] **Aplikace metody geodesignu v prostředí ArcGIS GeoPlanner** by Bittner Oldřich - Geodesign method application, spatial planning
+- [ ] **VYUŽITÍ ARCGIS CITYENGINE PRO BEZPEČNOSTNÍ PLÁNOVÁNÍ** by Čáp Daniel - 3D city modeling for security planning
+- [ ] **Hodnocení míry abstrakce u 3D modelů pro osoby se zrakovým postižením** by Forgáč Jakub - 3D model abstraction and accessibility design
+- [ ] **Pokročilá analýza a vizualizace dat z dotazníkového šetření** by Fryčák Filip - Advanced data analysis and visualization
+- [ ] **Webové řešení pro vizualizaci nejistoty dat z monitoringu zimování včelstev** by Kuchejdová Magdalena - Web-based data uncertainty visualization
+- [ ] **IMPROVING SEN2CUBE.AT WEB APPLICATION VISUALIZATION CAPABILITIES** by Nurul Fatma - Web application visualization improvements
+- [ ] **User Evaluation of COVID-19 Dashboards** by Porti Suarez Anna - Dashboard design and user evaluation
+- [ ] **Podobnost evropských měst a jejich funkčních území** by Urbančík Filip - City similarity analysis and functional areas
+- [ ] **Využití metody think-aloud v kartografickém výzkumu** by Vaníček Tomáš - Think-aloud methodology for UX research
+- [ ] **Testování možností záznamu pohybu očí pomocí web kamery** by Jílková Monika - Eye tracking using web camera
+
+### Reference Materials (Low Priority)
+
+- [ ] **Aplikace vyhledávání kolokačních vzorů na prostorová data** by Bučková Simona - Collocation pattern search on spatial data
+- [ ] **Termální mapování vybraných ploch města Olomouce** by Ďuriančíková Petra - Thermal mapping of urban areas
+- [ ] **Hodnocení změn v intenzitách dopravy ve vybraných regionech Česka** by Hubáček Ondřej - Traffic intensity analysis
+- [ ] **ANALYSIS AND GEOVISUALISATION OF BIODIVERSITY MONITORING DATA** by Christie Ella - Biodiversity data geovisualization
+- [ ] **Důsledky pandemie COVID-19 na mezinárodní mobilitu v Evropě** by Kačírková Tereza - COVID-19 impact on mobility
+- [ ] **Stanovení metrik sněhové pokrývky pomocí metod fotogrammetrie** by Pajdová Marie - Snow cover metrics using remote sensing
+- [ ] **Klasifikace a časová analýza osobní a nákladní vlakové dopravy** by Pospíšil Lukáš - Rail transport temporal analysis
+- [ ] **VZTAH KVALITY ŽIVOTA K PŘÍSLUŠNOSTI K RURÁLNÍMU A URBÁNNÍMU PROSTORU** by Rypl Oldřich - Quality of life in rural vs urban spaces
+- [ ] **PORTRAYAL OF LIKELY CLIMATE CHANGE IMPACTS ON BEEKEEPING** by Wang Yuan - Climate change visualization
+- [ ] **Tyfloprůvodce po vybraných památkách Česka** by Žejdlík Jakub - Tactile guide design for accessibility
+
+**Note:** All theses available online at https://www.geoinformatics.upol.cz/dprace/magisterske/
 
 ---
 
