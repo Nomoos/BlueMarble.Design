@@ -870,6 +870,7 @@ The gaming woman phenomenon isn't about women being different gamers—it's abou
 **Research Priority:** High (Player Demographics & Inclusive Design)
 
 **Related BlueMarble Research:**
+- [game-dev-research-cursor-accuracy-gender-accessibility.md](game-dev-research-cursor-accuracy-gender-accessibility.md) - Daily routine frustration and cursor accuracy research
 - [game-dev-analysis-player-decisions.md](game-dev-analysis-player-decisions.md) - Player psychology and motivation
 - [game-dev-analysis-ai-for-games-3rd-edition.md](game-dev-analysis-ai-for-games-3rd-edition.md) - Social simulation AI
 - [../game-design/step-1-foundation/game-sources.md](../game-design/step-1-foundation/game-sources.md) - Game research sources

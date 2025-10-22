@@ -17,8 +17,9 @@ This document provides a high-level summary of all research sources tracked in t
 |----------|------------|-------------------|---------|-------|
 | **Survival Collections** | 10 | 10 | 3 | 13 |
 | **Books & Technical Resources** | N/A* | 2 | 58 | 60 |
+| **Academic Theses** | 1 | 1 | 1 | 2 |
 | **Online Resources** | N/A* | Ongoing | - | 25+ |
-| **TOTAL** | **10** | **12** | **61** | **78+** |
+| **TOTAL** | **11** | **13** | **62** | **80+** |
 
 \* Books and online resources are not physically downloaded; they are accessed as needed or already available.
 
@@ -51,6 +52,24 @@ This document provides a high-level summary of all research sources tracked in t
 13. ⏳ **Specialized Collections** - Deep web niche resources
 
 **Download Info:** Documented in `survival-sources.md`
+
+---
+
+### Academic Theses (2 Total)
+
+#### Content Available and Analyzed (1)
+
+1. ✅ **Isotope-Enabled Hydrologic Modeling for Large-Scale Watersheds** (Tegan Holmes) - isoWATFLOOD model, water flow simulation, parameter sensitivity analysis - directly applicable to BlueMarble's hydrology and geological systems
+
+**Status:** Full analysis completed  
+**Documentation:** `academic-thesis-holmes-isotope-hydrology.md` (high priority)
+
+#### Pending Access (1)
+
+1. ⏳ **PhD Dissertation in Geoinformatics** (Pohánková, 2025) - Palacký University Olomouc, Department of Geoinformatics - Research on geodesy, cartography, spatial analysis, or remote sensing applicable to BlueMarble's spatial systems
+
+**Status:** Placeholder document created, awaiting access to dissertation content  
+**Documentation:** `academic-thesis-pohankova-geoinformatics.md`
 
 ---
 
