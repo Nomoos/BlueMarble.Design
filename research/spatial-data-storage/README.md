@@ -17,6 +17,7 @@ Each step contains detailed research documents and can be explored independently
 ## Contents
 
 ### Core Research Documents
+- **[Octree Compression Benefits Research](octree-compression-benefits-research.md)** - **NEW**: Comprehensive research documentation on octree compression benefits for world material storage with 50+ academic/industry references, detailed algorithms, case studies, and 12-month implementation roadmap
 - **[Current Implementation Analysis](current-implementation.md)** - Analysis of BlueMarble's existing spatial data architecture
 - **[Comparison Analysis](comparison-analysis.md)** - Detailed comparison of spatial storage approaches
 - **[Octree Optimization Guide](octree-optimization-guide.md)** - Advanced octree optimization strategies
