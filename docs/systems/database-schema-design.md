@@ -13,9 +13,16 @@ This document defines the comprehensive database schema design for BlueMarble, a
 ### Key Design Decisions
 
 - **Hybrid Database Architecture**: Combination of PostgreSQL (relational gameplay data) and Cassandra + Redis (spatial data)
+- **Coordinate System**: Int32 (centimeters) for exact 1cm precision optimized for geological simulations (see [Int32 Database Schema](../../research/topics/int32-coordinate-database-schema.md))
 - **Normalization Strategy**: 3NF for transactional data, denormalized for high-read spatial queries
 - **Scalability Approach**: Horizontal scaling with sharding for gameplay data, distributed octree for spatial data
 - **Performance Targets**: <10ms for gameplay queries, <1ms for cached spatial queries, <50ms for complex transactions
+
+### Related Research
+
+- [Int32 Coordinate Database Schema](../../research/topics/int32-coordinate-database-schema.md) - Detailed spatial data schema with Int32 coordinates
+- [ADR-001: Coordinate Data Type Selection](../../research/topics/adr-001-coordinate-data-type-selection.md) - Architecture decision rationale
+- [Spatial Data Storage Research](../../research/spatial-data-storage/README.md) - Octree and spatial indexing strategies
 
 ## Table of Contents
 
