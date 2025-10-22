@@ -43,6 +43,7 @@ guidelines for BlueMarble.
 - **[Marketplace API](api-marketplace.md)** - Player trading marketplace API specification
 - **[Marketplace Developer Guide](marketplace-developer-guide.md)** - Integration guide for marketplace systems
 - **[Gameplay Systems](gameplay-systems.md)** - Core game mechanics and systems
+- **[Settlement Control System](settlement-control-system.md)** - Influence-based territorial control and diplomacy
 - Physics and collision systems
 - AI and NPC behavior systems
 - Networking and multiplayer architecture
