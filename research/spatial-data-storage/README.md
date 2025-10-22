@@ -21,7 +21,7 @@ Each step contains detailed research documents and can be explored independently
 - **[Comparison Analysis](comparison-analysis.md)** - Detailed comparison of spatial storage approaches
 - **[Octree Optimization Guide](octree-optimization-guide.md)** - Advanced octree optimization strategies
 - **[Hybrid Array + Octree Storage Strategy](hybrid-array-octree-storage-strategy.md)** - **NEW**: Comprehensive strategy for using flat chunked arrays as primary storage with octree/R-tree as secondary acceleration indices. Addresses sparse updates, asynchronous rebuild, and optimal query performance.
-- **[Octree + Vector Boundary Integration](octree-vector-boundary-integration.md)** - **COMPLETED**: Comprehensive research on hybrid octree/vector systems for precise features
+- **[Octree + Vector Boundary Integration](step-3-architecture-design/octree-vector-boundary-integration.md)** - **COMPLETED**: Comprehensive research on hybrid octree/vector systems for precise features
 - **[Distributed Octree Architecture with Spatial Hash Distribution](distributed-octree-spatial-hash-architecture.md)** - **COMPLETED**: Comprehensive design for scalable cluster storage with spatial hash distribution
 - **[Recommendations](recommendations.md)** - Strategic recommendations for hybrid spatial storage
 - **[3D Octree Storage Architecture Integration](3d-octree-storage-architecture-integration.md)** - **NEW**: Comprehensive integration research and migration pathway for 3D octree material storage system
