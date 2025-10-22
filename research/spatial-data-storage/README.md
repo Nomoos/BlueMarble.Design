@@ -19,6 +19,9 @@ Each step contains detailed research documents and can be explored independently
 ### Core Research Documents
 - **[Height Raster Surface Representation](height-raster-surface-representation.md)** - **NEW**: Comprehensive research on 2.5D height raster terrain representation with material layers, addressing cliffs, user-placed blocks, and visibility tracking for 95% storage reduction vs 3D voxels
   - **📖 Implementation Prototype**: See [height-raster-implementation](height-raster-implementation/) for working C# prototype
+  - **📊 Comparison Analysis**: See [height-raster-comparison-analysis.md](height-raster-comparison-analysis.md) for detailed comparison of 8 approaches (pure & hybrid solutions)
+  - **🔄 Voxel Transition**: See [height-raster-voxel-transition-explained.md](height-raster-voxel-transition-explained.md) for Czech/English explanation of voxel fallback mechanism
+  - **📋 Executive Summary**: See [height-raster-executive-summary.md](height-raster-executive-summary.md) for decision-maker focused summary
 - **[Octree Compression Benefits Research](octree-compression-benefits-research.md)** - **NEW**: Comprehensive research documentation on octree compression benefits for world material storage with 50+ academic/industry references, detailed algorithms, case studies, and 12-month implementation roadmap
 - **[Current Implementation Analysis](current-implementation.md)** - Analysis of BlueMarble's existing spatial data architecture
 - **[Comparison Analysis](comparison-analysis.md)** - Detailed comparison of spatial storage approaches
