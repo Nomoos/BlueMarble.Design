@@ -825,6 +825,9 @@ No additional sources discovered during extraction of map projection mathematics
 2. **GDAL/OGR** - Geospatial data transformation
 3. **PostGIS** - Spatial database with projection support
 4. **Cartography research journals** - Modern developments
+5. **Koníček PhD Thesis (2024)** - Palacký University Olomouc, Department of Geoinformatics
+   - URL: https://www.geoinformatics.upol.cz/dprace/phd/konicek24/
+   - Research on cartographic projections and geoinformatics applications
 
 ---
 
