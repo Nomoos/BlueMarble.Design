@@ -4,6 +4,10 @@ This directory contains bibliography, reading lists, and source documentation fo
 
 **Last Updated:** 2025-01-24  
 **Total Sources Tracked:** 96+ (60 books + 13 survival collections + 23 academic theses + 20+ online)  
+**Last Updated:** 2025-01-17  
+**Total Sources Tracked:** 115+ (60 books + 13 survival collections + 20+ online + 21 scientific references)  
+**Last Updated:** 2025-01-18  
+**Total Sources Tracked:** 75+ (60 books + 13 survival collections + 20+ online + 2 game economy external)  
 **Status:** Active - Comprehensive source tracking system
 
 ---
@@ -24,9 +28,13 @@ This directory contains bibliography, reading lists, and source documentation fo
   - 24 misc entries: survival knowledge collections, online resources, and open source projects
   - 23 academic master's theses from geoinformatics and GIS research
   - Categorized by topic and relevance to BlueMarble systems
+  - 64+ BibTeX entries covering all major sources
+  - Categorized by topic (game programming, design theory, multiplayer, performance optimization, scientific references, etc.)
+  - Includes survival knowledge collections and C# vs C++ performance books
+  - Online resources, open source projects, and scientific reference materials
   
 - **reading-list.md**: Curated reading list with priorities and status tracking
-  - 94 tracked items across all source types
+  - 112+ tracked items across all source types
   - Organized by priority (Critical, High, Medium, Low)
   - Tracks completion status (✓ completed, 🔍 in progress, ⏳ pending)
   - Cross-referenced with analysis documents
@@ -39,6 +47,21 @@ This directory contains bibliography, reading lists, and source documentation fo
   - Size and format information (~440-450 GB total)
   - Extraction pipeline status
   - Legal and licensing considerations
+
+- **game-economy-design-external.md**: 🆕 **External game economy design document**
+  - Auction tiers (local to global) with fee structures
+  - Transport mechanics with multiple vehicle types
+  - Goods spoilage and preservation systems
+  - Seasonal supply/demand cycles
+  - Regional market specialization
+  - Processed from external source (provided by @Nomoos)
+  
+- **discovery-sources-game-economy.md**: 🆕 **Catalogued source references**
+  - 7 identified source documents (Sources 39, 58-63)
+  - Priority ratings for investigation
+  - Line-by-line reference tracking
+  - Integration status with current implementation
+  - Formulas and key data extracted
   
 - **quotes.md**: Notable quotes and excerpts from sources
 
@@ -119,6 +142,30 @@ This directory contains bibliography, reading lists, and source documentation fo
 - Community forums
 - Industry resources (Gamasutra, GDC)
 
+### Scientific Reference Sources (21 sources)
+- **Biology and Organic Systems (5 sources)** - Decomposition, bacteria, organs, scavenger ecology
+- **Engineering and Materials Science (5 sources)** - Structural mechanics, cast iron, iron-cementite diagrams
+- **Physics and Chemistry (6 sources)** - Surface tension, redox, viscosity, fluid dynamics, gas laws
+- **Atmospheric Science (5 sources)** - Atmosphere, magnetosphere, solar wind, weather systems, thermochemistry
+
+**Application:** Foundational knowledge for realistic simulation systems including crafting, metallurgy, atmospheric simulation, structural engineering, and survival mechanics.
+### External Game Design Documents (2 sources)
+
+#### Processed Documents (2)
+1. **Game Economy Design** - Auctions, transport, fees, spoilage, seasonality
+   - Status: ✅ Processed and integrated
+   - File: `game-economy-design-external.md`
+   - Provider: @Nomoos (2025-01-18)
+   - Topics: Auction tiers, transport mechanics, seasonal effects, spoilage
+   - Integration: Aligned with extended auction system implementation
+
+2. **Discovery Sources Catalog** - Referenced source materials
+   - Status: ✅ Catalogued
+   - File: `discovery-sources-game-economy.md`
+   - Sources Identified: 7 (Sources 39, 58-63)
+   - Priority: HIGH for Sources 58, 60, 39 (transport, seasons, tiers)
+   - Next Step: Request access to referenced source documents
+
 ---
 
 ## Guidelines
@@ -156,6 +203,7 @@ Maintain a BibTeX file with all research sources using standard BibTeX format:
 - Survival and Technology Resources
 - Academic Theses - Geoinformatics and GIS
 - Geographic and Map Data
+- Scientific Reference Sources (Biology, Engineering, Physics, Atmospheric Science)
 
 ### Reading List (reading-list.md)
 
@@ -344,6 +392,14 @@ Link sources to relevant documentation:
 - Open Source Projects: 10
 - Communities: 5
 - Video Courses: 5
+
+**Scientific Reference Sources:**
+- Total: 21
+- Biology and Organic Systems: 5
+- Engineering and Materials Science: 5
+- Physics and Chemistry: 6
+- Atmospheric Science: 5
+- Status: Catalogued, pending integration into game systems
 
 ---
 

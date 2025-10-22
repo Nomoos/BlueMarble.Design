@@ -1,8 +1,10 @@
 # Design Directory
 
-This directory contains **high-level game design vision and concepts** for BlueMarble, focusing on iterative design development and foundational design direction for the medieval MMO simulation game.
+This directory contains **high-level game design vision and concepts** for BlueMarble, focusing on iterative design
+development and foundational design direction for the medieval MMO simulation game.
 
-> **Note**: This directory focuses on **design vision and concepts**. For detailed technical implementation specifications, see the [/docs](../docs/) directory. For research and exploratory work, see the [/research](../research/) directory.
+> **Note**: This directory focuses on **design vision and concepts**. For detailed technical implementation specifications,
+> see the [/docs](../docs/) directory. For research and exploratory work, see the [/research](../research/) directory.
 
 ## Purpose
 
@@ -19,8 +21,19 @@ The `/design` folder serves as the central location for:
 ```text
 design/
 ├── README.md                    # This file - explains folder purpose and workflow
-├── island_start_game_design.md  # Core game design document for island start scope
-└── [future-design-docs].md     # Additional design documents as development progresses
+├── index.md                     # Design document index and navigation
+├── pillars.md                   # Core design pillars and philosophy
+├── mechanics.md                 # Core gameplay loops and systems
+├── economy.md                   # Progression, currencies, resource management
+├── auction-economy.md           # Auction-based trading, transport, fees, spoilage
+├── narrative.md                 # Story, world-building, characters
+├── styleguide.md                # Visual design system and brand
+├── island_start_game_design.md  # Core game design for island start scope
+├── one-page-design.md           # Concise design overview
+├── OCTREE_DETAILS.md            # Octree spatial data system specification
+├── architecture/                # System architecture diagrams
+├── ux/                          # User experience design
+└── wireframes/                  # UI/UX wireframes and mockups
 ```
 
 ## Document Types
@@ -30,6 +43,14 @@ design/
 - **File Pattern**: `[scope]_game_design.md`
 - **Purpose**: Core design vision, mechanics, and technical implementation notes
 - **Content**: One-page design format with gameplay loops, mechanics, technical architecture
+- **Examples**: `island_start_game_design.md`, `one-page-design.md`
+
+### System Design Documents
+
+- **File Pattern**: `[system-name].md`
+- **Purpose**: Detailed system design including mechanics, formulas, and implementation guidance
+- **Content**: Comprehensive system specifications with formulas, examples, and integration points
+- **Examples**: `auction-economy.md` (auction trading system with transport, fees, spoilage)
 
 ### Design Specifications
 

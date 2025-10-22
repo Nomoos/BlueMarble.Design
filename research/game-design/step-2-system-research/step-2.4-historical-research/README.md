@@ -7,6 +7,7 @@ Comprehensive catalog of historic professions from medieval times through 1750, 
 ## Research Content
 
 - [Historic Jobs Medieval to 1750 Research](historic-jobs-medieval-to-1750-research.md) - Complete catalog of 305+ historic occupations with guild system analysis
+- [Slavery and Labor Systems Research](slavery-and-labor-systems-research.md) - Comprehensive analysis of historical slavery, slave trades, alternative labor systems, and ethical game design considerations
 
 ## Historical Coverage
 
