@@ -31,6 +31,7 @@ design/
 ├── island_start_game_design.md  # Core game design for island start scope
 ├── one-page-design.md           # Concise design overview
 ├── OCTREE_DETAILS.md            # Octree spatial data system specification
+├── expanse-rpg-the-whispering-signal.md  # Example tabletop RPG scenario
 ├── architecture/                # System architecture diagrams
 ├── ux/                          # User experience design
 └── wireframes/                  # UI/UX wireframes and mockups
@@ -58,6 +59,14 @@ design/
 - **Purpose**: Conceptual feature design and high-level requirements
 - **Content**: Design concepts, user flows, and high-level considerations
 - **Note**: For detailed technical specifications, use `/docs` directory
+
+### Tabletop RPG Scenarios
+
+- **File Pattern**: `[rpg-system]-[scenario-name].md`
+- **Purpose**: Document tabletop RPG scenarios as design research and reference material
+- **Content**: Complete scenario with hooks, NPCs, locations, design analysis for BlueMarble adaptation
+- **Examples**: `expanse-rpg-the-whispering-signal.md`
+- **Template**: See `/templates/tabletop-rpg-scenario.md`
 
 ## Workflow and Update Process
 

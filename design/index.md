@@ -28,6 +28,10 @@ Entry point for all BlueMarble design documentation.
 - [Island Start Game Design](island_start_game_design.md) - Core game design for island start scope
 - [One-Page Design](one-page-design.md) - Concise design overview
 
+### Tabletop RPG Design Reference
+
+- [The Whispering Signal](expanse-rpg-the-whispering-signal.md) - Expanse RPG research issue scenario with design analysis
+
 ## Structure
 
 The design folder is organized into focused documents:
