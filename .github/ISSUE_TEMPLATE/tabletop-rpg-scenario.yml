@@ -1,0 +1,258 @@
+name: Tabletop RPG Scenario
+description: Template for tabletop RPG scenario design (e.g., The Expanse RPG, D&D, etc.) for research and design reference
+title: "[Scenario] "
+labels: ["design", "scenario", "tabletop-rpg"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to document tabletop RPG scenarios as design research or reference material for BlueMarble.
+        
+  - type: input
+    id: scenario-title
+    attributes:
+      label: Scenario Title
+      description: What is the name of this scenario/adventure?
+      placeholder: e.g., The Whispering Signal, The Lost Artifact
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: rpg-system
+    attributes:
+      label: RPG System
+      description: Which tabletop RPG system does this scenario use?
+      options:
+        - The Expanse RPG (Modern AGE)
+        - Dungeons & Dragons 5e
+        - Pathfinder
+        - Call of Cthulhu
+        - Traveller
+        - Starfinder
+        - Cyberpunk RED
+        - Blades in the Dark
+        - Powered by the Apocalypse
+        - FATE
+        - Other
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: scenario-type
+    attributes:
+      label: Scenario Type
+      description: What type of scenario is this?
+      options:
+        - Research / Investigation
+        - Combat / Action
+        - Exploration
+        - Social / Intrigue
+        - Horror
+        - Mystery
+        - Heist
+        - Sandbox
+        - Mixed / Multi-Type
+    validations:
+      required: true
+      
+  - type: input
+    id: estimated-length
+    attributes:
+      label: Estimated Length
+      description: How many sessions is this scenario expected to take?
+      placeholder: e.g., 1-2 sessions, 3-4 sessions, One-shot
+    validations:
+      required: true
+      
+  - type: textarea
+    id: summary
+    attributes:
+      label: Scenario Summary
+      description: Brief overview of the scenario (2-3 paragraphs)
+      placeholder: |
+        Provide a high-level summary of what this scenario is about.
+        Include the central question or conflict.
+        Mention key themes or tone.
+    validations:
+      required: true
+      
+  - type: textarea
+    id: player-hook
+    attributes:
+      label: Player-Facing Hook
+      description: How do you present this scenario to players?
+      placeholder: |
+        Describe the initial hook that gets players engaged.
+        What's the inciting incident?
+        What are the initial options or choices?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: gm-background
+    attributes:
+      label: GM Background / Secret Information
+      description: Information for the GM that players don't know initially
+      placeholder: |
+        The real story behind the scenario.
+        Hidden motivations, secret factions, etc.
+        Information players might discover through play.
+    validations:
+      required: true
+      
+  - type: textarea
+    id: investigation-paths
+    attributes:
+      label: Investigation Paths / Research Avenues
+      description: Different ways players can investigate or approach the scenario
+      placeholder: |
+        **Technical Analysis:**
+        - Skills/Focuses needed
+        - Tests and TNs
+        - Breakthroughs and clues
+        
+        **Social Investigation:**
+        - NPCs to interact with
+        - Information gathering methods
+        - Potential complications
+        
+        **Field Research:**
+        - Locations to explore
+        - Physical challenges
+        - Discovery opportunities
+    validations:
+      required: false
+      
+  - type: textarea
+    id: clues-breakthroughs
+    attributes:
+      label: Clues & Breakthroughs
+      description: Key information players can discover
+      placeholder: |
+        | # | Clue | Source | Effect |
+        |---|------|--------|--------|
+        | 1 | [Clue description] | [How to find it] | [What it reveals] |
+        | 2 | [Clue description] | [How to find it] | [What it reveals] |
+    validations:
+      required: false
+      
+  - type: textarea
+    id: complications
+    attributes:
+      label: Complications & Pressure Mechanics
+      description: How tension builds and complications arise
+      placeholder: |
+        **Tension Clock / Countdown:**
+        - Event 1: Trigger condition
+        - Event 2: Trigger condition
+        
+        **Conditions:**
+        - Mechanical effects on characters
+        
+        **Time Pressure:**
+        - Deadlines or racing against rivals
+    validations:
+      required: false
+      
+  - type: textarea
+    id: npcs
+    attributes:
+      label: Key NPCs
+      description: Important non-player characters
+      placeholder: |
+        **NPC Name:**
+        - Role: [Their function in the story]
+        - Motivation: [What they want]
+        - Personality: [Key traits]
+        - Mechanical notes: [Stats, abilities if needed]
+    validations:
+      required: false
+      
+  - type: textarea
+    id: locations
+    attributes:
+      label: Key Locations
+      description: Important places in the scenario
+      placeholder: |
+        **Location Name:**
+        - Description: [What it looks/feels like]
+        - Features: [Notable elements]
+        - Challenges: [Obstacles or hazards]
+        - Connections: [How it relates to other locations]
+    validations:
+      required: false
+      
+  - type: textarea
+    id: outcomes
+    attributes:
+      label: Possible Outcomes
+      description: Different ways the scenario can resolve
+      placeholder: |
+        **Full Success:**
+        - Resolution description
+        - Rewards
+        
+        **Partial Success:**
+        - Resolution description
+        - Consequences
+        
+        **Failure:**
+        - What happens if players fail
+        - Next steps
+    validations:
+      required: false
+      
+  - type: textarea
+    id: rewards
+    attributes:
+      label: Rewards & Advancement
+      description: What players gain from completing the scenario
+      placeholder: |
+        - Experience/Advancement points
+        - Gear or resources
+        - Contacts or reputation
+        - Information or plot hooks
+    validations:
+      required: false
+      
+  - type: textarea
+    id: design-notes
+    attributes:
+      label: Design Notes for BlueMarble
+      description: How does this scenario inform BlueMarble's design?
+      placeholder: |
+        **Lessons Learned:**
+        - Design patterns we can apply
+        - Mechanics that could translate to digital
+        - Player engagement techniques
+        
+        **Adaptation Ideas:**
+        - How this could work in an MMORPG context
+        - What would need to change
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority / Relevance
+      description: How relevant is this scenario to BlueMarble's design?
+      options:
+        - High - Direct design inspiration
+        - Medium - Useful reference
+        - Low - Background research
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information, references, or resources
+      placeholder: |
+        - Source material references
+        - Related scenarios or campaigns
+        - Links to rulebooks or supplements
+        - Playtest reports or actual play experiences
+    validations:
+      required: false
