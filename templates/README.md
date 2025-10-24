@@ -56,6 +56,14 @@ Template for comprehensive QA test plans covering test cases, bug tracking, and 
 **Output Location:** `docs/systems/` or `docs/`  
 **Naming:** Use descriptive names: `qa-test-plan-feature-name.md`
 
+#### `tabletop-rpg-scenario.md`
+
+Template for documenting tabletop RPG scenarios as design research and reference material for BlueMarble.
+
+**Usage:** Tabletop RPG scenario documentation, design pattern analysis, player engagement research  
+**Output Location:** `research/topics/` or `design/`  
+**Naming:** Use descriptive names: `expanse-rpg-scenario-name.md` or `dnd-scenario-name.md`
+
 ### Comprehensive Templates (Existing)
 
 #### `game-design-document.md`
@@ -218,6 +226,7 @@ For research-related work, use the research issue template system:
 | Playtest | `playtest-report.md` | `research/experiments/` |
 | Decision Record | `decision-record.md` | `design/`, `docs/systems/` |
 | QA Test Plan | `qa-test-plan.md` | `docs/systems/`, `docs/` |
+| Tabletop RPG Scenario | `tabletop-rpg-scenario.md` | `research/topics/`, `design/` |
 | Game Design | `game-design-document.md` | `docs/core/`, `docs/gameplay/` |
 | Feature Spec | `feature-specification.md` | `docs/gameplay/`, `docs/systems/`, `docs/ui-ux/` |
 | Requirements Gathering | `requirements-gathering.md` | `docs/systems/`, `docs/gameplay/`, project folder |
