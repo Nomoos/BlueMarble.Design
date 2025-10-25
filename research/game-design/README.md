@@ -851,6 +851,56 @@ profession systems and economic simulation.
 - Aligns with existing skill research for seamless integration
 - Supports social structure and economic interdependence gameplay
 
+### [Fantasy Races Comprehensive Research](fantasy-races-comprehensive-research.md)
+Comprehensive research on fantasy races across RPG games (D&D, Pathfinder, Elder Scrolls), fantasy literature (Tolkien, Sapkowski), and anime (particularly Overlord). Covers over 100 distinct races and their variants, including crossbreeding mechanics and hybrid races.
+
+**Key Topics**:
+- 14 major race categories: Humans, Elves, Dwarves, Gnomes, Halflings, Orcs/Goblinoids, Beast Races, Hybrids, Elementals, Planar beings, Monsters, Fey, Specialty races, and Undead
+- 10 Human cultural variants (Northerner, Desert, Steppe, Islander, City, Forest, Nomad, Mountain, Farmer, Warrior)
+- 7 Elf variants (High, Wood, Dark, Moon, Sun, Desert, Half-Elf) with detailed lore and mechanics
+- 6 Dwarf variants (Mountain, Metal, Dark, Nomadic, Golden, Rune) with cultural distinctions
+- 5 Gnome variants (Forest, Rock, Illusory, Wild, Half-Gnome) and 5 Halfling variants
+- 8 Orc/Goblinoid types (War, Mountain, Desert, Dark, Shamanic, Goblin, Hobgoblin, Bugbear)
+- 20 Beast races (Wolf, Dog, Fox, Cat, Tiger, Lion, Rabbit, Deer, Bear, Rat, Mouse, Raven, Eagle, Owl, Snake, Lizard, Bat, Hyena, Panda, plus Lizardfolk and Tabaxi)
+- 15 Hybrid/Monstrous races (Minotaur, Centaur, Werewolf, Satyr, Harpy, Lamia, Merfolk, Chimera, Fairy, Dragonborn, Ent)
+- 4 Elemental races (Fire, Water, Air, Earth) with planar variants (Ifrit, Undine, Sylph, Oread)
+- Planar races (Tiefling, Aasimar), Monster races (Kobold, Troglodyte, Gnoll, Ogre, Troll)
+- Fey beings (Nymph, Djinn), Specialty races (Gargoyle, Aarakocra, Kenku, Yuan-ti, Firbolg, Goliath, Changeling, Shadar-kai, Revenant, Dhampir)
+- 5 Undead races (Vampire, Zombie, Skeleton, Ghost, Shadow)
+
+**Race Crossbreeding and Hybridization**:
+- Biological compatibility matrix (High: Human+Elf, Human+Orc; Medium: rare combinations; Low: magical intervention required)
+- Magical hybridization methods (polymorphing, ritual magic, curses/blessings, genetic manipulation)
+- Overlord's approach: 700+ race types with racial levels (1-15), racial evolution, and tier system
+- Race progression examples: Skeleton Mage → Elder Lich → Overlord; Goblin → Hob-Goblin → Goblin King
+
+**RPG System Comparisons**:
+- D&D 5e: Simple race + subrace with moderate bonuses and 3-5 racial abilities
+- Pathfinder: Complex alternate racial traits, favored class bonuses, race-specific archetypes
+- Elder Scrolls: 10 playable races with passive abilities and once-per-day actives
+- World of Warcraft: Race-class restrictions (loosening), racial abilities, faction-locked
+- Overlord: Racial levels, racial classes, heteromorphic races, evolution mechanics
+
+**Implications for BlueMarble Design**:
+- Recommended 3-tier race system: Base races (8-12), Hybrid races (unlockable), Exotic races (special unlock)
+- Mechanical considerations: small racial bonuses, 2-3 core abilities, avoid penalties
+- Lore integration: origin stories, cultural depth, racial relationships, breeding mechanics
+- Critical decisions: playable race count at launch, undead playability, class-race restrictions, size differences
+
+**Research Sources**:
+- RPG Games: D&D (3.5e, 4e, 5e), Pathfinder (1e, 2e), Elder Scrolls, WoW, FFXIV, Dark Sun, Eberron, Warhammer Fantasy
+- Fantasy Literature: Tolkien (The Hobbit, LOTR, Silmarillion), Sapkowski (The Witcher), Salvatore (Forgotten Realms), Pratchett (Discworld), Sanderson (Cosmere)
+- Anime: Overlord (700+ race system), That Time I Reincarnated as a Slime (monster evolution), Log Horizon (MMO-style races), Gate, Made in Abyss, Dungeon Meshi
+- Mythology: Greek, Norse, Celtic, Slavic folklore, Japanese yokai, Middle Eastern djinn, African and Native American folklore
+
+**Applicability to BlueMarble**:
+- Provides comprehensive foundation for character race system design
+- Balances mechanical differences with roleplay opportunities
+- Supports diverse playstyles through racial variety
+- Enables future expansion with hybrid and exotic races
+- Integrates cultural depth with world-building and lore
+- Offers tested approaches from successful RPGs and fantasy media
+
 ### [Economy-Driven Quest Systems Research](step-2-system-research/step-2.5-economy-systems/economy-driven-quest-systems-research.md)
 Comprehensive analysis of how economy-focused players treat quests as contracts and mini-auctions, with detailed comparison to traditional market systems.
 
