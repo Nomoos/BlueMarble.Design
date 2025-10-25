@@ -855,7 +855,21 @@ profession systems and economic simulation.
 Comprehensive research on fantasy races across RPG games (D&D, Pathfinder, Elder Scrolls), fantasy literature (Tolkien, Sapkowski), and anime (particularly Overlord). Covers over 100 distinct races and their variants, including crossbreeding mechanics and hybrid races.
 
 **Key Topics**:
-- 14 major race categories: Humans, Elves, Dwarves, Gnomes, Halflings, Orcs/Goblinoids, Beast Races, Hybrids, Elementals, Planar beings, Monsters, Fey, Specialty races, and Undead
+- 14 major race categories:
+  1. Humans (10 variants)
+  2. Elves (7 variants)
+  3. Dwarves (6 variants)
+  4. Gnomes (5 variants)
+  5. Halflings (5 variants)
+  6. Orcs/Goblinoids (8 types)
+  7. Beast Races (20 types)
+  8. Hybrid/Monstrous Races (15 types)
+  9. Elemental Races (4 types)
+  10. Planar/Divine Races (2 types)
+  11. Monster Races (5 types)
+  12. Fey/Spirit Races (6 types)
+  13. Specialty Races (15 types)
+  14. Undead Races (5 types)
 - 10 Human cultural variants (Northerner, Desert, Steppe, Islander, City, Forest, Nomad, Mountain, Farmer, Warrior)
 - 7 Elf variants (High, Wood, Dark, Moon, Sun, Desert, Half-Elf) with detailed lore and mechanics
 - 6 Dwarf variants (Mountain, Metal, Dark, Nomadic, Golden, Rune) with cultural distinctions
@@ -888,8 +902,8 @@ Comprehensive research on fantasy races across RPG games (D&D, Pathfinder, Elder
 - Critical decisions: playable race count at launch, undead playability, class-race restrictions, size differences
 
 **Research Sources**:
-- RPG Games: D&D (3.5e, 4e, 5e), Pathfinder (1e, 2e), Elder Scrolls, WoW, FFXIV, Dark Sun, Eberron, Warhammer Fantasy
-- Fantasy Literature: Tolkien (The Hobbit, LOTR, Silmarillion), Sapkowski (The Witcher), Salvatore (Forgotten Realms), Pratchett (Discworld), Sanderson (Cosmere)
+- RPG Games: Dungeons & Dragons (3.5e, 4e, 5e), Pathfinder (1e, 2e), Elder Scrolls, World of Warcraft, Final Fantasy XIV, Dark Sun, Eberron, Warhammer Fantasy
+- Fantasy Literature: Tolkien (The Hobbit, The Lord of the Rings, Silmarillion), Sapkowski (The Witcher), Salvatore (Forgotten Realms), Pratchett (Discworld), Sanderson (Cosmere)
 - Anime: Overlord (700+ race system), That Time I Reincarnated as a Slime (monster evolution), Log Horizon (MMO-style races), Gate, Made in Abyss, Dungeon Meshi
 - Mythology: Greek, Norse, Celtic, Slavic folklore, Japanese yokai, Middle Eastern djinn, African and Native American folklore
 
