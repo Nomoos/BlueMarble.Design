@@ -18,7 +18,7 @@ priority: high
 
 ## Executive Summary
 
-This comprehensive research document explores fantasy races across RPG games, fantasy literature, and anime. Originally covering mainstream sources (D&D, Pathfinder, Elder Scrolls, Tolkien, Overlord), this document has been **expanded** to include lesser-known tabletop RPG systems, modern fantasy literature, additional anime series, and diverse cultural mythology. It now documents over 100 distinct races and their variants, including crossbreeding mechanics and hybrid races.
+This comprehensive research document explores fantasy races across RPG games, fantasy literature, and anime. Originally covering mainstream sources (D&D, Pathfinder, Elder Scrolls, Tolkien, Overlord), this document has been **expanded multiple times** to include lesser-known tabletop RPG systems, modern fantasy literature, additional anime series, Korean manhwa, Chinese web novels, and diverse cultural mythology. It now documents over 100 distinct races and their variants, including crossbreeding mechanics and hybrid races.
 
 **Key Takeaways:**
 - Fantasy races can be categorized into 14 major groups: Humans, Elves, Dwarves, Gnomes, Halflings, Orcs/Goblinoids, Beast Races, Hybrids, Elementals, Planar beings, Monsters, Fey, Specialty races, and Undead
@@ -26,10 +26,13 @@ This comprehensive research document explores fantasy races across RPG games, fa
 - Most successful RPGs offer 8-15 playable races with distinct mechanical and roleplay identities
 - Overlord's approach features 700+ race variations with racial levels and evolution mechanics
 - BlueMarble should consider a tiered race system with base races, subraces, and hybrid possibilities
-- **[NEW]** Lesser-known systems like RuneQuest, GURPS, and Earthdawn offer unique non-traditional races
-- **[NEW]** Modern literature (Jemisin, Kuang, Miéville) explores race as social commentary
-- **[NEW]** Guild Wars 2 and EverQuest demonstrate extensive race diversity in MMORPGs
-- **[NEW]** That Time I Reincarnated as a Slime shows detailed race evolution mechanics
+- **[EXPANSION 1]** Lesser-known systems like RuneQuest, GURPS, and Earthdawn offer unique non-traditional races
+- **[EXPANSION 1]** Modern literature (Jemisin, Kuang, Miéville) explores race as social commentary
+- **[EXPANSION 1]** Guild Wars 2 and EverQuest demonstrate extensive race diversity in MMORPGs
+- **[EXPANSION 1]** That Time I Reincarnated as a Slime shows detailed race evolution mechanics
+- **[EXPANSION 2]** Solo Leveling demonstrates RPG-style ranking (E-S) with Shadow Army grade system
+- **[EXPANSION 2]** Korean manhwa features hunter societies, gate systems, and second awakening mechanics
+- **[EXPANSION 2]** Chinese web novels merge cultivation with Western RPG race progression
 
 ---
 
@@ -1163,6 +1166,98 @@ This section expands the research to include lesser-known but comprehensive race
 - **No Game No Life:** Exceed - 16 sentient races ranked by magical power
 - **Grimgar of Fantasy and Ash:** Realistic race relations in fantasy setting
 
+### Korean & Chinese Manhwa/Web Novels
+
+This section covers Korean manhwa and Chinese web novels that feature comprehensive race and monster systems with RPG-like progression mechanics.
+
+#### **Solo Leveling (Korean Manhwa)**
+- **Overview:** One of the most popular manhwa featuring a sophisticated rank and race system
+- **Hunter Ranks:** E, D, C, B, A, S-Rank with Second Awakening possibilities
+  - **E-Rank:** Weakest hunters with minor abilities
+  - **D-Rank:** Capable of joining raids
+  - **C-Rank:** Average fighters, guild backbone
+  - **B-Rank:** Above average with leadership roles
+  - **A-Rank:** Elite, highly paid and respected
+  - **S-Rank:** Strongest with near-monstrous power
+- **Hunter Classes:** Fighters, Mages, Assassins, Tankers, Rangers, Healers
+- **Monster System:** Ranked E to S, mirroring hunter ranking
+- **Shadow Army (Unique Race System):**
+  - **Normal Grade:** Basic soldiers, weak and numerous
+  - **Elite Grade:** Stronger than Normals, equivalent to B-Rank Hunters
+  - **Knight Grade:** Comparable to A-Rank Hunters, named with complex personalities
+  - **General/Marshal Grade:** Most powerful with distinct personalities (Beru, Igris, Bellion)
+- **Shadow Abilities:**
+  - Near-immortal regeneration
+  - Growth through combat
+  - Shadow infiltration and espionage
+  - Absolute loyalty to Shadow Monarch
+- **Monarchs and Rulers:** Cosmic-level entities controlling supernatural conflicts
+- **Relevance:** Demonstrates RPG-style ranking integrated with unique undead race mechanics
+
+#### **Omniscient Reader's Viewpoint (Korean)**
+- **System:** Web novel-turned-reality with stat screens and skill trees
+- **Races:** Multiple constellations, dokkaebi (Korean goblins), incarnations
+- **Power Scaling:** RPG-like progression with scenario-based advancement
+- **Relevance:** Shows how narrative knowledge affects race interactions
+
+#### **Second Life Ranker / The Ranker Who Lives Twice (Korean)**
+- **Setting:** Tower filled with monsters, races, and dungeons
+- **System:** Rank-based progression, ability cards, stat screens
+- **Races:** Wide variety of tower inhabitants from multiple dimensions
+- **Relevance:** Vertical progression with diverse racial encounters
+
+#### **The Beginning After the End (Korean/English Web Novel)**
+- **Races:** Humans, Elves, Dwarves, Asuras (god-like race)
+- **Beast Integration:** Beast will and animal companions
+- **Class System:** Mages, Augmenters with elemental affinities
+- **Relevance:** Traditional fantasy races with cultivation-style progression
+
+#### **Tomb Raider King (Korean)**
+- **System:** Relic-based abilities granting supernatural powers
+- **Monsters:** Tomb guardians and historical entities
+- **Race Mechanics:** Characters gain race-specific abilities through relics
+- **Relevance:** Item-based race transformation system
+
+#### **Chinese Web Novel Race Systems**
+
+**My Vampire System:**
+- Elaborate vampire hierarchy with werewolves and other supernatural races
+- Leveling system with race-specific powers
+- Complex race politics and societal structures
+
+**Super Gene:**
+- Gene absorption from defeated monsters
+- Monster tiers and mutations creating rich ecosystem
+- Evolutionary race progression through genetic enhancement
+
+**Let Me Game in Peace:**
+- Virtual world with myriad monsters and challenge tiers
+- Organized by level and rarity
+- Competitive race interactions
+
+**Birth of the Demonic Sword:**
+- Cultivation hierarchies
+- Demon and monster society ranks
+- Magical race power systems
+
+#### **Manhwa/Web Novel Race System Characteristics**
+- **RPG Integration:** Stat screens, skill trees, level systems
+- **Rank-Based Progression:** Clear hierarchies (E-S rank, cultivation stages)
+- **Evolution Mechanics:** Monsters and races can evolve through combat or consumption
+- **Gate/Dungeon Systems:** Monsters emerge from dimensional rifts
+- **Hunter Societies:** Organized human responses to monster threats
+- **Second Awakenings:** Characters can transcend initial limitations
+- **Shadow/Summon Armies:** Necromancer-style race creation
+- **Constellation/Deity Systems:** Higher beings sponsoring lower races
+
+#### **Relevance to Game Design**
+- **Clear Progression Paths:** Easy to understand rank systems for players
+- **Evolution Mechanics:** Satisfying growth from weak to powerful
+- **Multiple Power Sources:** Combines physical stats, skills, and special abilities
+- **Social Systems:** Guilds, teams, and factions based on race/class
+- **PvE and PvP Balance:** Separate progression for monster hunting and player combat
+- **Eastern Cultivation Elements:** Merges Western RPG mechanics with Eastern progression philosophy
+
 ### Additional Mythology & Folklore Sources
 
 #### **Slavic Mythology**
@@ -1237,6 +1332,19 @@ This section expands the research to include lesser-known but comprehensive race
 - **Re:Zero** - Demi-human social systems
 - **No Game No Life** - 16-race power hierarchy
 
+### Korean Manhwa & Chinese Web Novels
+- **Solo Leveling** - Hunter ranking (E-S), Shadow Army grading system, Monarchs/Rulers hierarchy
+- **Omniscient Reader's Viewpoint** - Constellation system, dokkaebi, incarnations, scenario progression
+- **Second Life Ranker** - Tower races, ability cards, dimensional beings
+- **The Beginning After the End** - Asuras, traditional fantasy races, beast integration
+- **Tomb Raider King** - Relic-based race transformations
+- **My Vampire System** - Vampire hierarchy, werewolves, supernatural race politics
+- **Super Gene** - Gene evolution, monster tiers, genetic enhancement
+- **Let Me Game in Peace** - Virtual world races, level-based monsters
+- **Birth of the Demonic Sword** - Cultivation hierarchies, demon society ranks
+- **The Player Who Can't Level Up** - Hidden mechanics, stat management
+- **Solo Max-Level Newbie** - Game-reality fusion, RPG stats and races
+
 ### Mythology & Folklore
 - **Greek** - Centaurs, satyrs, nymphs, cyclops
 - **Norse** - Dwarves, elves, jotun, alfar
@@ -1304,8 +1412,9 @@ This section expands the research to include lesser-known but comprehensive race
 
 ---
 
-**Document Status:** ✅ Complete (Expanded)  
+**Document Status:** ✅ Complete (Expanded 2x)  
 **Last Updated:** 2025-10-25  
-**Expansion Date:** 2025-10-25 (Added comprehensive research from lesser-known RPG systems, modern literature, and anime)  
+**Expansion 1:** 2025-10-25 (Added comprehensive research from lesser-known RPG systems, modern literature, and anime)  
+**Expansion 2:** 2025-10-25 (Added Korean manhwa including Solo Leveling and Chinese web novels)  
 **Next Review:** Post-design team discussion  
 **Contact:** BlueMarble Design Team
