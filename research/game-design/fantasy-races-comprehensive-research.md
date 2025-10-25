@@ -18,7 +18,7 @@ priority: high
 
 ## Executive Summary
 
-This comprehensive research document explores fantasy races across RPG games (D&D, Pathfinder, Elder Scrolls), fantasy literature (Tolkien, Sapkowski), and anime (particularly Overlord). It covers over 100 distinct races and their variants, including crossbreeding mechanics and hybrid races.
+This comprehensive research document explores fantasy races across RPG games, fantasy literature, and anime. Originally covering mainstream sources (D&D, Pathfinder, Elder Scrolls, Tolkien, Overlord), this document has been **expanded** to include lesser-known tabletop RPG systems, modern fantasy literature, additional anime series, and diverse cultural mythology. It now documents over 100 distinct races and their variants, including crossbreeding mechanics and hybrid races.
 
 **Key Takeaways:**
 - Fantasy races can be categorized into 14 major groups: Humans, Elves, Dwarves, Gnomes, Halflings, Orcs/Goblinoids, Beast Races, Hybrids, Elementals, Planar beings, Monsters, Fey, Specialty races, and Undead
@@ -26,6 +26,10 @@ This comprehensive research document explores fantasy races across RPG games (D&
 - Most successful RPGs offer 8-15 playable races with distinct mechanical and roleplay identities
 - Overlord's approach features 700+ race variations with racial levels and evolution mechanics
 - BlueMarble should consider a tiered race system with base races, subraces, and hybrid possibilities
+- **[NEW]** Lesser-known systems like RuneQuest, GURPS, and Earthdawn offer unique non-traditional races
+- **[NEW]** Modern literature (Jemisin, Kuang, Miéville) explores race as social commentary
+- **[NEW]** Guild Wars 2 and EverQuest demonstrate extensive race diversity in MMORPGs
+- **[NEW]** That Time I Reincarnated as a Slime shows detailed race evolution mechanics
 
 ---
 
@@ -1004,40 +1008,252 @@ Typically antagonists, but some settings allow undead player characters.
 
 ---
 
+## Additional Fantasy Race Systems Research
+
+This section expands the research to include lesser-known but comprehensive race systems from tabletop RPGs, video games, modern fantasy literature, and anime beyond the core sources.
+
+### Lesser-Known Tabletop RPG Systems
+
+#### **RuneQuest & Glorantha**
+- **Publisher:** Chaosium
+- **Notable Races:** Durulz (duck-people), Broos (chaos goat-men), Uz (trolls with complex castes)
+- **System Depth:** Mythopoetic setting with deep cultural and religious systems
+- **Unique Aspect:** Races tied to mythological cycles and cosmic forces
+- **Relevance:** Shows how non-traditional races can have rich lore without mimicking Tolkien
+
+#### **GURPS (Generic Universal RolePlaying System)**
+- **Publisher:** Steve Jackson Games
+- **Customization:** Point-buy system allows creation of any conceivable race
+- **Traits System:** Advantages, disadvantages, and quirks build unique species
+- **Flexibility:** Supports conventional and highly unusual race concepts
+- **Relevance:** Demonstrates modular race design for maximum player creativity
+
+#### **HERO System**
+- **Race Building:** Point-based construction with hundreds of powers and attributes
+- **Scalability:** From street-level to cosmic-level races
+- **Genre Flexibility:** Fantasy, sci-fi, superhero race archetypes
+- **Relevance:** Shows how mechanical balance can support unlimited race diversity
+
+#### **Cypher System (Numenera, The Strange)**
+- **Designer:** Monte Cook
+- **Approach:** Narrative-first race descriptions ("A stealthy mutant who moves like a shadow")
+- **Notable Races:** Visitants, Lattimor, Jack variants
+- **Bio-Engineering:** Races include modified humans and entirely alien species
+- **Relevance:** Prioritizes player fantasy over mechanical optimization
+
+#### **Earthdawn**
+- **Publisher:** FASA
+- **Unique Races:**
+  - T'skrang (lizard-folk riverboat traders)
+  - Windlings (tiny winged humanoids)
+  - Obsidimen (living stone giants)
+  - Trolls (civilized, honor-bound crystal users)
+- **Magic System:** Each race has unique relationship with magic threads
+- **Relevance:** Subverts expectations (intelligent trolls, merchant lizardfolk)
+
+#### **RIFTS**
+- **Publisher:** Palladium Books
+- **Setting:** Post-apocalyptic, multi-dimensional
+- **Race Variety:** Dozens of races from cyborgs to dragons to transdimensional beings
+- **Power Scaling:** Extreme variance from human to godlike
+- **Relevance:** Shows handling of wildly different power levels
+
+### Video Game Race Systems
+
+#### **Guild Wars & Guild Wars 2**
+- **Charr:** Feline-like militaristic race with industrial technology
+- **Asura:** Small technological geniuses with golems and magical science
+- **Sylvari:** Plant beings with collective consciousness, born from Pale Tree
+- **Norn:** Giant shapeshifting Norse-inspired humans with animal spirit totems
+- **Unique Approach:** Each race has completely different starting experience and cultural storyline
+- **Relevance:** Shows how race affects entire narrative experience
+
+#### **EverQuest Series**
+- **Extensive Roster:** 16+ playable races at launch
+- **Notable Races:**
+  - Frogloks (frog-people paladins)
+  - Iksar (lizardmen necromancers)
+  - Drakkin (dragon descendants)
+  - Vah Shir (lion-folk)
+- **Deity System:** Each race has different available deities affecting gameplay
+- **Relevance:** One of the most diverse MMORPG race systems
+
+#### **Allods Online**
+- **Russian Folklore Influence:** Gibberlings (small communal creatures), Arisen (undead)
+- **Cultural Depth:** Races reflect Slavic mythology and original fantasy
+- **Faction System:** Races divided into League and Empire
+- **Relevance:** Non-Western fantasy race interpretation
+
+### Modern Fantasy Literature
+
+#### **Brandon Sanderson's Cosmere (Expanded)**
+- **Scadrial (Mistborn):**
+  - Terrismen: Selective breeding for Investiture manipulation
+  - Kandra: Shape-shifters with spiked consciousness
+  - Koloss: Magically created super-soldiers
+- **Roshar (Stormlight Archive):**
+  - Parshendi/Singers: Form-changing through spren bonds (warform, workform, mateform, etc.)
+  - Spren: Cognitive entities that can bond with humans
+  - Aimians: Rare non-human races (Sleepless are hive-minds of cremlings)
+  - Lighteyes vs. Darkeyes: Social race divisions
+- **Nalthis (Warbreaker):**
+  - Returned: Resurrected divine beings with chromatic powers
+  - Breath mechanics affecting racial abilities
+- **System Innovation:** Each planet has unique magic affecting race development
+- **Relevance:** Shows how magic systems can define racial characteristics
+
+#### **N.K. Jemisin's Broken Earth Trilogy**
+- **Orogenes:** Humans with earth-manipulation powers, systematically oppressed
+- **Stone Eaters:** Ancient living stone beings
+- **Guardians:** Genetically modified humans designed to control orogenes
+- **Thematic Depth:** Race as metaphor for systemic oppression and ability-based discrimination
+- **Relevance:** Explores societal race dynamics beyond physical differences
+
+#### **R.F. Kuang's The Poppy War**
+- **East Asian Inspiration:** Races based on Chinese, Japanese, Korean cultures
+- **Nikara, Mugenese, Hesperian:** Nations with distinct racial and cultural identities
+- **Shamanic Magic:** Race-specific spiritual practices and deity connections
+- **Historical Grounding:** Fantasy races reflecting real-world ethnic conflicts
+- **Relevance:** Shows culturally-specific race design beyond Eurocentric models
+
+#### **Other Notable Authors**
+- **N.K. Jemisin (The Inheritance Trilogy):** Demons, gods, godlings as playable perspectives
+- **Mary Gentle:** Orcs reimagined as complex military culture
+- **China Miéville (Bas-Lag series):** Khepri (beetle-headed), Vodyanoi (amphibious), Cactacae (cactus-people), Remade (criminal modifications)
+- **Patrick Rothfuss:** Adem, Cealdish, Yllish with distinct cultural magic systems
+
+### Anime & Manga (Extended)
+
+#### **That Time I Got Reincarnated as a Slime (Detailed)**
+- **Race Evolution:** Monsters can evolve through naming, consuming, or achievements
+  - Goblins → Hobgoblins → Ogres → Kijin
+  - Slimes → Greater Slimes → Demon Slime
+  - Wolves → Tempest Wolves → Star Wolves
+- **Nation Building:** Multi-racial nation with race-specific roles
+- **Unique Races:** Oni, Kijin, Lizardmen, Dragonewts, Majin, True Dragons
+- **Political System:** Race hierarchy and inter-species diplomacy
+- **Relevance:** Shows race evolution mechanics and nation-scale race interactions
+
+#### **Hunter × Hunter**
+- **Chimera Ants:** Evolutionary race that absorbs traits from consumed species
+- **Caste System:** Queen, Royal Guards, Squadron Leaders, Officers, Soldiers
+- **Hybridization:** Human-ant hybrids with individual personalities
+- **Nen System:** Power system transcending race
+- **Relevance:** Demonstrates biological race evolution and caste mechanics
+
+#### **Dragon Ball Series (Race Analysis)**
+- **Saiyans:** Warrior race with transformation stages (Great Ape, Super Saiyan levels)
+- **Namekians:** Asexual reproduction, regeneration, fusion abilities, clan divisions
+- **Frieza Race:** Natural transformations for power suppression
+- **Majin:** Magical beings with absorption and reformation
+- **Racial Powers:** Each race has signature abilities and transformation mechanics
+- **Relevance:** Clear racial power progression systems
+
+#### **The Twelve Kingdoms (Juuni Kokuki)**
+- **Kirin:** Celestial beings that choose kingdom rulers
+- **Youma:** Magical beasts with intelligence
+- **Hanjyuu:** Half-beast races
+- **Sennin:** Immortal humans who ascended
+- **Kingdom System:** Each of 12 kingdoms has racial composition affecting politics
+- **Relevance:** Shows how race integrates with governance systems
+
+#### **Other Notable Anime**
+- **Re:Zero:** Demi-humans (various animal traits), spirits, witches
+- **Konosuba:** Crimson Demons, Axis Cult members (cultural races)
+- **No Game No Life:** Exceed - 16 sentient races ranked by magical power
+- **Grimgar of Fantasy and Ash:** Realistic race relations in fantasy setting
+
+### Additional Mythology & Folklore Sources
+
+#### **Slavic Mythology**
+- **Domovoi:** House spirits
+- **Rusalka:** Water spirits/undead maidens
+- **Leshy:** Forest guardians
+- **Baba Yaga's servants:** Various supernatural beings
+
+#### **East Asian Yokai & Spirits**
+- **Kappa:** Water imp with bowl on head
+- **Tengu:** Crow/human hybrids, mountain dwellers
+- **Kitsune:** Fox spirits with transformation (covered earlier but expanded)
+- **Tanuki:** Raccoon-dog tricksters
+
+#### **African Mythology**
+- **Anansi-folk:** Spider tricksters (Ashanti)
+- **Jengu:** Water spirits (Cameroon)
+- **Grootslang:** Primordial elephant-serpent (South African)
+
+#### **Polynesian & Pacific**
+- **Menehune:** Small people of Hawaiian legend
+- **Taniwha:** Guardian water spirits (Maori)
+- **Night Marchers:** Ancestral warrior spirits
+
+---
+
 ## Research Sources
 
-### RPG Games
-- **Dungeons & Dragons** (3.5e, 4e, 5e)
-- **Pathfinder** (1e, 2e)
-- **Elder Scrolls** (Morrowind, Oblivion, Skyrim)
-- **World of Warcraft**
-- **Final Fantasy XIV**
-- **Dark Sun** (harsh world variant)
-- **Eberron** (pulp fantasy setting)
-- **Warhammer Fantasy**
+### Primary RPG Games
+- **Dungeons & Dragons** (3.5e, 4e, 5e) - Industry standard
+- **Pathfinder** (1e, 2e) - D&D derivative with expanded options
+- **Elder Scrolls** (Morrowind, Oblivion, Skyrim) - Deep video game lore
+- **World of Warcraft** - MMORPG with faction-based races
+- **Final Fantasy XIV** - Job-flexible race system
+- **Dark Sun** - Harsh world with unique races
+- **Eberron** - Pulp fantasy with new races
+- **Warhammer Fantasy** - Grimdark race interpretations
+
+### Expanded RPG Systems
+- **RuneQuest/Glorantha** - Mythopoetic races
+- **GURPS** - Point-buy customization
+- **HERO System** - Modular race building
+- **Cypher System** - Narrative race design
+- **Earthdawn** - Subverted race archetypes
+- **RIFTS** - Extreme race diversity
+- **Guild Wars 2** - Unique racial narratives
+- **EverQuest** - Extensive race roster
+- **Allods Online** - Slavic-inspired races
 
 ### Fantasy Literature
-- **J.R.R. Tolkien** - The Hobbit, Lord of the Rings, Silmarillion
-- **Andrzej Sapkowski** - The Witcher series
-- **R.A. Salvatore** - Forgotten Realms novels (Drow culture)
-- **Terry Pratchett** - Discworld (satirical take on races)
-- **Brandon Sanderson** - Cosmere races
-- **George R.R. Martin** - A Song of Ice and Fire (limited fantasy races)
+- **J.R.R. Tolkien** - The Hobbit, Lord of the Rings, Silmarillion (genre foundation)
+- **Andrzej Sapkowski** - The Witcher series (Slavic fantasy)
+- **R.A. Salvatore** - Forgotten Realms novels (Drow culture depth)
+- **Terry Pratchett** - Discworld (satirical race commentary)
+- **Brandon Sanderson** - Cosmere races (magic-defined biology)
+- **N.K. Jemisin** - Broken Earth, Inheritance trilogies (oppression metaphors)
+- **R.F. Kuang** - The Poppy War (East Asian-inspired races)
+- **China Miéville** - Bas-Lag series (truly alien races)
+- **Patrick Rothfuss** - Kingkiller Chronicle (cultural magic races)
+- **Mary Gentle** - Grunts (orcish perspective)
 
-### Anime
-- **Overlord** - Most comprehensive race system with 700+ race types
-- **That Time I Reincarnated as a Slime** - Monster evolution system
-- **Log Horizon** - MMO-style races in isekai
-- **Gate** - Fantasy races meet modern world
-- **Made in Abyss** - Unique creature designs
-- **Dungeon Meshi (Delicious in Dungeon)** - Ecology of dungeon races
+### Anime & Manga
+- **Overlord** - 700+ race system with racial levels and evolution
+- **That Time I Reincarnated as a Slime** - Monster evolution and nation-building
+- **Hunter × Hunter** - Chimera Ant evolutionary system
+- **Dragon Ball series** - Racial transformation mechanics
+- **The Twelve Kingdoms** - Race-governance integration
+- **Log Horizon** - MMO race mechanics in isekai
+- **Gate** - Fantasy-modern world interaction
+- **Made in Abyss** - Unique creature ecology
+- **Dungeon Meshi** - Dungeon race biology
+- **Re:Zero** - Demi-human social systems
+- **No Game No Life** - 16-race power hierarchy
 
-### Mythology
-- Greek, Norse, Celtic, Slavic folklore
-- Japanese yokai and kami
-- Middle Eastern djinn and ifrit
-- African folklore creatures
-- Native American spirit beings
+### Mythology & Folklore
+- **Greek** - Centaurs, satyrs, nymphs, cyclops
+- **Norse** - Dwarves, elves, jotun, alfar
+- **Celtic** - Sidhe, pixies, leprechauns, selkies
+- **Slavic** - Domovoi, leshy, rusalka, vodyanoi
+- **Japanese** - Yokai (kitsune, tengu, kappa, tanuki)
+- **Middle Eastern** - Djinn, ifrit, ghuls
+- **African** - Anansi-folk, jengu, grootslang
+- **Polynesian** - Menehune, taniwha, night marchers
+- **Native American** - Wendigo, thunderbirds, skin-walkers
+
+### Online Resources & Communities
+- Eggradients Fantasy Races catalog (100+ creatures)
+- TTRPG List system database
+- TV Tropes Standard Fantasy Races
+- WorldAnvil race creation tools
+- Fantasy worldbuilding forums and wikis
 
 ---
 
@@ -1088,7 +1304,8 @@ Typically antagonists, but some settings allow undead player characters.
 
 ---
 
-**Document Status:** ✅ Complete  
+**Document Status:** ✅ Complete (Expanded)  
 **Last Updated:** 2025-10-25  
+**Expansion Date:** 2025-10-25 (Added comprehensive research from lesser-known RPG systems, modern literature, and anime)  
 **Next Review:** Post-design team discussion  
 **Contact:** BlueMarble Design Team
