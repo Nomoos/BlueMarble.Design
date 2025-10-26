@@ -18,7 +18,7 @@ priority: high
 
 ## Executive Summary
 
-This comprehensive research document explores fantasy races across RPG games, fantasy literature, and anime. Originally covering mainstream sources (D&D, Pathfinder, Elder Scrolls, Tolkien, Overlord), this document has been **expanded multiple times** to include lesser-known tabletop RPG systems, modern fantasy literature, additional anime series, Korean manhwa, Chinese web novels, and diverse cultural mythology. It now documents over 100 distinct races and their variants, including crossbreeding mechanics and hybrid races.
+This comprehensive research document explores fantasy races across RPG games, fantasy literature, and anime. Originally covering mainstream sources (D&D, Pathfinder, Elder Scrolls, Tolkien, Overlord), this document has been **expanded multiple times** to include lesser-known tabletop RPG systems, modern fantasy literature, additional anime series, Korean manhwa, Chinese web novels, diverse cultural mythology, and **detailed race variants/subraces**. It now documents over 100 distinct races and their variants, including crossbreeding mechanics, hybrid races, and specific subraces organized by color, element, and environment.
 
 **Key Takeaways:**
 - Fantasy races can be categorized into 14 major groups: Humans, Elves, Dwarves, Gnomes, Halflings, Orcs/Goblinoids, Beast Races, Hybrids, Elementals, Planar beings, Monsters, Fey, Specialty races, and Undead
@@ -33,6 +33,10 @@ This comprehensive research document explores fantasy races across RPG games, fa
 - **[EXPANSION 2]** Solo Leveling demonstrates RPG-style ranking (E-S) with Shadow Army grade system
 - **[EXPANSION 2]** Korean manhwa features hunter societies, gate systems, and second awakening mechanics
 - **[EXPANSION 2]** Chinese web novels merge cultivation with Western RPG race progression
+- **[EXPANSION 3]** Detailed race variants by color (red orcs, black orcs, gray orcs, copper orcs)
+- **[EXPANSION 3]** Elemental elf variants (frost, fire, sea, star, shadow elves)
+- **[EXPANSION 3]** Environmental dwarf variants (arctic, desert, jungle, deep dwarves)
+- **[EXPANSION 3]** Comprehensive subrace breakdowns for all major race categories
 
 ---
 
@@ -940,6 +944,347 @@ Typically antagonists, but some settings allow undead player characters.
 
 ---
 
+## Race Variants and Subraces by Type
+
+This section provides detailed breakdowns of race variants organized by color, element, environment, and specialized traits. These subraces offer specific mechanical and thematic distinctions within major race categories.
+
+### Orc Variants and Subraces
+
+Orcs appear in numerous variants across fantasy settings, often distinguished by skin color, environment, or magical influence.
+
+#### **Color-Coded Orc Subraces**
+
+**Red Orcs (Orcus Rubeus)**
+- **Origins:** Mystara "Orcs of Thar", various homebrew settings
+- **Characteristics:** Red-hued skin, monkey-like features in some settings
+- **Common Traits:** Enhanced agility, jungle/tropical adaptation
+- **Notable Examples:** Mystara Red Orcs, some Warcraft Fel Orcs
+- **Typical Bonuses:** +2 Strength, +1 Dexterity, climbing speed
+
+**Black Orcs**
+- **Origins:** Warhammer Fantasy, D&D variants
+- **Characteristics:** Larger, tougher, more cunning than common orcs
+- **Common Traits:** Superior warriors, disciplined formations
+- **Notable Examples:** Warhammer Black Orcs, D&D Neo-Orogs (scouts/spies)
+- **Typical Bonuses:** +2 Strength, +1 Intelligence, intimidation proficiency
+
+**Gray Orcs (Orcus Hyborianus)**
+- **Origins:** D&D Forgotten Realms, brought through Orcgate Wars
+- **Characteristics:** Pale or gray skin, less bestial, more civilized
+- **Common Traits:** Northern climate adaptation, tactical thinking
+- **Notable Examples:** Forgotten Realms Gray Orcs
+- **Typical Bonuses:** +2 Strength, +1 Wisdom, cold resistance
+
+**Green Orcs**
+- **Origins:** Tolkien influence, Warcraft
+- **Characteristics:** Classic fantasy orc appearance
+- **Common Traits:** Standard orcish strength and ferocity
+- **Notable Examples:** Warcraft Orcs, standard D&D mountain orcs
+- **Typical Bonuses:** +2 Strength, +1 Constitution, aggressive trait
+
+**Copper/Bronze Orcs (Orcus Imperator Rex)**
+- **Origins:** Mystara, various settings
+- **Characteristics:** Copper-toned skin, less porcine features, can pass for ugly humans
+- **Common Traits:** Higher intelligence, leadership capabilities
+- **Notable Examples:** Mystara Copper Orcs, noble orc lineages
+- **Typical Bonuses:** +2 Strength, +1 Charisma, disguise capabilities
+
+#### **Environmental/Origin Orc Variants**
+
+**Mountain Orcs**
+- **Habitat:** High mountains, fortress strongholds
+- **Traits:** Brutish, warlike, classic D&D template
+- **Skin Color:** Gray to dark gray
+- **Typical Bonuses:** +2 Strength, +1 Constitution, darkvision, aggressive
+
+**Deep Orcs (Orogs)**
+- **Habitat:** Underdark, deep caverns
+- **Traits:** Stronger, more intelligent than surface orcs
+- **Skin Color:** Dark gray to black
+- **Typical Bonuses:** +2 Strength, +1 Intelligence, superior darkvision, sunlight sensitivity
+
+**Desert Orcs**
+- **Habitat:** Arid wastelands, desert fortresses
+- **Traits:** Lean, swift, heat-adapted
+- **Skin Color:** Tan to reddish-brown
+- **Typical Bonuses:** +2 Strength, +1 Dexterity, heat resistance, desert survival
+
+**Uruk-Hai**
+- **Origins:** Tolkien's Middle Earth
+- **Traits:** Bred for war, disciplined, can tolerate sunlight
+- **Skin Color:** Black to dark brown
+- **Special:** Created by Saruman, half-orc/half-goblin crossbreeds
+
+**Viperhand Orcs**
+- **Origins:** D&D Maztica setting
+- **Traits:** Created from cursed evil humans by god Zaltec
+- **Unique:** Different creation myth than standard orcs
+
+**Zakharan Orcs**
+- **Origins:** D&D Al-Qadim setting
+- **Traits:** Civilized, well-integrated into society
+- **Cultural Note:** Surprisingly peaceful and merchant-oriented
+
+### Elf Variants and Subraces
+
+Elves are highly diverse, with variants reflecting different elements, environments, and magical affinities.
+
+#### **Elemental Elf Variants**
+
+**Frost Elves / Ice Elves / Winter Elves**
+- **Element:** Ice/Cold/Winter
+- **Characteristics:** Pale skin (alabaster to ice-blue), white/silver hair, crystalline eyes
+- **Habitat:** Arctic tundras, frozen mountains, glacial caverns
+- **Magic Affinity:** Frost magic, ice manipulation, snow conjuring
+- **Typical Bonuses:** +2 Dexterity, +1 Intelligence, cold resistance/immunity, ice spells
+- **Cultural Traits:** Stoic, patient, preservation-focused
+
+**Fire Elves / Flame Elves**
+- **Element:** Fire/Heat
+- **Characteristics:** Bronze/golden skin, red/orange hair, flame-colored eyes
+- **Habitat:** Volcanic regions, deserts, near lava flows
+- **Magic Affinity:** Fire magic, heat manipulation, flame conjuring
+- **Typical Bonuses:** +2 Dexterity, +1 Charisma, fire resistance/immunity, fire spells
+- **Cultural Traits:** Passionate, quick-tempered, intense
+
+**Sea Elves / Aquatic Elves**
+- **Element:** Water/Ocean
+- **Characteristics:** Blue-green skin, webbed digits, gill slits
+- **Habitat:** Underwater cities, coral reefs, deep ocean
+- **Magic Affinity:** Water magic, weather control (storms)
+- **Typical Bonuses:** +2 Dexterity, +1 Constitution, swimming speed 30ft, water breathing
+- **Cultural Traits:** Isolationist, protective of oceans, fluid thinking
+
+**Star Elves / Celestial Elves**
+- **Element:** Stars/Cosmic
+- **Characteristics:** Pale skin with starlight shimmer, silver/white hair, constellation-like freckles
+- **Habitat:** Plane of Stars, high mountain observatories, ancient ruins
+- **Magic Affinity:** Divination, fate magic, astral projection
+- **Typical Bonuses:** +2 Intelligence, +1 Wisdom, resistance to radiant damage, cosmic awareness
+- **Cultural Traits:** Prophetic, detached, fate-obsessed
+
+**Shadow Elves / Shade Elves**
+- **Element:** Shadow/Darkness (distinct from Drow)
+- **Characteristics:** Dusky skin, dark hair, shadowy aura
+- **Habitat:** Twilight forests, shadow planes, dark groves
+- **Magic Affinity:** Shadow magic, illusion, stealth enhancement
+- **Typical Bonuses:** +2 Dexterity, +1 Intelligence, darkvision 120ft, shadow step
+- **Cultural Traits:** Secretive, neutral alignment, balance-seekers
+
+#### **Environmental Elf Variants**
+
+**High Elves (Sun Elves/Moon Elves)**
+- **Habitat:** Ancient cities, magical academies, enchanted groves
+- **Sub-variants:**
+  - **Sun Elves:** Golden skin, regal, magic specialists
+  - **Moon Elves:** Silver hair, wanderers, impulsive
+- **Typical Bonuses:** +2 Intelligence, +1 Dexterity, cantrip, weapon training
+
+**Wood Elves / Forest Elves**
+- **Habitat:** Deep forests, ancient woodlands
+- **Characteristics:** Tan/copper skin, green/brown hair
+- **Typical Bonuses:** +2 Dexterity, +1 Wisdom, increased speed 35ft, mask of wild
+
+**Wild Elves / Green Elves**
+- **Habitat:** Primeval forests, untouched wilderness
+- **Characteristics:** Very reclusive, feral instincts, primitive
+- **Typical Bonuses:** +2 Dexterity, +1 Constitution, survival expert, animal empathy
+
+**Winged Elves (Avariel)**
+- **Habitat:** Mountain peaks, floating cities, sky realms
+- **Characteristics:** Feathered wings (usually white/silver)
+- **Typical Bonuses:** +2 Dexterity, +1 Wisdom, flying speed 30ft (with restrictions)
+- **Rarity:** Nearly extinct in most settings
+
+**Mountain Elves**
+- **Habitat:** High-altitude peaks, mountain valleys
+- **Characteristics:** Hardy, climbing specialists
+- **Typical Bonuses:** +2 Dexterity, +1 Constitution, climbing speed, altitude adaptation
+
+**Desert Elves (covered in main section)**
+- **Habitat:** Arid regions, oases
+- **Characteristics:** Heat-adapted, endurance-focused
+
+**Dark Elves (Drow) (covered in main section)**
+- **Habitat:** Underdark
+- **Characteristics:** Black/purple skin, white hair, matriarchal
+
+#### **Norse/Folkloric Elf Variants**
+
+**Light Elves (Ljósálfar)**
+- **Origins:** Norse mythology
+- **Characteristics:** Radiant, benevolent, sun-aligned
+- **Traits:** Positive magic, healing, illumination
+
+**Dark Elves (Dökkálfar)**
+- **Origins:** Norse mythology (different from D&D Drow)
+- **Characteristics:** Earth-dwelling, secretive, crafters
+- **Traits:** Not necessarily evil, master smiths
+
+**Svartálfar**
+- **Origins:** Norse mythology
+- **Characteristics:** Sometimes classified as elves, sometimes dwarves
+- **Traits:** Underground dwellers, legendary craftsmen
+
+### Dwarf Variants and Subraces
+
+Dwarves have numerous subraces adapted to different environments and circumstances.
+
+#### **Primary Dwarf Subraces**
+
+**Hill Dwarves**
+- **Habitat:** Rolling hills, low mountains
+- **Characteristics:** Stocky, adaptable, keen senses
+- **Typical Bonuses:** +2 Constitution, +1 Wisdom, extra hit points, dwarven toughness
+- **Notable Examples:** Gold Dwarves (Forgotten Realms)
+
+**Mountain Dwarves**
+- **Habitat:** High mountains, deep fortresses
+- **Characteristics:** Larger, hardier, excellent warriors
+- **Typical Bonuses:** +2 Constitution, +2 Strength, armor proficiencies
+- **Notable Examples:** Shield Dwarves (Forgotten Realms)
+
+**Duergar (Gray Dwarves)**
+- **Habitat:** Underdark
+- **Characteristics:** Gray skin, grim demeanor, psionically gifted
+- **Typical Bonuses:** +2 Constitution, +1 Strength, superior darkvision, enlarge/invisibility
+- **Cultural Traits:** Slavers, militaristic, once-cursed by mind flayers
+
+**Deep Dwarves**
+- **Habitat:** Deepest underground
+- **Characteristics:** Reclusive, cautious, ultra-conservative
+- **Typical Bonuses:** +2 Constitution, +1 Wisdom, stonecunning enhanced, light sensitivity
+
+#### **Environmental Dwarf Variants**
+
+**Arctic Dwarves / Frost Dwarves**
+- **Habitat:** Frozen tundras, ice caves
+- **Characteristics:** Pale skin, white/blonde hair, nomadic or ice-fortress dwelling
+- **Typical Bonuses:** +2 Constitution, +1 Strength, cold resistance, ice walking
+
+**Desert Dwarves**
+- **Habitat:** Arid badlands, desert mountains
+- **Characteristics:** Tan skin, heat-adapted
+- **Typical Bonuses:** +2 Constitution, +1 Wisdom, heat resistance, water conservation
+
+**Jungle Dwarves / Wild Dwarves**
+- **Habitat:** Tropical forests (e.g., Chult in Forgotten Realms)
+- **Characteristics:** Primitive, tribal, darker skin
+- **Typical Bonuses:** +2 Constitution, +1 Dexterity, jungle survival, poison resistance
+
+**Aquatic Dwarves**
+- **Habitat:** Underwater (rare/homebrew)
+- **Characteristics:** Adapted to underwater life
+- **Typical Bonuses:** +2 Constitution, +1 Strength, swimming speed, water breathing
+
+#### **Specialized Dwarf Variants**
+
+**Gold Dwarves**
+- **Characteristics:** Wealthy, elaborate craftsmanship, southern
+- **Habitat:** Great Rift (Forgotten Realms), rich enclaves
+- **Typical Bonuses:** +2 Constitution, +1 Wisdom, extra hit points
+
+**Shield Dwarves**
+- **Characteristics:** Northern warriors, reclaim lost kingdoms
+- **Habitat:** Northern Faerûn mountains
+- **Typical Bonuses:** +2 Constitution, +2 Strength
+
+**Urdunnir Dwarves**
+- **Characteristics:** Magical stone-walking ability
+- **Habitat:** Secret underground tunnels
+- **Typical Bonuses:** +2 Constitution, +1 Intelligence, stone walk ability
+
+**Derro**
+- **Characteristics:** Insane, cruel, possibly dwarf/gnome hybrid
+- **Habitat:** Deep Underdark
+- **Typical Bonuses:** Varied, often psionic abilities, madness traits
+- **Note:** Sometimes classified separately from true dwarves
+
+**Azers (Elemental Fire Dwarves)**
+- **Characteristics:** Made of brass and fire
+- **Habitat:** Elemental Plane of Fire
+- **Typical Bonuses:** Fire immunity, heat aura, metallic appearance
+- **Note:** Genies/elementals rather than true dwarves
+
+#### **Setting-Specific Variants**
+
+**Dragonlance Dwarves:**
+- **Neidar:** Hill dwarves
+- **Klar:** Debased, insane hill dwarves
+- **Daergar:** Evil mountain dwarves (distinct from duergar)
+- **Theiwar, Dwur, Aghar:** Various clan-based variants
+
+**Warhammer Dwarves:**
+- **Chaos Dwarves:** Sorcerous, evil, demon-worshipping
+- **Slayer Dwarves:** Death-seeking warriors with mohawks
+- **Engineer Dwarves:** Technology specialists
+
+### Gnome Variants and Subraces
+
+**Forest Gnomes**
+- **Habitat:** Woodlands, fairy circles
+- **Characteristics:** Nature-attuned, illusion magic, animal friends
+- **Typical Bonuses:** +2 Intelligence, +1 Dexterity, speak with small beasts
+
+**Rock Gnomes**
+- **Habitat:** Underground warrens, workshops
+- **Characteristics:** Inventors, tinkerers, artificers
+- **Typical Bonuses:** +2 Intelligence, +1 Constitution, tinker ability
+
+**Deep Gnomes (Svirfneblin)**
+- **Habitat:** Underdark
+- **Characteristics:** Gray skin, paranoid, stealthy
+- **Typical Bonuses:** +2 Intelligence, +1 Dexterity, superior darkvision, stone camouflage
+
+**Mark of Scribing Gnome (Eberron)**
+- **Habitat:** Cities, libraries
+- **Characteristics:** Dragonmarked, communication specialists
+- **Typical Bonuses:** Spells related to communication and writing
+
+### Halfling Variants and Subraces
+
+**Lightfoot Halflings**
+- **Characteristics:** Stealthy, friendly, urban-adapted
+- **Typical Bonuses:** +2 Dexterity, +1 Charisma, naturally stealthy
+
+**Stout Halflings**
+- **Characteristics:** Hardier, poison-resistant, rural
+- **Typical Bonuses:** +2 Dexterity, +1 Constitution, poison resistance
+
+**Ghostwise Halflings**
+- **Characteristics:** Silent communication, nature-attuned, nomadic
+- **Typical Bonuses:** +2 Dexterity, +1 Wisdom, silent speech telepathy
+
+**Lotusden Halflings (Wildemount)**
+- **Characteristics:** Nature magic, plant growth
+- **Typical Bonuses:** +2 Dexterity, +1 Wisdom, druidic spells
+
+### Goblinoid Variants
+
+**Goblins**
+- Standard, Forest, Desert, Cave, Arctic variants by habitat
+
+**Hobgoblins**
+- Common, Iron Shadow, Devastator, Wizard subtypes
+
+**Bugbears**
+- Standard, Alpha, Chieftain variants by role
+
+### Other Race Variants
+
+**Tiefling Bloodlines**
+- Asmodeus, Baalzebul, Dispater, Fierna, Glasya, Levistus, Mammon, Mephistopheles, Zariel bloodlines
+
+**Dragonborn Scale Colors**
+- Chromatic: Black, Blue, Green, Red, White
+- Metallic: Brass, Bronze, Copper, Gold, Silver
+- Gem: Amethyst, Crystal, Emerald, Sapphire, Topaz
+
+**Genasi Elements**
+- Air, Earth, Fire, Water genasi
+
+---
+
 ## Implications for BlueMarble Design
 
 ### Recommended Race System
@@ -1412,9 +1757,10 @@ This section covers Korean manhwa and Chinese web novels that feature comprehens
 
 ---
 
-**Document Status:** ✅ Complete (Expanded 2x)  
-**Last Updated:** 2025-10-25  
+**Document Status:** ✅ Complete (Expanded 3x)  
+**Last Updated:** 2025-10-26  
 **Expansion 1:** 2025-10-25 (Added comprehensive research from lesser-known RPG systems, modern literature, and anime)  
 **Expansion 2:** 2025-10-25 (Added Korean manhwa including Solo Leveling and Chinese web novels)  
+**Expansion 3:** 2025-10-26 (Added detailed race variants and subraces: color-coded orcs, elemental elves, environmental dwarves)  
 **Next Review:** Post-design team discussion  
 **Contact:** BlueMarble Design Team
