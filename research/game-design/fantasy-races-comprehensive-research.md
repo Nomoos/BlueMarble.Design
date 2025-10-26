@@ -18,7 +18,7 @@ priority: high
 
 ## Executive Summary
 
-This comprehensive research document explores fantasy races across RPG games, fantasy literature, and anime. Originally covering mainstream sources (D&D, Pathfinder, Elder Scrolls, Tolkien, Overlord), this document has been **expanded multiple times** to include lesser-known tabletop RPG systems, modern fantasy literature, additional anime series, Korean manhwa, Chinese web novels, diverse cultural mythology, and **detailed race variants/subraces**. It now documents over 100 distinct races and their variants, including crossbreeding mechanics, hybrid races, and specific subraces organized by color, element, and environment.
+This comprehensive research document explores fantasy races across RPG games, fantasy literature, and anime. Originally covering mainstream sources (D&D, Pathfinder, Elder Scrolls, Tolkien, Overlord), this document has been **expanded four times** to include lesser-known tabletop RPG systems, modern fantasy literature, additional anime series, Korean manhwa, Chinese web novels, diverse cultural mythology, **detailed race variants/subraces**, and comprehensive coverage of **Inheritance Cycle** and **Warhammer universes**. It now documents over 100 distinct races and their variants, including crossbreeding mechanics, hybrid races, and specific subraces organized by color, element, and environment.
 
 **Key Takeaways:**
 - Fantasy races can be categorized into 14 major groups: Humans, Elves, Dwarves, Gnomes, Halflings, Orcs/Goblinoids, Beast Races, Hybrids, Elementals, Planar beings, Monsters, Fey, Specialty races, and Undead
@@ -37,6 +37,10 @@ This comprehensive research document explores fantasy races across RPG games, fa
 - **[EXPANSION 3]** Elemental elf variants (frost, fire, sea, star, shadow elves)
 - **[EXPANSION 3]** Environmental dwarf variants (arctic, desert, jungle, deep dwarves)
 - **[EXPANSION 3]** Comprehensive subrace breakdowns for all major race categories
+- **[EXPANSION 4]** Inheritance Cycle races (Dragons, Elves, Dwarves, Humans, Urgals/Kull, Ra'zac, Shades)
+- **[EXPANSION 4]** Warhammer Fantasy (16+ major factions including Greenskins, Skaven, Lizardmen, Vampire Counts)
+- **[EXPANSION 4]** Warhammer 40k (20+ factions including Space Marines, Orks, Aeldari, Necrons, Tyranids, Tau)
+- **[EXPANSION 4]** Solo Leveling expanded (8 Monarchs, Rulers, 20+ Magic Beast types, Dragons, Demons)
 
 ---
 
@@ -1470,6 +1474,318 @@ This section expands the research to include lesser-known but comprehensive race
 - **China Miéville (Bas-Lag series):** Khepri (beetle-headed), Vodyanoi (amphibious), Cactacae (cactus-people), Remade (criminal modifications)
 - **Patrick Rothfuss:** Adem, Cealdish, Yllish with distinct cultural magic systems
 
+#### **Christopher Paolini's Inheritance Cycle (Eragon, Eldest, Brisingr, Inheritance, Murtagh)**
+- **Setting:** World of Alagaësia
+- **Central Concept:** Dragon Riders - magical bond between rider and dragon
+
+**Major Races:**
+
+**Dragons:**
+- Intelligent, immortal, magical beings
+- Bond telepathically with riders, sharing power and lifespan
+- Able to speak mind-to-mind and breathe fire
+- Magic users with ability to cast spells using Ancient Language
+- Colors vary: blue (Saphira), red (Thorn), green (Fírnen), white, black
+- Eldunari (heart of hearts) - consciousness gems that survive dragon death
+- Nearly extinct by start of series, restored by end
+
+**Elves:**
+- Oldest and wisest race in Alagaësia
+- Immortal unless killed, age slowly
+- Superior physical prowess: strength, speed, senses, reflexes
+- Natural magic users, masters of the Ancient Language
+- Vegetarian culture, deep connection to nature
+- Notable: Queen Islanzadí, Arya (key character and eventual rider)
+- Capital: Ellesméra in Du Weldenvarden forest
+- Created Dragon Riders pact with dragons
+
+**Dwarves:**
+- Mountain-dwelling race, master craftsmen and miners
+- Clan-based society with elected kings
+- Skilled in metalwork, stonework, and engineering
+- Strong warriors, use axes and hammers
+- Live longer than humans (200-300 years)
+- Notable: King Orik, Grimstborith Gannel
+- Capital: Tronjheim in Farthen Dûr mountains
+- Joined Dragon Rider pact after elves
+
+**Humans:**
+- Most numerous race, shortest lifespans (60-80 years unless bonded)
+- Diverse cultures: Empire, Varden (rebellion), Surda
+- Magic rare among unbonded humans
+- Dragon Riders: Eragon, Murtagh (corrupted), Galbatorix (villain)
+- Notable: Nasuada (Varden leader), Roran (Eragon's cousin)
+- Became third race to join Dragon Rider pact
+
+**Urgals:**
+- Ram-horned, gray-skinned humanoids
+- Misunderstood as savage but possess rich culture
+- Tribal society with shamanic traditions
+- Warriors of great strength and endurance
+- **Kull:** Giant subspecies of Urgals, 8 feet tall, incredibly powerful
+- Notable: Nar Garzhvog (Kull chieftain)
+- Joined Dragon Rider pact by end of series (revolutionary change)
+- Eldunari allowed them to become riders for first time
+
+**Ra'zac and Lethrblaka:**
+- Mysterious predatory species
+- Bipedal, insect-like, with beaked faces
+- Feed on humans, serve Galbatorix
+- Adults (Lethrblaka): Larger, can fly, ptero-dragon appearance
+- Juveniles (Ra'zac): Smaller, intelligent, use poison
+- Weak in sunlight, hunt at night
+- Nearly extinct, hunted to near-elimination
+
+**Shades:**
+- Not a race but transformed beings
+- Sorcerers possessed by evil spirits summoned through dark magic
+- Superhuman strength, speed, magic resistance
+- Red/maroon eyes, pale skin
+- Notable: Durza (major antagonist), Varaug
+- Extremely difficult to kill (requires strike to heart)
+- Retain sorcerer's intelligence but twisted by spirits
+
+**Minor Races/Beings:**
+- **Werecats:** Shapeshifters, cat-to-humanoid form, wise and cryptic
+- **Spirits:** Magical entities of earth, wind, fire, water
+- **Menoa Tree:** Ancient conscious tree, guardian of knowledge
+- **Angela (human herbalist):** Mysterious, implied to be much more
+
+**Magic System Integration:**
+- Ancient Language: True names give power over beings
+- Energy comes from user's body or stored sources (Eldunari, gems)
+- Dragon Riders draw from both rider and dragon
+- Wards (protective spells) and naming as key mechanics
+
+**Unique Aspects:**
+- Rider-Dragon bond grants extended lifespan and shared magic
+- Pact rewritten to include all races (not just elves/humans)
+- Social commentary: Urgals shown as honorable despite prejudice
+- Evolution from traditional fantasy (elves/dwarves) to inclusive society
+
+**Relevance to Game Design:**
+- Bond mechanics between player and companion (dragon)
+- Transformation through magical pacts (becoming rider)
+- Race prejudice and social evolution as narrative elements
+- Multiple races gaining access to previously restricted abilities
+- Energy management system for magic casting
+
+### Warhammer Fantasy and Warhammer 40,000
+
+Comprehensive race/faction systems across two major settings from Games Workshop.
+
+#### **Warhammer Fantasy Battles / Age of Sigmar**
+
+**Order Factions:**
+
+**The Empire (Humans):**
+- Central human nation, Germanic-inspired
+- Diverse provinces with cultural variations
+- Gunpowder weapons, war machines, magic colleges
+- Faith in Sigmar, warrior-god emperor
+
+**Bretonnia (Humans):**
+- Arthurian/French-inspired knights and peasants
+- Grail Knights with divine blessings
+- Heavy cavalry focus, chivalric code
+
+**High Elves (Asur):**
+- Ancient, noble, master mages
+- Dragon princes, phoenix guard, elite warriors
+- Island nation of Ulthuan
+- Masters of magical lore
+
+**Wood Elves (Asrai):**
+- Forest dwellers, nature protectors
+- Exceptional archers, treekin allies
+- Athel Loren forest, connection to Isha
+
+**Dwarfs (Dawi):**
+- Master craftsmen, grudge-bearers
+- Rune magic, gyrocopters, war machines
+- Mountain strongholds (Karaks)
+- Declining empire but unbowed
+
+**Lizardmen (Seraphon):**
+- Saurian races created by Old Ones
+- Slann (toad mages), Saurus (warriors), Skinks (workers)
+- Jungle temples, ancient plans
+- Servants of cosmic order
+
+**Destruction/Chaos Factions:**
+
+**Orcs & Goblins (Greenskins):**
+- Orcs: Brutal, strength-focused, green-skinned
+- **Black Orcs:** Larger, smarter, elite warriors
+- Goblins: Smaller, cunning, numerous
+- **Night Goblins:** Cave-dwelling, mushroom-eating, fanatics
+- Snotlings: Tiny, impish
+- Fungus-based biology, WAAAGH! energy
+
+**Skaven (Ratmen):**
+- Subterranean ratmen empire
+- Technologically advanced (warpstone magic-tech)
+- Clan-based: Skryre (tech), Pestilens (plague), Moulder (mutations), Eshin (assassins)
+- Horned Rat worship, backstabbing culture
+- Gray Seers (sorcerers), Stormvermin (elite)
+
+**Beastmen:**
+- Chaos-corrupted humanoid beasts
+- Gors (goat-headed), Ungors (lesser), Minotaurs
+- Tribal, forest raiders
+- Marked by Chaos gods
+
+**Warriors of Chaos:**
+- Humans/others corrupted by Chaos
+- Marauders, Chaos Warriors, Chosen
+- Pledge to Khorne, Tzeentch, Nurgle, or Slaanesh
+- Daemon princes, dragon ogres
+
+**Daemons of Chaos:**
+- **Khorne:** Bloodletters, bloodthirsters (war/blood)
+- **Tzeentch:** Horrors, Lords of Change (magic/change)
+- **Nurgle:** Plaguebearers, Great Unclean Ones (disease/decay)
+- **Slaanesh:** Daemonettes, Keepers of Secrets (excess/pleasure)
+
+**Undead Factions:**
+
+**Vampire Counts:**
+- Undead aristocracy, vampire lords
+- Zombie hordes, skeletons, ghouls
+- Blood Knights, Vargheists, Terrorgheists
+- Von Carstein, Lahmian bloodlines
+
+**Tomb Kings:**
+- Undead Egyptians, skeleton legions
+- Mummified priest-kings, constructs
+- Ushabti, bone giants, carrion
+- Ancient Nehekhara awakened
+
+**Dark Elves (Druchii):**
+- Evil kin of High Elves
+- Slave raiders, pirates, torture masters
+- Witch Elves, Black Guard, Executioners
+- Naggaroth continent, Malekith the Witch King
+
+**Ogre Kingdoms:**
+- Giant, brutish humanoids driven by hunger
+- Gut magic, avalanche charges
+- Gnoblars (goblin-like servants)
+- Nomadic tribes
+
+**Halflings:**
+- Small, peaceful folk
+- Excellent cooks, surprisingly brave
+- Allied with Empire
+
+---
+
+#### **Warhammer 40,000 (40k)**
+
+**Imperium of Man:**
+
+**Humanity:**
+- Millions of worlds, quadrillions of humans
+- Emperor worship as state religion
+- **Space Marines (Adeptus Astartes):** Superhuman warriors
+  - 1000+ Chapters: Ultramarines, Blood Angels, Space Wolves, Dark Angels, etc.
+  - Gene-seed enhancement, power armor
+- **Astra Militarum (Imperial Guard):** Countless soldiers, diverse regiments
+- **Adeptus Mechanicus:** Tech-priests, cyborg augmentation
+- **Sisters of Battle (Adepta Sororitas):** Female warrior-nuns
+- **Adeptus Custodes:** Emperor's golden guardians
+- **Imperial Knights:** Piloted mechs, noble houses
+
+**Abhumans:**
+- **Ogryns:** Large, strong, dim-witted
+- **Ratlings:** Halfling-like snipers
+- **Squats (Leagues of Votann):** Dwarf-like miners, recently returned
+- Various sanctioned mutations
+
+**Chaos Forces:**
+
+**Chaos Space Marines:**
+- Traitor Astartes, 10,000-year war
+- **Traitor Legions:** Death Guard (Nurgle), Thousand Sons (Tzeentch), World Eaters (Khorne), Emperor's Children (Slaanesh)
+- Daemon princes, possessed marines
+- Chaos cultists (corrupted humans)
+
+**Chaos Daemons:**
+- Same four gods as Fantasy
+- Warp entities manifesting in realspace
+- Neverborn, endless respawning
+
+**Xenos (Alien) Races:**
+
+**Orks (Orkoids):**
+- Green-skinned fungal warriors
+- WAAAGH! psychic field
+- Boyz (warriors), Nobz (leaders), Warbosses
+- Mekboyz (tech), Weirdboyz (psykers)
+- **Gretchin:** Smaller servants
+- **Snotlings:** Tiny, basic intelligence
+- Faster, stronger, bigger through combat
+
+**Aeldari (Eldar):**
+- Ancient psychic race, declining
+- **Craftworld Aeldari (Asuryani):** Ship-cities, aspect warriors, farseers
+- **Drukhari (Dark Eldar):** Torture-loving raiders from Commorragh
+- **Harlequins:** Warrior-performers serving Cegorach
+- **Exodites:** Agrarian worlds, dragon riders (rarely seen)
+- **Ynnari:** Death-god followers, cross-faction
+
+**Necrons:**
+- Ancient race, transferred to metal bodies
+- Dynasty-based, tomb worlds awakening
+- Immortal warriors, lords, overlords
+- C'tan shards (star gods), canoptek constructs
+- Gauss weapons, resurrection protocols
+
+**Tau Empire:**
+- Youngest spacefaring race, technology-focused
+- Caste system: Fire (warriors), Earth (builders), Water (diplomats), Air (pilots), Ethereals (leaders)
+- Greater Good philosophy
+- Battlesuits, railguns, pulse weapons
+- **Auxiliaries:** Kroot (avian mercenaries), Vespid (insectoid), Gue'vesa (human converts)
+
+**Tyranids:**
+- Extragalactic bio-horror swarm
+- Hive Mind controlling all organisms
+- Bio-adaptation, consume all biomass
+- Hive Fleets: Behemoth, Kraken, Leviathan
+- Synapse creatures, bioforms for every role
+- **Genestealers:** Infiltration organisms, hybrid cults
+
+**Other Xenos:**
+
+**Kroot:**
+- Avian carnivores, evolutionary eaters
+- Absorb DNA from consumed prey
+- Mercenaries, often allied with Tau
+
+**Jokaero:**
+- Orangutan-like digital weapon makers
+- Non-sentient but genius craftsmen
+
+**Hrud:**
+- Rat-like, entropy-field emitters
+- Scavengers, rarely seen
+
+**Q'Orl:**
+- Insectoid swarm, avoided by Imperium
+
+**Rak'Gol:**
+- Cyborg raiders, violent
+
+**Relevance to Game Design:**
+- Faction-based identity (40k) vs race-based (Fantasy)
+- Subfaction customization (Chapters, Clans, Dynasties)
+- Grimdark aesthetic, constant warfare
+- Power creep management across dozens of armies
+- Distinct playstyles per race (horde vs elite, ranged vs melee)
+- Corruption/Chaos as transformation mechanic
+- Technology vs magic spectrum across races
+
 ### Anime & Manga (Extended)
 
 #### **That Time I Got Reincarnated as a Slime (Detailed)**
@@ -1536,8 +1852,72 @@ This section covers Korean manhwa and Chinese web novels that feature comprehens
   - Growth through combat
   - Shadow infiltration and espionage
   - Absolute loyalty to Shadow Monarch
-- **Monarchs and Rulers:** Cosmic-level entities controlling supernatural conflicts
-- **Relevance:** Demonstrates RPG-style ranking integrated with unique undead race mechanics
+
+**Monarchs (8 God-Tier Entities):**
+- **Shadow Monarch (Ashborn/Sung Jin-Woo):** Commands shadow army, necromancy
+- **Frost Monarch:** Ice and cold manipulation
+- **Beast Monarch:** Commands all beasts and monsters
+- **Plague Monarch:** Disease and pestilence
+- **Destruction Monarch:** Pure destructive force
+- **Dragon Monarch (Antares):** Commands dragons, most powerful
+- **Iron Body Monarch:** Invulnerability and physical supremacy
+- **Demon Monarch:** Commands demon armies
+- Each Monarch leads armies of their element/type
+- Ancient war against Rulers for control of dimensions
+
+**Rulers (God-Tier Protectors):**
+- Divine beings opposing Monarchs
+- Created Hunters to fight Monarchs through human proxies
+- **Heavenly Soldiers:** Elite warriors serving Rulers
+- Possess immense magical abilities
+- Inhabit vessels or manifest directly
+- Seven Rulers remaining after ancient wars
+
+**Magic Beasts and Monsters:**
+- **Goblins:** E-Rank, weak humanoids, dungeon fodder
+- **Orcs:** D-C Rank, stronger humanoids, tribal
+- **Giants:** B-A Rank, massive humanoids
+- **Titans:** S-Rank, colossal beings
+- **Red Ants (Jeju Island):** A-S Rank, hive-based threat
+- **Steel-Fanged Lycans:** B-A Rank werewolf variants
+- **Kerberos (Hell's Gatekeeper):** S-Rank three-headed beast
+- **Stone Golems:** D-Rank constructs
+- **Arachnids/Spiders:** Various ranks, web abilities
+- **Centipedes:** C-A Rank, armored insects
+- **Mist Burn:** Environmental hazard monsters
+- **Nightmare Buds:** A-Rank plant-type
+- **Crocors:** Crocodile-like beasts
+- **Wraiths/Specters:** Undead ethereal beings
+- **Skeletons/Zombies:** Low-rank undead, Shadow Army base
+
+**Demons:**
+- Intelligent dungeon dwellers
+- Speak human languages
+- **Demon King Baran:** Major antagonist, commands demon legions
+- **Demonic Spectres:** Mid-boss tier demons
+- Hierarchy-based society
+
+**Dragons:**
+- Among strongest creatures, S-Rank minimum
+- Led by Dragon Monarch (Antares)
+- **Kamish:** Legendary S-Rank dragon killed by hunters
+- Immense magical power and physical strength
+- Rare, world-threatening when they appear
+
+**Other Races:**
+- **High Elves:** Dungeon-specific, magical beings
+- **Dwarves:** Crafters and warriors in special dungeons
+- **Ice Elves:** Frost-affiliated variants
+- **Demons of various types:** Hierarchical society
+
+**Unique Features:**
+- Gate System: Dimensional rifts spawning monsters
+- Rank inflation: Monsters grow stronger over generations
+- Double dungeons: Trap dungeons with ancient bosses
+- Dungeon breaks: Monsters escape to real world
+- Jeju Island crisis: S-Rank ant colony threatening nation
+
+- **Relevance:** Demonstrates RPG-style ranking integrated with unique undead race mechanics, cosmic-level hierarchy (Monarchs/Rulers), extensive monster diversity, and dimensional invasion mechanics
 
 #### **Omniscient Reader's Viewpoint (Korean)**
 - **System:** Web novel-turned-reality with stat screens and skill trees
@@ -1757,10 +2137,11 @@ This section covers Korean manhwa and Chinese web novels that feature comprehens
 
 ---
 
-**Document Status:** ✅ Complete (Expanded 3x)  
+**Document Status:** ✅ Complete (Expanded 4x)  
 **Last Updated:** 2025-10-26  
 **Expansion 1:** 2025-10-25 (Added comprehensive research from lesser-known RPG systems, modern literature, and anime)  
 **Expansion 2:** 2025-10-25 (Added Korean manhwa including Solo Leveling and Chinese web novels)  
 **Expansion 3:** 2025-10-26 (Added detailed race variants and subraces: color-coded orcs, elemental elves, environmental dwarves)  
+**Expansion 4:** 2025-10-26 (Added Inheritance Cycle, Warhammer Fantasy/40k comprehensive coverage, Solo Leveling Monarchs/Rulers/Magic Beasts)  
 **Next Review:** Post-design team discussion  
 **Contact:** BlueMarble Design Team
