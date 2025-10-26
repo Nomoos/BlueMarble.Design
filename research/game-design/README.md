@@ -852,7 +852,9 @@ profession systems and economic simulation.
 - Supports social structure and economic interdependence gameplay
 
 ### [Fantasy Races Comprehensive Research](fantasy-races-comprehensive-research.md)
-Comprehensive research on fantasy races across RPG games (D&D, Pathfinder, Elder Scrolls), fantasy literature (Tolkien, Sapkowski), and anime (particularly Overlord). Covers over 100 distinct races and their variants, including crossbreeding mechanics and hybrid races.
+Comprehensive research on fantasy races across RPG games (D&D, Pathfinder, Elder Scrolls), fantasy literature (Tolkien, Sapkowski), and anime (particularly Overlord). Covers over 150 distinct races and their variants, including crossbreeding mechanics and hybrid races. **Document expanded 4x based on feedback** (2,147 lines, 87KB).
+
+📊 **[Executive Summary (Bilingual EN/CZ)](fantasy-races-summary.md)** - Quick reference with Czech translation
 
 **Key Topics**:
 - 14 major race categories:
