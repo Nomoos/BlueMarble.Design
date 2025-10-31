@@ -87,7 +87,7 @@ Key questions:
 - Pixel-perfect placement to maintain immersion
 
 **Iconography:**
-- Clearly recognizable icons even at 16×16 or 32×32 pixels
+- Clearly recognizable icons even at 16x16 or 32x32 pixels
 - Unique silhouettes for swords, shields, potions, scrolls
 - Color-coded rarity borders (bronze/silver/gold)
 - Icon overlays and frames (slots, bags, chest shapes)
@@ -198,7 +198,11 @@ Key questions:
 
 ### Source 2: Similar Medieval Management Games
 
-- **Link**: Multiple gaming sources (GG.deals, G2A, Player.me, SteamPeek)
+- **Links**: 
+  - https://gg.deals/game/graveyard-keeper/similar-games/
+  - https://www.g2a.com/news/features/games-like-graveyard-keeper/
+  - https://player.me/5-best-games-like-graveyard-keeper/
+  - https://steampeek.hu/?appid=599140
 - **Key Points**:
   - 18+ games identified with similar mechanics and aesthetics
   - Kynseed, Travellers Rest, Anvil Saga highlighted as top alternatives
@@ -209,7 +213,12 @@ Key questions:
 
 ### Source 3: Medieval UI Design Patterns
 
-- **Link**: Dribbble, Behance, GraphicRiver, ArtStation asset collections
+- **Links**: 
+  - https://dribbble.com/shots/26046805-Avalon-Lost-Dark-Medieval-RPG-UI-UX-Game-Art
+  - https://www.behance.net/gallery/159213971/Medieval-RPG-Game-HUD-UIUX-Design
+  - https://graphicriver.net/medieval+ui-in-graphics
+  - https://www.artstation.com/marketplace (search: medieval UI)
+  - https://www.construct.net/en/game-assets/graphics/user-interfaces/medieval-age-game-gui-874
 - **Key Points**:
   - Panel-based modular layouts standard across medieval games
   - Wood, stone, parchment textures most common
@@ -222,11 +231,16 @@ Key questions:
 
 ### Source 4: Pixel Art UI Best Practices
 
-- **Link**: Itch.io, ArtStation, PixelJoint tutorials and asset packs
+- **Links**: 
+  - https://itch.io/game-assets/tag-medieval/tag-user-interface
+  - https://www.artstation.com/marketplace/p/YgMbm/medieval-rpg-game-user-interface
+  - https://pixeljoint.com/pixelart/155787.htm (Medieval game Inventory UI challenge)
+  - https://toffeecraft.itch.io/ui-user-interface-medieval
+  - https://thegameassetsmine.com/product/pixel-art-medieval-game-ui/
 - **Key Points**:
   - Consistent limited palette essential for pixel art
   - Strong outlines and contrast for legibility
-  - 16×16 to 32×32 pixels standard for icons
+  - 16x16 to 32x32 pixels standard for icons
   - Modular components enable faster development
   - Simple animations enhance feedback
   - Pixel-perfect alignment critical for professional look
@@ -235,7 +249,12 @@ Key questions:
 
 ### Source 5: AAA Medieval Game UI Examples
 
-- **Link**: Medieval Dynasty, Kingdom Come: Deliverance, Crusader Kings examples
+- **References**: 
+  - Medieval Dynasty (Steam/official materials)
+  - Kingdom Come: Deliverance (game UI analysis)
+  - Crusader Kings series (Paradox Interactive)
+  - https://www.behance.net/search/projects/Medieval%20Game%20ui
+  - https://dribbble.com/search/medieval-game-ui
 - **Key Points**:
   - Medieval Dynasty: minimalist, immersive, rustic
   - Kingdom Come: manuscript-inspired, balanced realism
@@ -264,7 +283,7 @@ Key questions:
 - 75%+ use radial menus for quick access
 
 **Technical Considerations:**
-- Pixel art requires consistent scale (16×16, 32×32, 64×64)
+- Pixel art requires consistent scale (16x16, 32x32, 64x64)
 - Low-resolution demands careful icon design
 - Color palette limitations actually enhance cohesive look
 - Animation complexity limited by pixel count
@@ -295,7 +314,7 @@ Key questions:
 **Description**: Design clear, recognizable pixel art icons for all game items, actions, and status effects using medieval imagery (tools, materials, resources, skills).
 
 **Design Considerations:**
-- Establish standard icon sizes (16×16, 32×32)
+- Establish standard icon sizes (16x16, 32x32)
 - Create unique silhouettes for item types
 - Use color coding for rarity/quality
 - Design frames and overlays for slots
@@ -389,7 +408,7 @@ Key questions:
 
 ### Open Questions
 
-1. **Art Style Resolution**: Should BlueMarble use pure pixel art (16×16, 32×32) or higher resolution medieval-themed UI?
+1. **Art Style Resolution**: Should BlueMarble use pure pixel art (16x16, 32x32) or higher resolution medieval-themed UI?
 2. **3D Integration**: How do 2D medieval UI elements integrate with BlueMarble's 3D spherical world and geological systems?
 3. **Mobile Adaptation**: How should dark ages UI patterns adapt for mobile/touch interfaces?
 4. **Cultural Accuracy**: What level of historical accuracy is appropriate for BlueMarble's sci-fi geological setting?
