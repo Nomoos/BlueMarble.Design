@@ -73,6 +73,9 @@ and typically 200-400 lines.
 - [Spatial Analysis: Map Algebra](topics/spatial-analysis-map-algebra.md) -
   Research on local, focal, zonal, and global raster operations for terrain analysis, resource distribution, and spatial calculations in BlueMarble's simulation systems
 
+- [Drakensang Game Research](topics/drakensang-game-research.md) -
+  Comprehensive analysis of Drakensang series (single-player RPG and online MMORPG), covering character progression, multi-tree skill systems, rarity-based crafting with enchantment transfers, structured PvP modes, dual-currency monetization, and no-trade economy design with applications to BlueMarble's geological material progression and knowledge systems
+
 ## Notes
 
 Informal research notes and brainstorming for ideas in development.
