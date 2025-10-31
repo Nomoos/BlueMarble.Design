@@ -73,6 +73,11 @@ and typically 200-400 lines.
 - [Spatial Analysis: Map Algebra](topics/spatial-analysis-map-algebra.md) -
   Research on local, focal, zonal, and global raster operations for terrain analysis, resource distribution, and spatial calculations in BlueMarble's simulation systems
 
+#### UI/UX and Display Systems
+
+- [Dark Ages Display Systems Research](topics/dark-ages-display-systems-research.md) -
+  Comprehensive analysis of medieval/dark ages UI design patterns from games like Graveyard Keeper, including pixel art techniques, panel-based layouts, medieval iconography, crafting/inventory interfaces, and AAA game examples (Medieval Dynasty, Kingdom Come, Crusader Kings). Documents design implications for BlueMarble's geological MMORPG
+
 ## Notes
 
 Informal research notes and brainstorming for ideas in development.
