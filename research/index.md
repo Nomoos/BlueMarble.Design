@@ -75,6 +75,14 @@ and typically 200-400 lines.
 
 - [Drakensang Game Research](topics/drakensang-game-research.md) -
   Comprehensive analysis of Drakensang series (single-player RPG and online MMORPG), covering character progression, multi-tree skill systems, rarity-based crafting with enchantment transfers, structured PvP modes, dual-currency monetization, and no-trade economy design with applications to BlueMarble's geological material progression and knowledge systems
+- [Ethan Kennerly - Social Systems Design: Governments and Churches](topics/ethan-kennerly-social-systems-design.md) -
+  Comprehensive analysis of David Ethan Kennerly's pioneering work on player-driven governments and religions in Dark Ages (1999). Examines synthetic governance approach, merit/popularity mechanics, player-run clergy systems, and implications for BlueMarble's settlement political structures and player agency design
+#### UI/UX and Display Systems
+
+- [Dark Ages Display Systems Research](topics/dark-ages-display-systems-research.md) -
+  Comprehensive analysis of medieval/dark ages UI design patterns from games like Graveyard Keeper, including pixel art techniques, panel-based layouts, medieval iconography, crafting/inventory interfaces, and AAA game examples (Medieval Dynasty, Kingdom Come, Crusader Kings). Documents design implications for BlueMarble's geological MMORPG
+- [Dark Ages (1999) - Player-Driven MMORPG Systems Analysis](topics/dark-ages-1999-mmorpg-analysis.md) -
+  Comprehensive analysis of the groundbreaking 1999 MMORPG featuring player-run governments, religious hierarchies, artistic contest systems, and clout-based politics. Documents political systems (elected officials with legislative/enforcement/judicial powers), religious progression (eight player-run temples with clergy advancement), artistic merit mechanics (contests determining nobility), and Celtic-Lovecraftian world-building with lessons for BlueMarble's player-driven systems design
 
 ## Notes
 
