@@ -73,6 +73,9 @@ and typically 200-400 lines.
 - [Spatial Analysis: Map Algebra](topics/spatial-analysis-map-algebra.md) -
   Research on local, focal, zonal, and global raster operations for terrain analysis, resource distribution, and spatial calculations in BlueMarble's simulation systems
 
+- [Dark Ages (1999) - Player-Driven MMORPG Systems Analysis](topics/dark-ages-1999-mmorpg-analysis.md) -
+  Comprehensive analysis of the groundbreaking 1999 MMORPG featuring player-run governments, religious hierarchies, artistic contest systems, and clout-based politics. Documents political systems (elected officials with legislative/enforcement/judicial powers), religious progression (eight player-run temples with clergy advancement), artistic merit mechanics (contests determining nobility), and Celtic-Lovecraftian world-building with lessons for BlueMarble's player-driven systems design
+
 ## Notes
 
 Informal research notes and brainstorming for ideas in development.
