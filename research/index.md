@@ -77,6 +77,8 @@ and typically 200-400 lines.
 
 - [Dark Ages Display Systems Research](topics/dark-ages-display-systems-research.md) -
   Comprehensive analysis of medieval/dark ages UI design patterns from games like Graveyard Keeper, including pixel art techniques, panel-based layouts, medieval iconography, crafting/inventory interfaces, and AAA game examples (Medieval Dynasty, Kingdom Come, Crusader Kings). Documents design implications for BlueMarble's geological MMORPG
+- [Dark Ages (1999) - Player-Driven MMORPG Systems Analysis](topics/dark-ages-1999-mmorpg-analysis.md) -
+  Comprehensive analysis of the groundbreaking 1999 MMORPG featuring player-run governments, religious hierarchies, artistic contest systems, and clout-based politics. Documents political systems (elected officials with legislative/enforcement/judicial powers), religious progression (eight player-run temples with clergy advancement), artistic merit mechanics (contests determining nobility), and Celtic-Lovecraftian world-building with lessons for BlueMarble's player-driven systems design
 
 ## Notes
 
