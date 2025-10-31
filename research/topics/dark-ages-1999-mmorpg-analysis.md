@@ -423,7 +423,6 @@ Each of the eight gods/goddesses has a dedicated temple with player-run clergy:
 - Crypts, dungeons, and ruins
 - Sacred sites and temples
 - The Vermissian (abandoned subway, twisted and dangerous)
-- The Heart (mysterious depths beneath Spire, setting for companion game)
 
 **Continental Expansion:**
 - Original Temuair continent (1999)
@@ -510,14 +509,12 @@ Each of the eight gods/goddesses has a dedicated temple with player-run clergy:
 - Achieved by reaching level 99
 - Unlocks "Master" designation
 - Advanced skills and abilities
-- Subclasses or specializations available
-- Example: Wizards can become Summoners
+- Subclasses or specializations available (specific options vary by base class)
 
-**Summoner (Advanced Wizard):**
-- Calls forth creatures to aid in battle
-- Complex summoning mechanics
-- Late-game power spike
-- Prestige class status
+**Example Advanced Classes:**
+- **Summoner** (Wizard path): Calls forth creatures to aid in battle, complex summoning mechanics, late-game power spike
+- Other master-level specializations available for Warrior, Priest, Rogue, and Monk paths
+- Master designation grants prestige and access to endgame content
 
 ---
 
