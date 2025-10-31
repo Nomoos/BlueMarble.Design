@@ -73,6 +73,9 @@ and typically 200-400 lines.
 - [Spatial Analysis: Map Algebra](topics/spatial-analysis-map-algebra.md) -
   Research on local, focal, zonal, and global raster operations for terrain analysis, resource distribution, and spatial calculations in BlueMarble's simulation systems
 
+- [Ethan Kennerly - Social Systems Design: Governments and Churches](topics/ethan-kennerly-social-systems-design.md) -
+  Comprehensive analysis of David Ethan Kennerly's pioneering work on player-driven governments and religions in Dark Ages (1999). Examines synthetic governance approach, merit/popularity mechanics, player-run clergy systems, and implications for BlueMarble's settlement political structures and player agency design
+
 ## Notes
 
 Informal research notes and brainstorming for ideas in development.
