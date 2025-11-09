@@ -288,8 +288,6 @@ This repository includes automated PR management to keep pull requests up-to-dat
 - **Copilot Integration**: Guidance for using GitHub Copilot to resolve conflicts
 - **Team Notifications**: Authors and reviewers are notified of updates and conflicts
 
-Learn more in the [PR Auto-Merge Guide](.github/PR_AUTO_MERGE_GUIDE.md).
-
 ## Links to Related Repositories
 
 - [BlueMarble.Core](https://github.com/Nomoos/BlueMarble.Core) - Core game engine and systems

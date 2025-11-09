@@ -112,7 +112,7 @@ This feature touches multiple categories and demonstrates the interconnected nat
 
 #### Technical Implementation (`docs/systems/`)
 
-- `tdd-guild-infrastructure.md` - Server architecture for guild data
+- `system-architecture-design.md` - Server architecture
 - `api-guild-management.md` - API specifications for guild operations
 
 #### User Interface (`docs/ui-ux/`)
@@ -137,13 +137,13 @@ This feature touches multiple categories and demonstrates the interconnected nat
 
 ```markdown
 <!-- Link to related documents -->
-See also: [Player Progression System](../gameplay/spec-player-progression-system.md)
+See also: [Player Progression System](docs/gameplay/spec-player-progression-system.md)
 
 <!-- Link to research that informed this design -->
-Based on: [MMORPG Market Analysis 2024](../research/market-research/mmorpg-analysis-2024.md)
+Based on: [MMORPG Market Analysis 2024](research/market-research/market-research.md)
 
 <!-- Link to technical requirements -->
-Technical requirements: [Guild Infrastructure](../systems/tdd-guild-infrastructure.md)
+Technical requirements: [System Architecture](docs/systems/system-architecture-design.md)
 ```
 
 ### Dependency Tracking
@@ -270,8 +270,6 @@ This repository has automated PR management to keep your work current:
 - Resolve conflicts if automatic merging fails
 - Use GitHub Copilot for conflict resolution assistance
 - Ensure tests pass after updates
-
-**See the [PR Auto-Merge Guide](.github/PR_AUTO_MERGE_GUIDE.md) for detailed information**
 
 #### Manual PR Management
 

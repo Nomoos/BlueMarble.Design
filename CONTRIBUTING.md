@@ -126,7 +126,6 @@ To keep pull requests current with the main branch, we have automated PR managem
 - **Automatic Updates**: Your PR will be automatically updated when main branch changes
 - **Conflict Notifications**: You'll be notified if manual conflict resolution is needed
 - **Copilot Assistance**: Use GitHub Copilot to help resolve merge conflicts
-- **See Details**: Check the [PR Auto-Merge Guide](.github/PR_AUTO_MERGE_GUIDE.md) for more information
 
 ## Issue Completion Policy
 
