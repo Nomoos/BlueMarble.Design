@@ -253,23 +253,172 @@ BlueMarble's user interface prioritizes clarity, accessibility, and immersion. T
 
 ## Accessibility Standards
 
+> **📖 Comprehensive Guide:** See [Accessibility Guidelines](accessibility-guidelines.md) for complete accessibility standards, implementation details, and WCAG 2.1 AA compliance requirements.
+
 ### Visual Accessibility
-- **Color Contrast:** Minimum 4.5:1 ratio for text
-- **Color Independence:** No information conveyed by color alone
-- **Text Alternatives:** Alt text for important images and icons
-- **Focus Indicators:** Clear outline for keyboard navigation
+
+#### Color and Contrast
+- **Text Contrast:** Minimum 4.5:1 ratio for normal text, 3:1 for large text (WCAG AA)
+- **UI Component Contrast:** Minimum 3:1 for interactive elements and graphics
+- **Color Independence:** Never use color alone to convey information
+  - Always combine color with icons, text, or patterns
+  - Example: Status indicators use ✓/⚠/✗ + color + text
+- **Colorblind Support:** 
+  - Test all interfaces with colorblind simulation tools
+  - Provide alternative colorblind-friendly palettes
+  - Support for protanopia, deuteranopia, tritanopia, and monochromacy
+
+#### Typography and Text
+- **Font Scaling:** Support 100% to 200% text scaling without loss of functionality
+- **Legible Fonts:** High readability at all sizes with clear character distinction
+- **Line Height:** Minimum 1.5x font size for body text
+- **Text Spacing:** Adjustable letter spacing (0.12x) and word spacing (0.16x)
+
+#### Visual Feedback
+- **Focus Indicators:** 
+  - Minimum 2px outline thickness
+  - High contrast (3:1 minimum against background)
+  - Visible on all interactive elements
+  - Non-reliant on color alone
+- **Hover States:** Clear visual change on interactive elements
+- **Loading States:** Visible progress indicators for operations
+- **Status Indicators:** Use icon + color + text for all states
+
+#### Motion and Animations
+- **Motion Reduction:** Respect `prefers-reduced-motion` user preference
+- **Animation Control:** Toggle to disable non-essential animations
+- **No Flashing:** Avoid content flashing more than 3 times per second
+- **Smooth Transitions:** Gentle, predictable animations (or none if reduced motion enabled)
 
 ### Motor Accessibility
-- **Keyboard Shortcuts:** Full functionality without mouse
-- **Click Targets:** Minimum 44px touch targets
-- **Timing Controls:** Adjustable or removable time limits
-- **Motion Reduction:** Respect reduced motion preferences
+
+#### Input Targets
+- **Touch Target Size:** Minimum 44x44 pixels (WCAG AAA standard)
+- **Target Spacing:** Minimum 8px between adjacent interactive elements
+- **Large Targets for Critical Actions:** 60x60 pixels for primary buttons
+- **Forgiving Hit Areas:** Generous clickable regions, especially for small UI elements
+
+#### Keyboard Navigation
+- **Full Keyboard Support:** All functionality accessible via keyboard alone
+- **Logical Tab Order:** Follow visual layout and user expectations
+- **Skip Links:** Bypass repeated content blocks
+- **No Keyboard Traps:** Users can navigate away from all components
+- **Visible Focus:** Clear focus indicator at all times
+- **Standard Shortcuts:** Support common keyboard conventions (Ctrl+C, Ctrl+V, etc.)
+
+#### Drag and Drop
+- **Keyboard Alternatives:** Provide non-drag methods for all drag operations
+- **Large Drop Zones:** Minimum 60x60 pixel drop targets
+- **Magnetic Assistance:** Optional snap-to-grid or magnetic drop zones
+- **Clear Feedback:** Visual indicators during drag operations
+- **Undo Support:** Easy recovery from drag-drop mistakes
+
+#### Timing and Time Limits
+- **No Time Pressure:** Avoid strict time limits for core gameplay activities
+- **Pause Functionality:** Allow pausing in all scenarios
+- **Adjustable Limits:** Option to extend or disable time limits
+- **Advance Warning:** Alert users before time-sensitive events
 
 ### Cognitive Accessibility
-- **Clear Language:** Simple, direct communication
-- **Consistent Navigation:** Predictable interface patterns
+
+#### Clear Communication
+- **Plain Language:** Simple, direct communication avoiding jargon
+- **Short Sentences:** Concise text with clear structure
+- **Consistent Terminology:** Use same words for same concepts throughout
+- **Active Voice:** Prefer active over passive constructions
+- **Glossary Support:** Define technical terms when necessary
+
+#### Information Architecture
+- **Predictable Navigation:** Consistent menu locations and behaviors
+- **Clear Hierarchy:** Logical organization of information
+- **Breadcrumbs:** Show current location in complex menu structures
+- **Familiar Patterns:** Use well-known UI conventions
+
+#### Error Handling
+- **Clear Error Messages:** Explain what went wrong in plain language
+- **Actionable Solutions:** Tell users how to fix problems
+- **Helpful Validation:** Real-time feedback for form inputs
 - **Error Prevention:** Design to minimize user mistakes
-- **Help Documentation:** Accessible help and tutorials
+- **Recovery Options:** Easy undo and correction capabilities
+
+#### Cognitive Load Management
+- **Progressive Disclosure:** Show essential information first, details on demand
+- **Chunking:** Break complex tasks into manageable steps
+- **Focus Mode:** Option to dim non-essential UI elements
+- **Context Preservation:** Save user's place when switching tasks
+- **Memory Aids:** History, favorites, and recently used items
+
+### Auditory Accessibility
+
+#### Visual Alternatives
+- **Sound Indicators:** Visual representation of all audio cues
+- **Captions and Subtitles:** Text alternatives for voice content
+- **Flash/Vibration:** Alternative alert methods for sound notifications
+- **Sound Legend:** Documentation of what each sound means
+
+#### Audio Controls
+- **Independent Volume:** Separate controls for music, effects, voice, master
+- **Mono Audio:** Option for mono sound output
+- **Visual Sound Indicators:** Toggle for on-screen sound effect indicators
+
+### Screen Reader Support
+
+#### Semantic Structure
+- **Semantic HTML:** Use proper HTML5 elements (nav, main, section, etc.)
+- **ARIA Labels:** Provide accessible names for complex components
+- **Heading Hierarchy:** Logical structure (H1 → H2 → H3)
+- **Live Regions:** ARIA live for dynamic content updates
+- **Alternative Text:** Descriptive alt text for informative images
+
+### Game-Specific Accessibility
+
+#### Routine-Based Gameplay
+- **Reduced Motor Requirements:** Routine system minimizes cursor precision needs
+- **No Time Pressure:** Plan activities without real-time pressure
+- **Strategic Over Reflexive:** Rewards planning and knowledge over twitch skills
+- **Template System:** Pre-built routines reduce setup complexity
+
+#### Aiming and Precision Assistance
+- **Multiple Assist Levels:** From subtle help to full auto-aim
+  - Level 1: Target highlighting (visual aid only)
+  - Level 2: Sticky targeting (slight magnetism)
+  - Level 3: Aim slowdown (easier fine adjustment)
+  - Level 4: Snap-to-target (removes spatial requirement)
+  - Level 5: Auto-aim (full automation)
+- **Minimal Penalties:** Small reward reduction for using assists (5-20%)
+- **Player Choice:** Assistants are optional and customizable
+
+#### Multiple Progression Paths
+- **Valid Alternatives:** Never require specific motor skills for core progression
+- **Varied Playstyles:** Support real-time action, planning, management, social approaches
+- **Delegation Options:** Hire workers/NPCs for activities requiring precision
+- **Technology Progression:** Better tools reduce skill requirements
+
+### Accessibility Testing Requirements
+
+#### Automated Testing
+- **WCAG Compliance:** Run Lighthouse, axe DevTools, Pa11y
+- **Color Contrast:** Verify all text meets 4.5:1 minimum ratio
+- **Keyboard Navigation:** Test all functionality keyboard-only
+- **Screen Reader:** Test with NVDA, JAWS, or VoiceOver
+
+#### Manual Testing
+- **Diverse User Groups:** Include users with various disabilities
+- **Assistive Technology:** Test with screen readers, alternative input devices
+- **Multiple Scenarios:** Test common user journeys
+- **Feedback Collection:** Document pain points and barriers
+
+#### Compliance Checklist
+- ☐ WCAG 2.1 Level AA compliance
+- ☐ All text meets contrast requirements
+- ☐ Color not sole information carrier
+- ☐ All targets meet size requirements
+- ☐ Full keyboard navigation
+- ☐ Visible focus indicators
+- ☐ Screen reader compatible
+- ☐ Motion reduction supported
+- ☐ Multiple input methods supported
+- ☐ Clear error messages and help
 
 ## Performance Guidelines
 

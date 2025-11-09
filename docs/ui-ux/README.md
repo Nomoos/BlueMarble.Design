@@ -19,10 +19,14 @@ This directory contains user interface design, user experience specifications, a
 - Usability testing and research
 
 ### Accessibility
-- Accessibility guidelines and standards
+- **[Accessibility Guidelines](accessibility-guidelines.md)** - Comprehensive WCAG 2.1 AA accessibility standards
+- **[UI Guidelines - Accessibility Section](ui-guidelines.md#accessibility-standards)** - UI-specific accessibility requirements
 - Screen reader compatibility
 - Keyboard navigation support
-- Visual accessibility considerations
+- Visual accessibility considerations (color contrast, text scaling, colorblind modes)
+- Motor accessibility features (target sizes, timing controls, aiming assistance)
+- Cognitive accessibility support (clear language, progressive disclosure)
+- Auditory accessibility (visual alternatives, captions)
 
 ### Platform Considerations
 - Desktop interface design
@@ -47,10 +51,12 @@ This directory contains user interface design, user experience specifications, a
 - Ensure consistent interactions
 
 ### Accessibility
-- Design for all users regardless of ability
-- Follow WCAG guidelines
-- Test with assistive technologies
-- Provide alternative interaction methods
+- **Design for all users** regardless of ability, age, or experience level
+- Follow **WCAG 2.1 Level AA** guidelines for all interfaces
+- Test with assistive technologies and diverse user groups
+- Provide **multiple interaction methods** (keyboard, mouse, controller, touch)
+- Support **varied playstyles** - never require specific motor skills for core progression
+- See **[Accessibility Guidelines](accessibility-guidelines.md)** for complete standards
 
 ### Visual Hierarchy
 - Use typography, color, and spacing effectively
