@@ -213,8 +213,8 @@ Each issue addresses specific research questions identified in the spatial data 
 - **Detailed Technical Analysis**: `research/spatial-data-storage/octree-optimization-guide.md`
 - **Current Implementation**: `research/spatial-data-storage/current-implementation.md`  
 - **Recommendations**: `research/spatial-data-storage/recommendations.md`
-- **Architecture Overview**: `docs/ARCHITECTURE.md`
-- **Project Structure**: `docs/FOLDER_STRUCTURE.md`
+- **Delta Overlay Architecture**: `research/spatial-data-storage/DELTA_OVERLAY_ARCHITECTURE.md`
+- **Project Structure**: `FOLDER_STRUCTURE_GUIDE.md`
 ## Game Design Research
 
 ### Completed Research

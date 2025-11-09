@@ -138,7 +138,8 @@ When adding new research:
 
 ## Related Documentation
 
-- [`docs/ARCHITECTURE.md`](../docs/ARCHITECTURE.md) - Overall system architecture
-- [`docs/FOLDER_STRUCTURE.md`](../docs/FOLDER_STRUCTURE.md) - Project organization
+- [Delta Overlay Architecture](spatial-data-storage/DELTA_OVERLAY_ARCHITECTURE.md) - Delta overlay system architecture
+- [Architecture and Simulation Plan](../ArchitectureAndSimulationPlan.md) - Planet-scale MMORPG architecture
+- [Folder Structure Guide](../FOLDER_STRUCTURE_GUIDE.md) - Project organization
 - [`Generator/`](../Generator/) - C# spatial processing implementation
 - [`Client/js/modules/utils/`](../Client/js/modules/utils/) - Frontend spatial utilities

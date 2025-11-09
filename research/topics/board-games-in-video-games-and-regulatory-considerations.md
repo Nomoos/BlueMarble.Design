@@ -949,7 +949,7 @@ chains (e.g., trading iron ore → berries → wood when direct iron ore → woo
 
 - [Game Design Document](../../docs/core/game-design-document.md)
 - [Economy Systems](../../docs/systems/economy-systems.md)
-- [Social Interaction System Summary](../../SOCIAL_INTERACTION_SYSTEM_SUMMARY.md)
+- [Social Interaction Settlement System](../../docs/systems/social-interaction-settlement-system.md)
 - [Game Design Roles and Types](game-design-roles-and-types.md)
 
 ## References
