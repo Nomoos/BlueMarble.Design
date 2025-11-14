@@ -4,142 +4,129 @@ namespace BlueMarble.SpatialData;
 
 /// <summary>
 /// Adapter for integrating geological processes with delta overlay system
-/// Provides optimized interfaces for erosion, deposition, and volcanic processes
+/// Refactored to use layered architecture with Template Method pattern
+/// 
+/// This class now acts as the orchestration layer, delegating to specialized
+/// process implementations rather than containing all logic directly.
+/// Follows "No Layer Skipping" principle - communicates with process layer,
+/// which in turn communicates with storage layer.
 /// </summary>
 public class GeomorphologicalOctreeAdapter
 {
     private readonly DeltaPatchOctree _deltaOctree;
+    
+    // Process layer instances - using composition pattern
+    private readonly ErosionProcess _erosionProcess;
+    private readonly DepositionProcess _depositionProcess;
+    private readonly VolcanicIntrusionProcess _volcanicProcess;
+    private readonly TectonicDeformationProcess _tectonicProcess;
+    private readonly WeatheringProcess _weatheringProcess;
 
     public GeomorphologicalOctreeAdapter(DeltaPatchOctree deltaOctree)
     {
         _deltaOctree = deltaOctree ?? throw new ArgumentNullException(nameof(deltaOctree));
+        
+        // Initialize process layer components
+        _erosionProcess = new ErosionProcess(deltaOctree);
+        _depositionProcess = new DepositionProcess(deltaOctree);
+        _volcanicProcess = new VolcanicIntrusionProcess(deltaOctree);
+        _tectonicProcess = new TectonicDeformationProcess(deltaOctree);
+        _weatheringProcess = new WeatheringProcess(deltaOctree);
     }
 
     /// <summary>
     /// Apply erosion process - removes material from surface
     /// Erosion typically has high spatial locality (85%)
+    /// 
+    /// Refactored to delegate to specialized ErosionProcess layer
+    /// Maintains backward compatibility with existing API
     /// </summary>
     public void ApplyErosion(IEnumerable<Vector3> positions, float erosionRate)
     {
-        var updates = new List<(Vector3, MaterialData)>();
-
-        foreach (var position in positions)
+        var context = new GeologicalProcessContext
         {
-            var currentMaterial = _deltaOctree.ReadVoxel(position);
+            Positions = positions,
+            Intensity = erosionRate
+        };
 
-            // Skip if already air
-            if (currentMaterial.MaterialType == MaterialId.Air)
-                continue;
-
-            // Apply erosion effect - for simplicity, convert to air or less dense material
-            if (erosionRate >= 1.0f)
-            {
-                // Complete erosion - convert to air
-                updates.Add((position, MaterialData.DefaultAir));
-            }
-            else
-            {
-                // Partial erosion - reduce density
-                var erodedMaterial = currentMaterial;
-                erodedMaterial.Density *= (1.0f - erosionRate);
-                updates.Add((position, erodedMaterial));
-            }
-        }
-
-        _deltaOctree.WriteMaterialBatch(updates);
+        _erosionProcess.Execute(context);
     }
 
     /// <summary>
     /// Apply deposition process - adds material to surface
     /// Deposition has medium spatial locality
+    /// 
+    /// Refactored to delegate to specialized DepositionProcess layer
     /// </summary>
     public void ApplyDeposition(IEnumerable<(Vector3 position, MaterialData depositMaterial)> depositions)
     {
-        var updates = new List<(Vector3, MaterialData)>();
+        // Extract positions and use first material as target
+        var depositionList = depositions.ToList();
+        if (!depositionList.Any())
+            return;
 
-        foreach (var (position, depositMaterial) in depositions)
+        var positions = depositionList.Select(d => d.position);
+        var targetMaterial = depositionList.First().depositMaterial;
+
+        var context = new GeologicalProcessContext
         {
-            var currentMaterial = _deltaOctree.ReadVoxel(position);
+            Positions = positions,
+            TargetMaterial = targetMaterial
+        };
 
-            // If air, replace with deposit
-            if (currentMaterial.MaterialType == MaterialId.Air)
-            {
-                updates.Add((position, depositMaterial));
-            }
-            else
-            {
-                // Layer on top - for now just replace, could be more sophisticated
-                updates.Add((position, depositMaterial));
-            }
-        }
-
-        _deltaOctree.WriteMaterialBatch(updates);
+        _depositionProcess.Execute(context);
     }
 
     /// <summary>
     /// Apply volcanic intrusion - magma/lava injection
     /// Volcanic activity has high spatial clustering
+    /// 
+    /// Refactored to delegate to specialized VolcanicIntrusionProcess layer
     /// </summary>
     public void ApplyVolcanicIntrusion(Vector3 center, float radius, MaterialData volcanicMaterial)
     {
-        var updates = new List<(Vector3, MaterialData)>();
-
-        // Generate sphere of affected positions
-        var radiusSquared = radius * radius;
-        var minBound = new Vector3(center.X - radius, center.Y - radius, center.Z - radius);
-        var maxBound = new Vector3(center.X + radius, center.Y + radius, center.Z + radius);
-
-        for (float x = MathF.Floor(minBound.X); x <= MathF.Ceiling(maxBound.X); x++)
+        var context = new GeologicalProcessContext
         {
-            for (float y = MathF.Floor(minBound.Y); y <= MathF.Ceiling(maxBound.Y); y++)
-            {
-                for (float z = MathF.Floor(minBound.Z); z <= MathF.Ceiling(maxBound.Z); z++)
-                {
-                    var position = new Vector3(x, y, z);
-                    var distanceSquared = Vector3.DistanceSquared(position, center);
+            Center = center,
+            Radius = radius,
+            TargetMaterial = volcanicMaterial
+        };
 
-                    if (distanceSquared <= radiusSquared)
-                    {
-                        updates.Add((position, volcanicMaterial));
-                    }
-                }
-            }
-        }
-
-        _deltaOctree.WriteMaterialBatch(updates);
+        _volcanicProcess.Execute(context);
     }
 
     /// <summary>
     /// Apply tectonic deformation - material displacement
     /// Tectonic activity has medium locality
+    /// 
+    /// Refactored to delegate to specialized TectonicDeformationProcess layer
     /// </summary>
     public void ApplyTectonicDeformation(IEnumerable<(Vector3 from, Vector3 to)> displacements)
     {
-        var updates = new List<(Vector3, MaterialData)>();
-
-        foreach (var (from, to) in displacements)
+        var context = new GeologicalProcessContext
         {
-            var material = _deltaOctree.ReadVoxel(from);
+            Displacements = displacements
+        };
 
-            // Move material from 'from' to 'to'
-            updates.Add((from, MaterialData.DefaultAir)); // Clear source
-            updates.Add((to, material)); // Place at destination
-        }
-
-        _deltaOctree.WriteMaterialBatch(updates);
+        _tectonicProcess.Execute(context);
     }
 
     /// <summary>
     /// Apply weathering process - gradual material transformation
     /// Weathering has high spatial locality along surfaces
+    /// 
+    /// Refactored to delegate to specialized WeatheringProcess layer
     /// </summary>
     public void ApplyWeathering(IEnumerable<Vector3> surfacePositions, MaterialData weatheredMaterial)
     {
-        var updates = surfacePositions
-            .Select(pos => (pos, weatheredMaterial))
-            .ToList();
+        var context = new GeologicalProcessContext
+        {
+            Positions = surfacePositions,
+            TargetMaterial = weatheredMaterial,
+            Intensity = 1.0f // Full weathering by default
+        };
 
-        _deltaOctree.WriteMaterialBatch(updates);
+        _weatheringProcess.Execute(context);
     }
 
     /// <summary>
