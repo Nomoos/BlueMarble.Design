@@ -6,9 +6,44 @@ Welcome to the BlueMarble.Design repository! This guide will help you contribute
 
 1. **Familiarize yourself** with the repository structure and existing documentation
 2. **Review the [Documentation Best Practices](DOCUMENTATION_BEST_PRACTICES.md)** for quality guidelines
-3. **Choose a category** that aligns with your contribution (gameplay, world, systems, ui-ux, audio, research)
-4. **Use the appropriate template** from the `templates/` directory
-5. **Follow naming conventions** and maintain consistency with existing documents
+3. **For code contributions**, read the [Layered Architecture ADR](docs/architecture/adr-002-layered-architecture-conventions.md) and [Coding Guidelines](docs/architecture/CODING_GUIDELINES.md)
+4. **Choose a category** that aligns with your contribution (gameplay, world, systems, ui-ux, audio, research)
+5. **Use the appropriate template** from the `templates/` directory
+6. **Follow naming conventions** and maintain consistency with existing documents
+
+## Architecture Guidelines (for Code Contributors)
+
+If you're contributing C# code to the research/prototype projects:
+
+### Required Reading
+1. **[ADR-002: Layered Architecture](docs/architecture/adr-002-layered-architecture-conventions.md)** - Understand the architectural layers and dependency rules
+2. **[Coding Guidelines](docs/architecture/CODING_GUIDELINES.md)** - Follow naming and organization conventions
+3. **[Architecture Review Guide](docs/architecture/ARCHITECTURE_REVIEW_GUIDE.md)** - Understand what reviewers will check
+
+### Key Principles
+- **Dependencies flow downward**: Utility → Data Structures → Domain → Application
+- **Namespace reflects layer**: Use appropriate namespace for your layer
+- **No circular dependencies**: Projects must not depend on each other cyclically
+- **Interfaces in lowest layer**: Define abstractions where they're first needed
+- **Extract common code**: Reusable code goes in Utils layer
+
+### Before Submitting Code
+- [ ] Read ADR-002 and understand the layer structure
+- [ ] Verify all dependencies flow downward
+- [ ] Check namespace organization
+- [ ] Run architecture tests locally (if available)
+- [ ] Follow naming conventions from coding guidelines
+- [ ] Self-review using the [Architecture Review Guide](docs/architecture/ARCHITECTURE_REVIEW_GUIDE.md)
+
+### Architecture Violations
+Common violations that will be caught in code review:
+- ❌ Data Structures layer depending on Domain layer
+- ❌ Utility layer depending on any higher layer
+- ❌ Circular dependencies between projects
+- ❌ Domain logic in Application layer
+- ❌ Generic utilities in Domain layer
+
+See [Architecture Review Guide](docs/architecture/ARCHITECTURE_REVIEW_GUIDE.md) for detailed examples and corrections.
 
 ## Document Guidelines
 
