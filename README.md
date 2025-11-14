@@ -184,6 +184,15 @@ Link liberally between related documents. Each major directory has an `index.md`
 
 ## Key Documentation
 
+### Architecture & Design Patterns
+- **[Layered Modular Architecture](./docs/architecture/)** - Comprehensive guide to BlueMarble's architecture patterns
+  - Design patterns (Adapter, Strategy, Template Method)
+  - Composition over inheritance principles
+  - Layer separation and SOLID principles
+  - Team guidelines and code review checklists
+  - [ADR-001: Layered Architecture](./docs/architecture/adr/ADR-001-layered-architecture.md)
+  - [ADR-002: Composition Over Inheritance](./docs/architecture/adr/ADR-002-composition-over-inheritance.md)
+
 ### Technical Foundation
 - **[Technical Foundation Overview](./docs/TECHNICAL_FOUNDATION.md)** - Comprehensive core system architecture documentation
 - **[System Architecture Design](./docs/systems/system-architecture-design.md)** - Service-oriented architecture
