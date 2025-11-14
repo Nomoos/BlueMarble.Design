@@ -1,4 +1,5 @@
 using System.Numerics;
+using BlueMarble.SpatialData.Interfaces;
 
 namespace BlueMarble.SpatialData;
 
@@ -6,13 +7,24 @@ namespace BlueMarble.SpatialData;
 /// Adapter for integrating geological processes with delta overlay system
 /// Provides optimized interfaces for erosion, deposition, and volcanic processes
 /// </summary>
-public class GeomorphologicalOctreeAdapter
+public class GeomorphologicalOctreeAdapter : IGeologicalProcessor
 {
-    private readonly DeltaPatchOctree _deltaOctree;
+    private readonly IDeltaStorage _deltaStorage;
 
+    /// <summary>
+    /// Constructor for dependency injection with IDeltaStorage interface
+    /// </summary>
+    public GeomorphologicalOctreeAdapter(IDeltaStorage deltaStorage)
+    {
+        _deltaStorage = deltaStorage ?? throw new ArgumentNullException(nameof(deltaStorage));
+    }
+
+    /// <summary>
+    /// Original constructor for backward compatibility
+    /// </summary>
     public GeomorphologicalOctreeAdapter(DeltaPatchOctree deltaOctree)
     {
-        _deltaOctree = deltaOctree ?? throw new ArgumentNullException(nameof(deltaOctree));
+        _deltaStorage = deltaOctree ?? throw new ArgumentNullException(nameof(deltaOctree));
     }
 
     /// <summary>
@@ -25,7 +37,7 @@ public class GeomorphologicalOctreeAdapter
 
         foreach (var position in positions)
         {
-            var currentMaterial = _deltaOctree.ReadVoxel(position);
+            var currentMaterial = _deltaStorage.ReadVoxel(position);
 
             // Skip if already air
             if (currentMaterial.MaterialType == MaterialId.Air)
@@ -46,34 +58,34 @@ public class GeomorphologicalOctreeAdapter
             }
         }
 
-        _deltaOctree.WriteMaterialBatch(updates);
+        _deltaStorage.WriteMaterialBatch(updates);
     }
 
     /// <summary>
     /// Apply deposition process - adds material to surface
     /// Deposition has medium spatial locality
     /// </summary>
-    public void ApplyDeposition(IEnumerable<(Vector3 position, MaterialData depositMaterial)> depositions)
+    public void ApplyDeposition(IEnumerable<Vector3> positions, MaterialData material)
     {
         var updates = new List<(Vector3, MaterialData)>();
 
-        foreach (var (position, depositMaterial) in depositions)
+        foreach (var position in positions)
         {
-            var currentMaterial = _deltaOctree.ReadVoxel(position);
+            var currentMaterial = _deltaStorage.ReadVoxel(position);
 
             // If air, replace with deposit
             if (currentMaterial.MaterialType == MaterialId.Air)
             {
-                updates.Add((position, depositMaterial));
+                updates.Add((position, material));
             }
             else
             {
                 // Layer on top - for now just replace, could be more sophisticated
-                updates.Add((position, depositMaterial));
+                updates.Add((position, material));
             }
         }
 
-        _deltaOctree.WriteMaterialBatch(updates);
+        _deltaStorage.WriteMaterialBatch(updates);
     }
 
     /// <summary>
@@ -106,27 +118,28 @@ public class GeomorphologicalOctreeAdapter
             }
         }
 
-        _deltaOctree.WriteMaterialBatch(updates);
+        _deltaStorage.WriteMaterialBatch(updates);
     }
 
     /// <summary>
     /// Apply tectonic deformation - material displacement
     /// Tectonic activity has medium locality
     /// </summary>
-    public void ApplyTectonicDeformation(IEnumerable<(Vector3 from, Vector3 to)> displacements)
+    public void ApplyTectonicDeformation(IEnumerable<Vector3> sourceRegion, Vector3 displacement)
     {
         var updates = new List<(Vector3, MaterialData)>();
 
-        foreach (var (from, to) in displacements)
+        foreach (var from in sourceRegion)
         {
-            var material = _deltaOctree.ReadVoxel(from);
+            var material = _deltaStorage.ReadVoxel(from);
+            var to = from + displacement;
 
             // Move material from 'from' to 'to'
             updates.Add((from, MaterialData.DefaultAir)); // Clear source
             updates.Add((to, material)); // Place at destination
         }
 
-        _deltaOctree.WriteMaterialBatch(updates);
+        _deltaStorage.WriteMaterialBatch(updates);
     }
 
     /// <summary>
@@ -139,31 +152,31 @@ public class GeomorphologicalOctreeAdapter
             .Select(pos => (pos, weatheredMaterial))
             .ToList();
 
-        _deltaOctree.WriteMaterialBatch(updates);
+        _deltaStorage.WriteMaterialBatch(updates);
     }
 
     /// <summary>
-    /// Get material at position (pass-through to delta octree)
+    /// Get material at position (pass-through to delta storage)
     /// </summary>
     public MaterialData GetMaterial(Vector3 position)
     {
-        return _deltaOctree.ReadVoxel(position);
+        return _deltaStorage.ReadVoxel(position);
     }
 
     /// <summary>
-    /// Set material at position (pass-through to delta octree)
+    /// Set material at position (pass-through to delta storage)
     /// </summary>
     public void SetMaterial(Vector3 position, MaterialData material)
     {
-        _deltaOctree.WriteVoxel(position, material);
+        _deltaStorage.WriteVoxel(position, material);
     }
 
     /// <summary>
     /// Query region for geological analysis
     /// </summary>
-    public IEnumerable<(Vector3 position, MaterialData material)> QueryRegion(Vector3 minBounds, Vector3 maxBounds)
+    public Dictionary<Vector3, MaterialData> QueryRegion(Vector3 minBounds, Vector3 maxBounds)
     {
-        var results = new List<(Vector3, MaterialData)>();
+        var results = new Dictionary<Vector3, MaterialData>();
 
         for (float x = minBounds.X; x <= maxBounds.X; x++)
         {
@@ -172,8 +185,8 @@ public class GeomorphologicalOctreeAdapter
                 for (float z = minBounds.Z; z <= maxBounds.Z; z++)
                 {
                     var position = new Vector3(x, y, z);
-                    var material = _deltaOctree.ReadVoxel(position);
-                    results.Add((position, material));
+                    var material = _deltaStorage.ReadVoxel(position);
+                    results[position] = material;
                 }
             }
         }
@@ -186,7 +199,7 @@ public class GeomorphologicalOctreeAdapter
     /// </summary>
     public void ConsolidateChanges()
     {
-        _deltaOctree.ConsolidateDeltas();
+        _deltaStorage.ConsolidateDeltas();
     }
 
     /// <summary>
@@ -194,6 +207,6 @@ public class GeomorphologicalOctreeAdapter
     /// </summary>
     public int GetPendingChangeCount()
     {
-        return _deltaOctree.ActiveDeltaCount;
+        return _deltaStorage.ActiveDeltaCount;
     }
 }

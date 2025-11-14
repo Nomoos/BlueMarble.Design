@@ -294,7 +294,7 @@ public class DeltaOverlaySystemTests
     public void Test4_GeologicalProcesses_Deposition_AddsMaterial()
     {
         // Arrange - Empty space (air)
-        var depositionSites = new List<(Vector3, MaterialData)>();
+        var depositionSites = new List<Vector3>();
         var sediment = new MaterialData(MaterialId.Sand, 1600f, 2.5f);
 
         for (int x = 0; x < 5; x++)
@@ -302,18 +302,18 @@ public class DeltaOverlaySystemTests
             for (int z = 0; z < 5; z++)
             {
                 var position = new Vector3(x, 5, z);
-                depositionSites.Add((position, sediment));
+                depositionSites.Add(position);
             }
         }
 
         // Act - Apply deposition
-        _geoAdapter.ApplyDeposition(depositionSites);
+        _geoAdapter.ApplyDeposition(depositionSites, sediment);
 
         // Assert - Material deposited
-        foreach (var (position, expectedMaterial) in depositionSites)
+        foreach (var position in depositionSites)
         {
             var material = _geoAdapter.GetMaterial(position);
-            Assert.AreEqual(expectedMaterial, material,
+            Assert.AreEqual(sediment, material,
                 $"Deposition at {position} should place sediment");
         }
     }
@@ -372,12 +372,13 @@ public class DeltaOverlaySystemTests
         }
 
         // Act - Tectonic displacement
-        var displacements = sourcePositions.Select(pos => (pos, pos + new Vector3(0, 5, 0))).ToList();
-        _geoAdapter.ApplyTectonicDeformation(displacements);
+        var displacement = new Vector3(0, 5, 0);
+        _geoAdapter.ApplyTectonicDeformation(sourcePositions, displacement);
 
         // Assert - Material moved to new positions
-        foreach (var (from, to) in displacements)
+        foreach (var from in sourcePositions)
         {
+            var to = from + displacement;
             var fromMaterial = _geoAdapter.GetMaterial(from);
             var toMaterial = _geoAdapter.GetMaterial(to);
 
@@ -408,11 +409,11 @@ public class DeltaOverlaySystemTests
         }
 
         // Act - Query region
-        var results = _geoAdapter.QueryRegion(minBounds, maxBounds).ToList();
+        var results = _geoAdapter.QueryRegion(minBounds, maxBounds);
 
         // Assert - Correct number of voxels and all rock
         Assert.AreEqual(27, results.Count, "Should return 3x3x3 = 27 voxels");
-        Assert.IsTrue(results.All(r => r.material.MaterialType == MaterialId.Rock),
+        Assert.IsTrue(results.All(r => r.Value.MaterialType == MaterialId.Rock),
             "All queried materials should be rock");
     }
 

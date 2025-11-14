@@ -1,5 +1,6 @@
 using System.Collections.Concurrent;
 using System.Numerics;
+using BlueMarble.SpatialData.Interfaces;
 
 namespace BlueMarble.SpatialData;
 
@@ -7,9 +8,10 @@ namespace BlueMarble.SpatialData;
 /// Delta overlay system for fine-grained octree updates
 /// Provides 10x performance improvement for sparse geological updates
 /// </summary>
-public class DeltaPatchOctree
+public class DeltaPatchOctree : IDeltaStorage
 {
     private readonly OptimizedOctreeNode _baseTree;
+    private readonly IOctreeStorage? _octreeStorage;
     private readonly ConcurrentDictionary<Vector3, MaterialDelta> _deltas;
     private readonly int _consolidationThreshold;
     private readonly DeltaCompactionStrategy _compactionStrategy;
@@ -22,6 +24,30 @@ public class DeltaPatchOctree
     /// </summary>
     public int ActiveDeltaCount => _deltas.Count;
 
+    /// <summary>
+    /// Constructor for dependency injection with IOctreeStorage interface
+    /// </summary>
+    public DeltaPatchOctree(
+        IOctreeStorage octreeStorage,
+        int consolidationThreshold = 1000,
+        DeltaCompactionStrategy compactionStrategy = DeltaCompactionStrategy.LazyThreshold,
+        int maxDepth = 20,
+        float worldSize = 65536f,
+        Vector3? worldOrigin = null)
+    {
+        _octreeStorage = octreeStorage ?? throw new ArgumentNullException(nameof(octreeStorage));
+        _baseTree = null!; // Not used when injecting IOctreeStorage
+        _deltas = new ConcurrentDictionary<Vector3, MaterialDelta>();
+        _consolidationThreshold = consolidationThreshold;
+        _compactionStrategy = compactionStrategy;
+        _maxDepth = maxDepth;
+        _worldSize = worldSize;
+        _worldOrigin = worldOrigin ?? new Vector3(-worldSize / 2, -worldSize / 2, -worldSize / 2);
+    }
+
+    /// <summary>
+    /// Original constructor for backward compatibility
+    /// </summary>
     public DeltaPatchOctree(
         OptimizedOctreeNode baseTree,
         int consolidationThreshold = 1000,
@@ -31,6 +57,7 @@ public class DeltaPatchOctree
         Vector3? worldOrigin = null)
     {
         _baseTree = baseTree ?? throw new ArgumentNullException(nameof(baseTree));
+        _octreeStorage = null; // Using direct reference
         _deltas = new ConcurrentDictionary<Vector3, MaterialDelta>();
         _consolidationThreshold = consolidationThreshold;
         _compactionStrategy = compactionStrategy;
@@ -52,7 +79,7 @@ public class DeltaPatchOctree
         }
 
         // Fall back to base octree - O(log n) operation
-        return GetMaterialFromOctree(position);
+        return _octreeStorage?.GetMaterialAt(position) ?? GetMaterialFromOctree(position);
     }
 
     /// <summary>
@@ -61,7 +88,7 @@ public class DeltaPatchOctree
     /// </summary>
     public void WriteVoxel(Vector3 position, MaterialData newMaterial)
     {
-        var baseMaterial = GetMaterialFromOctree(position);
+        var baseMaterial = _octreeStorage?.GetMaterialAt(position) ?? GetMaterialFromOctree(position);
 
         if (baseMaterial.Equals(newMaterial))
         {
@@ -93,7 +120,7 @@ public class DeltaPatchOctree
     /// Batch update for geological processes
     /// Optimized for sparse, distributed updates
     /// </summary>
-    public void WriteMaterialBatch(IEnumerable<(Vector3 position, MaterialData material)> updates)
+    public void WriteMaterialBatch(IEnumerable<(Vector3 Position, MaterialData Material)> updates)
     {
         foreach (var (position, material) in updates)
         {
@@ -113,7 +140,7 @@ public class DeltaPatchOctree
     /// Consolidate deltas back into base octree structure
     /// This is called when delta threshold is reached
     /// </summary>
-    public void ConsolidateDeltas()
+    public void ConsolidateDeltas(int? threshold = null)
     {
         if (_deltas.IsEmpty)
             return;
@@ -124,7 +151,14 @@ public class DeltaPatchOctree
         foreach (var delta in deltasList)
         {
             // Apply delta to base tree
-            SetMaterialInOctree(delta.Position, delta.NewMaterial);
+            if (_octreeStorage != null)
+            {
+                _octreeStorage.SetMaterialAt(delta.Position, delta.NewMaterial);
+            }
+            else
+            {
+                SetMaterialInOctree(delta.Position, delta.NewMaterial);
+            }
 
             // Remove from delta overlay
             _deltas.TryRemove(delta.Position, out _);
@@ -173,7 +207,14 @@ public class DeltaPatchOctree
 
         foreach (var delta in deltasToConsolidate)
         {
-            SetMaterialInOctree(delta.Position, delta.NewMaterial);
+            if (_octreeStorage != null)
+            {
+                _octreeStorage.SetMaterialAt(delta.Position, delta.NewMaterial);
+            }
+            else
+            {
+                SetMaterialInOctree(delta.Position, delta.NewMaterial);
+            }
             _deltas.TryRemove(delta.Position, out _);
         }
     }
@@ -187,7 +228,14 @@ public class DeltaPatchOctree
         {
             foreach (var delta in cluster)
             {
-                SetMaterialInOctree(delta.Position, delta.NewMaterial);
+                if (_octreeStorage != null)
+                {
+                    _octreeStorage.SetMaterialAt(delta.Position, delta.NewMaterial);
+                }
+                else
+                {
+                    SetMaterialInOctree(delta.Position, delta.NewMaterial);
+                }
                 _deltas.TryRemove(delta.Position, out _);
             }
         }
@@ -203,7 +251,14 @@ public class DeltaPatchOctree
 
         foreach (var delta in oldDeltas)
         {
-            SetMaterialInOctree(delta.Position, delta.NewMaterial);
+            if (_octreeStorage != null)
+            {
+                _octreeStorage.SetMaterialAt(delta.Position, delta.NewMaterial);
+            }
+            else
+            {
+                SetMaterialInOctree(delta.Position, delta.NewMaterial);
+            }
             _deltas.TryRemove(delta.Position, out _);
         }
     }
