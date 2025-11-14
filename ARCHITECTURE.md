@@ -1,5 +1,7 @@
 # Delta Overlay System Architecture
 
+> **Note**: This document describes the specific implementation of the Delta Overlay System. For comprehensive guidance on BlueMarble's layered modular architecture pattern, design principles, and best practices, see the [Architecture Documentation](./docs/architecture/).
+
 ## System Architecture Diagram
 
 ```
