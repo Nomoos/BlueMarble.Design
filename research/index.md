@@ -38,6 +38,13 @@ and typically 200-400 lines.
   Binary network protocol with delta encoding for efficient transmission of Int32 coordinates. Includes bandwidth 
   analysis, compression strategies, adaptive update rates, and client-side interpolation
 
+#### Architecture and Software Design
+
+- **[Avoiding Architectural Pitfalls](topics/avoiding-architectural-pitfalls.md)** -
+  Research-based guidelines for avoiding common architectural pitfalls including deep inheritance hierarchies, tight coupling, 
+  circular dependencies, performance considerations, and evolutionary design. Includes analysis of BlueMarble's current 
+  architecture patterns and recommendations for maintaining clean, scalable code as the system grows
+
 #### Game Design Topics
 
 - [Game Design Roles and Types](topics/game-design-roles-and-types.md) - 
