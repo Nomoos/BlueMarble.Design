@@ -1,0 +1,90 @@
+name: Architecture Validation
+
+on:
+  push:
+    branches: [ main, develop, copilot/** ]
+    paths:
+      - 'src/**/*.cs'
+      - 'tests/**/*.cs'
+      - '**/*.csproj'
+      - 'Directory.Build.props'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'src/**/*.cs'
+      - 'tests/**/*.cs'
+      - '**/*.csproj'
+      - 'Directory.Build.props'
+
+jobs:
+  code-analysis:
+    name: .NET Code Analysis
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+    
+    - name: Restore dependencies
+      run: dotnet restore
+    
+    - name: Build with analysis
+      run: dotnet build --configuration Release --no-restore /p:RunAnalyzers=true
+    
+    - name: Report analysis results
+      if: always()
+      run: |
+        echo "✅ Code analysis completed"
+        echo "Review any warnings in the build output above"
+
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        solution: 
+          - BlueMarble.World.sln
+          - BlueMarble.SpatialData.sln
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+    
+    - name: Restore ${{ matrix.solution }}
+      run: dotnet restore ${{ matrix.solution }}
+    
+    - name: Build ${{ matrix.solution }}
+      run: dotnet build ${{ matrix.solution }} --configuration Release --no-restore
+    
+    - name: Test ${{ matrix.solution }}
+      run: dotnet test ${{ matrix.solution }} --no-build --configuration Release --logger "trx;LogFileName=test-results.trx"
+    
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results-${{ matrix.solution }}
+        path: '**/test-results.trx'
+
+  # Architecture tests will be added in a future PR
+  # architecture-tests:
+  #   name: Architecture Tests
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - name: Setup .NET
+  #     uses: actions/setup-dotnet@v3
+  #     with:
+  #       dotnet-version: '8.0.x'
+  #   - name: Run Architecture Tests
+  #     run: dotnet test tests/BlueMarble.Architecture.Tests/ --configuration Release
