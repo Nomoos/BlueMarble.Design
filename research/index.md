@@ -38,6 +38,11 @@ and typically 200-400 lines.
   Binary network protocol with delta encoding for efficient transmission of Int32 coordinates. Includes bandwidth 
   analysis, compression strategies, adaptive update rates, and client-side interpolation
 
+#### Software Architecture & Design Patterns
+
+- [Best Practices for Layered Modular System Design](topics/layered-modular-system-design-best-practices.md) -
+  Comprehensive guide to structuring code into hierarchical modules with clear abstraction layers, single responsibilities, minimal coupling, and well-designed interfaces. Includes practical C# examples (Source → VideoSource → YouTubeSource), BlueMarble spatial data patterns, design patterns reference, and anti-patterns to avoid. Applicable to PrismQ module family and system-wide architectural decisions
+
 #### Game Design Topics
 
 - [Game Design Roles and Types](topics/game-design-roles-and-types.md) - 
