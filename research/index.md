@@ -77,6 +77,12 @@ and typically 200-400 lines.
   Comprehensive analysis of Drakensang series (single-player RPG and online MMORPG), covering character progression, multi-tree skill systems, rarity-based crafting with enchantment transfers, structured PvP modes, dual-currency monetization, and no-trade economy design with applications to BlueMarble's geological material progression and knowledge systems
 - [Ethan Kennerly - Social Systems Design: Governments and Churches](topics/ethan-kennerly-social-systems-design.md) -
   Comprehensive analysis of David Ethan Kennerly's pioneering work on player-driven governments and religions in Dark Ages (1999). Examines synthetic governance approach, merit/popularity mechanics, player-run clergy systems, and implications for BlueMarble's settlement political structures and player agency design
+
+#### Content Management & Web Technologies
+
+- [WordPress Multilingual Solutions](topics/wordpress-multilingual-solutions.md) -
+  Comprehensive research on free WordPress multilingual plugins with API support for programmatic content management. Analyzes Polylang, WPML, TranslatePress, and MultilingualPress, comparing their capabilities for draft creation, editing, and publishing via REST API. Includes implementation recommendations, code examples, and architectural considerations
+
 #### UI/UX and Display Systems
 
 - [Dark Ages Display Systems Research](topics/dark-ages-display-systems-research.md) -
