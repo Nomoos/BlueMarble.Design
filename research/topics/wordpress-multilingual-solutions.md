@@ -334,6 +334,9 @@ async function createEnglishDraft(title, content) {
 
 // Create related French draft
 async function createFrenchDraft(title, content, relatedEnPostId) {
+  // Note: MultilingualPress relationship management may require plugin-specific endpoints
+  // Verify with MultilingualPress documentation for correct API approach
+  // This example shows conceptual approach, actual implementation may vary
   const response = await fetch(`${frSiteApi}/posts`, {
     method: 'POST',
     headers: {
@@ -343,10 +346,8 @@ async function createFrenchDraft(title, content, relatedEnPostId) {
     body: JSON.stringify({
       title: title,
       content: content,
-      status: 'draft',
-      meta: {
-        multilingualpress_related_post: relatedEnPostId
-      }
+      status: 'draft'
+      // Post relationships managed through MultilingualPress admin UI or plugin-specific API
     })
   });
   return await response.json();
@@ -457,7 +458,9 @@ Database (with language metadata)
 **Example Authentication:**
 ```javascript
 // Application Password authentication
-const username = 'admin';
+// SECURITY: Use a dedicated API user account with minimal required permissions
+// DO NOT use 'admin' account for API access
+const username = 'api_user'; // Dedicated API user with appropriate role
 const applicationPassword = 'xxxx xxxx xxxx xxxx xxxx xxxx';
 const token = btoa(`${username}:${applicationPassword}`);
 
