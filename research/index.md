@@ -38,6 +38,21 @@ and typically 200-400 lines.
   Binary network protocol with delta encoding for efficient transmission of Int32 coordinates. Includes bandwidth 
   analysis, compression strategies, adaptive update rates, and client-side interpolation
 
+#### World Graph and Position
+
+- **[Hierarchical World Graph: Worlds, Continents, Zones](topics/hierarchical-world-graph-worlds-continents-zones.md)** -
+  How to represent the few routes between worlds, continents and zones: a containment tree plus one flat place graph,
+  derived gateways, exact overlay graphs (as in HPA\* and CRP), per-player costs, services, temporary and inter-world
+  edges, zones from drainage basins, and sharding at gateways. **Start here.**
+
+- [Player Position at the Lowest Level: Grid or Graph?](topics/player-position-lowest-level-grid-vs-graph.md) -
+  Position is a place or an edge with a time interval; grids are indexes for fields (terrain, claims, interest).
+  Compares tile grids, DGGS cells (H3, S2), zone-local and global coordinates; slots inside places; edge encounters
+
+- [World Graph Representations - Overview](topics/world-graph-representations-overview.md) -
+  Grids, hexes, place graphs, navmesh, distance fields; BFS, Dijkstra, A\*, JPS, HPA\*; deterministic tie-breaking
+  shared by TS and PHP; graph-based generation; graphs beyond the map; storage on PHP + MariaDB
+
 #### Game Design Topics
 
 - [Game Design Roles and Types](topics/game-design-roles-and-types.md) - 
