@@ -27,6 +27,9 @@ Entry point for all BlueMarble design documentation.
 
 - [Island Start Game Design](island_start_game_design.md) - Core game design for island start scope
 - [One-Page Design](one-page-design.md) - Concise design overview
+- [Era Tech Tree: Before the Neolithic](era-tech-tree-pre-neolithic.md) - Eras and threshold gates from the
+  pre-tool prologue to the Neolithic revolution; travel, gather and hunt actions; specialization from finds;
+  ambush and guarding; later eras (metals, current MVP content) locked
 
 ### Tabletop RPG Design Reference
 
