@@ -77,6 +77,25 @@ and typically 200-400 lines.
   Comprehensive analysis of Drakensang series (single-player RPG and online MMORPG), covering character progression, multi-tree skill systems, rarity-based crafting with enchantment transfers, structured PvP modes, dual-currency monetization, and no-trade economy design with applications to BlueMarble's geological material progression and knowledge systems
 - [Ethan Kennerly - Social Systems Design: Governments and Churches](topics/ethan-kennerly-social-systems-design.md) -
   Comprehensive analysis of David Ethan Kennerly's pioneering work on player-driven governments and religions in Dark Ages (1999). Examines synthetic governance approach, merit/popularity mechanics, player-run clergy systems, and implications for BlueMarble's settlement political structures and player agency design
+
+#### Eras, Gathering, Hunting and Crafting
+
+- [Pre-Neolithic Eras and Revolutions](topics/pre-neolithic-eras-and-revolutions.md) -
+  Eras and thresholds before the Neolithic (first stone tools, hand axe, fire, Levallois, projectiles, sewing,
+  dogs, pottery, broad-spectrum diet), Czech sites, disputed framings. Basis for the
+  [era tech tree](../design/era-tech-tree-pre-neolithic.md)
+- [Discovery-Driven Gathering, Hunting and Adversity Skills](topics/discovery-driven-gathering-and-hunting.md) -
+  Discovery ledgers, find tables, unidentified finds, species hunting, defence trained by surviving attacks,
+  PvP robbery tiers and era gates in Haven & Hearth, Vintage Story, Wurm, UnReal World, Kenshi, Albion, EVE
+- [Crafting Quality and Failure in Games](topics/crafting-quality-and-failure-in-games.md) -
+  WoW crafting and its addons (TSM, CraftSim, Skillet, Auctionator, CraftScan), Novus Inceptio, and a comparison
+  of quality and failure across ten games
+- [Realistic Outcomes of Failed Smelting, Charcoal Burning, Forging and Mining](topics/realistic-smelting-and-mining-outcomes.md) -
+  Bloomery yields and failures, slag reuse, waste rock, gangue and chance finds by ore setting, with game-ready
+  tables and conflicts in existing docs
+- [Smith Skills and Process-Based Production](topics/smith-skills-and-process-based-production.md) -
+  Adam Smith's 1 : 3.5 : 9 nail rates, DIN 8580 operations, nail vs farm-tool smith skill profiles, a skill graph
+
 #### UI/UX and Display Systems
 
 - [Dark Ages Display Systems Research](topics/dark-ages-display-systems-research.md) -
